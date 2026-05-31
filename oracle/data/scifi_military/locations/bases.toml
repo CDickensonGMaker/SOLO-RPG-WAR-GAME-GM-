@@ -1,0 +1,77 @@
+# Sci-Fi Military Installation Locations
+# Bases, outposts, and military facilities
+
+[locations]
+entries = [
+  # Forward Operating Bases
+  { text = "Firebase perimeter, sandbags and auto-turrets facing the enemy", weight = 1 },
+  { text = "Command bunker, reinforced concrete buried deep underground", weight = 1 },
+  { text = "Field hospital tent, overwhelmed surgeons working by lamplight", weight = 1 },
+  { text = "Ammunition dump, explosives stacked dangerously high", weight = 1 },
+  { text = "Motor pool, vehicles under constant repair", weight = 1 },
+  { text = "Communications tent, officers coordinating multiple fronts", weight = 1 },
+  { text = "Mess facility, hot food a luxury in combat zones", weight = 1 },
+  { text = "Barracks block, soldiers sleeping in shifts", weight = 1 },
+  { text = "Landing pad, dust-blasted from constant dropship traffic", weight = 1 },
+  { text = "Defensive trench network, zigzag lines against bombardment", weight = 1 },
+
+  # Major Installations
+  { text = "Sector command headquarters, generals planning campaigns", weight = 1 },
+  { text = "Training facility, recruits being broken and remade", weight = 1 },
+  { text = "Intelligence center, data analysis and interrogation", weight = 1 },
+  { text = "Supply depot, warehouse district of military materiel", weight = 1 },
+  { text = "Armored regiment garrison, tanks and crews waiting deployment", weight = 1 },
+  { text = "Air wing base, fighters and bombers in hardened hangars", weight = 1 },
+  { text = "Artillery park, massive guns pointed at distant targets", weight = 1 },
+  { text = "Special forces compound, restricted access even to officers", weight = 1 },
+  { text = "Military prison, disciplinary facility for soldiers", weight = 1 },
+  { text = "POW camp, enemy prisoners under guard and interrogation", weight = 1 },
+
+  # Defensive Structures
+  { text = "Fortress wall section, meters thick and weapon-studded", weight = 1 },
+  { text = "Gate complex, chokepoint with overlapping fields of fire", weight = 1 },
+  { text = "Guard tower, observation post overlooking approaches", weight = 1 },
+  { text = "Bunker interior, cramped and claustrophobic but safe", weight = 1 },
+  { text = "Anti-air battery, scanners tracking the skies", weight = 1 },
+  { text = "Shield generator building, technology humming with power", weight = 1 },
+  { text = "Mine field control station, monitoring buried explosives", weight = 1 },
+  { text = "Pillbox emplacement, concrete and heavy weapons", weight = 1 },
+  { text = "Kill zone corridor, designed to funnel attackers into fire", weight = 1 },
+  { text = "Redoubt interior, last-stand fortification", weight = 1 },
+
+  # Support Facilities
+  { text = "Quartermaster's office, supply requisitions and excuses", weight = 1 },
+  { text = "Maintenance bay, tech-priests blessing machinery", weight = 1 },
+  { text = "Fuel depot, promethium tanks under heavy guard", weight = 1 },
+  { text = "Water treatment plant, purifying local sources", weight = 1 },
+  { text = "Power generator station, providing electricity to the base", weight = 1 },
+  { text = "Recycling facility, processing waste and the dead", weight = 1 },
+  { text = "Laundry facility, cleaning uniforms of blood and filth", weight = 1 },
+  { text = "Bath house, rare luxury of hot water and soap", weight = 1 },
+  { text = "Chapel tent, chaplain offering blessings and last rites", weight = 1 },
+  { text = "Recreation hall, soldiers trying to forget the war briefly", weight = 1 },
+
+  # Specialized Facilities
+  { text = "Psyker sanctum, shielded rooms for the gifted and dangerous", weight = 1 },
+  { text = "Commissariat office, political officers monitoring loyalty", weight = 1 },
+  { text = "Gene-lab, creating and healing enhanced soldiers", weight = 1 },
+  { text = "Servo-skull workshop, maintaining observation drones", weight = 1 },
+  { text = "Servitor processing, turning criminals into mindless workers", weight = 1 },
+  { text = "Weapons testing range, evaluating new equipment", weight = 1 },
+  { text = "Chemical weapons storage, forbidden munitions under seal", weight = 1 },
+  { text = "Xenos specimen containment, captured aliens for study", weight = 1 },
+  { text = "Archaeotech vault, ancient technology under protection", weight = 1 },
+  { text = "Black site, facility that officially does not exist", weight = 1 },
+
+  # Outposts
+  { text = "Observation post, isolated watchers reporting enemy movement", weight = 1 },
+  { text = "Relay station, boosting communications across distance", weight = 1 },
+  { text = "Supply cache, hidden resupply point for patrols", weight = 1 },
+  { text = "Forward aid station, first stop for wounded", weight = 1 },
+  { text = "Sniper hide, concealed position overlooking enemy territory", weight = 1 },
+  { text = "Listening post, monitoring enemy communications", weight = 1 },
+  { text = "Rally point, designated meeting spot for scattered units", weight = 1 },
+  { text = "Patrol base, small team operating behind enemy lines", weight = 1 },
+  { text = "Sensor station, automated monitoring of approaches", weight = 1 },
+  { text = "Emergency bunker, hardened shelter for incoming bombardment", weight = 1 }
+]

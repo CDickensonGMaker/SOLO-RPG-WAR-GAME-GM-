@@ -1,0 +1,77 @@
+# Horror Encounters - Weird War Setting
+# Supernatural and psychological horror encounters
+
+[horror]
+entries = [
+  # Undead and Revenants
+  { text = "Fallen comrade rises from recent grave, still wearing your unit's insignia", weight = 1 },
+  { text = "Corpses in No Man's Land begin crawling toward trenches at midnight", weight = 1 },
+  { text = "Mass grave disgorges its contents, dozens of revenants emerging", weight = 1 },
+  { text = "Executed deserter returns, bullet holes still smoking, demanding justice", weight = 1 },
+  { text = "Drowned soldiers rise from flooded craters, waterlogged and vengeful", weight = 1 },
+  { text = "Burned pilot walks from wreckage, flames still clinging to flesh", weight = 1 },
+  { text = "Headless soldier stands at trench junction, waiting for something", weight = 1 },
+  { text = "Child ghost leads you deeper into the ruins, motives unclear", weight = 1 },
+  { text = "Voices of the dead rise from shell craters at dusk", weight = 1 },
+  { text = "Entire battalion appears on hillside, dead since 1916", weight = 1 },
+
+  # Demonic and Infernal
+  { text = "Demon wearing a general's face gives orders to oblivious staff", weight = 1 },
+  { text = "Summoning circle activates, something beginning to emerge", weight = 1 },
+  { text = "Soldier begins speaking in tongues, voice not their own", weight = 1 },
+  { text = "Something massive moves beneath the battlefield, tunneling", weight = 1 },
+  { text = "Infernal hound pack, hunting by scent of sin", weight = 1 },
+  { text = "Lesser demon offers bargain for survival, price terrible", weight = 1 },
+  { text = "Reality tears, glimpse of hellscape battlefield visible through wound", weight = 1 },
+  { text = "Possessed vehicle, engine sounds like screaming voices", weight = 1 },
+  { text = "Church desecrated, altar now gateway to somewhere else", weight = 1 },
+  { text = "Cultist ritual in progress, victim still alive on altar", weight = 1 },
+
+  # Cosmic Horror
+  { text = "Sky wrong tonight, stars in patterns that hurt to observe", weight = 1 },
+  { text = "Geometry of ruined building impossible, stairs lead back to themselves", weight = 1 },
+  { text = "Time loop triggered, same hour repeating with small variations", weight = 1 },
+  { text = "Something vast moves in the clouds, glimpsed between lightning strikes", weight = 1 },
+  { text = "Soldier's shadow separates, moves independently, watches with hunger", weight = 1 },
+  { text = "Writing appears on walls in unknown script, meaning seeps into mind", weight = 1 },
+  { text = "Reflection in water shows different events than reality", weight = 1 },
+  { text = "Sound of thousands of voices just beyond hearing, getting louder", weight = 1 },
+  { text = "Space compresses, trench extends for miles that shouldn't exist", weight = 1 },
+  { text = "Entity glimpsed that has no form, only effect on surroundings", weight = 1 },
+
+  # Psychological Horror
+  { text = "Soldier realizes they've been talking to someone who died hours ago", weight = 1 },
+  { text = "Memories changing, photographs now show different faces", weight = 1 },
+  { text = "Everyone in unit claims not to know soldier who's been there for months", weight = 1 },
+  { text = "Letters from home describe events that haven't happened yet", weight = 1 },
+  { text = "Mirror shows reflection with injuries not present on body... yet", weight = 1 },
+  { text = "Dog tags identify you as someone who died, your tags are on corpse", weight = 1 },
+  { text = "Dreams bleeding into reality, nightmare creatures appearing briefly", weight = 1 },
+  { text = "Entire day passes in what felt like minutes, no memory of events", weight = 1 },
+  { text = "Doppelganger sighted, perfect copy heading toward allied lines", weight = 1 },
+  { text = "Growing suspicion that squad members are not who they appear to be", weight = 1 },
+
+  # Body Horror
+  { text = "Wounds healing wrong, foreign tissue growing in place of flesh", weight = 1 },
+  { text = "Soldier's body changing, extra joints appearing overnight", weight = 1 },
+  { text = "Medical tent patients fusing together, single mass of flesh", weight = 1 },
+  { text = "Something growing inside soldier, visible movement under skin", weight = 1 },
+  { text = "Faces appearing on walls, formed from the mud and blood", weight = 1 },
+  { text = "Body parts found arranged in patterns, surgical precision", weight = 1 },
+  { text = "Soldier vomiting up objects they never swallowed", weight = 1 },
+  { text = "Corpses arranged in obscene tableaux, killer unknown", weight = 1 },
+  { text = "Flesh of the dead being harvested, stitched into something new", weight = 1 },
+  { text = "Veteran's old war wounds opening, impossible given healing", weight = 1 },
+
+  # Environmental Horror
+  { text = "Fog rolls in that smells of corpses, things moving within it", weight = 1 },
+  { text = "Ground becoming soft, pulling soldiers down slowly", weight = 1 },
+  { text = "Water in trenches turning to blood, no source found", weight = 1 },
+  { text = "Trees in forest leaning toward squad, branches reaching", weight = 1 },
+  { text = "Temperature dropping rapidly, breath visible, frost forming", weight = 1 },
+  { text = "Darkness absolute, no light penetrating certain areas", weight = 1 },
+  { text = "Sound vanishing, complete silence except for heartbeat", weight = 1 },
+  { text = "Rain falling upward, droplets rising into churning sky", weight = 1 },
+  { text = "Building much larger inside than outside, rooms appearing", weight = 1 },
+  { text = "Path walked definitely leads back to starting point, compass useless", weight = 1 },
+]

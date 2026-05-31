@@ -1,0 +1,60 @@
+# Social Encounters - Weird War Setting
+# Non-combat interactions with NPCs in supernatural warfare
+
+[social]
+entries = [
+  # Military Personnel
+  { text = "Commanding officer demands explanation for unauthorized actions", weight = 1 },
+  { text = "Field chaplain seeks confession before the next assault", weight = 1 },
+  { text = "Intelligence officer questions you about enemy occult activities", weight = 1 },
+  { text = "Wounded soldier begs for mercy killing, knows what's coming for them", weight = 1 },
+  { text = "Shell-shocked veteran babbles warnings about what lurks in the tunnels", weight = 1 },
+  { text = "Military police investigate rumors of misconduct in your unit", weight = 1 },
+  { text = "New replacement asks too many questions about the missing soldiers", weight = 1 },
+  { text = "Medic notices your wounds are healing strangely, wants answers", weight = 1 },
+  { text = "Courier delivers orders that make no tactical sense, possibly false", weight = 1 },
+  { text = "Senior officer privately reveals doubts about the war's true purpose", weight = 1 },
+
+  # Civilians
+  { text = "Village elder warns against camping near the old stones", weight = 1 },
+  { text = "Refugee family begs for protection, child hasn't spoken since the incident", weight = 1 },
+  { text = "Local priest knows the old rites, may help if convinced of your purpose", weight = 1 },
+  { text = "Farmer offers shelter but demands you leave before midnight", weight = 1 },
+  { text = "Child appears unaccompanied, claims to know a safe path", weight = 1 },
+  { text = "Doctor offers to treat wounds but asks unusual questions about your blood", weight = 1 },
+  { text = "Innkeeper speaks of soldiers who stayed here, never left", weight = 1 },
+  { text = "Gravedigger asks why you're interested in a particular plot", weight = 1 },
+  { text = "Elderly woman recognizes symbols on your equipment, becomes fearful", weight = 1 },
+  { text = "Scholar hiding in cellar possesses crucial information about the artifact", weight = 1 },
+
+  # Resistance and Partisans
+  { text = "Resistance contact demands proof of identity before sharing intelligence", weight = 1 },
+  { text = "Partisan leader proposes joint operation against occult target", weight = 1 },
+  { text = "Underground courier carries message that could change everything", weight = 1 },
+  { text = "Safe house keeper suspects infiltration, tensions high", weight = 1 },
+  { text = "Former enemy soldier claims to have defected, knows ritual locations", weight = 1 },
+
+  # Enemy Personnel
+  { text = "Captured enemy soldier offers information in exchange for protection", weight = 1 },
+  { text = "Enemy deserter approaches under white flag, bearing warning", weight = 1 },
+  { text = "Wounded enemy officer speaks of things his masters are doing", weight = 1 },
+  { text = "Enemy medic encountered treating wounded of both sides", weight = 1 },
+  { text = "Former colleague, now fighting for enemy, met in no man's land", weight = 1 },
+
+  # Occult Specialists
+  { text = "Allied occult advisor requests your unit for a specific mission", weight = 1 },
+  { text = "Mysterious figure offers information about the entities in exchange for a favor", weight = 1 },
+  { text = "Exorcist needs protection while performing ritual on possessed soldier", weight = 1 },
+  { text = "Relic hunter claims to know location of artifact that could turn the tide", weight = 1 },
+  { text = "Medium channeling dead soldier, message incomplete before connection severed", weight = 1 },
+  { text = "Scholar from ancient order appears, speaking of prophecies involving your unit", weight = 1 },
+  { text = "Vatican envoy arrives under diplomatic flag, seeking specific person", weight = 1 },
+  { text = "Defecting enemy occultist offers to share ritual knowledge", weight = 1 },
+
+  # Strange Encounters
+  { text = "Soldier from your unit who died last week appears, acts as if nothing happened", weight = 1 },
+  { text = "Figure in outdated uniform gives tactical advice, vanishes when questioned", weight = 1 },
+  { text = "Person claiming to be from the future warns of specific coming event", weight = 1 },
+  { text = "Entity offers bargain, terms unclear but tempting", weight = 1 },
+  { text = "Dream visitor provides cryptic guidance, appears to multiple soldiers separately", weight = 1 },
+]

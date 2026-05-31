@@ -1,0 +1,206 @@
+# Oracle Events - Random events triggered by the oracle
+# Setting-agnostic events applicable across all genres
+# Weight: higher = more common (1-3 typical range)
+
+[events]
+
+# Positive events - good fortune, unexpected aid, favorable circumstances
+positive = [
+  # Allies and Aid
+  { text = "An unexpected ally appears", weight = 2 },
+  { text = "A former enemy offers assistance", weight = 1 },
+  { text = "Help arrives from an unlikely source", weight = 2 },
+  { text = "A powerful figure takes interest in your cause", weight = 1 },
+  { text = "Someone you helped before returns the favor", weight = 2 },
+  { text = "A stranger offers crucial information freely", weight = 2 },
+  { text = "An expert in exactly what you need crosses your path", weight = 1 },
+  { text = "A group offers to join your cause", weight = 1 },
+  { text = "Someone volunteers to take a dangerous role", weight = 1 },
+  { text = "A reluctant ally becomes genuinely committed", weight = 2 },
+
+  # Resources and Discovery
+  { text = "You discover exactly what you were looking for", weight = 2 },
+  { text = "A hidden cache of supplies is found", weight = 2 },
+  { text = "Valuable resources appear unexpectedly", weight = 2 },
+  { text = "A shortcut or faster route is revealed", weight = 2 },
+  { text = "Lost or stolen property is recovered", weight = 1 },
+  { text = "A useful tool or weapon is discovered", weight = 2 },
+  { text = "Secret knowledge falls into your hands", weight = 1 },
+  { text = "A map or guide to your destination appears", weight = 1 },
+  { text = "Critical supplies arrive just in time", weight = 2 },
+  { text = "You find shelter or safety when needed most", weight = 2 },
+
+  # Enemy Misfortune
+  { text = "Your enemy is distracted by other problems", weight = 2 },
+  { text = "Opposition forces suffer internal conflict", weight = 1 },
+  { text = "An enemy's plan backfires spectacularly", weight = 1 },
+  { text = "Your opponent makes a critical error", weight = 2 },
+  { text = "Enemy forces are called away elsewhere", weight = 1 },
+  { text = "A key enemy is incapacitated or absent", weight = 1 },
+  { text = "Your enemy's resources are depleted", weight = 2 },
+  { text = "An enemy agent defects to your side", weight = 1 },
+  { text = "Opposition leadership is in disarray", weight = 1 },
+  { text = "Your enemy's supply lines are disrupted", weight = 2 },
+
+  # Circumstances and Timing
+  { text = "Perfect timing - you arrive at an opportune moment", weight = 2 },
+  { text = "Weather or conditions favor your plans", weight = 2 },
+  { text = "A distraction creates the opening you need", weight = 2 },
+  { text = "Guards or obstacles are absent when you arrive", weight = 1 },
+  { text = "A celebration or event provides cover", weight = 1 },
+  { text = "The path ahead is clearer than expected", weight = 2 },
+  { text = "A natural phenomenon aids your efforts", weight = 1 },
+  { text = "Your reputation precedes you favorably", weight = 2 },
+  { text = "Bureaucratic delays work in your favor", weight = 1 },
+  { text = "A deadline is extended unexpectedly", weight = 1 },
+
+  # Personal Growth
+  { text = "A moment of clarity reveals new understanding", weight = 2 },
+  { text = "Your skills prove more adequate than expected", weight = 2 },
+  { text = "A past experience provides crucial insight", weight = 2 },
+  { text = "You discover a hidden talent or ability", weight = 1 },
+  { text = "Your confidence inspires others", weight = 2 },
+  { text = "A lesson learned pays unexpected dividends", weight = 2 },
+  { text = "Your instincts prove correct", weight = 2 },
+  { text = "A weakness becomes a strength in this context", weight = 1 },
+  { text = "Your unique perspective solves the problem", weight = 1 },
+  { text = "Past training kicks in at the right moment", weight = 2 },
+]
+
+# Negative events - misfortune, setbacks, complications
+negative = [
+  # Betrayal and Loss
+  { text = "A trusted ally betrays you", weight = 1 },
+  { text = "Someone close reveals your secrets", weight = 1 },
+  { text = "An ally's loyalty wavers at a critical moment", weight = 2 },
+  { text = "A supposed friend was an enemy all along", weight = 1 },
+  { text = "Someone you relied on disappears", weight = 2 },
+  { text = "Your allies are captured or neutralized", weight = 1 },
+  { text = "A key contact refuses to help", weight = 2 },
+  { text = "Someone sells you out for personal gain", weight = 1 },
+  { text = "An informant provides false information", weight = 2 },
+  { text = "Your support network crumbles", weight = 1 },
+
+  # Resource Problems
+  { text = "Critical supplies are lost or destroyed", weight = 2 },
+  { text = "Equipment fails at the worst possible time", weight = 2 },
+  { text = "Resources are stolen or confiscated", weight = 2 },
+  { text = "Supplies are contaminated or corrupted", weight = 1 },
+  { text = "A key item breaks or malfunctions", weight = 2 },
+  { text = "Your reserves are exhausted", weight = 2 },
+  { text = "Access to resources is cut off", weight = 1 },
+  { text = "What you have proves insufficient", weight = 2 },
+  { text = "Vital provisions run out unexpectedly", weight = 2 },
+  { text = "Your funding or backing is withdrawn", weight = 1 },
+
+  # Enemy Action
+  { text = "The enemy anticipated your move", weight = 2 },
+  { text = "You've walked into a trap", weight = 1 },
+  { text = "Enemy reinforcements arrive", weight = 2 },
+  { text = "Your enemy gains a significant advantage", weight = 2 },
+  { text = "Opposition forces are stronger than expected", weight = 2 },
+  { text = "The enemy has been watching you", weight = 1 },
+  { text = "Your plans have been discovered", weight = 2 },
+  { text = "An enemy you thought defeated returns", weight = 1 },
+  { text = "Your opponent gains a powerful ally", weight = 1 },
+  { text = "The enemy strikes preemptively", weight = 2 },
+
+  # Circumstances and Timing
+  { text = "You arrive too late", weight = 2 },
+  { text = "Weather or conditions turn against you", weight = 2 },
+  { text = "An unexpected obstacle blocks your path", weight = 2 },
+  { text = "Your timing couldn't be worse", weight = 2 },
+  { text = "Guards or obstacles appear where none were expected", weight = 2 },
+  { text = "A natural disaster or catastrophe occurs", weight = 1 },
+  { text = "The situation has changed dramatically", weight = 2 },
+  { text = "Your reputation precedes you unfavorably", weight = 2 },
+  { text = "Bureaucratic obstacles appear", weight = 2 },
+  { text = "A deadline moves up unexpectedly", weight = 1 },
+
+  # Personal Setbacks
+  { text = "An old wound or trauma resurfaces", weight = 2 },
+  { text = "Your confidence falters at a crucial moment", weight = 2 },
+  { text = "A past mistake comes back to haunt you", weight = 2 },
+  { text = "You discover your skills are inadequate", weight = 2 },
+  { text = "Illness or injury strikes", weight = 2 },
+  { text = "Exhaustion clouds your judgment", weight = 2 },
+  { text = "Your emotions betray you", weight = 2 },
+  { text = "A secret from your past is revealed", weight = 1 },
+  { text = "Your fears manifest in reality", weight = 1 },
+  { text = "A phobia or weakness is exploited", weight = 1 },
+]
+
+# Neutral events - neither good nor bad, but change the situation
+neutral = [
+  # Revelations and Truths
+  { text = "Something you assumed was true is revealed to be false", weight = 2 },
+  { text = "A hidden truth comes to light", weight = 2 },
+  { text = "Your understanding of the situation shifts dramatically", weight = 2 },
+  { text = "What seemed simple is revealed to be complex", weight = 2 },
+  { text = "A mystery deepens unexpectedly", weight = 2 },
+  { text = "The true nature of something is revealed", weight = 2 },
+  { text = "A secret is exposed - but whose?", weight = 1 },
+  { text = "Evidence suggests multiple interpretations", weight = 2 },
+  { text = "A clue points in a new direction", weight = 2 },
+  { text = "The history of this situation is more complex than known", weight = 2 },
+
+  # New Actors and Elements
+  { text = "A new faction enters the conflict", weight = 1 },
+  { text = "An unknown third party makes their presence known", weight = 1 },
+  { text = "A neutral observer becomes relevant", weight = 2 },
+  { text = "Someone from the past reappears", weight = 2 },
+  { text = "A new player changes the dynamics", weight = 1 },
+  { text = "An authority figure takes notice", weight = 2 },
+  { text = "Bystanders become involved", weight = 2 },
+  { text = "A messenger arrives with news", weight = 2 },
+  { text = "Someone is watching from the shadows", weight = 2 },
+  { text = "A witness to events appears", weight = 2 },
+
+  # Changes in Stakes
+  { text = "The stakes are higher than you realized", weight = 2 },
+  { text = "The stakes are lower than you thought", weight = 1 },
+  { text = "What seemed urgent is not", weight = 1 },
+  { text = "What seemed trivial proves important", weight = 2 },
+  { text = "The goal shifts or transforms", weight = 2 },
+  { text = "Victory would come at an unexpected cost", weight = 2 },
+  { text = "The prize is different than expected", weight = 2 },
+  { text = "Success and failure both have consequences", weight = 2 },
+  { text = "The real objective becomes clear", weight = 2 },
+  { text = "What you're fighting for changes meaning", weight = 1 },
+
+  # Environmental Changes
+  { text = "The location transforms or shifts", weight = 2 },
+  { text = "A passage or route opens unexpectedly", weight = 2 },
+  { text = "The environment becomes unstable", weight = 2 },
+  { text = "Something in the surroundings activates", weight = 2 },
+  { text = "A hidden area is revealed", weight = 2 },
+  { text = "The space has a history relevant to now", weight = 2 },
+  { text = "Environmental conditions shift dramatically", weight = 2 },
+  { text = "Something was here before you", weight = 2 },
+  { text = "The location has multiple uses or meanings", weight = 2 },
+  { text = "What seemed permanent proves temporary", weight = 2 },
+
+  # Moral and Ethical Shifts
+  { text = "The villains have sympathetic motivations", weight = 2 },
+  { text = "The heroes have hidden flaws", weight = 2 },
+  { text = "Good and evil are not clearly divided here", weight = 2 },
+  { text = "An enemy's actions make sense from their view", weight = 2 },
+  { text = "Your actions have unintended consequences", weight = 2 },
+  { text = "Both sides are partially right", weight = 2 },
+  { text = "The 'right' choice isn't clear", weight = 2 },
+  { text = "Someone acts against their established nature", weight = 2 },
+  { text = "A moral line is crossed by an unexpected party", weight = 1 },
+  { text = "The ends and means conflict", weight = 2 },
+
+  # Connections and Relationships
+  { text = "Two seemingly unrelated things are connected", weight = 2 },
+  { text = "Enemies have unexpected ties to each other", weight = 1 },
+  { text = "Someone has a personal connection to events", weight = 2 },
+  { text = "Past events echo in the present", weight = 2 },
+  { text = "A pattern emerges from chaos", weight = 2 },
+  { text = "The situation mirrors another time or place", weight = 2 },
+  { text = "What happens here affects somewhere else", weight = 2 },
+  { text = "Someone is playing both sides", weight = 1 },
+  { text = "The conflict has deeper roots than visible", weight = 2 },
+  { text = "Multiple agendas intersect here", weight = 2 },
+]

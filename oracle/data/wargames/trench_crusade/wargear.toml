@@ -1,0 +1,434 @@
+# Trench Crusade - Wargear Compendium
+# Equipment, weapons, and special items available to warbands
+
+[metadata]
+name = "Trench Crusade Wargear"
+version = "1.0"
+description = "Equipment catalog for Trench Crusade warbands"
+
+# =============================================================================
+# RANGED WEAPONS
+# =============================================================================
+
+[[weapons]]
+name = "Rifle"
+category = "ranged"
+range = "24\""
+strength = "Standard"
+type = "Rifle"
+shots = "1"
+cost = 0
+description = "Standard infantry rifle"
+keywords = ["Basic", "Two-Handed"]
+
+[[weapons]]
+name = "Carbine"
+category = "ranged"
+range = "18\""
+strength = "Standard"
+type = "Rifle"
+shots = "1"
+cost = 0
+description = "Shorter rifle for close quarters"
+keywords = ["Basic"]
+
+[[weapons]]
+name = "Pistol"
+category = "ranged"
+range = "12\""
+strength = "Standard"
+type = "Pistol"
+shots = "1"
+cost = 0
+description = "Standard sidearm"
+keywords = ["Basic", "Sidearm"]
+
+[[weapons]]
+name = "Trench Gun"
+category = "ranged"
+range = "12\""
+strength = "+1"
+type = "Shotgun"
+shots = "2"
+cost = 10
+description = "Devastating close-range firepower"
+keywords = ["Shotgun", "Close Range"]
+
+[[weapons]]
+name = "Machine Gun"
+category = "ranged"
+range = "36\""
+strength = "+1"
+type = "Heavy"
+shots = "3"
+cost = 25
+description = "Crew-served automatic weapon"
+keywords = ["Heavy", "Suppression", "Crew Served", "Two-Handed"]
+
+[[weapons]]
+name = "Flamethrower"
+category = "ranged"
+range = "8\""
+strength = "Standard"
+type = "Flamethrower"
+shots = "Template"
+cost = 20
+description = "Terrifying anti-personnel weapon"
+keywords = ["Auto-hit", "Fire", "Template"]
+
+[[weapons]]
+name = "Siege Jezzail"
+category = "ranged"
+range = "48\""
+strength = "+2"
+type = "Heavy"
+shots = "1"
+cost = 30
+description = "Long-range precision rifle"
+keywords = ["Sniper", "Armor Piercing", "Two-Handed"]
+
+[[weapons]]
+name = "Hellforged Pistol"
+category = "ranged"
+range = "12\""
+strength = "+1"
+type = "Pistol"
+shots = "1"
+cost = 15
+description = "Daemon-touched sidearm"
+keywords = ["Unholy", "Sidearm", "Fallen Only"]
+
+[[weapons]]
+name = "Alchemical Pistol"
+category = "ranged"
+range = "12\""
+strength = "Standard"
+type = "Pistol"
+shots = "1"
+cost = 10
+description = "Fires alchemical ammunition"
+keywords = ["Alchemical Ammunition", "Iron Sultanate"]
+
+# =============================================================================
+# MELEE WEAPONS
+# =============================================================================
+
+[[weapons]]
+name = "Trench Knife"
+category = "melee"
+range = "Melee"
+strength = "Standard"
+type = "Melee"
+cost = 0
+description = "Standard close combat blade"
+keywords = ["Basic"]
+
+[[weapons]]
+name = "Bayonet"
+category = "melee"
+range = "Melee"
+strength = "-1"
+type = "Melee"
+cost = 0
+description = "Rifle-mounted blade"
+keywords = ["Basic", "Attached"]
+
+[[weapons]]
+name = "Sword"
+category = "melee"
+range = "Melee"
+strength = "Standard"
+type = "Melee"
+cost = 5
+description = "Standard military sword"
+keywords = ["Basic"]
+
+[[weapons]]
+name = "Power Maul"
+category = "melee"
+range = "Melee"
+strength = "+2"
+type = "Melee"
+cost = 15
+description = "Heavy powered weapon"
+keywords = ["Armor Piercing", "Two-Handed"]
+
+[[weapons]]
+name = "Flail"
+category = "melee"
+range = "Melee"
+strength = "+1"
+type = "Melee"
+cost = 5
+description = "Flexible chained weapon"
+keywords = ["Reach"]
+
+[[weapons]]
+name = "Anti-Tank Hammer"
+category = "melee"
+range = "Melee"
+strength = "+3"
+type = "Melee"
+cost = 20
+description = "Devastating anti-armor weapon"
+keywords = ["Armor Piercing", "Anti-Vehicle", "Two-Handed"]
+
+[[weapons]]
+name = "Cursed Blade"
+category = "melee"
+range = "Melee"
+strength = "+1"
+type = "Melee"
+cost = 15
+description = "Daemon-touched sword"
+keywords = ["Unholy", "Soul Drain", "Fallen Only"]
+
+[[weapons]]
+name = "Holy Symbol"
+category = "melee"
+range = "Melee"
+strength = "Standard"
+type = "Melee"
+cost = 10
+description = "Blessed icon used as weapon"
+keywords = ["Holy", "Righteous Fury", "Faithful Only"]
+
+[[weapons]]
+name = "Grail Blade"
+category = "melee"
+range = "Melee"
+strength = "+2"
+type = "Melee"
+cost = 25
+description = "Vampiric knight's weapon"
+keywords = ["Unholy", "Infection", "Rending", "Cult Only"]
+
+[[weapons]]
+name = "Bronze Claws"
+category = "melee"
+range = "Melee"
+strength = "+2"
+type = "Melee"
+cost = 20
+description = "Construct's built-in weapons"
+keywords = ["Rending", "Construct Only"]
+
+# =============================================================================
+# GRENADES
+# =============================================================================
+
+[[weapons]]
+name = "Frag Grenade"
+category = "grenade"
+range = "8\""
+strength = "Standard"
+type = "Thrown"
+shots = "1"
+cost = 5
+description = "Anti-personnel explosive"
+keywords = ["Blast", "One Use"]
+
+[[weapons]]
+name = "Gas Grenade"
+category = "grenade"
+range = "8\""
+strength = "Special"
+type = "Thrown"
+shots = "1"
+cost = 10
+description = "Chemical weapon"
+keywords = ["Gas", "Ignores Armor", "One Use"]
+
+[[weapons]]
+name = "Holy Water"
+category = "grenade"
+range = "6\""
+strength = "+2"
+type = "Thrown"
+shots = "1"
+cost = 10
+description = "Blessed against daemons"
+keywords = ["Holy", "One Use", "Faithful Only"]
+
+[[weapons]]
+name = "Plague Vials"
+category = "grenade"
+range = "8\""
+strength = "-1"
+type = "Thrown"
+shots = "D3"
+cost = 10
+description = "Infectious concoction"
+keywords = ["Infection", "Blast", "One Use", "Cult Only"]
+
+# =============================================================================
+# ARMOR
+# =============================================================================
+
+[[armor]]
+name = "Flak Armor"
+category = "armor"
+defense_bonus = 0
+cost = 0
+description = "Standard protective gear"
+keywords = ["Basic"]
+
+[[armor]]
+name = "Trench Coat"
+category = "armor"
+defense_bonus = 0
+cost = 0
+description = "Heavy leather coat"
+keywords = ["Basic"]
+
+[[armor]]
+name = "Steel Plate"
+category = "armor"
+defense_bonus = 1
+cost = 15
+description = "Heavy metal armor"
+keywords = ["Heavy", "Slow"]
+
+[[armor]]
+name = "Iron Capirote"
+category = "armor"
+defense_bonus = 2
+cost = 20
+description = "Heavy ceremonial armor"
+keywords = ["Heavy", "Slow", "Pilgrims Only"]
+
+[[armor]]
+name = "Bronze Body"
+category = "armor"
+defense_bonus = 2
+cost = 0
+description = "Construct's metal shell"
+keywords = ["Construct Only", "Built-in"]
+
+[[armor]]
+name = "Vampire's Cloak"
+category = "armor"
+defense_bonus = 1
+cost = 15
+description = "Supernaturally protective garment"
+keywords = ["Regeneration", "Cult Only"]
+
+# =============================================================================
+# WARGEAR
+# =============================================================================
+
+[[wargear]]
+name = "Gas Mask"
+category = "equipment"
+cost = 5
+description = "Protection against chemical weapons"
+effect = "Immune to Gas weapons"
+keywords = ["Protective"]
+
+[[wargear]]
+name = "Trench Periscope"
+category = "equipment"
+cost = 5
+description = "See over cover without exposing"
+effect = "Can target enemies in cover without penalty"
+keywords = ["Scouting"]
+
+[[wargear]]
+name = "Wire Cutters"
+category = "equipment"
+cost = 5
+description = "Cut through barbed wire"
+effect = "Ignore barbed wire terrain"
+keywords = ["Engineering"]
+
+[[wargear]]
+name = "Field Medic Kit"
+category = "equipment"
+cost = 15
+description = "Medical supplies"
+effect = "Once per game, heal 1 wound on friendly model"
+keywords = ["Healing", "One Use"]
+
+[[wargear]]
+name = "Prayer Book"
+category = "equipment"
+cost = 10
+description = "Holy scripture"
+effect = "+1 to Morale tests"
+keywords = ["Holy", "Faithful Only"]
+
+[[wargear]]
+name = "Daemon Talisman"
+category = "equipment"
+cost = 15
+description = "Unholy focus"
+effect = "+1 to Unholy abilities"
+keywords = ["Unholy", "Fallen Only"]
+
+[[wargear]]
+name = "Alchemical Ammunition"
+category = "equipment"
+cost = 10
+description = "Special rounds with various effects"
+effect = "Choose effect when shooting: Fire, Acid, or Smoke"
+keywords = ["Iron Sultanate"]
+
+[[wargear]]
+name = "Blessed Rounds"
+category = "equipment"
+cost = 10
+description = "Consecrated ammunition"
+effect = "Ranged attacks gain Holy keyword"
+keywords = ["Faithful Only"]
+
+[[wargear]]
+name = "Unholy Ichor"
+category = "equipment"
+cost = 10
+description = "Daemon blood coating"
+effect = "Melee attacks gain Unholy keyword"
+keywords = ["Fallen Only"]
+
+[[wargear]]
+name = "Relic of the Saints"
+category = "equipment"
+cost = 25
+description = "Holy artifact"
+effect = "6\" aura: Friendly Faithful gain +1 to Morale"
+keywords = ["Relic", "Faithful Only", "Character Only"]
+
+[[wargear]]
+name = "Banner of Damnation"
+category = "equipment"
+cost = 25
+description = "Hellish standard"
+effect = "6\" aura: Enemy Faithful suffer -1 to Morale"
+keywords = ["Relic", "Fallen Only", "Character Only"]
+
+# =============================================================================
+# MOUNT/BEAST OPTIONS
+# =============================================================================
+
+[[mount]]
+name = "War Horse"
+category = "mount"
+cost = 20
+movement_bonus = 4
+description = "Trained cavalry horse"
+keywords = ["Cavalry", "Faithful Only"]
+
+[[mount]]
+name = "Nightmare Steed"
+category = "mount"
+cost = 25
+movement_bonus = 4
+description = "Daemon-touched mount"
+keywords = ["Cavalry", "Unholy", "Fallen Only"]
+
+[[mount]]
+name = "Stilts"
+category = "mount"
+cost = 15
+movement_bonus = 2
+description = "Tall walking apparatus"
+keywords = ["Ignores Difficult Terrain", "Cult Only"]

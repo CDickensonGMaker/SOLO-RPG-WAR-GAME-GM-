@@ -1,0 +1,31 @@
+# Sci-Fi Military Dispositions
+# Current mood and attitude toward the party
+
+[dispositions]
+entries = [
+  { text = "Suspiciously hostile, views outsiders as potential threats", weight = 1 },
+  { text = "Coldly professional, interested only in the mission", weight = 1 },
+  { text = "Wearily cooperative, too tired to cause problems", weight = 1 },
+  { text = "Nervously deferential, afraid of making mistakes", weight = 1 },
+  { text = "Aggressively friendly, desperate for new faces", weight = 1 },
+  { text = "Bitterly resentful of their assignment", weight = 1 },
+  { text = "Cynically amused by everything", weight = 1 },
+  { text = "Zealously enthusiastic about duty", weight = 1 },
+  { text = "Quietly observant, revealing nothing", weight = 1 },
+  { text = "Openly contemptuous of rank and protocol", weight = 1 },
+  { text = "Desperately seeking allies for a personal agenda", weight = 1 },
+  { text = "Traumatized and barely functional", weight = 1 },
+  { text = "Manic energy masking exhaustion", weight = 1 },
+  { text = "Protective of their unit above all else", weight = 1 },
+  { text = "Looking for any excuse to start a fight", weight = 1 },
+  { text = "Resigned to fate with dark acceptance", weight = 1 },
+  { text = "Hopeful despite circumstances", weight = 1 },
+  { text = "Paranoid and twitchy, trusts no one", weight = 1 },
+  { text = "Professionally curious about newcomers", weight = 1 },
+  { text = "Grief-stricken, going through the motions", weight = 1 },
+  { text = "Scheming, calculating how visitors might be useful", weight = 1 },
+  { text = "Drunkenly uninhibited, saying too much", weight = 1 },
+  { text = "Fanatically devoted, judging others' faith", weight = 1 },
+  { text = "Hollowed out, emotionally dead inside", weight = 1 },
+  { text = "Surprisingly gentle despite the violence around them", weight = 1 }
+]

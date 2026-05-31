@@ -1,0 +1,1125 @@
+# =============================================================================
+# BIRTHRIGHT DOMAIN LOYALTY SYSTEM
+# =============================================================================
+# Comprehensive loyalty mechanics for solo play
+# Tracks how the populace and nobility view their regent
+# =============================================================================
+
+[metadata]
+title = "Domain Loyalty System"
+version = "1.0.0"
+description = "Loyalty levels, modifiers, checks, and rebellion mechanics"
+usage = "Reference when determining province and holding loyalty"
+
+# =============================================================================
+# LOYALTY LEVELS
+# =============================================================================
+
+[[loyalty_levels]]
+level = "Fanatical"
+value_range = [90, 100]
+description = "The population would die for the regent without question."
+military_modifier = "+3"
+tax_modifier = "+2 GB per province"
+unrest_chance = "0%"
+rebellion_risk = "Impossible"
+effects = [
+    "Spontaneous militia formation in emergencies",
+    "Population reports enemies and spies",
+    "Nobles compete to serve the regent",
+    "Temples actively support the regent",
+    "Foreign agitators immediately reported"
+]
+oracle_questions = [
+    "What extraordinary deed earned such devotion?",
+    "Is this loyalty to the regent or their bloodline?",
+    "Are there dangers in such zealous devotion?"
+]
+
+[[loyalty_levels]]
+level = "High"
+value_range = [70, 89]
+description = "The population strongly supports the regent and their rule."
+military_modifier = "+2"
+tax_modifier = "+1 GB per province"
+unrest_chance = "5%"
+rebellion_risk = "Extremely Unlikely"
+effects = [
+    "Military recruitment is easy",
+    "Taxes collected without incident",
+    "Most nobles are cooperative",
+    "Minor problems resolved locally",
+    "Good intelligence on troublemakers"
+]
+oracle_questions = [
+    "What maintains this strong loyalty?",
+    "Are there any who secretly resent the regent?",
+    "How would loyalty survive a major setback?"
+]
+
+[[loyalty_levels]]
+level = "Average"
+value_range = [40, 69]
+description = "The population accepts the regent's rule without great enthusiasm."
+military_modifier = "+0"
+tax_modifier = "+0"
+unrest_chance = "15%"
+rebellion_risk = "Unlikely without provocation"
+effects = [
+    "Normal administration functions",
+    "Taxes collected but some evasion",
+    "Nobles pursue their own interests",
+    "Problems require regent attention",
+    "Some grumbling but no action"
+]
+oracle_questions = [
+    "What would tip loyalty higher or lower?",
+    "Which groups are most dissatisfied?",
+    "What do the common people truly think?"
+]
+
+[[loyalty_levels]]
+level = "Poor"
+value_range = [20, 39]
+description = "The population is discontented and restless under the regent's rule."
+military_modifier = "-1"
+tax_modifier = "-1 GB per province"
+unrest_chance = "35%"
+rebellion_risk = "Moderate with any provocation"
+effects = [
+    "Military morale is low",
+    "Tax collection requires force",
+    "Nobles plot and scheme",
+    "Banditry and crime increase",
+    "Foreign agents find ready ears"
+]
+oracle_questions = [
+    "What are the main grievances?",
+    "Who could lead opposition?",
+    "Can the damage be repaired?"
+]
+
+[[loyalty_levels]]
+level = "Rebellious"
+value_range = [0, 19]
+description = "The population actively opposes the regent and may be in open revolt."
+military_modifier = "-2"
+tax_modifier = "-2 GB per province (if collectible at all)"
+unrest_chance = "75%"
+rebellion_risk = "Imminent or active"
+effects = [
+    "Military units may desert or defect",
+    "Taxes uncollectable without army",
+    "Nobles in open opposition",
+    "Organized resistance exists",
+    "Foreign powers offer 'assistance'"
+]
+oracle_questions = [
+    "Is there open rebellion?",
+    "Who leads the resistance?",
+    "Can the regent survive this?"
+]
+
+# =============================================================================
+# LOYALTY MODIFIERS
+# =============================================================================
+# Factors that increase or decrease loyalty
+
+[loyalty_modifiers]
+
+# Positive Modifiers
+[[loyalty_modifiers.positive]]
+category = "bloodline"
+name = "Strong Bloodline"
+modifier = "+5 to +15"
+description = "A strong, legitimate bloodline inspires awe and respect."
+conditions = "Regent has bloodline score 40+, legitimate succession"
+
+[[loyalty_modifiers.positive]]
+category = "bloodline"
+name = "Ancient Lineage"
+modifier = "+5 to +10"
+description = "Family has ruled for generations."
+conditions = "3+ generations of family rule"
+
+[[loyalty_modifiers.positive]]
+category = "military"
+name = "Recent Victory"
+modifier = "+5 to +15"
+description = "Military success inspires confidence."
+conditions = "Won a significant battle within last year"
+duration = "Fades over 2-4 seasons"
+
+[[loyalty_modifiers.positive]]
+category = "military"
+name = "Strong Defense"
+modifier = "+3 to +5"
+description = "Population feels protected."
+conditions = "Adequate military presence, no recent raids"
+
+[[loyalty_modifiers.positive]]
+category = "economic"
+name = "Prosperity"
+modifier = "+5 to +10"
+description = "Good economic conditions improve mood."
+conditions = "Trade flourishing, employment high"
+
+[[loyalty_modifiers.positive]]
+category = "economic"
+name = "Low Taxes"
+modifier = "+3 to +8"
+description = "Light tax burden appreciated."
+conditions = "Taxes at or below standard rate"
+
+[[loyalty_modifiers.positive]]
+category = "religious"
+name = "Temple Support"
+modifier = "+5 to +10"
+description = "Religious endorsement legitimizes rule."
+conditions = "Major temple supports regent"
+
+[[loyalty_modifiers.positive]]
+category = "religious"
+name = "Divine Favor"
+modifier = "+10 to +20"
+description = "Signs of godly approval."
+conditions = "Miracle, vision, or divine intervention"
+duration = "Fades over time unless maintained"
+
+[[loyalty_modifiers.positive]]
+category = "justice"
+name = "Fair Justice"
+modifier = "+3 to +8"
+description = "Population trusts the courts."
+conditions = "Consistent, fair legal rulings"
+
+[[loyalty_modifiers.positive]]
+category = "justice"
+name = "Merciful Rule"
+modifier = "+2 to +5"
+description = "Regent known for tempering justice with mercy."
+conditions = "Pattern of reasonable punishments"
+
+[[loyalty_modifiers.positive]]
+category = "personal"
+name = "Popular Regent"
+modifier = "+5 to +15"
+description = "Regent personally liked by populace."
+conditions = "Charismatic, accessible, well-known"
+
+[[loyalty_modifiers.positive]]
+category = "personal"
+name = "Local Hero"
+modifier = "+10 to +20"
+description = "Regent performed heroic deed for the people."
+conditions = "Saved the realm, slew monster, etc."
+duration = "Long-lasting but fades over generations"
+
+[[loyalty_modifiers.positive]]
+category = "cultural"
+name = "Shared Culture"
+modifier = "+5"
+description = "Regent shares culture with population."
+conditions = "Same ethnic/cultural background"
+
+[[loyalty_modifiers.positive]]
+category = "cultural"
+name = "Respected Traditions"
+modifier = "+3 to +5"
+description = "Regent honors local customs."
+conditions = "Participates in festivals, respects customs"
+
+# Negative Modifiers
+[[loyalty_modifiers.negative]]
+category = "bloodline"
+name = "Weak Bloodline"
+modifier = "-5 to -10"
+description = "Lack of divine blood weakens legitimacy."
+conditions = "Bloodline score under 20 or non-blooded"
+
+[[loyalty_modifiers.negative]]
+category = "bloodline"
+name = "Disputed Succession"
+modifier = "-10 to -20"
+description = "Questions about rightful rule."
+conditions = "Challenger with plausible claim exists"
+
+[[loyalty_modifiers.negative]]
+category = "bloodline"
+name = "Azrai Taint"
+modifier = "-5 to -15"
+description = "Shadow of evil blood."
+conditions = "Azrai derivation known, or corruption visible"
+
+[[loyalty_modifiers.negative]]
+category = "military"
+name = "Recent Defeat"
+modifier = "-5 to -20"
+description = "Military failure shakes confidence."
+conditions = "Lost significant battle"
+duration = "Fades over 2-4 seasons unless repeated"
+
+[[loyalty_modifiers.negative]]
+category = "military"
+name = "Inadequate Defense"
+modifier = "-5 to -10"
+description = "Population feels vulnerable."
+conditions = "Raids go unpunished, borders weak"
+
+[[loyalty_modifiers.negative]]
+category = "military"
+name = "Oppressive Garrison"
+modifier = "-3 to -8"
+description = "Troops abuse the population."
+conditions = "Undisciplined or foreign troops"
+
+[[loyalty_modifiers.negative]]
+category = "economic"
+name = "Poverty"
+modifier = "-5 to -15"
+description = "Economic hardship breeds resentment."
+conditions = "Trade disrupted, unemployment high"
+
+[[loyalty_modifiers.negative]]
+category = "economic"
+name = "Heavy Taxes"
+modifier = "-5 to -15"
+description = "Excessive taxation breeds hatred."
+conditions = "Taxes above standard rate"
+
+[[loyalty_modifiers.negative]]
+category = "economic"
+name = "Famine"
+modifier = "-10 to -25"
+description = "Starvation destroys loyalty."
+conditions = "Food shortage affecting population"
+
+[[loyalty_modifiers.negative]]
+category = "religious"
+name = "Temple Opposition"
+modifier = "-5 to -15"
+description = "Religious condemnation damages rule."
+conditions = "Major temple opposes regent"
+
+[[loyalty_modifiers.negative]]
+category = "religious"
+name = "Divine Displeasure"
+modifier = "-10 to -20"
+description = "Signs of godly disapproval."
+conditions = "Ill omens, failed rituals, curses"
+
+[[loyalty_modifiers.negative]]
+category = "religious"
+name = "Different Faith"
+modifier = "-3 to -10"
+description = "Regent follows different religion."
+conditions = "Population predominantly of other faith"
+
+[[loyalty_modifiers.negative]]
+category = "justice"
+name = "Corrupt Justice"
+modifier = "-5 to -15"
+description = "Courts seen as unfair."
+conditions = "Bribery, favoritism in legal system"
+
+[[loyalty_modifiers.negative]]
+category = "justice"
+name = "Cruel Punishments"
+modifier = "-3 to -10"
+description = "Excessive severity breeds fear and hate."
+conditions = "Pattern of harsh punishments"
+
+[[loyalty_modifiers.negative]]
+category = "personal"
+name = "Unpopular Regent"
+modifier = "-5 to -15"
+description = "Regent personally disliked."
+conditions = "Arrogant, cruel, absent, or foreign"
+
+[[loyalty_modifiers.negative]]
+category = "personal"
+name = "Scandal"
+modifier = "-5 to -20"
+description = "Shameful revelations damage reputation."
+conditions = "Major scandal becomes public"
+duration = "Fades slowly, may never fully recover"
+
+[[loyalty_modifiers.negative]]
+category = "cultural"
+name = "Foreign Rule"
+modifier = "-5 to -15"
+description = "Regent from different culture."
+conditions = "Different ethnic/cultural background"
+
+[[loyalty_modifiers.negative]]
+category = "cultural"
+name = "Traditions Violated"
+modifier = "-5 to -15"
+description = "Regent disrespects local customs."
+conditions = "Banned customs, changed traditions"
+
+[[loyalty_modifiers.negative]]
+category = "external"
+name = "Enemy Propaganda"
+modifier = "-3 to -10"
+description = "Foreign agents spread discontent."
+conditions = "Active espionage/agitation campaign"
+
+[[loyalty_modifiers.negative]]
+category = "external"
+name = "Failed Promises"
+modifier = "-5 to -15"
+description = "Regent broke significant promises."
+conditions = "Public commitments not fulfilled"
+
+# =============================================================================
+# LOYALTY CHECK TRIGGERS
+# =============================================================================
+# Events that require loyalty checks
+
+[[loyalty_check_triggers]]
+trigger = "New Regent Assumes Power"
+check_type = "Transition"
+base_difficulty = "Moderate"
+description = "Population evaluates the new ruler."
+modifiers = [
+    "+10 if legitimate heir",
+    "+5 if supported by major temple",
+    "-10 if seized by force",
+    "-15 if foreign conqueror"
+]
+failure_effects = [
+    "Unrest in one or more provinces",
+    "Nobles demand concessions",
+    "Rival claimant emerges"
+]
+oracle_questions = [
+    "Do the people accept the new regent?",
+    "Which factions oppose the transition?",
+    "What could improve acceptance?"
+]
+
+[[loyalty_check_triggers]]
+trigger = "Heavy Tax Increase"
+check_type = "Economic"
+base_difficulty = "Moderate to Hard"
+description = "Population resists increased taxation."
+modifiers = [
+    "+5 if taxes fund popular cause (defense)",
+    "+3 if temporary and explained",
+    "-5 per consecutive increase",
+    "-10 if taxes fund unpopular cause (war of aggression)"
+]
+failure_effects = [
+    "Tax evasion increases",
+    "Protests in cities",
+    "Merchants relocate"
+]
+oracle_questions = [
+    "Will the people accept this burden?",
+    "Who leads opposition to the taxes?",
+    "Can collection be enforced?"
+]
+
+[[loyalty_check_triggers]]
+trigger = "Military Conscription"
+check_type = "Military"
+base_difficulty = "Moderate"
+description = "Population resists being drafted."
+modifiers = [
+    "+10 if defending against invasion",
+    "+5 if for limited duration",
+    "-5 per previous conscription this generation",
+    "-15 if for foreign war of aggression"
+]
+failure_effects = [
+    "Draft dodging",
+    "Low quality recruits",
+    "Desertion"
+]
+oracle_questions = [
+    "Do the people believe in this cause?",
+    "How many will hide from the levy?",
+    "Will this weaken the harvest?"
+]
+
+[[loyalty_check_triggers]]
+trigger = "Military Defeat"
+check_type = "Military"
+base_difficulty = "Based on severity"
+description = "Population loses confidence after defeat."
+modifiers = [
+    "+5 if regent personally fought",
+    "+10 if defeat was unavoidable (overwhelming odds)",
+    "-5 per consecutive defeat",
+    "-10 if defeat was through cowardice or incompetence",
+    "-20 if capital or major city lost"
+]
+failure_effects = [
+    "Morale collapse",
+    "Calls for new leadership",
+    "Defections to enemy"
+]
+oracle_questions = [
+    "Who do the people blame?",
+    "Is there hope for recovery?",
+    "Will allies abandon the realm?"
+]
+
+[[loyalty_check_triggers]]
+trigger = "Natural Disaster"
+check_type = "Crisis"
+base_difficulty = "Based on severity"
+description = "Population looks to regent for help."
+modifiers = [
+    "+10 if regent provides effective relief",
+    "+5 if regent personally visits affected areas",
+    "-10 if relief inadequate or slow",
+    "-15 if regent seems uncaring",
+    "-20 if disaster blamed on regent (divine punishment)"
+]
+failure_effects = [
+    "Blaming the regent",
+    "Migration out of realm",
+    "Religious extremism"
+]
+oracle_questions = [
+    "Is the disaster seen as the regent's fault?",
+    "What aid can be provided?",
+    "Will this unite or divide the people?"
+]
+
+[[loyalty_check_triggers]]
+trigger = "Religious Crisis"
+check_type = "Religious"
+base_difficulty = "Based on issue"
+description = "Conflict with or between faiths."
+modifiers = [
+    "+10 if regent sides with majority faith",
+    "+5 if regent seen as pious",
+    "-10 if regent conflicts with majority faith",
+    "-15 if heresy or paganism tolerated",
+    "-20 if excommunicated"
+]
+failure_effects = [
+    "Religious unrest",
+    "Temple withdraws support",
+    "Holy war or inquisition"
+]
+oracle_questions = [
+    "Which faith commands more loyalty?",
+    "Can the regent remain neutral?",
+    "Will this spark violence?"
+]
+
+[[loyalty_check_triggers]]
+trigger = "Scandal Revealed"
+check_type = "Personal"
+base_difficulty = "Based on scandal severity"
+description = "Shameful information becomes public."
+modifiers = [
+    "+5 if regent confesses and repents",
+    "+10 if scandal is obviously false",
+    "-5 per previous scandal",
+    "-10 if scandal involves sacred violations",
+    "-20 if scandal involves treason or kinslaying"
+]
+failure_effects = [
+    "Loss of respect",
+    "Calls for abdication",
+    "Noble defections"
+]
+oracle_questions = [
+    "Is the scandal true?",
+    "Can the damage be controlled?",
+    "Who benefits from this revelation?"
+]
+
+[[loyalty_check_triggers]]
+trigger = "Unpopular Policy"
+check_type = "Political"
+base_difficulty = "Based on policy impact"
+description = "Regent enacts policy the people dislike."
+modifiers = [
+    "+5 if policy has clear benefits",
+    "+10 if policy is temporary",
+    "-5 if policy benefits only elites",
+    "-10 if policy violates traditions",
+    "-15 if policy is seen as tyrannical"
+]
+failure_effects = [
+    "Passive resistance",
+    "Noble opposition",
+    "Underground movements"
+]
+oracle_questions = [
+    "Why is this policy unpopular?",
+    "Can opposition be appeased?",
+    "Is the policy worth the cost?"
+]
+
+[[loyalty_check_triggers]]
+trigger = "Foreign Occupation/Influence"
+check_type = "Political"
+base_difficulty = "Hard"
+description = "Foreign power exerts control."
+modifiers = [
+    "+5 if foreign power seen as liberator",
+    "-10 if foreign culture/religion",
+    "-15 if foreign troops present",
+    "-20 if foreign ruler imposed"
+]
+failure_effects = [
+    "Resistance movement forms",
+    "Collaboration vs. resistance divide",
+    "Partisan warfare"
+]
+oracle_questions = [
+    "Do the people accept foreign rule?",
+    "Who will lead the resistance?",
+    "Can collaboration be justified?"
+]
+
+# =============================================================================
+# REBELLION MECHANICS
+# =============================================================================
+
+[rebellion]
+description = """
+When loyalty drops too low, rebellion may occur. This section covers
+the stages of rebellion, types of rebels, and resolution mechanics.
+"""
+
+[[rebellion.stages]]
+stage = 1
+name = "Discontent"
+loyalty_range = [20, 39]
+description = "Population is unhappy but not yet organized."
+signs = [
+    "Increased crime and banditry",
+    "Tax evasion",
+    "Grumbling in taverns",
+    "Minor protests"
+]
+oracle_questions = [
+    "Are agitators organizing the discontent?",
+    "Which groups are most affected?",
+    "Can grievances be addressed?"
+]
+intervention_options = [
+    "Address grievances",
+    "Increase law presence",
+    "Propaganda campaign",
+    "Remove corrupt officials"
+]
+
+[[rebellion.stages]]
+stage = 2
+name = "Unrest"
+loyalty_range = [10, 19]
+description = "Organized opposition begins to form."
+signs = [
+    "Organized protests and strikes",
+    "Underground pamphlets",
+    "Secret meetings",
+    "Noble plotting",
+    "Assassination attempts"
+]
+oracle_questions = [
+    "Who leads the opposition?",
+    "Do they have foreign backing?",
+    "Is violence imminent?"
+]
+intervention_options = [
+    "Major concessions",
+    "Negotiate with leaders",
+    "Arrest ringleaders",
+    "Military show of force",
+    "Co-opt moderate opposition"
+]
+
+[[rebellion.stages]]
+stage = 3
+name = "Open Rebellion"
+loyalty_range = [0, 9]
+description = "Armed uprising against the regent."
+signs = [
+    "Armed bands form",
+    "Officials attacked",
+    "Territory lost to rebels",
+    "Rival government declared"
+]
+oracle_questions = [
+    "How strong is the rebel army?",
+    "Which provinces have fallen?",
+    "Who supports the rebellion?"
+]
+intervention_options = [
+    "Full military response",
+    "Siege rebel strongholds",
+    "Negotiate peace terms",
+    "Abdicate or compromise",
+    "Scorched earth tactics"
+]
+
+[[rebellion.stages]]
+stage = 4
+name = "Civil War"
+loyalty_range = [-100, -1]
+description = "Full-scale war between factions."
+signs = [
+    "Formal rival claimant",
+    "Major battles",
+    "Realm divided",
+    "Foreign intervention"
+]
+oracle_questions = [
+    "Which side is stronger?",
+    "Will foreign powers intervene?",
+    "What would end the war?"
+]
+intervention_options = [
+    "Total war",
+    "Seek foreign allies",
+    "Negotiate partition",
+    "Flight to exile",
+    "Decisive battle"
+]
+
+# Rebel Types
+[[rebellion.rebel_types]]
+type = "Peasant Uprising"
+cause = "Economic oppression, famine, heavy taxes"
+leadership = "Charismatic commoner, hedge priest, local hero"
+composition = "Peasant levies, desperate farmers, town militia"
+strengths = [
+    "Numbers",
+    "Knowledge of local terrain",
+    "Popular support"
+]
+weaknesses = [
+    "Poor equipment",
+    "Lack of training",
+    "No cavalry or siege capability"
+]
+oracle_questions = [
+    "What sparked the uprising?",
+    "Do they have a clear leader?",
+    "What would satisfy them?"
+]
+
+[[rebellion.rebel_types]]
+type = "Noble Revolt"
+cause = "Power struggle, succession dispute, wounded pride"
+leadership = "Ambitious noble, displaced heir, powerful family"
+composition = "Noble retainers, professional soldiers, knights"
+strengths = [
+    "Military experience",
+    "Good equipment",
+    "Cavalry",
+    "Castles and fortifications"
+]
+weaknesses = [
+    "Limited numbers",
+    "Divided loyalties",
+    "May lack popular support"
+]
+oracle_questions = [
+    "Which nobles have joined?",
+    "What are their demands?",
+    "Can any be bought off?"
+]
+
+[[rebellion.rebel_types]]
+type = "Religious Uprising"
+cause = "Religious persecution, heresy accusations, temple conflict"
+leadership = "Priest, prophet, temple hierarchy"
+composition = "Faithful zealots, temple guards, pilgrim warriors"
+strengths = [
+    "Fanatical morale",
+    "Divine magic support",
+    "Widespread network"
+]
+weaknesses = [
+    "May alienate other faiths",
+    "Inflexible",
+    "Internal doctrinal disputes"
+]
+oracle_questions = [
+    "Which faith leads the uprising?",
+    "Do they have divine backing?",
+    "What theological issues drive them?"
+]
+
+[[rebellion.rebel_types]]
+type = "Ethnic/Cultural Revolt"
+cause = "Foreign rule, cultural suppression, historical grievances"
+leadership = "Traditional chief, cultural hero, separatist leader"
+composition = "Ethnic warriors, tribal levies, cultural loyalists"
+strengths = [
+    "Strong identity",
+    "Resistance to assimilation",
+    "Guerrilla capability"
+]
+weaknesses = [
+    "May be isolated",
+    "Limited resources",
+    "Difficulty uniting with other groups"
+]
+oracle_questions = [
+    "Which culture is rebelling?",
+    "Do they seek independence or rights?",
+    "Can autonomy satisfy them?"
+]
+
+[[rebellion.rebel_types]]
+type = "Military Mutiny"
+cause = "Unpaid wages, poor treatment, political ambition"
+leadership = "General, popular commander, soldier's council"
+composition = "Professional soldiers, veterans, military units"
+strengths = [
+    "Military training and equipment",
+    "Unit cohesion",
+    "Control of fortifications"
+]
+weaknesses = [
+    "May lack popular support",
+    "Supply problems if prolonged",
+    "Other units may oppose"
+]
+oracle_questions = [
+    "Which units have mutinied?",
+    "What are their demands?",
+    "Will loyalty soldiers fight them?"
+]
+
+[[rebellion.rebel_types]]
+type = "Succession War"
+cause = "Disputed succession, rival claimant"
+leadership = "Alternative heir, pretender, foreign-backed claimant"
+composition = "Supporters of the claimant, foreign troops, opportunists"
+strengths = [
+    "Legitimacy claims",
+    "May have legal support",
+    "Foreign backing possible"
+]
+weaknesses = [
+    "Must prove legitimacy",
+    "May seem like usurper",
+    "Divided loyalties"
+]
+oracle_questions = [
+    "How strong is their claim?",
+    "Who recognizes them?",
+    "Would they be a better ruler?"
+]
+
+# Resolution
+[[rebellion.resolution_options]]
+option = "Military Victory"
+description = "Crush the rebellion by force."
+requirements = [
+    "Superior military force",
+    "Loyal troops",
+    "Strategic advantage"
+]
+consequences = [
+    "Immediate end to rebellion",
+    "Lingering resentment",
+    "Cost of war",
+    "Reputation as tyrant (possible)"
+]
+oracle_questions = [
+    "Can the rebels be defeated?",
+    "What will victory cost?",
+    "Will survivors seek revenge?"
+]
+
+[[rebellion.resolution_options]]
+option = "Negotiated Settlement"
+description = "Reach agreement with rebel leaders."
+requirements = [
+    "Willingness to compromise",
+    "Identifiable moderate leaders",
+    "Something to offer"
+]
+consequences = [
+    "Concessions required",
+    "Precedent for future demands",
+    "Possible lasting peace",
+    "Some rebels may reject deal"
+]
+oracle_questions = [
+    "What will satisfy them?",
+    "Can you afford the concessions?",
+    "Will hardliners accept peace?"
+]
+
+[[rebellion.resolution_options]]
+option = "Divide and Conquer"
+description = "Split rebel factions against each other."
+requirements = [
+    "Multiple rebel factions",
+    "Exploitable divisions",
+    "Skilled diplomacy/intrigue"
+]
+consequences = [
+    "Weakens opposition",
+    "Creates rival rebel groups",
+    "May not end root causes",
+    "Reputation for cunning (good or bad)"
+]
+oracle_questions = [
+    "What divides the rebels?",
+    "Who can be turned?",
+    "Will they realize the manipulation?"
+]
+
+[[rebellion.resolution_options]]
+option = "Co-opt Leadership"
+description = "Bring rebel leaders into the system."
+requirements = [
+    "Positions or rewards to offer",
+    "Pragmatic rebel leaders",
+    "Acceptance from loyalists"
+]
+consequences = [
+    "Ends immediate threat",
+    "Former enemies now insiders",
+    "May anger existing supporters",
+    "Followers may feel betrayed"
+]
+oracle_questions = [
+    "What do the leaders really want?",
+    "Will their followers accept this?",
+    "Can you trust former rebels?"
+]
+
+[[rebellion.resolution_options]]
+option = "Abdication/Exile"
+description = "The regent gives up power to end the conflict."
+requirements = [
+    "Acceptable successor",
+    "Safe passage guaranteed",
+    "Willing to give up power"
+]
+consequences = [
+    "Loss of realm",
+    "Family may retain some status",
+    "Bloodline preserved",
+    "Possible future return"
+]
+oracle_questions = [
+    "Is there a life in exile?",
+    "Will the successor be better?",
+    "Can you ever return?"
+]
+
+# =============================================================================
+# LOYALTY ORACLE QUESTIONS
+# =============================================================================
+# Questions to ask when determining loyalty-related outcomes
+
+[[oracle_sections]]
+section = "General Loyalty"
+questions = [
+    "Do the common people support the regent?",
+    "Is the nobility loyal or plotting?",
+    "Are there whispers of discontent?",
+    "Would soldiers fight and die for this ruler?",
+    "Do merchants trust the realm's stability?",
+    "Is the clergy supportive of the regent?",
+    "Are there rival factions forming?",
+    "Has recent policy affected loyalty?",
+    "Do neighboring realms try to undermine loyalty?",
+    "Is loyalty based on love, fear, or custom?"
+]
+
+[[oracle_sections]]
+section = "Loyalty Changes"
+questions = [
+    "Has a recent event improved or damaged loyalty?",
+    "Are agitators stirring up trouble?",
+    "Has the regent done anything popular recently?",
+    "Has the regent done anything unpopular recently?",
+    "Are economic conditions affecting mood?",
+    "Is there a new threat that unites or divides?",
+    "Have promises been kept or broken?",
+    "Is there a charismatic alternative to the regent?",
+    "Are foreign influences affecting loyalty?",
+    "Has divine favor or disfavor been shown?"
+]
+
+[[oracle_sections]]
+section = "Crisis Response"
+questions = [
+    "Do the people blame the regent for this crisis?",
+    "Is the regent's response adequate?",
+    "Are rivals exploiting the situation?",
+    "Will this crisis unite the realm or divide it?",
+    "Are people fleeing or staying?",
+    "Is there panic or calm?",
+    "Do people trust official information?",
+    "Are there opportunities in this crisis?",
+    "How long can current conditions persist?",
+    "What would restore confidence?"
+]
+
+[[oracle_sections]]
+section = "Rebellion Specific"
+questions = [
+    "How organized is the opposition?",
+    "Do rebels have clear leadership?",
+    "What resources do rebels control?",
+    "Are foreign powers supporting rebels?",
+    "What would end the rebellion peacefully?",
+    "How committed are the rebels to their cause?",
+    "Are moderates willing to negotiate?",
+    "What atrocities have been committed (by either side)?",
+    "Is the military loyal enough to fight rebels?",
+    "Would victory or defeat be remembered for generations?"
+]
+
+# =============================================================================
+# LOYALTY TABLES FOR RANDOM DETERMINATION
+# =============================================================================
+
+[[loyalty_tables]]
+name = "Initial Province Loyalty"
+die = "d100"
+description = "Roll when creating a new province or uncertain of loyalty"
+
+[[loyalty_tables.entries]]
+roll_range = [1, 5]
+result = "Fanatically Loyal (90-100)"
+notes = "Extraordinary circumstances only"
+
+[[loyalty_tables.entries]]
+roll_range = [6, 20]
+result = "Highly Loyal (70-89)"
+notes = "Well-established, popular rule"
+
+[[loyalty_tables.entries]]
+roll_range = [21, 60]
+result = "Average Loyalty (40-69)"
+notes = "Standard baseline"
+
+[[loyalty_tables.entries]]
+roll_range = [61, 85]
+result = "Poor Loyalty (20-39)"
+notes = "Troubled province"
+
+[[loyalty_tables.entries]]
+roll_range = [86, 95]
+result = "Rebellious (1-19)"
+notes = "Active problems"
+
+[[loyalty_tables.entries]]
+roll_range = [96, 100]
+result = "In Open Rebellion (0 or below)"
+notes = "Crisis situation"
+
+[[loyalty_tables]]
+name = "Loyalty Shift per Event"
+die = "d20"
+description = "Roll to determine how much loyalty changes after an event"
+
+[[loyalty_tables.entries]]
+roll_range = [1, 2]
+result = "-15 to -20"
+notes = "Catastrophic impact"
+
+[[loyalty_tables.entries]]
+roll_range = [3, 5]
+result = "-10 to -14"
+notes = "Severe negative impact"
+
+[[loyalty_tables.entries]]
+roll_range = [6, 8]
+result = "-5 to -9"
+notes = "Significant negative impact"
+
+[[loyalty_tables.entries]]
+roll_range = [9, 12]
+result = "-1 to -4"
+notes = "Minor negative impact"
+
+[[loyalty_tables.entries]]
+roll_range = [13, 15]
+result = "+1 to +4"
+notes = "Minor positive impact"
+
+[[loyalty_tables.entries]]
+roll_range = [16, 18]
+result = "+5 to +9"
+notes = "Significant positive impact"
+
+[[loyalty_tables.entries]]
+roll_range = [19, 20]
+result = "+10 to +15"
+notes = "Major positive impact"
+
+[[loyalty_tables]]
+name = "Noble Loyalty"
+die = "d10"
+description = "Individual noble's loyalty disposition"
+
+[[loyalty_tables.entries]]
+roll_range = [1, 1]
+result = "Treasonous"
+notes = "Actively working against regent"
+
+[[loyalty_tables.entries]]
+roll_range = [2, 3]
+result = "Disloyal"
+notes = "Would betray if opportunity arises"
+
+[[loyalty_tables.entries]]
+roll_range = [4, 5]
+result = "Self-Interested"
+notes = "Loyal only when convenient"
+
+[[loyalty_tables.entries]]
+roll_range = [6, 7]
+result = "Dutiful"
+notes = "Follows obligations but no more"
+
+[[loyalty_tables.entries]]
+roll_range = [8, 9]
+result = "Loyal"
+notes = "Genuine supporter of the regent"
+
+[[loyalty_tables.entries]]
+roll_range = [10, 10]
+result = "Fanatically Loyal"
+notes = "Would die for the regent"
+
+[[loyalty_tables]]
+name = "Military Unit Loyalty"
+die = "d10"
+description = "How loyal is a specific military unit"
+
+[[loyalty_tables.entries]]
+roll_range = [1, 1]
+result = "Mutinous"
+notes = "May desert or turn on commanders"
+
+[[loyalty_tables.entries]]
+roll_range = [2, 3]
+result = "Unreliable"
+notes = "May flee or refuse orders"
+
+[[loyalty_tables.entries]]
+roll_range = [4, 6]
+result = "Standard"
+notes = "Will fight if led competently"
+
+[[loyalty_tables.entries]]
+roll_range = [7, 8]
+result = "Reliable"
+notes = "Will hold under pressure"
+
+[[loyalty_tables.entries]]
+roll_range = [9, 10]
+result = "Elite/Loyal"
+notes = "Will fight to the death if needed"

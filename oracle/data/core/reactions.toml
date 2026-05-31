@@ -1,0 +1,466 @@
+# =============================================================================
+# REACTIONS.TOML - Universal NPC/Enemy Reaction Tables
+# =============================================================================
+# How characters respond to player actions, presence, and stimuli.
+# Weights determine relative frequency (higher = more common).
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# HOSTILE REACTIONS - When NPCs are actively antagonistic
+# -----------------------------------------------------------------------------
+[hostile_reactions]
+entries = [
+  # Immediate aggression
+  { text = "Attacks immediately without hesitation", weight = 3 },
+  { text = "Lunges forward with a guttural war cry", weight = 2 },
+  { text = "Opens fire without warning", weight = 2 },
+  { text = "Charges recklessly, weapon raised", weight = 2 },
+  { text = "Hurls the nearest object as a weapon", weight = 1 },
+
+  # Tactical responses
+  { text = "Calls for reinforcements", weight = 2 },
+  { text = "Attempts to flank and surround", weight = 2 },
+  { text = "Retreats to better defensive position", weight = 2 },
+  { text = "Takes cover and returns fire", weight = 2 },
+  { text = "Signals allies with a coded gesture", weight = 1 },
+  { text = "Splits from group to create crossfire", weight = 1 },
+  { text = "Falls back to choke point", weight = 1 },
+  { text = "Attempts to cut off escape routes", weight = 1 },
+  { text = "Moves to protect something valuable", weight = 1 },
+  { text = "Creates a distraction while others maneuver", weight = 1 },
+
+  # Deceptive tactics
+  { text = "Feigns surrender, plans ambush", weight = 1 },
+  { text = "Pretends to flee, leads into trap", weight = 1 },
+  { text = "Fakes injury to draw you closer", weight = 1 },
+  { text = "Offers parley while allies circle around", weight = 1 },
+  { text = "Throws down weapon, reaches for hidden one", weight = 1 },
+
+  # Intimidation
+  { text = "Bellows threats and obscenities", weight = 2 },
+  { text = "Makes a gruesome display of violence", weight = 1 },
+  { text = "Describes in detail what will happen to you", weight = 1 },
+  { text = "Laughs with unnerving confidence", weight = 1 },
+  { text = "Slowly and deliberately prepares weapon", weight = 1 },
+
+  # Desperation
+  { text = "Grabs a hostage or shield", weight = 1 },
+  { text = "Triggers environmental hazard", weight = 1 },
+  { text = "Destroys something valuable rather than lose it", weight = 1 },
+  { text = "Attempts mutual destruction", weight = 1 },
+  { text = "Fights with animal ferocity", weight = 1 },
+]
+
+# -----------------------------------------------------------------------------
+# NEUTRAL REACTIONS - Wary but not committed to conflict
+# -----------------------------------------------------------------------------
+[neutral_reactions]
+entries = [
+  # Cautious observation
+  { text = "Watches warily, hand resting on weapon", weight = 3 },
+  { text = "Maintains distance, eyes tracking your movements", weight = 2 },
+  { text = "Continues their task but keeps you in peripheral vision", weight = 2 },
+  { text = "Acknowledges your presence with a curt nod", weight = 2 },
+  { text = "Stops what they're doing and stares", weight = 2 },
+  { text = "Shifts position to keep back to wall", weight = 1 },
+  { text = "Glances toward exits and escape routes", weight = 1 },
+  { text = "Exchanges meaningful look with companions", weight = 1 },
+
+  # Verbal engagement
+  { text = "Demands identification and purpose", weight = 2 },
+  { text = "Asks pointed questions about your business", weight = 2 },
+  { text = "Offers information for a price", weight = 1 },
+  { text = "Responds in monosyllables", weight = 2 },
+  { text = "Speaks only when directly addressed", weight = 2 },
+  { text = "Gives deliberately vague answers", weight = 1 },
+  { text = "Redirects conversation to assess your intentions", weight = 1 },
+  { text = "Claims to know nothing about anything", weight = 2 },
+
+  # Dismissive behavior
+  { text = "Ignores you pointedly", weight = 2 },
+  { text = "Waves you away with irritation", weight = 1 },
+  { text = "Returns to their work without acknowledgment", weight = 2 },
+  { text = "Mutters something under their breath", weight = 1 },
+  { text = "Pretends not to understand your language", weight = 1 },
+  { text = "Points elsewhere and says 'not my concern'", weight = 1 },
+
+  # Guarded assistance
+  { text = "Provides minimal help to get rid of you", weight = 2 },
+  { text = "Answers questions but volunteers nothing", weight = 2 },
+  { text = "Gives directions that are technically correct", weight = 1 },
+  { text = "Offers basic hospitality, nothing more", weight = 1 },
+  { text = "Trades fairly but without warmth", weight = 1 },
+  { text = "Helps only after establishing you're not a threat", weight = 1 },
+
+  # Self-preservation
+  { text = "Backs away slowly while maintaining eye contact", weight = 1 },
+  { text = "Positions obstacles between you", weight = 1 },
+  { text = "Signals subtly for others to be alert", weight = 1 },
+  { text = "Keeps hands visible while watching yours", weight = 1 },
+  { text = "Mentions that they are expected somewhere soon", weight = 1 },
+]
+
+# -----------------------------------------------------------------------------
+# FRIENDLY REACTIONS - Positive disposition toward player
+# -----------------------------------------------------------------------------
+[friendly_reactions]
+entries = [
+  # Proactive assistance
+  { text = "Offers aid without being asked", weight = 2 },
+  { text = "Shares valuable information freely", weight = 2 },
+  { text = "Warns of nearby danger", weight = 3 },
+  { text = "Provides supplies or resources", weight = 1 },
+  { text = "Offers shelter or safe haven", weight = 1 },
+  { text = "Introduces you to useful contacts", weight = 1 },
+  { text = "Vouches for you to others", weight = 1 },
+  { text = "Covers for you without being asked", weight = 1 },
+
+  # Warm reception
+  { text = "Greets you with genuine enthusiasm", weight = 2 },
+  { text = "Remembers and asks about previous matters", weight = 1 },
+  { text = "Invites you to join their activity", weight = 1 },
+  { text = "Shares food or drink", weight = 2 },
+  { text = "Makes introductions to companions", weight = 1 },
+  { text = "Clears space and offers a seat", weight = 1 },
+  { text = "Expresses relief at your arrival", weight = 1 },
+
+  # Information sharing
+  { text = "Reveals local gossip and rumors", weight = 2 },
+  { text = "Explains the situation in detail", weight = 2 },
+  { text = "Points out things you might have missed", weight = 2 },
+  { text = "Shares personal knowledge of the area", weight = 1 },
+  { text = "Warns about specific individuals", weight = 1 },
+  { text = "Tells you about recent events", weight = 2 },
+  { text = "Confides suspicions they have", weight = 1 },
+
+  # Collaboration
+  { text = "Offers to accompany you", weight = 1 },
+  { text = "Suggests a plan of action", weight = 1 },
+  { text = "Provides backup or support", weight = 1 },
+  { text = "Agrees to stand watch", weight = 1 },
+  { text = "Volunteers for risky tasks", weight = 1 },
+  { text = "Pledges future assistance", weight = 1 },
+
+  # Trust gestures
+  { text = "Shares a personal secret", weight = 1 },
+  { text = "Gives you something of sentimental value", weight = 1 },
+  { text = "Asks for your advice or opinion", weight = 1 },
+  { text = "Admits a past mistake to you", weight = 1 },
+  { text = "Defends your reputation to others", weight = 1 },
+]
+
+# -----------------------------------------------------------------------------
+# SURPRISED REACTIONS - When caught off-guard
+# -----------------------------------------------------------------------------
+[surprised_reactions]
+entries = [
+  # Paralysis
+  { text = "Freezes in shock, unable to move", weight = 3 },
+  { text = "Stands motionless, mouth agape", weight = 2 },
+  { text = "Goes completely rigid", weight = 2 },
+  { text = "Stops mid-action, processing what happened", weight = 2 },
+  { text = "Blinks repeatedly as if not believing their eyes", weight = 1 },
+
+  # Physical reactions
+  { text = "Drops what they're holding", weight = 2 },
+  { text = "Stumbles backward", weight = 2 },
+  { text = "Throws hands up defensively", weight = 2 },
+  { text = "Ducks or cowers instinctively", weight = 1 },
+  { text = "Knocks something over in their startle", weight = 1 },
+  { text = "Spins around wildly looking for threat", weight = 1 },
+  { text = "Trips and falls", weight = 1 },
+  { text = "Clutches chest, gasping", weight = 1 },
+
+  # Verbal outbursts
+  { text = "Blurts out a secret before catching themselves", weight = 1 },
+  { text = "Screams or yelps in alarm", weight = 2 },
+  { text = "Calls out the wrong name", weight = 1 },
+  { text = "Curses loudly", weight = 2 },
+  { text = "Stammers incoherently", weight = 2 },
+  { text = "Demands to know how you got here", weight = 1 },
+  { text = "Shouts a warning to no one", weight = 1 },
+
+  # Revealing behavior
+  { text = "Eyes dart to something they want to protect", weight = 1 },
+  { text = "Instinctively shields something important", weight = 1 },
+  { text = "Involuntarily glances toward hidden exit", weight = 1 },
+  { text = "Face betrays guilty knowledge", weight = 1 },
+  { text = "Whispers a name they shouldn't know", weight = 1 },
+  { text = "Reaches for something they shouldn't have", weight = 1 },
+
+  # Recovery attempts
+  { text = "Tries to act natural, fails completely", weight = 2 },
+  { text = "Attempts to explain away the situation", weight = 2 },
+  { text = "Pretends they knew you were there", weight = 1 },
+  { text = "Quickly tries to hide something", weight = 1 },
+  { text = "Laughs nervously", weight = 2 },
+  { text = "Changes the subject immediately", weight = 1 },
+]
+
+# -----------------------------------------------------------------------------
+# CORNERED REACTIONS - When trapped with no escape
+# -----------------------------------------------------------------------------
+[cornered_reactions]
+entries = [
+  # Desperate violence
+  { text = "Fights with desperate, animal fury", weight = 3 },
+  { text = "Attacks with anything available as weapon", weight = 2 },
+  { text = "Charges forward in a suicide rush", weight = 1 },
+  { text = "Fights dirty - eyes, throat, groin", weight = 1 },
+  { text = "Bites, scratches, claws", weight = 1 },
+  { text = "Attempts to take you down with them", weight = 1 },
+
+  # Surrender and pleading
+  { text = "Begs for mercy, sobbing", weight = 2 },
+  { text = "Falls to knees, hands raised", weight = 2 },
+  { text = "Offers complete surrender", weight = 2 },
+  { text = "Swears they'll do anything you ask", weight = 1 },
+  { text = "Pleads for their family's sake", weight = 1 },
+  { text = "Promises information in exchange for life", weight = 1 },
+  { text = "Claims it was all someone else's idea", weight = 1 },
+
+  # Bargaining
+  { text = "Offers a deal - information for freedom", weight = 2 },
+  { text = "Promises valuable treasure location", weight = 1 },
+  { text = "Offers to betray their allies", weight = 1 },
+  { text = "Proposes mutual benefit arrangement", weight = 1 },
+  { text = "Threatens consequences from powerful friends", weight = 1 },
+  { text = "Claims to have leverage against you", weight = 1 },
+  { text = "Offers services as informant", weight = 1 },
+
+  # Hidden resources
+  { text = "Reveals hidden weapon", weight = 2 },
+  { text = "Triggers a concealed trap", weight = 1 },
+  { text = "Uses secret escape route", weight = 1 },
+  { text = "Calls hidden ally", weight = 1 },
+  { text = "Produces unexpected item", weight = 1 },
+  { text = "Activates something mechanical", weight = 1 },
+
+  # Psychological responses
+  { text = "Completely shuts down, catatonic", weight = 1 },
+  { text = "Laughs maniacally, breaks mentally", weight = 1 },
+  { text = "Becomes eerily calm, accepts fate", weight = 1 },
+  { text = "Begins confessing everything", weight = 1 },
+  { text = "Prays or invokes divine protection", weight = 1 },
+  { text = "Recites something meaningful to them", weight = 1 },
+  { text = "Defiant to the end, spits insults", weight = 1 },
+  { text = "Thanks you for ending their suffering", weight = 1 },
+]
+
+# -----------------------------------------------------------------------------
+# FEARFUL REACTIONS - When terrified of player/situation
+# -----------------------------------------------------------------------------
+[fearful_reactions]
+entries = [
+  # Flight
+  { text = "Flees without looking back", weight = 3 },
+  { text = "Scrambles away on hands and knees", weight = 2 },
+  { text = "Runs screaming into the unknown", weight = 1 },
+  { text = "Pushes others aside to escape", weight = 1 },
+  { text = "Desperately searches for any exit", weight = 2 },
+  { text = "Climbs whatever is available", weight = 1 },
+  { text = "Dives through window or barrier", weight = 1 },
+
+  # Hiding
+  { text = "Cowers behind furniture or cover", weight = 2 },
+  { text = "Curls into fetal position", weight = 1 },
+  { text = "Covers eyes as if that helps", weight = 1 },
+  { text = "Crawls under something", weight = 1 },
+  { text = "Backs into corner and goes silent", weight = 2 },
+  { text = "Plays dead", weight = 1 },
+
+  # Appeasement
+  { text = "Offers everything they have", weight = 2 },
+  { text = "Promises eternal servitude", weight = 1 },
+  { text = "Throws valuables at you as distraction", weight = 1 },
+  { text = "Points to others as more worthy targets", weight = 1 },
+  { text = "Claims powerful protectors will avenge them", weight = 1 },
+  { text = "Invokes gods, spirits, or laws", weight = 1 },
+
+  # Physical symptoms
+  { text = "Trembles uncontrollably", weight = 2 },
+  { text = "Voice breaks into a whimper", weight = 2 },
+  { text = "Goes pale and starts sweating", weight = 1 },
+  { text = "Loses control of bodily functions", weight = 1 },
+  { text = "Hyperventilates", weight = 1 },
+  { text = "Faints from terror", weight = 1 },
+]
+
+# -----------------------------------------------------------------------------
+# CURIOUS REACTIONS - Intrigued by player/situation
+# -----------------------------------------------------------------------------
+[curious_reactions]
+entries = [
+  # Active investigation
+  { text = "Approaches cautiously to examine you", weight = 2 },
+  { text = "Asks probing questions", weight = 2 },
+  { text = "Circles around studying you from angles", weight = 1 },
+  { text = "Touches or pokes something of interest", weight = 1 },
+  { text = "Leans in for a closer look", weight = 2 },
+  { text = "Sniffs the air deliberately", weight = 1 },
+
+  # Verbal engagement
+  { text = "Peppers you with questions", weight = 2 },
+  { text = "Asks where you came from", weight = 2 },
+  { text = "Inquires about your equipment or abilities", weight = 1 },
+  { text = "Wants to know about the outside world", weight = 1 },
+  { text = "Asks if they can try something of yours", weight = 1 },
+  { text = "Demands demonstration of skill", weight = 1 },
+
+  # Fascination
+  { text = "Watches intently, hanging on every word", weight = 2 },
+  { text = "Forgets their original task, absorbed", weight = 1 },
+  { text = "Calls others over to see", weight = 1 },
+  { text = "Takes notes or makes sketches", weight = 1 },
+  { text = "Compares you to something from stories", weight = 1 },
+  { text = "Declares this the most interesting thing ever", weight = 1 },
+
+  # Testing boundaries
+  { text = "Tries to see what you'll tolerate", weight = 1 },
+  { text = "Asks increasingly personal questions", weight = 1 },
+  { text = "Pokes at sensitive topics", weight = 1 },
+  { text = "Tests your reactions deliberately", weight = 1 },
+]
+
+# -----------------------------------------------------------------------------
+# SUSPICIOUS REACTIONS - Distrustful of player
+# -----------------------------------------------------------------------------
+[suspicious_reactions]
+entries = [
+  # Accusatory
+  { text = "Demands to know your real purpose", weight = 2 },
+  { text = "Accuses you of being a spy", weight = 1 },
+  { text = "Points out inconsistencies in your story", weight = 1 },
+  { text = "Claims to have seen through your disguise", weight = 1 },
+  { text = "Announces they're watching you", weight = 2 },
+  { text = "Notes your suspicious timing", weight = 1 },
+
+  # Verification
+  { text = "Tests your knowledge of local matters", weight = 1 },
+  { text = "Asks questions only insiders would know", weight = 1 },
+  { text = "Demands credentials or proof", weight = 2 },
+  { text = "Checks your story with others", weight = 1 },
+  { text = "Searches you or your belongings", weight = 1 },
+  { text = "Sets a trap question", weight = 1 },
+
+  # Protective measures
+  { text = "Follows you at a distance", weight = 1 },
+  { text = "Alerts others to your presence", weight = 2 },
+  { text = "Refuses to provide any information", weight = 2 },
+  { text = "Lies to test if you'll catch it", weight = 1 },
+  { text = "Keeps children and vulnerable away", weight = 1 },
+  { text = "Secures valuables while talking", weight = 1 },
+
+  # Warnings
+  { text = "States plainly they don't trust you", weight = 2 },
+  { text = "Warns you're being watched", weight = 1 },
+  { text = "Mentions consequences for troublemakers", weight = 1 },
+  { text = "Points out you're outnumbered", weight = 1 },
+  { text = "Notes your every move is being remembered", weight = 1 },
+]
+
+# -----------------------------------------------------------------------------
+# GRIEVING REACTIONS - Processing loss or tragedy
+# -----------------------------------------------------------------------------
+[grieving_reactions]
+entries = [
+  # Denial
+  { text = "Refuses to accept what happened", weight = 2 },
+  { text = "Insists there must be some mistake", weight = 1 },
+  { text = "Continues as if nothing changed", weight = 1 },
+  { text = "Claims the lost one will return", weight = 1 },
+
+  # Anger
+  { text = "Lashes out at whoever is nearest", weight = 2 },
+  { text = "Demands someone pay for this", weight = 1 },
+  { text = "Rages against the unfairness", weight = 1 },
+  { text = "Destroys something in fury", weight = 1 },
+  { text = "Blames you regardless of involvement", weight = 1 },
+
+  # Sorrow
+  { text = "Weeps openly without shame", weight = 2 },
+  { text = "Stares vacantly into nothing", weight = 2 },
+  { text = "Speaks of the lost one in present tense", weight = 1 },
+  { text = "Clutches something that belonged to them", weight = 1 },
+  { text = "Can barely form coherent sentences", weight = 1 },
+
+  # Bargaining
+  { text = "Offers anything to undo this", weight = 1 },
+  { text = "Prays desperately for intervention", weight = 1 },
+  { text = "Seeks any who might help reverse it", weight = 1 },
+  { text = "Promises to change if only...", weight = 1 },
+
+  # Resolution
+  { text = "Asks for help with final arrangements", weight = 1 },
+  { text = "Seeks to honor the fallen properly", weight = 1 },
+  { text = "Wants the truth of what happened", weight = 1 },
+  { text = "Requests you carry message to others", weight = 1 },
+]
+
+# -----------------------------------------------------------------------------
+# RESPECTFUL REACTIONS - Deference to player status/power
+# -----------------------------------------------------------------------------
+[respectful_reactions]
+entries = [
+  # Formal deference
+  { text = "Bows or curtsies deeply", weight = 2 },
+  { text = "Addresses you with formal titles", weight = 2 },
+  { text = "Stands at attention", weight = 1 },
+  { text = "Waits to be addressed before speaking", weight = 2 },
+  { text = "Keeps gaze lowered appropriately", weight = 1 },
+  { text = "Offers the place of honor", weight = 1 },
+
+  # Active service
+  { text = "Asks how they may serve", weight = 2 },
+  { text = "Anticipates your needs", weight = 1 },
+  { text = "Clears path before you", weight = 1 },
+  { text = "Fetches refreshments unbidden", weight = 1 },
+  { text = "Sends for whoever you might need", weight = 1 },
+  { text = "Offers their own possessions", weight = 1 },
+
+  # Information and compliance
+  { text = "Answers all questions thoroughly", weight = 2 },
+  { text = "Provides insider knowledge", weight = 1 },
+  { text = "Obeys without question", weight = 1 },
+  { text = "Volunteers information proactively", weight = 1 },
+  { text = "Admits wrongs and seeks correction", weight = 1 },
+
+  # Recognition
+  { text = "Speaks of your reputation with awe", weight = 1 },
+  { text = "Tells others who you are", weight = 1 },
+  { text = "Expresses honor at meeting you", weight = 1 },
+  { text = "Asks to hear of your deeds", weight = 1 },
+]
+
+# -----------------------------------------------------------------------------
+# CONTEMPTUOUS REACTIONS - Disdain without overt hostility
+# -----------------------------------------------------------------------------
+[contemptuous_reactions]
+entries = [
+  # Dismissive
+  { text = "Looks through you as if you aren't there", weight = 2 },
+  { text = "Speaks about you in third person while present", weight = 1 },
+  { text = "Sighs dramatically at having to acknowledge you", weight = 1 },
+  { text = "Examines you with undisguised distaste", weight = 2 },
+  { text = "Asks if you have an appointment, knowing you don't", weight = 1 },
+
+  # Insults
+  { text = "Makes cutting remarks about your appearance", weight = 1 },
+  { text = "Questions your breeding or background", weight = 1 },
+  { text = "Compares you unfavorably to proper folk", weight = 1 },
+  { text = "Mocks your equipment or manner", weight = 1 },
+  { text = "Sneers at your presumption", weight = 2 },
+
+  # Obstruction
+  { text = "Deliberately slows all assistance", weight = 1 },
+  { text = "Charges you double the normal rate", weight = 1 },
+  { text = "Provides technically correct but useless help", weight = 1 },
+  { text = "Redirects you to someone less important", weight = 1 },
+  { text = "Claims authority you clearly don't have", weight = 1 },
+
+  # Social weapons
+  { text = "Excludes you from conversation pointedly", weight = 1 },
+  { text = "Makes jokes at your expense to others", weight = 1 },
+  { text = "Pretends not to understand your speech", weight = 1 },
+  { text = "Treats you as servant or inferior", weight = 1 },
+]

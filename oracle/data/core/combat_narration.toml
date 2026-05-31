@@ -1,0 +1,569 @@
+# Combat Narration - System-Agnostic Combat Result Descriptions
+# Over 300 entries for vivid, evocative combat narration
+# Use weight to adjust frequency (higher = more common)
+
+[critical_hits]
+entries = [
+  # Devastating Impact (weight 2 - common)
+  { text = "A devastating blow that leaves the target reeling", weight = 2 },
+  { text = "The strike finds its mark with terrible precision", weight = 2 },
+  { text = "A textbook perfect hit - they never saw it coming", weight = 2 },
+  { text = "The blow lands with bone-jarring force", weight = 2 },
+  { text = "Caught completely off-guard - the impact is brutal", weight = 2 },
+  { text = "A masterful strike that exploits every opening", weight = 2 },
+  { text = "The attack connects with devastating effect", weight = 2 },
+  { text = "Perfect timing meets perfect execution", weight = 2 },
+
+  # Visceral Descriptions (weight 1 - less common, more intense)
+  { text = "Strike finds a gap in defenses - blood sprays", weight = 1 },
+  { text = "The impact echoes - bones crack audibly", weight = 1 },
+  { text = "A perfect strike - the target collapses momentarily", weight = 1 },
+  { text = "Aimed true - the weak point exposed and exploited", weight = 1 },
+  { text = "The blow sends them spinning, defenseless", weight = 1 },
+  { text = "Armor buckles under the force of the impact", weight = 1 },
+  { text = "The strike tears through their guard like paper", weight = 1 },
+  { text = "A sickening crunch accompanies the hit", weight = 1 },
+  { text = "Blood wells from the wound immediately", weight = 1 },
+  { text = "The target's eyes go wide with shock and pain", weight = 1 },
+  { text = "Flesh parts under the ferocity of the attack", weight = 1 },
+  { text = "The blow lifts them from their feet", weight = 1 },
+  { text = "A wet impact - something vital has been struck", weight = 1 },
+  { text = "The attack nearly bisects their defense entirely", weight = 1 },
+  { text = "Cartilage crunches beneath the blow", weight = 1 },
+
+  # Skillful Execution
+  { text = "Years of training culminate in this single, perfect strike", weight = 1 },
+  { text = "A feint draws their guard, and the true strike lands", weight = 1 },
+  { text = "Patience rewarded - the opening appears and is ruthlessly exploited", weight = 1 },
+  { text = "The attack flows like water through stone - unstoppable", weight = 1 },
+  { text = "A killing blow held back at the last second - but the damage is done", weight = 1 },
+  { text = "Speed and power combine in lethal harmony", weight = 1 },
+  { text = "The strike seems almost lazy, but the effect is catastrophic", weight = 1 },
+  { text = "Minimal motion, maximum damage - economy of violence", weight = 1 },
+  { text = "The target's own momentum carries them into the strike", weight = 1 },
+  { text = "A counter that turns defense into devastating offense", weight = 1 },
+
+  # Emotional Impact
+  { text = "The crowd gasps - even veterans wince at the impact", weight = 1 },
+  { text = "A blow that will haunt their dreams, if they survive", weight = 1 },
+  { text = "The target's confidence shatters along with their guard", weight = 1 },
+  { text = "Even allies look away from the brutality", weight = 1 },
+  { text = "A strike that makes the enemy reconsider their choices", weight = 1 },
+  { text = "The sound alone is enough to turn stomachs", weight = 1 },
+  { text = "Witnesses will remember this moment for years", weight = 1 },
+  { text = "The target's bravado evaporates instantly", weight = 1 },
+
+  # Technical Excellence
+  { text = "Exploiting a micro-second of vulnerability", weight = 1 },
+  { text = "The angle is perfect - maximum penetration, minimum resistance", weight = 1 },
+  { text = "Targeting the nerve cluster - pain beyond measure", weight = 1 },
+  { text = "The joint bends in a direction it was never meant to", weight = 1 },
+  { text = "A surgical strike to the most vulnerable point", weight = 1 },
+  { text = "The blow bypasses armor entirely - finding the gap", weight = 1 },
+  { text = "Anatomical knowledge made lethal", weight = 1 },
+  { text = "The attack exploits a structural weakness in their stance", weight = 1 },
+  { text = "Perfect force distribution - nothing wasted", weight = 1 },
+  { text = "The strike follows the path of least resistance to maximum damage", weight = 1 },
+]
+
+[solid_hits]
+entries = [
+  # Standard Solid Hits (weight 2 - common)
+  { text = "A clean hit - the target staggers back", weight = 2 },
+  { text = "Solid impact - they'll feel that tomorrow", weight = 2 },
+  { text = "Strike connects with satisfying force", weight = 2 },
+  { text = "The blow lands true, drawing blood", weight = 2 },
+  { text = "A punishing hit that tests their resolve", weight = 2 },
+  { text = "Good contact - the target is hurt", weight = 2 },
+  { text = "The strike finds its mark cleanly", weight = 2 },
+  { text = "A solid connection that rattles their bones", weight = 2 },
+  { text = "The attack lands with telling effect", weight = 2 },
+  { text = "Impact confirmed - damage dealt", weight = 2 },
+  { text = "A workmanlike blow - effective if not elegant", weight = 2 },
+  { text = "The hit registers - pain crosses their face", weight = 2 },
+  { text = "Struck squarely - no question of the damage", weight = 2 },
+  { text = "The attack punches through their guard", weight = 2 },
+  { text = "A measured strike that accomplishes its purpose", weight = 2 },
+
+  # Descriptive Impacts (weight 1)
+  { text = "Skin splits under the force of the blow", weight = 1 },
+  { text = "The target grunts involuntarily from the impact", weight = 1 },
+  { text = "A spray of crimson marks the strike's passage", weight = 1 },
+  { text = "The blow drives the air from their lungs", weight = 1 },
+  { text = "Bruising is immediate - deep tissue damage likely", weight = 1 },
+  { text = "The strike leaves a mark that won't fade quickly", weight = 1 },
+  { text = "Blood begins to seep from the wound", weight = 1 },
+  { text = "The hit echoes dully - flesh absorbing force", weight = 1 },
+  { text = "A grimace of pain - the strike hit something tender", weight = 1 },
+  { text = "The target's rhythm is disrupted by the blow", weight = 1 },
+
+  # Combat Flow
+  { text = "Pressing the advantage with a solid strike", weight = 1 },
+  { text = "The exchange favors the attacker", weight = 1 },
+  { text = "A blow that demands respect and distance", weight = 1 },
+  { text = "The target is forced onto the back foot", weight = 1 },
+  { text = "Initiative seized with a commanding hit", weight = 1 },
+  { text = "The strike shifts the momentum", weight = 1 },
+  { text = "A punishing reminder of who controls this fight", weight = 1 },
+  { text = "The blow establishes dominance in the exchange", weight = 1 },
+  { text = "Asserting control with a decisive hit", weight = 1 },
+  { text = "The target's aggression is answered definitively", weight = 1 },
+
+  # Defensive Penetration
+  { text = "Their guard holds but the impact gets through", weight = 1 },
+  { text = "Partially blocked - but damage still inflicted", weight = 1 },
+  { text = "The defense crumbles under the assault", weight = 1 },
+  { text = "They caught it, but not cleanly enough", weight = 1 },
+  { text = "The strike overwhelms their parry", weight = 1 },
+  { text = "Defense breached - the blow lands", weight = 1 },
+  { text = "Their block arrives a fraction too late", weight = 1 },
+  { text = "The attack slips past their wavering guard", weight = 1 },
+  { text = "Shield or no shield, the force transfers through", weight = 1 },
+  { text = "The attempted parry only redirects the blow slightly", weight = 1 },
+
+  # Weapon-Agnostic Descriptions
+  { text = "The impact reverberates through both combatants", weight = 1 },
+  { text = "A ringing blow that numbs the target's limbs", weight = 1 },
+  { text = "The strike lands with authority", weight = 1 },
+  { text = "Contact is undeniable - the damage evident", weight = 1 },
+  { text = "The target absorbs the hit but not without cost", weight = 1 },
+  { text = "A blow that would fell lesser opponents", weight = 1 },
+  { text = "The hit is clean, the damage substantial", weight = 1 },
+  { text = "Pain lances through the target at impact", weight = 1 },
+  { text = "The strike accomplishes exactly what was intended", weight = 1 },
+  { text = "A good hit - neither flashy nor wasted", weight = 1 },
+]
+
+[glancing_blows]
+entries = [
+  # Standard Grazes (weight 2)
+  { text = "Barely connects - more startling than damaging", weight = 2 },
+  { text = "Grazes past - a near miss", weight = 2 },
+  { text = "Deflected at the last moment - partial damage", weight = 2 },
+  { text = "The strike is turned aside but still stings", weight = 2 },
+  { text = "A superficial hit - the attack lacked commitment", weight = 2 },
+  { text = "The blow lands but without its full force", weight = 2 },
+  { text = "Partial contact - the target twists away", weight = 2 },
+  { text = "A scraping hit that draws blood but little else", weight = 2 },
+  { text = "The attack finds purchase but slides away", weight = 2 },
+  { text = "Caught on the edge of their movement", weight = 2 },
+
+  # Defensive Success Stories (weight 1)
+  { text = "Their armor absorbs most of the impact", weight = 1 },
+  { text = "A last-second adjustment turns a solid hit into a graze", weight = 1 },
+  { text = "The target's reflexes save them from the worst", weight = 1 },
+  { text = "Deflected, but the redirection costs them", weight = 1 },
+  { text = "The strike skitters across their guard", weight = 1 },
+  { text = "They roll with the blow, minimizing damage", weight = 1 },
+  { text = "Quick footwork turns a hit into a near-miss", weight = 1 },
+  { text = "The attack is parried but not completely neutralized", weight = 1 },
+  { text = "Their defense holds, barely", weight = 1 },
+  { text = "Redirected at the cost of position", weight = 1 },
+
+  # Minor Wounds
+  { text = "A shallow cut - painful but not debilitating", weight = 1 },
+  { text = "First blood drawn, but barely", weight = 1 },
+  { text = "The hit leaves a mark but no lasting damage", weight = 1 },
+  { text = "A stinging blow that angers more than injures", weight = 1 },
+  { text = "Skin broken, pride wounded", weight = 1 },
+  { text = "A nick - they'll have a new scar, nothing more", weight = 1 },
+  { text = "The wound is superficial despite the close call", weight = 1 },
+  { text = "Blood trickles but doesn't flow", weight = 1 },
+  { text = "More cloth than flesh torn", weight = 1 },
+  { text = "A warning shot that actually connected", weight = 1 },
+
+  # Near Misses
+  { text = "Close enough to feel the wind of passage", weight = 1 },
+  { text = "The attack clips them as they evade", weight = 1 },
+  { text = "Threading between hit and miss", weight = 1 },
+  { text = "The blow glances off at an angle", weight = 1 },
+  { text = "Contact made, but the angle was wrong", weight = 1 },
+  { text = "The strike loses most of its force on the way in", weight = 1 },
+  { text = "Enough to hurt, not enough to matter", weight = 1 },
+  { text = "The target flinches - more from proximity than pain", weight = 1 },
+  { text = "A brush with violence that could have been worse", weight = 1 },
+  { text = "Luck favors the target - this time", weight = 1 },
+]
+
+[misses]
+entries = [
+  # Clean Misses (weight 2)
+  { text = "The strike whistles past harmlessly", weight = 2 },
+  { text = "Anticipated and avoided with ease", weight = 2 },
+  { text = "A wild swing that hits nothing but air", weight = 2 },
+  { text = "Dodged at the last instant", weight = 2 },
+  { text = "Blocked with practiced efficiency", weight = 2 },
+  { text = "The target simply wasn't there", weight = 2 },
+  { text = "Empty air where a target should be", weight = 2 },
+  { text = "The attack finds nothing", weight = 2 },
+  { text = "Wide of the mark entirely", weight = 2 },
+  { text = "The strike passes harmlessly by", weight = 2 },
+
+  # Evasion Descriptions (weight 1)
+  { text = "A sidestep renders the attack useless", weight = 1 },
+  { text = "They saw it coming a mile away", weight = 1 },
+  { text = "The target flows around the attack like water", weight = 1 },
+  { text = "Too slow - they've already moved", weight = 1 },
+  { text = "The attack chases shadows", weight = 1 },
+  { text = "Feet move faster than the strike", weight = 1 },
+  { text = "A dancer's grace turns aside the blow", weight = 1 },
+  { text = "They weren't where they appeared to be", weight = 1 },
+  { text = "The feint was read - the real attack avoided", weight = 1 },
+  { text = "Superior footwork makes the attack miss", weight = 1 },
+
+  # Defensive Successes
+  { text = "Parried cleanly - no harm done", weight = 1 },
+  { text = "The block is absolute - nothing gets through", weight = 1 },
+  { text = "Shield takes the blow without yielding", weight = 1 },
+  { text = "The defense is impeccable", weight = 1 },
+  { text = "Redirected away from anything vital", weight = 1 },
+  { text = "The guard holds firm against the assault", weight = 1 },
+  { text = "Caught and turned aside with contemptuous ease", weight = 1 },
+  { text = "The attack is read and countered before it lands", weight = 1 },
+  { text = "Perfect timing on the parry", weight = 1 },
+  { text = "The block arrives exactly when needed", weight = 1 },
+
+  # Attacker Failures
+  { text = "Overextended - the attack falls short", weight = 1 },
+  { text = "Poor judgment of distance", weight = 1 },
+  { text = "The timing was off", weight = 1 },
+  { text = "Telegraphed too obviously", weight = 1 },
+  { text = "The attack lacked conviction", weight = 1 },
+  { text = "Hesitation costs them the opportunity", weight = 1 },
+  { text = "The strike is halfhearted and easily avoided", weight = 1 },
+  { text = "Too aggressive - they overcommit and miss", weight = 1 },
+  { text = "The attack is clumsy, easily sidestepped", weight = 1 },
+  { text = "Fatigue slows the strike just enough", weight = 1 },
+
+  # Environmental/Circumstantial
+  { text = "The footing betrays the attack", weight = 1 },
+  { text = "Light plays tricks - the target isn't where they seemed", weight = 1 },
+  { text = "An unexpected gust disrupts the strike", weight = 1 },
+  { text = "The terrain makes the attack impossible", weight = 1 },
+  { text = "Shadows hide the target's true position", weight = 1 },
+  { text = "The sun's glare blinds at the crucial moment", weight = 1 },
+  { text = "Uneven ground throws off the strike", weight = 1 },
+  { text = "Something underfoot causes a crucial slip", weight = 1 },
+]
+
+[critical_failures]
+entries = [
+  # Self-Inflicted Problems (weight 2)
+  { text = "Overextended - now vulnerable", weight = 2 },
+  { text = "Weapon slips from grip momentarily", weight = 2 },
+  { text = "Stumbles, losing balance", weight = 2 },
+  { text = "The attack rebounds painfully", weight = 2 },
+  { text = "Off-balance after the wild swing", weight = 2 },
+  { text = "The follow-through leaves them exposed", weight = 2 },
+  { text = "Momentum carries them past their target", weight = 2 },
+  { text = "A catastrophic misjudgment of distance", weight = 2 },
+
+  # Equipment Failures (weight 1)
+  { text = "Weapon lodges in something unintended", weight = 1 },
+  { text = "The grip fails at the worst moment", weight = 1 },
+  { text = "Something breaks, tears, or comes loose", weight = 1 },
+  { text = "The weapon's weight pulls them off-balance", weight = 1 },
+  { text = "Equipment malfunction at a critical moment", weight = 1 },
+  { text = "The attack damages their own weapon", weight = 1 },
+  { text = "Armor catches on something, restricting movement", weight = 1 },
+  { text = "A strap breaks, a buckle fails", weight = 1 },
+
+  # Self-Injury
+  { text = "The attack somehow damages the attacker", weight = 1 },
+  { text = "Friendly fire risk - wildly off target", weight = 1 },
+  { text = "The recoil causes unexpected injury", weight = 1 },
+  { text = "Pulled a muscle with that wild swing", weight = 1 },
+  { text = "The attack tears something internally", weight = 1 },
+  { text = "Old wounds reopen from the strain", weight = 1 },
+  { text = "The exertion causes a moment of dizziness", weight = 1 },
+  { text = "Something pops that shouldn't have", weight = 1 },
+
+  # Position Compromised
+  { text = "Now completely out of position", weight = 1 },
+  { text = "Back turned to other threats", weight = 1 },
+  { text = "Fallen into the worst possible stance", weight = 1 },
+  { text = "The miss leaves them open to counter", weight = 1 },
+  { text = "Stumbled into an ally, disrupting them both", weight = 1 },
+  { text = "Now between enemies with no clear escape", weight = 1 },
+  { text = "The failed attack reveals their position", weight = 1 },
+  { text = "Cornered by their own momentum", weight = 1 },
+
+  # Psychological Impact
+  { text = "Confidence shaken by the embarrassing failure", weight = 1 },
+  { text = "Panic sets in after the bungled attack", weight = 1 },
+  { text = "The failure is so complete, hesitation follows", weight = 1 },
+  { text = "Allies exchange worried glances", weight = 1 },
+  { text = "The enemy smirks at the fumbled attempt", weight = 1 },
+  { text = "A moment of doubt clouds their judgment", weight = 1 },
+  { text = "The miss was humiliating - composure lost", weight = 1 },
+  { text = "Fear of another failure causes hesitation", weight = 1 },
+]
+
+[killing_blows]
+entries = [
+  # Quick Deaths (weight 2)
+  { text = "The light fades from their eyes", weight = 2 },
+  { text = "They crumple without a sound", weight = 2 },
+  { text = "A final gasp, then stillness", weight = 2 },
+  { text = "Dead before they hit the ground", weight = 2 },
+  { text = "They fall and do not rise", weight = 2 },
+  { text = "The blow ends them instantly", weight = 2 },
+  { text = "Life leaves them between one breath and the next", weight = 2 },
+  { text = "A clean death - quick and certain", weight = 2 },
+
+  # Dramatic Deaths (weight 1)
+  { text = "They fall, reaching for something unseen", weight = 1 },
+  { text = "A look of surprise frozen on their face", weight = 1 },
+  { text = "Their last word dies on their lips", weight = 1 },
+  { text = "They try to speak, but only blood comes", weight = 1 },
+  { text = "Denial flickers in their eyes before the end", weight = 1 },
+  { text = "They seem almost peaceful in the final moment", weight = 1 },
+  { text = "A hand reaches out, grasping at nothing", weight = 1 },
+  { text = "Their weapon clatters from nerveless fingers", weight = 1 },
+  { text = "A final defiant gesture, then nothing", weight = 1 },
+  { text = "They meet death with unexpected dignity", weight = 1 },
+
+  # Violent Deaths
+  { text = "The killing blow is brutal and absolute", weight = 1 },
+  { text = "No chance to suffer - the end is immediate", weight = 1 },
+  { text = "The violence of the death silences the battlefield momentarily", weight = 1 },
+  { text = "An execution more than a combat death", weight = 1 },
+  { text = "The body is broken beyond recognition", weight = 1 },
+  { text = "Death comes in a spray of crimson", weight = 1 },
+  { text = "The killing stroke is almost artistic in its brutality", weight = 1 },
+  { text = "Overkill - they were dead before the attack finished", weight = 1 },
+  { text = "A death that will haunt the one who dealt it", weight = 1 },
+  { text = "The savagery of the end is shocking", weight = 1 },
+
+  # Lingering Moments
+  { text = "They have just long enough to know they've lost", weight = 1 },
+  { text = "A moment of clarity in their eyes before the end", weight = 1 },
+  { text = "They mouth something - prayer, curse, or farewell", weight = 1 },
+  { text = "The body fights on for a heartbeat after the spirit has fled", weight = 1 },
+  { text = "They seem to accept it at the last", weight = 1 },
+  { text = "A strangled sound - not quite a word", weight = 1 },
+  { text = "Their eyes find someone in the crowd before closing", weight = 1 },
+  { text = "One last breath, rattling and wet", weight = 1 },
+  { text = "They try to rise, fail, and are still", weight = 1 },
+  { text = "The hatred in their eyes fades to nothing", weight = 1 },
+
+  # Aftermath
+  { text = "Silence follows the fall", weight = 1 },
+  { text = "Blood pools beneath the fallen", weight = 1 },
+  { text = "The survivors take a moment to comprehend what happened", weight = 1 },
+  { text = "Another name for the death count", weight = 1 },
+  { text = "The battle continues around the cooling body", weight = 1 },
+  { text = "Someone will mourn this one", weight = 1 },
+  { text = "Another life spent in violence", weight = 1 },
+  { text = "The dead tell no tales of this ending", weight = 1 },
+  { text = "One less threat, one more ghost", weight = 1 },
+  { text = "The victor doesn't pause to reflect", weight = 1 },
+]
+
+[injuries]
+entries = [
+  # Bleeding Wounds (weight 2)
+  { text = "Deep laceration - bleeding freely", weight = 2 },
+  { text = "A ragged wound that won't stop bleeding", weight = 2 },
+  { text = "Blood loss becoming a concern", weight = 2 },
+  { text = "The cut is deep - arterial blood pulses", weight = 2 },
+  { text = "A gash that will need stitching", weight = 2 },
+
+  # Skeletal Damage (weight 1)
+  { text = "Possible fracture - movement impaired", weight = 1 },
+  { text = "The bone is definitely broken", weight = 1 },
+  { text = "Ribs cracked - breathing painful", weight = 1 },
+  { text = "The limb hangs at a wrong angle", weight = 1 },
+  { text = "Fingers broken - grip compromised", weight = 1 },
+  { text = "The collarbone gives way", weight = 1 },
+  { text = "Vertebrae compressed - spine in danger", weight = 1 },
+  { text = "The skull may be fractured", weight = 1 },
+
+  # Concussive Trauma
+  { text = "Concussive impact - vision blurred", weight = 1 },
+  { text = "Seeing double after that hit", weight = 1 },
+  { text = "Ears ringing, balance compromised", weight = 1 },
+  { text = "A blow to the head - consciousness wavers", weight = 1 },
+  { text = "The world spins dangerously", weight = 1 },
+  { text = "Nausea follows the head trauma", weight = 1 },
+  { text = "Memories fragment momentarily", weight = 1 },
+  { text = "The impact scrambles thoughts", weight = 1 },
+
+  # Muscle and Soft Tissue
+  { text = "Muscle torn - strength reduced", weight = 1 },
+  { text = "Tendon damage - the limb won't cooperate", weight = 1 },
+  { text = "Deep bruising to vital areas", weight = 1 },
+  { text = "Ligaments stretched or torn", weight = 1 },
+  { text = "The muscle spasms uncontrollably", weight = 1 },
+  { text = "Nerve damage causes numbness", weight = 1 },
+  { text = "A hematoma forms rapidly", weight = 1 },
+  { text = "The flesh is torn to the bone", weight = 1 },
+
+  # Joint and Mobility
+  { text = "Joint damaged - mobility limited", weight = 1 },
+  { text = "The knee buckles under weight", weight = 1 },
+  { text = "Shoulder dislocated - arm useless", weight = 1 },
+  { text = "Ankle twisted badly - no running", weight = 1 },
+  { text = "The elbow locks up painfully", weight = 1 },
+  { text = "Hip injury makes movement agony", weight = 1 },
+  { text = "The wrist won't bear any load", weight = 1 },
+  { text = "Spine compressed - movement dangerous", weight = 1 },
+
+  # Internal Damage
+  { text = "Internal damage suspected", weight = 1 },
+  { text = "Blood in places it shouldn't be", weight = 1 },
+  { text = "Breathing becomes labored - lung compromised", weight = 1 },
+  { text = "Abdominal trauma - internal bleeding likely", weight = 1 },
+  { text = "Organs bruised or ruptured", weight = 1 },
+  { text = "The cough brings up blood", weight = 1 },
+  { text = "Pain radiates from the core", weight = 1 },
+  { text = "Something shifted inside that shouldn't have", weight = 1 },
+
+  # Sensory Damage
+  { text = "Vision impaired by blood or swelling", weight = 1 },
+  { text = "Hearing compromised on one side", weight = 1 },
+  { text = "The eye won't focus properly", weight = 1 },
+  { text = "Taste of copper fills the mouth", weight = 1 },
+  { text = "Nerve damage causes phantom pain", weight = 1 },
+  { text = "The world sounds muffled and distant", weight = 1 },
+]
+
+[morale_effects]
+entries = [
+  # Fear and Retreat (weight 2)
+  { text = "Fear spreads through the enemy ranks", weight = 2 },
+  { text = "Wavering - they're considering retreat", weight = 2 },
+  { text = "The enemy's resolve is crumbling", weight = 2 },
+  { text = "Panic begins to take hold", weight = 2 },
+  { text = "They're looking for exits now", weight = 2 },
+
+  # Rally and Determination (weight 1)
+  { text = "Rallying cry - renewed determination", weight = 1 },
+  { text = "The death of their comrade steels their resolve", weight = 1 },
+  { text = "Anger replaces fear - fighting harder", weight = 1 },
+  { text = "A leader's voice cuts through the chaos", weight = 1 },
+  { text = "Pride keeps them fighting past reason", weight = 1 },
+  { text = "Revenge becomes their only motivation", weight = 1 },
+  { text = "They dig in - no more retreating", weight = 1 },
+  { text = "The underdog energy surges through them", weight = 1 },
+
+  # Shock and Disbelief
+  { text = "Shock and disbelief at the carnage", weight = 1 },
+  { text = "They can't believe what just happened", weight = 1 },
+  { text = "The brutality gives everyone pause", weight = 1 },
+  { text = "Paralyzed by the sudden violence", weight = 1 },
+  { text = "The reality of death finally sinks in", weight = 1 },
+  { text = "First-time fighters freeze in horror", weight = 1 },
+  { text = "The screaming stops - replaced by stunned silence", weight = 1 },
+  { text = "Veterans exchange knowing looks - this is bad", weight = 1 },
+
+  # Breaking Points
+  { text = "One turns and runs - others might follow", weight = 1 },
+  { text = "The unit cohesion is fracturing", weight = 1 },
+  { text = "They're fighting for survival now, not victory", weight = 1 },
+  { text = "The will to fight drains from their eyes", weight = 1 },
+  { text = "Weapons are being dropped, hands raised", weight = 1 },
+  { text = "The rout begins in the back ranks", weight = 1 },
+  { text = "Leadership is dead - no one knows what to do", weight = 1 },
+  { text = "Every fighter for themselves now", weight = 1 },
+
+  # Momentum Shifts
+  { text = "The tide of battle shifts perceptibly", weight = 1 },
+  { text = "Momentum builds - victory feels possible", weight = 1 },
+  { text = "The enemy senses weakness and presses", weight = 1 },
+  { text = "A surge of confidence ripples through the ranks", weight = 1 },
+  { text = "The hunters become the hunted", weight = 1 },
+  { text = "Second wind - exhaustion forgotten", weight = 1 },
+  { text = "The desperate become dangerous", weight = 1 },
+  { text = "Nothing to lose makes them fearless", weight = 1 },
+
+  # Group Psychology
+  { text = "Allies draw closer together instinctively", weight = 1 },
+  { text = "The formation tightens - circling the wagons", weight = 1 },
+  { text = "Trust in companions is the only thing holding", weight = 1 },
+  { text = "Individual bravery gives way to collective action", weight = 1 },
+  { text = "The weakest link threatens to break the chain", weight = 1 },
+  { text = "Courage is contagious - one brave act inspires others", weight = 1 },
+  { text = "The group feeds off each other's energy", weight = 1 },
+  { text = "Someone needs to step up before it all falls apart", weight = 1 },
+]
+
+[combat_sounds]
+entries = [
+  # Impact Sounds
+  { text = "A wet thud marks the impact", weight = 2 },
+  { text = "Metal rings against metal", weight = 2 },
+  { text = "The crack of breaking bone echoes", weight = 1 },
+  { text = "A meaty slap of flesh on flesh", weight = 1 },
+  { text = "The crunch of cartilage gives way", weight = 1 },
+  { text = "A hollow thump against armor", weight = 1 },
+  { text = "The squelch of a wound opening", weight = 1 },
+  { text = "A sharp crack like a whip", weight = 1 },
+
+  # Vocal Sounds
+  { text = "A strangled cry of pain", weight = 2 },
+  { text = "Grunt of exertion accompanies the blow", weight = 2 },
+  { text = "A scream cuts short by impact", weight = 1 },
+  { text = "Gasping breaths fill the silence", weight = 1 },
+  { text = "A roar of defiance", weight = 1 },
+  { text = "Whimpering from the wounded", weight = 1 },
+  { text = "Battle cries echo off the walls", weight = 1 },
+  { text = "The gurgle of a throat wound", weight = 1 },
+
+  # Environmental Combat Sounds
+  { text = "Boots scraping for purchase", weight = 1 },
+  { text = "The clatter of dropped equipment", weight = 1 },
+  { text = "Wood splinters under force", weight = 1 },
+  { text = "Stone cracks from the violence", weight = 1 },
+  { text = "The hiss of breath through teeth", weight = 1 },
+  { text = "Fabric tears as bodies struggle", weight = 1 },
+  { text = "The splash of blood on stone", weight = 1 },
+  { text = "Chains rattle in the chaos", weight = 1 },
+]
+
+[combat_smells]
+entries = [
+  { text = "The copper tang of blood fills the air", weight = 2 },
+  { text = "Sweat and fear mix in the heat of battle", weight = 2 },
+  { text = "The stench of voided bowels", weight = 1 },
+  { text = "Smoke and blood create a battlefield perfume", weight = 1 },
+  { text = "The acrid smell of adrenaline sweat", weight = 1 },
+  { text = "Death has a smell - it's here now", weight = 1 },
+  { text = "Iron and salt - the smell of wounds", weight = 1 },
+  { text = "Fear has a scent, and it's thick here", weight = 1 },
+  { text = "The clean smell of cold air cut with violence", weight = 1 },
+  { text = "Bile rises - someone couldn't hold it", weight = 1 },
+]
+
+[combat_aftermath]
+entries = [
+  # Immediate Aftermath
+  { text = "Silence falls, broken only by labored breathing", weight = 2 },
+  { text = "The survivors take stock of the damage", weight = 2 },
+  { text = "Bodies and broken equipment litter the ground", weight = 2 },
+  { text = "The adrenaline fades, leaving exhaustion", weight = 2 },
+  { text = "Moans from the wounded fill the sudden quiet", weight = 1 },
+  { text = "The smell hits now that the fighting stops", weight = 1 },
+  { text = "Hands shake from the comedown", weight = 1 },
+  { text = "Reality reasserts itself, brutal and ugly", weight = 1 },
+
+  # Emotional Processing
+  { text = "Hollow eyes stare at what they've done", weight = 1 },
+  { text = "Someone laughs - the wrong response but understandable", weight = 1 },
+  { text = "Tears come for some - relief or horror, hard to tell", weight = 1 },
+  { text = "The weight of survival settles in", weight = 1 },
+  { text = "Prayers are muttered, curses are spoken", weight = 1 },
+  { text = "The living tend the wounded, ignore the dead", weight = 1 },
+  { text = "Someone vomits - the body's delayed reaction", weight = 1 },
+  { text = "Hands that killed now check pulses", weight = 1 },
+
+  # Practical Matters
+  { text = "Weapons are cleaned, wounds are bound", weight = 1 },
+  { text = "The search for the fallen begins", weight = 1 },
+  { text = "Inventory of the lost and remaining", weight = 1 },
+  { text = "The dead are stripped of useful items", weight = 1 },
+  { text = "Someone should say words - no one does", weight = 1 },
+  { text = "The next step must be decided", weight = 1 },
+  { text = "Priorities reassert themselves over shock", weight = 1 },
+  { text = "The battle is over, but the journey continues", weight = 1 },
+]

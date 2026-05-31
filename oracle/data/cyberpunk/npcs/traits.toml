@@ -1,0 +1,123 @@
+# Cyberpunk NPC Traits
+# Personality quirks, physical characteristics, and cyberware markers
+
+[traits]
+entries = [
+  # Cyberware-related
+  { text = "Chrome-addicted - constantly upgrading, losing humanity", weight = 2 },
+  { text = "Minimal chrome - distrustful of implants, all organic", weight = 2 },
+  { text = "Glitching optics - eyes flicker and distort occasionally", weight = 1 },
+  { text = "Obvious cyberarm - military-grade, no attempt to hide it", weight = 2 },
+  { text = "Subdermal armor visible - skin has an unnatural sheen", weight = 1 },
+  { text = "Neural interface jack prominent - cables often plugged in", weight = 2 },
+  { text = "Voice modulator - speaks with synthetic undertones", weight = 1 },
+  { text = "Cyber-eyes with scrolling data - always reading feeds", weight = 2 },
+  { text = "Outdated chrome - running on legacy cyberware from decades ago", weight = 1 },
+  { text = "Black market implants - occasional malfunctions, no warranty", weight = 2 },
+  { text = "Full-body conversion - more machine than human", weight = 1 },
+  { text = "Cosmetic cyber - LEDs under skin, chrome fashion accessories", weight = 2 },
+  { text = "Reflex boosters - twitchy, moves unnaturally fast", weight = 1 },
+  { text = "Memory augments - perfect recall, distant demeanor", weight = 1 },
+  { text = "Pain editor active - doesn't react to injuries normally", weight = 1 },
+
+  # Psychological
+  { text = "Paranoid - trusts no one, checks every angle", weight = 2 },
+  { text = "Recklessly brave - takes insane risks without flinching", weight = 2 },
+  { text = "Cold and calculating - emotions are a liability", weight = 2 },
+  { text = "Hot-headed - quick to anger, quicker to violence", weight = 2 },
+  { text = "Eerily calm - unflappable even in crisis", weight = 1 },
+  { text = "Chronically exhausted - running on stims and spite", weight = 2 },
+  { text = "Obsessively neat - everything in its place, always", weight = 1 },
+  { text = "Scattered focus - bounces between topics rapidly", weight = 1 },
+  { text = "Deep depression - going through the motions, dead inside", weight = 1 },
+  { text = "Manic energy - talks fast, moves faster, sleeps never", weight = 2 },
+  { text = "Quiet intensity - says little, means everything", weight = 2 },
+  { text = "Theatrical personality - everything is a performance", weight = 1 },
+  { text = "Dry gallows humor - jokes about death constantly", weight = 2 },
+  { text = "Nostalgic for before - remembers when things were different", weight = 1 },
+  { text = "Violently optimistic - believes things can get better", weight = 1 },
+
+  # Professional
+  { text = "Old-school professional - handshake deals, honor among thieves", weight = 2 },
+  { text = "Purely transactional - everything has a price, nothing personal", weight = 2 },
+  { text = "Loyal to a fault - will die for their crew", weight = 1 },
+  { text = "Backstabber reputation - known for double-crosses", weight = 2 },
+  { text = "Meticulous planner - never acts without preparation", weight = 2 },
+  { text = "Improviser - makes it up as they go, somehow succeeds", weight = 2 },
+  { text = "By-the-book operator - follows protocols religiously", weight = 1 },
+  { text = "Creative problem solver - unconventional methods always", weight = 2 },
+  { text = "Perfectionist - job isn't done until it's done right", weight = 1 },
+  { text = "Good enough mentality - speed over quality", weight = 2 },
+
+  # Physical
+  { text = "Scarred heavily - tells stories with their skin", weight = 2 },
+  { text = "Artificially beautiful - too perfect to be natural", weight = 1 },
+  { text = "Deliberately ugly - intimidation through appearance", weight = 1 },
+  { text = "Constantly smoking - synthetic cigarettes, real addiction", weight = 2 },
+  { text = "Twitchy hands - former stim addiction shows", weight = 2 },
+  { text = "Military bearing - stands straight, moves precisely", weight = 2 },
+  { text = "Street-worn - clothes patched, gear well-used", weight = 2 },
+  { text = "Corporate polish - always immaculate, never relaxed", weight = 2 },
+  { text = "Nomad weathering - sun-damaged, wind-worn, road-hardened", weight = 1 },
+  { text = "Club creature - pale from never seeing daylight", weight = 1 },
+
+  # Habits and quirks
+  { text = "Speaks in corp-speak - synergy, leverage, actionable", weight = 1 },
+  { text = "Street slang heavy - barely comprehensible to outsiders", weight = 2 },
+  { text = "Multilingual - switches languages mid-sentence", weight = 1 },
+  { text = "Nervous tic - checks their weapon constantly", weight = 2 },
+  { text = "Superstitious - rituals before every job", weight = 1 },
+  { text = "Tech-obsessed - always examining new gear", weight = 2 },
+  { text = "People-watcher - studies everyone, trusts patterns", weight = 2 },
+  { text = "Adrenaline junkie - bored by anything safe", weight = 2 },
+  { text = "Recovering addict - fighting demons daily", weight = 1 },
+  { text = "Active addict - functional but dependent", weight = 2 },
+
+  # Background markers
+  { text = "Ex-military - can't shake the training", weight = 2 },
+  { text = "Former corp - knows how the machine works", weight = 2 },
+  { text = "Street raised - never had anything but the gutters", weight = 2 },
+  { text = "Fallen aristocrat - remembers better days", weight = 1 },
+  { text = "Nomad roots - misses the open road", weight = 1 },
+  { text = "Lab-grown - created for a purpose, seeking their own", weight = 1 },
+  { text = "Refugee - fled a corporate war zone", weight = 1 },
+  { text = "Gang survivor - got out, carries the marks", weight = 2 },
+  { text = "Child prodigy - burned out by twenty", weight = 1 },
+  { text = "Late bloomer - found their calling in middle age", weight = 1 },
+
+  # Social
+  { text = "Charismatic manipulator - gets people to do what they want", weight = 2 },
+  { text = "Socially awkward - better with machines than people", weight = 2 },
+  { text = "Natural leader - people follow without knowing why", weight = 1 },
+  { text = "Lone wolf - works alone, trusts alone, dies alone", weight = 2 },
+  { text = "Networker - knows someone everywhere", weight = 2 },
+  { text = "Notorious reputation - recognized on sight", weight = 1 },
+  { text = "Anonymous by design - forgettable face, on purpose", weight = 2 },
+  { text = "Intimidating presence - people cross the street", weight = 2 },
+  { text = "Approachable demeanor - strangers open up to them", weight = 1 },
+  { text = "Off-putting vibe - something wrong, can't place it", weight = 2 },
+
+  # Beliefs
+  { text = "True believer - fighting for a cause larger than themselves", weight = 1 },
+  { text = "Nihilistic - nothing matters, why pretend otherwise", weight = 2 },
+  { text = "Pragmatic survivor - does what it takes, questions later", weight = 2 },
+  { text = "Hidden idealist - cynical shell protecting hope", weight = 1 },
+  { text = "Vengeful - someone will pay, eventually", weight = 2 },
+  { text = "Seeking redemption - trying to balance old sins", weight = 1 },
+  { text = "Corporate loyalist - believes in the system", weight = 1 },
+  { text = "Anti-corporate radical - burn it all down", weight = 2 },
+  { text = "Apolitical mercenary - money talks, ideology walks", weight = 2 },
+  { text = "Religious devotee - faith in something beyond the chrome", weight = 1 },
+
+  # Edge cases
+  { text = "Borderline cyberpsycho - empathy fading fast", weight = 1 },
+  { text = "AI-curious - believes machine consciousness is real", weight = 1 },
+  { text = "Death wish - taking increasingly dangerous jobs", weight = 1 },
+  { text = "Protector complex - can't ignore people in trouble", weight = 1 },
+  { text = "Secret romantic - believes in love despite everything", weight = 1 },
+  { text = "Collector - hoards pre-war artifacts obsessively", weight = 1 },
+  { text = "Synesthete - cyberware glitch blends their senses", weight = 1 },
+  { text = "Split personality - different person in the net", weight = 1 },
+  { text = "Prophetic dreams - sees things that sometimes come true", weight = 1 },
+  { text = "Eidetic memory - remembers everything, forgives nothing", weight = 1 },
+]

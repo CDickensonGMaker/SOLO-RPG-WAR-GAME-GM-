@@ -1,0 +1,383 @@
+# Scene Prompts - Scene framing and pacing for narrative generation
+# System-agnostic entries suitable for any genre or setting
+# Weight determines relative probability (higher = more common)
+
+[opening_scenes]
+description = "How scenes and sessions begin"
+entries = [
+  # Action Openings
+  { text = "In medias res - action already in progress", weight = 1 },
+  { text = "A chase through crowded streets", weight = 1 },
+  { text = "Waking up somewhere unfamiliar", weight = 1 },
+  { text = "In the middle of a tense negotiation", weight = 1 },
+  { text = "A fight has just ended - dealing with aftermath", weight = 1 },
+  { text = "Running from something unseen", weight = 1 },
+  { text = "A heist in progress - something just went wrong", weight = 1 },
+  { text = "Mid-argument with stakes on the line", weight = 1 },
+
+  # Atmospheric Openings
+  { text = "Quiet before the storm - ominous peace", weight = 1 },
+  { text = "The aftermath of violence - what happened here?", weight = 1 },
+  { text = "Arrival at a place of significance", weight = 1 },
+  { text = "A long journey nearing its end", weight = 1 },
+  { text = "Watching from hiding as something unfolds", weight = 1 },
+  { text = "The morning after a difficult decision", weight = 1 },
+  { text = "Standing at a crossroads, literal or metaphorical", weight = 1 },
+  { text = "A vigil over someone or something precious", weight = 1 },
+
+  # Social Openings
+  { text = "A meeting that will change everything", weight = 1 },
+  { text = "A stranger with urgent news", weight = 1 },
+  { text = "An urgent summons interrupts normalcy", weight = 1 },
+  { text = "A celebration where not everything is as it seems", weight = 1 },
+  { text = "A funeral or memorial gathering", weight = 1 },
+  { text = "An unexpected reunion with someone from the past", weight = 1 },
+  { text = "Entering a gathering where you're not welcome", weight = 1 },
+  { text = "Receiving a message that changes everything", weight = 1 },
+
+  # Discovery Openings
+  { text = "Discovery of something that should not be here", weight = 1 },
+  { text = "Finding a body or evidence of struggle", weight = 1 },
+  { text = "Uncovering a hidden place", weight = 1 },
+  { text = "Reading a letter or document that raises questions", weight = 1 },
+  { text = "Noticing something is missing", weight = 1 },
+  { text = "A familiar place has changed", weight = 1 },
+  { text = "Overhearing something not meant for your ears", weight = 1 },
+  { text = "Finding proof of something suspected", weight = 1 },
+]
+
+[transition_scenes]
+description = "Moving between major story beats"
+entries = [
+  # Travel Transitions
+  { text = "Travel montage - what happens along the way?", weight = 2 },
+  { text = "A brief stop that becomes significant", weight = 1 },
+  { text = "Conversation during a journey", weight = 1 },
+  { text = "An unexpected detour", weight = 1 },
+  { text = "Waiting for transport or passage", weight = 1 },
+  { text = "Lost or off course", weight = 1 },
+  { text = "Crossing a significant boundary or border", weight = 1 },
+  { text = "Shelter from weather or danger reveals something", weight = 1 },
+
+  # Recovery Transitions
+  { text = "Recovering and regrouping after conflict", weight = 1 },
+  { text = "Tending wounds - physical or emotional", weight = 1 },
+  { text = "A moment of rest before the next push", weight = 1 },
+  { text = "Processing a loss", weight = 1 },
+  { text = "Rebuilding what was damaged", weight = 1 },
+  { text = "Coming to terms with what happened", weight = 1 },
+  { text = "A quiet drink to steady nerves", weight = 1 },
+
+  # Preparation Transitions
+  { text = "Gathering information before the next move", weight = 1 },
+  { text = "Preparing for what comes next", weight = 1 },
+  { text = "Training or practice for upcoming challenge", weight = 1 },
+  { text = "Acquiring necessary supplies or equipment", weight = 1 },
+  { text = "Recruiting help or allies", weight = 1 },
+  { text = "Studying the opposition", weight = 1 },
+  { text = "Setting up contingencies and backup plans", weight = 1 },
+  { text = "Saying things that need to be said, just in case", weight = 1 },
+
+  # Character Transitions
+  { text = "A quiet moment of character development", weight = 1 },
+  { text = "Processing recent revelations", weight = 1 },
+  { text = "Building or repairing relationships", weight = 1 },
+  { text = "Personal ritual or practice", weight = 1 },
+  { text = "Writing letters that may never be read", weight = 1 },
+  { text = "Revisiting a meaningful object or memory", weight = 1 },
+  { text = "A dream or nightmare", weight = 1 },
+  { text = "Private doubt or crisis of faith", weight = 1 },
+]
+
+[climax_scenes]
+description = "Peak moments of tension and confrontation"
+entries = [
+  # Confrontation Climaxes
+  { text = "The final confrontation begins", weight = 1 },
+  { text = "Face to face with the main adversary at last", weight = 1 },
+  { text = "All the threads converge in one place", weight = 1 },
+  { text = "The moment the plan either works or fails", weight = 1 },
+  { text = "A battle where everything is on the line", weight = 1 },
+  { text = "The last stand against overwhelming odds", weight = 1 },
+  { text = "Two forces collide with no room for retreat", weight = 1 },
+
+  # Decision Climaxes
+  { text = "The point of no return is crossed", weight = 1 },
+  { text = "Everything hangs in the balance", weight = 1 },
+  { text = "Sacrifices must be made", weight = 1 },
+  { text = "A choice that will define everything after", weight = 1 },
+  { text = "The moment of truth - deception or honesty?", weight = 1 },
+  { text = "Pulling the trigger, literal or metaphorical", weight = 1 },
+  { text = "The leap of faith", weight = 1 },
+
+  # Revelation Climaxes
+  { text = "The truth is finally revealed", weight = 1 },
+  { text = "All paths converge at this moment", weight = 1 },
+  { text = "The mask comes off", weight = 1 },
+  { text = "Understanding finally dawns", weight = 1 },
+  { text = "The last piece of the puzzle falls into place", weight = 1 },
+  { text = "Secrets spill out uncontrollably", weight = 1 },
+  { text = "The lie can no longer be maintained", weight = 1 },
+
+  # Transformation Climaxes
+  { text = "Becoming something new to survive", weight = 1 },
+  { text = "Embracing or rejecting your nature", weight = 1 },
+  { text = "The old self must die for the new to live", weight = 1 },
+  { text = "Power claimed or surrendered", weight = 1 },
+  { text = "Breaking free of what held you back", weight = 1 },
+]
+
+[resolution_scenes]
+description = "Aftermath and consequences"
+entries = [
+  # Immediate Aftermath
+  { text = "The immediate aftermath - who survived?", weight = 1 },
+  { text = "Dust settles on the battlefield", weight = 1 },
+  { text = "The silence after the storm", weight = 1 },
+  { text = "Taking stock of wins and losses", weight = 1 },
+  { text = "First aid and triage", weight = 1 },
+  { text = "The enemy's domain after their defeat", weight = 1 },
+  { text = "Searching for survivors or salvage", weight = 1 },
+
+  # Consequences Unfolding
+  { text = "Consequences begin to unfold", weight = 1 },
+  { text = "The world has changed - how?", weight = 1 },
+  { text = "Ripple effects spreading outward", weight = 1 },
+  { text = "Unintended consequences emerge", weight = 1 },
+  { text = "The new status quo takes shape", weight = 1 },
+  { text = "Winners and losers adjust to new reality", weight = 1 },
+  { text = "What was broken may not be fixed", weight = 1 },
+
+  # Recognition and Reward
+  { text = "Rewards and recognition", weight = 1 },
+  { text = "Division of spoils or credit", weight = 1 },
+  { text = "Honoring the fallen or sacrificed", weight = 1 },
+  { text = "Debts paid or debts incurred", weight = 1 },
+  { text = "Reputation adjusted up or down", weight = 1 },
+  { text = "Promises kept or broken", weight = 1 },
+
+  # Moving Forward
+  { text = "Seeds of the next conflict appear", weight = 1 },
+  { text = "Farewells and new beginnings", weight = 1 },
+  { text = "Plans for what comes next", weight = 1 },
+  { text = "Returning to normal - but normal has changed", weight = 1 },
+  { text = "Taking time to heal before the next call", weight = 1 },
+  { text = "The horizon beckons with new possibilities", weight = 1 },
+  { text = "Old chapter closes, new chapter opens", weight = 1 },
+]
+
+[interruption_scenes]
+description = "Events that break expected flow"
+entries = [
+  # Sudden Arrivals
+  { text = "Something interrupts the current action", weight = 2 },
+  { text = "An unexpected arrival changes everything", weight = 1 },
+  { text = "Someone bursts in with urgent news", weight = 1 },
+  { text = "Reinforcements arrive - but whose?", weight = 1 },
+  { text = "Someone thought gone reappears", weight = 1 },
+  { text = "An authority figure demands attention", weight = 1 },
+  { text = "A messenger delivers something game-changing", weight = 1 },
+
+  # Environmental Interruptions
+  { text = "A threat materializes without warning", weight = 1 },
+  { text = "The environment suddenly changes", weight = 1 },
+  { text = "Natural disaster strikes", weight = 1 },
+  { text = "The building, vehicle, or location fails", weight = 1 },
+  { text = "Fire, flood, or collapse", weight = 1 },
+  { text = "Power goes out at a critical moment", weight = 1 },
+  { text = "Something explodes nearby", weight = 1 },
+
+  # News and Discovery
+  { text = "News arrives that demands immediate response", weight = 1 },
+  { text = "An opportunity appears but will not last", weight = 1 },
+  { text = "A communication comes through with vital intel", weight = 1 },
+  { text = "Something is discovered that cannot be ignored", weight = 1 },
+  { text = "Alarms sound - what triggered them?", weight = 1 },
+  { text = "A deadline is suddenly moved up", weight = 1 },
+
+  # Social Interruptions
+  { text = "Someone recognizes someone else", weight = 1 },
+  { text = "A secret is accidentally revealed", weight = 1 },
+  { text = "Someone breaks down or snaps", weight = 1 },
+  { text = "A confrontation that cannot wait", weight = 1 },
+  { text = "Someone makes a scene", weight = 1 },
+  { text = "An accusation is made publicly", weight = 1 },
+]
+
+[investigation_scenes]
+description = "Uncovering information and truth"
+entries = [
+  # Active Investigation
+  { text = "Searching a location for clues", weight = 1 },
+  { text = "Interrogating a witness or suspect", weight = 1 },
+  { text = "Following a trail or tracking", weight = 1 },
+  { text = "Analyzing evidence or remains", weight = 1 },
+  { text = "Surveillance and observation", weight = 1 },
+  { text = "Breaking into somewhere to find information", weight = 1 },
+  { text = "Examining a body or crime scene", weight = 1 },
+
+  # Research and Analysis
+  { text = "Digging through records and archives", weight = 1 },
+  { text = "Consulting an expert", weight = 1 },
+  { text = "Comparing contradictory accounts", weight = 1 },
+  { text = "Decoding or translating something", weight = 1 },
+  { text = "Testing a theory", weight = 1 },
+  { text = "Building a timeline of events", weight = 1 },
+  { text = "Finding patterns in seeming chaos", weight = 1 },
+
+  # Social Investigation
+  { text = "Cultivating a source", weight = 1 },
+  { text = "Playing different parties against each other for information", weight = 1 },
+  { text = "Going undercover to observe", weight = 1 },
+  { text = "Trading information with someone", weight = 1 },
+  { text = "Reading between the lines of what's said", weight = 1 },
+  { text = "Finding who benefits from the situation", weight = 1 },
+]
+
+[social_scenes]
+description = "Character interaction and relationship development"
+entries = [
+  # Negotiations
+  { text = "Negotiating terms with a reluctant party", weight = 1 },
+  { text = "Brokering peace between conflicting groups", weight = 1 },
+  { text = "Haggling over price or terms", weight = 1 },
+  { text = "Trying to convince someone to act", weight = 1 },
+  { text = "Seeking permission or blessing", weight = 1 },
+  { text = "Formal diplomatic exchange", weight = 1 },
+  { text = "Informal deal-making", weight = 1 },
+
+  # Relationship Building
+  { text = "Building trust through shared experience", weight = 1 },
+  { text = "A meal shared between uncertain allies", weight = 1 },
+  { text = "Opening up about the past", weight = 1 },
+  { text = "Testing someone's loyalty or skill", weight = 1 },
+  { text = "Making amends for past wrongs", weight = 1 },
+  { text = "Finding unexpected common ground", weight = 1 },
+  { text = "Romance blossoms or is complicated", weight = 1 },
+
+  # Conflict and Tension
+  { text = "Confronting someone about their actions", weight = 1 },
+  { text = "An argument that reveals deeper issues", weight = 1 },
+  { text = "Power struggles within a group", weight = 1 },
+  { text = "Jealousy or rivalry surfaces", weight = 1 },
+  { text = "Calling out a lie or hypocrisy", weight = 1 },
+  { text = "An ultimatum is given", weight = 1 },
+  { text = "A relationship fractures", weight = 1 },
+
+  # Information Exchange
+  { text = "Debriefing after a mission or event", weight = 1 },
+  { text = "Sharing theories and speculation", weight = 1 },
+  { text = "Planning the next move together", weight = 1 },
+  { text = "Comparing perspectives on what happened", weight = 1 },
+  { text = "Reporting to superiors or employers", weight = 1 },
+  { text = "Seeking advice from a mentor", weight = 1 },
+]
+
+[action_scenes]
+description = "Physical conflict and danger"
+entries = [
+  # Combat Varieties
+  { text = "Ambush - sudden violence from hiding", weight = 1 },
+  { text = "Pitched battle with clear lines", weight = 1 },
+  { text = "Running fight through varied terrain", weight = 1 },
+  { text = "Duel or one-on-one confrontation", weight = 1 },
+  { text = "Defending a position against assault", weight = 1 },
+  { text = "Assault on a defended position", weight = 1 },
+  { text = "Chaotic melee with multiple factions", weight = 1 },
+  { text = "Fighting while something else demands attention", weight = 1 },
+
+  # Chase Scenes
+  { text = "Pursuing a fleeing target", weight = 1 },
+  { text = "Fleeing from pursuit", weight = 1 },
+  { text = "Racing to reach something first", weight = 1 },
+  { text = "Chase through dangerous terrain", weight = 1 },
+  { text = "Escape from a closing trap", weight = 1 },
+  { text = "Chase complicated by obstacles or innocents", weight = 1 },
+
+  # Stealth and Infiltration
+  { text = "Sneaking past guards or observers", weight = 1 },
+  { text = "Breaking in undetected", weight = 1 },
+  { text = "Blending in where you don't belong", weight = 1 },
+  { text = "Extracting someone or something quietly", weight = 1 },
+  { text = "Sabotage without being caught", weight = 1 },
+  { text = "Eavesdropping on important conversation", weight = 1 },
+
+  # Survival Situations
+  { text = "Escape from captivity", weight = 1 },
+  { text = "Surviving hostile environment", weight = 1 },
+  { text = "Holding out until rescue or reinforcement", weight = 1 },
+  { text = "Treating injuries under pressure", weight = 1 },
+  { text = "Finding shelter or safety", weight = 1 },
+  { text = "Improvising with limited resources", weight = 1 },
+]
+
+[atmosphere_prompts]
+description = "Setting mood and tone"
+entries = [
+  # Tension Building
+  { text = "Everything seems too quiet", weight = 1 },
+  { text = "Watching eyes you cannot locate", weight = 1 },
+  { text = "A countdown, literal or metaphorical", weight = 1 },
+  { text = "The last calm moment before action", weight = 1 },
+  { text = "Walls closing in, options narrowing", weight = 1 },
+  { text = "Something is wrong but you cannot name it", weight = 1 },
+
+  # Dread and Horror
+  { text = "Discovery of something disturbing", weight = 1 },
+  { text = "A place that feels wrong", weight = 1 },
+  { text = "Signs of something terrible", weight = 1 },
+  { text = "Being watched or hunted", weight = 1 },
+  { text = "The thing that should not be", weight = 1 },
+  { text = "Dawning realization of the scope of evil", weight = 1 },
+
+  # Wonder and Mystery
+  { text = "First sight of something magnificent", weight = 1 },
+  { text = "A place out of legend", weight = 1 },
+  { text = "Ancient secrets waiting to be uncovered", weight = 1 },
+  { text = "The inexplicable made manifest", weight = 1 },
+  { text = "Standing before something vast", weight = 1 },
+
+  # Emotional Atmosphere
+  { text = "The weight of grief shared", weight = 1 },
+  { text = "Joy breaking through darkness", weight = 1 },
+  { text = "Bitter defeat and its taste", weight = 1 },
+  { text = "Hard-won triumph", weight = 1 },
+  { text = "The loneliness of command", weight = 1 },
+  { text = "Camaraderie forged in adversity", weight = 1 },
+]
+
+[pacing_notes]
+description = "Rhythm and flow suggestions"
+entries = [
+  # Speed Up
+  { text = "Compress time - events happen rapidly", weight = 1 },
+  { text = "Multiple things happen simultaneously", weight = 1 },
+  { text = "No time to think, only react", weight = 1 },
+  { text = "Deadline pressure intensifies", weight = 1 },
+  { text = "Skip to the action, context later", weight = 1 },
+  { text = "Montage through preparation to the moment", weight = 1 },
+
+  # Slow Down
+  { text = "Linger on this significant moment", weight = 1 },
+  { text = "Take time to explore character", weight = 1 },
+  { text = "Show the weight of the decision", weight = 1 },
+  { text = "Let silence speak", weight = 1 },
+  { text = "Small details reveal larger truths", weight = 1 },
+  { text = "The journey matters as much as the destination", weight = 1 },
+
+  # Shift Tone
+  { text = "Undercut tension with dark humor", weight = 1 },
+  { text = "Find lightness after darkness", weight = 1 },
+  { text = "A moment of humanity amid chaos", weight = 1 },
+  { text = "The mundane in extraordinary circumstances", weight = 1 },
+  { text = "Horror creeps into the safe space", weight = 1 },
+  { text = "Beauty in unexpected places", weight = 1 },
+
+  # Structure Notes
+  { text = "This is a mirror of an earlier scene", weight = 1 },
+  { text = "Plant something for later payoff", weight = 1 },
+  { text = "Callback to earlier moment", weight = 1 },
+  { text = "Establish pattern that will be broken", weight = 1 },
+  { text = "This changes the meaning of what came before", weight = 1 },
+  { text = "End on an unanswered question", weight = 1 },
+]

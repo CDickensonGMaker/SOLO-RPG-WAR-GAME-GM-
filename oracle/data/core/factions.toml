@@ -1,0 +1,727 @@
+# Factions - Faction interactions, politics, and organizational dynamics
+# Setting-agnostic faction elements for any genre
+# Weight: higher = more common (1-3 typical range)
+
+[faction_attitudes]
+# How a faction views the characters or other factions
+entries = [
+  # Hostile Range
+  { text = "Openly hostile - attacks on sight", weight = 1 },
+  { text = "Hostile - active opposition and sabotage", weight = 1 },
+  { text = "Antagonistic - works against you behind scenes", weight = 2 },
+  { text = "Unfriendly - refuses cooperation, warns others", weight = 2 },
+  { text = "Suspicious - grudging minimal dealings", weight = 2 },
+  { text = "Wary - cautious and guarded interactions", weight = 2 },
+
+  # Neutral Range
+  { text = "Neutral - pure business, no personal investment", weight = 3 },
+  { text = "Indifferent - ignores you unless forced to engage", weight = 3 },
+  { text = "Pragmatic - judges each interaction on its merits", weight = 2 },
+  { text = "Watchful - observing to determine stance", weight = 2 },
+  { text = "Cautiously open - willing to talk but uncommitted", weight = 2 },
+
+  # Friendly Range
+  { text = "Favorable - willing to help within reason", weight = 2 },
+  { text = "Friendly - active goodwill and support", weight = 2 },
+  { text = "Supportive - provides resources and aid", weight = 1 },
+  { text = "Allied - trusted partners, shared goals", weight = 1 },
+  { text = "Devoted - complete loyalty and commitment", weight = 1 },
+
+  # Complex Attitudes
+  { text = "Complicated - mix of friendly and hostile feelings", weight = 2 },
+  { text = "Conditional - friendly if you meet certain requirements", weight = 2 },
+  { text = "Opportunistic - friendly when it benefits them", weight = 2 },
+  { text = "Fearful - helps you to avoid your anger", weight = 1 },
+  { text = "Respectful enemy - opposes you but honors you", weight = 1 },
+  { text = "Grudging ally - helps you despite disliking you", weight = 2 },
+  { text = "Secretly hostile - appears friendly, plans betrayal", weight = 1 },
+  { text = "Secretly friendly - appears hostile, actually sympathetic", weight = 1 },
+]
+
+[faction_actions]
+# Actions factions take that affect the world
+entries = [
+  # Expansion and Power
+  { text = "Faction expands territory or influence", weight = 2 },
+  { text = "Faction consolidates existing holdings", weight = 2 },
+  { text = "Faction moves into a new area of operations", weight = 2 },
+  { text = "Faction acquires a valuable asset or resource", weight = 2 },
+  { text = "Faction recruits aggressively", weight = 2 },
+  { text = "Faction builds or fortifies a stronghold", weight = 1 },
+  { text = "Faction launches a major initiative", weight = 2 },
+  { text = "Faction displays power to intimidate others", weight = 2 },
+  { text = "Faction secures exclusive rights or access", weight = 1 },
+  { text = "Faction establishes new trade routes or connections", weight = 2 },
+
+  # Decline and Loss
+  { text = "Faction suffers a significant setback", weight = 2 },
+  { text = "Faction loses territory or influence", weight = 2 },
+  { text = "Faction loses a valuable asset or resource", weight = 2 },
+  { text = "Faction hemorrhages members", weight = 1 },
+  { text = "Faction faces financial difficulties", weight = 2 },
+  { text = "Faction's reputation is damaged", weight = 2 },
+  { text = "Faction abandons an outpost or operation", weight = 2 },
+  { text = "Faction is forced to make concessions", weight = 2 },
+  { text = "Faction's secrets are exposed", weight = 1 },
+  { text = "Faction faces external investigation or scrutiny", weight = 1 },
+
+  # Diplomacy and Alliances
+  { text = "Two factions form a formal alliance", weight = 1 },
+  { text = "Two factions begin informal cooperation", weight = 2 },
+  { text = "A faction seeks new allies", weight = 2 },
+  { text = "A faction breaks an alliance", weight = 1 },
+  { text = "A faction betrays an ally", weight = 1 },
+  { text = "Two factions negotiate a treaty or agreement", weight = 2 },
+  { text = "A faction sends envoys to another", weight = 2 },
+  { text = "A faction accepts or rejects an offer", weight = 2 },
+  { text = "A faction mediates between others", weight = 1 },
+  { text = "A faction declares neutrality in a conflict", weight = 2 },
+
+  # Conflict and Hostility
+  { text = "Two factions begin open hostilities", weight = 1 },
+  { text = "Factions engage in cold war tactics", weight = 2 },
+  { text = "A faction attacks another's assets", weight = 1 },
+  { text = "A faction conducts raids or harassment", weight = 2 },
+  { text = "A faction assassinates a rival's leader", weight = 1 },
+  { text = "Faction war escalates in intensity", weight = 1 },
+  { text = "A faction calls for a truce or ceasefire", weight = 2 },
+  { text = "A faction wins a decisive victory", weight = 1 },
+  { text = "A faction suffers a crushing defeat", weight = 1 },
+  { text = "Factions reach a stalemate", weight = 2 },
+
+  # Internal Changes
+  { text = "Faction leadership changes hands", weight = 2 },
+  { text = "Power struggle erupts within faction", weight = 1 },
+  { text = "Faction splinters into sub-factions", weight = 1 },
+  { text = "Two factions or sub-factions merge", weight = 1 },
+  { text = "Faction changes its goals or methods", weight = 2 },
+  { text = "Faction purges disloyal members", weight = 1 },
+  { text = "Faction undergoes internal reform", weight = 2 },
+  { text = "New ideology or leader transforms faction", weight = 1 },
+  { text = "Faction becomes more radical", weight = 1 },
+  { text = "Faction becomes more moderate", weight = 1 },
+
+  # Covert Actions
+  { text = "Faction goes underground", weight = 1 },
+  { text = "Faction plants spies in rival organizations", weight = 2 },
+  { text = "Faction spreads propaganda", weight = 2 },
+  { text = "Faction conducts sabotage operations", weight = 2 },
+  { text = "Faction infiltrates positions of power", weight = 1 },
+  { text = "Faction runs disinformation campaign", weight = 2 },
+  { text = "Faction attempts to destabilize another", weight = 2 },
+  { text = "Faction's covert operations are exposed", weight = 1 },
+  { text = "Faction blackmails key individuals", weight = 1 },
+  { text = "Faction frames another for its actions", weight = 1 },
+
+  # Strategic Shifts
+  { text = "Faction becomes more aggressive", weight = 2 },
+  { text = "Faction becomes more defensive", weight = 2 },
+  { text = "Faction shifts focus to new priorities", weight = 2 },
+  { text = "Faction enters period of isolation", weight = 1 },
+  { text = "Faction opens up to outside contact", weight = 2 },
+  { text = "Faction hoards resources for future action", weight = 2 },
+  { text = "Faction expends resources on major push", weight = 2 },
+  { text = "Faction plays the long game", weight = 2 },
+  { text = "Faction makes desperate short-term moves", weight = 1 },
+  { text = "Faction retreats to regroup", weight = 2 },
+]
+
+[faction_requests]
+# Missions and tasks factions ask of characters
+entries = [
+  # Elimination and Violence
+  { text = "Eliminate a specific enemy of the faction", weight = 2 },
+  { text = "Destroy a rival's asset or operation", weight = 2 },
+  { text = "Assassinate a key figure", weight = 1 },
+  { text = "Clear out hostiles from a location", weight = 2 },
+  { text = "Terrorize enemies into submission", weight = 1 },
+  { text = "Make an example of a traitor", weight = 1 },
+  { text = "Defend faction assets from attack", weight = 2 },
+  { text = "Serve as enforcers for faction authority", weight = 2 },
+  { text = "Eliminate witnesses to faction activities", weight = 1 },
+  { text = "Hunt down and capture a fugitive", weight = 2 },
+
+  # Intelligence and Espionage
+  { text = "Gather intelligence on an enemy", weight = 2 },
+  { text = "Infiltrate a rival organization", weight = 1 },
+  { text = "Steal documents or secrets", weight = 2 },
+  { text = "Map enemy positions and resources", weight = 2 },
+  { text = "Plant listening devices or spies", weight = 1 },
+  { text = "Intercept enemy communications", weight = 1 },
+  { text = "Verify rumors about rival activities", weight = 2 },
+  { text = "Identify traitors within the faction", weight = 1 },
+  { text = "Discover the source of a leak", weight = 2 },
+  { text = "Learn an enemy's plans", weight = 2 },
+
+  # Delivery and Transport
+  { text = "Deliver a message or package", weight = 3 },
+  { text = "Transport valuable cargo", weight = 2 },
+  { text = "Smuggle goods past authorities", weight = 2 },
+  { text = "Escort an important member safely", weight = 2 },
+  { text = "Extract someone from danger", weight = 2 },
+  { text = "Move resources to a new location", weight = 2 },
+  { text = "Run a blockade or checkpoint", weight = 1 },
+  { text = "Deliver an ultimatum to rivals", weight = 1 },
+  { text = "Courier sensitive information", weight = 2 },
+  { text = "Guide refugees or survivors to safety", weight = 2 },
+
+  # Acquisition
+  { text = "Acquire a specific item the faction needs", weight = 2 },
+  { text = "Secure resources from a hostile area", weight = 2 },
+  { text = "Purchase or trade for needed goods", weight = 2 },
+  { text = "Recover lost or stolen faction property", weight = 2 },
+  { text = "Claim abandoned assets for the faction", weight = 2 },
+  { text = "Find and recruit specific talent", weight = 2 },
+  { text = "Locate a lost person or item", weight = 2 },
+  { text = "Seize enemy supplies or equipment", weight = 2 },
+  { text = "Acquire blackmail material", weight = 1 },
+  { text = "Secure exclusive rights or access", weight = 1 },
+
+  # Sabotage and Disruption
+  { text = "Sabotage enemy operations", weight = 2 },
+  { text = "Disrupt enemy supply lines", weight = 2 },
+  { text = "Destroy enemy infrastructure", weight = 1 },
+  { text = "Spread chaos in enemy territory", weight = 1 },
+  { text = "Undermine enemy morale", weight = 2 },
+  { text = "Plant false information", weight = 2 },
+  { text = "Frame an enemy for a crime", weight = 1 },
+  { text = "Start trouble between rivals", weight = 2 },
+  { text = "Delay enemy plans or movements", weight = 2 },
+  { text = "Contaminate or spoil enemy resources", weight = 1 },
+
+  # Protection and Defense
+  { text = "Protect faction territory from incursion", weight = 2 },
+  { text = "Guard a valuable asset or person", weight = 2 },
+  { text = "Establish a perimeter or checkpoint", weight = 2 },
+  { text = "Secure a location for faction use", weight = 2 },
+  { text = "Patrol an area to maintain control", weight = 2 },
+  { text = "Counteract enemy sabotage attempts", weight = 2 },
+  { text = "Root out enemy infiltrators", weight = 1 },
+  { text = "Respond to an emergency situation", weight = 2 },
+  { text = "Fortify defenses before attack", weight = 2 },
+  { text = "Maintain order during crisis", weight = 2 },
+
+  # Diplomacy and Politics
+  { text = "Negotiate with another faction", weight = 2 },
+  { text = "Represent the faction at an event", weight = 2 },
+  { text = "Improve relations with a neutral party", weight = 2 },
+  { text = "Recruit new members to the faction", weight = 2 },
+  { text = "Convince someone to change sides", weight = 1 },
+  { text = "Mediate a dispute within the faction", weight = 2 },
+  { text = "Establish contact with isolated allies", weight = 2 },
+  { text = "Deliver faction's position to authorities", weight = 2 },
+  { text = "Build goodwill in the community", weight = 2 },
+  { text = "Counter enemy propaganda", weight = 2 },
+
+  # Investigation
+  { text = "Investigate a threat to the faction", weight = 2 },
+  { text = "Uncover the truth about suspicious events", weight = 2 },
+  { text = "Verify the loyalty of faction members", weight = 2 },
+  { text = "Track down missing faction assets", weight = 2 },
+  { text = "Research enemy capabilities", weight = 2 },
+  { text = "Determine who is behind attacks", weight = 2 },
+  { text = "Find the source of problems", weight = 2 },
+  { text = "Gather evidence for or against someone", weight = 2 },
+  { text = "Scout potential expansion areas", weight = 2 },
+  { text = "Assess the situation in contested territory", weight = 2 },
+]
+
+[faction_rewards]
+# What factions offer for service
+entries = [
+  # Access and Resources
+  { text = "Access to faction resources and equipment", weight = 2 },
+  { text = "Safe passage in faction territory", weight = 2 },
+  { text = "Use of faction safe houses and facilities", weight = 2 },
+  { text = "Faction supplies and consumables", weight = 2 },
+  { text = "Access to faction specialists and services", weight = 2 },
+  { text = "Exclusive faction-only goods", weight = 1 },
+  { text = "Priority access during shortages", weight = 2 },
+  { text = "Discounts on faction goods and services", weight = 2 },
+  { text = "Access to faction vehicles or mounts", weight = 1 },
+  { text = "Use of faction intelligence network", weight = 1 },
+
+  # Information and Contacts
+  { text = "Faction contacts and information", weight = 2 },
+  { text = "Intelligence on enemies or targets", weight = 2 },
+  { text = "Introductions to important people", weight = 2 },
+  { text = "Access to faction archives or records", weight = 1 },
+  { text = "Inside information on faction plans", weight = 1 },
+  { text = "Warning about threats or dangers", weight = 2 },
+  { text = "Rumors and gossip from faction network", weight = 2 },
+  { text = "Maps or schematics", weight = 1 },
+  { text = "Translation or interpretation services", weight = 1 },
+  { text = "Expert consultation on specific topics", weight = 2 },
+
+  # Equipment and Items
+  { text = "Faction-specific equipment or gear", weight = 2 },
+  { text = "Weapons or armor from faction armory", weight = 2 },
+  { text = "Custom-made items from faction crafters", weight = 1 },
+  { text = "Rare or restricted items", weight = 1 },
+  { text = "Upgraded or enhanced equipment", weight = 1 },
+  { text = "Specialized tools for specific tasks", weight = 2 },
+  { text = "Uniforms or insignia denoting rank", weight = 2 },
+  { text = "Magical, technological, or unique items", weight = 1 },
+  { text = "Vehicles, mounts, or transportation", weight = 1 },
+  { text = "Consumable supplies (ammunition, medicine, etc.)", weight = 2 },
+
+  # Support and Protection
+  { text = "Political support and backing", weight = 2 },
+  { text = "Protection from enemies", weight = 2 },
+  { text = "Legal support and representation", weight = 2 },
+  { text = "Medical care and healing", weight = 2 },
+  { text = "Sanctuary and hiding places", weight = 2 },
+  { text = "Backup in dangerous situations", weight = 2 },
+  { text = "Character witnesses and references", weight = 2 },
+  { text = "Alibis when needed", weight = 1 },
+  { text = "Extraction if things go wrong", weight = 1 },
+  { text = "Clean identity papers or cover stories", weight = 1 },
+
+  # Training and Advancement
+  { text = "Training in faction skills and techniques", weight = 2 },
+  { text = "Advancement in faction rank", weight = 2 },
+  { text = "Access to faction secrets and knowledge", weight = 1 },
+  { text = "Mentorship from experienced members", weight = 2 },
+  { text = "Initiation into inner circles", weight = 1 },
+  { text = "Leadership opportunities", weight = 1 },
+  { text = "Specialized training from masters", weight = 1 },
+  { text = "Command of faction resources or personnel", weight = 1 },
+  { text = "Right to establish new faction presence", weight = 1 },
+  { text = "Voice in faction decisions", weight = 1 },
+
+  # Financial Rewards
+  { text = "Direct financial compensation", weight = 3 },
+  { text = "Percentage of profits from operations", weight = 2 },
+  { text = "Loot shares from faction activities", weight = 2 },
+  { text = "Investment opportunities", weight = 1 },
+  { text = "Property or land grants", weight = 1 },
+  { text = "Debt forgiveness", weight = 1 },
+  { text = "Stipends or regular payments", weight = 2 },
+  { text = "Expense coverage for missions", weight = 2 },
+  { text = "Bounties on specific targets", weight = 2 },
+  { text = "Finder's fees for information", weight = 2 },
+
+  # Social Benefits
+  { text = "Recognition and fame within faction", weight = 2 },
+  { text = "Titles or honorary positions", weight = 1 },
+  { text = "Respect and deference from members", weight = 2 },
+  { text = "Invitations to exclusive events", weight = 2 },
+  { text = "Favorable treatment in faction territory", weight = 2 },
+  { text = "Marriage or adoption into faction families", weight = 1 },
+  { text = "Memorial or recognition for deeds", weight = 1 },
+  { text = "Patron status with artisans or craftsmen", weight = 1 },
+  { text = "Cultural or religious honors", weight = 1 },
+  { text = "Legacy benefits for family members", weight = 1 },
+]
+
+[faction_consequences]
+# Results of actions affecting faction relations
+entries = [
+  # Reputation Changes
+  { text = "Reputation with this faction improves significantly", weight = 2 },
+  { text = "Reputation with this faction improves slightly", weight = 2 },
+  { text = "Reputation with this faction remains unchanged", weight = 2 },
+  { text = "Reputation with this faction worsens slightly", weight = 2 },
+  { text = "Reputation with this faction worsens significantly", weight = 2 },
+  { text = "Reputation with rival faction worsens", weight = 2 },
+  { text = "Reputation with allied factions improves", weight = 2 },
+  { text = "Reputation with neutral factions shifts", weight = 2 },
+  { text = "Your personal reputation grows independently", weight = 2 },
+  { text = "Your reputation becomes tied to faction's", weight = 1 },
+
+  # Perception and Identity
+  { text = "You're now seen as faction-aligned by others", weight = 2 },
+  { text = "Others question your independence", weight = 2 },
+  { text = "You're trusted more by faction members", weight = 2 },
+  { text = "You're trusted less by faction's enemies", weight = 2 },
+  { text = "You're seen as a faction asset, not a free agent", weight = 1 },
+  { text = "Other factions want to recruit you", weight = 1 },
+  { text = "You're caught between faction expectations", weight = 1 },
+  { text = "Your actions reflect on the faction", weight = 2 },
+  { text = "Your mistakes harm faction reputation", weight = 1 },
+  { text = "Your successes elevate faction standing", weight = 1 },
+
+  # Internal Relations
+  { text = "You've made enemies within the faction", weight = 1 },
+  { text = "You've made friends within the faction", weight = 2 },
+  { text = "You've earned a powerful patron", weight = 1 },
+  { text = "You've challenged someone's position", weight = 1 },
+  { text = "You're seen as competition by peers", weight = 2 },
+  { text = "You're seen as useful by leadership", weight = 2 },
+  { text = "You're seen as expendable by some", weight = 1 },
+  { text = "You've inspired loyalty from some members", weight = 1 },
+  { text = "Faction politics now affect you personally", weight = 2 },
+  { text = "Your position in faction hierarchy shifts", weight = 2 },
+
+  # Obligations and Expectations
+  { text = "Faction expects more from you now", weight = 2 },
+  { text = "Faction will call in favors", weight = 2 },
+  { text = "You're expected to prioritize faction interests", weight = 2 },
+  { text = "You're committed to faction goals", weight = 2 },
+  { text = "You owe debts that will be collected", weight = 1 },
+  { text = "You're bound by faction rules now", weight = 2 },
+  { text = "Faction considers you an asset", weight = 2 },
+  { text = "You're expected to recruit others", weight = 1 },
+  { text = "You must maintain faction cover or secrecy", weight = 1 },
+  { text = "Faction will sacrifice you if needed", weight = 1 },
+
+  # Knowledge and Secrets
+  { text = "You know faction secrets now", weight = 2 },
+  { text = "You've learned things that can't be unlearned", weight = 1 },
+  { text = "You have leverage over faction members", weight = 1 },
+  { text = "Faction has leverage over you", weight = 2 },
+  { text = "You know who the real decision-makers are", weight = 2 },
+  { text = "You understand faction's true goals", weight = 1 },
+  { text = "You've discovered faction's dark side", weight = 1 },
+  { text = "You've learned faction's weaknesses", weight = 1 },
+  { text = "Secrets bind you to faction silence", weight = 1 },
+  { text = "What you know makes you a target", weight = 1 },
+
+  # Future Implications
+  { text = "This creates long-term obligations", weight = 2 },
+  { text = "Future jobs will be offered", weight = 2 },
+  { text = "Access to faction benefits increases", weight = 2 },
+  { text = "Access to faction benefits decreases", weight = 2 },
+  { text = "Doors open that were closed before", weight = 1 },
+  { text = "Doors close that were open before", weight = 1 },
+  { text = "Your path diverges from former life", weight = 1 },
+  { text = "Return to normal becomes harder", weight = 2 },
+  { text = "Future choices are constrained", weight = 2 },
+  { text = "New opportunities arise from connection", weight = 2 },
+]
+
+[faction_types]
+# Types of factions for generation
+entries = [
+  # Power Structures
+  { text = "Military or paramilitary organization", weight = 2 },
+  { text = "Religious or spiritual institution", weight = 2 },
+  { text = "Political party or movement", weight = 2 },
+  { text = "Noble house or aristocratic family", weight = 2 },
+  { text = "Government agency or department", weight = 2 },
+  { text = "Revolutionary or resistance movement", weight = 1 },
+  { text = "Tribal or clan-based society", weight = 2 },
+  { text = "Secret society or hidden order", weight = 1 },
+  { text = "Colonial or occupying power", weight = 1 },
+  { text = "Elected council or assembly", weight = 2 },
+
+  # Economic Entities
+  { text = "Merchant guild or trading company", weight = 2 },
+  { text = "Craft guild or artisan collective", weight = 2 },
+  { text = "Banking or financial institution", weight = 2 },
+  { text = "Mining or resource extraction company", weight = 2 },
+  { text = "Shipping or transportation enterprise", weight = 2 },
+  { text = "Monopolistic corporation", weight = 1 },
+  { text = "Workers' union or labor organization", weight = 2 },
+  { text = "Agricultural collective or land holders", weight = 2 },
+  { text = "Entertainment or hospitality industry group", weight = 2 },
+  { text = "Weapons manufacturers or dealers", weight = 1 },
+
+  # Criminal Elements
+  { text = "Organized crime syndicate", weight = 2 },
+  { text = "Street gang or local crew", weight = 2 },
+  { text = "Smuggling ring", weight = 2 },
+  { text = "Thieves' guild or burglary ring", weight = 2 },
+  { text = "Assassination guild or contract killers", weight = 1 },
+  { text = "Pirate fleet or raider band", weight = 2 },
+  { text = "Protection racket operation", weight = 2 },
+  { text = "Fence network or black market", weight = 2 },
+  { text = "Corruption network within institutions", weight = 1 },
+  { text = "Vice operation (gambling, drugs, etc.)", weight = 2 },
+
+  # Professional Groups
+  { text = "Academic or scholarly institution", weight = 2 },
+  { text = "Medical or healing organization", weight = 2 },
+  { text = "Legal profession or advocates", weight = 2 },
+  { text = "Engineering or builder organization", weight = 2 },
+  { text = "Explorers' society or cartographers", weight = 2 },
+  { text = "Historians or archivists", weight = 1 },
+  { text = "Artists' collective or performers", weight = 2 },
+  { text = "Journalists or information brokers", weight = 2 },
+  { text = "Mercenary company or soldiers for hire", weight = 2 },
+  { text = "Spy network or intelligence agency", weight = 1 },
+
+  # Social Organizations
+  { text = "Charitable organization or relief society", weight = 2 },
+  { text = "Social club or fraternal order", weight = 2 },
+  { text = "Sporting or athletic association", weight = 2 },
+  { text = "Cultural preservation society", weight = 2 },
+  { text = "Veterans' organization", weight = 2 },
+  { text = "Reform movement or advocacy group", weight = 2 },
+  { text = "Youth organization or training group", weight = 2 },
+  { text = "Mutual aid society", weight = 2 },
+  { text = "Vigilante or neighborhood watch", weight = 2 },
+  { text = "Cult or fringe religious group", weight = 1 },
+]
+
+[faction_goals]
+# What factions want to achieve
+entries = [
+  # Power and Control
+  { text = "Gain control of a specific territory", weight = 2 },
+  { text = "Dominate a specific market or industry", weight = 2 },
+  { text = "Overthrow current leadership", weight = 1 },
+  { text = "Establish total regional dominance", weight = 1 },
+  { text = "Eliminate all rival factions", weight = 1 },
+  { text = "Seize control of key resources", weight = 2 },
+  { text = "Place agents in positions of power", weight = 2 },
+  { text = "Control flow of information", weight = 2 },
+  { text = "Build an unassailable position", weight = 2 },
+  { text = "Become kingmakers who choose leaders", weight = 1 },
+
+  # Wealth and Resources
+  { text = "Accumulate vast wealth", weight = 2 },
+  { text = "Monopolize a valuable resource", weight = 2 },
+  { text = "Control trade routes", weight = 2 },
+  { text = "Exploit untapped resources", weight = 2 },
+  { text = "Establish profitable ventures", weight = 2 },
+  { text = "Eliminate competitors", weight = 2 },
+  { text = "Corner a specific market", weight = 2 },
+  { text = "Secure perpetual revenue streams", weight = 2 },
+  { text = "Acquire rare or valuable items", weight = 2 },
+  { text = "Build economic self-sufficiency", weight = 2 },
+
+  # Ideology and Belief
+  { text = "Spread their ideology or faith", weight = 2 },
+  { text = "Convert or recruit new believers", weight = 2 },
+  { text = "Suppress opposing viewpoints", weight = 1 },
+  { text = "Preserve traditional ways", weight = 2 },
+  { text = "Reform corrupt institutions", weight = 2 },
+  { text = "Establish an ideal society", weight = 1 },
+  { text = "Fulfill prophecy or destiny", weight = 1 },
+  { text = "Build monuments to their beliefs", weight = 2 },
+  { text = "Educate or indoctrinate the masses", weight = 2 },
+  { text = "Purge heretics or nonbelievers", weight = 1 },
+
+  # Survival and Defense
+  { text = "Ensure faction survival", weight = 2 },
+  { text = "Protect members from persecution", weight = 2 },
+  { text = "Defend existing territory", weight = 2 },
+  { text = "Maintain independence from larger powers", weight = 2 },
+  { text = "Build defensible strongholds", weight = 2 },
+  { text = "Create deterrent capabilities", weight = 2 },
+  { text = "Secure supply lines", weight = 2 },
+  { text = "Build alliances for mutual defense", weight = 2 },
+  { text = "Remove existential threats", weight = 2 },
+  { text = "Prepare for anticipated disaster", weight = 1 },
+
+  # Knowledge and Secrets
+  { text = "Acquire forbidden knowledge", weight = 1 },
+  { text = "Uncover ancient secrets", weight = 1 },
+  { text = "Protect dangerous knowledge", weight = 1 },
+  { text = "Advance understanding in a field", weight = 2 },
+  { text = "Collect all information on a topic", weight = 2 },
+  { text = "Build comprehensive intelligence network", weight = 2 },
+  { text = "Decode mysterious texts or artifacts", weight = 1 },
+  { text = "Find or create ultimate weapon/power", weight = 1 },
+  { text = "Solve an ancient mystery", weight = 1 },
+  { text = "Suppress dangerous discoveries", weight = 1 },
+
+  # Vengeance and Justice
+  { text = "Avenge a past wrong", weight = 2 },
+  { text = "Bring specific enemies to justice", weight = 2 },
+  { text = "Expose corruption or crimes", weight = 2 },
+  { text = "Punish those who harmed members", weight = 2 },
+  { text = "Restore lost honor or reputation", weight = 2 },
+  { text = "Balance old accounts", weight = 2 },
+  { text = "Establish justice system they control", weight = 1 },
+  { text = "Prosecute crimes against their people", weight = 2 },
+  { text = "Tear down those who rose unjustly", weight = 1 },
+  { text = "Recover what was stolen", weight = 2 },
+]
+
+[faction_resources]
+# Resources factions have available
+entries = [
+  # Manpower
+  { text = "Large membership base", weight = 2 },
+  { text = "Skilled specialists", weight = 2 },
+  { text = "Fanatically loyal followers", weight = 1 },
+  { text = "Well-trained troops", weight = 2 },
+  { text = "Expendable foot soldiers", weight = 2 },
+  { text = "Infiltrators in key positions", weight = 1 },
+  { text = "Expert craftsmen and artisans", weight = 2 },
+  { text = "Scholars and researchers", weight = 2 },
+  { text = "Talented recruiters", weight = 2 },
+  { text = "Charismatic leaders", weight = 2 },
+
+  # Material Resources
+  { text = "Significant financial reserves", weight = 2 },
+  { text = "Control of valuable territory", weight = 2 },
+  { text = "Stockpiles of weapons and equipment", weight = 2 },
+  { text = "Rare or restricted materials", weight = 1 },
+  { text = "Extensive supply networks", weight = 2 },
+  { text = "Production facilities", weight = 2 },
+  { text = "Transportation and logistics", weight = 2 },
+  { text = "Secure storage facilities", weight = 2 },
+  { text = "Strategic resource access", weight = 2 },
+  { text = "Self-sufficient operations", weight = 1 },
+
+  # Infrastructure
+  { text = "Fortified strongholds", weight = 2 },
+  { text = "Network of safe houses", weight = 2 },
+  { text = "Communication systems", weight = 2 },
+  { text = "Secret meeting places", weight = 2 },
+  { text = "Training facilities", weight = 2 },
+  { text = "Medical or healing facilities", weight = 2 },
+  { text = "Prison or detention capabilities", weight = 1 },
+  { text = "Archive or library", weight = 2 },
+  { text = "Legitimate business fronts", weight = 2 },
+  { text = "Escape routes and bolt holes", weight = 2 },
+
+  # Intangibles
+  { text = "Respected reputation", weight = 2 },
+  { text = "Fear and intimidation", weight = 2 },
+  { text = "Political influence", weight = 2 },
+  { text = "Religious authority", weight = 2 },
+  { text = "Ancient traditions and legitimacy", weight = 2 },
+  { text = "Valuable secrets and blackmail", weight = 1 },
+  { text = "Powerful alliances", weight = 2 },
+  { text = "Debts owed by important people", weight = 2 },
+  { text = "Popular support", weight = 2 },
+  { text = "Unique knowledge or techniques", weight = 1 },
+]
+
+[faction_weaknesses]
+# Vulnerabilities factions have
+entries = [
+  # Internal Problems
+  { text = "Leadership is weak or contested", weight = 2 },
+  { text = "Internal divisions threaten unity", weight = 2 },
+  { text = "Corruption is widespread", weight = 2 },
+  { text = "Ideological rifts growing", weight = 2 },
+  { text = "Succession crisis looming", weight = 1 },
+  { text = "Key members are unreliable", weight = 2 },
+  { text = "Morale is dangerously low", weight = 2 },
+  { text = "Too dependent on single leader", weight = 2 },
+  { text = "Old guard resists necessary change", weight = 2 },
+  { text = "Young members grow restless", weight = 2 },
+
+  # Resource Problems
+  { text = "Financially overextended", weight = 2 },
+  { text = "Critical resource shortage", weight = 2 },
+  { text = "Supply lines are vulnerable", weight = 2 },
+  { text = "Equipment is outdated or failing", weight = 2 },
+  { text = "Membership is declining", weight = 2 },
+  { text = "Dependent on outside suppliers", weight = 2 },
+  { text = "Territory is overextended", weight = 2 },
+  { text = "Key facility is vulnerable", weight = 2 },
+  { text = "Single point of failure exists", weight = 1 },
+  { text = "Reserves are depleted", weight = 2 },
+
+  # External Threats
+  { text = "Powerful enemies seek destruction", weight = 2 },
+  { text = "Authorities actively hunt them", weight = 2 },
+  { text = "Rivals are gaining strength", weight = 2 },
+  { text = "Alliance partners are unreliable", weight = 2 },
+  { text = "Public opinion turning against them", weight = 2 },
+  { text = "Sanctions or blockades hurt operations", weight = 2 },
+  { text = "Infiltrators have penetrated organization", weight = 1 },
+  { text = "Secrets are at risk of exposure", weight = 2 },
+  { text = "Former members work against them", weight = 2 },
+  { text = "Environmental changes threaten base", weight = 1 },
+
+  # Structural Problems
+  { text = "Organization is too rigid", weight = 2 },
+  { text = "Organization is too chaotic", weight = 2 },
+  { text = "Communication is poor", weight = 2 },
+  { text = "Intelligence gathering is inadequate", weight = 2 },
+  { text = "Training is insufficient", weight = 2 },
+  { text = "Rules and traditions are outdated", weight = 2 },
+  { text = "Over-reliance on tradition", weight = 2 },
+  { text = "Over-reliance on innovation", weight = 2 },
+  { text = "Bureaucracy slows decision-making", weight = 2 },
+  { text = "Lack of clear hierarchy", weight = 2 },
+]
+
+[faction_events]
+# Events that happen to factions
+entries = [
+  # Positive Events
+  { text = "Windfall of resources arrives", weight = 1 },
+  { text = "Major recruitment success", weight = 2 },
+  { text = "Important victory over rivals", weight = 2 },
+  { text = "New alliance formed", weight = 2 },
+  { text = "Public opinion swings in favor", weight = 2 },
+  { text = "Powerful new member joins", weight = 1 },
+  { text = "Secret plans succeed", weight = 2 },
+  { text = "Enemy faction suffers setback", weight = 2 },
+  { text = "New territory or market secured", weight = 2 },
+  { text = "Long-term investment pays off", weight = 1 },
+
+  # Negative Events
+  { text = "Key member defects or dies", weight = 1 },
+  { text = "Major financial loss", weight = 2 },
+  { text = "Secret exposed to enemies", weight = 1 },
+  { text = "Alliance partner betrays them", weight = 1 },
+  { text = "Stronghold is compromised", weight = 1 },
+  { text = "Public scandal erupts", weight = 1 },
+  { text = "Important operation fails", weight = 2 },
+  { text = "Enemy launches successful attack", weight = 2 },
+  { text = "Internal purge weakens organization", weight = 1 },
+  { text = "Key resource source is lost", weight = 2 },
+
+  # Neutral Events
+  { text = "Leadership announces new direction", weight = 2 },
+  { text = "Merger with another group proposed", weight = 1 },
+  { text = "Old rivals request negotiations", weight = 2 },
+  { text = "New opportunity appears", weight = 2 },
+  { text = "External authority takes notice", weight = 2 },
+  { text = "Third party wants to join conflict", weight = 1 },
+  { text = "Information surfaces about a threat", weight = 2 },
+  { text = "Old secrets come to light", weight = 1 },
+  { text = "Market conditions change significantly", weight = 2 },
+  { text = "Potential new ally emerges", weight = 2 },
+
+  # Internal Events
+  { text = "Power struggle erupts", weight = 1 },
+  { text = "Reforms are implemented", weight = 2 },
+  { text = "Traditions are challenged", weight = 2 },
+  { text = "New generation rises to prominence", weight = 2 },
+  { text = "Purge of disloyal elements occurs", weight = 1 },
+  { text = "Schism divides the faction", weight = 1 },
+  { text = "Anniversary or founding celebration", weight = 2 },
+  { text = "Trial or judgment of a member", weight = 2 },
+  { text = "Succession is decided", weight = 1 },
+  { text = "Major policy debate occurs", weight = 2 },
+]
+
+[faction_rumors]
+# Rumors about factions
+entries = [
+  # Leadership Rumors
+  { text = "The leader is ill or dying", weight = 1 },
+  { text = "A coup is being planned", weight = 1 },
+  { text = "The leader has a secret vice", weight = 1 },
+  { text = "Leadership is divided on key issue", weight = 2 },
+  { text = "A faction elder opposes current direction", weight = 2 },
+  { text = "Someone is manipulating the leader", weight = 1 },
+  { text = "The leader is not who they claim to be", weight = 1 },
+  { text = "A new leader is emerging from the ranks", weight = 2 },
+
+  # Secret Activities
+  { text = "They have a hidden agenda", weight = 2 },
+  { text = "They're secretly allied with enemies", weight = 1 },
+  { text = "They're planning something big", weight = 2 },
+  { text = "They have spies everywhere", weight = 2 },
+  { text = "They're behind recent incidents", weight = 2 },
+  { text = "They've discovered something important", weight = 2 },
+  { text = "They're secretly much weaker than they appear", weight = 2 },
+  { text = "They're secretly much stronger than they appear", weight = 2 },
+
+  # Financial Rumors
+  { text = "They're nearly bankrupt", weight = 1 },
+  { text = "They've found a new source of wealth", weight = 2 },
+  { text = "They're being funded by outsiders", weight = 2 },
+  { text = "They're hoarding resources for unknown purpose", weight = 2 },
+  { text = "They control more than publicly known", weight = 2 },
+  { text = "Their wealth is based on illegal activity", weight = 1 },
+
+  # Historical Rumors
+  { text = "Their founding was based on a lie", weight = 1 },
+  { text = "They committed atrocities in the past", weight = 1 },
+  { text = "They possess ancient secrets", weight = 2 },
+  { text = "Their traditions hide dark truths", weight = 1 },
+  { text = "They were once part of another faction", weight = 2 },
+  { text = "A prophecy concerns their fate", weight = 1 },
+]

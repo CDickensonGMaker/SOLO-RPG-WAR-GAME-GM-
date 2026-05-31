@@ -1,0 +1,734 @@
+# Ratmen - Age of Fantasy
+# Scheming vermin with mad science and endless numbers
+# One Page Rules - Free Wargaming System
+
+[faction]
+name = "Ratmen"
+description = "Scheming vermin combining endless numbers with mad science and dark sorcery"
+playstyle = "Horde, shooting, unreliable but powerful"
+difficulty = "advanced"
+strengths = [
+    "Massive numbers of cheap troops",
+    "Devastating war machines",
+    "Powerful but risky weapons",
+    "Strong magic",
+    "Assassination specialists"
+]
+weaknesses = [
+    "Poor individual quality",
+    "Cowardly - bad morale",
+    "Unreliable technology",
+    "Expensive specialists"
+]
+tactics = """
+Ratmen win through overwhelming numbers and devastating technology. Clanrats and Slaves
+are expendable - use them to screen your valuable weapons teams and war machines. Warpfire
+throwers and ratling guns devastate infantry. Plague Monks and Stormvermin provide melee
+punch. Grey Seers rain magical destruction. Accept losses - you have infinite rats. The
+key is protecting your damage dealers until they can unleash.
+"""
+
+# =============================================================================
+# HQ UNITS
+# =============================================================================
+
+[[units]]
+name = "Grey Seer"
+type = "infantry"
+category = "hq"
+points = 145
+models = "1"
+base_size = "25mm"
+tactical_role = "magical_commander"
+threat_level = "extreme"
+priority_target = true
+preferred_targets = ["infantry_blocks"]
+avoid_targets = ["melee"]
+weaknesses = ["assassination"]
+synergies = ["Devastating magic", "Leadership"]
+special_rules = ["Hero", "Wizard(3)"]
+keywords = ["Infantry", "Character", "Ratman", "Wizard"]
+notes = "Wizard(3) for powerful magic. Warp Lightning devastates. Protect at all costs."
+
+[units.stats]
+quality = "4+"
+defense = "5+"
+tough = 3
+movement = "6\""
+
+[[units.weapons]]
+name = "Staff"
+range = "Melee"
+shots = "1"
+ap = "0"
+
+[[units.spells]]
+name = "Warp Lightning"
+level = 1
+description = "Target enemy unit within 24\" takes D6 hits with AP(3), Deadly(3)"
+
+[[units.spells]]
+name = "Death Frenzy"
+level = 1
+description = "Friendly unit within 12\" gains Frenzy until next turn"
+
+[[units.spells]]
+name = "Plague"
+level = 2
+description = "Target enemy unit within 18\" takes hits equal to number of models with AP(1)"
+
+[[units.spells]]
+name = "Crack's Call"
+level = 2
+description = "Draw 24\" line from caster. Each model touched takes hit at AP(5)"
+
+[[units.upgrades]]
+name = "Screaming Bell"
+points = 150
+effect = "Rides massive bell on wheels, Tough(10), random buffs each turn"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Warlord"
+type = "infantry"
+category = "hq"
+points = 85
+models = "1"
+base_size = "25mm"
+tactical_role = "combat_commander"
+threat_level = "high"
+priority_target = true
+preferred_targets = ["infantry"]
+avoid_targets = ["monsters"]
+weaknesses = ["assassination"]
+synergies = ["Leads from... behind", "Bodyguard"]
+special_rules = ["Hero", "Tough(3)"]
+keywords = ["Infantry", "Character", "Ratman"]
+notes = "Combat leader. Keep bodyguard nearby. Surprisingly effective in melee."
+
+[units.stats]
+quality = "3+"
+defense = "4+"
+tough = 3
+movement = "6\""
+
+[[units.weapons]]
+name = "Warpforged Blade"
+range = "Melee"
+shots = "4"
+ap = "2"
+special = ["Deadly(3)"]
+
+[[units.upgrades]]
+name = "War-Litter"
+points = 30
+effect = "Carried by retinue, +2 Tough, cannot be targeted while attached to unit"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Plague Priest"
+type = "infantry"
+category = "hq"
+points = 75
+models = "1"
+base_size = "25mm"
+tactical_role = "plague_buffer"
+threat_level = "high"
+priority_target = true
+preferred_targets = ["infantry"]
+avoid_targets = ["monsters"]
+weaknesses = ["assassination"]
+synergies = ["Plague Monk buffer", "Poison aura"]
+special_rules = ["Hero", "Tough(2)", "Wizard(1)", "Plague"]
+keywords = ["Infantry", "Character", "Ratman", "Plague"]
+notes = "Plague: Friendly Plague units within 6\" re-roll wounds of 1. Buff Plague Monks."
+
+[units.stats]
+quality = "3+"
+defense = "5+"
+tough = 2
+movement = "6\""
+
+[[units.weapons]]
+name = "Plague Staff"
+range = "Melee"
+shots = "3"
+ap = "0"
+special = ["Poison(4+)"]
+
+[[units.spells]]
+name = "Pestilent Breath"
+level = 1
+description = "Target enemy unit within 12\" takes 2D6 hits with Poison(4+)"
+
+[[units.upgrades]]
+name = "Plague Furnace"
+points = 120
+effect = "Rides massive furnace, Tough(8), Poison aura expanded"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Assassin"
+type = "infantry"
+category = "hq"
+points = 70
+models = "1"
+base_size = "25mm"
+tactical_role = "character_hunter"
+threat_level = "high"
+priority_target = true
+preferred_targets = ["characters", "wizards"]
+avoid_targets = ["units"]
+weaknesses = ["detection"]
+synergies = ["Hidden deployment", "Character assassination"]
+special_rules = ["Hero", "Tough(2)", "Ambush", "Stealth", "Assassin"]
+keywords = ["Infantry", "Character", "Ratman", "Assassin"]
+notes = "Assassin: May be deployed hidden in any friendly unit. Spring ambush on characters."
+
+[units.stats]
+quality = "3+"
+defense = "5+"
+tough = 2
+movement = "7\""
+
+[[units.weapons]]
+name = "Weeping Blades"
+range = "Melee"
+shots = "4"
+ap = "1"
+special = ["Poison(3+)", "Deadly(3)"]
+
+# =============================================================================
+# TROOPS
+# =============================================================================
+
+[[units]]
+name = "Clanrats"
+type = "infantry"
+category = "troops"
+points = 50
+models = "20"
+base_size = "20mm"
+tactical_role = "line_infantry"
+threat_level = "low"
+priority_target = false
+preferred_targets = ["objectives"]
+avoid_targets = ["elite_units"]
+weaknesses = ["morale", "combat"]
+synergies = ["Screening", "Numbers"]
+special_rules = []
+keywords = ["Infantry", "Ratman", "Clan"]
+notes = "Basic troops. Cheap and cowardly. Use en masse."
+
+[units.stats]
+quality = "5+"
+defense = "5+"
+tough = 1
+movement = "6\""
+
+[[units.weapons]]
+name = "Spear"
+range = "Melee"
+shots = "1"
+ap = "0"
+special = ["Phalanx"]
+
+[[units.upgrades]]
+name = "Swords and Shields"
+points = 10
+effect = "Defense 4+, lose Phalanx"
+weapon = { name = "Sword", range = "Melee", shots = "1", ap = "0" }
+
+[[units.upgrades]]
+name = "40 Clanrats"
+points = 50
+effect = "Add 20 more models"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Skavenslaves"
+type = "infantry"
+category = "troops"
+points = 35
+models = "20"
+base_size = "20mm"
+tactical_role = "expendable_meat"
+threat_level = "very_low"
+priority_target = false
+preferred_targets = ["nothing"]
+avoid_targets = ["everything"]
+weaknesses = ["everything"]
+synergies = ["Screening", "Tarpit", "Utterly expendable"]
+special_rules = ["Expendable"]
+keywords = ["Infantry", "Ratman", "Slave"]
+notes = "Expendable: Friendly units may shoot into combat involving Slaves. Die for the cause."
+
+[units.stats]
+quality = "6+"
+defense = "6+"
+tough = 1
+movement = "6\""
+
+[[units.weapons]]
+name = "Improvised Weapons"
+range = "Melee"
+shots = "1"
+ap = "0"
+
+[[units.upgrades]]
+name = "60 Slaves"
+points = 70
+effect = "Add 40 more models"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Giant Rats"
+type = "infantry"
+category = "troops"
+points = 40
+models = "10"
+base_size = "20mm"
+tactical_role = "fast_screen"
+threat_level = "low"
+priority_target = false
+preferred_targets = ["war_machines"]
+avoid_targets = ["combat"]
+weaknesses = ["everything"]
+synergies = ["Fast screening", "Redirection"]
+special_rules = ["Fast"]
+keywords = ["Infantry", "Ratman", "Beast"]
+notes = "Fast screens. Redirect charges. Cheap and expendable."
+
+[units.stats]
+quality = "5+"
+defense = "6+"
+tough = 1
+movement = "8\""
+
+[[units.weapons]]
+name = "Teeth and Claws"
+range = "Melee"
+shots = "1"
+ap = "0"
+
+[[units.upgrades]]
+name = "30 Giant Rats"
+points = 80
+effect = "Add 20 more models"
+
+# =============================================================================
+# ELITES
+# =============================================================================
+
+[[units]]
+name = "Stormvermin"
+type = "infantry"
+category = "elite"
+points = 120
+models = "20"
+base_size = "20mm"
+tactical_role = "elite_infantry"
+threat_level = "high"
+priority_target = true
+preferred_targets = ["infantry"]
+avoid_targets = ["monsters"]
+weaknesses = ["ranged_attacks"]
+synergies = ["Warlord bodyguard", "Reliable troops"]
+special_rules = ["Fearless"]
+keywords = ["Infantry", "Ratman", "Elite"]
+notes = "Elite rats. Fearless and Quality 3+. Actual fighting troops."
+
+[units.stats]
+quality = "3+"
+defense = "4+"
+tough = 1
+movement = "6\""
+
+[[units.weapons]]
+name = "Halberd"
+range = "Melee"
+shots = "1"
+ap = "1"
+
+[[units.upgrades]]
+name = "40 Stormvermin"
+points = 120
+effect = "Add 20 more models"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Plague Monks"
+type = "infantry"
+category = "elite"
+points = 90
+models = "20"
+base_size = "20mm"
+tactical_role = "fanatic_assault"
+threat_level = "high"
+priority_target = true
+preferred_targets = ["infantry"]
+avoid_targets = ["shooting"]
+weaknesses = ["ranged_attacks"]
+synergies = ["Frenzy charges", "Plague Priest"]
+special_rules = ["Fearless", "Frenzy", "Poison(5+)"]
+keywords = ["Infantry", "Ratman", "Plague"]
+notes = "Frenzy +1 attack. Poison helps vs armor. Fanatic assault troops."
+
+[units.stats]
+quality = "4+"
+defense = "6+"
+tough = 1
+movement = "6\""
+
+[[units.weapons]]
+name = "Plague Blades"
+range = "Melee"
+shots = "2"
+ap = "0"
+special = ["Poison(5+)"]
+
+[[units.upgrades]]
+name = "40 Plague Monks"
+points = 90
+effect = "Add 20 more models"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Rat Ogres"
+type = "monster"
+category = "elite"
+points = 110
+models = "2"
+base_size = "40mm"
+tactical_role = "monstrous_infantry"
+threat_level = "high"
+priority_target = true
+preferred_targets = ["infantry"]
+avoid_targets = ["ranged_kiting"]
+weaknesses = ["shooting"]
+synergies = ["Monster punch", "Packmaster control"]
+special_rules = ["Fearless", "Tough(3)"]
+keywords = ["Monster", "Ratman", "Rat Ogre"]
+notes = "Monstrous rats. Tough(3) each. Need Packmaster to control."
+
+[units.stats]
+quality = "4+"
+defense = "5+"
+tough = 3
+movement = "6\""
+
+[[units.weapons]]
+name = "Massive Fists"
+range = "Melee"
+shots = "4"
+ap = "1"
+
+[[units.upgrades]]
+name = "4 Rat Ogres"
+points = 110
+effect = "Add 2 more models"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Gutter Runners"
+type = "infantry"
+category = "elite"
+points = 75
+models = "5"
+base_size = "25mm"
+tactical_role = "infiltrators"
+threat_level = "medium"
+priority_target = true
+preferred_targets = ["war_machines", "wizards"]
+avoid_targets = ["heavy_infantry"]
+weaknesses = ["combat"]
+synergies = ["Scout deployment", "Assassination"]
+special_rules = ["Scout", "Stealth", "Ambush"]
+keywords = ["Infantry", "Ratman", "Assassin"]
+notes = "Infiltrators. All deployment tricks. Assassinate support and war machines."
+
+[units.stats]
+quality = "3+"
+defense = "5+"
+tough = 1
+movement = "7\""
+
+[[units.weapons]]
+name = "Throwing Stars"
+range = "12\""
+shots = "2"
+ap = "0"
+special = ["Poison(5+)"]
+
+[[units.weapons]]
+name = "Blades"
+range = "Melee"
+shots = "1"
+ap = "0"
+special = ["Poison(5+)"]
+
+# =============================================================================
+# WEAPONS TEAMS
+# =============================================================================
+
+[[units]]
+name = "Ratling Gun Team"
+type = "infantry"
+category = "weapons_team"
+points = 55
+models = "1"
+base_size = "40mm"
+tactical_role = "infantry_shredder"
+threat_level = "very_high"
+priority_target = true
+preferred_targets = ["infantry"]
+avoid_targets = ["single_models"]
+weaknesses = ["melee", "fragile"]
+synergies = ["Infantry deletion", "Overcharge risk"]
+special_rules = ["Unreliable"]
+keywords = ["Infantry", "Ratman", "Weapons Team"]
+notes = "Unreliable: On 1 to hit, weapon explodes (D3 wounds to team). Devastating output."
+
+[units.stats]
+quality = "4+"
+defense = "5+"
+tough = 3
+movement = "5\""
+
+[[units.weapons]]
+name = "Ratling Gun"
+range = "18\""
+shots = "3D6"
+ap = "1"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Warpfire Thrower Team"
+type = "infantry"
+category = "weapons_team"
+points = 55
+models = "1"
+base_size = "40mm"
+tactical_role = "template_damage"
+threat_level = "very_high"
+priority_target = true
+preferred_targets = ["infantry", "monsters"]
+avoid_targets = ["nothing"]
+weaknesses = ["melee", "fragile"]
+synergies = ["No regeneration", "Template hits"]
+special_rules = ["Unreliable"]
+keywords = ["Infantry", "Ratman", "Weapons Team"]
+notes = "Unreliable: On 1 to hit, weapon explodes. Flaming: No Regeneration saves."
+
+[units.stats]
+quality = "4+"
+defense = "5+"
+tough = 3
+movement = "5\""
+
+[[units.weapons]]
+name = "Warpfire Thrower"
+range = "12\""
+shots = "D6+3"
+ap = "2"
+special = ["Reliable", "Flaming"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Jezzail Team"
+type = "infantry"
+category = "weapons_team"
+points = 45
+models = "2"
+base_size = "25mm"
+tactical_role = "sniping"
+threat_level = "medium"
+priority_target = true
+preferred_targets = ["characters", "monsters"]
+avoid_targets = ["combat"]
+weaknesses = ["melee"]
+synergies = ["Character sniping", "Monster hunting"]
+special_rules = []
+keywords = ["Infantry", "Ratman", "Weapons Team"]
+notes = "Ratman sniper team. AP(3) and Deadly(3) for characters and monsters."
+
+[units.stats]
+quality = "4+"
+defense = "5+"
+tough = 2
+movement = "5\""
+
+[[units.weapons]]
+name = "Warplock Jezzail"
+range = "36\""
+shots = "1"
+ap = "3"
+special = ["Deadly(3)", "Sniper"]
+
+[[units.upgrades]]
+name = "6 Jezzails"
+points = 90
+effect = "Add 4 more models"
+
+# =============================================================================
+# WAR MACHINES
+# =============================================================================
+
+[[units]]
+name = "Warp Lightning Cannon"
+type = "war_machine"
+category = "war_machine"
+points = 110
+models = "1"
+base_size = "chariot"
+tactical_role = "artillery"
+threat_level = "extreme"
+priority_target = true
+preferred_targets = ["everything"]
+avoid_targets = ["close_combat"]
+weaknesses = ["charges", "unreliable"]
+synergies = ["Devastating damage", "Variable power"]
+special_rules = ["Tough(5)", "Unreliable"]
+keywords = ["War Machine", "Ratman"]
+notes = "Choose power level 1-6. Higher = more damage but more risk of explosion."
+
+[units.stats]
+quality = "4+"
+defense = "5+"
+tough = 5
+movement = "0\""
+
+[[units.weapons]]
+name = "Warp Lightning"
+range = "48\""
+shots = "D6"
+ap = "5"
+special = ["Deadly(D6)"]
+notes = "Power level determines shots and AP, but risk of explosion"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Doomwheel"
+type = "vehicle"
+category = "war_machine"
+points = 130
+models = "1"
+base_size = "chariot"
+tactical_role = "mobile_destruction"
+threat_level = "very_high"
+priority_target = true
+preferred_targets = ["infantry"]
+avoid_targets = ["nothing"]
+weaknesses = ["focused_fire"]
+synergies = ["Chaotic movement", "Impact"]
+special_rules = ["Tough(8)", "Impact(D6)", "Random Movement"]
+keywords = ["Vehicle", "Ratman"]
+notes = "Random Movement: Roll 3D6 for movement each turn. May go anywhere. Hilarious."
+
+[units.stats]
+quality = "4+"
+defense = "4+"
+tough = 8
+movement = "3D6\""
+
+[[units.weapons]]
+name = "Warp Lightning"
+range = "18\""
+shots = "2D6"
+ap = "2"
+
+[[units.weapons]]
+name = "Grinding Wheel"
+range = "Melee"
+shots = "D6"
+ap = "2"
+special = ["Impact(D6)"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Hell Pit Abomination"
+type = "monster"
+category = "monster"
+points = 235
+models = "1"
+base_size = "100mm"
+tactical_role = "behemoth"
+threat_level = "extreme"
+priority_target = true
+preferred_targets = ["everything"]
+avoid_targets = ["nothing"]
+weaknesses = ["focused_fire"]
+synergies = ["Terror", "Too Horrible to Die"]
+special_rules = ["Fearless", "Tough(12)", "Terror", "Regeneration", "Too Horrible to Die"]
+keywords = ["Monster", "Ratman", "Abomination"]
+notes = "Too Horrible to Die: When killed, roll D6. On 4+ it stands back up with D6 wounds."
+
+[units.stats]
+quality = "4+"
+defense = "4+"
+tough = 12
+movement = "8\""
+
+[[units.weapons]]
+name = "Flailing Limbs"
+range = "Melee"
+shots = "3D6"
+ap = "1"
+
+[[units.weapons]]
+name = "Warpfire Spew"
+range = "12\""
+shots = "D6"
+ap = "2"
+special = ["Reliable", "Flaming"]
+
+# =============================================================================
+# EXAMPLE ARMY LISTS
+# =============================================================================
+
+[army_lists.starter_1000]
+name = "Under-Empire - 1000 points"
+description = "Classic ratmen horde"
+points = 1000
+units = [
+    { name = "Grey Seer", count = 1, points = 145 },
+    { name = "Warlord", count = 1, points = 85 },
+    { name = "Clanrats", count = 2, points = 200, upgrades = ["40 models each"] },
+    { name = "Skavenslaves", count = 1, points = 105, upgrades = ["60 models"] },
+    { name = "Stormvermin", count = 1, points = 120 },
+    { name = "Ratling Gun Team", count = 2, points = 110 },
+    { name = "Warpfire Thrower Team", count = 1, points = 55 },
+    { name = "Warp Lightning Cannon", count = 1, points = 110 }
+]
+tactics = "Slaves screen everything. Clanrats form battle line. Stormvermin protect Warlord. Weapons teams hide behind masses and devastate. Grey Seer rains lightning. Cannon snipes key targets."
+
+[army_lists.competitive_2000]
+name = "Vermintide - 2000 points"
+description = "Maximum rats"
+points = 2000
+units = [
+    { name = "Grey Seer on Screaming Bell", count = 1, points = 295 },
+    { name = "Plague Priest on Furnace", count = 1, points = 195 },
+    { name = "Assassin", count = 1, points = 70 },
+    { name = "Clanrats", count = 2, points = 200, upgrades = ["40 models"] },
+    { name = "Skavenslaves", count = 2, points = 210, upgrades = ["60 models"] },
+    { name = "Stormvermin", count = 1, points = 240, upgrades = ["40 models"] },
+    { name = "Plague Monks", count = 1, points = 180, upgrades = ["40 models"] },
+    { name = "Gutter Runners", count = 1, points = 75 },
+    { name = "Ratling Gun Team", count = 2, points = 110 },
+    { name = "Warpfire Thrower Team", count = 2, points = 110 },
+    { name = "Hell Pit Abomination", count = 1, points = 235 }
+]
+tactics = "Massive horde screens everything. Screaming Bell provides buffs and magic. Plague Furnace leads Plague Monks in devastating charges. Weapons teams devastate from behind. Assassin hides for character kills. Gutter Runners harass. Abomination smashes through enemy lines."

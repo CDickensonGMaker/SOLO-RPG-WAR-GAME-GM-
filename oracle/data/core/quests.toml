@@ -1,0 +1,664 @@
+# Core Quest/Mission Components
+# Setting-agnostic quest building blocks for procedural generation
+# 300+ total entries across all categories
+
+# ==============================================================================
+# OBJECTIVES - What must be accomplished (60+ entries)
+# ==============================================================================
+
+[objectives]
+entries = [
+  # Elimination/Combat
+  { text = "Eliminate a specific target", weight = 2 },
+  { text = "Clear out a hostile force from a location", weight = 2 },
+  { text = "Hunt down a dangerous creature", weight = 2 },
+  { text = "End a threat before it can strike", weight = 1 },
+  { text = "Execute a traitor before they can flee", weight = 1 },
+  { text = "Destroy a weapon or dangerous device", weight = 1 },
+  { text = "Put down a former ally who has turned", weight = 1 },
+  { text = "Assassinate a protected figure", weight = 1 },
+  { text = "Defeat a champion in single combat", weight = 1 },
+  { text = "Wipe out the last remnants of a defeated enemy", weight = 1 },
+
+  # Retrieval
+  { text = "Retrieve a stolen item", weight = 2 },
+  { text = "Recover a lost artifact", weight = 2 },
+  { text = "Find and return a family heirloom", weight = 1 },
+  { text = "Reclaim supplies taken by enemies", weight = 1 },
+  { text = "Bring back proof of a kill", weight = 1 },
+  { text = "Salvage valuable materials from a wreck", weight = 1 },
+  { text = "Recover remains for proper burial", weight = 1 },
+  { text = "Retrieve a prototype before enemies can study it", weight = 1 },
+  { text = "Find and secure critical documents", weight = 1 },
+  { text = "Obtain a rare component needed urgently", weight = 1 },
+
+  # Escort/Protection
+  { text = "Escort someone to safety", weight = 2 },
+  { text = "Protect a location from attack", weight = 2 },
+  { text = "Guard a valuable shipment in transit", weight = 1 },
+  { text = "Ensure a witness survives to testify", weight = 1 },
+  { text = "Keep a VIP alive through hostile territory", weight = 1 },
+  { text = "Defend a settlement until reinforcements arrive", weight = 1 },
+  { text = "Protect a ritual or process until completion", weight = 1 },
+  { text = "Serve as bodyguard during dangerous negotiations", weight = 1 },
+  { text = "Shield civilians during an evacuation", weight = 1 },
+  { text = "Hold a position against waves of attackers", weight = 1 },
+
+  # Intelligence/Investigation
+  { text = "Gather intelligence on enemy movements", weight = 2 },
+  { text = "Investigate strange occurrences", weight = 2 },
+  { text = "Uncover the truth behind a conspiracy", weight = 1 },
+  { text = "Determine who is responsible for a crime", weight = 1 },
+  { text = "Scout an area and report back", weight = 1 },
+  { text = "Infiltrate and map an enemy stronghold", weight = 1 },
+  { text = "Learn the enemy's plans before they act", weight = 1 },
+  { text = "Verify whether rumors are true", weight = 1 },
+  { text = "Track down the source of a problem", weight = 1 },
+  { text = "Identify a traitor within an organization", weight = 1 },
+
+  # Sabotage/Disruption
+  { text = "Sabotage enemy supplies", weight = 2 },
+  { text = "Destroy critical infrastructure", weight = 1 },
+  { text = "Poison a water or food supply", weight = 1 },
+  { text = "Disable enemy communications", weight = 1 },
+  { text = "Cause an enemy force to turn on itself", weight = 1 },
+  { text = "Spread disinformation to confuse foes", weight = 1 },
+  { text = "Disrupt an enemy ritual or operation", weight = 1 },
+  { text = "Plant evidence to frame an enemy", weight = 1 },
+  { text = "Incite rebellion in occupied territory", weight = 1 },
+  { text = "Collapse a strategic route or passage", weight = 1 },
+
+  # Rescue/Liberation
+  { text = "Rescue a prisoner", weight = 2 },
+  { text = "Find a missing person", weight = 2 },
+  { text = "Free hostages from captors", weight = 1 },
+  { text = "Break someone out of imprisonment", weight = 1 },
+  { text = "Locate survivors of a disaster", weight = 1 },
+  { text = "Extract an agent whose cover is blown", weight = 1 },
+  { text = "Save someone from execution", weight = 1 },
+  { text = "Recover a lost expedition", weight = 1 },
+  { text = "Liberate a settlement from occupation", weight = 1 },
+  { text = "Find and return a runaway", weight = 1 },
+
+  # Delivery/Communication
+  { text = "Deliver a message or package", weight = 2 },
+  { text = "Transport dangerous cargo safely", weight = 1 },
+  { text = "Smuggle goods past a blockade", weight = 1 },
+  { text = "Carry vital medicine to the afflicted", weight = 1 },
+  { text = "Bring payment to settle a debt", weight = 1 },
+  { text = "Deliver an ultimatum to an enemy", weight = 1 },
+  { text = "Return a borrowed item before consequences", weight = 1 },
+  { text = "Transport a prisoner to authorities", weight = 1 },
+  { text = "Relay coordinates for a strike", weight = 1 },
+  { text = "Carry a peace offering between factions", weight = 1 },
+
+  # Diplomacy/Social
+  { text = "Establish contact with an informant", weight = 2 },
+  { text = "Negotiate an alliance", weight = 1 },
+  { text = "Convince a reluctant party to help", weight = 1 },
+  { text = "Mediate a dispute before violence erupts", weight = 1 },
+  { text = "Broker a ceasefire", weight = 1 },
+  { text = "Secure permission to pass through territory", weight = 1 },
+  { text = "Arrange a meeting between hostile parties", weight = 1 },
+  { text = "Win someone's trust to learn their secrets", weight = 1 },
+  { text = "Forge an agreement that benefits your faction", weight = 1 },
+  { text = "Convince someone to betray their allies", weight = 1 },
+
+  # Strategic/Military
+  { text = "Secure a strategic location", weight = 2 },
+  { text = "Break a siege or blockade", weight = 1 },
+  { text = "Capture enemy leadership alive", weight = 1 },
+  { text = "Establish a forward position", weight = 1 },
+  { text = "Cut enemy supply lines", weight = 1 },
+  { text = "Flank and encircle enemy forces", weight = 1 },
+  { text = "Seize control of high ground", weight = 1 },
+  { text = "Establish a safe corridor for retreat", weight = 1 },
+  { text = "Mark targets for bombardment", weight = 1 },
+  { text = "Coordinate an ambush", weight = 1 },
+
+  # Acquisition/Theft
+  { text = "Steal enemy plans or documents", weight = 2 },
+  { text = "Acquire a rare item by any means", weight = 1 },
+  { text = "Obtain leverage against a powerful figure", weight = 1 },
+  { text = "Steal from the wealthy for the poor", weight = 1 },
+  { text = "Acquire samples for research", weight = 1 },
+  { text = "Obtain access credentials", weight = 1 },
+  { text = "Copy sensitive information without detection", weight = 1 },
+  { text = "Procure weapons for a resistance", weight = 1 },
+  { text = "Steal a vehicle for escape", weight = 1 },
+  { text = "Obtain proof of wrongdoing", weight = 1 },
+]
+
+# ==============================================================================
+# COMPLICATIONS - What goes wrong (60+ entries)
+# ==============================================================================
+
+[complications_quest]
+entries = [
+  # Deception/Misinformation
+  { text = "The target is not what they seem", weight = 2 },
+  { text = "The information you were given is wrong", weight = 2 },
+  { text = "Your contact has been compromised", weight = 1 },
+  { text = "The map is incomplete or falsified", weight = 1 },
+  { text = "Someone has been impersonating your ally", weight = 1 },
+  { text = "The objective was a trap all along", weight = 1 },
+  { text = "Your employer lied about the true purpose", weight = 1 },
+  { text = "The enemy knows exactly when you're coming", weight = 1 },
+  { text = "A trusted ally is actually a double agent", weight = 1 },
+  { text = "The reward is not what was promised", weight = 1 },
+
+  # Competition
+  { text = "A third party is also pursuing the objective", weight = 2 },
+  { text = "Rivals have already claimed the prize", weight = 1 },
+  { text = "Multiple factions converge on the same target", weight = 1 },
+  { text = "Someone is sabotaging your efforts", weight = 1 },
+  { text = "A competitor has hired your enemy to stop you", weight = 1 },
+  { text = "The reward has been offered to multiple parties", weight = 1 },
+  { text = "An old rival resurfaces at the worst moment", weight = 1 },
+  { text = "Another group reaches the destination first", weight = 1 },
+  { text = "Someone else has already solved the mystery", weight = 1 },
+  { text = "A bounty hunter is tracking the same target", weight = 1 },
+
+  # Time/Resource Constraints
+  { text = "Time limit is shorter than expected", weight = 2 },
+  { text = "Supplies are running dangerously low", weight = 1 },
+  { text = "Critical equipment breaks at the worst moment", weight = 1 },
+  { text = "The window of opportunity is closing", weight = 1 },
+  { text = "Funding has been cut unexpectedly", weight = 1 },
+  { text = "Reinforcements will not be coming", weight = 1 },
+  { text = "The route you planned is now impassable", weight = 1 },
+  { text = "Communication with command is lost", weight = 1 },
+  { text = "Essential personnel are unavailable", weight = 1 },
+  { text = "The extraction point has been compromised", weight = 1 },
+
+  # Location/Access
+  { text = "The location has changed", weight = 2 },
+  { text = "The objective is guarded more heavily than expected", weight = 2 },
+  { text = "The entrance you planned to use is sealed", weight = 1 },
+  { text = "The area is larger and more complex than reported", weight = 1 },
+  { text = "Environmental hazards block the path", weight = 1 },
+  { text = "The target is in a location you cannot reach openly", weight = 1 },
+  { text = "Access requires credentials you do not possess", weight = 1 },
+  { text = "The structure is rigged to collapse or explode", weight = 1 },
+  { text = "The location is under quarantine or lockdown", weight = 1 },
+  { text = "Civilians are present in the danger zone", weight = 1 },
+
+  # Personnel Issues
+  { text = "An ally has been captured", weight = 2 },
+  { text = "Key team member is injured or incapacitated", weight = 1 },
+  { text = "Internal disagreement threatens the mission", weight = 1 },
+  { text = "A team member has a personal stake that conflicts", weight = 1 },
+  { text = "Someone in the group is not who they claim", weight = 1 },
+  { text = "A crucial skill is missing from the team", weight = 1 },
+  { text = "One person knows something they are not sharing", weight = 1 },
+  { text = "Morale has collapsed after a loss", weight = 1 },
+  { text = "Past trauma is triggered by mission elements", weight = 1 },
+  { text = "A member owes loyalty to the enemy", weight = 1 },
+
+  # Enemy Adaptation
+  { text = "The enemy has adapted to your tactics", weight = 1 },
+  { text = "Reinforcements arrive for the opposition", weight = 1 },
+  { text = "The target is aware they are being hunted", weight = 1 },
+  { text = "Enemy has acquired superior equipment", weight = 1 },
+  { text = "Former allies have joined the enemy", weight = 1 },
+  { text = "The enemy sets up an ambush of their own", weight = 1 },
+  { text = "Hostages are being used as shields", weight = 1 },
+  { text = "The enemy deploys unexpected capabilities", weight = 1 },
+  { text = "Opposition has spread false trails to mislead", weight = 1 },
+  { text = "The enemy has fortified beyond what intel suggested", weight = 1 },
+
+  # Moral Complications
+  { text = "Completing the mission will harm innocents", weight = 1 },
+  { text = "The target is actually sympathetic", weight = 1 },
+  { text = "Success requires compromising your principles", weight = 1 },
+  { text = "The mission will destabilize the region", weight = 1 },
+  { text = "Allies are using methods you find unacceptable", weight = 1 },
+  { text = "The enemy has legitimate grievances", weight = 1 },
+  { text = "Children or families would be affected", weight = 1 },
+  { text = "The objective is sacred to the local population", weight = 1 },
+  { text = "Completing the mission benefits a worse faction", weight = 1 },
+  { text = "The person you're saving has done terrible things", weight = 1 },
+
+  # External Factors
+  { text = "Weather or environmental conditions worsen", weight = 1 },
+  { text = "A larger conflict spills into the area", weight = 1 },
+  { text = "Local authorities take an interest", weight = 1 },
+  { text = "Natural disaster threatens the region", weight = 1 },
+  { text = "Disease outbreak complicates movement", weight = 1 },
+  { text = "Economic collapse affects available resources", weight = 1 },
+  { text = "A festival or event draws crowds to the area", weight = 1 },
+  { text = "Infrastructure fails at a critical moment", weight = 1 },
+  { text = "Unrelated criminals mistake you for rivals", weight = 1 },
+  { text = "Wild creatures are drawn to the commotion", weight = 1 },
+]
+
+# ==============================================================================
+# REWARDS - What is offered for success (40+ entries)
+# ==============================================================================
+
+[rewards]
+entries = [
+  # Material
+  { text = "Substantial payment in currency", weight = 3 },
+  { text = "A rare item or piece of equipment", weight = 2 },
+  { text = "Valuable trade goods", weight = 1 },
+  { text = "Property or land rights", weight = 1 },
+  { text = "Share of recovered treasure", weight = 1 },
+  { text = "Supplies and provisions", weight = 1 },
+  { text = "Weapons and armor", weight = 1 },
+  { text = "A vehicle or mount", weight = 1 },
+  { text = "Raw materials worth a fortune", weight = 1 },
+  { text = "An item of sentimental value to someone powerful", weight = 1 },
+
+  # Information/Knowledge
+  { text = "Valuable information", weight = 2 },
+  { text = "Knowledge of hidden locations", weight = 1 },
+  { text = "Secrets of the enemy", weight = 1 },
+  { text = "Training in a rare skill", weight = 1 },
+  { text = "Access to forbidden archives", weight = 1 },
+  { text = "The true name of someone powerful", weight = 1 },
+  { text = "Codes or passwords for restricted areas", weight = 1 },
+  { text = "Intelligence on future operations", weight = 1 },
+  { text = "Location of someone long sought", weight = 1 },
+  { text = "The solution to a personal mystery", weight = 1 },
+
+  # Social/Political
+  { text = "A powerful ally", weight = 2 },
+  { text = "Political favor owed", weight = 1 },
+  { text = "Membership in an exclusive group", weight = 1 },
+  { text = "A noble title or rank", weight = 1 },
+  { text = "Legitimacy for a claim", weight = 1 },
+  { text = "Marriage alliance possibility", weight = 1 },
+  { text = "The ear of someone in power", weight = 1 },
+  { text = "Debt forgiveness", weight = 1 },
+  { text = "Character testimony or legal support", weight = 1 },
+  { text = "Protection from enemies", weight = 1 },
+
+  # Access/Opportunity
+  { text = "Access to restricted areas", weight = 2 },
+  { text = "Safe passage through hostile territory", weight = 1 },
+  { text = "Permission to operate in a region", weight = 1 },
+  { text = "Right to use facilities or resources", weight = 1 },
+  { text = "Introduction to key contacts", weight = 1 },
+  { text = "License to practice a restricted trade", weight = 1 },
+  { text = "First opportunity at future opportunities", weight = 1 },
+  { text = "Bypass of normal requirements", weight = 1 },
+  { text = "Authority to act in someone's name", weight = 1 },
+  { text = "Immunity from prosecution for past deeds", weight = 1 },
+
+  # Personal
+  { text = "Resolution of a personal vendetta", weight = 1 },
+  { text = "Reunion with lost family or friends", weight = 1 },
+  { text = "Clearing of your name", weight = 1 },
+  { text = "Answers about your past", weight = 1 },
+  { text = "Removal of a curse or affliction", weight = 1 },
+  { text = "A new identity and fresh start", weight = 1 },
+  { text = "Justice for a past wrong", weight = 1 },
+  { text = "Peace of mind", weight = 1 },
+  { text = "Redemption opportunity", weight = 1 },
+  { text = "The gratitude of those you saved", weight = 1 },
+]
+
+# ==============================================================================
+# QUEST GIVERS - Who offers the mission (40+ entries)
+# ==============================================================================
+
+[quest_givers]
+entries = [
+  # Desperate Individuals
+  { text = "A desperate family member seeking help", weight = 2 },
+  { text = "A dying stranger with final wishes", weight = 1 },
+  { text = "An old friend in serious trouble", weight = 1 },
+  { text = "A parent searching for their child", weight = 1 },
+  { text = "A widow seeking vengeance", weight = 1 },
+  { text = "A debtor about to lose everything", weight = 1 },
+  { text = "A refugee fleeing persecution", weight = 1 },
+  { text = "A victim seeking justice denied", weight = 1 },
+  { text = "A former enemy requesting aid against a common foe", weight = 1 },
+  { text = "A child who has witnessed something terrible", weight = 1 },
+
+  # Organizations
+  { text = "A shadowy organization with hidden motives", weight = 2 },
+  { text = "Military command issuing orders", weight = 2 },
+  { text = "A merchant guild protecting interests", weight = 1 },
+  { text = "A religious order pursuing their faith's goals", weight = 1 },
+  { text = "A resistance movement fighting oppression", weight = 1 },
+  { text = "A criminal syndicate offering work", weight = 1 },
+  { text = "A scholarly institution seeking specimens or data", weight = 1 },
+  { text = "A government agency operating unofficially", weight = 1 },
+  { text = "A secret society with ancient goals", weight = 1 },
+  { text = "A professional guild enforcing standards", weight = 1 },
+
+  # Authority Figures
+  { text = "A local leader seeking discreet help", weight = 1 },
+  { text = "A noble protecting family honor", weight = 1 },
+  { text = "A judge unable to act through official channels", weight = 1 },
+  { text = "A military officer acting on personal initiative", weight = 1 },
+  { text = "A religious leader concerned about heresy", weight = 1 },
+  { text = "A wealthy patron with resources to spend", weight = 1 },
+  { text = "A retired veteran with unfinished business", weight = 1 },
+  { text = "A diplomat whose hands are officially tied", weight = 1 },
+  { text = "A healer who has learned something alarming", weight = 1 },
+  { text = "A keeper of records who found something wrong", weight = 1 },
+
+  # Professionals
+  { text = "A bounty board posting open contracts", weight = 2 },
+  { text = "A merchant needing protection for goods", weight = 1 },
+  { text = "An information broker paying for services", weight = 1 },
+  { text = "A collector seeking rare acquisitions", weight = 1 },
+  { text = "A fixer who arranges jobs for pay", weight = 1 },
+  { text = "A lawyer representing a silent client", weight = 1 },
+  { text = "A rival seeking temporary alliance", weight = 1 },
+  { text = "A craftsperson whose work has been stolen", weight = 1 },
+  { text = "An entertainer who has seen too much", weight = 1 },
+  { text = "A courier who cannot complete their route", weight = 1 },
+
+  # Unusual Sources
+  { text = "A voice speaking in dreams", weight = 1 },
+  { text = "A message from someone presumed dead", weight = 1 },
+  { text = "Instructions left in a will", weight = 1 },
+  { text = "A chance encounter that seems fated", weight = 1 },
+  { text = "An anonymous note with precise details", weight = 1 },
+  { text = "A prophecy or prediction pointing to you", weight = 1 },
+  { text = "The last words of someone you could not save", weight = 1 },
+  { text = "A debt called in from long ago", weight = 1 },
+  { text = "Conscience demanding you act on what you learned", weight = 1 },
+  { text = "A creature or entity that should not be able to communicate", weight = 1 },
+]
+
+# ==============================================================================
+# STAKES - What hangs in the balance (40+ entries)
+# ==============================================================================
+
+[stakes]
+entries = [
+  # Life and Death
+  { text = "Lives hang in the balance", weight = 2 },
+  { text = "An innocent will be wrongly executed", weight = 1 },
+  { text = "A disease will spread without intervention", weight = 1 },
+  { text = "Mass casualties are imminent", weight = 1 },
+  { text = "Someone will die if you fail", weight = 2 },
+  { text = "The last of a bloodline will perish", weight = 1 },
+  { text = "Children are in immediate danger", weight = 1 },
+  { text = "Wounded are bleeding out while you decide", weight = 1 },
+  { text = "Starvation threatens a community", weight = 1 },
+  { text = "A slow death awaits the afflicted without cure", weight = 1 },
+
+  # Political/Power
+  { text = "The balance of power could shift", weight = 2 },
+  { text = "War could break out between factions", weight = 1 },
+  { text = "A tyrant could consolidate control", weight = 1 },
+  { text = "A legitimate claim will be suppressed", weight = 1 },
+  { text = "An alliance will collapse", weight = 1 },
+  { text = "A peace treaty hangs by a thread", weight = 1 },
+  { text = "The wrong leader could take power", weight = 1 },
+  { text = "A conquered people may never be free", weight = 1 },
+  { text = "Justice will never be served", weight = 1 },
+  { text = "Corruption will become permanent", weight = 1 },
+
+  # Community/Society
+  { text = "A community will be destroyed", weight = 2 },
+  { text = "A way of life will end forever", weight = 1 },
+  { text = "Refugees will have nowhere to go", weight = 1 },
+  { text = "Trust between peoples will be broken", weight = 1 },
+  { text = "A sacred tradition will be lost", weight = 1 },
+  { text = "The innocent will be blamed for the guilty", weight = 1 },
+  { text = "Generations of work will be undone", weight = 1 },
+  { text = "A people will lose their homeland", weight = 1 },
+  { text = "Fear will rule where hope once lived", weight = 1 },
+  { text = "The young will lose faith in their elders", weight = 1 },
+
+  # Knowledge/Secrets
+  { text = "A valuable secret will be lost forever", weight = 2 },
+  { text = "The truth will never be known", weight = 1 },
+  { text = "Dangerous knowledge will fall into wrong hands", weight = 1 },
+  { text = "History will be rewritten falsely", weight = 1 },
+  { text = "A craft or skill will die with its last master", weight = 1 },
+  { text = "Evidence will be destroyed", weight = 1 },
+  { text = "A lie will become accepted as truth", weight = 1 },
+  { text = "Important records will be lost", weight = 1 },
+  { text = "A mystery will remain forever unsolved", weight = 1 },
+  { text = "Warnings will go unheeded", weight = 1 },
+
+  # Supernatural/Cosmic
+  { text = "Ancient evil could be unleashed", weight = 1 },
+  { text = "A protective barrier could fail", weight = 1 },
+  { text = "Something sealed away could escape", weight = 1 },
+  { text = "A curse could spread beyond its bounds", weight = 1 },
+  { text = "The natural order could be disrupted", weight = 1 },
+  { text = "Powers beyond comprehension take interest", weight = 1 },
+  { text = "A prophecy could be fulfilled or broken", weight = 1 },
+  { text = "The dead may not rest", weight = 1 },
+  { text = "Reality itself could be damaged", weight = 1 },
+  { text = "An awakening could occur that cannot be undone", weight = 1 },
+
+  # Personal
+  { text = "Your reputation will be destroyed", weight = 1 },
+  { text = "Someone you care about will suffer", weight = 1 },
+  { text = "A promise will be broken forever", weight = 1 },
+  { text = "Your past will catch up to you", weight = 1 },
+  { text = "You will lose something you cannot replace", weight = 1 },
+  { text = "Guilt will haunt you forever", weight = 1 },
+  { text = "A relationship will be damaged beyond repair", weight = 1 },
+  { text = "Your home will no longer be safe", weight = 1 },
+  { text = "You will become what you hate", weight = 1 },
+  { text = "Everything you built will crumble", weight = 1 },
+]
+
+# ==============================================================================
+# TWISTS - Revelations that change everything (50+ entries)
+# ==============================================================================
+
+[twists]
+entries = [
+  # Betrayal/Deception
+  { text = "The quest giver is the real villain", weight = 2 },
+  { text = "Your employer is using you to eliminate competition", weight = 1 },
+  { text = "A trusted ally has been working against you", weight = 1 },
+  { text = "The rescue target arranged their own kidnapping", weight = 1 },
+  { text = "You've been manipulated into starting a war", weight = 1 },
+  { text = "The organization you serve has been corrupted", weight = 1 },
+  { text = "Your actions have been broadcast to your enemies", weight = 1 },
+  { text = "The person you're protecting is the actual threat", weight = 1 },
+  { text = "Both sides of the conflict are the same faction", weight = 1 },
+  { text = "The dead body was faked, the target is alive", weight = 1 },
+
+  # Mistaken Understanding
+  { text = "The objective doesn't exist as described", weight = 1 },
+  { text = "The enemy is actually justified in their actions", weight = 1 },
+  { text = "The rescue target doesn't want to be saved", weight = 1 },
+  { text = "The monster is the last protector of something vital", weight = 1 },
+  { text = "The criminal was framed by the accusers", weight = 1 },
+  { text = "The treasure is worthless except to specific parties", weight = 1 },
+  { text = "The danger was exaggerated to manipulate you", weight = 1 },
+  { text = "The prophecy was misinterpreted", weight = 1 },
+  { text = "The villain is trying to prevent a greater evil", weight = 1 },
+  { text = "The war was engineered by those who profit from it", weight = 1 },
+
+  # Dangerous Objectives
+  { text = "The item is cursed or dangerous to possess", weight = 2 },
+  { text = "Success will cause greater harm than failure", weight = 1 },
+  { text = "The weapon you're delivering will be used on innocents", weight = 1 },
+  { text = "The ritual will summon something uncontrollable", weight = 1 },
+  { text = "The cure is worse than the disease", weight = 1 },
+  { text = "Completing the mission will destroy what it sought to protect", weight = 1 },
+  { text = "The power source will poison the land", weight = 1 },
+  { text = "The sealed door was keeping something in, not out", weight = 1 },
+  { text = "The message contains a trigger for atrocities", weight = 1 },
+  { text = "The artifact draws dangerous attention when used", weight = 1 },
+
+  # Hidden Connections
+  { text = "The target is related to someone you care about", weight = 1 },
+  { text = "You have history with the enemy you didn't remember", weight = 1 },
+  { text = "The objective involves your own past", weight = 1 },
+  { text = "The victim and perpetrator have switched roles before", weight = 1 },
+  { text = "Multiple missions you've done were all connected", weight = 1 },
+  { text = "The stranger is someone you knew in another guise", weight = 1 },
+  { text = "Your family is involved on the other side", weight = 1 },
+  { text = "The conspiracy goes higher than you imagined", weight = 1 },
+  { text = "An old mentor is behind everything", weight = 1 },
+  { text = "The factions are all puppets of a hidden master", weight = 1 },
+
+  # Scale Revelations
+  { text = "This is just the beginning of something larger", weight = 1 },
+  { text = "The local problem is a symptom of a greater threat", weight = 1 },
+  { text = "What seemed unique has happened many times before", weight = 1 },
+  { text = "The small task was a test for a larger mission", weight = 1 },
+  { text = "The enemy force is a scouting party for an army", weight = 1 },
+  { text = "The artifact is one of several that must be combined", weight = 1 },
+  { text = "The village problem mirrors the kingdom's collapse", weight = 1 },
+  { text = "Every success has strengthened the real enemy", weight = 1 },
+  { text = "The conspiracy spans multiple regions or realms", weight = 1 },
+  { text = "You've been in the middle of it all along without knowing", weight = 1 },
+
+  # Identity Twists
+  { text = "The villain is your former self or alternate version", weight = 1 },
+  { text = "You are the prophesied one, not your charge", weight = 1 },
+  { text = "The employer is your parent who abandoned you", weight = 1 },
+  { text = "Your target is who you would have become", weight = 1 },
+  { text = "The heir everyone seeks is among your companions", weight = 1 },
+  { text = "You have been replaced without knowing it", weight = 1 },
+  { text = "The legendary hero was a fraud", weight = 1 },
+  { text = "The monster was human before transformation", weight = 1 },
+  { text = "Your memories of the quest giver are implanted", weight = 1 },
+  { text = "You were the only survivor because you were meant to be", weight = 1 },
+]
+
+# ==============================================================================
+# FAILURE CONSEQUENCES - What happens if the mission fails (30+ entries)
+# ==============================================================================
+
+[failure_consequences]
+entries = [
+  # Personal
+  { text = "Your reputation is ruined among those who matter", weight = 2 },
+  { text = "A bounty is placed on your head", weight = 1 },
+  { text = "You lose the trust of allies", weight = 1 },
+  { text = "A debt comes due that you cannot pay", weight = 1 },
+  { text = "Enemies you spared will remember", weight = 1 },
+  { text = "You are exiled from a place you called home", weight = 1 },
+  { text = "A rival takes credit for what little you achieved", weight = 1 },
+  { text = "You owe a favor to someone dangerous", weight = 1 },
+
+  # Collateral
+  { text = "Innocents suffer for your failure", weight = 2 },
+  { text = "The community you tried to help is worse off", weight = 1 },
+  { text = "Someone else dies taking on the task you failed", weight = 1 },
+  { text = "The enemy is emboldened by your defeat", weight = 1 },
+  { text = "Resources spent on you could have saved others", weight = 1 },
+  { text = "The power vacuum you created is filled by worse", weight = 1 },
+  { text = "Your failure becomes a cautionary tale", weight = 1 },
+  { text = "Hope dies in those who were counting on you", weight = 1 },
+
+  # Escalation
+  { text = "The threat grows in your absence", weight = 1 },
+  { text = "New enemies emerge from the chaos", weight = 1 },
+  { text = "The window for action closes permanently", weight = 1 },
+  { text = "Reinforcements arrive for the enemy", weight = 1 },
+  { text = "The situation becomes truly unsalvageable", weight = 1 },
+  { text = "A chain reaction begins that cannot be stopped", weight = 1 },
+  { text = "Others attempt what you failed and suffer worse", weight = 1 },
+  { text = "The enemy learns from your attempt", weight = 1 },
+
+  # Revelation
+  { text = "Your weaknesses are exposed and exploited", weight = 1 },
+  { text = "Secrets you were protecting come to light", weight = 1 },
+  { text = "Your true allegiances are revealed", weight = 1 },
+  { text = "Evidence of your attempt is used against you", weight = 1 },
+  { text = "Those you infiltrated now hunt you", weight = 1 },
+  { text = "Your failure proves something about you that you denied", weight = 1 },
+  { text = "The world sees you as you truly are", weight = 1 },
+  { text = "Your name becomes synonymous with incompetence", weight = 1 },
+]
+
+# ==============================================================================
+# MORAL DILEMMAS - Choices without good answers (30+ entries)
+# ==============================================================================
+
+[moral_dilemmas]
+entries = [
+  # Lesser Evils
+  { text = "Save many by sacrificing few, or save few and doom many", weight = 2 },
+  { text = "Keep a promise or prevent a greater harm", weight = 1 },
+  { text = "Tell a truth that will cause suffering or a lie that brings peace", weight = 1 },
+  { text = "Punish the guilty when innocents will also suffer", weight = 1 },
+  { text = "Work with enemies against a greater threat", weight = 1 },
+  { text = "Allow injustice to continue or risk making it worse", weight = 1 },
+  { text = "Mercy that may enable future harm or justice that is cruel", weight = 1 },
+  { text = "Personal gain that incidentally helps others or sacrifice that helps no one", weight = 1 },
+
+  # Conflicting Loyalties
+  { text = "Loyalty to a friend versus duty to a cause", weight = 1 },
+  { text = "Orders from authority versus your own conscience", weight = 1 },
+  { text = "Family obligations versus chosen obligations", weight = 1 },
+  { text = "Old alliances versus new necessities", weight = 1 },
+  { text = "Personal honor versus group survival", weight = 1 },
+  { text = "The law versus justice", weight = 1 },
+  { text = "Tradition versus progress", weight = 1 },
+  { text = "Individual rights versus collective safety", weight = 1 },
+
+  # Information Dilemmas
+  { text = "Reveal information that will cause panic or withhold it and leave people unprepared", weight = 1 },
+  { text = "Expose corruption knowing the institution will collapse", weight = 1 },
+  { text = "Share dangerous knowledge or let someone die without it", weight = 1 },
+  { text = "Warn enemies of a threat that also threatens you", weight = 1 },
+  { text = "Keep secrets that protect the guilty", weight = 1 },
+  { text = "Lie to spare feelings or tell truths that wound", weight = 1 },
+
+  # Resource Allocation
+  { text = "Save the valuable skilled worker or the innocent child", weight = 1 },
+  { text = "Spend resources on defense or offense", weight = 1 },
+  { text = "Preserve the past or invest in the future", weight = 1 },
+  { text = "Help the many who need little or the few who need much", weight = 1 },
+  { text = "Prioritize survival or quality of life", weight = 1 },
+  { text = "Save what can be saved or risk all to save everything", weight = 1 },
+  { text = "Retreat and preserve strength or advance and risk destruction", weight = 1 },
+  { text = "Invest in proven methods or gamble on innovation", weight = 1 },
+]
+
+# ==============================================================================
+# QUEST HOOKS - Initial draws into adventure (30+ entries)
+# ==============================================================================
+
+[quest_hooks]
+entries = [
+  # Accidental Discovery
+  { text = "You witness something you were not meant to see", weight = 2 },
+  { text = "A map falls into your possession by chance", weight = 1 },
+  { text = "You overhear a conversation revealing a plot", weight = 1 },
+  { text = "A dying stranger presses something into your hands", weight = 1 },
+  { text = "You find a hidden message in something you acquired", weight = 1 },
+  { text = "Something you bought contains a secret", weight = 1 },
+  { text = "You stumble upon a crime in progress", weight = 1 },
+  { text = "A wrong turn leads you somewhere unexpected", weight = 1 },
+
+  # Personal Connection
+  { text = "Someone from your past reappears with a problem", weight = 2 },
+  { text = "Your family name is invoked in a matter you knew nothing about", weight = 1 },
+  { text = "A debt is called in from before your time", weight = 1 },
+  { text = "Someone you wronged offers forgiveness in exchange for help", weight = 1 },
+  { text = "A mentor's dying wish involves you", weight = 1 },
+  { text = "An inheritance comes with obligations", weight = 1 },
+  { text = "Someone mistakes you for someone important", weight = 1 },
+  { text = "Your reputation attracts unwanted attention", weight = 1 },
+
+  # Circumstance
+  { text = "You are in the wrong place at the wrong time", weight = 1 },
+  { text = "The only road forward passes through danger", weight = 1 },
+  { text = "You need something only the quest can provide", weight = 1 },
+  { text = "Refusing to act would make you complicit", weight = 1 },
+  { text = "The problem comes to you whether you want it or not", weight = 1 },
+  { text = "Your shelter for the night is the center of events", weight = 1 },
+  { text = "Economic necessity forces you into the work", weight = 1 },
+  { text = "Political changes make you a target regardless", weight = 1 },
+
+  # Opportunity
+  { text = "A lucrative offer arrives from an unexpected source", weight = 1 },
+  { text = "The reward is something you desperately need", weight = 1 },
+  { text = "Success would open doors previously closed to you", weight = 1 },
+  { text = "This is your chance to prove something", weight = 1 },
+  { text = "The opportunity will not come again", weight = 1 },
+  { text = "Someone offers to clear your name in exchange for help", weight = 1 },
+  { text = "The quest leads toward something you've sought for years", weight = 1 },
+  { text = "Allies you need will only help if you do this first", weight = 1 },
+]

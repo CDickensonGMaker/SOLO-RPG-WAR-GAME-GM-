@@ -1,0 +1,783 @@
+# Orcs and Goblins - Age of Fantasy
+# Savage greenskin hordes united by the WAAAGH!
+# One Page Rules - Free Wargaming System
+
+[faction]
+name = "Orcs and Goblins"
+description = "Savage greenskin hordes united by strength and the endless WAAAGH!"
+playstyle = "Aggressive horde, chaotic, fun"
+difficulty = "beginner"
+strengths = [
+    "Cheap troops for masses",
+    "Strong melee combat",
+    "Powerful monsters",
+    "Fun random elements",
+    "Animosity adds character"
+]
+weaknesses = [
+    "Poor shooting (Quality 5+)",
+    "Animosity can backfire",
+    "Limited magic",
+    "Poor armor on goblins"
+]
+tactics = """
+Orcs and Goblins win through overwhelming aggression. Your troops are cheap and numerous -
+use hordes to swamp enemies. Orcs provide the hitting power, Goblins provide numbers.
+Use Warbosses to lead from the front. Trolls and Giants add monster punch. Animosity can
+cause your units to fight each other, but also provides bonus charges. Accept the chaos
+and ride the WAAAGH!
+"""
+
+# =============================================================================
+# HQ UNITS
+# =============================================================================
+
+[[units]]
+name = "Orc Warboss"
+type = "infantry"
+category = "hq"
+points = 105
+models = "1"
+base_size = "32mm"
+tactical_role = "combat_commander"
+threat_level = "very_high"
+priority_target = true
+preferred_targets = ["infantry", "characters"]
+avoid_targets = ["nothing"]
+weaknesses = ["assassination"]
+synergies = ["WAAAGH! buff", "Leads from front"]
+special_rules = ["Hero", "Tough(4)", "WAAAGH!", "Furious"]
+keywords = ["Infantry", "Character", "Orc"]
+notes = "WAAAGH!: Friendly Orcs within 12\" gain +1 attack on charge. Lead the charge."
+
+[units.stats]
+quality = "4+"
+defense = "4+"
+tough = 4
+movement = "6\""
+
+[[units.weapons]]
+name = "Choppa"
+range = "Melee"
+shots = "5"
+ap = "1"
+
+[[units.upgrades]]
+name = "Great Weapon"
+points = 10
+weapon = { name = "Great Choppa", range = "Melee", shots = "5", ap = "2", special = ["Deadly(3)"] }
+
+[[units.upgrades]]
+name = "War Boar"
+points = 20
+effect = "Becomes Cavalry, movement 10\", +1 attack from boar"
+
+[[units.upgrades]]
+name = "Wyvern"
+points = 120
+effect = "Becomes Monster, Flying, Tough(8), gains Wyvern attacks"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Orc Shaman"
+type = "infantry"
+category = "hq"
+points = 75
+models = "1"
+base_size = "25mm"
+tactical_role = "magical_support"
+threat_level = "high"
+priority_target = true
+preferred_targets = ["support"]
+avoid_targets = ["melee"]
+weaknesses = ["assassination"]
+synergies = ["WAAAGH! magic", "Buffs and blasts"]
+special_rules = ["Hero", "Tough(2)", "Wizard(2)"]
+keywords = ["Infantry", "Character", "Orc", "Wizard"]
+notes = "Orc magic is crude but effective. Foot of Gork stomps enemies flat."
+
+[units.stats]
+quality = "4+"
+defense = "5+"
+tough = 2
+movement = "6\""
+
+[[units.weapons]]
+name = "Staff"
+range = "Melee"
+shots = "1"
+ap = "0"
+
+[[units.spells]]
+name = "Foot of Gork"
+level = 2
+description = "Target enemy unit within 24\" takes D6 hits with AP(4), Deadly(3)"
+
+[[units.spells]]
+name = "WAAAGH!"
+level = 1
+description = "Friendly Orc unit within 12\" gains +1 to hit until next turn"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Goblin Warboss"
+type = "infantry"
+category = "hq"
+points = 50
+models = "1"
+base_size = "25mm"
+tactical_role = "goblin_commander"
+threat_level = "medium"
+priority_target = true
+preferred_targets = ["support"]
+avoid_targets = ["combat"]
+weaknesses = ["everything"]
+synergies = ["Leads Goblins", "Sneaky tactics"]
+special_rules = ["Hero", "Tough(2)"]
+keywords = ["Infantry", "Character", "Goblin"]
+notes = "Budget general for Goblin-heavy lists. Sneaky but not a fighter."
+
+[units.stats]
+quality = "4+"
+defense = "5+"
+tough = 2
+movement = "5\""
+
+[[units.weapons]]
+name = "Sword"
+range = "Melee"
+shots = "3"
+ap = "0"
+
+[[units.upgrades]]
+name = "Giant Wolf"
+points = 15
+effect = "Becomes Cavalry, movement 10\""
+
+[[units.upgrades]]
+name = "Giant Spider"
+points = 20
+effect = "Becomes Cavalry, movement 10\", Strider, Poison(5+)"
+
+# =============================================================================
+# TROOPS
+# =============================================================================
+
+[[units]]
+name = "Orc Boyz"
+type = "infantry"
+category = "troops"
+points = 75
+models = "10"
+base_size = "25mm"
+tactical_role = "line_infantry"
+threat_level = "medium"
+priority_target = false
+preferred_targets = ["melee"]
+avoid_targets = ["shooting"]
+weaknesses = ["ranged_attacks"]
+synergies = ["WAAAGH! buffs", "Numbers"]
+special_rules = ["Furious", "Animosity"]
+keywords = ["Infantry", "Orc"]
+notes = "Core troops. Furious +1 attack on charge. Animosity can be good or bad."
+
+[units.stats]
+quality = "5+"
+defense = "5+"
+tough = 1
+movement = "6\""
+
+[[units.weapons]]
+name = "Choppa"
+range = "Melee"
+shots = "1"
+ap = "0"
+
+[[units.upgrades]]
+name = "Big Choppas"
+points = 15
+weapon = { name = "Big Choppa", range = "Melee", shots = "1", ap = "1" }
+
+[[units.upgrades]]
+name = "Shields"
+points = 10
+effect = "Defense becomes 4+"
+
+[[units.upgrades]]
+name = "30 Boyz"
+points = 150
+effect = "Add 20 more models"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Orc Arrer Boyz"
+type = "infantry"
+category = "troops"
+points = 70
+models = "10"
+base_size = "25mm"
+tactical_role = "ranged_support"
+threat_level = "low"
+priority_target = false
+preferred_targets = ["light_troops"]
+avoid_targets = ["heavy_armor"]
+weaknesses = ["quality_5+"]
+synergies = ["Volume of arrows", "Defensive fire"]
+special_rules = ["Animosity"]
+keywords = ["Infantry", "Orc"]
+notes = "Quality 5+ makes them poor shooters. Use volume of fire."
+
+[units.stats]
+quality = "5+"
+defense = "5+"
+tough = 1
+movement = "6\""
+
+[[units.weapons]]
+name = "Orc Bow"
+range = "18\""
+shots = "1"
+ap = "0"
+
+[[units.weapons]]
+name = "Choppa"
+range = "Melee"
+shots = "1"
+ap = "0"
+
+[[units.upgrades]]
+name = "20 Arrer Boyz"
+points = 70
+effect = "Add 10 more models"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Goblins"
+type = "infantry"
+category = "troops"
+points = 45
+models = "20"
+base_size = "20mm"
+tactical_role = "expendable_horde"
+threat_level = "very_low"
+priority_target = false
+preferred_targets = ["nothing"]
+avoid_targets = ["everything"]
+weaknesses = ["everything"]
+synergies = ["Screening", "Numbers"]
+special_rules = ["Animosity"]
+keywords = ["Infantry", "Goblin"]
+notes = "Cheap and terrible. Use as screens and objective holders."
+
+[units.stats]
+quality = "5+"
+defense = "6+"
+tough = 1
+movement = "5\""
+
+[[units.weapons]]
+name = "Spear"
+range = "Melee"
+shots = "1"
+ap = "0"
+special = ["Phalanx"]
+
+[[units.upgrades]]
+name = "Short Bows"
+points = 0
+weapon = { name = "Short Bow", range = "12\"", shots = "1", ap = "0" }
+
+[[units.upgrades]]
+name = "60 Goblins"
+points = 90
+effect = "Add 40 more models"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Night Goblins"
+type = "infantry"
+category = "troops"
+points = 50
+models = "20"
+base_size = "20mm"
+tactical_role = "sneaky_horde"
+threat_level = "low"
+priority_target = false
+preferred_targets = ["flanks"]
+avoid_targets = ["heavy_combat"]
+weaknesses = ["direct_combat"]
+synergies = ["Fanatics", "Sneaky tricks"]
+special_rules = ["Animosity", "Netters"]
+keywords = ["Infantry", "Goblin", "Night"]
+notes = "Netters: Enemy units in combat get -1 to hit. Fanatics are surprise weapons."
+
+[units.stats]
+quality = "5+"
+defense = "6+"
+tough = 1
+movement = "5\""
+
+[[units.weapons]]
+name = "Spear"
+range = "Melee"
+shots = "1"
+ap = "0"
+
+[[units.upgrades]]
+name = "Fanatics"
+points = 25
+effect = "Once per game, release D3 Fanatics (D6 hits, AP(3), Deadly(3))"
+
+[[units.upgrades]]
+name = "60 Night Goblins"
+points = 100
+effect = "Add 40 more models"
+
+# =============================================================================
+# ELITES
+# =============================================================================
+
+[[units]]
+name = "Black Orcs"
+type = "infantry"
+category = "elite"
+points = 120
+models = "10"
+base_size = "25mm"
+tactical_role = "elite_infantry"
+threat_level = "high"
+priority_target = true
+preferred_targets = ["infantry"]
+avoid_targets = ["monsters"]
+weaknesses = ["ranged_attacks"]
+synergies = ["Disciplined Orcs", "No Animosity"]
+special_rules = ["Fearless"]
+keywords = ["Infantry", "Orc", "Black Orc"]
+notes = "Elite Orcs. No Animosity. Fearless. Quality 3+ is excellent."
+
+[units.stats]
+quality = "3+"
+defense = "4+"
+tough = 1
+movement = "6\""
+
+[[units.weapons]]
+name = "Great Choppa"
+range = "Melee"
+shots = "2"
+ap = "2"
+
+[[units.upgrades]]
+name = "20 Black Orcs"
+points = 120
+effect = "Add 10 more models"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Savage Orcs"
+type = "infantry"
+category = "elite"
+points = 80
+models = "10"
+base_size = "25mm"
+tactical_role = "berserker_assault"
+threat_level = "high"
+priority_target = true
+preferred_targets = ["anything"]
+avoid_targets = ["nothing"]
+weaknesses = ["shooting"]
+synergies = ["Frenzy charges", "No retreat"]
+special_rules = ["Fearless", "Furious", "Frenzy"]
+keywords = ["Infantry", "Orc", "Savage"]
+notes = "Frenzy: +1 attack. Combined with Furious = +2 on charge. No armor but deadly."
+
+[units.stats]
+quality = "4+"
+defense = "6+"
+tough = 1
+movement = "6\""
+
+[[units.weapons]]
+name = "Choppas"
+range = "Melee"
+shots = "2"
+ap = "0"
+
+[[units.upgrades]]
+name = "Big Stabbas"
+points = 20
+weapon = { name = "Big Stabba", range = "Melee", shots = "1", ap = "3", special = ["Deadly(3)"] }
+
+[[units.upgrades]]
+name = "20 Savage Orcs"
+points = 80
+effect = "Add 10 more models"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Orc Boar Boyz"
+type = "cavalry"
+category = "elite"
+points = 130
+models = "5"
+base_size = "25x50mm"
+tactical_role = "shock_cavalry"
+threat_level = "high"
+priority_target = true
+preferred_targets = ["flanks"]
+avoid_targets = ["pikes"]
+weaknesses = ["phalanx"]
+synergies = ["Devastating charges", "Impact hits"]
+special_rules = ["Furious", "Animosity", "Impact(1)"]
+keywords = ["Cavalry", "Orc"]
+notes = "Orc cavalry. Impact(1) and Furious for charges. Devastating."
+
+[units.stats]
+quality = "4+"
+defense = "4+"
+tough = 1
+movement = "8\""
+
+[[units.weapons]]
+name = "Spear"
+range = "Melee"
+shots = "1"
+ap = "0"
+special = ["Lance"]
+
+[[units.weapons]]
+name = "Choppa"
+range = "Melee"
+shots = "1"
+ap = "0"
+
+[[units.upgrades]]
+name = "10 Boar Boyz"
+points = 130
+effect = "Add 5 more models"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Goblin Wolf Riders"
+type = "cavalry"
+category = "elite"
+points = 70
+models = "5"
+base_size = "25x50mm"
+tactical_role = "light_cavalry"
+threat_level = "low"
+priority_target = false
+preferred_targets = ["war_machines", "flanks"]
+avoid_targets = ["combat"]
+weaknesses = ["everything"]
+synergies = ["Fast harassment", "Redirection"]
+special_rules = ["Fast", "Animosity"]
+keywords = ["Cavalry", "Goblin"]
+notes = "Fast light cavalry. Harass and redirect. Expendable."
+
+[units.stats]
+quality = "5+"
+defense = "6+"
+tough = 1
+movement = "10\""
+
+[[units.weapons]]
+name = "Short Bow"
+range = "12\""
+shots = "1"
+ap = "0"
+
+[[units.weapons]]
+name = "Spear"
+range = "Melee"
+shots = "1"
+ap = "0"
+
+[[units.upgrades]]
+name = "10 Wolf Riders"
+points = 70
+effect = "Add 5 more models"
+
+# =============================================================================
+# MONSTERS
+# =============================================================================
+
+[[units]]
+name = "Trolls"
+type = "monster"
+category = "monster"
+points = 120
+models = "3"
+base_size = "40mm"
+tactical_role = "regenerating_monster"
+threat_level = "high"
+priority_target = true
+preferred_targets = ["infantry"]
+avoid_targets = ["fire"]
+weaknesses = ["fire_attacks", "focus_fire"]
+synergies = ["Regeneration attrition", "Monster punch"]
+special_rules = ["Fearless", "Tough(3)", "Regeneration", "Stupid"]
+keywords = ["Monster", "Troll"]
+notes = "Stupid: Roll Quality at start of turn or stand around. Regeneration is powerful."
+
+[units.stats]
+quality = "4+"
+defense = "5+"
+tough = 3
+movement = "6\""
+
+[[units.weapons]]
+name = "Vomit"
+range = "6\""
+shots = "D6"
+ap = "2"
+special = ["Poison(4+)"]
+
+[[units.weapons]]
+name = "Claws"
+range = "Melee"
+shots = "3"
+ap = "1"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Giant"
+type = "monster"
+category = "monster"
+points = 180
+models = "1"
+base_size = "100mm"
+tactical_role = "behemoth"
+threat_level = "extreme"
+priority_target = true
+preferred_targets = ["everything"]
+avoid_targets = ["nothing"]
+weaknesses = ["focus_fire"]
+synergies = ["Terror", "Random attacks"]
+special_rules = ["Fearless", "Tough(10)", "Terror", "Stubborn"]
+keywords = ["Monster", "Giant"]
+notes = "Massive monster. Random attack table for fun. Terror debuffs enemies."
+
+[units.stats]
+quality = "4+"
+defense = "5+"
+tough = 10
+movement = "8\""
+
+[[units.weapons]]
+name = "Giant Attacks"
+range = "Melee"
+shots = "D6"
+ap = "2"
+special = ["Deadly(3)"]
+notes = "Roll on Giant Attack table for effects"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Arachnarok Spider"
+type = "monster"
+category = "monster"
+points = 250
+models = "1"
+base_size = "100mm"
+tactical_role = "monster_mount"
+threat_level = "extreme"
+priority_target = true
+preferred_targets = ["infantry", "cavalry"]
+avoid_targets = ["nothing"]
+weaknesses = ["focus_fire"]
+synergies = ["Goblin crew", "Poison attacks"]
+special_rules = ["Fearless", "Tough(12)", "Terror", "Strider", "Poison(4+)"]
+keywords = ["Monster", "Goblin", "Spider"]
+notes = "Massive spider. Strider through terrain. Poison(4+) helps vs armor."
+
+[units.stats]
+quality = "4+"
+defense = "4+"
+tough = 12
+movement = "8\""
+
+[[units.weapons]]
+name = "Venom Spray"
+range = "12\""
+shots = "2D6"
+ap = "0"
+special = ["Poison(4+)"]
+
+[[units.weapons]]
+name = "Giant Fangs"
+range = "Melee"
+shots = "6"
+ap = "2"
+special = ["Deadly(3)", "Poison(4+)"]
+
+# =============================================================================
+# WAR MACHINES
+# =============================================================================
+
+[[units]]
+name = "Goblin Rock Lobber"
+type = "war_machine"
+category = "war_machine"
+points = 70
+models = "1"
+base_size = "chariot"
+tactical_role = "artillery"
+threat_level = "medium"
+priority_target = true
+preferred_targets = ["infantry_blocks"]
+avoid_targets = ["single_models"]
+weaknesses = ["charges", "unreliable"]
+synergies = ["Blast damage", "Indirect fire"]
+special_rules = ["Tough(4)"]
+keywords = ["War Machine", "Goblin"]
+notes = "Goblin catapult. Unreliable but cheap. Blast(6) hurts blocks."
+
+[units.stats]
+quality = "5+"
+defense = "5+"
+tough = 4
+movement = "0\""
+
+[[units.weapons]]
+name = "Rock"
+range = "48\""
+shots = "1"
+ap = "2"
+special = ["Blast(6)", "Deadly(3)", "Indirect"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Goblin Doom Diver"
+type = "war_machine"
+category = "war_machine"
+points = 55
+models = "1"
+base_size = "chariot"
+tactical_role = "sniping"
+threat_level = "medium"
+priority_target = true
+preferred_targets = ["characters", "war_machines"]
+avoid_targets = ["large_units"]
+weaknesses = ["charges"]
+synergies = ["Character assassination", "Precision strike"]
+special_rules = ["Tough(3)"]
+keywords = ["War Machine", "Goblin"]
+notes = "Launches Goblins. Sniper for targeting specific models. Fun."
+
+[units.stats]
+quality = "4+"
+defense = "5+"
+tough = 3
+movement = "0\""
+
+[[units.weapons]]
+name = "Diving Goblin"
+range = "36\""
+shots = "1"
+ap = "4"
+special = ["Sniper", "Deadly(6)"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Orc Chariot"
+type = "vehicle"
+category = "fast_attack"
+points = 75
+models = "1"
+base_size = "chariot"
+tactical_role = "chariot"
+threat_level = "high"
+priority_target = false
+preferred_targets = ["infantry"]
+avoid_targets = ["monsters"]
+weaknesses = ["focused_fire"]
+synergies = ["Impact charges", "Flanking"]
+special_rules = ["Tough(5)", "Impact(D3)", "Furious"]
+keywords = ["Vehicle", "Orc", "Chariot"]
+notes = "Orc chariot. Impact(D3) on charge. Furious for extra attacks."
+
+[units.stats]
+quality = "4+"
+defense = "4+"
+tough = 5
+movement = "8\""
+
+[[units.weapons]]
+name = "Crew Attacks"
+range = "Melee"
+shots = "4"
+ap = "0"
+
+# =============================================================================
+# ANIMOSITY TABLE
+# =============================================================================
+
+[animosity]
+description = "At the start of each activation, roll D6 for units with Animosity"
+
+[[animosity.results]]
+roll = "1"
+effect = "Squabble"
+description = "Unit fights itself. Each model takes a hit at AP(0). Cannot act this turn."
+
+[[animosity.results]]
+roll = "2-5"
+effect = "Normal"
+description = "Unit acts normally"
+
+[[animosity.results]]
+roll = "6"
+effect = "WAAAGH!"
+description = "Unit may immediately make a free charge move toward nearest enemy"
+
+# =============================================================================
+# EXAMPLE ARMY LISTS
+# =============================================================================
+
+[army_lists.starter_1000]
+name = "WAAAGH! Mob - 1000 points"
+description = "Classic greenskin horde"
+points = 1000
+units = [
+    { name = "Orc Warboss", count = 1, points = 105 },
+    { name = "Orc Shaman", count = 1, points = 75 },
+    { name = "Orc Boyz", count = 2, points = 225, upgrades = ["30 models", "Shields"] },
+    { name = "Goblins", count = 1, points = 135, upgrades = ["60 models"] },
+    { name = "Black Orcs", count = 1, points = 120 },
+    { name = "Orc Boar Boyz", count = 1, points = 130 },
+    { name = "Trolls", count = 1, points = 120 },
+    { name = "Goblin Rock Lobber", count = 1, points = 70 }
+]
+tactics = "Goblins screen the advance. Orc Boyz are the main battle line. Black Orcs anchor. Boar Boyz flank. Warboss leads the charge. Trolls provide monster punch. Rock Lobber softens targets."
+
+[army_lists.competitive_2000]
+name = "THE GREEN TIDE - 2000 points"
+description = "Maximum WAAAGH!"
+points = 2000
+units = [
+    { name = "Orc Warboss on Wyvern", count = 1, points = 225 },
+    { name = "Orc Shaman", count = 1, points = 75 },
+    { name = "Goblin Warboss on Wolf", count = 1, points = 65 },
+    { name = "Orc Boyz", count = 3, points = 225, upgrades = ["30 models"] },
+    { name = "Goblins", count = 1, points = 135, upgrades = ["60 models"] },
+    { name = "Night Goblins", count = 1, points = 150, upgrades = ["60 models", "Fanatics"] },
+    { name = "Black Orcs", count = 1, points = 240, upgrades = ["20 models"] },
+    { name = "Savage Orcs", count = 1, points = 160, upgrades = ["20 models"] },
+    { name = "Orc Boar Boyz", count = 1, points = 260, upgrades = ["10 models"] },
+    { name = "Trolls", count = 2, points = 240 },
+    { name = "Giant", count = 1, points = 180 }
+]
+tactics = "Massive horde advances. Warboss on Wyvern provides air threat. Goblins screen with Fanatics as surprises. Savage Orcs deliver devastating charges. Black Orcs anchor center. Boar Boyz and Giant flank. WAAAGH!"

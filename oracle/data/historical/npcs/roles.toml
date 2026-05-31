@@ -1,0 +1,91 @@
+# Historical Roles
+# 60+ roles spanning military, civilian, religious, and political spheres
+
+[roles]
+entries = [
+  # Military Roles
+  { text = "Infantry soldier", weight = 3 },
+  { text = "Cavalry officer", weight = 2 },
+  { text = "Artillery sergeant", weight = 2 },
+  { text = "Scout and reconnaissance", weight = 2 },
+  { text = "Military surgeon", weight = 1 },
+  { text = "Field medic", weight = 2 },
+  { text = "Quartermaster", weight = 1 },
+  { text = "Military chaplain", weight = 1 },
+  { text = "Army cook", weight = 2 },
+  { text = "Siege engineer", weight = 1 },
+  { text = "Naval captain", weight = 1 },
+  { text = "Ship's navigator", weight = 1 },
+  { text = "Bosun", weight = 2 },
+  { text = "Marine", weight = 2 },
+  { text = "Drummer boy", weight = 2 },
+  { text = "Standard bearer", weight = 1 },
+  { text = "Military intelligence officer", weight = 1 },
+  { text = "Mercenary", weight = 2 },
+  { text = "Armorer", weight = 1 },
+  { text = "Farrier", weight = 2 },
+
+  # Civilian Trades
+  { text = "Blacksmith", weight = 2 },
+  { text = "Miller", weight = 2 },
+  { text = "Innkeeper", weight = 2 },
+  { text = "Merchant", weight = 2 },
+  { text = "Farmer", weight = 3 },
+  { text = "Fisherman", weight = 2 },
+  { text = "Carpenter", weight = 2 },
+  { text = "Mason", weight = 2 },
+  { text = "Weaver", weight = 2 },
+  { text = "Tanner", weight = 2 },
+  { text = "Butcher", weight = 2 },
+  { text = "Baker", weight = 2 },
+  { text = "Apothecary", weight = 1 },
+  { text = "Physician", weight = 1 },
+  { text = "Midwife", weight = 2 },
+  { text = "Servant", weight = 3 },
+  { text = "Groom", weight = 2 },
+  { text = "Coachman", weight = 2 },
+  { text = "Clerk", weight = 2 },
+  { text = "Scribe", weight = 1 },
+
+  # Political and Noble Roles
+  { text = "Noble lord", weight = 1 },
+  { text = "Lady of the manor", weight = 1 },
+  { text = "Ambassador", weight = 1 },
+  { text = "Magistrate", weight = 1 },
+  { text = "Tax collector", weight = 2 },
+  { text = "Town mayor", weight = 1 },
+  { text = "Governor", weight = 1 },
+  { text = "Councilman", weight = 2 },
+  { text = "Sheriff", weight = 1 },
+  { text = "Bailiff", weight = 2 },
+
+  # Religious Roles
+  { text = "Parish priest", weight = 2 },
+  { text = "Bishop", weight = 1 },
+  { text = "Monk", weight = 2 },
+  { text = "Nun", weight = 2 },
+  { text = "Friar", weight = 2 },
+  { text = "Rabbi", weight = 1 },
+  { text = "Imam", weight = 1 },
+
+  # Intelligence and Intrigue
+  { text = "Spy", weight = 1 },
+  { text = "Informant", weight = 2 },
+  { text = "Smuggler", weight = 2 },
+  { text = "Courier", weight = 2 },
+  { text = "Code breaker", weight = 1 },
+  { text = "Resistance fighter", weight = 1 },
+  { text = "Collaborator", weight = 1 },
+
+  # Specialized Roles
+  { text = "War correspondent", weight = 1 },
+  { text = "Photographer", weight = 1 },
+  { text = "Cartographer", weight = 1 },
+  { text = "Interpreter", weight = 1 },
+  { text = "Engineer", weight = 1 },
+  { text = "Nurse", weight = 2 },
+  { text = "Camp follower", weight = 2 },
+  { text = "Refugee", weight = 2 },
+  { text = "Prisoner of war", weight = 1 },
+  { text = "Gravedigger", weight = 2 }
+]

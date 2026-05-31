@@ -1,0 +1,849 @@
+# Warhammer: The Old World - Orcs and Goblins
+# Da Greenskinz! WAAAGH!
+
+[faction]
+name = "Orcs & Goblins"
+description = "A brutal horde of greenskins driven by the urge to fight. Orcs are brutal warriors while Goblins are cunning and treacherous. Together they form an unpredictable but devastating force"
+playstyle = "Horde army with unpredictable Animosity. Cheap units with powerful monsters"
+strengths = ["Cheap troops", "Powerful monsters", "Devastating charges", "Giant Waaagh! units"]
+weaknesses = ["Animosity", "Low Leadership", "Unreliable", "Poor armor saves"]
+lore_notes = "Greenskins reproduce by spores, emerging fully grown from the ground. They live only to fight, following brutal Warbosses in endless WAAAGH!"
+
+# =============================================================================
+# LORDS
+# =============================================================================
+
+[[units]]
+name = "Orc Warboss"
+type = "character"
+category = "Lords"
+points = 105
+models = "1"
+tactical_role = "combat_commander"
+threat_level = "very_high"
+preferred_targets = ["enemy_characters", "monsters"]
+weaknesses = ["magic"]
+special_rules = ["Choppa", "Animosity", "'Ere We Go!", "Size Matters"]
+keywords = ["Character", "Infantry", "Orc", "Lord"]
+equipment = ["Choppa (hand weapon)", "Light armor"]
+options = ["May take Wyvern mount (+200 pts)", "May take War Boar (+24 pts)", "May take magic items up to 100 points"]
+
+[units.stats]
+M = 4
+WS = 6
+BS = 4
+S = 5
+T = 5
+W = 3
+I = 4
+A = 4
+Ld = 9
+Sv = "6+"
+
+[[units]]
+name = "Orc Great Shaman"
+type = "character"
+category = "Lords"
+points = 150
+models = "1"
+tactical_role = "magic"
+threat_level = "high"
+preferred_targets = ["enemy_units"]
+weaknesses = ["close_combat"]
+special_rules = ["Level 3 Wizard", "May upgrade to Level 4 (+35 pts)", "Da Big Waaagh!"]
+keywords = ["Character", "Infantry", "Orc", "Lord", "Wizard"]
+equipment = ["Hand weapon"]
+options = ["May take War Boar (+24 pts)", "May take magic items up to 100 points"]
+
+[units.stats]
+M = 4
+WS = 3
+BS = 3
+S = 4
+T = 5
+W = 3
+I = 3
+A = 1
+Ld = 8
+Sv = "-"
+
+[[units]]
+name = "Goblin Warboss"
+type = "character"
+category = "Lords"
+points = 65
+models = "1"
+tactical_role = "cheap_commander"
+threat_level = "medium"
+preferred_targets = ["weak_enemies"]
+weaknesses = ["everything"]
+special_rules = ["Animosity", "'Ere We Go!", "Backstabba"]
+keywords = ["Character", "Infantry", "Goblin", "Lord"]
+equipment = ["Hand weapon", "Light armor"]
+options = ["May take Gigantic Spider mount (+40 pts)", "May take Wolf (+18 pts)", "May take magic items up to 100 points"]
+
+[units.stats]
+M = 4
+WS = 5
+BS = 5
+S = 4
+T = 4
+W = 3
+I = 5
+A = 4
+Ld = 8
+Sv = "6+"
+
+[[units]]
+name = "Night Goblin Warboss"
+type = "character"
+category = "Lords"
+points = 60
+models = "1"
+tactical_role = "sneaky_commander"
+threat_level = "medium"
+preferred_targets = ["isolated_units"]
+weaknesses = ["shooting", "monsters"]
+special_rules = ["Animosity", "'Ere We Go!", "Netters", "Hatred (Dwarfs)"]
+keywords = ["Character", "Infantry", "Night Goblin", "Lord"]
+equipment = ["Hand weapon", "Light armor"]
+options = ["May take Great Cave Squig mount (+50 pts)", "May take magic items up to 100 points"]
+
+[units.stats]
+M = 4
+WS = 5
+BS = 5
+S = 4
+T = 4
+W = 3
+I = 5
+A = 4
+Ld = 7
+Sv = "6+"
+
+# =============================================================================
+# HEROES
+# =============================================================================
+
+[[units]]
+name = "Orc Big Boss"
+type = "character"
+category = "Heroes"
+points = 45
+models = "1"
+tactical_role = "support_commander"
+threat_level = "medium"
+preferred_targets = ["enemy_champions"]
+weaknesses = ["elite_characters"]
+special_rules = ["Choppa", "Animosity", "'Ere We Go!", "Size Matters"]
+keywords = ["Character", "Infantry", "Orc", "Hero"]
+equipment = ["Choppa", "Light armor"]
+options = ["May carry Battle Standard (+25 pts)", "May take magic items up to 50 points", "May take War Boar mount"]
+
+[units.stats]
+M = 4
+WS = 5
+BS = 4
+S = 4
+T = 5
+W = 2
+I = 3
+A = 3
+Ld = 8
+Sv = "6+"
+
+[[units]]
+name = "Orc Shaman"
+type = "character"
+category = "Heroes"
+points = 65
+models = "1"
+tactical_role = "magic_support"
+threat_level = "medium"
+preferred_targets = ["enemy_units"]
+weaknesses = ["close_combat"]
+special_rules = ["Level 1 Wizard", "May upgrade to Level 2 (+35 pts)", "Da Big Waaagh!"]
+keywords = ["Character", "Infantry", "Orc", "Hero", "Wizard"]
+equipment = ["Hand weapon"]
+options = ["May take magic items up to 50 points"]
+
+[units.stats]
+M = 4
+WS = 3
+BS = 3
+S = 4
+T = 4
+W = 2
+I = 3
+A = 1
+Ld = 7
+Sv = "-"
+
+[[units]]
+name = "Goblin Big Boss"
+type = "character"
+category = "Heroes"
+points = 30
+models = "1"
+tactical_role = "cheap_support"
+threat_level = "low"
+preferred_targets = ["weak_targets"]
+weaknesses = ["combat"]
+special_rules = ["Animosity", "'Ere We Go!", "Backstabba"]
+keywords = ["Character", "Infantry", "Goblin", "Hero"]
+equipment = ["Hand weapon", "Light armor"]
+options = ["May carry Battle Standard (+25 pts)", "May take magic items up to 50 points", "May take Wolf or Spider mount"]
+
+[units.stats]
+M = 4
+WS = 4
+BS = 4
+S = 4
+T = 4
+W = 2
+I = 4
+A = 3
+Ld = 7
+Sv = "6+"
+
+[[units]]
+name = "Night Goblin Shaman"
+type = "character"
+category = "Heroes"
+points = 50
+models = "1"
+tactical_role = "magic_support"
+threat_level = "medium"
+preferred_targets = ["enemy_units"]
+weaknesses = ["close_combat"]
+special_rules = ["Level 1 Wizard", "May upgrade to Level 2 (+35 pts)", "Da Little Waaagh!", "Madcap Mushrooms"]
+keywords = ["Character", "Infantry", "Night Goblin", "Hero", "Wizard"]
+equipment = ["Hand weapon"]
+options = ["May take magic items up to 50 points"]
+
+[units.stats]
+M = 4
+WS = 2
+BS = 3
+S = 3
+T = 3
+W = 2
+I = 3
+A = 1
+Ld = 6
+Sv = "-"
+
+# =============================================================================
+# CORE UNITS
+# =============================================================================
+
+[[units]]
+name = "Orc Boyz"
+type = "infantry"
+category = "Core"
+points = 6
+models = "20-50"
+tactical_role = "line_infantry"
+threat_level = "medium"
+preferred_targets = ["light_infantry"]
+weaknesses = ["heavy_cavalry", "elite_infantry"]
+special_rules = ["Choppa", "Animosity", "'Ere We Go!"]
+keywords = ["Infantry", "Orc", "Core"]
+equipment = ["Choppa", "Light armor", "Shield"]
+options = ["May swap for two choppas (+1 pt/model)", "May add musician (+5 pts)", "May add standard bearer (+10 pts)", "May upgrade to Big 'Uns (+3 pts/model)"]
+
+[units.stats]
+M = 4
+WS = 3
+BS = 3
+S = 3
+T = 4
+W = 1
+I = 2
+A = 1
+Ld = 7
+Sv = "5+"
+
+[[units.weapons]]
+name = "Choppa"
+range = "Melee"
+strength = "User"
+ap = "0"
+damage = "1"
+abilities = ["+1 Strength on the turn you charge"]
+
+[[units]]
+name = "Orc Big 'Uns"
+type = "infantry"
+category = "Core"
+points = 9
+models = "20-40"
+tactical_role = "elite_infantry"
+threat_level = "high"
+preferred_targets = ["infantry"]
+weaknesses = ["cavalry", "shooting"]
+special_rules = ["Choppa", "Animosity", "'Ere We Go!"]
+keywords = ["Infantry", "Orc", "Core", "Big 'Un"]
+equipment = ["Choppa", "Light armor", "Shield"]
+options = ["May swap for two choppas (+1 pt/model)", "May add musician (+5 pts)", "May add standard bearer (+10 pts)"]
+
+[units.stats]
+M = 4
+WS = 4
+BS = 3
+S = 4
+T = 4
+W = 1
+I = 2
+A = 1
+Ld = 8
+Sv = "5+"
+
+[[units]]
+name = "Orc Arrer Boyz"
+type = "infantry"
+category = "Core"
+points = 6
+models = "10-30"
+tactical_role = "ranged_infantry"
+threat_level = "low"
+preferred_targets = ["light_targets"]
+weaknesses = ["everything"]
+special_rules = ["Choppa", "Animosity", "'Ere We Go!"]
+keywords = ["Infantry", "Orc", "Core"]
+equipment = ["Bow", "Choppa", "Light armor"]
+
+[units.stats]
+M = 4
+WS = 3
+BS = 3
+S = 3
+T = 4
+W = 1
+I = 2
+A = 1
+Ld = 7
+Sv = "6+"
+
+[[units]]
+name = "Goblins"
+type = "infantry"
+category = "Core"
+points = 3
+models = "20-60"
+tactical_role = "tarpit"
+threat_level = "low"
+preferred_targets = ["nothing"]
+weaknesses = ["everything"]
+special_rules = ["Animosity", "'Ere We Go!", "Backstabba"]
+keywords = ["Infantry", "Goblin", "Core"]
+equipment = ["Hand weapon", "Shield"]
+options = ["May take spears (+0.5 pt/model)", "May take bows (+1 pt/model)", "May add 3 Fanatics (+25 pts/fanatic)"]
+
+[units.stats]
+M = 4
+WS = 2
+BS = 3
+S = 3
+T = 3
+W = 1
+I = 2
+A = 1
+Ld = 6
+Sv = "6+"
+
+[[units]]
+name = "Night Goblins"
+type = "infantry"
+category = "Core"
+points = 3
+models = "20-60"
+tactical_role = "fanatic_carriers"
+threat_level = "medium"
+preferred_targets = ["variable"]
+weaknesses = ["combat"]
+special_rules = ["Animosity", "'Ere We Go!", "Hatred (Dwarfs)", "Netters"]
+keywords = ["Infantry", "Night Goblin", "Core"]
+equipment = ["Hand weapon", "Shield"]
+options = ["May take spears (+0.5 pt/model)", "May take short bows (+1 pt/model)", "May add 3 Fanatics (+25 pts/fanatic)"]
+
+[units.stats]
+M = 4
+WS = 2
+BS = 3
+S = 3
+T = 3
+W = 1
+I = 3
+A = 1
+Ld = 5
+Sv = "6+"
+
+[[units]]
+name = "Goblin Wolf Riders"
+type = "cavalry"
+category = "Core"
+points = 10
+models = "5-20"
+tactical_role = "fast_cavalry"
+threat_level = "low"
+preferred_targets = ["war_machines", "skirmishers"]
+weaknesses = ["cavalry", "infantry"]
+special_rules = ["Animosity", "'Ere We Go!", "Fast Cavalry"]
+keywords = ["Cavalry", "Goblin", "Core"]
+equipment = ["Spear", "Short bow", "Shield", "Giant Wolf"]
+options = ["May add musician (+5 pts)"]
+
+[units.stats]
+M = 4
+WS = 2
+BS = 3
+S = 3
+T = 3
+W = 1
+I = 2
+A = 1
+Ld = 6
+Sv = "5+"
+
+[units.mount]
+name = "Giant Wolf"
+M = 9
+WS = 3
+S = 3
+T = 3
+W = 1
+I = 3
+A = 1
+
+# =============================================================================
+# SPECIAL UNITS
+# =============================================================================
+
+[[units]]
+name = "Orc Boar Boyz"
+type = "cavalry"
+category = "Special"
+points = 22
+models = "5-15"
+tactical_role = "shock_cavalry"
+threat_level = "high"
+preferred_targets = ["infantry"]
+weaknesses = ["elite_cavalry"]
+special_rules = ["Choppa", "Animosity", "'Ere We Go!", "Tusker Charge"]
+keywords = ["Cavalry", "Orc", "Special"]
+equipment = ["Choppa", "Spear", "Light armor", "Shield", "War Boar"]
+options = ["May add musician (+5 pts)", "May add standard bearer (+10 pts)", "May upgrade to Big 'Uns (+3 pts/model)"]
+
+[units.stats]
+M = 4
+WS = 3
+BS = 3
+S = 3
+T = 4
+W = 1
+I = 2
+A = 1
+Ld = 7
+Sv = "4+"
+
+[units.mount]
+name = "War Boar"
+M = 7
+WS = 3
+S = 3
+T = 4
+W = 1
+I = 3
+A = 1
+
+[[units]]
+name = "Savage Orcs"
+type = "infantry"
+category = "Special"
+points = 8
+models = "20-40"
+tactical_role = "berserkers"
+threat_level = "high"
+preferred_targets = ["anything"]
+weaknesses = ["shooting"]
+special_rules = ["Frenzy", "'Ere We Go!", "Warpaint (6+ ward)"]
+keywords = ["Infantry", "Orc", "Savage Orc", "Special"]
+equipment = ["Two hand weapons"]
+options = ["May take big stabbas (+2 pts/model)", "May add musician (+5 pts)", "May add standard bearer (+10 pts)"]
+
+[units.stats]
+M = 4
+WS = 3
+BS = 3
+S = 3
+T = 4
+W = 1
+I = 2
+A = 1
+Ld = 7
+Sv = "6+"
+
+[[units]]
+name = "Black Orcs"
+type = "infantry"
+category = "Special"
+points = 12
+models = "10-30"
+tactical_role = "elite_infantry"
+threat_level = "very_high"
+preferred_targets = ["elite_infantry", "monsters"]
+weaknesses = ["shooting"]
+special_rules = ["Armed to da Teef", "'Ere We Go!", "Immune to Psychology"]
+keywords = ["Infantry", "Orc", "Black Orc", "Special"]
+equipment = ["Great weapon", "Heavy armor"]
+options = ["May take shields (+1 pt/model)", "May add musician (+5 pts)", "May add standard bearer (+10 pts)", "May take magic standard up to 75 pts"]
+
+[units.stats]
+M = 4
+WS = 4
+BS = 3
+S = 4
+T = 4
+W = 1
+I = 2
+A = 1
+Ld = 8
+Sv = "4+"
+
+[[units]]
+name = "Orc Boar Chariot"
+type = "chariot"
+category = "Special"
+points = 85
+models = "1"
+tactical_role = "shock"
+threat_level = "high"
+preferred_targets = ["infantry"]
+weaknesses = ["war_machines"]
+special_rules = ["Choppa", "'Ere We Go!", "Impact Hits (D6+1)"]
+keywords = ["Chariot", "Orc", "Special"]
+equipment = ["Choppas", "Light armor"]
+
+[units.stats]
+M = 7
+WS = 4
+BS = 3
+S = 4
+T = 5
+W = 4
+I = 2
+A = 2
+Ld = 7
+Sv = "4+"
+
+[[units]]
+name = "Squig Herd"
+type = "infantry"
+category = "Special"
+points = 6
+models = "10-30"
+tactical_role = "flankers"
+threat_level = "medium"
+preferred_targets = ["flanks"]
+weaknesses = ["leadership_bombs"]
+special_rules = ["Immune to Psychology", "Random Movement (2D6)", "Squig Attack"]
+keywords = ["Infantry", "Squig", "Night Goblin", "Special"]
+equipment = ["Teeth and claws"]
+
+[units.stats]
+M = "2D6"
+WS = 4
+BS = 0
+S = 5
+T = 3
+W = 1
+I = 3
+A = 2
+Ld = 5
+Sv = "-"
+
+[[units]]
+name = "Goblin Spear Chukka"
+type = "warmachine"
+category = "Special"
+points = 35
+models = "1 bolt thrower, 3 crew"
+tactical_role = "artillery"
+threat_level = "medium"
+preferred_targets = ["monsters", "cavalry"]
+weaknesses = ["accuracy"]
+special_rules = ["Move or Fire"]
+keywords = ["War Machine", "Goblin", "Special"]
+equipment = ["Hand weapons"]
+
+[units.stats]
+M = "-"
+WS = 2
+BS = 3
+S = 3
+T = 7
+W = 3
+I = 2
+A = "-"
+Ld = 6
+Sv = "-"
+
+[[units.weapons]]
+name = "Spear Chukka"
+range = "48\""
+strength = "6"
+ap = "2"
+damage = "D3"
+abilities = ["Multiple Wounds (D3)"]
+
+[[units]]
+name = "Trolls"
+type = "monstrous_infantry"
+category = "Special"
+points = 35
+models = "3-9"
+tactical_role = "monster"
+threat_level = "high"
+preferred_targets = ["infantry"]
+weaknesses = ["fire", "leadership"]
+special_rules = ["Regeneration (4+)", "Stupidity", "Vomit Attack"]
+keywords = ["Monstrous Infantry", "Troll", "Special"]
+equipment = ["Claws"]
+
+[units.stats]
+M = 6
+WS = 3
+BS = 1
+S = 5
+T = 4
+W = 3
+I = 1
+A = 3
+Ld = 4
+Sv = "-"
+
+[[units.weapons]]
+name = "Vomit"
+range = "Melee"
+strength = "5"
+ap = "2"
+damage = "1"
+abilities = ["Instead of normal attacks, D6 auto-hits no armor saves"]
+
+# =============================================================================
+# RARE UNITS
+# =============================================================================
+
+[[units]]
+name = "Arachnarok Spider"
+type = "monster"
+category = "Rare"
+points = 290
+models = "1"
+tactical_role = "monster"
+threat_level = "extreme"
+preferred_targets = ["anything"]
+weaknesses = ["war_machines"]
+special_rules = ["Terror", "Poisoned Attacks", "Wall Crawler"]
+keywords = ["Monster", "Spider", "Rare"]
+equipment = ["Fangs"]
+
+[units.stats]
+M = 7
+WS = 4
+BS = 0
+S = 5
+T = 6
+W = 8
+I = 4
+A = 8
+Ld = 6
+Sv = "4+"
+
+[[units]]
+name = "Giant"
+type = "monster"
+category = "Rare"
+points = 200
+models = "1"
+tactical_role = "monster"
+threat_level = "very_high"
+preferred_targets = ["everything"]
+weaknesses = ["war_machines", "shooting"]
+special_rules = ["Terror", "Fall Over", "Giant Special Attacks", "Stubborn"]
+keywords = ["Monster", "Giant", "Rare"]
+equipment = ["Club"]
+
+[units.stats]
+M = 6
+WS = 3
+BS = 3
+S = 6
+T = 5
+W = 6
+I = 3
+A = "Special"
+Ld = 10
+Sv = "-"
+
+[[units]]
+name = "Doom Diver Catapult"
+type = "warmachine"
+category = "Rare"
+points = 80
+models = "1 catapult, 3 crew, unlimited doom divers"
+tactical_role = "artillery"
+threat_level = "high"
+preferred_targets = ["characters", "war_machines"]
+weaknesses = ["close_combat"]
+special_rules = ["Move or Fire", "Guided Missile"]
+keywords = ["War Machine", "Goblin", "Rare"]
+equipment = ["Doom Diver"]
+
+[units.stats]
+M = "-"
+WS = 2
+BS = 3
+S = 3
+T = 7
+W = 3
+I = 2
+A = "-"
+Ld = 6
+Sv = "-"
+
+[[units.weapons]]
+name = "Doom Diver"
+range = "12-48\""
+strength = "5"
+ap = "2"
+damage = "1"
+abilities = ["Can redirect after firing", "Single wound only"]
+
+[[units]]
+name = "Rock Lobber"
+type = "warmachine"
+category = "Rare"
+points = 85
+models = "1 stone thrower, 5 crew"
+tactical_role = "artillery"
+threat_level = "high"
+preferred_targets = ["ranked_infantry"]
+weaknesses = ["accuracy"]
+special_rules = ["Move or Fire"]
+keywords = ["War Machine", "Orc", "Rare"]
+equipment = ["Hand weapons"]
+
+[units.stats]
+M = "-"
+WS = 3
+BS = 3
+S = 3
+T = 7
+W = 3
+I = 2
+A = "-"
+Ld = 7
+Sv = "-"
+
+[[units.weapons]]
+name = "Rock Lobber"
+range = "12-60\""
+strength = "4(9)"
+ap = "2(5)"
+damage = "1(D6)"
+abilities = ["Large Blast (5\")", "Direct hit S9 AP5 D6 wounds"]
+
+[[units]]
+name = "Mangler Squigs"
+type = "unique"
+category = "Rare"
+points = 65
+models = "1"
+tactical_role = "chaos"
+threat_level = "extreme"
+preferred_targets = ["anything in the way"]
+weaknesses = ["shooting"]
+special_rules = ["Random Movement (3D6)", "Impact Hits (2D6)", "Out of Control"]
+keywords = ["Unique", "Squig", "Rare"]
+equipment = ["Balls and chains"]
+
+[units.stats]
+M = "3D6"
+WS = 0
+BS = 0
+S = 6
+T = 4
+W = 4
+I = 0
+A = "2D6 impact"
+Ld = "-"
+Sv = "-"
+
+# =============================================================================
+# FACTION SPECIAL RULES
+# =============================================================================
+
+[[faction_rules]]
+name = "Animosity"
+description = "At the start of each Movement phase, units with Animosity must roll D6. On a 1, roll on Animosity table (may squabble, charge nearest enemy, or stand around arguing)"
+
+[[faction_rules]]
+name = "'Ere We Go!"
+description = "Greenskins can re-roll charge distance dice once per charge"
+
+[[faction_rules]]
+name = "Choppa"
+description = "Orcs fighting with choppas gain +1 Strength on the turn they charge"
+
+[[faction_rules]]
+name = "Size Matters"
+description = "Orc Warbosses and Big Bosses can Quell Animosity in friendly Greenskin units within 6 inches"
+
+[[faction_rules]]
+name = "Backstabba"
+description = "Goblins fighting enemies in the flank or rear gain +1 to hit"
+
+[[faction_rules]]
+name = "Da Big/Little Waaagh!"
+description = "Orc and Goblin specific lores of magic that become more powerful when cast near large Greenskin units"
+
+# =============================================================================
+# FACTION MAGIC ITEMS
+# =============================================================================
+
+[[faction_items]]
+name = "Battleaxe of the Last Waaagh"
+type = "magic_weapon"
+points = 100
+description = "+1 Strength for each successful unsaved wound. Stacks up to +6"
+restrictions = ["Orc Warboss only"]
+
+[[faction_items]]
+name = "Armour of Gork"
+type = "magic_armor"
+points = 50
+description = "4+ armor save. 5+ ward save. Any model that causes an unsaved wound on bearer takes a S6 hit"
+restrictions = ["Orc characters only"]
+
+[[faction_items]]
+name = "Lucky Shrunken Head"
+type = "talisman"
+points = 50
+description = "Unit has Magic Resistance (3) and 5+ ward save"
+restrictions = ["Savage Orc characters only"]
+
+[[faction_items]]
+name = "Banner of Butchery"
+type = "banner"
+points = 35
+description = "+1 Attack per model in first round of combat"
+restrictions = ["Orc unit standard bearer only"]
+
+[[faction_items]]
+name = "Spider Banner"
+type = "banner"
+points = 75
+description = "All models in unit have Poisoned Attacks"
+restrictions = ["Goblin unit standard bearer only"]

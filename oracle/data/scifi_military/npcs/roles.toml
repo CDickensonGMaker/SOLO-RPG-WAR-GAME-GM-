@@ -1,0 +1,105 @@
+# Sci-Fi Military Roles
+# Combat, support, command, and specialized positions
+
+[roles]
+entries = [
+  # Command Roles
+  { text = "Lord General", weight = 1 },
+  { text = "Fleet Admiral", weight = 1 },
+  { text = "Commissar", weight = 1 },
+  { text = "Political Officer", weight = 1 },
+  { text = "Company Commander", weight = 1 },
+  { text = "Platoon Leader", weight = 1 },
+  { text = "Squad Sergeant", weight = 1 },
+  { text = "Fire Team Leader", weight = 1 },
+  { text = "Operations Officer", weight = 1 },
+  { text = "Intelligence Officer", weight = 1 },
+
+  # Infantry Combat
+  { text = "Rifleman", weight = 1 },
+  { text = "Grenadier", weight = 1 },
+  { text = "Heavy Weapons Specialist", weight = 1 },
+  { text = "Designated Marksman", weight = 1 },
+  { text = "Sniper", weight = 1 },
+  { text = "Breacher", weight = 1 },
+  { text = "Point Man", weight = 1 },
+  { text = "Machine Gunner", weight = 1 },
+  { text = "Flamethrower Operator", weight = 1 },
+  { text = "Anti-Armor Specialist", weight = 1 },
+
+  # Special Operations
+  { text = "Orbital Drop Trooper", weight = 1 },
+  { text = "Void Infiltrator", weight = 1 },
+  { text = "Saboteur", weight = 1 },
+  { text = "Combat Assassin", weight = 1 },
+  { text = "Forward Observer", weight = 1 },
+  { text = "Pathfinder", weight = 1 },
+  { text = "Deep Strike Operative", weight = 1 },
+  { text = "Xenos Hunter", weight = 1 },
+  { text = "Bug Exterminator", weight = 1 },
+  { text = "Mutant Tracker", weight = 1 },
+
+  # Vehicle Crew
+  { text = "Dropship Pilot", weight = 1 },
+  { text = "Tank Commander", weight = 1 },
+  { text = "Gunship Pilot", weight = 1 },
+  { text = "APC Driver", weight = 1 },
+  { text = "Mech Pilot", weight = 1 },
+  { text = "Walker Operator", weight = 1 },
+  { text = "Shuttle Navigator", weight = 1 },
+  { text = "Fighter Pilot", weight = 1 },
+  { text = "Bomber Crew Chief", weight = 1 },
+  { text = "Artillery Operator", weight = 1 },
+
+  # Technical Specialists
+  { text = "Tech-Priest", weight = 1 },
+  { text = "Enginseer", weight = 1 },
+  { text = "Field Mechanic", weight = 1 },
+  { text = "Communications Officer", weight = 1 },
+  { text = "Signals Technician", weight = 1 },
+  { text = "Demolitions Expert", weight = 1 },
+  { text = "Combat Engineer", weight = 1 },
+  { text = "Electronic Warfare Specialist", weight = 1 },
+  { text = "Drone Controller", weight = 1 },
+  { text = "Weapons Technician", weight = 1 },
+
+  # Medical
+  { text = "Combat Medic", weight = 1 },
+  { text = "Field Surgeon", weight = 1 },
+  { text = "Medicae Orderly", weight = 1 },
+  { text = "Trauma Specialist", weight = 1 },
+  { text = "Cybernetics Technician", weight = 1 },
+  { text = "Pharmaceutical Officer", weight = 1 },
+  { text = "Xeno-Biologist", weight = 1 },
+  { text = "Gene-Therapist", weight = 1 },
+
+  # Support
+  { text = "Quartermaster", weight = 1 },
+  { text = "Supply Sergeant", weight = 1 },
+  { text = "Armorer", weight = 1 },
+  { text = "Cook", weight = 1 },
+  { text = "Chaplain", weight = 1 },
+  { text = "Morale Officer", weight = 1 },
+  { text = "Records Clerk", weight = 1 },
+  { text = "Logistics Coordinator", weight = 1 },
+
+  # Intelligence
+  { text = "Scout", weight = 1 },
+  { text = "Reconnaissance Specialist", weight = 1 },
+  { text = "Interrogator", weight = 1 },
+  { text = "Cryptographer", weight = 1 },
+  { text = "Xenos Analyst", weight = 1 },
+  { text = "Tactical Analyst", weight = 1 },
+  { text = "Counterintelligence Agent", weight = 1 },
+  { text = "Surveillance Operator", weight = 1 },
+
+  # Naval/Void
+  { text = "Void Ship Captain", weight = 1 },
+  { text = "Bridge Officer", weight = 1 },
+  { text = "Helmsman", weight = 1 },
+  { text = "Gunnery Officer", weight = 1 },
+  { text = "Torpedo Master", weight = 1 },
+  { text = "Shield Technician", weight = 1 },
+  { text = "Reactor Engineer", weight = 1 },
+  { text = "Boarding Party Leader", weight = 1 }
+]

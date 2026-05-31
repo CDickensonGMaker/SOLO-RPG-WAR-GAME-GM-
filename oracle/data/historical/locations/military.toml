@@ -1,0 +1,68 @@
+# Historical Military Locations
+# 50+ military camps, battlefields, and fortifications
+
+[locations]
+entries = [
+  # Field Camps and Bivouacs
+  { text = "A muddy field camp with tents arranged in regulation rows, smoke rising from cook fires", weight = 2 },
+  { text = "Forward command post in a requisitioned farmhouse, maps spread across a table", weight = 2 },
+  { text = "Artillery battery position on a ridge, guns pointed toward the horizon", weight = 2 },
+  { text = "Cavalry staging area where horses are picketed and troopers check their tack", weight = 2 },
+  { text = "Supply depot behind the lines, wagons and crates stacked in organized chaos", weight = 2 },
+  { text = "Field hospital in a church, pews pushed aside to make room for wounded", weight = 1 },
+  { text = "Hasty defensive position of freshly-dug trenches and earthworks", weight = 2 },
+  { text = "Winter camp with log huts and soldiers huddled around fires", weight = 2 },
+  { text = "Scout's observation post on high ground with a view of enemy movements", weight = 1 },
+  { text = "Engineers' workshop where siege equipment and bridges are constructed", weight = 1 },
+
+  # Fortifications
+  { text = "Star-shaped fortress with thick walls and covered gun positions", weight = 1 },
+  { text = "Medieval castle converted for modern warfare, cannons on the battlements", weight = 1 },
+  { text = "Coastal fortification guarding the approach to a harbor", weight = 1 },
+  { text = "Bunker complex dug into a hillside, connected by tunnels", weight = 1 },
+  { text = "Palisade and ditch protecting a frontier outpost", weight = 2 },
+  { text = "Watchtower overlooking a strategic crossroads", weight = 2 },
+  { text = "Defensive line of trenches, wire, and obstacles stretching to the horizon", weight = 1 },
+  { text = "Blockhouse at a river crossing, controlling traffic", weight = 2 },
+  { text = "Mountain redoubt accessible only by a narrow path", weight = 1 },
+  { text = "Walled compound serving as a garrison headquarters", weight = 2 },
+
+  # Battlefields and Combat Zones
+  { text = "Recent battlefield, bodies still being collected, the ground churned and scarred", weight = 1 },
+  { text = "Ruined village that changed hands multiple times, buildings reduced to rubble", weight = 1 },
+  { text = "Forest clearing where a fierce skirmish left broken trees and scattered equipment", weight = 2 },
+  { text = "River crossing where a desperate rearguard action bought time for retreat", weight = 1 },
+  { text = "Hill where control meant victory, now crowned with graves", weight = 1 },
+  { text = "Narrow pass where geography favored the defenders", weight = 2 },
+  { text = "Bridge that became the focal point of a bloody struggle", weight = 2 },
+  { text = "Open field where cavalry charges decided the day", weight = 2 },
+  { text = "Urban street fighting zone, buildings fortified and barricaded", weight = 1 },
+  { text = "Beach landing site, obstacles still visible at low tide", weight = 1 },
+
+  # Support and Logistics
+  { text = "Ammunition magazine, heavily guarded and strictly regulated", weight = 1 },
+  { text = "Military prison holding deserters and enemies alike", weight = 1 },
+  { text = "Training ground where new recruits learn the basics", weight = 2 },
+  { text = "Remount station where fresh horses are assigned to cavalry units", weight = 2 },
+  { text = "Armory where weapons are stored, repaired, and issued", weight = 2 },
+  { text = "Signal station for semaphore or telegraph communications", weight = 1 },
+  { text = "Officers' mess in a commandeered manor house", weight = 2 },
+  { text = "Enlisted barracks, crowded and poorly ventilated", weight = 2 },
+  { text = "Drill field where soldiers practice formations and maneuvers", weight = 2 },
+  { text = "Military cemetery, rows of markers in neat formation", weight = 1 },
+
+  # Naval Military
+  { text = "Naval battery on a cliff, guns able to sink any approaching ship", weight = 1 },
+  { text = "Marine barracks near the docks, ready for deployment", weight = 2 },
+  { text = "Naval yard where ships are built and repaired under military supervision", weight = 1 },
+  { text = "Admiralty office where fleet movements are planned", weight = 1 },
+  { text = "Coastal watchtower scanning for enemy sails", weight = 2 },
+
+  # Intelligence and Special Operations
+  { text = "Interrogation facility in a basement, soundproofed and isolated", weight = 1 },
+  { text = "Safe house in a quiet neighborhood, unremarkable from outside", weight = 1 },
+  { text = "Dead drop location known only to handlers and agents", weight = 1 },
+  { text = "Code room where encrypted messages are created and broken", weight = 1 },
+  { text = "Partisan camp hidden deep in the wilderness", weight = 1 },
+  { text = "Airfield used for covert insertions and extractions", weight = 1 }
+]

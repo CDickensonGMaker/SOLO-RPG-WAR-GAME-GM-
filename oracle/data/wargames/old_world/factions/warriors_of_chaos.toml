@@ -1,0 +1,767 @@
+# Warhammer: The Old World - Warriors of Chaos
+# The chosen of the Dark Gods, the ultimate warriors
+
+[faction]
+name = "Warriors of Chaos"
+description = "The mortal followers of the Chaos Gods, transformed by their dark blessings into the ultimate warriors. Every Warrior is an elite combatant wrapped in daemonic armor"
+playstyle = "Elite army of extremely powerful warriors. Small, expensive units that crush opposition in combat"
+strengths = ["Best infantry in the game", "Excellent armor", "Powerful characters", "Chaos Marks", "Devastating charges"]
+weaknesses = ["Very expensive points cost", "Few models", "Limited shooting", "No war machines", "Vulnerable to magic and ranged"]
+lore_notes = "Warriors of Chaos come from the frozen north, marked by the four Dark Gods: Khorne (blood), Tzeentch (magic), Nurgle (plague), and Slaanesh (pleasure)"
+
+# =============================================================================
+# LORDS
+# =============================================================================
+
+[[units]]
+name = "Chaos Lord"
+type = "character"
+category = "Lords"
+points = 180
+models = "1"
+tactical_role = "combat_commander"
+threat_level = "extreme"
+preferred_targets = ["enemy_characters", "monsters"]
+weaknesses = ["massed_attacks"]
+special_rules = ["Eye of the Gods"]
+keywords = ["Character", "Infantry", "Chaos", "Lord"]
+equipment = ["Hand weapon", "Chaos armor"]
+options = ["May take Mark of Chaos", "May take Chaos Steed, Daemonic Mount, Manticore, Chaos Dragon, Disc of Tzeentch, or Juggernaut", "May take magic items up to 100 points"]
+
+[units.stats]
+M = 4
+WS = 8
+BS = 5
+S = 5
+T = 5
+W = 3
+I = 7
+A = 5
+Ld = 9
+Sv = "4+"
+
+[[units]]
+name = "Sorcerer Lord"
+type = "character"
+category = "Lords"
+points = 235
+models = "1"
+tactical_role = "magic"
+threat_level = "very_high"
+preferred_targets = ["enemy_units"]
+weaknesses = ["assassins", "war_machines"]
+special_rules = ["Level 3 Wizard", "May upgrade to Level 4 (+35 pts)", "Eye of the Gods"]
+keywords = ["Character", "Infantry", "Chaos", "Lord", "Wizard"]
+equipment = ["Hand weapon", "Chaos armor"]
+options = ["May take Mark of Tzeentch, Nurgle, or Slaanesh", "May take mount", "May take arcane items up to 100 points"]
+
+[units.stats]
+M = 4
+WS = 5
+BS = 4
+S = 4
+T = 4
+W = 3
+I = 5
+A = 2
+Ld = 8
+Sv = "4+"
+
+[[units]]
+name = "Daemon Prince"
+type = "character"
+category = "Lords"
+points = 325
+models = "1"
+tactical_role = "monster"
+threat_level = "extreme"
+preferred_targets = ["anything"]
+weaknesses = ["massed_attacks", "war_machines"]
+special_rules = ["Daemon", "Terror", "Fly", "May be Wizard up to Level 4"]
+keywords = ["Character", "Monster", "Daemon", "Chaos", "Lord"]
+equipment = ["Daemon weapons"]
+options = ["May take Mark of Chaos", "May take magic items up to 100 points"]
+
+[units.stats]
+M = 8
+WS = 9
+BS = 5
+S = 6
+T = 5
+W = 4
+I = 8
+A = 5
+Ld = 9
+Sv = "5+"
+
+# =============================================================================
+# HEROES
+# =============================================================================
+
+[[units]]
+name = "Exalted Hero"
+type = "character"
+category = "Heroes"
+points = 100
+models = "1"
+tactical_role = "support_combat"
+threat_level = "high"
+preferred_targets = ["enemy_champions", "characters"]
+weaknesses = ["mass_attacks"]
+special_rules = ["Eye of the Gods"]
+keywords = ["Character", "Infantry", "Chaos", "Hero"]
+equipment = ["Hand weapon", "Chaos armor"]
+options = ["May carry Battle Standard (+25 pts)", "May take Mark of Chaos", "May take mount", "May take magic items up to 50 points"]
+
+[units.stats]
+M = 4
+WS = 7
+BS = 4
+S = 5
+T = 4
+W = 2
+I = 6
+A = 4
+Ld = 8
+Sv = "4+"
+
+[[units]]
+name = "Chaos Sorcerer"
+type = "character"
+category = "Heroes"
+points = 85
+models = "1"
+tactical_role = "magic_support"
+threat_level = "medium"
+preferred_targets = ["enemy_units"]
+weaknesses = ["close_combat"]
+special_rules = ["Level 1 Wizard", "May upgrade to Level 2 (+35 pts)", "Eye of the Gods"]
+keywords = ["Character", "Infantry", "Chaos", "Hero", "Wizard"]
+equipment = ["Hand weapon", "Chaos armor"]
+options = ["May take Mark of Tzeentch, Nurgle, or Slaanesh", "May take arcane items up to 50 points"]
+
+[units.stats]
+M = 4
+WS = 5
+BS = 4
+S = 4
+T = 4
+W = 2
+I = 5
+A = 2
+Ld = 8
+Sv = "4+"
+
+# =============================================================================
+# CORE UNITS
+# =============================================================================
+
+[[units]]
+name = "Chaos Warriors"
+type = "infantry"
+category = "Core"
+points = 14
+models = "12-24"
+tactical_role = "elite_anvil"
+threat_level = "very_high"
+preferred_targets = ["elite_infantry"]
+weaknesses = ["shooting", "magic"]
+special_rules = []
+keywords = ["Infantry", "Chaos", "Core", "Warrior"]
+equipment = ["Hand weapon", "Chaos armor", "Shield"]
+options = ["May swap for great weapons (+2 pts/model) or halberds (+2 pts/model) or additional hand weapon (+2 pts/model)", "May take Mark of Chaos", "May add musician (+10 pts)", "May add standard bearer (+10 pts)", "May take magic standard up to 50 pts"]
+
+[units.stats]
+M = 4
+WS = 5
+BS = 3
+S = 4
+T = 4
+W = 1
+I = 5
+A = 2
+Ld = 8
+Sv = "3+"
+
+[[units]]
+name = "Chaos Marauders"
+type = "infantry"
+category = "Core"
+points = 5
+models = "20-50"
+tactical_role = "horde"
+threat_level = "medium"
+preferred_targets = ["infantry"]
+weaknesses = ["cavalry", "elite_infantry"]
+special_rules = []
+keywords = ["Infantry", "Chaos", "Core", "Marauder"]
+equipment = ["Hand weapon"]
+options = ["May take shields (+0.5 pt/model)", "May take light armor (+0.5 pt/model)", "May take flails (+1 pt/model)", "May take great weapons (+2 pts/model)", "May take Mark of Chaos", "May add musician (+5 pts)", "May add standard bearer (+10 pts)"]
+
+[units.stats]
+M = 4
+WS = 4
+BS = 3
+S = 3
+T = 3
+W = 1
+I = 4
+A = 1
+Ld = 7
+Sv = "-"
+
+[[units]]
+name = "Marauder Horsemen"
+type = "cavalry"
+category = "Core"
+points = 14
+models = "5-20"
+tactical_role = "fast_cavalry"
+threat_level = "medium"
+preferred_targets = ["war_machines", "skirmishers", "flanks"]
+weaknesses = ["heavy_cavalry"]
+special_rules = ["Fast Cavalry", "Vanguard"]
+keywords = ["Cavalry", "Chaos", "Core", "Marauder"]
+equipment = ["Hand weapon", "Shield", "Throwing axes", "Warhorse"]
+options = ["May take flails (+1 pt/model)", "May swap for spears", "May take light armor (+1 pt/model)", "May take Mark of Chaos"]
+
+[units.stats]
+M = 4
+WS = 4
+BS = 3
+S = 3
+T = 3
+W = 1
+I = 4
+A = 1
+Ld = 7
+Sv = "6+"
+
+[units.mount]
+name = "Marauder Horse"
+M = 8
+WS = 3
+S = 3
+T = 3
+W = 1
+I = 3
+A = 1
+
+[[units]]
+name = "Chaos Warhounds"
+type = "warbeast"
+category = "Core"
+points = 6
+models = "5-20"
+tactical_role = "flankers"
+threat_level = "low"
+preferred_targets = ["flanks", "war_machines"]
+weaknesses = ["shooting", "combat"]
+special_rules = ["Vanguard"]
+keywords = ["War Beast", "Chaos", "Core"]
+equipment = ["Fangs"]
+options = ["May take scaly skin (6+ save, +1 pt/model)", "May take poisoned attacks (+1 pt/model)"]
+
+[units.stats]
+M = 7
+WS = 3
+BS = 0
+S = 3
+T = 3
+W = 1
+I = 3
+A = 1
+Ld = 5
+Sv = "-"
+
+# =============================================================================
+# SPECIAL UNITS
+# =============================================================================
+
+[[units]]
+name = "Chosen"
+type = "infantry"
+category = "Special"
+points = 18
+models = "12-24"
+tactical_role = "elite_infantry"
+threat_level = "extreme"
+preferred_targets = ["elite_infantry", "monsters"]
+weaknesses = ["shooting", "magic"]
+special_rules = ["Favour of the Gods"]
+keywords = ["Infantry", "Chaos", "Special", "Chosen"]
+equipment = ["Hand weapon", "Chaos armor", "Shield"]
+options = ["May swap for great weapons (+3 pts/model) or halberds (+3 pts/model)", "May take Mark of Chaos", "May add musician (+10 pts)", "May add standard bearer (+10 pts)", "May take magic standard up to 75 pts"]
+
+[units.stats]
+M = 4
+WS = 6
+BS = 3
+S = 4
+T = 4
+W = 1
+I = 5
+A = 2
+Ld = 9
+Sv = "3+"
+
+[[units]]
+name = "Chaos Knights"
+type = "cavalry"
+category = "Special"
+points = 40
+models = "5-12"
+tactical_role = "shock_cavalry"
+threat_level = "extreme"
+preferred_targets = ["anything"]
+weaknesses = ["pikes", "massed_shooting"]
+special_rules = ["Devastating Charge (+1S)", "Fear"]
+keywords = ["Cavalry", "Chaos", "Special", "Knight"]
+equipment = ["Lance", "Hand weapon", "Chaos armor", "Shield", "Barded Chaos Steed"]
+options = ["May swap lances for ensorcelled weapons (+1 pt/model)", "May take Mark of Chaos", "May add musician (+10 pts)", "May add standard bearer (+10 pts)", "May take magic standard up to 50 pts"]
+
+[units.stats]
+M = 4
+WS = 5
+BS = 3
+S = 4
+T = 4
+W = 1
+I = 5
+A = 2
+Ld = 8
+Sv = "1+"
+
+[units.mount]
+name = "Barded Chaos Steed"
+M = 8
+WS = 3
+S = 4
+T = 3
+W = 1
+I = 3
+A = 1
+
+[[units]]
+name = "Chaos Chariot"
+type = "chariot"
+category = "Special"
+points = 110
+models = "1"
+tactical_role = "shock"
+threat_level = "high"
+preferred_targets = ["infantry"]
+weaknesses = ["war_machines"]
+special_rules = ["Impact Hits (D6+1)", "Fear"]
+keywords = ["Chariot", "Chaos", "Special"]
+equipment = ["Great weapons", "Chaos armor"]
+options = ["May take Mark of Chaos"]
+
+[units.stats]
+M = 8
+WS = 5
+BS = 3
+S = 4
+T = 5
+W = 4
+I = 5
+A = 2
+Ld = 8
+Sv = "3+"
+
+[[units]]
+name = "Gorebeast Chariot"
+type = "chariot"
+category = "Special"
+points = 140
+models = "1"
+tactical_role = "heavy_shock"
+threat_level = "very_high"
+preferred_targets = ["infantry", "cavalry"]
+weaknesses = ["war_machines", "monsters"]
+special_rules = ["Impact Hits (D6+1)", "Terror", "Killing Blow (mount)"]
+keywords = ["Chariot", "Chaos", "Special"]
+equipment = ["Great weapons", "Chaos armor"]
+options = ["May take Mark of Chaos"]
+
+[units.stats]
+M = 7
+WS = 5
+BS = 3
+S = 4
+T = 6
+W = 5
+I = 5
+A = 2
+Ld = 8
+Sv = "3+"
+
+[[units]]
+name = "Chaos Ogres"
+type = "monstrous_infantry"
+category = "Special"
+points = 35
+models = "3-6"
+tactical_role = "monster"
+threat_level = "high"
+preferred_targets = ["infantry"]
+weaknesses = ["war_machines"]
+special_rules = ["Fear", "Impact Hits (1)"]
+keywords = ["Monstrous Infantry", "Chaos", "Ogre", "Special"]
+equipment = ["Great weapon", "Chaos armor"]
+options = ["May take Mark of Chaos"]
+
+[units.stats]
+M = 6
+WS = 3
+BS = 2
+S = 4
+T = 4
+W = 3
+I = 2
+A = 3
+Ld = 7
+Sv = "4+"
+
+[[units]]
+name = "Chaos Trolls"
+type = "monstrous_infantry"
+category = "Special"
+points = 45
+models = "3-6"
+tactical_role = "monster"
+threat_level = "high"
+preferred_targets = ["infantry"]
+weaknesses = ["fire", "leadership"]
+special_rules = ["Fear", "Regeneration (4+)", "Stupidity", "Vomit Attack"]
+keywords = ["Monstrous Infantry", "Chaos", "Troll", "Special"]
+equipment = ["Claws"]
+options = ["May take Mark of Chaos"]
+
+[units.stats]
+M = 6
+WS = 3
+BS = 1
+S = 5
+T = 4
+W = 3
+I = 1
+A = 3
+Ld = 4
+Sv = "-"
+
+[[units]]
+name = "Forsaken"
+type = "infantry"
+category = "Special"
+points = 18
+models = "5-20"
+tactical_role = "berserkers"
+threat_level = "high"
+preferred_targets = ["anything"]
+weaknesses = ["shooting"]
+special_rules = ["Frenzy", "Fear", "D3 Random Mutations"]
+keywords = ["Infantry", "Chaos", "Special", "Forsaken"]
+equipment = ["Mutated limbs (two hand weapons)"]
+options = ["May take Mark of Chaos"]
+
+[units.stats]
+M = 6
+WS = 4
+BS = 0
+S = 4
+T = 4
+W = 1
+I = 4
+A = "D3+1"
+Ld = 7
+Sv = "-"
+
+[[units]]
+name = "Dragon Ogres"
+type = "monstrous_infantry"
+category = "Special"
+points = 60
+models = "3-6"
+tactical_role = "monster"
+threat_level = "very_high"
+preferred_targets = ["cavalry", "monsters"]
+weaknesses = ["massed_shooting"]
+special_rules = ["Fear", "Immune to Lightning", "Scaly Skin (5+)"]
+keywords = ["Monstrous Infantry", "Dragon Ogre", "Special"]
+equipment = ["Great weapon"]
+
+[units.stats]
+M = 7
+WS = 4
+BS = 2
+S = 5
+T = 4
+W = 4
+I = 2
+A = 3
+Ld = 8
+Sv = "5+"
+
+# =============================================================================
+# RARE UNITS
+# =============================================================================
+
+[[units]]
+name = "Chaos Spawn"
+type = "monstrous_beast"
+category = "Rare"
+points = 50
+models = "1-5"
+tactical_role = "chaotic_assault"
+threat_level = "medium"
+preferred_targets = ["variable"]
+weaknesses = ["shooting", "combat_blocks"]
+special_rules = ["Random Movement (2D6)", "Random Attacks (D6+1)", "Fear", "Unbreakable"]
+keywords = ["Monstrous Beast", "Chaos", "Spawn", "Rare"]
+equipment = ["Tentacles"]
+
+[units.stats]
+M = "2D6"
+WS = 3
+BS = 0
+S = 4
+T = 5
+W = 3
+I = 2
+A = "D6+1"
+Ld = 10
+Sv = "-"
+
+[[units]]
+name = "Skullcrushers of Khorne"
+type = "monstrous_cavalry"
+category = "Rare"
+points = 75
+models = "3-6"
+tactical_role = "ultra_heavy_cavalry"
+threat_level = "extreme"
+preferred_targets = ["anything"]
+weaknesses = ["massed_shooting", "mass_poison"]
+special_rules = ["Fear", "Frenzy", "Magic Resistance (1)", "Devastating Charge (+1S)", "Brass Behemoth"]
+keywords = ["Monstrous Cavalry", "Chaos", "Khorne", "Rare"]
+equipment = ["Ensorcelled weapons", "Chaos armor", "Juggernaut"]
+
+[units.stats]
+M = 4
+WS = 5
+BS = 3
+S = 4
+T = 4
+W = 1
+I = 5
+A = 2
+Ld = 8
+Sv = "1+"
+
+[units.mount]
+name = "Juggernaut"
+M = 7
+WS = 4
+S = 5
+T = 5
+W = 3
+I = 2
+A = 3
+
+[[units]]
+name = "Chimera"
+type = "monster"
+category = "Rare"
+points = 275
+models = "1"
+tactical_role = "flying_monster"
+threat_level = "extreme"
+preferred_targets = ["anything"]
+weaknesses = ["war_machines"]
+special_rules = ["Fly", "Terror", "Three-headed", "Breath Weapon"]
+keywords = ["Monster", "Chaos", "Rare", "Fly"]
+equipment = ["Claws and fangs"]
+
+[units.stats]
+M = 6
+WS = 4
+BS = 0
+S = 6
+T = 5
+W = 6
+I = 3
+A = 6
+Ld = 6
+Sv = "5+"
+
+[[units]]
+name = "Manticore"
+type = "monster"
+category = "Rare"
+points = 150
+models = "1"
+tactical_role = "flying_monster"
+threat_level = "high"
+preferred_targets = ["characters", "war_machines"]
+weaknesses = ["war_machines", "shooting"]
+special_rules = ["Fly", "Terror", "Killing Blow"]
+keywords = ["Monster", "Chaos", "Rare", "Fly"]
+equipment = ["Claws and tail"]
+
+[units.stats]
+M = 6
+WS = 5
+BS = 0
+S = 5
+T = 5
+W = 4
+I = 5
+A = 4
+Ld = 5
+Sv = "-"
+
+[[units]]
+name = "Hellcannon"
+type = "warmachine"
+category = "Rare"
+points = 210
+models = "1 cannon, 3 crew"
+tactical_role = "artillery"
+threat_level = "extreme"
+preferred_targets = ["ranked_infantry", "monsters"]
+weaknesses = ["close_combat", "rampage"]
+special_rules = ["Terror", "Daemon (bound)", "Rampage"]
+keywords = ["War Machine", "Chaos", "Daemon", "Rare"]
+equipment = ["Warpfire"]
+
+[units.stats]
+M = 3
+WS = 4
+BS = 4
+S = 5
+T = 6
+W = 5
+I = 1
+A = 4
+Ld = 4
+Sv = "4+"
+
+[[units.weapons]]
+name = "Warpfire"
+range = "12-48\""
+strength = "5(10)"
+ap = "3(6)"
+damage = "1(D6)"
+abilities = ["Large Blast (5\")", "Direct hit S10 AP6 D6 wounds", "Causes Terror on unit hit"]
+
+# =============================================================================
+# MARKS OF CHAOS
+# =============================================================================
+
+[[faction_rules]]
+name = "Mark of Khorne"
+description = "Unit gains Frenzy and Magic Resistance (1). Cannot be taken by Wizards"
+points = "+2-3 pts/model"
+
+[[faction_rules]]
+name = "Mark of Tzeentch"
+description = "Unit gains +1 to ward saves (or 6+ if none). Wizards may re-roll one casting die"
+points = "+2-3 pts/model"
+
+[[faction_rules]]
+name = "Mark of Nurgle"
+description = "Enemy models have -1 to hit the unit in close combat"
+points = "+2-3 pts/model"
+
+[[faction_rules]]
+name = "Mark of Slaanesh"
+description = "Unit is Immune to Psychology. Always Strikes First in first round of combat"
+points = "+1-2 pts/model"
+
+# =============================================================================
+# FACTION SPECIAL RULES
+# =============================================================================
+
+[[faction_rules]]
+name = "Eye of the Gods"
+description = "When a character kills an enemy character or monster in a challenge, roll on the Eye of the Gods table. Results range from Spawn transformation to Daemonhood"
+
+[[faction_rules]]
+name = "Chaos Armor"
+description = "4+ armor save that cannot be combined with other armor (except shields)"
+
+[[faction_rules]]
+name = "Favour of the Gods"
+description = "Chosen units roll on the Eye of the Gods table at the start of the battle"
+
+[[faction_rules]]
+name = "Will of Chaos"
+description = "Chaos Warriors within 12\" of their General may use his Leadership. Battle Standard grants re-roll of Eye of the Gods rolls"
+
+# =============================================================================
+# FACTION MAGIC ITEMS
+# =============================================================================
+
+[[faction_items]]
+name = "Hellfire Sword"
+type = "magic_weapon"
+points = 75
+description = "Flaming Attacks. For each wound caused, roll D6: on 2+, target takes an additional wound (no saves). On 1, bearer takes a wound (no saves)"
+restrictions = ["Chaos characters only"]
+
+[[faction_items]]
+name = "Sword of Change"
+type = "magic_weapon"
+points = 50
+description = "For each unsaved wound caused by this weapon, roll D6. On 6, target is immediately transformed into a Chaos Spawn"
+restrictions = ["Chaos characters only"]
+
+[[faction_items]]
+name = "Helm of Many Eyes"
+type = "magic_armor"
+points = 30
+description = "+1 armor save. Bearer has Always Strikes First. Enemy models may re-roll failed to-hit rolls against bearer"
+restrictions = ["Chaos characters only"]
+
+[[faction_items]]
+name = "Armour of Damnation"
+type = "magic_armor"
+points = 40
+description = "Chaos armor. Enemies in base contact must re-roll successful to-hit rolls"
+restrictions = ["Chaos characters only"]
+
+[[faction_items]]
+name = "Bronze Armour of Zhrakk"
+type = "magic_armor"
+points = 40
+description = "Chaos armor. Enemy models suffer -1 Strength when attacking bearer"
+restrictions = ["Chaos characters only"]
+
+[[faction_items]]
+name = "Skull of Katam"
+type = "arcane"
+points = 25
+description = "Bearer knows one additional spell. +1 to casting rolls with Lore of Tzeentch"
+restrictions = ["Tzeentch Sorcerers only"]
+
+[[faction_items]]
+name = "Blasted Standard"
+type = "banner"
+points = 50
+description = "5+ ward save against shooting attacks for unit"
+restrictions = ["Chaos standard bearer only"]
+
+[[faction_items]]
+name = "Banner of Rage"
+type = "banner"
+points = 35
+description = "Unit has Frenzy that cannot be lost"
+restrictions = ["Chaos standard bearer only"]
+
+[[faction_items]]
+name = "Rapturous Standard"
+type = "banner"
+points = 25
+description = "Unit has Devastating Charge (+1 Attack)"
+restrictions = ["Slaanesh unit standard bearer only"]

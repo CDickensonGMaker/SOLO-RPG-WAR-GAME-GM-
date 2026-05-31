@@ -1,0 +1,416 @@
+# =============================================================================
+# DISCOVERIES.TOML - Universal Search and Exploration Results
+# =============================================================================
+# What players find when searching bodies, rooms, wilderness, and debris.
+# Weights determine relative frequency (higher = more common).
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# BODY SEARCH - What you find on corpses, unconscious, or prisoners
+# -----------------------------------------------------------------------------
+[body_search]
+entries = [
+  # Documents and correspondence
+  { text = "A crumpled letter with partially legible writing", weight = 3 },
+  { text = "A coded message in unfamiliar cipher", weight = 1 },
+  { text = "A map fragment showing part of unknown territory", weight = 2 },
+  { text = "Orders from a superior, revealing chain of command", weight = 1 },
+  { text = "A list of names, some crossed out", weight = 1 },
+  { text = "Travel papers with suspicious alterations", weight = 1 },
+  { text = "A journal with disturbing recent entries", weight = 1 },
+  { text = "A receipt or bill revealing their activities", weight = 2 },
+  { text = "A wanted poster - of them, or of you", weight = 1 },
+  { text = "Detailed notes on someone's movements", weight = 1 },
+
+  # Keys and access
+  { text = "A key to an unknown lock", weight = 2 },
+  { text = "A ring of keys, most unidentified", weight = 1 },
+  { text = "An access token or badge", weight = 1 },
+  { text = "A combination written on paper", weight = 1 },
+  { text = "A key that is warm to the touch", weight = 1 },
+  { text = "A broken key, snapped while used", weight = 1 },
+
+  # Personal effects
+  { text = "A locket containing a portrait", weight = 2 },
+  { text = "Evidence of a double life - two identities", weight = 1 },
+  { text = "A religious symbol, well-worn from use", weight = 2 },
+  { text = "A personal letter from a loved one", weight = 2 },
+  { text = "A lock of hair tied with ribbon", weight = 1 },
+  { text = "A child's drawing, carefully preserved", weight = 1 },
+  { text = "A wedding ring hidden in inner pocket", weight = 1 },
+  { text = "An old photograph, faces obscured by age", weight = 1 },
+
+  # Tools of trade
+  { text = "Lockpicks of professional quality", weight = 1 },
+  { text = "Poison vials, some empty, some full", weight = 1 },
+  { text = "A garrote hidden in belt", weight = 1 },
+  { text = "Forgery materials and blank documents", weight = 1 },
+  { text = "Disguise components", weight = 1 },
+  { text = "A well-used torture implement", weight = 1 },
+
+  # Valuables
+  { text = "More coin than their appearance suggests", weight = 2 },
+  { text = "Gems sewn into clothing lining", weight = 1 },
+  { text = "A valuable item clearly not theirs", weight = 1 },
+  { text = "Currency from a distant land", weight = 1 },
+  { text = "Payment for a job, half received", weight = 1 },
+
+  # Medical and sustenance
+  { text = "Healing supplies, partially used", weight = 2 },
+  { text = "Medication for a chronic condition", weight = 1 },
+  { text = "Emergency rations, untouched", weight = 2 },
+  { text = "A flask containing unknown liquid", weight = 1 },
+  { text = "Drugs or contraband", weight = 1 },
+
+  # Weapons and defense
+  { text = "A hidden blade strapped to forearm", weight = 1 },
+  { text = "A single-shot concealed weapon", weight = 1 },
+  { text = "Ammunition that doesn't match their weapon", weight = 1 },
+  { text = "A defensive charm or ward", weight = 1 },
+
+  # Strange and supernatural
+  { text = "An object that feels wrong to touch", weight = 1 },
+  { text = "Something that wasn't there a moment ago", weight = 1 },
+  { text = "A container that is heavier than possible", weight = 1 },
+  { text = "An item that matches something from your past", weight = 1 },
+  { text = "A mark or tattoo of unknown significance", weight = 1 },
+
+  # Intelligence value
+  { text = "A schedule of guard rotations", weight = 1 },
+  { text = "A sketch of a building's interior", weight = 1 },
+  { text = "Notes about vulnerabilities in defenses", weight = 1 },
+  { text = "A contact list with code names", weight = 1 },
+  { text = "Evidence of their employer's identity", weight = 1 },
+]
+
+# -----------------------------------------------------------------------------
+# ROOM SEARCH - Interior locations, buildings, dwellings
+# -----------------------------------------------------------------------------
+[room_search]
+entries = [
+  # Hidden spaces
+  { text = "A hidden compartment in the furniture", weight = 2 },
+  { text = "A loose floorboard concealing a space beneath", weight = 2 },
+  { text = "A false back to a wardrobe or cabinet", weight = 1 },
+  { text = "A hollow space behind the wall", weight = 1 },
+  { text = "A trapdoor under the rug", weight = 1 },
+  { text = "A secret drawer with false bottom", weight = 1 },
+  { text = "A hidden safe behind artwork", weight = 1 },
+  { text = "A concealed room behind bookshelf", weight = 1 },
+
+  # Signs of activity
+  { text = "Signs of a recent struggle", weight = 3 },
+  { text = "Blood that someone tried to clean up", weight = 2 },
+  { text = "Evidence of hasty departure", weight = 2 },
+  { text = "Things packed as if for flight", weight = 1 },
+  { text = "Furniture arranged to block entry", weight = 1 },
+  { text = "Signs of someone living here secretly", weight = 1 },
+  { text = "Evidence of regular secret meetings", weight = 1 },
+  { text = "Marks from something being dragged", weight = 1 },
+
+  # Documents and records
+  { text = "A diary with disturbing entries", weight = 2 },
+  { text = "Financial records revealing illegal dealings", weight = 1 },
+  { text = "Correspondence implicating others", weight = 1 },
+  { text = "A will, recently modified", weight = 1 },
+  { text = "Blackmail material against someone important", weight = 1 },
+  { text = "Research notes on forbidden subjects", weight = 1 },
+  { text = "Maps with locations marked", weight = 2 },
+  { text = "A list of targets or victims", weight = 1 },
+
+  # Escape and access
+  { text = "An escape route (window, tunnel, secret door)", weight = 2 },
+  { text = "A rope ladder hidden near window", weight = 1 },
+  { text = "Keys hidden in unexpected places", weight = 2 },
+  { text = "A passage to adjacent building", weight = 1 },
+  { text = "Evidence of regular entry through unusual means", weight = 1 },
+
+  # Clues and evidence
+  { text = "An item that doesn't belong here", weight = 2 },
+  { text = "Traces of a distinctive substance", weight = 1 },
+  { text = "A weapon that matches wounds you've seen", weight = 1 },
+  { text = "Clothing that doesn't fit any occupant", weight = 1 },
+  { text = "Food set for more people than live here", weight = 1 },
+  { text = "A bed that has been slept in recently, but no one's home", weight = 1 },
+  { text = "Personal effects of someone reported missing", weight = 1 },
+
+  # Valuables
+  { text = "Coin hidden in multiple small caches", weight = 2 },
+  { text = "Jewelry concealed in ordinary containers", weight = 1 },
+  { text = "Valuable items disguised as worthless", weight = 1 },
+  { text = "A collection of stolen goods", weight = 1 },
+  { text = "Art or antiques of unexpected value", weight = 1 },
+
+  # Traps and dangers
+  { text = "A trap set for intruders", weight = 1 },
+  { text = "Poison coating on handles or objects", weight = 1 },
+  { text = "A mechanism triggered by disturbance", weight = 1 },
+  { text = "Something that should not be disturbed", weight = 1 },
+
+  # Personal revelations
+  { text = "Evidence of addiction or vice", weight = 1 },
+  { text = "Proof of an affair", weight = 1 },
+  { text = "Hidden identity documents", weight = 1 },
+  { text = "A shrine to something forbidden", weight = 1 },
+  { text = "Letters revealing true feelings", weight = 1 },
+  { text = "A second set of books with real numbers", weight = 1 },
+]
+
+# -----------------------------------------------------------------------------
+# WILDERNESS SEARCH - Outdoor areas, forests, wastes, roads
+# -----------------------------------------------------------------------------
+[wilderness_search]
+entries = [
+  # Tracks and signs
+  { text = "Tracks leading in an unexpected direction", weight = 3 },
+  { text = "Signs of recent passage by a group", weight = 2 },
+  { text = "Trail markers deliberately obscured", weight = 1 },
+  { text = "Evidence of pursuit - two sets of tracks", weight = 1 },
+  { text = "Tracks that suddenly disappear", weight = 1 },
+  { text = "Animal tracks mixed with humanoid", weight = 1 },
+  { text = "Signs of something dragged along the ground", weight = 1 },
+  { text = "Fresh prints over old, same person returning", weight = 1 },
+
+  # Camps and shelters
+  { text = "An abandoned campsite", weight = 2 },
+  { text = "A hidden cache of supplies", weight = 2 },
+  { text = "A shelter concealed in the terrain", weight = 1 },
+  { text = "The remains of a camp struck in haste", weight = 1 },
+  { text = "A hunter's blind overlooking a path", weight = 1 },
+  { text = "Signs of long-term occupation", weight = 1 },
+  { text = "A camp with food still cooking, no one around", weight = 1 },
+
+  # Bodies and remains
+  { text = "Bones of something large", weight = 1 },
+  { text = "A shallow grave, disturbed", weight = 1 },
+  { text = "Human remains, old enough to be just bones", weight = 1 },
+  { text = "Evidence of a battle long past", weight = 1 },
+  { text = "A body hidden in undergrowth", weight = 1 },
+  { text = "Animal carcass with strange wounds", weight = 1 },
+
+  # Resources
+  { text = "A natural spring of clean water", weight = 2 },
+  { text = "Edible plants or mushrooms", weight = 2 },
+  { text = "Useful herbs for medicine", weight = 1 },
+  { text = "Materials for crafting or repair", weight = 1 },
+  { text = "Natural shelter from weather", weight = 1 },
+  { text = "A source of fuel", weight = 1 },
+
+  # Structures
+  { text = "Ruins overgrown and forgotten", weight = 2 },
+  { text = "A marker or boundary stone", weight = 1 },
+  { text = "An old road, barely visible", weight = 1 },
+  { text = "Foundation of a structure long gone", weight = 1 },
+  { text = "A wayshrine or traveler's blessing", weight = 1 },
+  { text = "Signs of mining or excavation", weight = 1 },
+  { text = "An entrance hidden by vegetation", weight = 1 },
+
+  # Hazards noted
+  { text = "Evidence of predators in the area", weight = 2 },
+  { text = "Signs of territory marking", weight = 1 },
+  { text = "Dangerous terrain ahead", weight = 2 },
+  { text = "A trap set for animals, or people", weight = 1 },
+  { text = "Warnings left by previous travelers", weight = 1 },
+  { text = "Signs of disease or contamination", weight = 1 },
+
+  # Dropped items
+  { text = "Equipment abandoned in flight", weight = 2 },
+  { text = "A pack torn open, contents scattered", weight = 1 },
+  { text = "Weapons left behind", weight = 1 },
+  { text = "A map dropped in haste", weight = 1 },
+  { text = "Personal effects strewn along path", weight = 1 },
+
+  # Strange phenomena
+  { text = "An area where animals won't go", weight = 1 },
+  { text = "Plants growing in impossible patterns", weight = 1 },
+  { text = "Sound behaving strangely here", weight = 1 },
+  { text = "A place where the temperature shifts suddenly", weight = 1 },
+  { text = "Signs of ritual activity", weight = 1 },
+]
+
+# -----------------------------------------------------------------------------
+# DEBRIS SEARCH - Rubble, wreckage, battlefields, ruins
+# -----------------------------------------------------------------------------
+[debris_search]
+entries = [
+  # Survivors and victims
+  { text = "A survivor trapped beneath", weight = 2 },
+  { text = "Someone playing dead", weight = 1 },
+  { text = "A wounded person, still alive", weight = 1 },
+  { text = "Someone hiding in the wreckage", weight = 1 },
+  { text = "A body that tells a story of the disaster", weight = 1 },
+
+  # Structural information
+  { text = "Evidence of what caused the destruction", weight = 2 },
+  { text = "Structural weakness that could collapse", weight = 2 },
+  { text = "A path through the debris", weight = 2 },
+  { text = "A stable space amid the wreckage", weight = 1 },
+  { text = "Signs of salvage already attempted", weight = 1 },
+  { text = "Points where the structure might be cleared", weight = 1 },
+
+  # Salvage
+  { text = "Something valuable overlooked by others", weight = 2 },
+  { text = "Supplies still intact in containers", weight = 2 },
+  { text = "Weapons or tools in usable condition", weight = 1 },
+  { text = "Materials worth recovering", weight = 2 },
+  { text = "Something protected by its container", weight = 1 },
+  { text = "Equipment that could be repaired", weight = 1 },
+
+  # Clues
+  { text = "Evidence of sabotage", weight = 1 },
+  { text = "Signs the destruction was intentional", weight = 1 },
+  { text = "The remains of whatever caused this", weight = 1 },
+  { text = "A trail leading away from the destruction", weight = 1 },
+  { text = "Something that was hidden before the collapse", weight = 1 },
+  { text = "Documents partially preserved", weight = 1 },
+
+  # Hazards
+  { text = "Unstable sections that could shift", weight = 2 },
+  { text = "Fire still smoldering beneath", weight = 1 },
+  { text = "Dangerous substances leaking", weight = 1 },
+  { text = "Sharp edges and impaling risks", weight = 2 },
+  { text = "Areas that could collapse if disturbed", weight = 1 },
+  { text = "Something that should not be released", weight = 1 },
+
+  # Personal effects
+  { text = "A child's toy, incongruously intact", weight = 1 },
+  { text = "Personal photographs scattered", weight = 1 },
+  { text = "Letters that tell of lives lost", weight = 1 },
+  { text = "A keepsake that identifies a victim", weight = 1 },
+  { text = "Signs of what life was like before", weight = 2 },
+]
+
+# -----------------------------------------------------------------------------
+# CONTAINER SEARCH - Chests, crates, barrels, storage
+# -----------------------------------------------------------------------------
+[container_search]
+entries = [
+  # Expected contents
+  { text = "Exactly what the container should hold", weight = 3 },
+  { text = "Supplies in good condition", weight = 2 },
+  { text = "Trade goods of moderate value", weight = 2 },
+  { text = "Tools and equipment for the location", weight = 2 },
+  { text = "Preserved food and drink", weight = 2 },
+
+  # Hidden extras
+  { text = "A false bottom with something beneath", weight = 1 },
+  { text = "Something smuggled among legitimate goods", weight = 1 },
+  { text = "Valuables hidden in ordinary containers", weight = 1 },
+  { text = "A message concealed in the packing", weight = 1 },
+  { text = "Something that doesn't match the manifest", weight = 1 },
+
+  # Problems
+  { text = "Contents spoiled or contaminated", weight = 2 },
+  { text = "Infested with vermin", weight = 1 },
+  { text = "A trap triggered by opening", weight = 1 },
+  { text = "Contents already looted", weight = 2 },
+  { text = "Something dangerous improperly stored", weight = 1 },
+
+  # Unusual
+  { text = "Contents valuable to specific buyers only", weight = 1 },
+  { text = "Items clearly stolen from somewhere", weight = 1 },
+  { text = "Something illegal or forbidden", weight = 1 },
+  { text = "Personal effects that shouldn't be here", weight = 1 },
+  { text = "A creature, alive or recently dead", weight = 1 },
+]
+
+# -----------------------------------------------------------------------------
+# VEHICLE SEARCH - Wagons, ships, transports
+# -----------------------------------------------------------------------------
+[vehicle_search]
+entries = [
+  # Cargo
+  { text = "Standard cargo matching manifest", weight = 3 },
+  { text = "Hidden compartments in the structure", weight = 1 },
+  { text = "Smuggled goods among legitimate cargo", weight = 1 },
+  { text = "A stowaway, living or dead", weight = 1 },
+  { text = "Evidence of what was recently transported", weight = 2 },
+
+  # Personal spaces
+  { text = "Personal effects of crew or passengers", weight = 2 },
+  { text = "A journal detailing recent journeys", weight = 1 },
+  { text = "Private correspondence", weight = 1 },
+  { text = "Contraband belonging to crew", weight = 1 },
+  { text = "Evidence of crew's true activities", weight = 1 },
+
+  # Navigation
+  { text = "Maps with routes marked", weight = 2 },
+  { text = "Logs detailing previous destinations", weight = 1 },
+  { text = "Notes about contacts at ports", weight = 1 },
+  { text = "Evidence of where they were really going", weight = 1 },
+
+  # Condition
+  { text = "Signs of recent repair or modification", weight = 1 },
+  { text = "Hidden damage that could cause problems", weight = 1 },
+  { text = "Evidence of recent combat or pursuit", weight = 1 },
+  { text = "Modifications for illegal purposes", weight = 1 },
+
+  # Valuables
+  { text = "Emergency funds hidden by crew", weight = 1 },
+  { text = "High-value cargo undocumented", weight = 1 },
+  { text = "Personal treasures of owner", weight = 1 },
+  { text = "Evidence worth more than cargo", weight = 1 },
+]
+
+# -----------------------------------------------------------------------------
+# LIBRARY SEARCH - Books, archives, records
+# -----------------------------------------------------------------------------
+[library_search]
+entries = [
+  # Useful information
+  { text = "A book with exactly the information needed", weight = 2 },
+  { text = "Historical records revealing context", weight = 2 },
+  { text = "Maps or charts of useful areas", weight = 1 },
+  { text = "Technical manuals or instructions", weight = 1 },
+  { text = "Genealogies with relevant names", weight = 1 },
+
+  # Hidden knowledge
+  { text = "A book misfiled, hiding in plain sight", weight = 1 },
+  { text = "Notes written in margins", weight = 2 },
+  { text = "A book that's been hollowed out", weight = 1 },
+  { text = "Forbidden texts hidden among ordinary", weight = 1 },
+  { text = "Records someone tried to destroy", weight = 1 },
+
+  # Personal items
+  { text = "Letters used as bookmarks", weight = 1 },
+  { text = "A researcher's personal notes", weight = 2 },
+  { text = "Someone's private journal misfiled", weight = 1 },
+  { text = "Evidence of what someone was researching", weight = 1 },
+
+  # Condition issues
+  { text = "Pages deliberately removed", weight = 1 },
+  { text = "Passages censored or obscured", weight = 1 },
+  { text = "Forgeries mixed with genuine records", weight = 1 },
+  { text = "Records that contradict official history", weight = 1 },
+]
+
+# -----------------------------------------------------------------------------
+# GRAVE SEARCH - Tombs, burial sites, catacombs
+# -----------------------------------------------------------------------------
+[grave_search]
+entries = [
+  # Expected
+  { text = "Remains in expected state", weight = 3 },
+  { text = "Grave goods appropriate to the buried", weight = 2 },
+  { text = "Markers identifying the interred", weight = 2 },
+
+  # Valuable
+  { text = "Jewelry still on the remains", weight = 1 },
+  { text = "Valuable grave goods", weight = 1 },
+  { text = "Items of historical significance", weight = 1 },
+  { text = "Something the buried wanted hidden forever", weight = 1 },
+
+  # Wrong
+  { text = "Wrong body for this grave", weight = 1 },
+  { text = "No body at all", weight = 1 },
+  { text = "Multiple bodies, unexpected", weight = 1 },
+  { text = "Body in wrong position or condition", weight = 1 },
+  { text = "Signs of grave robbery, old", weight = 1 },
+
+  # Disturbing
+  { text = "Evidence of how they really died", weight = 1 },
+  { text = "Items that shouldn't be buried with anyone", weight = 1 },
+  { text = "Signs they weren't dead when buried", weight = 1 },
+  { text = "Remains that have been disturbed since burial", weight = 1 },
+  { text = "Something that should not be removed", weight = 1 },
+]

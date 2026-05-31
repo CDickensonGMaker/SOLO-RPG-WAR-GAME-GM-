@@ -1,0 +1,77 @@
+# Cyberpunk Combat Encounters
+# Violence in the neon-lit streets
+
+[encounters]
+entries = [
+  # Gang encounters
+  { text = "Boostergang ambush - chrome-heavy thugs emerge from alleys, demanding tribute", weight = 3 },
+  { text = "Territory dispute - two gangs fighting, you're caught in the crossfire", weight = 2 },
+  { text = "Gang initiation - young bloods proving themselves, you're the target", weight = 2 },
+  { text = "Drive-by in progress - vehicle-mounted weapons, civilian chaos", weight = 2 },
+  { text = "Protection racket enforcement - gang collecting, business resisting", weight = 2 },
+  { text = "Drug deal gone bad - bodies dropping, product up for grabs", weight = 2 },
+  { text = "Gang retaliation - they found out who did the last job", weight = 2 },
+  { text = "Turf takeover attempt - overwhelming force pushing through", weight = 1 },
+  { text = "Honor duel challenge - gang champion demands one-on-one", weight = 1 },
+  { text = "Boostergang road rage - someone cut them off, violence follows", weight = 2 },
+
+  # Corporate security
+  { text = "Corporate extraction team - pros in tactical gear, designated target", weight = 2 },
+  { text = "Building security alert - guards converging, lockdown initiating", weight = 2 },
+  { text = "Executive protection detail - bodyguards treating threats seriously", weight = 2 },
+  { text = "Corporate strike force - military-grade response to your presence", weight = 1 },
+  { text = "Asset recovery team - they want something back, willing to kill", weight = 2 },
+  { text = "Industrial sabotage counterforce - caught in the act, armed response", weight = 2 },
+  { text = "Secure transport intercept - armored vehicle, trained escorts", weight = 1 },
+  { text = "Corporate assassins - quiet professionals here for termination", weight = 1 },
+  { text = "Security drone swarm - autonomous weapons, coordinated attack", weight = 2 },
+  { text = "Private military contractors - hired guns with military discipline", weight = 2 },
+
+  # Law enforcement
+  { text = "NCPD patrol response - badges and bullets, legal consequences", weight = 2 },
+  { text = "MaxTac cyberpsycho response - heavy weapons, no restraint", weight = 1 },
+  { text = "Undercover bust - cops revealing themselves, trap sprung", weight = 2 },
+  { text = "Warrant execution - SWAT-equivalent breaching entry", weight = 1 },
+  { text = "Corrupt cops - badges for sale, working for someone else", weight = 2 },
+  { text = "Checkpoint enforcement - ID check escalating to violence", weight = 2 },
+  { text = "Police pursuit - vehicles in chase, weapons hot", weight = 2 },
+  { text = "Sting operation blown - all parties reaching for weapons", weight = 2 },
+  { text = "Riot response - crowd control turning lethal", weight = 1 },
+  { text = "Evidence disposal team - cleanup crew, no witnesses", weight = 1 },
+
+  # Mercenary and freelance
+  { text = "Rival runner crew - same target, competing violently", weight = 2 },
+  { text = "Bounty hunter attack - you're worth something dead", weight = 2 },
+  { text = "Solo assassin - professional killer, personal contract", weight = 2 },
+  { text = "Merc team ambush - prepared position, overwhelming fire", weight = 1 },
+  { text = "Freelance extraction - someone hired muscle to grab you", weight = 2 },
+  { text = "Double-cross firefight - the deal was always a trap", weight = 2 },
+  { text = "Turf enforcement - someone's protecting this area", weight = 2 },
+  { text = "Revenge attack - past job coming back violently", weight = 2 },
+  { text = "Competition elimination - your success threatens theirs", weight = 2 },
+  { text = "Mistaken identity attack - they think you're someone else", weight = 2 },
+
+  # Environmental and situational
+  { text = "Cyberpsycho rampage - augmented human losing control, massive damage", weight = 1 },
+  { text = "Vehicle combat - highway firefight, high speeds, explosions", weight = 2 },
+  { text = "Hostage situation - human shields, impossible angles", weight = 2 },
+  { text = "Sniper overwatch - long-range threat, pinned position", weight = 2 },
+  { text = "Explosive breach - walls coming down, enemies pouring through", weight = 2 },
+  { text = "Panic room standoff - target sealed in, defenders outside", weight = 1 },
+  { text = "Running firefight - combat through multiple zones, no cover", weight = 2 },
+  { text = "Vertical assault - combat across building levels, gravity threats", weight = 1 },
+  { text = "Close quarters chaos - point-blank range, instant decisions", weight = 2 },
+  { text = "Weapons jam situation - equipment failure at the worst moment", weight = 2 },
+
+  # Special threats
+  { text = "Full-borg assault - military conversion, walking tank", weight = 1 },
+  { text = "Drone strike - remote weapons platform, unseen operator", weight = 2 },
+  { text = "Cybernetic beast - guard animal with combat augmentation", weight = 1 },
+  { text = "Combat exoskeleton operator - heavy armor, heavy weapons", weight = 1 },
+  { text = "Stealth combatant - thermoptic camo, appearing from nowhere", weight = 1 },
+  { text = "Mono-wire assassin - near-invisible deadly reach", weight = 1 },
+  { text = "Reflex booster duel - faster-than-human combat speeds", weight = 1 },
+  { text = "Net-linked combat team - perfect coordination through shared targeting", weight = 1 },
+  { text = "Trauma Team armed response - medics with military training", weight = 1 },
+  { text = "AV assault - airborne vehicle attack, exposed position", weight = 1 },
+]

@@ -1,0 +1,710 @@
+# Warhammer: The Old World - Beastmen
+# The Children of Chaos, the beasts that walk as men
+
+[faction]
+name = "Beastmen"
+description = "The twisted offspring of Chaos, beasts that walk as men. They infest the wild places of the world, emerging to despoil civilization in the name of the Dark Gods"
+playstyle = "Aggressive ambush army. Fast, hard-hitting units that strike from the shadows"
+strengths = ["Ambush deployment", "Fast infantry", "Hard-hitting charges", "Primal Fury", "Minotaurs and monsters"]
+weaknesses = ["Low Leadership", "Poor armor", "Limited ranged options", "Fragile against sustained combat"]
+lore_notes = "Beastmen are Chaos-twisted creatures born when Chaos energy warps humans or animals. They worship the Dark Gods and seek to tear down the works of civilization"
+
+# =============================================================================
+# LORDS
+# =============================================================================
+
+[[units]]
+name = "Beastlord"
+type = "character"
+category = "Lords"
+points = 130
+models = "1"
+tactical_role = "combat_commander"
+threat_level = "very_high"
+preferred_targets = ["enemy_characters", "infantry"]
+weaknesses = ["massed_attacks"]
+special_rules = ["Primal Fury", "Beastman Ambush"]
+keywords = ["Character", "Infantry", "Beastman", "Lord"]
+equipment = ["Hand weapon"]
+options = ["May take Razorgor Chariot (+110 pts)", "May take Tuskgor Chariot (+80 pts)", "May take magic items up to 100 points"]
+
+[units.stats]
+M = 5
+WS = 7
+BS = 4
+S = 5
+T = 5
+W = 3
+I = 6
+A = 5
+Ld = 9
+Sv = "-"
+
+[[units]]
+name = "Great Bray-Shaman"
+type = "character"
+category = "Lords"
+points = 200
+models = "1"
+tactical_role = "magic"
+threat_level = "very_high"
+preferred_targets = ["enemy_units"]
+weaknesses = ["close_combat", "snipers"]
+special_rules = ["Level 3 Wizard", "May upgrade to Level 4 (+35 pts)", "Primal Fury", "Beastman Ambush"]
+keywords = ["Character", "Infantry", "Beastman", "Lord", "Wizard"]
+equipment = ["Hand weapon"]
+options = ["May take Lore of Beasts, Shadow, Death, or Wild", "May take magic items up to 100 points"]
+
+[units.stats]
+M = 5
+WS = 4
+BS = 3
+S = 4
+T = 5
+W = 3
+I = 5
+A = 2
+Ld = 8
+Sv = "-"
+
+[[units]]
+name = "Doombull"
+type = "character"
+category = "Lords"
+points = 225
+models = "1"
+tactical_role = "monster_lord"
+threat_level = "extreme"
+preferred_targets = ["anything"]
+weaknesses = ["mass_shooting"]
+special_rules = ["Fear", "Bloodgreed", "Devastating Charge (+1S, +1A)"]
+keywords = ["Character", "Monstrous Infantry", "Minotaur", "Lord"]
+equipment = ["Great weapon"]
+options = ["May take magic items up to 100 points"]
+
+[units.stats]
+M = 6
+WS = 6
+BS = 3
+S = 6
+T = 5
+W = 4
+I = 5
+A = 5
+Ld = 8
+Sv = "-"
+
+# =============================================================================
+# HEROES
+# =============================================================================
+
+[[units]]
+name = "Wargor"
+type = "character"
+category = "Heroes"
+points = 65
+models = "1"
+tactical_role = "support_commander"
+threat_level = "high"
+preferred_targets = ["enemy_champions"]
+weaknesses = ["powerful_characters"]
+special_rules = ["Primal Fury", "Beastman Ambush"]
+keywords = ["Character", "Infantry", "Beastman", "Hero"]
+equipment = ["Hand weapon"]
+options = ["May carry Battle Standard (+25 pts)", "May take Tuskgor Chariot (+80 pts)", "May take magic items up to 50 points"]
+
+[units.stats]
+M = 5
+WS = 6
+BS = 4
+S = 4
+T = 4
+W = 2
+I = 5
+A = 4
+Ld = 8
+Sv = "-"
+
+[[units]]
+name = "Bray-Shaman"
+type = "character"
+category = "Heroes"
+points = 70
+models = "1"
+tactical_role = "magic_support"
+threat_level = "medium"
+preferred_targets = ["enemy_units"]
+weaknesses = ["close_combat"]
+special_rules = ["Level 1 Wizard", "May upgrade to Level 2 (+35 pts)", "Primal Fury"]
+keywords = ["Character", "Infantry", "Beastman", "Hero", "Wizard"]
+equipment = ["Hand weapon"]
+options = ["May take Lore of Beasts, Shadow, Death, or Wild", "May take arcane items up to 50 points"]
+
+[units.stats]
+M = 5
+WS = 3
+BS = 3
+S = 4
+T = 4
+W = 2
+I = 4
+A = 1
+Ld = 7
+Sv = "-"
+
+[[units]]
+name = "Gorebull"
+type = "character"
+category = "Heroes"
+points = 130
+models = "1"
+tactical_role = "monster_hero"
+threat_level = "high"
+preferred_targets = ["infantry", "cavalry"]
+weaknesses = ["mass_attacks"]
+special_rules = ["Fear", "Bloodgreed", "Devastating Charge (+1S, +1A)"]
+keywords = ["Character", "Monstrous Infantry", "Minotaur", "Hero"]
+equipment = ["Great weapon"]
+options = ["May take magic items up to 50 points"]
+
+[units.stats]
+M = 6
+WS = 5
+BS = 3
+S = 5
+T = 5
+W = 3
+I = 4
+A = 4
+Ld = 8
+Sv = "-"
+
+# =============================================================================
+# CORE UNITS
+# =============================================================================
+
+[[units]]
+name = "Gor Herd"
+type = "infantry"
+category = "Core"
+points = 7
+models = "10-40"
+tactical_role = "line_infantry"
+threat_level = "medium"
+preferred_targets = ["infantry"]
+weaknesses = ["cavalry", "elite_infantry"]
+special_rules = ["Primal Fury", "Beastman Ambush"]
+keywords = ["Infantry", "Beastman", "Core"]
+equipment = ["Two hand weapons or hand weapon and shield"]
+options = ["May add musician (+5 pts)", "May add standard bearer (+10 pts)", "May take Foe-render upgrade (+10 pts)"]
+
+[units.stats]
+M = 5
+WS = 4
+BS = 3
+S = 3
+T = 4
+W = 1
+I = 3
+A = 1
+Ld = 7
+Sv = "6+"
+
+[[units]]
+name = "Ungor Herd"
+type = "infantry"
+category = "Core"
+points = 4
+models = "10-50"
+tactical_role = "expendable"
+threat_level = "low"
+preferred_targets = ["nothing"]
+weaknesses = ["everything"]
+special_rules = ["Primal Fury", "Beastman Ambush"]
+keywords = ["Infantry", "Beastman", "Core"]
+equipment = ["Hand weapon", "Shield"]
+options = ["May swap for spears (+0.5 pt/model)", "May add musician (+5 pts)", "May add standard bearer (+10 pts)"]
+
+[units.stats]
+M = 5
+WS = 3
+BS = 3
+S = 3
+T = 3
+W = 1
+I = 3
+A = 1
+Ld = 6
+Sv = "6+"
+
+[[units]]
+name = "Ungor Raiders"
+type = "infantry"
+category = "Core"
+points = 5
+models = "10-30"
+tactical_role = "skirmishers"
+threat_level = "low"
+preferred_targets = ["light_targets"]
+weaknesses = ["close_combat"]
+special_rules = ["Primal Fury", "Skirmishers", "Scouts"]
+keywords = ["Infantry", "Beastman", "Core"]
+equipment = ["Short bow", "Hand weapon"]
+
+[units.stats]
+M = 5
+WS = 3
+BS = 3
+S = 3
+T = 3
+W = 1
+I = 3
+A = 1
+Ld = 5
+Sv = "-"
+
+[[units]]
+name = "Tuskgor Chariot"
+type = "chariot"
+category = "Core"
+points = 80
+models = "1"
+tactical_role = "shock"
+threat_level = "high"
+preferred_targets = ["infantry"]
+weaknesses = ["war_machines"]
+special_rules = ["Primal Fury", "Impact Hits (D6)"]
+keywords = ["Chariot", "Beastman", "Core"]
+equipment = ["Spears"]
+
+[units.stats]
+M = 7
+WS = 4
+BS = 3
+S = 4
+T = 4
+W = 4
+I = 3
+A = 2
+Ld = 7
+Sv = "5+"
+
+[[units]]
+name = "Chaos Warhounds"
+type = "warbeast"
+category = "Core"
+points = 6
+models = "5-20"
+tactical_role = "flankers"
+threat_level = "low"
+preferred_targets = ["flanks", "war_machines"]
+weaknesses = ["shooting", "combat"]
+special_rules = ["Vanguard"]
+keywords = ["War Beast", "Chaos", "Core"]
+equipment = ["Fangs"]
+options = ["May take scaly skin (6+ save, +1 pt/model)", "May take poisoned attacks (+1 pt/model)"]
+
+[units.stats]
+M = 7
+WS = 3
+BS = 0
+S = 3
+T = 3
+W = 1
+I = 3
+A = 1
+Ld = 5
+Sv = "-"
+
+# =============================================================================
+# SPECIAL UNITS
+# =============================================================================
+
+[[units]]
+name = "Bestigors"
+type = "infantry"
+category = "Special"
+points = 12
+models = "10-30"
+tactical_role = "elite_infantry"
+threat_level = "very_high"
+preferred_targets = ["heavy_infantry"]
+weaknesses = ["shooting"]
+special_rules = ["Primal Fury", "Beastman Ambush", "Despoilers"]
+keywords = ["Infantry", "Beastman", "Special"]
+equipment = ["Great weapon", "Heavy armor"]
+options = ["May add musician (+10 pts)", "May add standard bearer (+10 pts)", "May take magic standard up to 75 pts"]
+
+[units.stats]
+M = 5
+WS = 4
+BS = 3
+S = 4
+T = 4
+W = 1
+I = 3
+A = 2
+Ld = 8
+Sv = "4+"
+
+[[units]]
+name = "Minotaurs"
+type = "monstrous_infantry"
+category = "Special"
+points = 55
+models = "3-6"
+tactical_role = "monster"
+threat_level = "very_high"
+preferred_targets = ["infantry", "cavalry"]
+weaknesses = ["mass_shooting"]
+special_rules = ["Fear", "Bloodgreed", "Devastating Charge (+1S, +1A)"]
+keywords = ["Monstrous Infantry", "Minotaur", "Special"]
+equipment = ["Great weapon"]
+options = ["May swap for additional hand weapons", "May add musician (+10 pts)", "May add standard bearer (+10 pts)"]
+
+[units.stats]
+M = 6
+WS = 4
+BS = 3
+S = 5
+T = 4
+W = 3
+I = 3
+A = 3
+Ld = 7
+Sv = "-"
+
+[[units]]
+name = "Centigors"
+type = "cavalry"
+category = "Special"
+points = 18
+models = "5-10"
+tactical_role = "fast_cavalry"
+threat_level = "medium"
+preferred_targets = ["flanks", "war_machines"]
+weaknesses = ["heavy_cavalry"]
+special_rules = ["Primal Fury", "Fast Cavalry", "Drunken"]
+keywords = ["Cavalry", "Beastman", "Special"]
+equipment = ["Hand weapon", "Spear", "Throwing axes", "Shield"]
+options = ["May swap for great weapons (+2 pts/model)"]
+
+[units.stats]
+M = 8
+WS = 4
+BS = 3
+S = 4
+T = 4
+W = 1
+I = 3
+A = 2
+Ld = 7
+Sv = "5+"
+
+[[units]]
+name = "Harpies"
+type = "infantry"
+category = "Special"
+points = 11
+models = "5-10"
+tactical_role = "war_machine_hunters"
+threat_level = "medium"
+preferred_targets = ["war_machines", "wizards"]
+weaknesses = ["shooting"]
+special_rules = ["Fly"]
+keywords = ["Infantry", "Beastman", "Special", "Fly"]
+equipment = ["Claws"]
+
+[units.stats]
+M = 5
+WS = 3
+BS = 0
+S = 3
+T = 3
+W = 1
+I = 5
+A = 2
+Ld = 6
+Sv = "-"
+
+[[units]]
+name = "Razorgor Herd"
+type = "monstrous_beast"
+category = "Special"
+points = 50
+models = "1-3"
+tactical_role = "monster"
+threat_level = "medium"
+preferred_targets = ["infantry"]
+weaknesses = ["high_strength"]
+special_rules = ["Fear", "Impact Hits (D3)"]
+keywords = ["Monstrous Beast", "Beastman", "Special"]
+equipment = ["Tusks"]
+
+[units.stats]
+M = 7
+WS = 4
+BS = 0
+S = 5
+T = 5
+W = 3
+I = 3
+A = 4
+Ld = 5
+Sv = "-"
+
+[[units]]
+name = "Razorgor Chariot"
+type = "chariot"
+category = "Special"
+points = 110
+models = "1"
+tactical_role = "heavy_shock"
+threat_level = "high"
+preferred_targets = ["infantry"]
+weaknesses = ["war_machines"]
+special_rules = ["Primal Fury", "Fear", "Impact Hits (D6+1)"]
+keywords = ["Chariot", "Beastman", "Special"]
+equipment = ["Spears"]
+
+[units.stats]
+M = 7
+WS = 4
+BS = 3
+S = 5
+T = 5
+W = 5
+I = 3
+A = 2
+Ld = 7
+Sv = "5+"
+
+# =============================================================================
+# RARE UNITS
+# =============================================================================
+
+[[units]]
+name = "Cygor"
+type = "monster"
+category = "Rare"
+points = 225
+models = "1"
+tactical_role = "anti_magic_monster"
+threat_level = "very_high"
+preferred_targets = ["wizards", "units"]
+weaknesses = ["close_combat_specialists"]
+special_rules = ["Terror", "Ghost-sight (re-roll to hit vs wizards)", "Soul-eater"]
+keywords = ["Monster", "Beastman", "Rare"]
+equipment = ["Rock throwing"]
+
+[units.stats]
+M = 6
+WS = 3
+BS = 3
+S = 6
+T = 5
+W = 6
+I = 2
+A = 5
+Ld = 8
+Sv = "-"
+
+[[units.weapons]]
+name = "Rock"
+range = "18-48\""
+strength = "5(10)"
+ap = "2(5)"
+damage = "1(D3)"
+abilities = ["Large Blast (5\")", "Direct hit S10 AP5 D3 wounds", "May re-roll against wizards"]
+
+[[units]]
+name = "Ghorgon"
+type = "monster"
+category = "Rare"
+points = 275
+models = "1"
+tactical_role = "monster"
+threat_level = "extreme"
+preferred_targets = ["infantry", "monsters"]
+weaknesses = ["mass_shooting"]
+special_rules = ["Terror", "Bloodgreed", "Devastating Charge (+1S)", "Swallow Whole"]
+keywords = ["Monster", "Minotaur", "Rare"]
+equipment = ["Four massive blades"]
+
+[units.stats]
+M = 7
+WS = 5
+BS = 0
+S = 7
+T = 6
+W = 6
+I = 4
+A = 8
+Ld = 8
+Sv = "-"
+
+[[units]]
+name = "Jabberslythe"
+type = "monster"
+category = "Rare"
+points = 275
+models = "1"
+tactical_role = "flying_monster"
+threat_level = "extreme"
+preferred_targets = ["infantry", "cavalry"]
+weaknesses = ["war_machines"]
+special_rules = ["Fly", "Terror", "Poisoned Attacks", "Aura of Madness", "Slythey Tongue"]
+keywords = ["Monster", "Beastman", "Rare", "Fly"]
+equipment = ["Claws and tongue"]
+
+[units.stats]
+M = 6
+WS = 4
+BS = 0
+S = 5
+T = 5
+W = 5
+I = 3
+A = 5
+Ld = 6
+Sv = "5+"
+
+[[units]]
+name = "Chaos Spawn"
+type = "monstrous_beast"
+category = "Rare"
+points = 50
+models = "1-5"
+tactical_role = "chaotic_assault"
+threat_level = "medium"
+preferred_targets = ["variable"]
+weaknesses = ["shooting", "combat_blocks"]
+special_rules = ["Random Movement (2D6)", "Random Attacks (D6+1)", "Fear", "Unbreakable"]
+keywords = ["Monstrous Beast", "Chaos", "Spawn", "Rare"]
+equipment = ["Tentacles"]
+
+[units.stats]
+M = "2D6"
+WS = 3
+BS = 0
+S = 4
+T = 5
+W = 3
+I = 2
+A = "D6+1"
+Ld = 10
+Sv = "-"
+
+[[units]]
+name = "Giant"
+type = "monster"
+category = "Rare"
+points = 200
+models = "1"
+tactical_role = "monster"
+threat_level = "very_high"
+preferred_targets = ["everything"]
+weaknesses = ["war_machines", "shooting"]
+special_rules = ["Terror", "Fall Over", "Giant Special Attacks", "Stubborn"]
+keywords = ["Monster", "Giant", "Rare"]
+equipment = ["Club"]
+
+[units.stats]
+M = 6
+WS = 3
+BS = 3
+S = 6
+T = 5
+W = 6
+I = 3
+A = "Special"
+Ld = 10
+Sv = "-"
+
+# =============================================================================
+# FACTION SPECIAL RULES
+# =============================================================================
+
+[[faction_rules]]
+name = "Primal Fury"
+description = "At the start of each Close Combat phase, units with Primal Fury take a Leadership test. If passed, the unit gains Hatred for that phase. If passed by more than the Leadership value needed, also gains +1 Attack"
+
+[[faction_rules]]
+name = "Beastman Ambush"
+description = "Up to half the army's units (by number, not points) can be held in Ambush. From Turn 2 onwards, roll D6 for each ambushing unit: on 3+, it arrives from any table edge"
+
+[[faction_rules]]
+name = "Bloodgreed"
+description = "For each unsaved wound caused in close combat, the model must take a Leadership test. If failed, it gains Frenzy for the rest of the game"
+
+[[faction_rules]]
+name = "Despoilers"
+description = "Bestigors may re-roll failed Primal Fury tests"
+
+[[faction_rules]]
+name = "Mark of Chaos"
+description = "Like Warriors of Chaos, Beastman characters may take Marks of Chaos"
+
+[[faction_rules]]
+name = "Drunken"
+description = "Centigors must test for Stupidity unless within 12\" of a Beastman character"
+
+# =============================================================================
+# FACTION MAGIC ITEMS
+# =============================================================================
+
+[[faction_items]]
+name = "Axes of Khorgor"
+type = "magic_weapon"
+points = 50
+description = "Pair of hand weapons that grant +D3 Attacks"
+restrictions = ["Minotaur characters only"]
+
+[[faction_items]]
+name = "Stonecrusher Mace"
+type = "magic_weapon"
+points = 35
+description = "+1 Attack. Each wound dealt causes D3 wounds. Against buildings, inflicts 2D6 hits"
+restrictions = ["Beastmen characters only"]
+
+[[faction_items]]
+name = "Mangelder"
+type = "magic_weapon"
+points = 45
+description = "Great weapon. Wounds never carry over (each wound removes exactly one model). Models wounded but not slain must pass Toughness test or be removed"
+restrictions = ["Beastmen characters only"]
+
+[[faction_items]]
+name = "The Brass Cleaver"
+type = "magic_weapon"
+points = 30
+description = "+1 Strength. For each wound caused, bearer gains +1 Attack for the rest of the game (max +3)"
+restrictions = ["Beastmen characters only"]
+
+[[faction_items]]
+name = "Ramhorn Helm"
+type = "magic_armor"
+points = 25
+description = "+1 armor save. Bearer gains Impact Hits (D3)"
+restrictions = ["Beastmen characters only"]
+
+[[faction_items]]
+name = "Pelt of the Shadowgave"
+type = "enchanted"
+points = 40
+description = "Enemies are -1 to hit bearer in close combat. Bearer has 5+ ward save against shooting"
+restrictions = ["Beastmen characters only"]
+
+[[faction_items]]
+name = "Totem of Rust"
+type = "banner"
+points = 50
+description = "Enemies in base contact with unit have -1 to armor save. War machines in contact take D3 wounds per turn"
+restrictions = ["Beastmen standard bearer only"]
+
+[[faction_items]]
+name = "Beast Banner"
+type = "banner"
+points = 75
+description = "Unit adds +1 to Primal Fury test. Unit may re-roll Break tests"
+restrictions = ["Bestigor standard bearer only"]

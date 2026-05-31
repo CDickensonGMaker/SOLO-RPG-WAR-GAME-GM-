@@ -1,0 +1,585 @@
+# The Sources of Power Campaign
+# Theme: Magical mystery, realm magic, ley line restoration
+# Scope: Wizard regent or magical advisor to regent
+
+[campaign]
+id = "sources_of_power"
+name = "The Sources of Power"
+tagline = "The mebhaighl fades. The ley lines cry out. Only you can hear them."
+theme = "magical_mystery"
+difficulty = "moderate"
+recommended_bloodline = ["Vorynn", "Basaia", "Masela"]
+starting_season = "autumn"
+starting_year = 550
+
+[campaign.description]
+short = "Unravel a magical catastrophe threatening to sever Cerilia from the mebhaighl."
+long = """
+The mebhaighl - the magical energy that flows through Cerilia's land and blood -
+is failing. Ley lines that have sung with power for millennia grow silent. Sources
+that once blazed like stars in the magical spectrum dim and flicker. Realm spells
+that defined nations for centuries falter.
+
+You are among those who can sense this dying - a wizard of true blood, connected
+to the magical web that underlies reality. What you perceive terrifies you. This
+is no natural fading. Something is actively draining the mebhaighl, consuming it
+for purposes unknown.
+
+The College of Sorcery dismisses your warnings. The temple claims it is divine
+judgment. Only you and a handful of others understand: if the sources die,
+Cerilia's magic dies with them - and perhaps Cerilia itself.
+"""
+
+[campaign.pillars]
+primary = "Magic is alive, and it is dying - only understanding can save it"
+secondary = "The bloodlines tie mortals to the land; this bond must be renewed"
+tone = "cosmic horror meets high fantasy"
+stakes = "The magical foundation of Cerilia itself"
+
+[campaign.special_mechanics]
+source_tracking = true
+ley_line_network = true
+realm_magic_enhanced = true
+mebhaighl_corruption = true
+
+# ============================================================================
+# ACT STRUCTURE
+# ============================================================================
+
+[acts.act_1]
+name = "The Dying Light"
+description = "Discover the extent of the magical crisis"
+turn_range = [1, 12]
+objectives = [
+    "Document the pattern of source failures",
+    "Identify the epicenter of the drain",
+    "Convince at least one ally of the threat"
+]
+completion_trigger = "epicenter_located"
+
+[acts.act_1.starting_state]
+mebhaighl_strength = 70  # 0-100, declining
+sources_mapped = 0
+corruption_spread = 10
+college_support = 0
+
+[acts.act_2]
+name = "The Corruption Spreads"
+description = "Trace the source of the drain and combat its spread"
+turn_range = [13, 26]
+objectives = [
+    "Discover what is consuming the mebhaighl",
+    "Restore or protect at least three major sources",
+    "Assemble the knowledge needed to reverse the damage"
+]
+completion_trigger = "nature_of_threat_understood"
+prerequisites = ["act_1_complete"]
+
+[acts.act_2.state_changes]
+mebhaighl_strength = -20
+corruption_spread = +30
+random_event_frequency = "magical_instability"
+
+[acts.act_3]
+name = "The Heart of Magic"
+description = "Confront the source of corruption and restore the mebhaighl"
+turn_range = [27, 36]
+objectives = [
+    "Locate the entity or force responsible",
+    "Perform the ritual to restore/redirect the mebhaighl",
+    "Prevent the complete collapse of Cerilia's magical web"
+]
+completion_trigger = "mebhaighl_fate_decided"
+prerequisites = ["act_2_complete"]
+
+[acts.act_3.state_changes]
+stakes = "total"
+final_ritual = true
+
+# ============================================================================
+# KEY NPCS
+# ============================================================================
+
+[npcs.the_corruptor]
+name = "The Magian"
+title = "The Sleeper Beneath"
+role = "primary_antagonist"
+bloodline = { derivation = "Vorynn", strength = "true", score = "unknown", corrupted = true }
+disposition_base = -100
+
+[npcs.the_corruptor.personality]
+traits = ["ancient", "alien", "hungry", "patient"]
+approach = "consumption"
+weakness = "bound by ancient laws it cannot break directly"
+quote = "Magic was never yours. You merely borrowed it. Now it returns to its source."
+
+[npcs.the_corruptor.goals]
+primary = "Consume all mebhaighl to achieve true godhood"
+secondary = "Break the binding that limits its power"
+hidden = "It is what remains of an ancient Masetian archmage who tried to become a god"
+
+[npcs.the_corruptor.nature]
+type = "magical_abomination"
+origin = "Deismaar's magical aftermath"
+vulnerability = "The binding stones placed by Azrai's rivals"
+
+[npcs.archmagister_caelen]
+name = "Archmagister Aglondier Caelen"
+title = "Head of the College of Sorcery"
+role = "skeptical_authority"
+bloodline = { derivation = "Vorynn", strength = "great", score = 42 }
+disposition_base = -20  # Dismissive of warnings
+
+[npcs.archmagister_caelen.personality]
+traits = ["proud", "traditional", "territorial"]
+approach = "institutional_denial"
+weakness = "cannot admit he didn't see the threat first"
+quote = "The College has monitored the sources for centuries. We would know if there were a threat."
+
+[npcs.archmagister_caelen.goals]
+primary = "Maintain the College's authority over magical matters"
+secondary = "Discredit upstarts who challenge established doctrine"
+hidden = "Secretly fears he has lost his ability to sense the mebhaighl"
+
+[npcs.seeress_alaina]
+name = "Seeress Alaina Vaumel"
+title = "Oracle of the Azure Tower"
+role = "ally"
+bloodline = { derivation = "Basaia", strength = "major", score = 35, purity = "high" }
+disposition_base = 30
+
+[npcs.seeress_alaina.personality]
+traits = ["visionary", "cryptic", "dedicated"]
+approach = "prophecy"
+weakness = "visions show what may be, not what will be"
+quote = "I have seen the stars go dark. I have seen the land itself weep. But I have also seen... you."
+
+[npcs.seeress_alaina.goals]
+primary = "Prevent the vision of magical annihilation"
+secondary = "Restore the old ways of blood and land communion"
+hidden = "Her visions are killing her - each costs months of her life"
+
+[npcs.source_keeper]
+name = "Elder Haelwyn"
+title = "Keeper of the Erebannien Sources"
+role = "knowledge_holder"
+bloodline = { derivation = "Reynir", strength = "major", score = 38 }
+disposition_base = 15
+
+[npcs.source_keeper.personality]
+traits = ["ancient", "connected", "inhuman"]
+approach = "balance"
+weakness = "thinks in centuries, not years"
+quote = "The trees remember. The stones remember. I remember. This has happened before."
+
+[npcs.source_keeper.goals]
+primary = "Preserve the natural sources from any threat"
+secondary = "Maintain the boundary between civilized and wild magic"
+hidden = "Knows the true history of the Magian but is bound not to speak it directly"
+
+[npcs.the_rival_mage]
+name = "Wizard Prince Aelric"
+title = "Regent of the Sielwode Sources"
+role = "rival"
+bloodline = { derivation = "Vorynn", strength = "great", score = 40 }
+disposition_base = -30
+
+[npcs.the_rival_mage.personality]
+traits = ["ambitious", "brilliant", "ruthless"]
+approach = "power_accumulation"
+weakness = "believes he can control what he cannot"
+quote = "The mebhaighl concentrates where it fades elsewhere. Opportunity for those bold enough to seize it."
+
+[npcs.the_rival_mage.goals]
+primary = "Acquire the failing sources before they die completely"
+secondary = "Become the supreme magical authority in Anuire"
+hidden = "Has unwittingly been manipulated by the Magian"
+
+# ============================================================================
+# CAMPAIGN EVENTS
+# ============================================================================
+
+[events.first_vision]
+id = "first_vision"
+name = "The Screaming Source"
+act = 1
+turn = 1
+type = "story"
+mandatory = true
+
+[events.first_vision.description]
+text = """
+You are casting a routine divination when the mebhaighl SCREAMS. Not metaphorically -
+you hear it, feel it, taste copper and ozone and terror. For one horrifying moment,
+you see the ley lines as they truly are: a web of silver fire spanning the world...
+and something vast and dark crouched at its heart, feeding.
+
+When the vision passes, you are on the floor, bleeding from nose and ears. Your
+magical senses are heightened, altered. You can feel the sources now, all of them,
+and they are afraid.
+"""
+
+[[events.first_vision.choices]]
+id = "report_college"
+text = "Report immediately to the College of Sorcery"
+effects = { college_contact = true, reputation = 5, dismissal_risk = true }
+consequences = "Seek official support for your discovery"
+oracle_prompt = "Does any member of the College take your warning seriously?"
+
+[[events.first_vision.choices]]
+id = "seek_seeress"
+text = "Seek out others who might have experienced the same vision"
+effects = { alaina_contact = true, network = 10 }
+consequences = "Find those who share your awareness"
+oracle_prompt = "Do you find others who sensed the magical scream?"
+
+[[events.first_vision.choices]]
+id = "investigate_alone"
+text = "Begin your own investigation of the nearest sources"
+effects = { intel = 15, risk = "moderate" }
+consequences = "Direct research without institutional interference"
+oracle_prompt = "What do you discover examining the local sources?"
+
+[[events.first_vision.choices]]
+id = "protect_sources"
+text = "Immediately begin reinforcing your own source holdings"
+effects = { source_protection = 20, defensive_posture = true }
+consequences = "Secure what you can before understanding the threat"
+oracle_prompt = "Are your protective wards effective against the drain?"
+
+[events.dying_source]
+id = "dying_source"
+name = "Death of a Source"
+act = 1
+turn_range = [4, 8]
+type = "conditional"
+trigger = "mebhaighl_strength < 65"
+
+[events.dying_source.description]
+text = """
+The source at Moonstrike Falls - one of the oldest in Anuire - has gone dark.
+Wizards who drew upon it report the sensation of reaching for water and finding
+dust. The land around the falls is changing: plants wilt, animals flee, and
+the water itself tastes of ash.
+
+More disturbing: at the moment of the source's death, you felt something else.
+Satisfaction. Hunger briefly sated. Whatever is draining the mebhaighl is not
+mindless - it is aware.
+"""
+
+[[events.dying_source.choices]]
+id = "examine_dead_source"
+text = "Travel to Moonstrike Falls to examine the dead source"
+effects = { intel = 25, corruption_exposure = 10, risk = "moderate" }
+consequences = "Learn from death what you cannot learn from life"
+oracle_prompt = "What traces remain at the site of the dead source?"
+
+[[events.dying_source.choices]]
+id = "track_flow"
+text = "Trace where the source's power went as it died"
+effects = { magical_tracking = true, intel = 20 }
+consequences = "Follow the drain to its destination"
+oracle_prompt = "Can you trace the flow of consumed mebhaighl?"
+
+[[events.dying_source.choices]]
+id = "warn_others"
+text = "Use this proof to rally other source holders"
+effects = { allies = 15, urgency = 10 }
+consequences = "The death of a source is undeniable evidence"
+oracle_prompt = "Do other regents finally take the threat seriously?"
+
+[[events.dying_source.choices]]
+id = "study_pattern"
+text = "Map the pattern - which sources are dying, in what order"
+effects = { pattern_recognition = 30, academic_approach = true }
+consequences = "Understand the enemy's method"
+oracle_prompt = "Do you detect a pattern in the source failures?"
+
+[events.corruption_manifestation]
+id = "corruption_manifestation"
+name = "The Mebhaighl Madness"
+act = 2
+turn_range = [14, 18]
+type = "story"
+mandatory = true
+
+[events.corruption_manifestation.description]
+text = """
+The corruption has physical effects now. In regions where sources have died,
+people report nightmares of drowning in darkness. Some wizards who drew too
+heavily from failing sources have gone mad, their spells twisted into something
+wrong. Worse, you've seen what they become - creatures of corrupted mebhaighl,
+neither alive nor dead, hungry for magical energy.
+
+The Seeress Alaina sends word: she has seen the source of the corruption in her
+visions. It sleeps beneath the Stonecrown Mountains, bound by ancient wards. The
+wards are failing.
+"""
+
+[[events.corruption_manifestation.choices]]
+id = "seek_stonecrown"
+text = "Journey to the Stonecrown Mountains to examine the wards"
+effects = { direct_approach = true, risk = "extreme", magian_awareness = 20 }
+consequences = "Approach the source of corruption directly"
+oracle_prompt = "What do you find at the Stonecrown binding site?"
+
+[[events.corruption_manifestation.choices]]
+id = "research_bindings"
+text = "Research the ancient bindings before approaching"
+effects = { knowledge = 30, preparation = true, time_spent = 5 }
+consequences = "Understand what you face before confronting it"
+oracle_prompt = "What do ancient records reveal about the Stonecrown binding?"
+
+[[events.corruption_manifestation.choices]]
+id = "hunt_corrupted"
+text = "Hunt down the corrupted mages before they spread further madness"
+effects = { combat = true, corruption_containment = 20 }
+consequences = "Contain the symptoms while seeking the cause"
+oracle_prompt = "Can you defeat the corrupted without becoming corrupted yourself?"
+
+[[events.corruption_manifestation.choices]]
+id = "empower_sources"
+text = "Develop a ritual to strengthen surviving sources against the drain"
+effects = { magical_research = true, source_protection = 30 }
+consequences = "Play defense while preparing offense"
+oracle_prompt = "Do you discover a way to reinforce the sources?"
+
+[events.elder_revelation]
+id = "elder_revelation"
+name = "The Keeper's Truth"
+act = 2
+turn_range = [20, 24]
+type = "conditional"
+trigger = "knowledge >= 40"
+
+[events.elder_revelation.description]
+text = """
+Elder Haelwyn, keeper of the Erebannien sources, summons you to the ancient grove.
+The ancient elf is dying - even elven lifespans have limits when the land itself
+sickens. But before the end, there are things you must know.
+
+"The Magian," Haelwyn whispers, and you feel reality shudder at the name. "It was
+a man once. A wizard of Masetia who sought to become a god at Deismaar. It failed,
+but it did not die. It became... something else. The others bound it, but bindings
+fade. As I fade."
+"""
+
+[[events.elder_revelation.choices]]
+id = "learn_binding"
+text = "Learn the secret of the original binding"
+effects = { binding_knowledge = 50, haelwyn_trust = true }
+consequences = "Knowledge that may save or doom you"
+oracle_prompt = "Does Haelwyn share the full truth of the binding ritual?"
+
+[[events.elder_revelation.choices]]
+id = "learn_weakness"
+text = "Ask what weakness the Magian has"
+effects = { magian_weakness = 30, tactical_advantage = true }
+consequences = "Every monster has a flaw"
+oracle_prompt = "Does Haelwyn know the Magian's vulnerability?"
+
+[[events.elder_revelation.choices]]
+id = "request_power"
+text = "Ask Haelwyn to transfer his source mastery to you"
+effects = { power_transfer = true, responsibility = "immense" }
+consequences = "Inherit the Keeper's burden"
+oracle_prompt = "Does Haelwyn deem you worthy of the transfer?"
+
+[[events.elder_revelation.choices]]
+id = "summon_elves"
+text = "Ask Haelwyn to summon the Sidhelien to the cause"
+effects = { elven_alliance_potential = true, difficulty = "high" }
+consequences = "The elves remember the Magian"
+oracle_prompt = "Will the Sidhelien answer an ancient summons?"
+
+[events.magian_awakening]
+id = "magian_awakening"
+name = "The Sleeper Stirs"
+act = 3
+turn = 30
+type = "story"
+mandatory = true
+
+[events.magian_awakening.description]
+text = """
+The wards have broken. You feel it across a hundred miles - a wave of wrongness
+rolling out from the Stonecrown Mountains. The sky darkens though it is midday.
+Every wizard in Anuire knows something terrible has awakened.
+
+The Magian rises, and with each moment it remains free, it grows stronger, drinking
+deeply of the mebhaighl that flows toward it like rivers to the sea. In your
+magical sight, you see the creature for the first time clearly: a nexus of
+corrupted power in humanoid form, neither living nor dead, surrounded by the
+screaming remnants of consumed sources.
+
+You have days. Perhaps weeks. Then the last sources die, and Cerilia's magic
+with them.
+"""
+
+[[events.magian_awakening.choices]]
+id = "direct_confrontation"
+text = "Gather allies and confront the Magian immediately"
+effects = { final_battle = true, risk = "legendary" }
+consequences = "Face the Magian before it reaches full power"
+oracle_prompt = "Do your allies answer the call to battle?"
+
+[[events.magian_awakening.choices]]
+id = "rebinding_ritual"
+text = "Attempt to perform a new binding ritual"
+effects = { ritual = true, components_needed = true }
+consequences = "Seal the Magian away again"
+oracle_prompt = "Can you gather the components for the binding before time runs out?"
+
+[[events.magian_awakening.choices]]
+id = "source_sacrifice"
+text = "Sacrifice sources to create a barrier against the Magian"
+effects = { defensive_sacrifice = true, mebhaighl_cost = "extreme" }
+consequences = "Destroy magic to save it"
+oracle_prompt = "Does the barrier hold against the Magian's hunger?"
+
+[[events.magian_awakening.choices]]
+id = "bloodline_communion"
+text = "Unite the bloodlines in a communion ritual to resist"
+effects = { bloodline_network = true, cooperation_required = true }
+consequences = "All the blood of the gods against one ancient evil"
+oracle_prompt = "Can the scions of the gods unite against this threat?"
+
+[events.final_ritual]
+id = "final_ritual"
+name = "The Heart of Magic"
+act = 3
+turn = 36
+type = "story"
+mandatory = true
+
+[events.final_ritual.description]
+text = """
+This is the moment. Everything has led here - the knowledge gathered, the allies
+assembled, the preparations made. The Magian awaits at the nexus of all ley lines,
+where the mebhaighl of Cerilia converges.
+
+"You are too late," it says, and its voice is the death of stars. "The magic is
+already mine. But I offer you a choice, little wizard. Join me, and retain a
+fraction of power in the new world. Oppose me, and be consumed with the rest."
+
+The mebhaighl roars around you. The fate of magic itself hangs in the balance.
+"""
+
+[[events.final_ritual.choices]]
+id = "execute_binding"
+text = "Execute the binding ritual"
+effects = { binding_ritual = true }
+prerequisites = ["binding_knowledge >= 50"]
+consequences = "Seal the Magian for another age"
+oracle_prompt = "Does the binding hold?"
+
+[[events.final_ritual.choices]]
+id = "destroy_magian"
+text = "Attempt to destroy the Magian permanently"
+effects = { destruction_attempt = true, risk = "extinction" }
+consequences = "End the threat forever - or die trying"
+oracle_prompt = "Can mortal magic unmake what Deismaar created?"
+
+[[events.final_ritual.choices]]
+id = "redirect_mebhaighl"
+text = "Redirect the mebhaighl away from the Magian, starving it"
+effects = { redirection_ritual = true }
+prerequisites = ["source_mastery >= 40"]
+consequences = "Cut off the food supply"
+oracle_prompt = "Can you redirect the flow of magic itself?"
+
+[[events.final_ritual.choices]]
+id = "sacrifice_self"
+text = "Sacrifice yourself to become a new binding"
+effects = { self_sacrifice = true, heroic_end = true }
+consequences = "Your life for the world's magic"
+oracle_prompt = "Does your sacrifice complete what the ancients began?"
+
+[[events.final_ritual.choices]]
+id = "accept_magian"
+text = "Accept the Magian's offer"
+effects = { corruption = true, power = "immense", soul = "lost" }
+consequences = "Become part of the new magical order"
+oracle_prompt = "What remains of you after accepting?"
+
+# ============================================================================
+# VICTORY AND FAILURE CONDITIONS
+# ============================================================================
+
+[victory_conditions]
+primary = { type = "magian_bound", requirement = "The Magian sealed for another age" }
+alternative_1 = { type = "magian_destroyed", requirement = "The Magian permanently destroyed" }
+alternative_2 = { type = "mebhaighl_saved", requirement = "Magic preserved through any means" }
+
+[failure_conditions]
+magical_death = { trigger = "mebhaighl_strength == 0", description = "Magic dies in Cerilia" }
+corruption = { trigger = "player_corrupted", description = "You become an extension of the Magian" }
+physical_death = { trigger = "player_killed", description = "You die before completing your mission" }
+time_expired = { trigger = "act_3_time_out", description = "The Magian achieves full power" }
+
+# ============================================================================
+# MAGICAL MECHANICS
+# ============================================================================
+
+[magic_system]
+source_tracking = true
+ley_line_visible = true
+realm_spells_enhanced = true
+
+[magic_system.source_states]
+healthy = { mebhaighl_generation = 100, stability = "stable" }
+weakening = { mebhaighl_generation = 50, stability = "declining" }
+critical = { mebhaighl_generation = 10, stability = "failing" }
+dead = { mebhaighl_generation = 0, stability = "none", corruption = "spreading" }
+
+[magic_system.corruption_effects]
+level_1 = { description = "Nightmares, minor spell failures", penalty = 5 }
+level_2 = { description = "Madness spreading, major spell distortion", penalty = 15 }
+level_3 = { description = "Corrupted mages appear, land dying", penalty = 30 }
+level_4 = { description = "Reality unstable, Magian manifestations", penalty = 50 }
+
+[magic_system.rituals]
+source_restoration = { cost = 20, duration = 3, components = ["pure_mebhaighl", "bloodline_essence"] }
+ley_line_reinforcement = { cost = 15, duration = 2, components = ["crystal_focus", "elven_song"] }
+binding_renewal = { cost = 50, duration = 7, components = ["ancient_binding_stone", "divine_blood", "true_name"] }
+
+# ============================================================================
+# CAMPAIGN VARIABLES AND TRACKING
+# ============================================================================
+
+[tracking]
+variables = [
+    "mebhaighl_strength",     # Overall health of magic (0-100)
+    "sources_mapped",         # How many sources documented
+    "corruption_spread",      # How far corruption has spread
+    "college_support",        # Institutional backing
+    "knowledge",              # Understanding of the threat
+    "binding_knowledge",      # Knowledge of binding ritual
+    "source_mastery",         # Ability to manipulate sources
+    "magian_awareness",       # How aware Magian is of you
+]
+
+[tracking.thresholds]
+college_backing = { variable = "college_support", above = 40, event = "college_provides_resources" }
+corruption_crisis = { variable = "corruption_spread", above = 60, event = "widespread_magical_madness" }
+magian_notices = { variable = "magian_awareness", above = 50, event = "magian_sends_hunters" }
+
+# ============================================================================
+# CAMPAIGN REWARDS
+# ============================================================================
+
+[rewards]
+magian_bound = { title = "Binder of the Ancient", source_mastery = 50, legend = true }
+magian_destroyed = { title = "Mebhaighl's Champion", divine_blessing = true, bloodline_boost = 15 }
+mebhaighl_saved = { title = "Savior of Magic", eternal_gratitude = true, archmage_status = true }
+
+# ============================================================================
+# INTEGRATION HOOKS
+# ============================================================================
+
+[integration]
+oracle_table = "birthright/magic/sources"
+domain_action_mods = { realm_magic = 3, research = 2, source_control = 2 }
+bloodline_focus = ["Vorynn", "Basaia", "Masela"]
+connects_to = ["cerilian_alliance", "chosen_bloodline"]
+requires_magic_mode = true

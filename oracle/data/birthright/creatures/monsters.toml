@@ -1,0 +1,1002 @@
+# =============================================================================
+# CERILIAN MONSTERS AND CREATURES
+# =============================================================================
+# Creatures unique to the Birthright setting, born from the catastrophe of
+# Deismaar and the unique magical nature of Cerilia.
+# =============================================================================
+
+[metadata]
+title = "Monsters of Cerilia"
+description = "Creatures unique to the Birthright setting"
+version = "1.0.0"
+setting = "Birthright"
+
+# =============================================================================
+# BLOOD CREATURES
+# =============================================================================
+# Beings created or transformed by the spilled divine blood at Deismaar.
+# They are touched by the gods' essence but twisted by the chaos of that day.
+# =============================================================================
+
+[[blood_creatures]]
+name = "Blood Elemental"
+origin = "Pools of divine blood that achieved sentience"
+description = "A churning mass of crimson liquid that moves with terrible purpose. It seeks to absorb mortal blood to sustain itself and can sense bloodline power from miles away."
+alignment = "chaotic evil"
+habitat = ["Ancient battlefields", "Sites of mass bloodshed", "Near bloodline fonts"]
+challenge_rating = "8"
+
+[blood_creatures.stat_block]
+size = "Large"
+type = "Elemental"
+armor_class = 14
+hit_points = "114 (12d10 + 48)"
+speed = "30 ft., swim 60 ft."
+abilities = { STR = 18, DEX = 14, CON = 18, INT = 6, WIS = 12, CHA = 8 }
+damage_resistances = "bludgeoning, piercing, slashing from nonmagical attacks"
+damage_immunities = "poison"
+condition_immunities = "exhaustion, grappled, paralyzed, petrified, poisoned, prone, restrained, unconscious"
+senses = "blindsight 60 ft., passive Perception 11"
+languages = "understands Primordial but cannot speak"
+
+[[blood_creatures.stat_block.special_abilities]]
+name = "Blood Sense"
+description = "The elemental can sense any creature with a bloodline within 1 mile."
+
+[[blood_creatures.stat_block.special_abilities]]
+name = "Blood Absorption"
+description = "When the elemental deals damage to a creature with blood, it regains hit points equal to half the damage dealt."
+
+[[blood_creatures.stat_block.actions]]
+name = "Multiattack"
+description = "The elemental makes two slam attacks."
+
+[[blood_creatures.stat_block.actions]]
+name = "Slam"
+description = "Melee Weapon Attack: +7 to hit, reach 10 ft., one target. Hit: 14 (2d8 + 5) bludgeoning damage plus 7 (2d6) necrotic damage."
+
+[[blood_creatures.stat_block.actions]]
+name = "Blood Drain (Recharge 5-6)"
+description = "Each creature within 10 feet must make a DC 15 Constitution saving throw, taking 21 (6d6) necrotic damage on a failed save, or half as much on a successful one. The elemental regains hit points equal to half the total damage dealt."
+
+[blood_creatures.oracle_integration]
+encounter_trigger = "Ancient battlefield or place of bloodshed"
+adventure_seeds = [
+    "A blood elemental awakens after a bloody battle",
+    "One is hunting blooded individuals",
+    "Containing it requires understanding its origin"
+]
+
+# -----------------------------------------------------------------------------
+
+[[blood_creatures]]
+name = "Bloodhound"
+origin = "Hounds transformed by drinking divine blood at Deismaar"
+description = "Gaunt, red-eyed hounds with an unnatural hunger for blood. They can track a bloodline for hundreds of miles and are sometimes bound as servants by the powerful."
+alignment = "neutral evil"
+habitat = ["Wild places", "Serving powerful masters", "Near awnsheghlien"]
+challenge_rating = "3"
+
+[blood_creatures.stat_block]
+size = "Medium"
+type = "Monstrosity"
+armor_class = 13
+hit_points = "45 (6d8 + 18)"
+speed = "50 ft."
+abilities = { STR = 16, DEX = 14, CON = 16, INT = 4, WIS = 14, CHA = 6 }
+skills = "Perception +6, Survival +6"
+senses = "darkvision 60 ft., passive Perception 16"
+
+[[blood_creatures.stat_block.special_abilities]]
+name = "Bloodline Tracking"
+description = "The bloodhound can track any creature with a bloodline by scent, even across water or through teleportation, up to 100 miles away."
+
+[[blood_creatures.stat_block.special_abilities]]
+name = "Pack Tactics"
+description = "The bloodhound has advantage on attack rolls against a creature if at least one of the bloodhound's allies is within 5 feet of the creature."
+
+[[blood_creatures.stat_block.actions]]
+name = "Bite"
+description = "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) piercing damage. If the target has a bloodline, it deals an additional 3 (1d6) necrotic damage."
+
+[blood_creatures.oracle_integration]
+encounter_trigger = "Hunting party or tracking mission"
+adventure_seeds = [
+    "Bloodhounds are tracking the regent",
+    "A pack has gone feral and hunts freely",
+    "Someone offers tamed bloodhounds for sale"
+]
+
+# -----------------------------------------------------------------------------
+
+[[blood_creatures]]
+name = "Blood Rose"
+origin = "Roses that grew in pools of divine blood"
+description = "Beautiful crimson roses with thorns that draw blood. They are semi-sentient, luring victims close with their intoxicating scent before draining them."
+alignment = "neutral evil"
+habitat = ["Gardens of the powerful", "Ancient battlefields", "Near bloodline fonts"]
+challenge_rating = "1"
+
+[blood_creatures.stat_block]
+size = "Small"
+type = "Plant"
+armor_class = 10
+hit_points = "22 (4d6 + 8)"
+speed = "0 ft."
+abilities = { STR = 6, DEX = 1, CON = 14, INT = 1, WIS = 6, CHA = 14 }
+damage_vulnerabilities = "fire"
+condition_immunities = "blinded, deafened, frightened"
+senses = "blindsight 30 ft., passive Perception 8"
+
+[[blood_creatures.stat_block.special_abilities]]
+name = "Intoxicating Scent"
+description = "Any creature that starts its turn within 30 feet of the rose must succeed on a DC 12 Wisdom saving throw or be charmed and move toward the rose."
+
+[[blood_creatures.stat_block.special_abilities]]
+name = "Blood Drain Thorns"
+description = "A creature that touches the rose or is grappled by it takes 2 (1d4) piercing damage and 3 (1d6) necrotic damage at the start of each of its turns."
+
+[[blood_creatures.stat_block.actions]]
+name = "Constricting Vines"
+description = "Melee Weapon Attack: +4 to hit, reach 10 ft., one target. Hit: 4 (1d4 + 2) piercing damage, and the target is grappled (escape DC 12)."
+
+[blood_creatures.oracle_integration]
+encounter_trigger = "Garden or overgrown ruin"
+adventure_seeds = [
+    "A noble cultivates blood roses - for what purpose?",
+    "An infestation threatens a province",
+    "Blood roses are a component in blood magic"
+]
+
+# -----------------------------------------------------------------------------
+
+[[blood_creatures]]
+name = "Crimson Ooze"
+origin = "Coagulated divine blood that gained animation"
+description = "A slow-moving mass of dark red gel that absorbs organic matter. It is mindless but drawn to sources of divine blood."
+alignment = "unaligned"
+habitat = ["Underground", "Ruins", "Near sources of bloodline power"]
+challenge_rating = "4"
+
+[blood_creatures.stat_block]
+size = "Large"
+type = "Ooze"
+armor_class = 7
+hit_points = "85 (9d10 + 36)"
+speed = "20 ft., climb 20 ft."
+abilities = { STR = 16, DEX = 5, CON = 18, INT = 1, WIS = 6, CHA = 1 }
+damage_resistances = "acid, cold, fire"
+condition_immunities = "blinded, charmed, deafened, exhaustion, frightened, prone"
+senses = "blindsight 60 ft., passive Perception 8"
+
+[[blood_creatures.stat_block.special_abilities]]
+name = "Amorphous"
+description = "The ooze can move through a space as narrow as 1 inch wide without squeezing."
+
+[[blood_creatures.stat_block.special_abilities]]
+name = "Blood Sense"
+description = "The ooze can sense any creature with blood within 60 feet."
+
+[[blood_creatures.stat_block.actions]]
+name = "Pseudopod"
+description = "Melee Weapon Attack: +5 to hit, reach 10 ft., one target. Hit: 10 (2d6 + 3) bludgeoning damage plus 10 (3d6) acid damage."
+
+[[blood_creatures.stat_block.actions]]
+name = "Engulf"
+description = "The ooze moves up to its speed. While doing so, it can enter Large or smaller creatures' spaces. A creature whose space the ooze enters must make a DC 13 Dexterity saving throw. On a failed save, the creature takes 10 (3d6) acid damage and is engulfed."
+
+# =============================================================================
+# CERILIAN UNDEAD
+# =============================================================================
+# Undead unique to Cerilia, often connected to bloodlines or the Shadow World.
+# =============================================================================
+
+[[cerilian_undead]]
+name = "Bloodwight"
+origin = "Blooded individuals who died violently and rose as undead"
+description = "An undead creature that retains fragments of its bloodline. It hungers for the blood of the living, especially those who carry divine blood."
+alignment = "lawful evil"
+habitat = ["Tombs of the blooded", "Battlefields", "Haunted keeps"]
+challenge_rating = "6"
+
+[cerilian_undead.stat_block]
+size = "Medium"
+type = "Undead"
+armor_class = 15
+hit_points = "75 (10d8 + 30)"
+speed = "30 ft."
+abilities = { STR = 18, DEX = 14, CON = 16, INT = 12, WIS = 14, CHA = 16 }
+saving_throws = "CON +6, WIS +5"
+damage_resistances = "necrotic; bludgeoning, piercing, slashing from nonmagical attacks"
+damage_immunities = "poison"
+condition_immunities = "exhaustion, poisoned"
+senses = "darkvision 60 ft., passive Perception 12"
+languages = "the languages it knew in life"
+
+[[cerilian_undead.stat_block.special_abilities]]
+name = "Bloodline Echo"
+description = "The bloodwight retains one minor blood ability from its life, chosen when it is created."
+
+[[cerilian_undead.stat_block.special_abilities]]
+name = "Sunlight Sensitivity"
+description = "While in sunlight, the bloodwight has disadvantage on attack rolls and Wisdom (Perception) checks that rely on sight."
+
+[[cerilian_undead.stat_block.actions]]
+name = "Multiattack"
+description = "The bloodwight makes two attacks."
+
+[[cerilian_undead.stat_block.actions]]
+name = "Life Drain"
+description = "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 11 (2d6 + 4) necrotic damage. The target must succeed on a DC 14 Constitution saving throw or its hit point maximum is reduced by an amount equal to the damage taken. A humanoid slain by this attack rises as a zombie under the bloodwight's control."
+
+[cerilian_undead.oracle_integration]
+encounter_trigger = "Ancient tomb or bloodline-related location"
+adventure_seeds = [
+    "A bloodwight seeks to reclaim its living descendant's power",
+    "One guards an ancestral treasure",
+    "It remembers secrets from life"
+]
+
+# -----------------------------------------------------------------------------
+
+[[cerilian_undead]]
+name = "Phantom Knight"
+origin = "Knights who died breaking sacred oaths"
+description = "Spectral warriors in ancient armor, bound by their broken vows. They haunt the places where they failed their duties."
+alignment = "lawful evil"
+habitat = ["Ruined castles", "Battlefields", "Sites of betrayal"]
+challenge_rating = "5"
+
+[cerilian_undead.stat_block]
+size = "Medium"
+type = "Undead"
+armor_class = 16
+hit_points = "67 (9d8 + 27)"
+speed = "0 ft., fly 40 ft. (hover)"
+abilities = { STR = 6, DEX = 16, CON = 16, INT = 12, WIS = 14, CHA = 16 }
+damage_resistances = "acid, cold, fire, lightning, thunder; bludgeoning, piercing, slashing from nonmagical attacks"
+damage_immunities = "necrotic, poison"
+condition_immunities = "charmed, exhaustion, frightened, grappled, paralyzed, petrified, poisoned, prone, restrained"
+senses = "darkvision 60 ft., passive Perception 12"
+languages = "Common, any one other language"
+
+[[cerilian_undead.stat_block.special_abilities]]
+name = "Incorporeal Movement"
+description = "The phantom knight can move through other creatures and objects as if they were difficult terrain."
+
+[[cerilian_undead.stat_block.special_abilities]]
+name = "Oathbound"
+description = "The phantom knight cannot stray more than 1 mile from the location of its broken oath."
+
+[[cerilian_undead.stat_block.actions]]
+name = "Spectral Blade"
+description = "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 13 (3d6 + 3) necrotic damage."
+
+[[cerilian_undead.stat_block.actions]]
+name = "Challenge (Recharge 5-6)"
+description = "One creature the phantom knight can see within 30 feet must make a DC 14 Wisdom saving throw. On a failure, the creature has disadvantage on attacks against targets other than the phantom knight for 1 minute."
+
+# -----------------------------------------------------------------------------
+
+[[cerilian_undead]]
+name = "Grave Walker"
+origin = "Corpses animated by ambient bloodline energy"
+description = "More intelligent and dangerous than common zombies, grave walkers retain enough cunning to use weapons and simple tactics."
+alignment = "neutral evil"
+habitat = ["Graveyards near bloodline fonts", "Ancient battlefields", "Cursed lands"]
+challenge_rating = "2"
+
+[cerilian_undead.stat_block]
+size = "Medium"
+type = "Undead"
+armor_class = 12
+hit_points = "37 (5d8 + 15)"
+speed = "30 ft."
+abilities = { STR = 16, DEX = 10, CON = 16, INT = 8, WIS = 10, CHA = 6 }
+saving_throws = "WIS +2"
+damage_immunities = "poison"
+condition_immunities = "poisoned"
+senses = "darkvision 60 ft., passive Perception 10"
+languages = "understands languages it knew in life but cannot speak"
+
+[[cerilian_undead.stat_block.actions]]
+name = "Multiattack"
+description = "The grave walker makes two melee attacks."
+
+[[cerilian_undead.stat_block.actions]]
+name = "Longsword"
+description = "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) slashing damage."
+
+# -----------------------------------------------------------------------------
+
+[[cerilian_undead]]
+name = "Soul Reaver"
+origin = "Priests of Azrai who became undead horrors"
+description = "Floating, robed figures with skeletal hands that reach for the living. They can tear the soul from a body."
+alignment = "chaotic evil"
+habitat = ["Desecrated temples", "Sites of mass death", "The Shadow World borders"]
+challenge_rating = "9"
+
+[cerilian_undead.stat_block]
+size = "Medium"
+type = "Undead"
+armor_class = 15
+hit_points = "104 (16d8 + 32)"
+speed = "0 ft., fly 60 ft. (hover)"
+abilities = { STR = 6, DEX = 18, CON = 14, INT = 14, WIS = 16, CHA = 18 }
+saving_throws = "DEX +8, WIS +7, CHA +8"
+damage_resistances = "acid, cold, fire, lightning, thunder; bludgeoning, piercing, slashing from nonmagical attacks"
+damage_immunities = "necrotic, poison"
+condition_immunities = "charmed, exhaustion, frightened, grappled, paralyzed, petrified, poisoned, prone, restrained"
+senses = "darkvision 120 ft., passive Perception 13"
+languages = "the languages it knew in life"
+
+[[cerilian_undead.stat_block.special_abilities]]
+name = "Incorporeal Movement"
+description = "The soul reaver can move through creatures and objects as difficult terrain."
+
+[[cerilian_undead.stat_block.special_abilities]]
+name = "Soul Sight"
+description = "The soul reaver can see the soul of any creature within 60 feet, even through walls."
+
+[[cerilian_undead.stat_block.actions]]
+name = "Soul Rend"
+description = "Melee Spell Attack: +8 to hit, reach 5 ft., one creature. Hit: 22 (4d8 + 4) necrotic damage. The target must succeed on a DC 16 Charisma saving throw or have its soul partially torn, reducing its maximum hit points by an amount equal to the necrotic damage taken. If this reduces a creature to 0 hit points, it dies and cannot be resurrected except by a wish spell."
+
+# =============================================================================
+# FEY CREATURES OF THE SIDHE
+# =============================================================================
+# The elves of Cerilia brought fey creatures from their homeland. These beings
+# serve the Sidhe or have gone wild in the forests.
+# =============================================================================
+
+[[fey_creatures]]
+name = "Thorn Guardian"
+origin = "Created by elven magic to protect sacred groves"
+description = "A humanoid shape woven from thorny vines, animated by fey magic. They are patient, deadly, and utterly loyal to their groves."
+alignment = "neutral"
+habitat = ["Elven forests", "Sacred groves", "Fey crossings"]
+challenge_rating = "5"
+
+[fey_creatures.stat_block]
+size = "Large"
+type = "Plant"
+armor_class = 16
+hit_points = "76 (9d10 + 27)"
+speed = "30 ft."
+abilities = { STR = 18, DEX = 12, CON = 16, INT = 8, WIS = 14, CHA = 10 }
+damage_vulnerabilities = "fire"
+damage_resistances = "bludgeoning, piercing"
+condition_immunities = "charmed, exhaustion, frightened"
+senses = "darkvision 60 ft., passive Perception 12"
+languages = "Elvish, Sylvan"
+
+[[fey_creatures.stat_block.special_abilities]]
+name = "False Appearance"
+description = "While motionless, the thorn guardian is indistinguishable from a normal tangle of thorns."
+
+[[fey_creatures.stat_block.special_abilities]]
+name = "Grove Bond"
+description = "While within its protected grove, the thorn guardian has advantage on all saving throws and regenerates 5 hit points at the start of its turn."
+
+[[fey_creatures.stat_block.actions]]
+name = "Multiattack"
+description = "The thorn guardian makes two thorn whip attacks."
+
+[[fey_creatures.stat_block.actions]]
+name = "Thorn Whip"
+description = "Melee Weapon Attack: +7 to hit, reach 15 ft., one target. Hit: 13 (2d8 + 4) piercing damage plus 7 (2d6) poison damage."
+
+[[fey_creatures.stat_block.actions]]
+name = "Entangling Growth (Recharge 5-6)"
+description = "Thorny vines erupt in a 20-foot radius centered on the guardian. Each creature in that area must make a DC 14 Strength saving throw or be restrained. A restrained creature takes 7 (2d6) piercing damage at the start of each of its turns."
+
+[fey_creatures.oracle_integration]
+encounter_trigger = "Entering elven territory without permission"
+adventure_seeds = [
+    "A grove's guardians have awakened against intruders",
+    "An elf offers a thorn guardian's service as payment",
+    "Guardians attack - but they're protecting something specific"
+]
+
+# -----------------------------------------------------------------------------
+
+[[fey_creatures]]
+name = "Moonlight Dancer"
+origin = "Fey spirits that embody elven music and celebration"
+description = "Ethereal figures of pure moonlight that dance endlessly. Those who watch too long become entranced and may dance until they die of exhaustion."
+alignment = "chaotic neutral"
+habitat = ["Moonlit clearings", "Elven celebrations", "Ancient standing stones"]
+challenge_rating = "4"
+
+[fey_creatures.stat_block]
+size = "Medium"
+type = "Fey"
+armor_class = 14
+hit_points = "55 (10d8 + 10)"
+speed = "40 ft., fly 40 ft. (hover)"
+abilities = { STR = 8, DEX = 18, CON = 12, INT = 12, WIS = 14, CHA = 18 }
+damage_resistances = "bludgeoning, piercing, slashing from nonmagical attacks"
+damage_immunities = "radiant"
+condition_immunities = "charmed, exhaustion"
+senses = "darkvision 60 ft., passive Perception 12"
+languages = "Elvish, Sylvan"
+
+[[fey_creatures.stat_block.special_abilities]]
+name = "Entrancing Dance"
+description = "Any creature that can see the dancer and starts its turn within 30 feet must succeed on a DC 14 Wisdom saving throw or be charmed. While charmed, the creature must use its movement to dance and cannot take actions. The creature can repeat the save at the end of each turn."
+
+[[fey_creatures.stat_block.special_abilities]]
+name = "Moonlight Form"
+description = "The dancer takes no damage from nonmagical attacks while in moonlight."
+
+[[fey_creatures.stat_block.actions]]
+name = "Moonbeam Touch"
+description = "Melee Spell Attack: +6 to hit, reach 5 ft., one target. Hit: 14 (4d6) radiant damage."
+
+[[fey_creatures.stat_block.actions]]
+name = "Captivating Song (Recharge 5-6)"
+description = "All creatures within 60 feet that can hear must make a DC 14 Wisdom saving throw or be charmed for 1 minute."
+
+# -----------------------------------------------------------------------------
+
+[[fey_creatures]]
+name = "Shadow Hound"
+origin = "Hunting beasts from the elves' original homeland"
+description = "Lean, black hounds that exist half in the material world and half in shadow. They are prized as hunting companions by elven lords."
+alignment = "neutral"
+habitat = ["Elven courts", "Forest shadows", "Hunting grounds"]
+challenge_rating = "3"
+
+[fey_creatures.stat_block]
+size = "Medium"
+type = "Fey"
+armor_class = 14
+hit_points = "45 (7d8 + 14)"
+speed = "50 ft."
+abilities = { STR = 16, DEX = 18, CON = 14, INT = 8, WIS = 14, CHA = 10 }
+skills = "Perception +6, Stealth +8"
+damage_resistances = "necrotic"
+senses = "darkvision 120 ft., passive Perception 16"
+languages = "understands Elvish and Sylvan"
+
+[[fey_creatures.stat_block.special_abilities]]
+name = "Shadow Stride"
+description = "As a bonus action, the hound can teleport up to 30 feet to an unoccupied space in dim light or darkness."
+
+[[fey_creatures.stat_block.special_abilities]]
+name = "Pack Tactics"
+description = "The hound has advantage on attacks if an ally is within 5 feet of the target."
+
+[[fey_creatures.stat_block.actions]]
+name = "Bite"
+description = "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 11 (2d6 + 4) piercing damage plus 4 (1d8) necrotic damage."
+
+# -----------------------------------------------------------------------------
+
+[[fey_creatures]]
+name = "Winterwight"
+origin = "Spirits of elves who died in the original flight from their homeland"
+description = "Ghostly elves wreathed in eternal frost. They mourn their lost home and bring deadly cold wherever they wander."
+alignment = "neutral evil"
+habitat = ["Ancient elven ruins", "Sites of elven tragedy", "Winter storms"]
+challenge_rating = "7"
+
+[fey_creatures.stat_block]
+size = "Medium"
+type = "Undead"
+armor_class = 15
+hit_points = "90 (12d8 + 36)"
+speed = "0 ft., fly 50 ft. (hover)"
+abilities = { STR = 6, DEX = 18, CON = 16, INT = 14, WIS = 16, CHA = 16 }
+damage_resistances = "acid, fire, lightning, thunder; bludgeoning, piercing, slashing from nonmagical attacks"
+damage_immunities = "cold, necrotic, poison"
+condition_immunities = "charmed, exhaustion, frightened, grappled, paralyzed, petrified, poisoned, prone, restrained"
+senses = "darkvision 60 ft., passive Perception 13"
+languages = "Elvish, Sidhelien"
+
+[[fey_creatures.stat_block.special_abilities]]
+name = "Aura of Cold"
+description = "Any creature that starts its turn within 10 feet of the winterwight takes 7 (2d6) cold damage."
+
+[[fey_creatures.stat_block.special_abilities]]
+name = "Incorporeal Movement"
+description = "The winterwight can move through creatures and objects as difficult terrain."
+
+[[fey_creatures.stat_block.actions]]
+name = "Freezing Touch"
+description = "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 17 (4d6 + 3) cold damage plus 10 (3d6) necrotic damage."
+
+[[fey_creatures.stat_block.actions]]
+name = "Winter's Lament (Recharge 5-6)"
+description = "The winterwight releases a mournful wail. Each creature within 30 feet that can hear it must make a DC 15 Constitution saving throw, taking 28 (8d6) cold damage on a failed save, or half as much on a successful one."
+
+# =============================================================================
+# SHADOW WORLD CREATURES
+# =============================================================================
+# Beings from the Shadow World, the dark reflection of Cerilia.
+# =============================================================================
+
+[[shadow_world_creatures]]
+name = "Shadow Walker"
+origin = "Humans transformed by extended exposure to the Shadow World"
+description = "Gaunt humanoids with grey skin and empty eyes. They serve the powers of the Shadow World and can move between worlds."
+alignment = "neutral evil"
+habitat = ["Shadow World", "Places where the veil is thin", "Serving shadow powers"]
+challenge_rating = "4"
+
+[shadow_world_creatures.stat_block]
+size = "Medium"
+type = "Humanoid"
+armor_class = 14
+hit_points = "52 (8d8 + 16)"
+speed = "30 ft."
+abilities = { STR = 14, DEX = 18, CON = 14, INT = 12, WIS = 14, CHA = 10 }
+skills = "Stealth +8, Perception +4"
+damage_resistances = "necrotic"
+senses = "darkvision 120 ft., passive Perception 14"
+languages = "Common, Shadow Speech"
+
+[[shadow_world_creatures.stat_block.special_abilities]]
+name = "Shadow Step"
+description = "As a bonus action, the shadow walker can teleport up to 30 feet to an unoccupied space in dim light or darkness."
+
+[[shadow_world_creatures.stat_block.special_abilities]]
+name = "Sunlight Sensitivity"
+description = "While in sunlight, the shadow walker has disadvantage on attack rolls and Wisdom (Perception) checks that rely on sight."
+
+[[shadow_world_creatures.stat_block.actions]]
+name = "Multiattack"
+description = "The shadow walker makes two shadow blade attacks."
+
+[[shadow_world_creatures.stat_block.actions]]
+name = "Shadow Blade"
+description = "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 8 (1d8 + 4) slashing damage plus 7 (2d6) necrotic damage."
+
+[shadow_world_creatures.oracle_integration]
+encounter_trigger = "Near shadow crossings or at night"
+adventure_seeds = [
+    "Shadow walkers are kidnapping villagers",
+    "One seeks to escape its masters",
+    "They're preparing a larger incursion"
+]
+
+# -----------------------------------------------------------------------------
+
+[[shadow_world_creatures]]
+name = "Nightmare Beast"
+origin = "Predators native to the Shadow World"
+description = "Hulking creatures of living darkness with too many limbs and mouths. They exist to hunt and feed on fear."
+alignment = "chaotic evil"
+habitat = ["Shadow World", "Places of fear and despair", "Nightmares made manifest"]
+challenge_rating = "8"
+
+[shadow_world_creatures.stat_block]
+size = "Large"
+type = "Aberration"
+armor_class = 15
+hit_points = "123 (13d10 + 52)"
+speed = "40 ft."
+abilities = { STR = 20, DEX = 14, CON = 18, INT = 8, WIS = 14, CHA = 16 }
+saving_throws = "WIS +5, CHA +6"
+damage_resistances = "bludgeoning, piercing, slashing from nonmagical attacks"
+damage_immunities = "necrotic, psychic"
+condition_immunities = "frightened"
+senses = "darkvision 120 ft., passive Perception 12"
+languages = "understands all languages but cannot speak"
+
+[[shadow_world_creatures.stat_block.special_abilities]]
+name = "Aura of Fear"
+description = "Any creature that starts its turn within 30 feet of the nightmare beast must succeed on a DC 14 Wisdom saving throw or be frightened until the start of its next turn."
+
+[[shadow_world_creatures.stat_block.special_abilities]]
+name = "Fear Feeder"
+description = "When a creature within 30 feet fails a saving throw against being frightened, the nightmare beast regains 10 hit points."
+
+[[shadow_world_creatures.stat_block.actions]]
+name = "Multiattack"
+description = "The nightmare beast makes three attacks: one with its bite and two with its claws."
+
+[[shadow_world_creatures.stat_block.actions]]
+name = "Bite"
+description = "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 18 (3d8 + 5) piercing damage plus 9 (2d8) psychic damage."
+
+[[shadow_world_creatures.stat_block.actions]]
+name = "Claws"
+description = "Melee Weapon Attack: +8 to hit, reach 10 ft., one target. Hit: 14 (2d8 + 5) slashing damage."
+
+# -----------------------------------------------------------------------------
+
+[[shadow_world_creatures]]
+name = "Shadow Wraith"
+origin = "Souls lost between worlds, trapped in shadow"
+description = "Wisps of darkness that vaguely retain humanoid shape. They hunger for the warmth of life and the light of the sun they can never again feel."
+alignment = "neutral evil"
+habitat = ["Shadow World", "Places of death", "Anywhere the veil is thin"]
+challenge_rating = "5"
+
+[shadow_world_creatures.stat_block]
+size = "Medium"
+type = "Undead"
+armor_class = 13
+hit_points = "67 (9d8 + 27)"
+speed = "0 ft., fly 60 ft. (hover)"
+abilities = { STR = 6, DEX = 16, CON = 16, INT = 12, WIS = 14, CHA = 14 }
+damage_resistances = "acid, cold, fire, lightning, thunder; bludgeoning, piercing, slashing from nonmagical attacks that aren't silvered"
+damage_immunities = "necrotic, poison"
+condition_immunities = "charmed, exhaustion, grappled, paralyzed, petrified, poisoned, prone, restrained"
+senses = "darkvision 60 ft., passive Perception 12"
+languages = "the languages it knew in life"
+
+[[shadow_world_creatures.stat_block.special_abilities]]
+name = "Incorporeal Movement"
+description = "The wraith can move through other creatures and objects as if they were difficult terrain."
+
+[[shadow_world_creatures.stat_block.special_abilities]]
+name = "Sunlight Sensitivity"
+description = "While in sunlight, the wraith has disadvantage on attack rolls, ability checks, and saving throws."
+
+[[shadow_world_creatures.stat_block.special_abilities]]
+name = "Create Spawn"
+description = "A humanoid slain by the wraith rises 24 hours later as a new shadow wraith under this wraith's control."
+
+[[shadow_world_creatures.stat_block.actions]]
+name = "Life Drain"
+description = "Melee Weapon Attack: +6 to hit, reach 5 ft., one creature. Hit: 21 (4d8 + 3) necrotic damage. The target must succeed on a DC 14 Constitution saving throw or its hit point maximum is reduced by an amount equal to the damage taken."
+
+# -----------------------------------------------------------------------------
+
+[[shadow_world_creatures]]
+name = "Void Stalker"
+origin = "Assassins trained in the Shadow World"
+description = "Elite killers who have embraced the shadow, becoming more than human. They are employed by the dark powers of the Shadow World."
+alignment = "lawful evil"
+habitat = ["Shadow World", "Wherever their targets are", "Courts of shadow powers"]
+challenge_rating = "9"
+
+[shadow_world_creatures.stat_block]
+size = "Medium"
+type = "Humanoid"
+armor_class = 17
+hit_points = "97 (13d8 + 39)"
+speed = "40 ft."
+abilities = { STR = 14, DEX = 20, CON = 16, INT = 14, WIS = 16, CHA = 12 }
+saving_throws = "DEX +9, INT +6, WIS +7"
+skills = "Acrobatics +9, Perception +7, Stealth +13"
+damage_resistances = "necrotic"
+senses = "darkvision 120 ft., blindsight 30 ft., passive Perception 17"
+languages = "Common, Shadow Speech, Thieves' Cant"
+
+[[shadow_world_creatures.stat_block.special_abilities]]
+name = "Assassinate"
+description = "During its first turn, the stalker has advantage on attack rolls against any creature that hasn't taken a turn. Any hit against a surprised creature is a critical hit."
+
+[[shadow_world_creatures.stat_block.special_abilities]]
+name = "Shadow Meld"
+description = "While in dim light or darkness, the stalker can take the Hide action as a bonus action."
+
+[[shadow_world_creatures.stat_block.special_abilities]]
+name = "Shadow Step"
+description = "As a bonus action, the stalker can teleport up to 60 feet to an unoccupied space in dim light or darkness."
+
+[[shadow_world_creatures.stat_block.actions]]
+name = "Multiattack"
+description = "The stalker makes three shadow blade attacks."
+
+[[shadow_world_creatures.stat_block.actions]]
+name = "Shadow Blade"
+description = "Melee Weapon Attack: +9 to hit, reach 5 ft., one target. Hit: 12 (2d6 + 5) slashing damage plus 14 (4d6) necrotic damage."
+
+# =============================================================================
+# REGIONAL BEASTS
+# =============================================================================
+# Creatures found in specific regions of Cerilia, adapted to their environments.
+# =============================================================================
+
+[[regional_beasts]]
+name = "Anuirean War Dog"
+region = "Anuire"
+description = "Large mastiffs bred for war, fiercely loyal and armored for battle."
+size = "Medium"
+type = "Beast"
+challenge_rating = "1"
+
+[regional_beasts.stat_block]
+armor_class = 14
+hit_points = "26 (4d8 + 8)"
+speed = "40 ft."
+abilities = { STR = 16, DEX = 12, CON = 14, INT = 4, WIS = 12, CHA = 8 }
+skills = "Perception +3"
+senses = "passive Perception 13"
+
+[[regional_beasts.stat_block.actions]]
+name = "Bite"
+description = "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 8 (1d10 + 3) piercing damage. If the target is Medium or smaller, it must succeed on a DC 13 Strength saving throw or be knocked prone."
+
+# -----------------------------------------------------------------------------
+
+[[regional_beasts]]
+name = "Khinasi Sand Serpent"
+region = "Khinasi"
+description = "Large venomous snakes that burrow beneath desert sands, emerging to strike unwary travelers."
+size = "Large"
+type = "Beast"
+challenge_rating = "3"
+
+[regional_beasts.stat_block]
+armor_class = 14
+hit_points = "52 (7d10 + 14)"
+speed = "30 ft., burrow 30 ft."
+abilities = { STR = 16, DEX = 18, CON = 14, INT = 2, WIS = 12, CHA = 4 }
+senses = "blindsight 30 ft., tremorsense 60 ft., passive Perception 11"
+
+[[regional_beasts.stat_block.special_abilities]]
+name = "Sand Ambush"
+description = "If the serpent emerges from beneath the sand within 5 feet of a creature that is unaware of its presence, it has advantage on its first attack roll."
+
+[[regional_beasts.stat_block.actions]]
+name = "Bite"
+description = "Melee Weapon Attack: +6 to hit, reach 10 ft., one target. Hit: 11 (2d6 + 4) piercing damage plus 10 (3d6) poison damage. The target must make a DC 13 Constitution saving throw or be poisoned for 1 hour."
+
+# -----------------------------------------------------------------------------
+
+[[regional_beasts]]
+name = "Brecht Sea Drake"
+region = "Brecht"
+description = "Small dragon-like creatures that lair along the coasts. Not true dragons, but dangerous predators."
+size = "Small"
+type = "Dragon"
+challenge_rating = "2"
+
+[regional_beasts.stat_block]
+armor_class = 14
+hit_points = "33 (6d6 + 12)"
+speed = "20 ft., fly 60 ft., swim 40 ft."
+abilities = { STR = 14, DEX = 16, CON = 14, INT = 6, WIS = 12, CHA = 10 }
+skills = "Perception +3, Stealth +5"
+damage_resistances = "cold"
+senses = "darkvision 60 ft., passive Perception 13"
+languages = "understands Draconic but cannot speak"
+
+[[regional_beasts.stat_block.actions]]
+name = "Bite"
+description = "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 7 (1d8 + 3) piercing damage plus 4 (1d8) cold damage."
+
+[[regional_beasts.stat_block.actions]]
+name = "Frost Breath (Recharge 5-6)"
+description = "The drake exhales a 15-foot cone of cold. Each creature in that area must make a DC 12 Constitution saving throw, taking 14 (4d6) cold damage on a failed save, or half as much on a successful one."
+
+# -----------------------------------------------------------------------------
+
+[[regional_beasts]]
+name = "Rjurik Winter Wolf"
+region = "Rjurik"
+description = "Massive wolves touched by the cold of the north. They are intelligent and sometimes ally with Rjurik tribes."
+size = "Large"
+type = "Monstrosity"
+challenge_rating = "3"
+
+[regional_beasts.stat_block]
+armor_class = 13
+hit_points = "75 (10d10 + 20)"
+speed = "50 ft."
+abilities = { STR = 18, DEX = 13, CON = 14, INT = 7, WIS = 12, CHA = 8 }
+skills = "Perception +5, Stealth +3"
+damage_immunities = "cold"
+senses = "passive Perception 15"
+languages = "Common, Giant, Winter Wolf"
+
+[[regional_beasts.stat_block.special_abilities]]
+name = "Pack Tactics"
+description = "The wolf has advantage on attack rolls against a creature if at least one of the wolf's allies is within 5 feet of the creature."
+
+[[regional_beasts.stat_block.special_abilities]]
+name = "Snow Camouflage"
+description = "The wolf has advantage on Dexterity (Stealth) checks made to hide in snowy terrain."
+
+[[regional_beasts.stat_block.actions]]
+name = "Bite"
+description = "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 11 (2d6 + 4) piercing damage plus 4 (1d8) cold damage."
+
+[[regional_beasts.stat_block.actions]]
+name = "Cold Breath (Recharge 5-6)"
+description = "The wolf exhales a blast of freezing wind in a 15-foot cone. Each creature in that area must make a DC 12 Dexterity saving throw, taking 18 (4d8) cold damage on a failed save, or half as much on a successful one."
+
+# -----------------------------------------------------------------------------
+
+[[regional_beasts]]
+name = "Vos Battle Boar"
+region = "Vosgaard"
+description = "Enormous, ill-tempered boars bred by the Vos as war mounts. They are as dangerous as their riders."
+size = "Large"
+type = "Beast"
+challenge_rating = "2"
+
+[regional_beasts.stat_block]
+armor_class = 12
+hit_points = "42 (5d10 + 15)"
+speed = "40 ft."
+abilities = { STR = 18, DEX = 10, CON = 16, INT = 4, WIS = 12, CHA = 6 }
+senses = "passive Perception 11"
+
+[[regional_beasts.stat_block.special_abilities]]
+name = "Charge"
+description = "If the boar moves at least 20 feet straight toward a target and then hits it with a tusk attack on the same turn, the target takes an extra 7 (2d6) slashing damage."
+
+[[regional_beasts.stat_block.special_abilities]]
+name = "Relentless (Recharges after Short Rest)"
+description = "If the boar takes 10 damage or less that would reduce it to 0 hit points, it is reduced to 1 hit point instead."
+
+[[regional_beasts.stat_block.actions]]
+name = "Tusk"
+description = "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 11 (2d6 + 4) slashing damage."
+
+# -----------------------------------------------------------------------------
+
+[[regional_beasts]]
+name = "Elven Mooncat"
+region = "Elven Forests"
+description = "Graceful felines with silvery fur that glows faintly in moonlight. They serve as companions to elven rangers."
+size = "Medium"
+type = "Fey"
+challenge_rating = "1"
+
+[regional_beasts.stat_block]
+armor_class = 13
+hit_points = "22 (4d8 + 4)"
+speed = "50 ft., climb 40 ft."
+abilities = { STR = 14, DEX = 17, CON = 12, INT = 8, WIS = 14, CHA = 12 }
+skills = "Perception +4, Stealth +7"
+senses = "darkvision 60 ft., passive Perception 14"
+languages = "understands Elvish"
+
+[[regional_beasts.stat_block.special_abilities]]
+name = "Keen Smell"
+description = "The mooncat has advantage on Wisdom (Perception) checks that rely on smell."
+
+[[regional_beasts.stat_block.special_abilities]]
+name = "Moonlight Invisibility"
+description = "While in moonlight, the mooncat can turn invisible as a bonus action."
+
+[[regional_beasts.stat_block.actions]]
+name = "Multiattack"
+description = "The mooncat makes two claw attacks."
+
+[[regional_beasts.stat_block.actions]]
+name = "Claw"
+description = "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) slashing damage."
+
+# =============================================================================
+# GOBLINOID AND HUMANOID THREATS
+# =============================================================================
+# Intelligent humanoid enemies unique or especially important to Cerilia.
+# =============================================================================
+
+[[humanoid_threats]]
+name = "Orog Warrior"
+origin = "Orogs - Cerilian orcs, more disciplined and dangerous than typical orcs"
+description = "Larger and more intelligent than common orcs, orogs are the shock troops of the Gorgon and other dark powers."
+alignment = "lawful evil"
+challenge_rating = "2"
+
+[humanoid_threats.stat_block]
+size = "Medium"
+type = "Humanoid (orog)"
+armor_class = 16
+hit_points = "37 (5d8 + 15)"
+speed = "30 ft."
+abilities = { STR = 18, DEX = 12, CON = 16, INT = 10, WIS = 12, CHA = 10 }
+skills = "Athletics +6, Intimidation +2"
+senses = "darkvision 60 ft., passive Perception 11"
+languages = "Common, Orog"
+
+[[humanoid_threats.stat_block.special_abilities]]
+name = "Disciplined"
+description = "The orog has advantage on saving throws against being charmed or frightened."
+
+[[humanoid_threats.stat_block.actions]]
+name = "Multiattack"
+description = "The orog makes two attacks with its greataxe."
+
+[[humanoid_threats.stat_block.actions]]
+name = "Greataxe"
+description = "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 10 (1d12 + 4) slashing damage."
+
+# -----------------------------------------------------------------------------
+
+[[humanoid_threats]]
+name = "Orog Warlord"
+description = "Elite orog commanders who lead war bands and answer directly to the Gorgon."
+alignment = "lawful evil"
+challenge_rating = "6"
+
+[humanoid_threats.stat_block]
+size = "Medium"
+type = "Humanoid (orog)"
+armor_class = 18
+hit_points = "93 (11d8 + 44)"
+speed = "30 ft."
+abilities = { STR = 20, DEX = 14, CON = 18, INT = 12, WIS = 14, CHA = 14 }
+saving_throws = "STR +8, CON +7, WIS +5"
+skills = "Athletics +8, Intimidation +5, Perception +5"
+senses = "darkvision 60 ft., passive Perception 15"
+languages = "Common, Orog"
+
+[[humanoid_threats.stat_block.special_abilities]]
+name = "Command Presence"
+description = "Allies within 30 feet of the warlord who can see or hear it have advantage on saving throws against being charmed or frightened."
+
+[[humanoid_threats.stat_block.actions]]
+name = "Multiattack"
+description = "The warlord makes three attacks with its battleaxe."
+
+[[humanoid_threats.stat_block.actions]]
+name = "Battleaxe"
+description = "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 12 (1d8 + 8) slashing damage."
+
+[[humanoid_threats.stat_block.actions]]
+name = "War Cry (Recharge 5-6)"
+description = "Each ally within 60 feet that can hear the warlord gains 10 temporary hit points and has advantage on attack rolls until the end of their next turn."
+
+# -----------------------------------------------------------------------------
+
+[[humanoid_threats]]
+name = "Gnoll Marauder"
+origin = "Gnolls of Cerilia serve the powers of darkness"
+description = "Savage hyena-headed humanoids that plague the borderlands."
+alignment = "chaotic evil"
+challenge_rating = "2"
+
+[humanoid_threats.stat_block]
+size = "Medium"
+type = "Humanoid (gnoll)"
+armor_class = 14
+hit_points = "32 (5d8 + 10)"
+speed = "30 ft."
+abilities = { STR = 16, DEX = 14, CON = 14, INT = 8, WIS = 10, CHA = 8 }
+senses = "darkvision 60 ft., passive Perception 10"
+languages = "Gnoll"
+
+[[humanoid_threats.stat_block.special_abilities]]
+name = "Rampage"
+description = "When the gnoll reduces a creature to 0 hit points with a melee attack, it can move up to half its speed and make a bite attack."
+
+[[humanoid_threats.stat_block.actions]]
+name = "Bite"
+description = "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) piercing damage."
+
+[[humanoid_threats.stat_block.actions]]
+name = "Spear"
+description = "Melee or Ranged Weapon Attack: +5 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 6 (1d6 + 3) piercing damage."
+
+# =============================================================================
+# ORACLE CONFIGURATION
+# =============================================================================
+
+[oracle_config]
+description = "Configuration for monster encounters in the oracle system"
+
+[oracle_config.monster_by_terrain]
+forest = ["Thorn Guardian", "Shadow Hound", "Moonlight Dancer", "Elven Mooncat", "Bloodhound"]
+mountains = ["Chimaera", "Orog Warrior", "Winter Wolf"]
+desert = ["Sand Serpent", "Lamia", "Manticore"]
+swamp = ["Blood Elemental", "Crimson Ooze", "Grave Walker"]
+coast = ["Sea Drake", "Siren", "Hydra"]
+plains = ["War Dog", "Battle Boar", "Gnoll Marauder"]
+underground = ["Shadow Walker", "Nightmare Beast", "Ghoul King"]
+urban = ["Bloodwight", "Phantom Knight", "Shadow Wraith"]
+
+[oracle_config.monster_by_region]
+anuire = ["Orog Warrior", "Bloodhound", "War Dog", "Phantom Knight", "Grave Walker"]
+khinasi = ["Sand Serpent", "Soul Reaver", "Lamia", "Blood Rose"]
+brecht = ["Sea Drake", "Shadow Walker", "Basilisk"]
+rjurik = ["Winter Wolf", "Winterwight", "Troll"]
+vosgaard = ["Battle Boar", "Nightmare Beast", "Gnoll Marauder"]
+elven_lands = ["Thorn Guardian", "Moonlight Dancer", "Shadow Hound", "Mooncat"]
+
+[oracle_config.challenge_rating_ranges]
+easy = [1, 3]
+moderate = [4, 6]
+hard = [7, 10]
+deadly = [11, 15]
+legendary = [16, 30]

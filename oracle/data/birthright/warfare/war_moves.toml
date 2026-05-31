@@ -1,0 +1,412 @@
+# Birthright Domain-Level Warfare - War Moves
+# Compatible with Oracle WargameAI system
+# Actions available to units during mass combat
+
+# =============================================================================
+# ATTACK ACTIONS
+# =============================================================================
+
+[[moves]]
+name = "Melee Attack"
+type = "attack"
+action_type = "focus_fire"
+description = "Close with the enemy and engage in hand-to-hand combat"
+requirements = ["Adjacent to enemy unit"]
+effects = ["Roll attack dice vs enemy defense", "Both units may take casualties"]
+modifiers = [
+    { condition = "Attacking from higher ground", bonus = "+1 attack die" },
+    { condition = "Attacking into fortification", penalty = "-2 attack dice" },
+    { condition = "Flank attack", bonus = "+1 attack die, enemy -1 defense" },
+    { condition = "Rear attack", bonus = "+2 attack dice, enemy -2 defense" }
+]
+
+[[moves]]
+name = "Charge"
+type = "attack"
+action_type = "assault"
+description = "Rush the enemy position at full speed to maximize impact"
+requirements = ["Not adjacent to enemy", "Clear path to target", "Unit has remaining movement"]
+effects = ["Move up to double movement toward enemy", "Bonus attack dice on first round", "Must engage if reaching enemy"]
+modifiers = [
+    { condition = "Cavalry charge", bonus = "+2 attack dice" },
+    { condition = "Downhill charge", bonus = "+1 attack die" },
+    { condition = "Charging pikemen set for charge", penalty = "Enemy attacks first, +1 enemy attack" },
+    { condition = "Disrupted charge (terrain)", penalty = "-1 attack die, no charge bonus" }
+]
+
+[[moves]]
+name = "Missile Attack"
+type = "attack"
+action_type = "focus_fire"
+description = "Attack with ranged weapons before the enemy can close"
+requirements = ["Ranged weapon capability", "Line of sight to target", "Target within range"]
+effects = ["Roll attack dice vs enemy defense", "Defender cannot strike back unless also has ranged"]
+modifiers = [
+    { condition = "Long range", penalty = "-1 attack die" },
+    { condition = "Target in cover", penalty = "-1 attack die" },
+    { condition = "Target in hard cover", penalty = "-2 attack dice" },
+    { condition = "Volley fire (3+ archer units)", bonus = "+1 attack die each" },
+    { condition = "High ground", bonus = "+1 attack die" },
+    { condition = "Target moving", penalty = "-1 attack die" }
+]
+
+[[moves]]
+name = "Bombardment"
+type = "attack"
+action_type = "focus_fire"
+description = "Use siege weapons to attack from extreme range"
+requirements = ["Siege weapons", "Target within bombardment range", "Unit did not move"]
+effects = ["Roll attack dice vs defense", "Can damage fortifications", "Ignores most cover"]
+modifiers = [
+    { condition = "Target is fortification", bonus = "+2 attack dice" },
+    { condition = "Indirect fire (no line of sight)", penalty = "-2 attack dice" },
+    { condition = "Spotter unit has line of sight", bonus = "Negates indirect fire penalty" },
+    { condition = "Target is moving", penalty = "-3 attack dice" }
+]
+
+[[moves]]
+name = "Combined Arms Attack"
+type = "attack"
+action_type = "concentrate"
+description = "Coordinate multiple units for a concentrated assault"
+requirements = ["2+ friendly units can attack same target", "Commander must coordinate"]
+effects = ["All participating units attack simultaneously", "Defender splits defense", "+1 attack die per additional unit after first"]
+modifiers = [
+    { condition = "Units from different types", bonus = "+1 additional attack die" },
+    { condition = "Units not trained together", penalty = "-1 attack die each" },
+    { condition = "Commander wounded or absent", penalty = "Cannot coordinate, attack separately" }
+]
+
+# =============================================================================
+# DEFENSIVE ACTIONS
+# =============================================================================
+
+[[moves]]
+name = "Hold Position"
+type = "defend"
+action_type = "hold"
+description = "Maintain current position and prepare for enemy attack"
+requirements = ["Unit not currently routing"]
+effects = ["+1 defense die when attacked", "Cannot move this turn", "Counts as set for charge"]
+modifiers = [
+    { condition = "In prepared position", bonus = "+1 additional defense" },
+    { condition = "In fortification", bonus = "+2 additional defense" },
+    { condition = "Exhausted unit", penalty = "No defensive bonus" }
+]
+
+[[moves]]
+name = "Shield Wall"
+type = "defend"
+action_type = "defensive"
+description = "Form a tight defensive formation with overlapping shields"
+requirements = ["Unit has shields", "Unit is infantry", "5+ models in unit"]
+effects = ["+2 defense dice vs frontal attacks", "-1 attack die while maintaining", "Immune to charge bonus"]
+modifiers = [
+    { condition = "Pikemen in shield wall", bonus = "+1 attack die vs cavalry" },
+    { condition = "Flanked while in shield wall", penalty = "Shield wall broken, -2 defense" },
+    { condition = "Elite infantry", bonus = "No attack penalty" }
+]
+
+[[moves]]
+name = "Fortify"
+type = "defend"
+action_type = "defensive"
+description = "Prepare hasty field fortifications"
+requirements = ["Engineers or infantry unit", "Not engaged in combat", "Terrain allows fortification"]
+effects = ["Create light cover in current position", "Takes full turn to complete", "Cover provides +1 defense"]
+modifiers = [
+    { condition = "Engineers present", bonus = "Completed in half time, provides +2 defense" },
+    { condition = "Rocky or wooded terrain", bonus = "+1 additional defense from natural materials" },
+    { condition = "Swamp or open water", penalty = "Cannot fortify" }
+]
+
+[[moves]]
+name = "Overwatch"
+type = "defend"
+action_type = "suppress"
+description = "Hold fire to attack enemies who move into range"
+requirements = ["Ranged weapon capability", "Did not move this turn"]
+effects = ["Attack first enemy unit that moves into line of sight", "Attack resolved before enemy action"]
+modifiers = [
+    { condition = "Archers on overwatch", bonus = "+1 attack die vs charging enemies" },
+    { condition = "Multiple units on overwatch same area", bonus = "All may fire at same target" }
+]
+
+# =============================================================================
+# MOVEMENT ACTIONS
+# =============================================================================
+
+[[moves]]
+name = "Advance"
+type = "move"
+action_type = "advance"
+description = "Move toward the enemy maintaining combat readiness"
+requirements = ["Unit not engaged in melee", "Clear path exists"]
+effects = ["Move up to normal movement rate", "Can still attack if reaching enemy"]
+modifiers = [
+    { condition = "Difficult terrain", penalty = "Half movement" },
+    { condition = "Forced march", bonus = "Double movement, cannot attack" },
+    { condition = "Cavalry in open terrain", bonus = "+1 movement" }
+]
+
+[[moves]]
+name = "Flank March"
+type = "move"
+action_type = "flank"
+description = "Move to strike the enemy from an unexpected direction"
+requirements = ["Not engaged in melee", "Terrain allows flanking route", "Scout or commander sighted route"]
+effects = ["Move around enemy position", "Next attack counts as flank attack if successful"]
+modifiers = [
+    { condition = "Scouts provided reconnaissance", bonus = "Guaranteed success" },
+    { condition = "Enemy has scouts watching flanks", penalty = "Flanking detected, normal attack only" },
+    { condition = "Difficult terrain on flank", penalty = "Arrives one turn later" }
+]
+
+[[moves]]
+name = "Reposition"
+type = "move"
+action_type = "hold"
+description = "Adjust position to better ground without fully disengaging"
+requirements = ["Unit not locked in melee", "Better position within movement range"]
+effects = ["Move to adjacent position", "Can claim terrain benefits immediately"]
+modifiers = [
+    { condition = "Under fire while repositioning", penalty = "Enemy gets free attack" },
+    { condition = "Screening force covers movement", bonus = "No free enemy attack" }
+]
+
+[[moves]]
+name = "Force March"
+type = "move"
+action_type = "advance"
+description = "Push troops to maximum speed, sacrificing combat readiness"
+requirements = ["Unit not engaged", "Unit not exhausted"]
+effects = ["Move at double normal rate", "Cannot attack this turn", "Unit becomes fatigued"]
+modifiers = [
+    { condition = "Elite or veteran unit", bonus = "No fatigue penalty" },
+    { condition = "Already fatigued", penalty = "Cannot force march" },
+    { condition = "Cavalry", bonus = "Triple movement instead of double" }
+]
+
+# =============================================================================
+# WITHDRAWAL ACTIONS
+# =============================================================================
+
+[[moves]]
+name = "Tactical Withdrawal"
+type = "withdraw"
+action_type = "retreat"
+description = "Fall back in good order while maintaining unit cohesion"
+requirements = ["Unit not routing", "Retreat path exists"]
+effects = ["Move away from enemy at normal speed", "Maintain formation and morale", "Enemy may follow"]
+modifiers = [
+    { condition = "Engaged in melee", penalty = "Enemy gets free attack as you disengage" },
+    { condition = "Screening force covers retreat", bonus = "No free enemy attack" },
+    { condition = "Cavalry pursuing", penalty = "Enemy cavalry may catch retreating infantry" }
+]
+
+[[moves]]
+name = "Fighting Retreat"
+type = "withdraw"
+action_type = "retreat"
+description = "Fall back while continuing to engage pursuing enemies"
+requirements = ["Unit not routing", "Retreat path exists"]
+effects = ["Move at half speed away from enemy", "Can make defensive attacks", "Harder for enemy to pursue"]
+modifiers = [
+    { condition = "Rear guard unit covering", bonus = "Full movement speed" },
+    { condition = "Archers retreating", bonus = "Can make ranged attacks while withdrawing" },
+    { condition = "Cavalry harassing", penalty = "-1 defense while retreating" }
+]
+
+[[moves]]
+name = "Rout"
+type = "withdraw"
+action_type = "retreat"
+description = "Flee in panic, all formation lost"
+requirements = ["Failed morale check", "Automatic after breaking"]
+effects = ["Unit flees at maximum speed", "Cannot attack", "May spread panic to nearby units"]
+modifiers = [
+    { condition = "Pursued by cavalry", penalty = "Caught and destroyed on failed escape roll" },
+    { condition = "Escape route blocked", penalty = "Unit surrenders or is destroyed" },
+    { condition = "General or standard nearby", bonus = "May attempt to rally next turn" }
+]
+
+[[moves]]
+name = "Orderly Retreat"
+type = "withdraw"
+action_type = "retreat"
+description = "Planned withdrawal to prepared positions"
+requirements = ["Fallback position designated", "Commander orders retreat before combat"]
+effects = ["All units withdraw at normal speed", "Maintain formation", "Rally automatically at fallback position"]
+modifiers = [
+    { condition = "Retreat planned in advance", bonus = "No morale penalty" },
+    { condition = "Under heavy pressure", penalty = "One unit per turn may fail to withdraw" },
+    { condition = "Engineers prepared route", bonus = "Obstacles slow pursuers" }
+]
+
+# =============================================================================
+# RALLY ACTIONS
+# =============================================================================
+
+[[moves]]
+name = "Rally"
+type = "rally"
+action_type = "hold"
+description = "Restore order to a shaken or routing unit"
+requirements = ["Unit failed morale but not destroyed", "Commander or standard within range"]
+effects = ["Unit stops fleeing", "Unit returns to shaken status", "Can act normally next turn"]
+modifiers = [
+    { condition = "General's leadership", bonus = "+2 to rally roll" },
+    { condition = "Battle standard nearby", bonus = "+1 to rally roll" },
+    { condition = "Heavy casualties (50%+)", penalty = "-2 to rally roll" },
+    { condition = "Elite unit", bonus = "Re-roll failed rally" }
+]
+
+[[moves]]
+name = "Inspire"
+type = "rally"
+action_type = "hold"
+description = "Leader personally rallies troops through example or oratory"
+requirements = ["Commander present with unit", "Unit shaken or wavering"]
+effects = ["Unit gains +1 morale for rest of battle", "Removes shaken status", "Commander at risk if unit engaged"]
+modifiers = [
+    { condition = "Regent with bloodline", bonus = "+2 morale instead of +1" },
+    { condition = "Holy symbol displayed (appropriate faith)", bonus = "+1 additional morale" },
+    { condition = "Unit has taken 75%+ casualties", penalty = "Inspire automatically fails" }
+]
+
+[[moves]]
+name = "Reform"
+type = "rally"
+action_type = "defensive"
+description = "Reorganize scattered or disrupted unit into combat formation"
+requirements = ["Unit scattered or disrupted", "Not engaged in melee"]
+effects = ["Unit regains formation", "Can act normally next turn", "Regain formation bonuses"]
+modifiers = [
+    { condition = "Veteran unit", bonus = "Reform takes half time" },
+    { condition = "Under fire while reforming", penalty = "-1 defense, may fail reform" },
+    { condition = "Officer present", bonus = "Automatic success" }
+]
+
+# =============================================================================
+# SPECIAL MANEUVERS
+# =============================================================================
+
+[[moves]]
+name = "Feigned Retreat"
+type = "special"
+action_type = "flank"
+description = "Fake a rout to draw enemies into a trap"
+requirements = ["Planned in advance", "Hidden units in position", "High discipline unit"]
+effects = ["Appear to rout, drawing pursuit", "Hidden units attack pursuers from ambush", "Original unit turns and attacks"]
+modifiers = [
+    { condition = "Elite or veteran units", bonus = "Enemies more likely to be fooled" },
+    { condition = "Enemy commander skilled", penalty = "May detect feint" },
+    { condition = "Successful feint", bonus = "Devastating damage to pursuing enemy" }
+]
+
+[[moves]]
+name = "Ambush"
+type = "special"
+action_type = "flank"
+description = "Attack from concealment with surprise"
+requirements = ["Hidden unit", "Enemy moves into ambush area", "Scouts set up ambush"]
+effects = ["+2 attack dice on first attack", "Enemy cannot respond first turn", "Ambushing unit revealed"]
+modifiers = [
+    { condition = "Scouts or irregulars ambushing", bonus = "+1 additional attack die" },
+    { condition = "Enemy has scouts screening", penalty = "Ambush detected, becomes normal attack" },
+    { condition = "Wooded or rough terrain", bonus = "Easier to set up ambush" }
+]
+
+[[moves]]
+name = "Encirclement"
+type = "special"
+action_type = "concentrate"
+description = "Surround enemy force to prevent escape"
+requirements = ["Superior numbers or mobility", "Multiple units available", "Enemy cannot match maneuver"]
+effects = ["Surrounded enemy cannot withdraw", "All attacks against surrounded enemy get +1", "Surrounded enemy -2 morale"]
+modifiers = [
+    { condition = "Complete encirclement", bonus = "Enemy must surrender or be destroyed" },
+    { condition = "Partial encirclement", penalty = "Enemy may break out at cost" },
+    { condition = "Surrounded force larger", penalty = "May break encirclement" }
+]
+
+[[moves]]
+name = "Challenge"
+type = "special"
+action_type = "focus_fire"
+description = "Commander challenges enemy commander to single combat"
+requirements = ["Both commanders present", "Honor compels response (culture dependent)"]
+effects = ["Single combat between commanders", "Winner's side gains +1 morale", "Loser's side -2 morale"]
+modifiers = [
+    { condition = "Anuirean knights must accept", bonus = "Chivalric code enforced" },
+    { condition = "Vos or Rjurik warriors", bonus = "Great honor in accepting" },
+    { condition = "Refusing valid challenge", penalty = "-1 morale for refusing side" },
+    { condition = "Champion wins decisively", bonus = "Enemy may rout immediately" }
+]
+
+[[moves]]
+name = "Bloodline Power"
+type = "special"
+action_type = "assault"
+description = "Regent manifests their bloodline abilities in battle"
+requirements = ["Blooded regent present", "Appropriate bloodline power", "Once per battle typically"]
+effects = ["Various effects based on bloodline", "Can dramatically shift battle", "May exhaust regent"]
+modifiers = [
+    { condition = "Major bloodline", bonus = "More powerful effects" },
+    { condition = "Azrai bloodline", bonus = "Terrifying but may cause fear in own troops" },
+    { condition = "Used while wounded", penalty = "Risk of regent collapse" }
+]
+
+[[moves]]
+name = "Siege Assault"
+type = "special"
+action_type = "assault"
+description = "Storm a fortified position"
+requirements = ["Adjacent to fortification", "Siege equipment helpful", "Commander orders assault"]
+effects = ["Attack fortification directly", "Heavy casualties expected", "If successful, fortification falls"]
+modifiers = [
+    { condition = "Siege towers or ladders", bonus = "Reduce defender advantage" },
+    { condition = "Breach in walls", bonus = "+2 attack, defender loses fortification bonus" },
+    { condition = "Defender prepared", penalty = "-2 attack, defenders get free attacks" },
+    { condition = "Elite assault troops", bonus = "+1 attack die" }
+]
+
+[[moves]]
+name = "Naval Boarding"
+type = "special"
+action_type = "assault"
+description = "Grapple enemy ship and board for hand-to-hand combat"
+requirements = ["Ships adjacent", "Marines or infantry embarked"]
+effects = ["Ships locked together", "Marine combat determines victor", "Losing ship may be captured"]
+modifiers = [
+    { condition = "Marines boarding", bonus = "+2 attack in ship combat" },
+    { condition = "Larger ship boarding smaller", bonus = "+1 attack" },
+    { condition = "Defender has prepared repelling", penalty = "-1 attack for boarders" }
+]
+
+# =============================================================================
+# ACTION TYPE MAPPING - For WargameAI integration
+# =============================================================================
+
+[action_types]
+focus_fire = { description = "Concentrate attacks on priority target", weight_mod = 1.0 }
+split_fire = { description = "Distribute attacks across multiple targets", weight_mod = 0.8 }
+advance = { description = "Move toward enemy position", weight_mod = 1.0 }
+hold = { description = "Maintain current position", weight_mod = 1.0 }
+flank = { description = "Attempt to outmaneuver enemy", weight_mod = 0.9 }
+retreat = { description = "Fall back from enemy", weight_mod = 0.7 }
+suppress = { description = "Pin enemy with ranged fire", weight_mod = 0.9 }
+concentrate = { description = "Mass forces for combined attack", weight_mod = 1.1 }
+defensive = { description = "Prepare defensive position", weight_mod = 1.0 }
+assault = { description = "All-out attack regardless of cost", weight_mod = 0.8 }
+
+# =============================================================================
+# DOCTRINE ACTION PREFERENCES - How doctrines weight actions
+# =============================================================================
+
+[doctrine_preferences]
+horde = { preferred = ["advance", "assault", "concentrate"], avoided = ["retreat", "defensive", "flank"] }
+elite = { preferred = ["focus_fire", "flank", "suppress"], avoided = ["assault", "split_fire"] }
+defensive = { preferred = ["hold", "defensive", "suppress"], avoided = ["advance", "assault", "flank"] }
+alpha_strike = { preferred = ["assault", "focus_fire", "concentrate"], avoided = ["hold", "retreat", "defensive"] }
+guerrilla = { preferred = ["flank", "retreat", "suppress"], avoided = ["hold", "assault", "defensive"] }

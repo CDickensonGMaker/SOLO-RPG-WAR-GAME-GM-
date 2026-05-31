@@ -1,0 +1,163 @@
+# Pacing - Scene pacing, transitions, and narrative flow tools
+# Setting-agnostic pacing elements for any genre
+# Weight: higher = more common (1-3 typical range)
+
+[scene_shifts]
+# Abrupt or dramatic scene transitions
+entries = [
+  { text = "Scene ends abruptly - cut to...", weight = 2 },
+  { text = "Fade to black - when we return...", weight = 2 },
+  { text = "Meanwhile, elsewhere...", weight = 3 },
+  { text = "The scene freezes - we pull back to see...", weight = 1 },
+  { text = "Everything stops as a new element demands attention", weight = 2 },
+  { text = "Hard cut to a parallel scene", weight = 2 },
+  { text = "The focus shifts to another character's perspective", weight = 2 },
+  { text = "We leave this moment at its peak tension", weight = 1 },
+  { text = "Smash cut to the consequences", weight = 2 },
+  { text = "The scene dissolves into memory or flashback", weight = 1 },
+  { text = "Pull back to reveal the larger context", weight = 2 },
+  { text = "Push in on a crucial detail", weight = 2 },
+  { text = "The scene rewinds to show what we missed", weight = 1 },
+  { text = "Flash forward to the aftermath", weight = 1 },
+  { text = "Split perspective - two scenes happen simultaneously", weight = 1 },
+  { text = "Scene ends on a cliffhanger - resolve later", weight = 2 },
+  { text = "Transition through a shared element between scenes", weight = 2 },
+  { text = "The environment transforms around the characters", weight = 1 },
+  { text = "Quick montage of passing time", weight = 2 },
+  { text = "Scene pauses as inner monologue takes over", weight = 2 },
+]
+
+[interruptions]
+# Things that break into the current action
+entries = [
+  { text = "Something interrupts the current action", weight = 3 },
+  { text = "An alarm or warning sounds", weight = 2 },
+  { text = "Someone bursts in with urgent news", weight = 2 },
+  { text = "A loud noise demands attention", weight = 2 },
+  { text = "Someone calls out for help", weight = 2 },
+  { text = "A messenger arrives with important information", weight = 2 },
+  { text = "Environmental danger forces immediate reaction", weight = 2 },
+  { text = "Someone faints, collapses, or is injured", weight = 1 },
+  { text = "An enemy or threat appears suddenly", weight = 2 },
+  { text = "Something explodes, breaks, or collapses", weight = 2 },
+  { text = "A fight breaks out nearby", weight = 2 },
+  { text = "Natural disaster or emergency occurs", weight = 1 },
+  { text = "Someone important demands immediate attention", weight = 2 },
+  { text = "A secret or truth is blurted out", weight = 1 },
+  { text = "Someone unexpected arrives", weight = 2 },
+  { text = "A signal or sign appears", weight = 2 },
+  { text = "Power, light, or resources fail", weight = 2 },
+  { text = "An animal or creature causes disruption", weight = 2 },
+  { text = "A child, innocent, or vulnerable person needs aid", weight = 1 },
+  { text = "Discovery of something that changes everything", weight = 1 },
+  { text = "A confrontation can no longer be avoided", weight = 2 },
+  { text = "Someone makes an accusation", weight = 2 },
+  { text = "An escape attempt occurs", weight = 1 },
+  { text = "Someone reveals themselves or their true nature", weight = 1 },
+  { text = "A deadline or time limit suddenly matters", weight = 2 },
+]
+
+[time_skips]
+# Passage of time indicators
+entries = [
+  { text = "Hours pass...", weight = 3 },
+  { text = "Days later...", weight = 2 },
+  { text = "A week goes by...", weight = 2 },
+  { text = "Months have passed...", weight = 1 },
+  { text = "Years later...", weight = 1 },
+  { text = "The next morning...", weight = 3 },
+  { text = "That night...", weight = 3 },
+  { text = "Dawn breaks...", weight = 2 },
+  { text = "Dusk settles...", weight = 2 },
+  { text = "As the sun reaches its peak...", weight = 2 },
+  { text = "In the dead of night...", weight = 2 },
+  { text = "Some time later...", weight = 3 },
+  { text = "After what feels like an eternity...", weight = 2 },
+  { text = "The seasons change...", weight = 1 },
+  { text = "A long journey later...", weight = 2 },
+  { text = "After the dust settles...", weight = 2 },
+  { text = "Once wounds have healed...", weight = 1 },
+  { text = "When preparations are complete...", weight = 2 },
+  { text = "The waiting ends...", weight = 2 },
+  { text = "After countless attempts...", weight = 2 },
+  { text = "When hope had nearly faded...", weight = 1 },
+  { text = "Generations later...", weight = 1 },
+  { text = "After the crisis passes...", weight = 2 },
+  { text = "Once things return to normal...", weight = 2 },
+  { text = "Just before the deadline...", weight = 2 },
+]
+
+[tension_modifiers]
+# Adjustments to scene tension level
+entries = [
+  { text = "Tension escalates sharply", weight = 2 },
+  { text = "A moment of calm before the storm", weight = 2 },
+  { text = "The pressure becomes unbearable", weight = 1 },
+  { text = "False relief - the danger isn't over", weight = 2 },
+  { text = "Genuine relief - this threat has passed", weight = 2 },
+  { text = "Dread builds slowly", weight = 2 },
+  { text = "Sudden release of built-up tension", weight = 2 },
+  { text = "The situation stabilizes temporarily", weight = 2 },
+  { text = "New information raises the stakes", weight = 2 },
+  { text = "A ticking clock is introduced", weight = 2 },
+  { text = "The deadline arrives", weight = 1 },
+  { text = "Multiple tensions converge", weight = 1 },
+  { text = "Comic relief breaks the mood", weight = 2 },
+  { text = "A quiet moment for reflection", weight = 2 },
+  { text = "The point of no return is crossed", weight = 1 },
+  { text = "Paranoia sets in", weight = 2 },
+  { text = "Trust is tested", weight = 2 },
+  { text = "The worst fears are confirmed", weight = 1 },
+  { text = "Hope emerges from despair", weight = 1 },
+  { text = "Everything that could go wrong does", weight = 1 },
+]
+
+[focus_shifts]
+# Changes in what the narrative focuses on
+entries = [
+  { text = "Focus shifts to the antagonist's perspective", weight = 2 },
+  { text = "A minor character takes center stage", weight = 2 },
+  { text = "The environment itself becomes the focus", weight = 2 },
+  { text = "Internal conflict takes precedence over external", weight = 2 },
+  { text = "External threats override personal matters", weight = 2 },
+  { text = "Relationship dynamics become central", weight = 2 },
+  { text = "Survival becomes the only priority", weight = 2 },
+  { text = "The mystery deepens and demands investigation", weight = 2 },
+  { text = "Action gives way to planning", weight = 2 },
+  { text = "Planning gives way to action", weight = 2 },
+  { text = "Political or social elements come to the fore", weight = 2 },
+  { text = "Personal stakes overshadow larger conflicts", weight = 2 },
+  { text = "The bigger picture reveals itself", weight = 2 },
+  { text = "Details and nuances become crucial", weight = 2 },
+  { text = "Past events become relevant to the present", weight = 2 },
+  { text = "Future consequences must be considered", weight = 2 },
+  { text = "Moral implications take center stage", weight = 2 },
+  { text = "Practical concerns override ideals", weight = 2 },
+  { text = "Emotional truth becomes more important than facts", weight = 2 },
+  { text = "Logic and reason must guide the way", weight = 2 },
+]
+
+[complications]
+# Narrative complications to add depth
+entries = [
+  { text = "A parallel situation mirrors this one", weight = 2 },
+  { text = "History threatens to repeat itself", weight = 2 },
+  { text = "An old rivalry resurfaces", weight = 2 },
+  { text = "Personal and professional obligations conflict", weight = 2 },
+  { text = "Loyalty is divided", weight = 2 },
+  { text = "The easy choice and the right choice diverge", weight = 2 },
+  { text = "Success would come at too high a cost", weight = 2 },
+  { text = "Failure might be the better outcome", weight = 1 },
+  { text = "Two problems demand attention simultaneously", weight = 2 },
+  { text = "Allies work at cross purposes", weight = 2 },
+  { text = "The solution creates new problems", weight = 2 },
+  { text = "What's wanted and what's needed conflict", weight = 2 },
+  { text = "Time pressure forces difficult choices", weight = 2 },
+  { text = "Limited resources require prioritization", weight = 2 },
+  { text = "The truth would cause more harm than lies", weight = 1 },
+  { text = "Someone must be sacrificed for the greater good", weight = 1 },
+  { text = "Help comes with strings attached", weight = 2 },
+  { text = "The enemy is not wholly wrong", weight = 2 },
+  { text = "An ally is not wholly right", weight = 2 },
+  { text = "The situation demands skills no one present has", weight = 2 },
+]

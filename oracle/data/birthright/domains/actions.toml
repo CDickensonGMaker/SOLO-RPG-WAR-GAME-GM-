@@ -1,0 +1,1251 @@
+# =============================================================================
+# BIRTHRIGHT DOMAIN ACTIONS
+# Complete reference for all domain actions in the Birthright campaign setting
+# For use with the Birthright Solo RPG Oracle
+# =============================================================================
+
+[metadata]
+title = "Domain Actions Reference"
+version = "1.0.0"
+system = "Birthright"
+description = """
+Domain actions are the primary means by which regents manage their realms.
+Each domain turn (typically one month), a regent may take a number of domain
+actions equal to their bloodline modifier (minimum 1, typically 3-4 for most
+blooded regents). Some actions are "free" and don't count against this limit.
+"""
+
+# =============================================================================
+# STANDARD DOMAIN ACTIONS
+# These actions each cost one domain action slot per turn
+# =============================================================================
+
+[[actions]]
+name = "Agitate"
+type = "domain"
+category = "intrigue"
+description = """
+Stir up unrest in a province, decreasing its loyalty rating or inciting
+rebellion against the current ruler. Often used before invasion or to
+weaken rival regents.
+"""
+regency_cost = "1 RP per province level"
+gold_cost = "1 GB"
+time = "1 domain action"
+requirements = [
+    "Must have a holding in the province OR adjacent to it",
+    "Must have agents or influence in the target province"
+]
+success_dc = "10 + province level + target regent's Law holding levels"
+modifiers = [
+    "+2 if you have a Temple holding in the province (religious dissent)",
+    "+2 if you have a Guild holding (economic pressure)",
+    "+2 if province loyalty is already Poor or Rebellious",
+    "-2 if province loyalty is High",
+    "-4 if target regent has Law holdings equal to province level",
+    "+1 per level of your highest holding in province"
+]
+success_result = "Province loyalty decreases by one category"
+failure_consequence = "Attempt detected; target regent gains +2 on Contest actions against your holdings"
+critical_success = "Loyalty drops two categories; your involvement remains secret"
+critical_failure = "Rebellion fails spectacularly; loyalty improves and you are exposed"
+oracle_prompts = [
+    "Is the population receptive to outside agitation?",
+    "Does the ruling regent have informants who detect the attempt?",
+    "Do local conditions (famine, taxes, war) aid or hinder the effort?",
+    "Is there an existing resistance movement to ally with?"
+]
+solo_notes = """
+When agitating, consider:
+- WHY would the population be dissatisfied?
+- WHO benefits from instability?
+- WHAT form does the unrest take? (riots, strikes, religious fervor)
+"""
+
+[[actions]]
+name = "Contest Holding"
+type = "domain"
+category = "conflict"
+description = """
+Attempt to reduce the level of a rival's holding in a province where you
+also have holdings. Represents economic competition, religious conversion,
+legal challenges, or magical suppression.
+"""
+regency_cost = "1 RP per level of target holding"
+gold_cost = "1 GB per level of target holding"
+time = "1 domain action"
+requirements = [
+    "Must have a holding of the SAME TYPE in the same province",
+    "Your holding level + target holding level cannot exceed province level after success"
+]
+success_dc = "10 + target holding level + target regent's bloodline modifier"
+modifiers = [
+    "+2 if your holding level exceeds target's",
+    "+1 per allied holding in province (any type)",
+    "+2 if province loyalty favors you",
+    "-2 if target has Law holding majority",
+    "-2 per level of target's allied holdings",
+    "+2 if you have more total RP than opponent"
+]
+success_result = "Target holding reduced by 1 level"
+failure_consequence = "RP and GB spent; target may Contest your holding as free action next turn"
+critical_success = "Target holding reduced by 2 levels"
+critical_failure = "Your holding loses 1 level instead"
+oracle_prompts = [
+    "Does the target regent retaliate immediately?",
+    "Do third parties intervene to protect the balance of power?",
+    "Is collateral damage caused to the province?",
+    "Does this contest escalate to open conflict?"
+]
+solo_notes = """
+Contest actions are often the opening moves of a domain conflict.
+Consider the political ramifications - other regents notice aggression.
+"""
+
+[[actions]]
+name = "Contest Province"
+type = "domain"
+category = "conflict"
+description = """
+A drastic action to reduce the level of a province itself, typically through
+warfare, plague, or deliberate devastation. Rarely used as it destroys wealth.
+"""
+regency_cost = "2 RP per province level"
+gold_cost = "2 GB per province level"
+time = "1 domain action"
+requirements = [
+    "Must militarily occupy the province OR",
+    "Must use realm magic to devastate"
+]
+success_dc = "15 + province level"
+modifiers = [
+    "+4 if province is occupied by your armies",
+    "+2 per army unit participating in devastation",
+    "-4 if any defender units present",
+    "-2 per level of fortifications",
+    "+2 if using realm magic (Death Plague, etc.)"
+]
+success_result = "Province level reduced by 1; all holdings reduced proportionally"
+failure_consequence = "Resources spent; province survives; massive reputation loss"
+critical_success = "Province reduced by 2 levels"
+critical_failure = "Your forces suffer attrition; morale collapses"
+oracle_prompts = [
+    "Is this scorched earth necessary or vindictive?",
+    "How does the populace respond to devastation?",
+    "Do other regents condemn or ignore the action?",
+    "Will the land recover, or is it cursed?"
+]
+special_rules = [
+    "Contesting a province to level 0 makes it wilderness",
+    "Population displaced becomes refugees or casualties",
+    "Other regents may view this as an atrocity"
+]
+
+[[actions]]
+name = "Create Holding"
+type = "domain"
+category = "development"
+description = """
+Establish a new holding (level 0) in a province. This is the first step to
+building influence in a new area. The holding can then be increased via
+Rule actions.
+"""
+regency_cost = "1 RP"
+gold_cost = "1 GB"
+time = "1 domain action"
+requirements = [
+    "Province must have room for the holding type",
+    "For Source holdings: sufficient magical potential must exist",
+    "Must not be blocked by hostile regent with Law holding majority"
+]
+success_dc = "10 + province level"
+modifiers = [
+    "+2 if province regent approves or is allied",
+    "+2 if you have other holdings in the province",
+    "-2 per level of existing holdings of same type (competition)",
+    "-4 if Law holder actively opposes (can block entirely)",
+    "+2 if population is receptive (Temple: same religion, Guild: needs trade)"
+]
+success_result = "New holding established at level 0"
+failure_consequence = "Resources spent; no holding created; may alert rivals"
+critical_success = "Holding created at level 1 instead of 0"
+critical_failure = "Attempt fails and is publicly exposed; -2 to future attempts here"
+oracle_prompts = [
+    "Does the provincial ruler notice and respond?",
+    "Is there local support for this new holding?",
+    "Do existing holding owners attempt to block?",
+    "What form does this holding take? (specific temple, guild hall, etc.)"
+]
+holding_creation_details = """
+Law Holding: Establish courts, sheriffs, tax collectors
+Temple Holding: Build shrine, assign priests, begin services
+Guild Holding: Open trade house, establish merchant contacts
+Source Holding: Attune to magical potential, create sanctum
+"""
+
+[[actions]]
+name = "Decree"
+type = "domain"
+category = "governance"
+description = """
+Issue a proclamation, law, or official declaration affecting your realm.
+Decrees can adjust taxes, declare holidays, outlaw practices, recognize
+titles, or make other official statements.
+"""
+regency_cost = "Variable (1-5 RP based on scope)"
+gold_cost = "Variable (0-5 GB for enforcement)"
+time = "1 domain action"
+requirements = [
+    "Must be the recognized ruler of affected territories",
+    "Must have means to enforce the decree (Law holdings, military)"
+]
+success_dc = "Varies by decree type and scope"
+
+[actions.decree_types]
+minor = { dc = 10, description = "Local ordinances, minor appointments", rp = 1, gb = 0 }
+standard = { dc = 15, description = "Tax adjustments, trade regulations", rp = 2, gb = 1 }
+major = { dc = 20, description = "New laws, military levies, religious edicts", rp = 3, gb = 2 }
+sweeping = { dc = 25, description = "Realm-wide changes, succession declarations", rp = 5, gb = 5 }
+
+modifiers = [
+    "+2 if decree aligns with population values",
+    "+2 if Temple holdings support the decree",
+    "-2 if decree is unpopular",
+    "-4 if decree contradicts established tradition",
+    "+1 per Law holding level enforcing"
+]
+success_result = "Decree takes effect; modifiers apply to relevant actions"
+failure_consequence = "Decree is ignored or resisted; loyalty may decrease"
+critical_success = "Decree becomes entrenched; difficult to reverse"
+critical_failure = "Decree causes unrest; loyalty decreases one category"
+oracle_prompts = [
+    "Is this decree popular or resented?",
+    "Who benefits and who suffers from this law?",
+    "How is it enforced? By whom?",
+    "Are there loopholes being exploited?"
+]
+
+[[actions]]
+name = "Diplomacy"
+type = "domain"
+category = "politics"
+description = """
+Negotiate with another regent for treaties, alliances, marriages, trade
+agreements, or other formal arrangements. Can also be used to make demands
+or negotiate surrenders.
+"""
+regency_cost = "1 RP minimum (more for complex agreements)"
+gold_cost = "Variable (gifts, bribes, hosting costs)"
+time = "1 domain action"
+requirements = [
+    "Must have means to contact target regent",
+    "Target must be willing to negotiate (or compelled by circumstances)"
+]
+success_dc = "10 + target regent's bloodline modifier + situational modifiers"
+
+[actions.diplomacy_types]
+non_aggression = { dc_mod = 0, description = "Agree not to attack each other" }
+trade_agreement = { dc_mod = 2, description = "Favorable trade terms between realms" }
+alliance_defensive = { dc_mod = 5, description = "Mutual defense pact" }
+alliance_offensive = { dc_mod = 8, description = "Agreement to jointly attack a target" }
+vassalage = { dc_mod = 10, description = "One party becomes vassal to the other" }
+marriage = { dc_mod = "varies", description = "Political marriage to seal alliance" }
+surrender = { dc_mod = "-5 to +10", description = "Negotiating terms of defeat" }
+
+modifiers = [
+    "+2 if offering valuable concessions",
+    "+4 if you hold significant military advantage",
+    "+2 if you share enemies",
+    "+2 if cultural/religious alignment",
+    "-2 if past conflicts or betrayals",
+    "-4 if target views you as threat",
+    "+1 per gift of 5 GB value"
+]
+success_result = "Agreement reached; terms binding (honor/reputation enforced)"
+failure_consequence = "Negotiations fail; may not retry for 1d4 domain turns"
+critical_success = "Exceptionally favorable terms; lasting goodwill"
+critical_failure = "Diplomatic incident; relationship worsens significantly"
+oracle_prompts = [
+    "What does the other regent truly want?",
+    "Are there hidden agendas in this negotiation?",
+    "Will third parties interfere?",
+    "What concessions might change the outcome?",
+    "Is this agreement genuine or will it be betrayed?"
+]
+
+[[actions]]
+name = "Espionage"
+type = "domain"
+category = "intrigue"
+description = """
+Conduct covert operations against a target regent. Espionage covers many
+types of clandestine activities from information gathering to assassination.
+"""
+regency_cost = "1-5 RP depending on operation type"
+gold_cost = "1-10 GB depending on operation type"
+time = "1 domain action"
+requirements = [
+    "Must have spies or agents (usually via Guild or Temple holdings)",
+    "More difficult operations require more established networks"
+]
+
+[actions.espionage_types]
+intelligence = { rp = 1, gb = 1, dc = 12, description = "Gather information about target's holdings, armies, treasury" }
+counterespionage = { rp = 1, gb = 1, dc = 10, description = "Detect and eliminate enemy spies" }
+sabotage_holding = { rp = 2, gb = 3, dc = 15, description = "Damage target holding (-1 level temporarily)" }
+sabotage_military = { rp = 2, gb = 3, dc = 15, description = "Damage target's military (reduce unit strength)" }
+assassination = { rp = 5, gb = 10, dc = 20, description = "Attempt to kill target regent or lieutenant" }
+theft = { rp = 2, gb = 2, dc = 14, description = "Steal gold, items, or information" }
+corruption = { rp = 3, gb = 5, dc = 16, description = "Bribe officials to work against their lord" }
+
+success_dc = "Variable by operation type (see above)"
+modifiers = [
+    "+2 if you have Guild holdings in target's realm",
+    "+2 if target has Poor or Rebellious loyalty provinces",
+    "-2 if target has strong Law holdings",
+    "-4 if target has active counterespionage",
+    "+1 per agent network level",
+    "+2 if lieutenant specializes in intrigue"
+]
+success_result = "Operation succeeds; results per type"
+failure_consequence = "Operation fails; agents may be captured or killed"
+critical_success = "Operation succeeds with no trace; bonus intelligence gained"
+critical_failure = "Agents captured; your involvement proven; diplomatic crisis"
+oracle_prompts = [
+    "Is the operation detected?",
+    "Do agents survive regardless of outcome?",
+    "Is false intelligence fed to your spies?",
+    "Does target retaliate with their own espionage?",
+    "Are there witnesses or evidence?"
+]
+special_rules = [
+    "Assassination requires confirmation that target is present",
+    "Captured spies can be interrogated for information",
+    "Proven espionage can be casus belli for war"
+]
+
+[[actions]]
+name = "Fortify"
+type = "domain"
+category = "military"
+description = """
+Build, improve, or repair fortifications in a province. Fortifications
+protect against invasion and provide defensive bonuses in warfare.
+"""
+regency_cost = "0 RP"
+gold_cost = "Variable by fortification level"
+time = "1 domain action per level"
+requirements = [
+    "Must control the province or have permission",
+    "Must have gold to pay construction costs"
+]
+
+[actions.fortification_levels]
+level_0 = { name = "Watchtower", cost = "2 GB", time = "1 action", defense = "+1" }
+level_1 = { name = "Motte and Bailey", cost = "5 GB", time = "2 actions", defense = "+2" }
+level_2 = { name = "Keep", cost = "10 GB", time = "3 actions", defense = "+4" }
+level_3 = { name = "Castle", cost = "20 GB", time = "4 actions", defense = "+6" }
+level_4 = { name = "Great Castle", cost = "35 GB", time = "5 actions", defense = "+8" }
+level_5 = { name = "Fortress", cost = "50 GB", time = "6 actions", defense = "+10" }
+
+success_dc = "Automatic with resources (DC 10 for adverse conditions)"
+modifiers = [
+    "-2 if building during war",
+    "-2 if province loyalty is Poor",
+    "+2 if Guild holdings assist construction",
+    "+2 if using dwarven engineers"
+]
+success_result = "Fortification built or improved to next level"
+failure_consequence = "Delays; additional gold required to complete"
+oracle_prompts = [
+    "Is construction sabotaged by enemies?",
+    "Are there engineering challenges?",
+    "Do laborers demand higher wages?",
+    "Is there a strategic location that provides natural advantages?"
+]
+special_rules = [
+    "Fortifications can be destroyed by siege or realm magic",
+    "Repair costs half the difference to next level",
+    "Multiple fortifications in one province allowed but rare"
+]
+
+[[actions]]
+name = "Grant"
+type = "domain"
+category = "politics"
+description = """
+Transfer a holding, province, or title to another character. Used to reward
+vassals, pay debts, form alliances, or divest unwanted territories.
+"""
+regency_cost = "1 RP per holding level or province level granted"
+gold_cost = "0 GB"
+time = "1 domain action"
+requirements = [
+    "Must own or control what is being granted",
+    "Recipient must accept the grant",
+    "For provinces, investiture may also be required"
+]
+success_dc = "Automatic (willing transfer)"
+modifiers = [
+    "N/A - Grants automatically succeed if both parties agree"
+]
+success_result = "Ownership transfers to recipient immediately"
+failure_consequence = "N/A"
+oracle_prompts = [
+    "Does the recipient have ulterior motives?",
+    "Do other claimants protest the grant?",
+    "Is this grant creating a future rival?",
+    "What obligations come with this grant?"
+]
+special_rules = [
+    "Holdings cannot be granted to those without bloodline",
+    "Province grants may require Investiture for full control",
+    "Grants can be conditional (reverts if conditions violated)"
+]
+
+[[actions]]
+name = "Investiture"
+type = "domain"
+category = "mystical"
+description = """
+A sacred ceremony that transfers bloodline power, bestows regency rights,
+or formally recognizes a regent's authority. Requires a blooded priest or
+special circumstances.
+"""
+regency_cost = "5 RP minimum (more for major bloodline transfers)"
+gold_cost = "5 GB (ceremony costs)"
+time = "1 domain action (ceremony itself)"
+requirements = [
+    "Must have a blooded priest of sufficient level to officiate",
+    "Both parties must be present (or represented by blood relative)",
+    "Sacred site or temple preferred"
+]
+
+[actions.investiture_types]
+recognition = { rp = 5, description = "Formally recognize a new regent's authority" }
+vassalage = { rp = 5, description = "Create or confirm vassal relationship" }
+bloodline_transfer = { rp = 10, description = "Transfer portion of bloodline strength" }
+bloodtheft_cleansing = { rp = 20, description = "Legitimize bloodline gained through bloodtheft" }
+coronation = { rp = 15, description = "Crown a new sovereign" }
+
+success_dc = "10 (ceremonial) or 15 (contested/complex)"
+modifiers = [
+    "+2 if performed at sacred site",
+    "+2 if High Priestess officiates",
+    "-2 if any party is unwilling",
+    "-4 if ceremony is disrupted",
+    "+2 if celestial event (eclipse, holy day) coincides"
+]
+success_result = "Transfer complete; regency flows to new holder"
+failure_consequence = "Ceremony fails; must wait for next auspicious time"
+critical_success = "Bloodline strengthened; +1 to bloodline score"
+critical_failure = "Divine disfavor; bloodline weakened or corrupted"
+oracle_prompts = [
+    "Is the ceremony disrupted by enemies?",
+    "Are there ill omens?",
+    "Does the transfer awaken dormant bloodline abilities?",
+    "Do the gods show favor or displeasure?"
+]
+
+[[actions]]
+name = "Lieutenant (Hire)"
+type = "domain"
+category = "governance"
+description = """
+Recruit a skilled individual to serve as a lieutenant, capable of performing
+domain actions on your behalf. Good lieutenants are rare and valuable.
+"""
+regency_cost = "0 RP"
+gold_cost = "2 GB (recruitment bonus) + ongoing salary"
+time = "1 domain action"
+requirements = [
+    "Must find suitable candidate (adventure or recruitment search)",
+    "Must offer competitive compensation"
+]
+success_dc = "12 + candidate's level/3"
+modifiers = [
+    "+2 if offering generous salary (2+ GB/turn)",
+    "+4 if offering holding or title",
+    "+2 if your reputation is excellent",
+    "-2 if your realm is troubled",
+    "-4 if candidate has better offers",
+    "+2 if candidate shares your goals/alignment"
+]
+success_result = "Lieutenant enters service; can act on your behalf"
+failure_consequence = "Candidate declines; may need to sweeten offer or find another"
+oracle_prompts = [
+    "What motivates this potential lieutenant?",
+    "Are they truly loyal or have hidden agendas?",
+    "What unique skills do they bring?",
+    "Do they have enemies that become your problems?"
+]
+lieutenant_capabilities = [
+    "Can perform most domain actions in your name",
+    "Can lead armies",
+    "Can manage holdings",
+    "Actions limited by their skills and your trust"
+]
+
+[[actions]]
+name = "Lieutenant (Maintain)"
+type = "domain"
+category = "governance"
+description = """
+Maintain the services of an existing lieutenant by paying their salary and
+ensuring their continued loyalty.
+"""
+regency_cost = "0 RP"
+gold_cost = "1 GB per domain turn (standard) or more for exceptional lieutenants"
+time = "Free (automatic each turn)"
+requirements = [
+    "Must have gold to pay salary",
+    "Lieutenant must remain loyal"
+]
+success_dc = "Automatic with payment"
+modifiers = [
+    "-4 to loyalty if salary is late or reduced",
+    "+2 to loyalty if bonus paid",
+    "-2 to loyalty if given dangerous assignments without reward"
+]
+failure_consequence = "Lieutenant may leave service or become disloyal"
+oracle_prompts = [
+    "Is the lieutenant satisfied with their position?",
+    "Are rivals trying to recruit them away?",
+    "Has the lieutenant's ambition grown?",
+    "Are there personal matters affecting their service?"
+]
+
+[[actions]]
+name = "Muster"
+type = "domain"
+category = "military"
+description = """
+Raise military units from your provinces and holdings. The type and number
+of units depends on your holdings, province levels, and treasury.
+"""
+regency_cost = "1 RP per unit mustered"
+gold_cost = "Variable by unit type"
+time = "1 domain action"
+requirements = [
+    "Must control province or have Law holding",
+    "Must have population to recruit from",
+    "Must have gold for equipment and training"
+]
+
+[actions.unit_costs]
+levies = { gb = 1, maintenance = 0.5, description = "Peasant conscripts, unreliable" }
+infantry = { gb = 2, maintenance = 1, description = "Trained foot soldiers" }
+archers = { gb = 2, maintenance = 1, description = "Ranged troops" }
+cavalry = { gb = 4, maintenance = 2, description = "Mounted warriors" }
+knights = { gb = 6, maintenance = 3, description = "Heavy cavalry, elite" }
+pikemen = { gb = 3, maintenance = 1.5, description = "Anti-cavalry specialists" }
+elite = { gb = 8, maintenance = 4, description = "Special units (varies)" }
+mercenaries = { gb = "varies", maintenance = "2x normal", description = "Hired soldiers" }
+
+success_dc = "10 (standard) + situational modifiers"
+modifiers = [
+    "+2 if province loyalty is High",
+    "-2 if province loyalty is Poor",
+    "-4 if province recently mustered (manpower depleted)",
+    "+2 if offering bonus pay to recruits",
+    "+1 per Law holding level in province"
+]
+success_result = "Units mustered and ready for deployment"
+failure_consequence = "Fewer units than expected; may need second muster"
+oracle_prompts = [
+    "Is there reluctance to serve?",
+    "Are the recruits properly equipped?",
+    "Do veterans provide leadership?",
+    "Are there rival forces also recruiting?"
+]
+special_rules = [
+    "Maximum units from province = province level",
+    "Mustering depletes population temporarily",
+    "Units require ongoing maintenance each domain turn"
+]
+
+[[actions]]
+name = "Occupy"
+type = "domain"
+category = "military"
+description = """
+Establish military control over a province, either after conquest or as
+an occupation force. Occupied provinces provide reduced income and are
+prone to resistance.
+"""
+regency_cost = "1 RP per turn occupied"
+gold_cost = "1 GB per turn (occupation costs)"
+time = "1 domain action to establish; maintained automatically"
+requirements = [
+    "Must have military units in the province",
+    "Must have defeated or expelled previous ruler's forces",
+    "Units must be sufficient to control population"
+]
+success_dc = "10 + province level (to maintain control)"
+modifiers = [
+    "+2 per unit garrison beyond minimum",
+    "-2 if population is hostile",
+    "-4 if resistance movement active",
+    "+2 if you have Law holding in province",
+    "-2 per turn of occupation (resentment grows)"
+]
+success_result = "Province remains under control; collect occupation taxes"
+failure_consequence = "Unrest or rebellion; may lose control of province"
+oracle_prompts = [
+    "Is there a resistance movement forming?",
+    "Do occupying troops maintain discipline?",
+    "Are collaborators helping or hindering?",
+    "Does the former ruler attempt to retake the province?"
+]
+special_rules = [
+    "Occupation income = 50% normal",
+    "Cannot Rule or Create Holdings while occupying",
+    "Occupation can transition to legitimate rule via Investiture/Conquest"
+]
+
+[[actions]]
+name = "Pillage"
+type = "domain"
+category = "military"
+description = """
+Raid a province for quick gold, either your own (desperately) or an enemy's
+(commonly). Pillaging damages the province but provides immediate resources.
+"""
+regency_cost = "0 RP (costs reputation instead)"
+gold_cost = "0 GB"
+time = "1 domain action"
+requirements = [
+    "Must have military units in the province",
+    "Province must have wealth to take"
+]
+success_dc = "Automatic (with military force present)"
+modifiers = [
+    "N/A - Success is automatic; consequences vary"
+]
+success_result = "Gain 1d4 GB per province level immediately"
+failure_consequence = "N/A"
+side_effects = [
+    "Province loyalty decreases one category",
+    "Province may decrease in level if pillaged repeatedly",
+    "Holdings may be damaged",
+    "Population generates refugees",
+    "Reputation with other regents suffers"
+]
+oracle_prompts = [
+    "How brutal is the pillaging?",
+    "Do troops maintain any discipline?",
+    "Are temples and sacred sites respected?",
+    "Does this create lasting hatred?"
+]
+special_rules = [
+    "Pillaging your own provinces is desperation",
+    "Repeated pillaging can reduce province to level 0",
+    "Some regents will declare war over pillaging"
+]
+
+[[actions]]
+name = "Research (Arcane)"
+type = "domain"
+category = "mystical"
+description = """
+Study and develop new realm spells, investigate magical mysteries, or
+improve understanding of sources and ley lines. Only for wizards.
+"""
+regency_cost = "2 RP per spell level researched"
+gold_cost = "2 GB per spell level + material costs"
+time = "1 domain action per spell level"
+requirements = [
+    "Must be a wizard with Source holdings",
+    "Must have access to magical library or mentor",
+    "Spell must be of appropriate level for caster"
+]
+success_dc = "12 + (spell level x 2)"
+modifiers = [
+    "+2 if Source holding level 5+",
+    "+2 if consulting with other wizards",
+    "+4 if accessing ancient library",
+    "-2 per spell level above 3rd",
+    "+1 per ley line connected to your Sources"
+]
+success_result = "Spell learned; can be cast using Sources"
+failure_consequence = "Time and resources spent; partial progress (may retry with +2)"
+critical_success = "Spell learned with enhancement or variant discovered"
+critical_failure = "Research accident; Source holding damaged or wizard injured"
+oracle_prompts = [
+    "What unexpected discoveries occur during research?",
+    "Is the spell complete or does it have flaws?",
+    "Does the research attract unwanted attention?",
+    "Are there ethical concerns with this magic?"
+]
+
+[[actions]]
+name = "Research (Divine)"
+type = "domain"
+category = "mystical"
+description = """
+Seek divine guidance, develop new temple ceremonies, or research religious
+realm spells. Only for priests with Temple holdings.
+"""
+regency_cost = "1 RP per spell level"
+gold_cost = "1 GB per spell level"
+time = "1 domain action"
+requirements = [
+    "Must be a priest with Temple holdings",
+    "Must have access to sacred texts or holy site",
+    "Must be in good standing with deity"
+]
+success_dc = "10 + (spell level x 2)"
+modifiers = [
+    "+2 if at sacred site",
+    "+4 if direct divine intervention (rare)",
+    "+2 per Temple holding level above 3",
+    "-2 if you have acted against deity's principles recently"
+]
+success_result = "Spell or ritual learned; can be performed"
+failure_consequence = "Divine silence; may need to atone before retrying"
+oracle_prompts = [
+    "Does the deity grant visions or omens?",
+    "What sacrifice or service is required?",
+    "Are there rivals within the faith opposing this?",
+    "Does the research reveal uncomfortable truths?"
+]
+
+[[actions]]
+name = "Rule (Holding)"
+type = "domain"
+category = "development"
+description = """
+Increase the level of a holding you control, representing expansion of
+influence, membership, resources, or power.
+"""
+regency_cost = "1 RP per current holding level (0 for level 0)"
+gold_cost = "1 GB per current holding level (0 for level 0)"
+time = "1 domain action"
+requirements = [
+    "Must control the holding",
+    "Province must have room for expansion (total holdings <= province level)",
+    "Province loyalty must be Average or better",
+    "For Sources: magical potential must exist"
+]
+success_dc = "10 + current holding level"
+modifiers = [
+    "+2 if province loyalty is High",
+    "-2 if province loyalty is Poor",
+    "+1 per friendly Law holding in province",
+    "-1 per hostile holding of same type",
+    "+2 if you have multiple holdings in province",
+    "-2 if contested by rival regent"
+]
+success_result = "Holding increases by 1 level"
+failure_consequence = "RP and GB spent; no increase; may retry next turn"
+critical_success = "Holding increases by 2 levels (if room exists)"
+critical_failure = "Holding level DECREASES by 1; internal problems"
+oracle_prompts = [
+    "Does a rival regent attempt to Contest?",
+    "Is there local resistance to expansion?",
+    "What form does this growth take?",
+    "Are there opportunities or complications discovered?"
+]
+
+[[actions]]
+name = "Rule (Province)"
+type = "domain"
+category = "development"
+description = """
+Increase the level of a province you rule, representing population growth,
+development, and civilization. Much harder than ruling holdings.
+"""
+regency_cost = "1 RP per current province level"
+gold_cost = "2 GB per current province level"
+time = "1 domain action"
+requirements = [
+    "Must be the recognized ruler of the province",
+    "Province loyalty must be Average or better",
+    "Province must have room to grow (geographic/resource limits)"
+]
+success_dc = "15 + current province level"
+modifiers = [
+    "+2 if province loyalty is High",
+    "-2 if province loyalty is Poor",
+    "+1 per Law holding level in province",
+    "+1 per Guild holding level (economic growth)",
+    "-2 if recently at war",
+    "-4 if province was pillaged in last year",
+    "+2 if trade routes connect to province"
+]
+success_result = "Province level increases by 1"
+failure_consequence = "Resources spent; no growth; identify obstacles"
+critical_success = "Province increases by 1 and loyalty improves"
+critical_failure = "Province suffers setback; loyalty decreases"
+oracle_prompts = [
+    "What enables this growth? (immigrants, births, prosperity)",
+    "Are there growing pains or conflicts?",
+    "Does expansion threaten any neighbors?",
+    "What new opportunities come with growth?"
+]
+special_rules = [
+    "Maximum province level depends on terrain and resources",
+    "Forest/mountain provinces cap lower than plains",
+    "Source potential DECREASES as province level increases"
+]
+
+[[actions]]
+name = "Trade Route (Create)"
+type = "domain"
+category = "economic"
+description = """
+Establish a trade route between two provinces, generating ongoing gold
+income for Guild holders. Requires Guild holdings at both ends.
+"""
+regency_cost = "1 RP"
+gold_cost = "1 GB per province crossed (minimum 2 GB)"
+time = "1 domain action"
+requirements = [
+    "Must have Guild holding at origin",
+    "Must have Guild holding at destination OR agreement with one",
+    "Route must be physically possible (roads, sea lanes)",
+    "No hostile forces blocking route"
+]
+success_dc = "12 + number of provinces crossed"
+modifiers = [
+    "+2 if route is entirely within friendly territory",
+    "-2 per hostile province crossed",
+    "-4 if crossing wilderness or dangerous terrain",
+    "+2 if caravansaries or way stations exist",
+    "+2 if allied Guild holder at destination"
+]
+success_result = "Trade route established; generates income each turn"
+failure_consequence = "Route cannot be established; obstacles identified"
+income = "1 GB per turn per level of LOWER Guild holding"
+oracle_prompts = [
+    "What goods flow along this route?",
+    "Are there bandits or pirates threatening it?",
+    "Do provinces along the route benefit?",
+    "Does this route compete with existing trade?"
+]
+
+[[actions]]
+name = "Trade Route (Maintain)"
+type = "domain"
+category = "economic"
+description = """
+Keep an existing trade route operational. Routes require protection and
+administration to continue generating income.
+"""
+regency_cost = "0 RP"
+gold_cost = "0.5 GB per turn"
+time = "Free (automatic each turn)"
+requirements = [
+    "Route must exist",
+    "No hostile forces blocking route",
+    "Both Guild holdings must still exist"
+]
+success_dc = "Automatic unless threatened"
+modifiers = [
+    "-4 if bandits or pirates active",
+    "-2 if war affects route provinces",
+    "-2 if either Guild holding decreased in level"
+]
+success_result = "Route continues operating; income collected"
+failure_consequence = "Route disrupted; no income; may need repair"
+oracle_prompts = [
+    "Is the route threatened by bandits or rivals?",
+    "Are there new opportunities along the route?",
+    "Has competition affected profitability?",
+    "Do merchants report anything unusual?"
+]
+
+# =============================================================================
+# FREE ACTIONS
+# These actions do not count against domain action limits
+# =============================================================================
+
+[[actions]]
+name = "Finance"
+type = "free"
+category = "economic"
+description = """
+Manage your realm's treasury: collect income, pay expenses, take loans,
+or make investments. This is handled automatically but can be modified.
+"""
+regency_cost = "0 RP"
+gold_cost = "0 GB"
+time = "Free action"
+requirements = ["N/A"]
+success_dc = "Automatic"
+components = [
+    "Collect taxation from provinces (0.5 GB per province level)",
+    "Collect holding income (varies by type)",
+    "Collect trade route income",
+    "Pay military maintenance",
+    "Pay lieutenant salaries",
+    "Pay ongoing obligations"
+]
+modifiers = [
+    "Taxation can be increased (+50%) at cost of loyalty",
+    "Taxation can be decreased (-50%) to improve loyalty",
+    "Loans can be obtained from guilds at interest"
+]
+oracle_prompts = [
+    "Are there unexpected expenses?",
+    "Is tax collection efficient or corrupt?",
+    "Are there windfall opportunities?",
+    "Do debtors pay or default?"
+]
+
+[[actions]]
+name = "Move Troops"
+type = "free"
+category = "military"
+description = """
+Relocate military units within or between provinces. Movement speed depends
+on terrain and unit type.
+"""
+regency_cost = "0 RP"
+gold_cost = "0 GB (unless force-marching)"
+time = "Free action"
+requirements = [
+    "Must control the units",
+    "Route must be passable"
+]
+movement_rates = [
+    "Infantry: 2 provinces per turn on roads, 1 off-road",
+    "Cavalry: 3 provinces per turn on roads, 2 off-road",
+    "Siege equipment: 1 province per turn",
+    "Ships: 4 sea zones per turn (weather permitting)"
+]
+modifiers = [
+    "Force march: +1 province but unit takes attrition",
+    "Mountain/forest: -1 movement",
+    "Winter: -1 movement",
+    "Hostile territory: movement may be blocked"
+]
+oracle_prompts = [
+    "Is the route safe?",
+    "Do scouts report enemy movement?",
+    "Are supplies adequate for the march?",
+    "Does weather affect the journey?"
+]
+
+[[actions]]
+name = "Declare War"
+type = "free"
+category = "politics"
+description = """
+Formally declare war on another regent, establishing legal casus belli
+and beginning hostilities.
+"""
+regency_cost = "0 RP"
+gold_cost = "0 GB"
+time = "Free action"
+requirements = [
+    "Must have reason (or willingness to appear aggressive)",
+    "Must inform target (heralds traditionally)"
+]
+effects = [
+    "War is official; combat actions legal",
+    "Allies may be called upon",
+    "Trade routes with enemy disrupted",
+    "Reputation effects based on justification"
+]
+oracle_prompts = [
+    "Is the war seen as just or aggressive?",
+    "How does the enemy respond?",
+    "Do allies honor their commitments?",
+    "Are there neutral parties attempting mediation?"
+]
+
+[[actions]]
+name = "Declare Peace"
+type = "free"
+category = "politics"
+description = """
+Offer peace to end hostilities. May require negotiation for terms.
+"""
+regency_cost = "0 RP"
+gold_cost = "0 GB (plus any negotiated terms)"
+time = "Free action"
+requirements = [
+    "Must be at war",
+    "Enemy must accept (or be forced to)"
+]
+effects = [
+    "Hostilities cease",
+    "Terms take effect (territory, gold, etc.)",
+    "Trade can resume"
+]
+oracle_prompts = [
+    "Are terms acceptable to both sides?",
+    "Is this peace lasting or temporary?",
+    "Are there hardliners opposing peace?",
+    "What is sacrificed for peace?"
+]
+
+[[actions]]
+name = "Disband Units"
+type = "free"
+category = "military"
+description = """
+Release military units from service, ending their maintenance costs.
+Disbanded troops return to civilian life.
+"""
+regency_cost = "0 RP"
+gold_cost = "0 GB (may need severance for mercenaries)"
+time = "Free action"
+requirements = ["Must control the units"]
+effects = [
+    "Units cease to exist as military force",
+    "Maintenance costs end immediately",
+    "Manpower returns to population (eventually)"
+]
+oracle_prompts = [
+    "Do disbanded soldiers become bandits?",
+    "Is there resentment at being let go?",
+    "Do veterans settle peacefully or cause trouble?"
+]
+
+# =============================================================================
+# REALM/SPECIAL ACTIONS
+# Actions that may use domain actions but have special rules
+# =============================================================================
+
+[[actions]]
+name = "Adventure"
+type = "realm"
+category = "personal"
+description = """
+The regent personally undertakes a quest, mission, or adventure. While
+adventuring, the regent cannot take other domain actions but may gain
+unique rewards.
+"""
+regency_cost = "Variable (may gain or lose RP)"
+gold_cost = "Variable (expenses of adventure)"
+time = "1-3 domain actions (depending on scope)"
+requirements = [
+    "Regent must personally participate",
+    "Lieutenant can manage realm in absence"
+]
+effects = [
+    "Regent is unavailable for other domain actions",
+    "May gain treasure, magic items, allies",
+    "May lose health, resources, or life",
+    "Realm continues but without regent's bonus"
+]
+oracle_prompts = [
+    "What challenge awaits?",
+    "Who accompanies the regent?",
+    "What is at stake?",
+    "How does the realm fare in the regent's absence?"
+]
+special_rules = [
+    "Adventures resolve using standard RPG rules",
+    "Domain turns may pass during extended adventures",
+    "Regency still accumulates from bloodline"
+]
+
+[[actions]]
+name = "Realm Spell (Cast)"
+type = "realm"
+category = "mystical"
+description = """
+Cast a realm spell using accumulated regency and source/temple holdings.
+Realm spells have effects across entire provinces or domains.
+"""
+regency_cost = "Variable by spell (often 5-20+ RP)"
+gold_cost = "Variable by spell (often 5-20+ GB)"
+time = "1 domain action"
+requirements = [
+    "Must know the spell (via Research)",
+    "Must have sufficient Source/Temple holdings",
+    "Must have required regency and gold",
+    "Some spells require ley lines or special conditions"
+]
+success_dc = "12 + spell level + situational modifiers"
+modifiers = [
+    "+2 if casting at ley line nexus",
+    "+2 if Source/Temple exceeds minimum requirement",
+    "-2 per opposing wizard/priest actively countering",
+    "+2 if celestial event favors magic"
+]
+success_result = "Spell takes effect per description"
+failure_consequence = "Regency spent; spell fails; may have backlash"
+critical_failure = "Catastrophic magical failure; Source damaged; caster injured"
+oracle_prompts = [
+    "Are there unforeseen consequences?",
+    "Do other regents detect the magic?",
+    "Is the spell's effect precisely as intended?",
+    "Does this attract the attention of powerful entities?"
+]
+
+[[actions]]
+name = "Coronation"
+type = "realm"
+category = "politics"
+description = """
+A grand ceremony to crown a new sovereign, combining Investiture with
+political recognition. Often marks the beginning of a new reign.
+"""
+regency_cost = "10 RP minimum"
+gold_cost = "10 GB minimum (ceremony, gifts, feasting)"
+time = "1 domain action (but ceremony may span weeks)"
+requirements = [
+    "Legitimate claim to the throne (or military victory)",
+    "Support of key nobles and temples",
+    "Officiating priest of appropriate rank"
+]
+success_dc = "15 (opposed if claim is contested)"
+modifiers = [
+    "+2 if previous ruler designated successor",
+    "+4 if bloodline is strong and pure",
+    "-4 if claim is weak or contested",
+    "+2 per powerful vassal supporting",
+    "-2 per powerful vassal opposing"
+]
+success_result = "New sovereign recognized; full authority granted"
+failure_consequence = "Coronation disputed; civil war or instability may follow"
+oracle_prompts = [
+    "Do all vassals attend and swear fealty?",
+    "Are there assassination attempts?",
+    "What omens occur during the ceremony?",
+    "Do foreign powers recognize the new ruler?"
+]
+
+# =============================================================================
+# RESPONSE ACTIONS
+# Actions taken in response to others' actions
+# =============================================================================
+
+[[actions]]
+name = "Contest (Response)"
+type = "response"
+category = "conflict"
+description = """
+When another regent targets your holdings with Contest, you may respond
+with your own Contest action for free if you have appropriate holdings.
+"""
+regency_cost = "Half normal Contest cost (round down)"
+gold_cost = "Half normal Contest cost (round down)"
+time = "Reaction (does not use domain action)"
+requirements = [
+    "Must have holding of same type in same province",
+    "Must have RP and GB to spend",
+    "Must be aware of the Contest"
+]
+success_dc = "Opposed check against attacker's Contest roll"
+oracle_prompts = [
+    "Is the counter-Contest effective?",
+    "Does this escalate the conflict?",
+    "Are there neutral parties caught in the crossfire?"
+]
+
+[[actions]]
+name = "Defend Realm"
+type = "response"
+category = "military"
+description = """
+When your realm is invaded, you may rally defenses, call vassals, and
+organize resistance without using domain actions.
+"""
+regency_cost = "0 RP"
+gold_cost = "Variable (emergency expenses)"
+time = "Reaction"
+requirements = [
+    "Realm must be under attack",
+    "Must have military forces or allies to call"
+]
+effects = [
+    "Units can be repositioned defensively",
+    "Vassals can be called to arms",
+    "Emergency levies can be raised",
+    "Fortifications activate"
+]
+oracle_prompts = [
+    "How quickly can forces respond?",
+    "Do vassals answer the call?",
+    "Is the population willing to resist?",
+    "Are there traitors aiding the enemy?"
+]
+
+# =============================================================================
+# SEASONAL/AUTOMATIC ACTIONS
+# Actions that happen automatically each domain turn
+# =============================================================================
+
+[[actions]]
+name = "Regency Collection"
+type = "automatic"
+category = "governance"
+description = """
+At the start of each domain turn, regents automatically collect regency
+points from their bloodline and holdings.
+"""
+regency_cost = "N/A"
+gold_cost = "N/A"
+time = "Automatic"
+collection_rules = [
+    "Base: Bloodline score (1 RP per point)",
+    "Law holdings: Province level per controlled holding level (maximum)",
+    "Temple holdings: (Province level) x (holding level / province level)",
+    "Guild holdings: 0.5 x holding level",
+    "Source holdings: Holding level",
+    "Province control: Province level"
+]
+modifiers = [
+    "Province loyalty affects collection",
+    "Contested holdings may reduce collection",
+    "Enemies with higher holdings may steal regency"
+]
+oracle_prompts = [
+    "Is there anything interfering with regency collection?",
+    "Do the people's faith waver?",
+    "Is magical potential being siphoned?"
+]
+
+[[actions]]
+name = "Random Event"
+type = "automatic"
+category = "event"
+description = """
+Each domain turn, random events may affect your realm. These are determined
+by the oracle and represent unexpected developments.
+"""
+event_categories = [
+    "Natural: Weather, disasters, plagues",
+    "Political: Diplomatic incidents, succession crises",
+    "Military: Border incidents, monster attacks",
+    "Economic: Trade shifts, resource discoveries",
+    "Mystical: Magical phenomena, divine signs"
+]
+oracle_prompts = [
+    "Does a significant event occur this turn?",
+    "Is the event beneficial, harmful, or neutral?",
+    "Which aspect of the realm is affected?",
+    "Can the event be exploited or mitigated?"
+]
+
+# =============================================================================
+# ACTION MODIFIERS AND RULES
+# =============================================================================
+
+[action_rules]
+actions_per_turn = "Bloodline modifier (minimum 1, typically 3)"
+lieutenant_actions = "Each lieutenant can perform 1 action per turn"
+free_actions = "Unlimited, but logical constraints apply"
+response_actions = "Triggered by others' actions, no limit"
+
+[action_limits]
+same_action_twice = "Generally not allowed in same province same turn"
+action_stacking = "Some actions can be combined with lieutenant help"
+contested_actions = "May trigger opposed checks or response actions"
+
+[difficulty_guidelines]
+trivial = "DC 5: Almost automatic success"
+easy = "DC 10: Straightforward, minor obstacles"
+moderate = "DC 15: Requires skill and resources"
+hard = "DC 20: Significant challenge, expert needed"
+very_hard = "DC 25: Major undertaking, multiple factors"
+nearly_impossible = "DC 30+: Legendary difficulty, divine intervention"
+
+[critical_results]
+critical_success = "Natural 20 or exceed DC by 10+: Exceptional result"
+critical_failure = "Natural 1 or fail DC by 10+: Disaster"

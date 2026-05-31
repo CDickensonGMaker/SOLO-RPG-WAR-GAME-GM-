@@ -1,0 +1,61 @@
+# Historical Social Encounters
+# 40+ social interactions and civilian encounters
+
+[encounters]
+entries = [
+  # Class and Status
+  { text = "A servant overhears something they should not have", weight = 2 },
+  { text = "Social climber attempts to attach themselves to someone influential", weight = 2 },
+  { text = "A noble must interact with commoners as equals due to circumstances", weight = 2 },
+  { text = "Class tensions surface during a shared hardship", weight = 2 },
+  { text = "A wealthy patron offers support with strings attached", weight = 1 },
+  { text = "An old family retainer knows secrets about multiple generations", weight = 1 },
+  { text = "Inappropriate familiarity offends someone of higher station", weight = 2 },
+  { text = "A fall from grace forces adaptation to new circumstances", weight = 1 },
+
+  # Romance and Marriage
+  { text = "A forbidden attraction develops between people who should be enemies", weight = 1 },
+  { text = "Marriage negotiations treat the union as business transaction", weight = 2 },
+  { text = "An old flame reappears under complicated circumstances", weight = 1 },
+  { text = "A love letter falls into the wrong hands", weight = 2 },
+  { text = "Scandal threatens to destroy a reputation", weight = 1 },
+  { text = "A jealous rival seeks to interfere with a relationship", weight = 2 },
+  { text = "Duty and heart pull in different directions", weight = 2 },
+  { text = "A widow or widower faces pressure to remarry for practical reasons", weight = 2 },
+
+  # Family and Kinship
+  { text = "Long-lost relatives appear claiming connection and obligation", weight = 1 },
+  { text = "A family secret comes to light that changes everything", weight = 1 },
+  { text = "Sibling rivalry escalates under pressure of crisis", weight = 2 },
+  { text = "An elder's approval is required before proceeding", weight = 2 },
+  { text = "A child's innocent observation reveals uncomfortable truth", weight = 2 },
+  { text = "Choosing between family loyalty and larger duty", weight = 1 },
+  { text = "A black sheep returns seeking reconciliation", weight = 2 },
+  { text = "Death of the patriarch or matriarch creates power vacuum", weight = 1 },
+
+  # Commerce and Debt
+  { text = "A debt must be collected from someone who cannot pay", weight = 2 },
+  { text = "Negotiating a deal where both parties are hiding information", weight = 2 },
+  { text = "A business partnership turns sour and must be dissolved", weight = 2 },
+  { text = "A counterfeiting or fraud scheme is discovered", weight = 1 },
+  { text = "Haggling in the market reveals local news and rumors", weight = 2 },
+  { text = "A valuable item must be sold under distress", weight = 2 },
+  { text = "Investment opportunity seems too good to be true", weight = 2 },
+  { text = "Bankruptcy forces desperate measures", weight = 1 },
+
+  # Religion and Belief
+  { text = "A crisis of faith challenges someone's fundamental beliefs", weight = 1 },
+  { text = "Religious differences create tension within a community", weight = 2 },
+  { text = "A confession reveals something that cannot be ignored", weight = 1 },
+  { text = "A religious leader's hypocrisy is exposed", weight = 1 },
+  { text = "Seeking sanctuary in a church from pursuers", weight = 2 },
+  { text = "A wedding, funeral, or baptism brings together estranged parties", weight = 2 },
+
+  # Community and Neighbors
+  { text = "A long-standing feud between families threatens to erupt", weight = 2 },
+  { text = "Strangers in town attract suspicion and scrutiny", weight = 2 },
+  { text = "A communal celebration provides cover for private business", weight = 2 },
+  { text = "Someone is accused by their neighbors of crimes or impropriety", weight = 2 },
+  { text = "Refugees seeking shelter strain community resources and patience", weight = 2 },
+  { text = "A respected figure is revealed to be other than they seemed", weight = 1 }
+]

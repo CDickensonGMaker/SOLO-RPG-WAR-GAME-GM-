@@ -1,0 +1,72 @@
+# Fantasy Exploration Encounters
+# Discovery, investigation, and environmental challenges
+
+[exploration]
+entries = [
+  # Discovery
+  { text = "ancient ruins emerge from the morning mist", weight = 1 },
+  { text = "a hidden entrance is revealed by shifting light", weight = 1 },
+  { text = "footprints lead away from the path into wilderness", weight = 1 },
+  { text = "strange symbols are carved into a tree or rock", weight = 1 },
+  { text = "a skeleton clutches a map and a warning", weight = 1 },
+  { text = "a campsite abandoned in apparent haste", weight = 1 },
+  { text = "fresh tracks of something large cross the trail", weight = 1 },
+  { text = "smoke rises from somewhere it shouldn't", weight = 1 },
+  { text = "a signpost has been defaced or turned around", weight = 1 },
+  { text = "a boundary marker warns of danger ahead", weight = 1 },
+  { text = "something glints in the undergrowth", weight = 1 },
+  { text = "a body hangs from a tree with a sign around its neck", weight = 1 },
+
+  # Environmental Hazards
+  { text = "the bridge ahead looks questionable at best", weight = 1 },
+  { text = "a ravine blocks the path with no easy crossing", weight = 1 },
+  { text = "quicksand threatens unwary travelers", weight = 1 },
+  { text = "a landslide has blocked the mountain pass", weight = 1 },
+  { text = "flash flooding threatens the canyon", weight = 1 },
+  { text = "avalanche territory requires careful passage", weight = 1 },
+  { text = "a frozen river may or may not hold weight", weight = 1 },
+  { text = "poisonous plants line both sides of the path", weight = 1 },
+  { text = "the ground is unstable - sinkholes threaten", weight = 1 },
+  { text = "dense fog reduces visibility to nothing", weight = 1 },
+  { text = "a wildfire forces a change of route", weight = 1 },
+
+  # Weather Events
+  { text = "a sudden storm forces the party to seek shelter", weight = 1 },
+  { text = "extreme heat makes travel during day dangerous", weight = 1 },
+  { text = "a blizzard traps the party", weight = 1 },
+  { text = "lightning strikes unnaturally close", weight = 1 },
+  { text = "unnatural darkness falls at midday", weight = 1 },
+  { text = "a sandstorm obscures everything", weight = 1 },
+
+  # Puzzles & Mysteries
+  { text = "a door bears a riddle that must be answered to pass", weight = 1 },
+  { text = "statues are arranged in a pattern that means something", weight = 1 },
+  { text = "a mechanism requires the correct sequence", weight = 1 },
+  { text = "illusions hide the true path forward", weight = 1 },
+  { text = "the room rearranges itself when not observed", weight = 1 },
+  { text = "multiple doors lead to the same room", weight = 1 },
+  { text = "a maze with walls that shift", weight = 1 },
+  { text = "mirrors show things that aren't there - or hide things that are", weight = 1 },
+
+  # Resources & Opportunities
+  { text = "a fresh water spring offers rest and resupply", weight = 1 },
+  { text = "herbs with healing properties grow here", weight = 1 },
+  { text = "a natural shelter offers protection from the elements", weight = 1 },
+  { text = "a cache of supplies was left here by previous travelers", weight = 1 },
+  { text = "a shortcut presents itself but may have risks", weight = 1 },
+  { text = "a vantage point offers views of the surrounding area", weight = 1 },
+  { text = "game animals are plentiful and unwary", weight = 1 },
+  { text = "ore deposits or gems are visible in the rock", weight = 1 },
+
+  # Magical Phenomena
+  { text = "magic behaves strangely in this area", weight = 1 },
+  { text = "a ley line crossing pulses with power", weight = 1 },
+  { text = "reality seems thin here - other places show through", weight = 1 },
+  { text = "time passes differently in this location", weight = 1 },
+  { text = "a curse lingers over the land", weight = 1 },
+  { text = "wild magic causes unpredictable effects", weight = 1 },
+  { text = "an illusion conceals the true nature of the terrain", weight = 1 },
+  { text = "a portal flickers in and out of existence", weight = 1 },
+  { text = "gravity works differently here", weight = 1 },
+  { text = "the dead do not stay dead in this place", weight = 1 },
+]

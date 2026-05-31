@@ -1,0 +1,310 @@
+# Warhammer 40,000 2nd Edition Rules Reference
+# Classic Oldhammer rules from the 1993-1998 era
+
+[edition]
+name = "Warhammer 40,000 2nd Edition"
+years = "1993-1998"
+description = "The golden age of 40K - detailed wargear cards, psychic powers, and narrative gameplay"
+
+# =============================================================================
+# CORE RULES
+# =============================================================================
+
+[[rules]]
+name = "Movement"
+category = "core"
+description = "Models move up to their Movement characteristic in inches during the Movement phase"
+page_reference = "Core Rules p.8"
+examples = [
+  "Infantry with M4 move up to 4 inches",
+  "Charging adds 2D6 inches to movement",
+  "Difficult terrain halves movement"
+]
+
+[[rules]]
+name = "Shooting"
+category = "core"
+description = "Models fire weapons during the Shooting phase, rolling to hit based on BS"
+page_reference = "Core Rules p.12"
+examples = [
+  "BS4 hits on 3+",
+  "BS3 hits on 4+",
+  "BS2 hits on 5+",
+  "Long range adds -1 to hit"
+]
+
+[[rules]]
+name = "Close Combat"
+category = "core"
+description = "Models in base contact fight in Initiative order during the Assault phase"
+page_reference = "Core Rules p.18"
+examples = [
+  "Compare WS on chart to determine to-hit roll",
+  "Higher Initiative strikes first",
+  "Charging grants +1 Attack"
+]
+
+[[rules]]
+name = "Morale"
+category = "core"
+description = "Units must test Leadership when suffering casualties or other morale-affecting events"
+page_reference = "Core Rules p.24"
+examples = [
+  "Roll 2D6 equal or under Leadership to pass",
+  "Failed test causes unit to Fall Back",
+  "Fall Back move is 2D6 inches toward board edge"
+]
+
+[[rules]]
+name = "Armor Saves"
+category = "core"
+description = "Models with armor may attempt to negate wounds by rolling their armor save"
+page_reference = "Core Rules p.16"
+examples = [
+  "Power armor grants 3+ save",
+  "Carapace armor grants 4+ save",
+  "Flak armor grants 5+ save",
+  "AP modifiers reduce save effectiveness"
+]
+
+# =============================================================================
+# SPECIAL RULES
+# =============================================================================
+
+[[rules]]
+name = "Overwatch"
+category = "special"
+description = "Models on Overwatch can fire at enemies that move within range during enemy turn"
+page_reference = "Core Rules p.42"
+examples = [
+  "Declare Overwatch instead of shooting in your turn",
+  "Fire at any enemy model that moves in line of sight",
+  "Use the firer's BS with -1 modifier",
+  "Cannot Overwatch if engaged in close combat"
+]
+
+[[rules]]
+name = "Sustained Fire"
+category = "special"
+description = "Weapons with Sustained Fire dice roll extra shots on certain results"
+page_reference = "Core Rules p.38"
+examples = [
+  "Roll the Sustained Fire die after hitting",
+  "Number shown = extra shots (0-3 additional)",
+  "Jam symbol means weapon jams - no more shooting this turn",
+  "Heavy bolters have 1 Sustained Fire die",
+  "Assault cannons have 3 Sustained Fire dice"
+]
+
+[[rules]]
+name = "Rapid Fire"
+category = "special"
+description = "Rapid Fire weapons can fire twice at half range"
+page_reference = "Core Rules p.36"
+examples = [
+  "Bolters fire twice at 12 inches or less",
+  "Each shot is rolled separately",
+  "Cannot Rapid Fire and charge in same turn"
+]
+
+[[rules]]
+name = "Gets Hot!"
+category = "special"
+description = "Plasma weapons risk overheating and wounding the firer"
+page_reference = "Wargear Cards"
+examples = [
+  "On a to-hit roll of 1, the weapon overheats",
+  "Firer takes an automatic wound with no armor save",
+  "Plasma guns, plasma pistols, and plasma cannons all Get Hot"
+]
+
+[[rules]]
+name = "Blast"
+category = "special"
+description = "Template weapons affect an area rather than single models"
+page_reference = "Core Rules p.40"
+examples = [
+  "Place blast template over target point",
+  "All models under template are hit",
+  "Scatter 2D6 inches minus BS on a miss",
+  "Small blast = 1.5 inch radius, Large blast = 2.5 inch radius"
+]
+
+[[rules]]
+name = "Melta"
+category = "special"
+description = "Melta weapons roll 2D6 for armor penetration at half range"
+page_reference = "Wargear Cards"
+examples = [
+  "At half range or less, roll 2D6 + Strength for penetration",
+  "Devastating against vehicles and heavy infantry",
+  "Multi-meltas have 24 inch range, half range is 12 inches"
+]
+
+[[rules]]
+name = "And They Shall Know No Fear"
+category = "special"
+description = "Space Marines automatically rally and never fall back off the board"
+page_reference = "Codex Space Marines"
+examples = [
+  "Space Marines automatically pass regrouping tests",
+  "May move and shoot normally after regrouping",
+  "Cannot be destroyed by Fall Back moves off table edge"
+]
+
+[[rules]]
+name = "Mob Rule"
+category = "special"
+description = "Ork units use their number of models for Leadership tests"
+page_reference = "Codex Orks"
+examples = [
+  "Unit of 20 Orks has Leadership 20 (auto-pass)",
+  "As Orks die, Leadership decreases",
+  "Nob leadership used if higher than mob size"
+]
+
+[[rules]]
+name = "Synapse"
+category = "special"
+description = "Tyranid creatures within Synapse range are immune to morale effects"
+page_reference = "Codex Tyranids"
+examples = [
+  "Synapse range is typically 12 inches",
+  "Hive Tyrants, Warriors, and Zoanthropes project Synapse",
+  "Without Synapse, lesser Tyranids revert to instinctive behavior"
+]
+
+[[rules]]
+name = "Fleet of Foot"
+category = "special"
+description = "Unit may run D6 inches in the shooting phase instead of shooting"
+page_reference = "Codex Eldar"
+examples = [
+  "Roll D6 and add to movement",
+  "Cannot shoot or assault after running",
+  "Eldar Aspect Warriors and some other units have this rule"
+]
+
+[[rules]]
+name = "Fearless"
+category = "special"
+description = "Unit automatically passes all Morale and Pinning tests"
+page_reference = "Various Codexes"
+examples = [
+  "Never falls back",
+  "Cannot be pinned",
+  "Khorne Berzerkers, Tyranid Synapse creatures, some characters"
+]
+
+[[rules]]
+name = "Infiltrate"
+category = "special"
+description = "Unit may deploy after all other units, anywhere on the board"
+page_reference = "Core Rules p.48"
+examples = [
+  "Must be more than 12 inches from enemy models",
+  "If in cover, must be more than 6 inches from enemy",
+  "Scouts, Genestealers, and some special characters can infiltrate"
+]
+
+[[rules]]
+name = "Deep Strike"
+category = "special"
+description = "Unit arrives from reserve by teleporting or drop pod onto the battlefield"
+page_reference = "Core Rules p.50"
+examples = [
+  "Place model anywhere on table",
+  "Scatter 2D6 inches from intended position",
+  "Mishap if scattering into enemy or off table",
+  "Cannot move but may shoot and assault"
+]
+
+[[rules]]
+name = "Psychic Test"
+category = "psychic"
+description = "Psykers must pass a Leadership test to use psychic powers"
+page_reference = "Core Rules p.56"
+examples = [
+  "Roll 2D6 equal or under Leadership",
+  "Perils of the Warp on double 1 or double 6",
+  "May be nullified by enemy psykers"
+]
+
+# =============================================================================
+# VEHICLE RULES
+# =============================================================================
+
+[[rules]]
+name = "Vehicle Armor"
+category = "vehicle"
+description = "Vehicles have separate armor values for Front, Side, and Rear"
+page_reference = "Core Rules p.62"
+examples = [
+  "Facing determined by attacker position",
+  "Roll D6 + weapon Strength vs Armor Value",
+  "Glancing hit = roll on Glancing table",
+  "Penetrating hit = roll on Penetrating table"
+]
+
+[[rules]]
+name = "Vehicle Damage"
+category = "vehicle"
+description = "Damaged vehicles suffer effects based on damage table results"
+page_reference = "Core Rules p.64"
+examples = [
+  "Crew Shaken - may only move, no shooting",
+  "Crew Stunned - may not move or shoot",
+  "Weapon Destroyed - lose one weapon",
+  "Immobilized - may not move",
+  "Wrecked - vehicle is destroyed",
+  "Explodes! - 6 inch explosion, D6 S4 hits"
+]
+
+[[rules]]
+name = "Ordnance"
+category = "vehicle"
+description = "Ordnance weapons use large blast templates and roll 2D6 for armor penetration"
+page_reference = "Core Rules p.66"
+examples = [
+  "Battle cannons, demolisher cannons are Ordnance",
+  "May only fire Ordnance weapon OR other weapons, not both",
+  "Always picks highest of 2D6 for armor penetration"
+]
+
+# =============================================================================
+# TERRAIN RULES
+# =============================================================================
+
+[[rules]]
+name = "Cover Saves"
+category = "terrain"
+description = "Models in cover receive a cover save against shooting attacks"
+page_reference = "Core Rules p.28"
+examples = [
+  "Hard cover (walls, rocks) = 4+ save",
+  "Soft cover (woods, craters) = 5+ save",
+  "Light cover (bushes, smoke) = 6+ save",
+  "Cover saves are taken instead of armor saves, not in addition"
+]
+
+[[rules]]
+name = "Difficult Terrain"
+category = "terrain"
+description = "Moving through difficult terrain requires rolling dice and risks immobilization"
+page_reference = "Core Rules p.30"
+examples = [
+  "Roll 2D6 and pick highest for infantry",
+  "Vehicles roll D6 - on a 1, immobilized",
+  "Woods, ruins, and craters are difficult terrain"
+]
+
+[[rules]]
+name = "Dangerous Terrain"
+category = "terrain"
+description = "Some terrain risks wounding or destroying models that enter it"
+page_reference = "Core Rules p.32"
+examples = [
+  "Razor wire causes S3 hits",
+  "Mine fields cause S6 hits",
+  "Lava causes automatic death"
+]

@@ -1,0 +1,761 @@
+# Warhammer: The Old World - High Elves
+# The ancient Asur, masters of magic and martial prowess
+
+[faction]
+name = "High Elves"
+description = "The High Elves of Ulthuan are an ancient and noble race, masters of magic and consummate warriors. They fight with speed, grace, and devastating precision"
+playstyle = "Elite, low-model count army with exceptional magic and Always Strikes First"
+strengths = ["Always Strikes First", "Best magic users", "Elite troops", "Dragon mounts", "Excellent archers"]
+weaknesses = ["Expensive points cost", "Low model count", "Fragile (T3)", "Every loss hurts"]
+lore_notes = "Ulthuan is an island continent ruled by the Phoenix King. High Elves are the eldest of the Elven kindreds, fighting an eternal war against Chaos"
+
+# =============================================================================
+# LORDS
+# =============================================================================
+
+[[units]]
+name = "Prince"
+type = "character"
+category = "Lords"
+points = 125
+models = "1"
+tactical_role = "combat_commander"
+threat_level = "very_high"
+preferred_targets = ["enemy_characters", "monsters"]
+weaknesses = ["mass_attacks"]
+special_rules = ["Speed of Asuryan", "Martial Prowess", "Valour of Ages"]
+keywords = ["Character", "Infantry", "High Elf", "Lord"]
+equipment = ["Hand weapon", "Heavy armor"]
+options = ["May take Dragon Armor (+6 pts)", "May take mount (Elven Steed, Great Eagle, Griffon, Sun Dragon, Moon Dragon, Star Dragon)", "May take magic items up to 100 points"]
+
+[units.stats]
+M = 5
+WS = 7
+BS = 6
+S = 4
+T = 3
+W = 3
+I = 8
+A = 4
+Ld = 10
+Sv = "5+"
+
+[[units]]
+name = "Archmage"
+type = "character"
+category = "Lords"
+points = 185
+models = "1"
+tactical_role = "magic"
+threat_level = "extreme"
+preferred_targets = ["enemy_units"]
+weaknesses = ["assassins", "war_machines"]
+special_rules = ["Level 3 Wizard", "May upgrade to Level 4 (+35 pts)", "High Magic", "Lileath's Blessing"]
+keywords = ["Character", "Infantry", "High Elf", "Lord", "Wizard"]
+equipment = ["Hand weapon"]
+options = ["May choose High Magic or any Lore", "May take mount", "May take arcane items up to 100 points"]
+
+[units.stats]
+M = 5
+WS = 4
+BS = 4
+S = 3
+T = 3
+W = 3
+I = 5
+A = 1
+Ld = 9
+Sv = "-"
+
+[[units]]
+name = "Anointed of Asuryan"
+type = "character"
+category = "Lords"
+points = 210
+models = "1"
+tactical_role = "combat_commander"
+threat_level = "very_high"
+preferred_targets = ["daemons", "undead"]
+weaknesses = ["mass_attacks"]
+special_rules = ["Speed of Asuryan", "Witness to Destiny (4+ ward)", "Immune to Psychology", "Fear"]
+keywords = ["Character", "Infantry", "High Elf", "Lord", "Phoenix Guard"]
+equipment = ["Halberd", "Heavy armor"]
+options = ["May mount Flamespyre Phoenix (+225 pts)", "May mount Frostheart Phoenix (+240 pts)"]
+
+[units.stats]
+M = 5
+WS = 7
+BS = 6
+S = 4
+T = 3
+W = 3
+I = 8
+A = 4
+Ld = 10
+Sv = "5+"
+
+# =============================================================================
+# HEROES
+# =============================================================================
+
+[[units]]
+name = "Noble"
+type = "character"
+category = "Heroes"
+points = 55
+models = "1"
+tactical_role = "support_commander"
+threat_level = "medium"
+preferred_targets = ["enemy_champions"]
+weaknesses = ["powerful_characters"]
+special_rules = ["Speed of Asuryan", "Martial Prowess"]
+keywords = ["Character", "Infantry", "High Elf", "Hero"]
+equipment = ["Hand weapon", "Light armor"]
+options = ["May carry Battle Standard (+25 pts)", "May take magic items up to 50 points", "May take mount"]
+
+[units.stats]
+M = 5
+WS = 6
+BS = 6
+S = 4
+T = 3
+W = 2
+I = 7
+A = 3
+Ld = 9
+Sv = "6+"
+
+[[units]]
+name = "Mage"
+type = "character"
+category = "Heroes"
+points = 85
+models = "1"
+tactical_role = "magic_support"
+threat_level = "medium"
+preferred_targets = ["enemy_units"]
+weaknesses = ["close_combat", "snipers"]
+special_rules = ["Level 1 Wizard", "May upgrade to Level 2 (+35 pts)", "High Magic"]
+keywords = ["Character", "Infantry", "High Elf", "Hero", "Wizard"]
+equipment = ["Hand weapon"]
+options = ["May choose High Magic or any Lore", "May take arcane items up to 50 points"]
+
+[units.stats]
+M = 5
+WS = 4
+BS = 4
+S = 3
+T = 3
+W = 2
+I = 5
+A = 1
+Ld = 8
+Sv = "-"
+
+[[units]]
+name = "Loremaster of Hoeth"
+type = "character"
+category = "Heroes"
+points = 230
+models = "1"
+tactical_role = "hybrid"
+threat_level = "very_high"
+preferred_targets = ["anything"]
+weaknesses = ["mass_shooting"]
+special_rules = ["Speed of Asuryan", "Level 2 Wizard", "Knows all signature spells"]
+keywords = ["Character", "Infantry", "High Elf", "Hero", "Wizard", "Swordmaster"]
+equipment = ["Great weapon", "Heavy armor"]
+options = ["May take magic items up to 50 points"]
+
+[units.stats]
+M = 5
+WS = 6
+BS = 4
+S = 4
+T = 3
+W = 2
+I = 7
+A = 2
+Ld = 8
+Sv = "5+"
+
+# =============================================================================
+# CORE UNITS
+# =============================================================================
+
+[[units]]
+name = "Spearmen"
+type = "infantry"
+category = "Core"
+points = 9
+models = "10-40"
+tactical_role = "line_infantry"
+threat_level = "medium"
+preferred_targets = ["charging_enemies"]
+weaknesses = ["shooting", "flanking"]
+special_rules = ["Speed of Asuryan", "Martial Prowess", "Fight in Extra Ranks (4 ranks)"]
+keywords = ["Infantry", "High Elf", "Core"]
+equipment = ["Spear", "Light armor", "Shield"]
+options = ["May add musician (+5 pts)", "May add standard bearer (+10 pts)"]
+
+[units.stats]
+M = 5
+WS = 4
+BS = 4
+S = 3
+T = 3
+W = 1
+I = 5
+A = 1
+Ld = 8
+Sv = "5+"
+
+[[units.weapons]]
+name = "Spear"
+range = "Melee"
+strength = "User"
+ap = "0"
+damage = "1"
+abilities = ["Fight in Extra Ranks (4)"]
+
+[[units]]
+name = "Archers"
+type = "infantry"
+category = "Core"
+points = 11
+models = "10-30"
+tactical_role = "ranged_infantry"
+threat_level = "medium"
+preferred_targets = ["light_infantry", "cavalry"]
+weaknesses = ["close_combat"]
+special_rules = ["Speed of Asuryan", "Martial Prowess"]
+keywords = ["Infantry", "High Elf", "Core"]
+equipment = ["Longbow", "Hand weapon"]
+options = ["May add musician (+5 pts)", "May add light armor (+1 pt/model)"]
+
+[units.stats]
+M = 5
+WS = 4
+BS = 4
+S = 3
+T = 3
+W = 1
+I = 5
+A = 1
+Ld = 8
+Sv = "-"
+
+[[units.weapons]]
+name = "Longbow"
+range = "30\""
+strength = "3"
+ap = "0"
+damage = "1"
+abilities = ["Volley Fire", "Quick to Fire"]
+
+[[units]]
+name = "Silver Helms"
+type = "cavalry"
+category = "Core"
+points = 21
+models = "5-15"
+tactical_role = "shock_cavalry"
+threat_level = "high"
+preferred_targets = ["infantry", "light_cavalry"]
+weaknesses = ["pikes", "elite_cavalry"]
+special_rules = ["Speed of Asuryan", "Devastating Charge (+1S)"]
+keywords = ["Cavalry", "High Elf", "Core"]
+equipment = ["Lance", "Hand weapon", "Heavy armor", "Shield", "Elven Steed"]
+options = ["May add musician (+5 pts)", "May add standard bearer (+10 pts)"]
+
+[units.stats]
+M = 5
+WS = 4
+BS = 4
+S = 3
+T = 3
+W = 1
+I = 5
+A = 1
+Ld = 8
+Sv = "3+"
+
+[units.mount]
+name = "Elven Steed"
+M = 9
+WS = 3
+S = 3
+T = 3
+W = 1
+I = 4
+A = 1
+
+[[units]]
+name = "Lothern Sea Guard"
+type = "infantry"
+category = "Core"
+points = 12
+models = "10-30"
+tactical_role = "flexible_infantry"
+threat_level = "medium"
+preferred_targets = ["versatile"]
+weaknesses = ["elite_infantry"]
+special_rules = ["Speed of Asuryan", "Martial Prowess", "Fight in Extra Ranks (4)"]
+keywords = ["Infantry", "High Elf", "Core"]
+equipment = ["Spear", "Bow", "Light armor", "Shield"]
+options = ["May add musician (+5 pts)", "May add standard bearer (+10 pts)"]
+
+[units.stats]
+M = 5
+WS = 4
+BS = 4
+S = 3
+T = 3
+W = 1
+I = 5
+A = 1
+Ld = 8
+Sv = "5+"
+
+# =============================================================================
+# SPECIAL UNITS
+# =============================================================================
+
+[[units]]
+name = "Swordmasters of Hoeth"
+type = "infantry"
+category = "Special"
+points = 15
+models = "10-30"
+tactical_role = "elite_infantry"
+threat_level = "very_high"
+preferred_targets = ["heavy_infantry", "monstrous_infantry"]
+weaknesses = ["shooting", "large_cavalry_units"]
+special_rules = ["Speed of Asuryan", "Deflect Shots (6+ ward vs shooting)"]
+keywords = ["Infantry", "High Elf", "Special", "Swordmaster"]
+equipment = ["Great weapon", "Heavy armor"]
+options = ["May add musician (+5 pts)", "May add standard bearer (+10 pts)", "May take magic standard up to 50 pts"]
+
+[units.stats]
+M = 5
+WS = 6
+BS = 4
+S = 3
+T = 3
+W = 1
+I = 5
+A = 2
+Ld = 8
+Sv = "5+"
+
+[[units.weapons]]
+name = "Great Weapon"
+range = "Melee"
+strength = "+2"
+ap = "2"
+damage = "1"
+abilities = ["Armor Piercing (2)", "Always Strikes First (ignores ASL penalty)"]
+
+[[units]]
+name = "White Lions of Chrace"
+type = "infantry"
+category = "Special"
+points = 14
+models = "10-30"
+tactical_role = "elite_infantry"
+threat_level = "high"
+preferred_targets = ["heavy_infantry", "monsters"]
+weaknesses = ["shooting"]
+special_rules = ["Speed of Asuryan", "Stubborn", "Forest Strider"]
+keywords = ["Infantry", "High Elf", "Special", "White Lion"]
+equipment = ["Great weapon (Woodsman's Axe)", "Heavy armor", "Lion Cloak (6+ ward vs shooting)"]
+options = ["May add musician (+5 pts)", "May add standard bearer (+10 pts)"]
+
+[units.stats]
+M = 5
+WS = 5
+BS = 4
+S = 4
+T = 3
+W = 1
+I = 5
+A = 1
+Ld = 8
+Sv = "5+"
+
+[[units]]
+name = "Phoenix Guard"
+type = "infantry"
+category = "Special"
+points = 17
+models = "10-30"
+tactical_role = "elite_anvil"
+threat_level = "high"
+preferred_targets = ["elite_infantry"]
+weaknesses = ["magic"]
+special_rules = ["Speed of Asuryan", "Fear", "4+ Ward Save"]
+keywords = ["Infantry", "High Elf", "Special", "Phoenix Guard"]
+equipment = ["Halberd", "Heavy armor"]
+options = ["May add musician (+5 pts)", "May add standard bearer (+10 pts)", "May take magic standard up to 75 pts"]
+
+[units.stats]
+M = 5
+WS = 5
+BS = 4
+S = 3
+T = 3
+W = 1
+I = 6
+A = 1
+Ld = 9
+Sv = "5+"
+
+[[units]]
+name = "Dragon Princes of Caledor"
+type = "cavalry"
+category = "Special"
+points = 32
+models = "5-12"
+tactical_role = "elite_shock_cavalry"
+threat_level = "very_high"
+preferred_targets = ["cavalry", "monsters"]
+weaknesses = ["massed_attacks"]
+special_rules = ["Speed of Asuryan", "Devastating Charge (+1S)", "2+ Ward vs Flaming"]
+keywords = ["Cavalry", "High Elf", "Special"]
+equipment = ["Lance", "Hand weapon", "Dragon armor (5+ save, 2+ ward vs fire)", "Shield", "Elven Steed"]
+options = ["May add musician (+5 pts)", "May add standard bearer (+10 pts)", "May take magic standard up to 75 pts"]
+
+[units.stats]
+M = 5
+WS = 5
+BS = 4
+S = 3
+T = 3
+W = 1
+I = 6
+A = 2
+Ld = 9
+Sv = "2+"
+
+[units.mount]
+name = "Elven Steed"
+M = 9
+WS = 3
+S = 3
+T = 3
+W = 1
+I = 4
+A = 1
+
+[[units]]
+name = "Ellyrian Reavers"
+type = "cavalry"
+category = "Special"
+points = 16
+models = "5-10"
+tactical_role = "fast_cavalry"
+threat_level = "medium"
+preferred_targets = ["war_machines", "skirmishers"]
+weaknesses = ["heavy_cavalry"]
+special_rules = ["Speed of Asuryan", "Fast Cavalry", "Vanguard"]
+keywords = ["Cavalry", "High Elf", "Special"]
+equipment = ["Spear", "Bow", "Light armor", "Elven Steed"]
+options = ["May add musician (+5 pts)"]
+
+[units.stats]
+M = 5
+WS = 4
+BS = 4
+S = 3
+T = 3
+W = 1
+I = 5
+A = 1
+Ld = 8
+Sv = "6+"
+
+[[units]]
+name = "Tiranoc Chariot"
+type = "chariot"
+category = "Special"
+points = 70
+models = "1"
+tactical_role = "flanker"
+threat_level = "medium"
+preferred_targets = ["flanks", "small_units"]
+weaknesses = ["massed_attacks"]
+special_rules = ["Speed of Asuryan", "Impact Hits (D6)"]
+keywords = ["Chariot", "High Elf", "Special"]
+equipment = ["Spear", "Bow", "Light armor"]
+
+[units.stats]
+M = 9
+WS = 4
+BS = 4
+S = 3
+T = 4
+W = 4
+I = 5
+A = 2
+Ld = 8
+Sv = "5+"
+
+[[units]]
+name = "Shadow Warriors"
+type = "infantry"
+category = "Special"
+points = 14
+models = "5-20"
+tactical_role = "scouts"
+threat_level = "medium"
+preferred_targets = ["war_machines", "isolated_units"]
+weaknesses = ["heavy_infantry"]
+special_rules = ["Speed of Asuryan", "Scouts", "Skirmishers", "Hatred (Dark Elves)"]
+keywords = ["Infantry", "High Elf", "Special", "Skirmishers"]
+equipment = ["Longbow", "Hand weapon", "Light armor"]
+
+[units.stats]
+M = 5
+WS = 5
+BS = 5
+S = 3
+T = 3
+W = 1
+I = 5
+A = 1
+Ld = 8
+Sv = "6+"
+
+[[units]]
+name = "Eagle Claw Bolt Thrower"
+type = "warmachine"
+category = "Special"
+points = 70
+models = "1 bolt thrower, 2 crew"
+tactical_role = "artillery"
+threat_level = "high"
+preferred_targets = ["monsters", "ranked_infantry"]
+weaknesses = ["fast_units"]
+special_rules = ["Speed of Asuryan"]
+keywords = ["War Machine", "High Elf", "Special"]
+equipment = ["Hand weapons"]
+
+[units.stats]
+M = "-"
+WS = 4
+BS = 4
+S = 3
+T = 7
+W = 2
+I = 5
+A = "-"
+Ld = 8
+Sv = "-"
+
+[[units.weapons]]
+name = "Eagle Claw"
+range = "48\""
+strength = "6"
+ap = "2"
+damage = "D3"
+abilities = ["Multiple Wounds (D3)", "OR D6 S4 shots"]
+
+# =============================================================================
+# RARE UNITS
+# =============================================================================
+
+[[units]]
+name = "Great Eagle"
+type = "monstrous_beast"
+category = "Rare"
+points = 50
+models = "1"
+tactical_role = "war_machine_hunter"
+threat_level = "medium"
+preferred_targets = ["war_machines", "lone_characters"]
+weaknesses = ["massed_shooting"]
+special_rules = ["Fly"]
+keywords = ["Monstrous Beast", "High Elf", "Rare", "Fly"]
+equipment = ["Beak and talons"]
+
+[units.stats]
+M = 2
+WS = 5
+BS = 0
+S = 4
+T = 4
+W = 3
+I = 4
+A = 2
+Ld = 8
+Sv = "-"
+
+[[units]]
+name = "Flamespyre Phoenix"
+type = "monster"
+category = "Rare"
+points = 225
+models = "1"
+tactical_role = "flying_monster"
+threat_level = "extreme"
+preferred_targets = ["ranked_infantry"]
+weaknesses = ["war_machines"]
+special_rules = ["Fly", "Terror", "Flaming Attacks", "Attuned to Magic", "Phoenix Reborn"]
+keywords = ["Monster", "High Elf", "Rare", "Fly", "Phoenix"]
+equipment = ["Flaming talons"]
+
+[units.stats]
+M = 10
+WS = 5
+BS = 0
+S = 5
+T = 5
+W = 5
+I = 4
+A = 3
+Ld = 8
+Sv = "5+"
+
+[[units]]
+name = "Frostheart Phoenix"
+type = "monster"
+category = "Rare"
+points = 240
+models = "1"
+tactical_role = "flying_monster"
+threat_level = "extreme"
+preferred_targets = ["elite_infantry", "characters"]
+weaknesses = ["war_machines"]
+special_rules = ["Fly", "Terror", "Blizzard Aura (-1S enemies in combat)", "Natural Armor (5+)"]
+keywords = ["Monster", "High Elf", "Rare", "Fly", "Phoenix"]
+equipment = ["Frost talons"]
+
+[units.stats]
+M = 10
+WS = 6
+BS = 0
+S = 6
+T = 6
+W = 5
+I = 3
+A = 4
+Ld = 9
+Sv = "5+"
+
+[[units]]
+name = "Sisters of Avelorn"
+type = "infantry"
+category = "Rare"
+points = 16
+models = "10-20"
+tactical_role = "elite_archers"
+threat_level = "very_high"
+preferred_targets = ["monsters", "daemons", "ethereal"]
+weaknesses = ["close_combat"]
+special_rules = ["Speed of Asuryan", "Bows of Avelorn"]
+keywords = ["Infantry", "High Elf", "Rare"]
+equipment = ["Bow of Avelorn", "Hand weapon", "Light armor"]
+
+[units.stats]
+M = 5
+WS = 4
+BS = 5
+S = 3
+T = 3
+W = 1
+I = 5
+A = 1
+Ld = 8
+Sv = "6+"
+
+[[units.weapons]]
+name = "Bow of Avelorn"
+range = "24\""
+strength = "4"
+ap = "0"
+damage = "1"
+abilities = ["Magical Attacks", "Flaming Attacks", "Armor Piercing (1)"]
+
+# =============================================================================
+# FACTION SPECIAL RULES
+# =============================================================================
+
+[[faction_rules]]
+name = "Speed of Asuryan (Always Strikes First)"
+description = "All High Elves have Always Strikes First. They strike at Initiative 10 in close combat. If their actual Initiative is 10 or higher, they re-roll failed to-hit rolls"
+
+[[faction_rules]]
+name = "Martial Prowess"
+description = "High Elf units with spears fight in an additional rank (4 total instead of 3)"
+
+[[faction_rules]]
+name = "Valour of Ages"
+description = "High Elf characters may re-roll failed Break tests"
+
+[[faction_rules]]
+name = "Lileath's Blessing"
+description = "High Elf wizards gain +1 to cast and dispel attempts when using High Magic"
+
+[[faction_rules]]
+name = "High Magic"
+description = "High Elves have access to High Magic - a versatile lore with offensive and defensive spells, including Drain Magic which removes all Remains in Play spells"
+
+# =============================================================================
+# FACTION MAGIC ITEMS
+# =============================================================================
+
+[[faction_items]]
+name = "Blade of Leaping Gold"
+type = "magic_weapon"
+points = 70
+description = "+3 Attacks"
+restrictions = ["High Elf characters only"]
+
+[[faction_items]]
+name = "Reaver Bow"
+type = "magic_weapon"
+points = 25
+description = "Range 30\", S5, Multiple Shots (3). Can be used from mount"
+restrictions = ["High Elf characters only"]
+
+[[faction_items]]
+name = "Star Lance"
+type = "magic_weapon"
+points = 30
+description = "Lance that is +3 Strength on the charge. Flaming Attacks"
+restrictions = ["Mounted High Elf characters only"]
+
+[[faction_items]]
+name = "Armour of Caledor"
+type = "magic_armor"
+points = 50
+description = "Dragon armor. 2+ armor save. 2+ ward save against Flaming Attacks. Fireborn"
+restrictions = ["High Elf characters only"]
+
+[[faction_items]]
+name = "Shadow Armour"
+type = "magic_armor"
+points = 25
+description = "Light armor. -1 to be hit in close combat. Grants Strider"
+restrictions = ["High Elf characters only"]
+
+[[faction_items]]
+name = "Book of Hoeth"
+type = "arcane"
+points = 55
+description = "Bearer can re-roll one casting die per spell. Bearer can use one more power die than normal"
+restrictions = ["High Elf Wizards only"]
+
+[[faction_items]]
+name = "Banner of the World Dragon"
+type = "banner"
+points = 50
+description = "Unit has 2+ ward save against all wounds caused by spells, magic weapons, and magical attacks"
+restrictions = ["High Elf standard bearer only"]
+
+[[faction_items]]
+name = "Banner of Ellyrion"
+type = "banner"
+points = 25
+description = "Unit ignores all terrain penalties. +1 to Armor Save when charging"
+restrictions = ["High Elf cavalry standard bearer only"]

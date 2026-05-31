@@ -1,0 +1,162 @@
+# Battle Events - Universal wargame and tactical battle events
+# Setting-agnostic combat events applicable across all genres
+# Weight: higher = more common (1-3 typical range)
+
+[events]
+entries = [
+  # Supply and Logistics
+  { text = "Ammunition running low - one unit at half capacity", weight = 3 },
+  { text = "Supplies exhausted - a unit must fall back to resupply", weight = 2 },
+  { text = "Supply cache discovered - one unit resupplied", weight = 2 },
+  { text = "Supply lines disrupted - reinforcements delayed", weight = 2 },
+  { text = "Critical supplies lost - heavy weapons unavailable this round", weight = 1 },
+  { text = "Emergency resupply arrives - choose one unit to fully restock", weight = 1 },
+  { text = "Contaminated supplies - one unit suffers penalties", weight = 1 },
+  { text = "Captured enemy supplies bolster your forces", weight = 1 },
+  { text = "Medical supplies running low - casualties harder to treat", weight = 2 },
+  { text = "Fuel shortage - vehicles have limited movement", weight = 2 },
+
+  # Weather and Environment
+  { text = "Fog of war - visibility reduced across the battlefield", weight = 2 },
+  { text = "Weather turns - conditions favor the defender", weight = 2 },
+  { text = "Weather clears - ranged units gain advantage", weight = 2 },
+  { text = "Storm approaching - all units suffer movement penalties", weight = 1 },
+  { text = "Terrain becomes treacherous - difficult ground expands", weight = 2 },
+  { text = "Environmental hazard activates in one zone", weight = 1 },
+  { text = "Night falls early - visibility drastically reduced", weight = 1 },
+  { text = "Dawn breaks - concealed units may be revealed", weight = 1 },
+  { text = "High winds - ranged attacks suffer penalties", weight = 2 },
+  { text = "Sudden calm - perfect conditions for precision attacks", weight = 1 },
+
+  # Reinforcements and Support
+  { text = "Unexpected reinforcements for the enemy", weight = 2 },
+  { text = "Allied reinforcements arrive", weight = 1 },
+  { text = "Reinforcements delayed - they arrive next round instead", weight = 2 },
+  { text = "Reserve unit activates early", weight = 2 },
+  { text = "Support fire available from off-map assets", weight = 1 },
+  { text = "Enemy receives support from unexpected allies", weight = 1 },
+  { text = "Mercenaries or auxiliaries offer their services", weight = 1 },
+  { text = "Local population provides assistance to one side", weight = 1 },
+  { text = "Emergency evacuation available for one unit", weight = 2 },
+  { text = "Forward observers spot enemy reinforcement routes", weight = 2 },
+
+  # Communications
+  { text = "Communications disrupted - command radius reduced", weight = 2 },
+  { text = "Communications restored - full coordination possible", weight = 2 },
+  { text = "Enemy communications intercepted - gain intelligence", weight = 1 },
+  { text = "Your communications compromised - enemy knows your orders", weight = 1 },
+  { text = "Messenger delayed - one unit acts independently", weight = 2 },
+  { text = "Signal confusion - one unit receives wrong orders", weight = 1 },
+  { text = "Command link established - bonus to coordination", weight = 2 },
+  { text = "Communication blackout - all units act independently this round", weight = 1 },
+  { text = "False orders detected and ignored", weight = 2 },
+  { text = "Secure channel established - enemy cannot intercept", weight = 1 },
+
+  # Tactical Opportunities
+  { text = "Flanking opportunity revealed", weight = 2 },
+  { text = "Enemy flank exposed - bonus to attacks from that direction", weight = 2 },
+  { text = "High ground becomes available", weight = 2 },
+  { text = "Cover position discovered - one unit may relocate", weight = 2 },
+  { text = "Choke point identified - defensive bonus available", weight = 2 },
+  { text = "Ambush position identified", weight = 1 },
+  { text = "Enemy formation has a gap - breakthrough possible", weight = 1 },
+  { text = "Defensive position compromised - must relocate or reinforce", weight = 2 },
+  { text = "Clear line of fire opens temporarily", weight = 2 },
+  { text = "Concealment opportunity - one unit may hide", weight = 2 },
+
+  # Morale and Psychology
+  { text = "Enemy morale wavers - one unit hesitates", weight = 2 },
+  { text = "Your troops' morale surges - bonus to next attack", weight = 2 },
+  { text = "Fear spreads - one of your units hesitates", weight = 2 },
+  { text = "Inspiring act rallies nearby units", weight = 1 },
+  { text = "Panic in enemy ranks - one unit routs", weight = 1 },
+  { text = "Confusion in your ranks - one unit frozen this round", weight = 2 },
+  { text = "War cry or battle hymn boosts morale", weight = 2 },
+  { text = "Grim determination settles in - no retreat possible", weight = 1 },
+  { text = "Exhaustion affects both sides - all units at reduced capacity", weight = 1 },
+  { text = "Second wind - one exhausted unit recovers fully", weight = 2 },
+
+  # Leadership
+  { text = "Commander wounded - command penalties this round", weight = 1 },
+  { text = "Enemy commander spotted - assassination opportunity", weight = 1 },
+  { text = "Junior officer takes initiative - bonus to one unit", weight = 2 },
+  { text = "Leadership vacuum - one unit acts without orders", weight = 2 },
+  { text = "Inspiring leadership - one unit exceeds expectations", weight = 2 },
+  { text = "Command dispute - coordination penalties", weight = 1 },
+  { text = "Veteran sergeant steadies the line", weight = 2 },
+  { text = "Orders misinterpreted - one unit takes wrong action", weight = 2 },
+  { text = "Commander's bodyguard diverted to crisis", weight = 1 },
+  { text = "Field promotion - new leader brings fresh perspective", weight = 1 },
+
+  # Equipment and Weapons
+  { text = "Weapon malfunction - one unit at reduced firepower", weight = 2 },
+  { text = "Equipment failure - vehicle or emplacement disabled", weight = 2 },
+  { text = "Improvised weapon or tool proves effective", weight = 1 },
+  { text = "Captured enemy equipment put to use", weight = 1 },
+  { text = "Equipment upgrade available for one unit", weight = 1 },
+  { text = "Armor or shield damaged - reduced protection", weight = 2 },
+  { text = "Weapon overheats - pause required before next use", weight = 2 },
+  { text = "Special ammunition or technique available once", weight = 1 },
+  { text = "Equipment sabotaged - source unknown", weight = 1 },
+  { text = "Field repair restores disabled equipment", weight = 2 },
+
+  # Terrain and Position
+  { text = "Ground gives way - unit repositioned involuntarily", weight = 2 },
+  { text = "Obstacle destroyed - new route available", weight = 2 },
+  { text = "Bridge, pass, or crossing compromised", weight = 1 },
+  { text = "Fortification completed - defensive bonus", weight = 2 },
+  { text = "Hidden passage or shortcut discovered", weight = 1 },
+  { text = "Terrain feature provides unexpected advantage", weight = 2 },
+  { text = "Position flooded, burned, or otherwise altered", weight = 1 },
+  { text = "Natural barrier emerges - blocks one route", weight = 2 },
+  { text = "Prepared positions found abandoned", weight = 1 },
+  { text = "Camouflage or concealment blown - position revealed", weight = 2 },
+
+  # Intelligence and Reconnaissance
+  { text = "Scout reports enemy movement", weight = 3 },
+  { text = "Enemy scouts spotted in your territory", weight = 2 },
+  { text = "Intelligence proves false - trap suspected", weight = 1 },
+  { text = "Defector provides valuable information", weight = 1 },
+  { text = "Prisoner reveals enemy plans", weight = 1 },
+  { text = "Maps or documents captured", weight = 1 },
+  { text = "Enemy signals decoded - know their next move", weight = 1 },
+  { text = "Your plans compromised - enemy prepared", weight = 1 },
+  { text = "Reconnaissance reveals unexpected enemy strength", weight = 2 },
+  { text = "Reconnaissance reveals enemy weakness", weight = 2 },
+
+  # Casualties and Medical
+  { text = "Heavy casualties in one unit - combat ineffective", weight = 1 },
+  { text = "Light casualties - unit at reduced strength", weight = 2 },
+  { text = "Wounded soldiers recovered and returned to duty", weight = 2 },
+  { text = "Medical emergency - resources diverted to treatment", weight = 2 },
+  { text = "Disease or illness affects one unit", weight = 1 },
+  { text = "Casualties lighter than expected - unit recovers strength", weight = 2 },
+  { text = "Key specialist wounded - specific capability lost", weight = 1 },
+  { text = "Heroic medic saves critical personnel", weight = 1 },
+  { text = "Evacuation required - one unit pulled from line", weight = 2 },
+  { text = "Field hospital overwhelmed - treatment delayed", weight = 1 },
+
+  # Civilians and Non-Combatants
+  { text = "Civilians in the combat zone - caution required", weight = 2 },
+  { text = "Refugees block movement route", weight = 2 },
+  { text = "Local guides offer assistance", weight = 1 },
+  { text = "Collateral damage concerns limit options", weight = 2 },
+  { text = "Non-combatant witnesses present", weight = 2 },
+  { text = "Protected structure or site in danger", weight = 1 },
+  { text = "Hostage situation develops", weight = 1 },
+  { text = "Neutral party enters the battlefield", weight = 1 },
+  { text = "Press or observers documenting the battle", weight = 1 },
+  { text = "Local population turns hostile to one side", weight = 1 },
+
+  # Special Circumstances
+  { text = "Duel or single combat challenge issued", weight = 1 },
+  { text = "Parley requested - temporary ceasefire", weight = 1 },
+  { text = "Third party enters the conflict", weight = 1 },
+  { text = "Betrayal within ranks", weight = 1 },
+  { text = "Surrender offered by enemy unit", weight = 1 },
+  { text = "Secret weapon or asset revealed", weight = 1 },
+  { text = "Divine omen, portent, or sign observed", weight = 1 },
+  { text = "Historical or legendary parallel noticed", weight = 1 },
+  { text = "Unexpected alliance proposal", weight = 1 },
+  { text = "Rules of engagement questioned", weight = 2 },
+]

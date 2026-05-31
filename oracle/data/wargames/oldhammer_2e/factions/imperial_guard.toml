@@ -1,0 +1,853 @@
+# Warhammer 40,000 2nd Edition - Imperial Guard
+# The Astra Militarum - Hammer of the Emperor
+
+name = "Imperial Guard"
+codex = "Codex: Imperial Guard (1995)"
+description = "The countless billions of the Imperial Guard, ordinary humans fighting against the horrors of the galaxy"
+playstyle = "Massed infantry supported by powerful artillery and tanks"
+strengths = ["Large numbers", "Cheap units", "Excellent tanks", "Powerful artillery", "Orders system"]
+weaknesses = ["Low individual stats", "Poor morale", "Fragile infantry"]
+
+[faction_rules]
+name = "Orders"
+description = "Officers can issue orders to nearby squads, granting special abilities"
+
+# =============================================================================
+# HQ UNITS
+# =============================================================================
+
+[[units]]
+name = "Company Command Squad"
+type = "infantry"
+category = "HQ"
+points = 50
+models = "5"
+tactical_role = "commander"
+threat_level = "medium"
+preferred_targets = ["infantry"]
+weaknesses = ["any_combat", "snipers"]
+special_rules = ["Orders", "Voice of Command", "Refractor Field (Commander)"]
+keywords = ["Infantry", "Character", "Astra Militarum", "Officer"]
+
+[units.stats]
+M = 4
+WS = 4
+BS = 4
+S = 3
+T = 3
+W = 3
+I = 3
+A = 3
+Ld = 9
+Sv = "5+"
+
+[[units.weapons]]
+name = "Laspistol"
+range = "12\""
+strength = "3"
+ap = "-"
+damage = "1"
+type = "Pistol"
+shots = "1"
+
+[[units.weapons]]
+name = "Chainsword"
+range = "Melee"
+strength = "User"
+ap = "-"
+damage = "1"
+type = "Melee"
+abilities = ["+1 Attack"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Lord Commissar"
+type = "infantry"
+category = "HQ"
+points = 70
+models = "1"
+tactical_role = "morale_support"
+threat_level = "medium"
+preferred_targets = ["infantry", "own_troops"]
+weaknesses = ["snipers", "power_weapons"]
+special_rules = ["Independent Character", "Summary Execution", "Aura of Discipline"]
+keywords = ["Infantry", "Character", "Commissar", "Astra Militarum"]
+
+[units.stats]
+M = 4
+WS = 5
+BS = 4
+S = 3
+T = 3
+W = 3
+I = 4
+A = 3
+Ld = 10
+Sv = "5+"
+
+[[units.weapons]]
+name = "Bolt Pistol"
+range = "12\""
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Pistol"
+shots = "1"
+
+[[units.weapons]]
+name = "Power Sword"
+range = "Melee"
+strength = "User"
+ap = "-"
+damage = "1"
+type = "Melee"
+abilities = ["Ignores Armor Saves"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Primaris Psyker"
+type = "infantry"
+category = "HQ"
+points = 50
+models = "1"
+tactical_role = "psyker"
+threat_level = "medium"
+preferred_targets = ["infantry", "psykers"]
+weaknesses = ["snipers", "perils_of_the_warp", "nullification"]
+special_rules = ["Independent Character", "Psyker (Level 1-2)"]
+keywords = ["Infantry", "Character", "Psyker", "Astra Militarum"]
+
+[units.stats]
+M = 4
+WS = 3
+BS = 3
+S = 3
+T = 3
+W = 2
+I = 3
+A = 2
+Ld = 9
+Sv = "5+"
+
+[[units.weapons]]
+name = "Laspistol"
+range = "12\""
+strength = "3"
+ap = "-"
+damage = "1"
+type = "Pistol"
+shots = "1"
+
+[[units.weapons]]
+name = "Force Stave"
+range = "Melee"
+strength = "+2"
+ap = "-"
+damage = "1"
+type = "Melee"
+abilities = ["Force Weapon"]
+
+# =============================================================================
+# ELITES
+# =============================================================================
+
+[[units]]
+name = "Storm Trooper Squad"
+type = "infantry"
+category = "Elites"
+points = 16
+models = "5-10"
+tactical_role = "elite_infantry"
+threat_level = "medium"
+preferred_targets = ["infantry", "light_vehicles"]
+weaknesses = ["heavy_weapons", "assault"]
+special_rules = ["Deep Strike", "Move Through Cover", "Hot-shot Lasguns"]
+keywords = ["Infantry", "Storm Troopers", "Astra Militarum"]
+
+[units.stats]
+M = 4
+WS = 3
+BS = 4
+S = 3
+T = 3
+W = 1
+I = 3
+A = 1
+Ld = 8
+Sv = "4+"
+
+[[units.weapons]]
+name = "Hot-shot Lasgun"
+range = "18\""
+strength = "3"
+ap = "3"
+damage = "1"
+type = "Rapid Fire"
+shots = "1"
+
+[[units.weapons]]
+name = "Hot-shot Laspistol"
+range = "12\""
+strength = "3"
+ap = "3"
+damage = "1"
+type = "Pistol"
+shots = "1"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Ogryn Squad"
+type = "infantry"
+category = "Elites"
+points = 35
+models = "3-6"
+tactical_role = "assault"
+threat_level = "high"
+preferred_targets = ["infantry"]
+weaknesses = ["heavy_weapons", "power_weapons"]
+special_rules = ["Bulky", "Stubborn", "Furious Charge"]
+keywords = ["Infantry", "Ogryn", "Astra Militarum"]
+
+[units.stats]
+M = 4
+WS = 3
+BS = 2
+S = 5
+T = 5
+W = 3
+I = 2
+A = 3
+Ld = 6
+Sv = "5+"
+
+[[units.weapons]]
+name = "Ripper Gun"
+range = "12\""
+strength = "5"
+ap = "-"
+damage = "1"
+type = "Assault 3"
+shots = "3"
+
+[[units.weapons]]
+name = "Huge Fists"
+range = "Melee"
+strength = "User"
+ap = "-"
+damage = "1"
+type = "Melee"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Ratling Snipers"
+type = "infantry"
+category = "Elites"
+points = 10
+models = "3-10"
+tactical_role = "sniper"
+threat_level = "low"
+preferred_targets = ["characters", "heavy_weapons_teams"]
+weaknesses = ["any_combat", "templates"]
+special_rules = ["Infiltrate", "Stealth", "Sniper"]
+keywords = ["Infantry", "Ratlings", "Astra Militarum"]
+
+[units.stats]
+M = 4
+WS = 2
+BS = 4
+S = 2
+T = 2
+W = 1
+I = 4
+A = 1
+Ld = 6
+Sv = "6+"
+
+[[units.weapons]]
+name = "Sniper Rifle"
+range = "36\""
+strength = "X"
+ap = "6"
+damage = "1"
+type = "Heavy 1"
+abilities = ["Sniper", "Pinning"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Commissar"
+type = "infantry"
+category = "Elites"
+points = 35
+models = "1"
+tactical_role = "morale_support"
+threat_level = "low"
+preferred_targets = ["own_troops"]
+weaknesses = ["snipers"]
+special_rules = ["Summary Execution", "Aura of Discipline"]
+keywords = ["Infantry", "Character", "Commissar", "Astra Militarum"]
+
+[units.stats]
+M = 4
+WS = 4
+BS = 4
+S = 3
+T = 3
+W = 2
+I = 4
+A = 2
+Ld = 9
+Sv = "5+"
+
+[[units.weapons]]
+name = "Bolt Pistol"
+range = "12\""
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Pistol"
+shots = "1"
+
+[[units.weapons]]
+name = "Power Sword"
+range = "Melee"
+strength = "User"
+ap = "-"
+damage = "1"
+type = "Melee"
+abilities = ["Ignores Armor Saves"]
+
+# =============================================================================
+# TROOPS
+# =============================================================================
+
+[[units]]
+name = "Infantry Squad"
+type = "infantry"
+category = "Troops"
+points = 6
+models = "10"
+tactical_role = "line_infantry"
+threat_level = "low"
+preferred_targets = ["infantry"]
+weaknesses = ["everything", "morale"]
+special_rules = ["Combined Squads", "First Rank Fire Second Rank Fire"]
+keywords = ["Infantry", "Astra Militarum"]
+
+[units.stats]
+M = 4
+WS = 3
+BS = 3
+S = 3
+T = 3
+W = 1
+I = 3
+A = 1
+Ld = 7
+Sv = "5+"
+
+[[units.weapons]]
+name = "Lasgun"
+range = "24\""
+strength = "3"
+ap = "-"
+damage = "1"
+type = "Rapid Fire"
+shots = "1"
+
+[[units.weapons]]
+name = "Frag Grenades"
+range = "8\""
+strength = "3"
+ap = "-"
+damage = "1"
+type = "Assault 1"
+abilities = ["Blast"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Conscript Platoon"
+type = "infantry"
+category = "Troops"
+points = 4
+models = "20-50"
+tactical_role = "massed_infantry"
+threat_level = "low"
+preferred_targets = ["infantry"]
+weaknesses = ["everything", "morale"]
+special_rules = ["Raw Recruits", "Send in the Next Wave"]
+keywords = ["Infantry", "Conscripts", "Astra Militarum"]
+
+[units.stats]
+M = 4
+WS = 2
+BS = 2
+S = 3
+T = 3
+W = 1
+I = 3
+A = 1
+Ld = 5
+Sv = "5+"
+
+[[units.weapons]]
+name = "Lasgun"
+range = "24\""
+strength = "3"
+ap = "-"
+damage = "1"
+type = "Rapid Fire"
+shots = "1"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Veteran Squad"
+type = "infantry"
+category = "Troops"
+points = 10
+models = "10"
+tactical_role = "elite_infantry"
+threat_level = "medium"
+preferred_targets = ["infantry", "light_vehicles"]
+weaknesses = ["heavy_weapons", "assault"]
+special_rules = ["Veterans", "Multiple Doctrines"]
+keywords = ["Infantry", "Veterans", "Astra Militarum"]
+
+[units.stats]
+M = 4
+WS = 3
+BS = 4
+S = 3
+T = 3
+W = 1
+I = 3
+A = 1
+Ld = 8
+Sv = "5+"
+
+[[units.weapons]]
+name = "Lasgun"
+range = "24\""
+strength = "3"
+ap = "-"
+damage = "1"
+type = "Rapid Fire"
+shots = "1"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Heavy Weapons Squad"
+type = "infantry"
+category = "Troops"
+points = 20
+models = "3"
+tactical_role = "fire_support"
+threat_level = "medium"
+preferred_targets = ["vehicles", "monsters", "heavy_infantry"]
+weaknesses = ["templates", "assault", "snipers"]
+special_rules = ["Heavy Weapons Team"]
+keywords = ["Infantry", "Heavy Weapons", "Astra Militarum"]
+
+[units.stats]
+M = 4
+WS = 3
+BS = 3
+S = 3
+T = 3
+W = 2
+I = 3
+A = 1
+Ld = 7
+Sv = "5+"
+
+[[units.weapons]]
+name = "Lascannon"
+range = "48\""
+strength = "9"
+ap = "2"
+damage = "1"
+type = "Heavy 1"
+
+[[units.weapons]]
+name = "Autocannon"
+range = "48\""
+strength = "7"
+ap = "4"
+damage = "1"
+type = "Heavy 2"
+
+[[units.weapons]]
+name = "Mortar"
+range = "48\""
+strength = "4"
+ap = "6"
+damage = "1"
+type = "Heavy 1"
+abilities = ["Barrage", "Blast", "Indirect Fire"]
+
+# =============================================================================
+# FAST ATTACK
+# =============================================================================
+
+[[units]]
+name = "Sentinel Squadron"
+type = "vehicle"
+category = "Fast Attack"
+points = 35
+models = "1-3"
+tactical_role = "recon"
+threat_level = "low"
+preferred_targets = ["infantry", "light_vehicles"]
+weaknesses = ["any_shooting"]
+special_rules = ["Scout", "Walker", "Move Through Cover"]
+keywords = ["Vehicle", "Walker", "Sentinel", "Astra Militarum"]
+
+[units.stats]
+M = 6
+WS = 3
+BS = 3
+S = 5
+T = "-"
+W = "-"
+I = 3
+A = 1
+Ld = "-"
+Sv = "-"
+
+[units.armor]
+front = 10
+side = 10
+rear = 10
+
+[[units.weapons]]
+name = "Multilaser"
+range = "36\""
+strength = "6"
+ap = "6"
+damage = "1"
+type = "Heavy 3"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Rough Riders"
+type = "cavalry"
+category = "Fast Attack"
+points = 10
+models = "5-10"
+tactical_role = "assault"
+threat_level = "medium"
+preferred_targets = ["infantry"]
+weaknesses = ["shooting", "difficult_terrain"]
+special_rules = ["Cavalry", "Hunting Lance (first charge only)"]
+keywords = ["Cavalry", "Astra Militarum"]
+
+[units.stats]
+M = 10
+WS = 3
+BS = 3
+S = 3
+T = 3
+W = 1
+I = 3
+A = 1
+Ld = 7
+Sv = "5+"
+
+[[units.weapons]]
+name = "Hunting Lance"
+range = "Melee"
+strength = "5"
+ap = "3"
+damage = "1"
+type = "Melee"
+abilities = ["First Charge Only", "+2 S on Charge"]
+
+[[units.weapons]]
+name = "Laspistol"
+range = "12\""
+strength = "3"
+ap = "-"
+damage = "1"
+type = "Pistol"
+shots = "1"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Hellhound"
+type = "vehicle"
+category = "Fast Attack"
+points = 120
+models = "1"
+tactical_role = "assault_vehicle"
+threat_level = "high"
+preferred_targets = ["infantry"]
+weaknesses = ["melta", "assault"]
+special_rules = ["Tank", "Fast"]
+keywords = ["Vehicle", "Tank", "Hellhound", "Astra Militarum"]
+
+[units.stats]
+M = 12
+WS = "-"
+BS = 3
+S = "-"
+T = "-"
+W = "-"
+I = "-"
+A = "-"
+Ld = "-"
+Sv = "-"
+
+[units.armor]
+front = 12
+side = 12
+rear = 10
+
+[[units.weapons]]
+name = "Inferno Cannon"
+range = "Template"
+strength = "6"
+ap = "4"
+damage = "1"
+type = "Heavy 1"
+abilities = ["Template", "Torrent", "Ignores Cover"]
+
+[[units.weapons]]
+name = "Heavy Bolter"
+range = "36\""
+strength = "5"
+ap = "4"
+damage = "1"
+type = "Heavy 3"
+abilities = ["Sustained Fire 1"]
+
+# =============================================================================
+# HEAVY SUPPORT
+# =============================================================================
+
+[[units]]
+name = "Leman Russ Battle Tank"
+type = "vehicle"
+category = "Heavy Support"
+points = 150
+models = "1"
+tactical_role = "main_battle_tank"
+threat_level = "high"
+preferred_targets = ["all_targets"]
+weaknesses = ["melta", "assault", "rear_armor"]
+special_rules = ["Tank", "Lumbering Behemoth"]
+keywords = ["Vehicle", "Tank", "Leman Russ", "Astra Militarum"]
+
+[units.stats]
+M = 8
+WS = "-"
+BS = 3
+S = "-"
+T = "-"
+W = "-"
+I = "-"
+A = "-"
+Ld = "-"
+Sv = "-"
+
+[units.armor]
+front = 14
+side = 12
+rear = 10
+
+[[units.weapons]]
+name = "Battle Cannon"
+range = "72\""
+strength = "8"
+ap = "3"
+damage = "D3"
+type = "Ordnance 1"
+abilities = ["Large Blast"]
+
+[[units.weapons]]
+name = "Lascannon"
+range = "48\""
+strength = "9"
+ap = "2"
+damage = "1"
+type = "Heavy 1"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Leman Russ Demolisher"
+type = "vehicle"
+category = "Heavy Support"
+points = 165
+models = "1"
+tactical_role = "siege_tank"
+threat_level = "very_high"
+preferred_targets = ["infantry", "fortifications"]
+weaknesses = ["short_range", "melta", "assault"]
+special_rules = ["Tank", "Lumbering Behemoth"]
+keywords = ["Vehicle", "Tank", "Leman Russ", "Astra Militarum"]
+
+[units.stats]
+M = 8
+WS = "-"
+BS = 3
+S = "-"
+T = "-"
+W = "-"
+I = "-"
+A = "-"
+Ld = "-"
+Sv = "-"
+
+[units.armor]
+front = 14
+side = 13
+rear = 11
+
+[[units.weapons]]
+name = "Demolisher Cannon"
+range = "24\""
+strength = "10"
+ap = "1"
+damage = "D6"
+type = "Ordnance 1"
+abilities = ["Large Blast"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Basilisk"
+type = "vehicle"
+category = "Heavy Support"
+points = 125
+models = "1"
+tactical_role = "artillery"
+threat_level = "high"
+preferred_targets = ["infantry", "light_vehicles"]
+weaknesses = ["deep_strike", "assault"]
+special_rules = ["Tank", "Artillery Piece"]
+keywords = ["Vehicle", "Tank", "Artillery", "Astra Militarum"]
+
+[units.stats]
+M = 8
+WS = "-"
+BS = 3
+S = "-"
+T = "-"
+W = "-"
+I = "-"
+A = "-"
+Ld = "-"
+Sv = "-"
+
+[units.armor]
+front = 12
+side = 10
+rear = 10
+
+[[units.weapons]]
+name = "Earthshaker Cannon"
+range = "120\""
+strength = "9"
+ap = "3"
+damage = "D3"
+type = "Ordnance 1"
+abilities = ["Barrage", "Large Blast", "Indirect Fire"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Chimera"
+type = "vehicle"
+category = "Dedicated Transport"
+points = 55
+models = "1"
+tactical_role = "transport"
+threat_level = "low"
+preferred_targets = ["infantry"]
+weaknesses = ["melta", "assault"]
+special_rules = ["Tank", "Transport (12)", "Amphibious"]
+keywords = ["Vehicle", "Tank", "Transport", "Astra Militarum"]
+
+[units.stats]
+M = 10
+WS = "-"
+BS = 3
+S = "-"
+T = "-"
+W = "-"
+I = "-"
+A = "-"
+Ld = "-"
+Sv = "-"
+
+[units.armor]
+front = 12
+side = 10
+rear = 10
+
+[[units.weapons]]
+name = "Multilaser"
+range = "36\""
+strength = "6"
+ap = "6"
+damage = "1"
+type = "Heavy 3"
+
+[[units.weapons]]
+name = "Heavy Bolter"
+range = "36\""
+strength = "5"
+ap = "4"
+damage = "1"
+type = "Heavy 3"
+abilities = ["Sustained Fire 1"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Manticore"
+type = "vehicle"
+category = "Heavy Support"
+points = 160
+models = "1"
+tactical_role = "artillery"
+threat_level = "high"
+preferred_targets = ["infantry", "light_vehicles"]
+weaknesses = ["limited_ammo", "assault"]
+special_rules = ["Tank", "Limited Ammunition (4)"]
+keywords = ["Vehicle", "Tank", "Artillery", "Astra Militarum"]
+
+[units.stats]
+M = 8
+WS = "-"
+BS = 3
+S = "-"
+T = "-"
+W = "-"
+I = "-"
+A = "-"
+Ld = "-"
+Sv = "-"
+
+[units.armor]
+front = 12
+side = 12
+rear = 10
+
+[[units.weapons]]
+name = "Storm Eagle Rockets"
+range = "120\""
+strength = "10"
+ap = "4"
+damage = "D3"
+type = "Ordnance D3"
+abilities = ["Barrage", "Large Blast", "Limited to 4 shots total"]

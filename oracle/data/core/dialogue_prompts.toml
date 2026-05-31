@@ -1,0 +1,452 @@
+# Dialogue Prompts - NPC dialogue generators for narrative generation
+# System-agnostic entries suitable for any genre or setting
+# Weight determines relative probability (higher = more common)
+
+[greeting_styles]
+description = "How NPCs initially address the party"
+entries = [
+  # Professional Greetings
+  { text = "Formal and distant - maintaining professional boundaries", weight = 2 },
+  { text = "Businesslike, straight to the point", weight = 2 },
+  { text = "Polite but clearly busy", weight = 1 },
+  { text = "Perfunctory acknowledgment, attention elsewhere", weight = 1 },
+  { text = "Efficient professional courtesy", weight = 1 },
+  { text = "By-the-book formal greeting", weight = 1 },
+
+  # Warm Greetings
+  { text = "Warm but cautious - friendly with reservations", weight = 2 },
+  { text = "Genuinely pleased to see visitors", weight = 1 },
+  { text = "Hearty and boisterous", weight = 1 },
+  { text = "Relieved to finally talk to someone", weight = 1 },
+  { text = "Welcoming but curious about purpose", weight = 1 },
+  { text = "Immediately hospitable, offering comfort", weight = 1 },
+
+  # Suspicious Greetings
+  { text = "Immediately suspicious - what do you want?", weight = 1 },
+  { text = "Guarded, measuring you before speaking", weight = 1 },
+  { text = "Defensive posture, hand near weapon", weight = 1 },
+  { text = "Pretending not to notice you", weight = 1 },
+  { text = "Challenging - prove you belong here", weight = 1 },
+  { text = "Looking past you for the real threat", weight = 1 },
+
+  # Unusual Greetings
+  { text = "Overly familiar - acting like old friends", weight = 1 },
+  { text = "Dismissive until proven worthy", weight = 1 },
+  { text = "Testing with a subtle challenge or puzzle", weight = 1 },
+  { text = "Weary and resigned to another interruption", weight = 1 },
+  { text = "Distracted, barely registering your presence", weight = 1 },
+  { text = "Knowing smile, as if they expected you", weight = 1 },
+  { text = "Nervous, something clearly wrong", weight = 1 },
+  { text = "Inappropriately cheerful given circumstances", weight = 1 },
+]
+
+[information_delivery]
+description = "How NPCs share knowledge and exposition"
+entries = [
+  # Direct Delivery
+  { text = "Blunt and direct - no sugarcoating", weight = 2 },
+  { text = "Clear and organized, like a briefing", weight = 1 },
+  { text = "Answers only direct questions, no elaboration", weight = 1 },
+  { text = "Efficient, key points only", weight = 1 },
+  { text = "Straightforward but will clarify if asked", weight = 1 },
+
+  # Indirect Delivery
+  { text = "Speaks in riddles and hints", weight = 1 },
+  { text = "Buries the lead in rambling tangents", weight = 1 },
+  { text = "Circles around the point, building context", weight = 1 },
+  { text = "Hints at more than they directly say", weight = 1 },
+  { text = "Speaks in metaphor and allegory", weight = 1 },
+  { text = "Answers questions with questions", weight = 1 },
+
+  # Conditional Delivery
+  { text = "Demands something in exchange", weight = 1 },
+  { text = "Shares reluctantly, with many warnings", weight = 1 },
+  { text = "Will only talk privately", weight = 1 },
+  { text = "Tests your knowledge before adding to it", weight = 1 },
+  { text = "Requires proof you can be trusted", weight = 1 },
+  { text = "Only after proper introductions and formalities", weight = 1 },
+
+  # Untrustworthy Delivery
+  { text = "Lies mixed with truth - but which is which?", weight = 1 },
+  { text = "Clearly leaving things out", weight = 1 },
+  { text = "Contradicts themselves without noticing", weight = 1 },
+  { text = "Speaks confidently about things they cannot know", weight = 1 },
+  { text = "Everything is secondhand or rumor", weight = 1 },
+  { text = "Obviously reciting something they were told to say", weight = 1 },
+
+  # Emotional Delivery
+  { text = "Enthusiastic over-sharing, more than you need", weight = 1 },
+  { text = "Bitter, coloring facts with grievance", weight = 1 },
+  { text = "Fearful, information coming out in bursts", weight = 1 },
+  { text = "Nostalgic, more about the past than the present", weight = 1 },
+  { text = "Proud, emphasizing their role in events", weight = 1 },
+  { text = "Ashamed, minimizing their involvement", weight = 1 },
+]
+
+[refusal_styles]
+description = "How NPCs decline requests or withhold information"
+entries = [
+  # Hard Refusals
+  { text = "Flat refusal, no explanation offered", weight = 1 },
+  { text = "Absolutely not, and do not ask again", weight = 1 },
+  { text = "Stone-faced silence", weight = 1 },
+  { text = "Immediate escalation to threats", weight = 1 },
+  { text = "Laughs in your face at the suggestion", weight = 1 },
+
+  # Soft Refusals
+  { text = "Apologetic but firm - wishes they could help", weight = 2 },
+  { text = "Makes excuses that may or may not be true", weight = 1 },
+  { text = "Redirects to someone else", weight = 1 },
+  { text = "Suggests coming back at a better time", weight = 1 },
+  { text = "Claims not to have what you need", weight = 1 },
+  { text = "Technical objection - cannot rather than will not", weight = 1 },
+
+  # Evasive Refusals
+  { text = "Pretends not to understand the request", weight = 1 },
+  { text = "Changes the subject repeatedly", weight = 1 },
+  { text = "Feigns ignorance or confusion", weight = 1 },
+  { text = "Buries refusal in bureaucratic language", weight = 1 },
+  { text = "Agrees verbally but clearly will not follow through", weight = 1 },
+  { text = "Seems to agree but sabotages the outcome", weight = 1 },
+
+  # Conditional Refusals
+  { text = "Sets impossible conditions for compliance", weight = 1 },
+  { text = "Would need approval from someone unavailable", weight = 1 },
+  { text = "Requires payment or favor that seems excessive", weight = 1 },
+  { text = "Needs time to consider - indefinitely", weight = 1 },
+  { text = "Only if you can prove X first", weight = 1 },
+  { text = "Not now, but perhaps after some unrelated thing", weight = 1 },
+
+  # Fearful Refusals
+  { text = "Too dangerous to get involved", weight = 1 },
+  { text = "Someone is watching, cannot talk here", weight = 1 },
+  { text = "Begs not to be involved", weight = 1 },
+  { text = "Afraid of consequences if they help", weight = 1 },
+  { text = "Has family to think about", weight = 1 },
+  { text = "Last person who helped ended badly", weight = 1 },
+]
+
+[negotiation_tactics]
+description = "How NPCs approach deals and bargaining"
+entries = [
+  # Opening Positions
+  { text = "Opens high, clearly expecting haggling", weight = 2 },
+  { text = "Fair opening offer, little room to move", weight = 1 },
+  { text = "Final offer, take it or leave it", weight = 1 },
+  { text = "Lowball offer to establish floor", weight = 1 },
+  { text = "Lists all the reasons why their position is reasonable", weight = 1 },
+  { text = "Asks what you think is fair first", weight = 1 },
+
+  # Manipulation Tactics
+  { text = "Appeals to emotion - guilt, sympathy, fear", weight = 1 },
+  { text = "Artificial urgency - other buyers, limited time", weight = 1 },
+  { text = "Good cop/bad cop dynamic", weight = 1 },
+  { text = "Flattery to lower your guard", weight = 1 },
+  { text = "Emphasizes what you have to lose", weight = 1 },
+  { text = "Pretends to have other options they do not", weight = 1 },
+  { text = "Feigns offense at reasonable counteroffers", weight = 1 },
+
+  # Legitimate Tactics
+  { text = "Cites precedent and established rules", weight = 1 },
+  { text = "Offers creative alternatives", weight = 1 },
+  { text = "Breaks down the logic of their position", weight = 1 },
+  { text = "Willing to find middle ground", weight = 1 },
+  { text = "Trades something you do not need for something you do", weight = 1 },
+  { text = "Suggests trial period or conditional agreement", weight = 1 },
+
+  # Hardball Tactics
+  { text = "Threatens consequences if you do not agree", weight = 1 },
+  { text = "Adds conditions mid-negotiation", weight = 1 },
+  { text = "Takes something off the table suddenly", weight = 1 },
+  { text = "Implies they know something you do not", weight = 1 },
+  { text = "Claims their hands are tied by higher authority", weight = 1 },
+  { text = "Silent pressure, waiting for you to fill the void", weight = 1 },
+  { text = "Walks away to force you to call them back", weight = 1 },
+
+  # Closing Tactics
+  { text = "Throws in a small sweetener to close", weight = 1 },
+  { text = "Summarizes agreement to lock it in", weight = 1 },
+  { text = "Wants it in writing immediately", weight = 1 },
+  { text = "Handshake is binding in their culture", weight = 1 },
+  { text = "Needs to consult someone before finalizing", weight = 1 },
+  { text = "Agreement pending verification of your claims", weight = 1 },
+]
+
+[emotional_responses]
+description = "How NPCs react to emotional situations"
+entries = [
+  # Grief and Sadness
+  { text = "Breaks down unexpectedly", weight = 1 },
+  { text = "Stoic facade cracking at the edges", weight = 1 },
+  { text = "Deflects with inappropriate humor", weight = 1 },
+  { text = "Retreats into practical matters to avoid feeling", weight = 1 },
+  { text = "Raw and uncontrolled grief", weight = 1 },
+  { text = "Numb, not fully processing yet", weight = 1 },
+
+  # Anger
+  { text = "Cold fury, barely controlled", weight = 1 },
+  { text = "Explosive outburst, quick to ignite", weight = 1 },
+  { text = "Seething resentment beneath civil surface", weight = 1 },
+  { text = "Righteous anger, fully justified", weight = 1 },
+  { text = "Bitter, long-nursed anger", weight = 1 },
+  { text = "Anger masking deeper hurt", weight = 1 },
+
+  # Fear
+  { text = "Forced calm masking turmoil", weight = 1 },
+  { text = "Panicking, losing rational thought", weight = 1 },
+  { text = "Frozen, unable to act", weight = 1 },
+  { text = "Fear channeled into aggression", weight = 1 },
+  { text = "Nervous energy, cannot keep still", weight = 1 },
+  { text = "Denial - refusing to acknowledge the threat", weight = 1 },
+
+  # Shame and Guilt
+  { text = "Cannot meet your eyes", weight = 1 },
+  { text = "Overcompensating to prove worth", weight = 1 },
+  { text = "Confessing unprompted", weight = 1 },
+  { text = "Defensive, attacking to deflect", weight = 1 },
+  { text = "Self-destructive acceptance of blame", weight = 1 },
+  { text = "Rationalizing to preserve self-image", weight = 1 },
+
+  # Other Emotional States
+  { text = "Manic energy that concerns observers", weight = 1 },
+  { text = "Shuts down completely, withdrawing", weight = 1 },
+  { text = "Desperate hope grasping at anything", weight = 1 },
+  { text = "Resigned acceptance, no fight left", weight = 1 },
+  { text = "Suspicious of any positive emotion", weight = 1 },
+  { text = "Overwhelmed, everything too much at once", weight = 1 },
+]
+
+[deception_styles]
+description = "How NPCs lie or mislead"
+entries = [
+  # Direct Lies
+  { text = "Bald-faced lie delivered with confidence", weight = 1 },
+  { text = "Lie buried in mostly-true context", weight = 1 },
+  { text = "Contradicts known facts without blinking", weight = 1 },
+  { text = "Claims ignorance of things they must know", weight = 1 },
+  { text = "Invents detailed false history", weight = 1 },
+
+  # Lies of Omission
+  { text = "Tells the truth but leaves out crucial context", weight = 1 },
+  { text = "Answers the question asked, not the question meant", weight = 1 },
+  { text = "Shares the safe parts, hides the dangerous", weight = 1 },
+  { text = "Everything said is true from a certain point of view", weight = 1 },
+  { text = "Lets you draw wrong conclusions without correcting", weight = 1 },
+
+  # Misdirection
+  { text = "Points your attention elsewhere", weight = 1 },
+  { text = "Overwhelms with irrelevant information", weight = 1 },
+  { text = "Creates a plausible alternative explanation", weight = 1 },
+  { text = "Emphasizes something minor to hide something major", weight = 1 },
+  { text = "Admits to small wrong to hide big one", weight = 1 },
+
+  # Tell-Tale Signs
+  { text = "Too much detail in the wrong places", weight = 1 },
+  { text = "Cannot answer follow-up questions smoothly", weight = 1 },
+  { text = "Body language contradicts words", weight = 1 },
+  { text = "Story changes slightly each telling", weight = 1 },
+  { text = "Over-eager to convince you", weight = 1 },
+  { text = "Unnecessarily explains unprompted", weight = 1 },
+]
+
+[confession_styles]
+description = "How NPCs reveal uncomfortable truths"
+entries = [
+  # Reluctant Confessions
+  { text = "Forced out piece by piece", weight = 1 },
+  { text = "Admits only what can be proven", weight = 1 },
+  { text = "Minimizes involvement", weight = 1 },
+  { text = "Blames circumstances rather than choices", weight = 1 },
+  { text = "Only after exhausting all other options", weight = 1 },
+
+  # Willing Confessions
+  { text = "Relief at finally unburdening", weight = 1 },
+  { text = "Tired of carrying the secret", weight = 1 },
+  { text = "Believes confession will lead to forgiveness", weight = 1 },
+  { text = "Wants the record corrected before it is too late", weight = 1 },
+  { text = "Proud of what they confess - not seeing it as wrong", weight = 1 },
+
+  # Strategic Confessions
+  { text = "Confessing to control the narrative", weight = 1 },
+  { text = "Implicating others while confessing", weight = 1 },
+  { text = "Hoping confession buys leniency", weight = 1 },
+  { text = "Confessing to something small to hide something bigger", weight = 1 },
+  { text = "Using confession as a weapon against someone", weight = 1 },
+
+  # Deathbed/Crisis Confessions
+  { text = "Cannot die with this unsaid", weight = 1 },
+  { text = "Crisis stripping away pretense", weight = 1 },
+  { text = "Believing the end is near anyway", weight = 1 },
+  { text = "Seeking absolution or closure", weight = 1 },
+  { text = "Warning others before it is too late", weight = 1 },
+]
+
+[request_styles]
+description = "How NPCs ask for help or favors"
+entries = [
+  # Direct Requests
+  { text = "Straightforward ask, clear terms", weight = 2 },
+  { text = "Formal request through proper channels", weight = 1 },
+  { text = "Urgent demand, no time for pleasantries", weight = 1 },
+  { text = "Business proposition with mutual benefit", weight = 1 },
+  { text = "Clear about what they can offer in return", weight = 1 },
+
+  # Indirect Requests
+  { text = "Hints at the problem, hoping you offer", weight = 1 },
+  { text = "Tells a story that clearly calls for action", weight = 1 },
+  { text = "Mentions the problem to others within earshot", weight = 1 },
+  { text = "Creates situation where help is obvious response", weight = 1 },
+  { text = "Third party asks on their behalf", weight = 1 },
+
+  # Desperate Requests
+  { text = "Begging without pride", weight = 1 },
+  { text = "Offering everything they have", weight = 1 },
+  { text = "Will owe you anything, just help now", weight = 1 },
+  { text = "Threat of what happens if you refuse", weight = 1 },
+  { text = "Invoking shared connections or obligations", weight = 1 },
+
+  # Manipulative Requests
+  { text = "Guilt trip about refusing", weight = 1 },
+  { text = "Making it seem smaller than it is", weight = 1 },
+  { text = "Implying you already agreed", weight = 1 },
+  { text = "Flattery about being the only one who can help", weight = 1 },
+  { text = "Framing refusal as immoral", weight = 1 },
+  { text = "Claiming others have already agreed", weight = 1 },
+]
+
+[threat_styles]
+description = "How NPCs intimidate or warn"
+entries = [
+  # Direct Threats
+  { text = "Clear and explicit - do X or Y happens", weight = 1 },
+  { text = "Calm recitation of consequences", weight = 1 },
+  { text = "Angry ultimatum, emotion clear", weight = 1 },
+  { text = "Physical threat backed by capability", weight = 1 },
+  { text = "Deadline given, clock starts now", weight = 1 },
+
+  # Veiled Threats
+  { text = "Would hate for something to happen to...", weight = 1 },
+  { text = "Speaking hypothetically about bad outcomes", weight = 1 },
+  { text = "Mentioning what happened to others", weight = 1 },
+  { text = "Polite words with menacing subtext", weight = 1 },
+  { text = "Implying knowledge of vulnerabilities", weight = 1 },
+  { text = "Letting silence speak the threat", weight = 1 },
+
+  # Third Party Threats
+  { text = "Cannot control what their people might do", weight = 1 },
+  { text = "Reports to someone who would not like this", weight = 1 },
+  { text = "Others are watching who are less patient", weight = 1 },
+  { text = "Word gets around in these circles", weight = 1 },
+  { text = "Blames the potential violence on you", weight = 1 },
+
+  # Desperate Threats
+  { text = "Nothing to lose mentality", weight = 1 },
+  { text = "If I go down, I take you with me", weight = 1 },
+  { text = "Cornered animal lashing out", weight = 1 },
+  { text = "Dead man's switch referenced", weight = 1 },
+  { text = "Threatening self-harm as leverage", weight = 1 },
+]
+
+[gratitude_styles]
+description = "How NPCs express thanks"
+entries = [
+  # Effusive Gratitude
+  { text = "Overwhelmed with thanks, cannot say enough", weight = 1 },
+  { text = "Tears of relief and gratitude", weight = 1 },
+  { text = "Promises to never forget this", weight = 1 },
+  { text = "Offers more than reasonable in return", weight = 1 },
+  { text = "Tells everyone what you did", weight = 1 },
+
+  # Reserved Gratitude
+  { text = "Simple, sincere thank you", weight = 2 },
+  { text = "Quiet acknowledgment, meaningful look", weight = 1 },
+  { text = "Actions speak louder than words response", weight = 1 },
+  { text = "Will remember this, said simply", weight = 1 },
+  { text = "Nod of respect from someone who rarely gives it", weight = 1 },
+
+  # Complicated Gratitude
+  { text = "Grateful but proud, hard to say it", weight = 1 },
+  { text = "Thanks mixed with resentment at needing help", weight = 1 },
+  { text = "Grateful but now in your debt, uncomfortable", weight = 1 },
+  { text = "Thanks for the help, not for how it was given", weight = 1 },
+  { text = "Acknowledges help while minimizing the need for it", weight = 1 },
+
+  # Formal Gratitude
+  { text = "Official recognition and reward", weight = 1 },
+  { text = "Formal debt acknowledged, will be repaid", weight = 1 },
+  { text = "Public thanks with political implications", weight = 1 },
+  { text = "Token of appreciation with symbolic meaning", weight = 1 },
+  { text = "Your name will be remembered in records", weight = 1 },
+]
+
+[personality_quirks]
+description = "Distinctive speech patterns and behaviors"
+entries = [
+  # Speech Patterns
+  { text = "Finishes others' sentences incorrectly", weight = 1 },
+  { text = "Long pauses before responding", weight = 1 },
+  { text = "Repeats the last thing you said as a question", weight = 1 },
+  { text = "Uses elaborate metaphors", weight = 1 },
+  { text = "Speaks in the third person", weight = 1 },
+  { text = "Constant rhetorical questions", weight = 1 },
+  { text = "Never uses contractions", weight = 1 },
+  { text = "Trails off mid-sentence when thinking", weight = 1 },
+
+  # Verbal Tics
+  { text = "Specific phrase repeated often", weight = 1 },
+  { text = "Clears throat before important statements", weight = 1 },
+  { text = "Laughs at own jokes, good or bad", weight = 1 },
+  { text = "Sighs heavily before answering", weight = 1 },
+  { text = "Hums while thinking", weight = 1 },
+  { text = "Mumbles to self between conversations", weight = 1 },
+
+  # Behavioral Quirks
+  { text = "Never makes eye contact", weight = 1 },
+  { text = "Stares too intensely", weight = 1 },
+  { text = "Always doing something with hands", weight = 1 },
+  { text = "Checks exits constantly", weight = 1 },
+  { text = "Stands too close when talking", weight = 1 },
+  { text = "Keeps repositioning to face the door", weight = 1 },
+  { text = "Touches people when making points", weight = 1 },
+  { text = "Recoils from physical contact", weight = 1 },
+
+  # Conversation Quirks
+  { text = "Brings everything back to one topic", weight = 1 },
+  { text = "Corrects minor details obsessively", weight = 1 },
+  { text = "Always has a relevant story", weight = 1 },
+  { text = "Asks probing personal questions", weight = 1 },
+  { text = "Changes subject when uncomfortable", weight = 1 },
+  { text = "Overshares about personal matters", weight = 1 },
+]
+
+[conversation_transitions]
+description = "How NPCs move between topics"
+entries = [
+  # Natural Transitions
+  { text = "That reminds me of something else...", weight = 2 },
+  { text = "While we are on the subject...", weight = 1 },
+  { text = "Before I forget to mention...", weight = 1 },
+  { text = "Speaking of which...", weight = 1 },
+  { text = "You should also know...", weight = 1 },
+
+  # Abrupt Transitions
+  { text = "Anyway, what I really wanted to discuss...", weight = 1 },
+  { text = "Enough about that. The reason I called you...", weight = 1 },
+  { text = "Changes subject without warning", weight = 1 },
+  { text = "Refuses to engage further with current topic", weight = 1 },
+  { text = "Cuts you off mid-sentence to redirect", weight = 1 },
+
+  # Reluctant Transitions
+  { text = "I suppose I should also tell you...", weight = 1 },
+  { text = "There is one more thing, though I wish there was not...", weight = 1 },
+  { text = "You will find out anyway, so...", weight = 1 },
+  { text = "Promise not to react badly to this...", weight = 1 },
+  { text = "This is not easy to say, but...", weight = 1 },
+
+  # Conditional Transitions
+  { text = "If you can handle what I just told you...", weight = 1 },
+  { text = "Assuming we have an agreement on that...", weight = 1 },
+  { text = "With that understood, we can discuss...", weight = 1 },
+  { text = "First, are we clear on what I said?", weight = 1 },
+  { text = "That brings us to the harder question...", weight = 1 },
+]

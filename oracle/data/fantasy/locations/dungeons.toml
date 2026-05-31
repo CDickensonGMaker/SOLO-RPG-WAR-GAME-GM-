@@ -1,0 +1,77 @@
+# Fantasy Dungeon Locations
+# Underground complexes, ruins, and dangerous delving sites
+
+[dungeons]
+entries = [
+  # Entrance Areas
+  { text = "a crumbling gatehouse with murder holes overhead", weight = 1 },
+  { text = "a yawning cave mouth shrouded in mist", weight = 1 },
+  { text = "spiral stairs descending into darkness", weight = 1 },
+  { text = "a collapsed temple nave leading underground", weight = 1 },
+  { text = "an iron-bound door covered in warning runes", weight = 1 },
+  { text = "a dried well with handholds carved in the walls", weight = 1 },
+  { text = "a crypt entrance flanked by weeping statues", weight = 1 },
+
+  # Corridors & Passages
+  { text = "a narrow passage requiring single file", weight = 2 },
+  { text = "a flooded corridor knee-deep in stagnant water", weight = 1 },
+  { text = "a long hallway lined with alcoves and statues", weight = 1 },
+  { text = "a winding natural cave carved by ancient waters", weight = 1 },
+  { text = "a passage with walls covered in disturbing murals", weight = 1 },
+  { text = "a corridor where the ceiling slowly lowers", weight = 1 },
+  { text = "a hall with pressure plates visible in the dust", weight = 1 },
+  { text = "a crossroads with symbols marking each direction", weight = 1 },
+  { text = "a passage blocked by thick cobwebs", weight = 1 },
+  { text = "a corridor with doors on both sides at regular intervals", weight = 1 },
+
+  # Chambers & Rooms
+  { text = "a circular chamber with a pit in the center", weight = 1 },
+  { text = "a throne room thick with dust and shadows", weight = 1 },
+  { text = "an armory with rusted weapons still on racks", weight = 1 },
+  { text = "a torture chamber with ancient stains on the floor", weight = 1 },
+  { text = "a library with moldering books and scrolls", weight = 1 },
+  { text = "a laboratory filled with broken alchemical equipment", weight = 1 },
+  { text = "a barracks with skeletal remains in the bunks", weight = 1 },
+  { text = "a meditation chamber with a single shaft of light", weight = 1 },
+  { text = "a feast hall with a long table set for a meal never eaten", weight = 1 },
+  { text = "a chapel to a forgotten deity", weight = 1 },
+  { text = "a treasury vault with empty pedestals", weight = 1 },
+  { text = "a summoning chamber with binding circles on the floor", weight = 1 },
+  { text = "a prison with cells containing old bones", weight = 1 },
+  { text = "a guard room with a cold fireplace", weight = 1 },
+  { text = "a storage room with crates and barrels", weight = 2 },
+
+  # Special Features
+  { text = "a massive underground lake with something moving beneath", weight = 1 },
+  { text = "a chasm spanned by a crumbling stone bridge", weight = 1 },
+  { text = "a chamber with a glowing crystal embedded in the ceiling", weight = 1 },
+  { text = "a room where gravity seems to shift", weight = 1 },
+  { text = "a hall of mirrors that show disturbing reflections", weight = 1 },
+  { text = "a pool of blood that never dries or congeals", weight = 1 },
+  { text = "a forge still burning with supernatural flames", weight = 1 },
+  { text = "a garden of phosphorescent fungi", weight = 1 },
+  { text = "a chamber where whispers echo from no source", weight = 1 },
+  { text = "a room frozen in time - candles still burning, food still warm", weight = 1 },
+  { text = "a natural hot spring that heals wounds slowly", weight = 1 },
+  { text = "a portal frame of black stone, dormant but intact", weight = 1 },
+
+  # Traps & Hazards
+  { text = "a floor that gives way into a spike pit", weight = 1 },
+  { text = "a hallway where poison darts fire from the walls", weight = 1 },
+  { text = "a room that fills with sand when entered", weight = 1 },
+  { text = "a corridor with swinging blade pendulums", weight = 1 },
+  { text = "a chamber where the walls slowly close in", weight = 1 },
+  { text = "a passage with invisible magical barriers", weight = 1 },
+  { text = "a room where sound attracts deadly creatures", weight = 1 },
+  { text = "a hall with illusory floors over deep pits", weight = 1 },
+
+  # Boss Lairs
+  { text = "a vast cavern serving as a dragon's hoard", weight = 1 },
+  { text = "a throne room where the lich king holds court", weight = 1 },
+  { text = "a ritual chamber where the cult leader performs dark rites", weight = 1 },
+  { text = "a flooded grotto where the aboleth waits", weight = 1 },
+  { text = "a web-shrouded dome where the spider queen lurks", weight = 1 },
+  { text = "a blood-stained arena where the warlord tests champions", weight = 1 },
+  { text = "an ossuary arranged into a throne for the bone lord", weight = 1 },
+  { text = "a frozen chamber where the frost giant jarl sits", weight = 1 },
+]

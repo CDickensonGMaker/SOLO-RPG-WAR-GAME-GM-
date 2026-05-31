@@ -1,0 +1,231 @@
+# Age of Fantasy - Undead Legions (Vampire Counts/Tomb Kings equivalents)
+# One Page Rules - Free wargame system
+
+name = "Undead Legions"
+description = "Endless hordes of the risen dead, commanded by ancient necromancers and vampire lords."
+playstyle = "Attrition-based horde tactics with powerful characters and resurrection"
+strengths = [
+    "Fearless units",
+    "Resurrection abilities",
+    "Powerful characters",
+    "High model count",
+]
+weaknesses = [
+    "Low individual quality",
+    "Vulnerable to magic",
+    "Character dependent",
+    "Poor shooting",
+]
+
+[[units]]
+name = "Skeleton Warriors"
+type = "infantry"
+points = 60
+models = "10"
+tactical_role = "line_infantry"
+threat_level = "low"
+preferred_targets = ["infantry"]
+weaknesses = ["magic", "elite_units"]
+keywords = ["Infantry", "Undead", "Skeleton"]
+special_rules = ["Fearless", "Regeneration"]
+
+[units.stats]
+Quality = "6+"
+Defense = "6+"
+Tough = 1
+
+[[units.weapons]]
+name = "Ancient Blade"
+range = "Melee"
+shots = "1"
+strength = "User"
+ap = "0"
+damage = "1"
+type = "Melee"
+
+[[units.weapons]]
+name = "Shield"
+range = "Melee"
+shots = "0"
+strength = "-"
+ap = "-"
+damage = "-"
+type = "Shield"
+abilities = ["Defense +1 in melee"]
+
+[[units]]
+name = "Zombie Horde"
+type = "swarm"
+points = 50
+models = "20"
+tactical_role = "tarpit"
+threat_level = "low"
+preferred_targets = ["objectives"]
+weaknesses = ["everything", "fire"]
+keywords = ["Infantry", "Undead", "Zombie"]
+special_rules = ["Fearless", "Slow", "Regeneration"]
+
+[units.stats]
+Quality = "6+"
+Defense = "6+"
+Tough = 1
+
+[[units.weapons]]
+name = "Grasping Claws"
+range = "Melee"
+shots = "1"
+strength = "User"
+ap = "0"
+damage = "1"
+type = "Melee"
+
+[[units]]
+name = "Grave Guard"
+type = "infantry"
+points = 130
+models = "10"
+tactical_role = "elite_infantry"
+threat_level = "medium"
+preferred_targets = ["infantry", "cavalry"]
+weaknesses = ["magic", "shooting"]
+keywords = ["Infantry", "Undead", "Skeleton", "Elite"]
+special_rules = ["Fearless"]
+
+[units.stats]
+Quality = "4+"
+Defense = "4+"
+Tough = 1
+
+[[units.weapons]]
+name = "Great Weapon"
+range = "Melee"
+shots = "1"
+strength = "User+2"
+ap = "-2"
+damage = "1"
+type = "Melee"
+abilities = ["Slow"]
+
+[[units]]
+name = "Black Knights"
+type = "cavalry"
+points = 170
+models = "5"
+tactical_role = "assault"
+threat_level = "high"
+preferred_targets = ["infantry", "warmachines"]
+weaknesses = ["spears", "magic"]
+keywords = ["Cavalry", "Undead", "Skeleton", "Knight"]
+special_rules = ["Fearless", "Impact(1)", "Ethereal"]
+
+[units.stats]
+Quality = "4+"
+Defense = "4+"
+Tough = 1
+
+[[units.weapons]]
+name = "Spectral Lance"
+range = "Melee"
+shots = "1"
+strength = "User+1"
+ap = "-1"
+damage = "1"
+type = "Melee"
+abilities = ["Lance", "Ethereal"]
+
+[[units]]
+name = "Vampire Lord"
+type = "character"
+points = 185
+models = "1"
+tactical_role = "leader"
+threat_level = "extreme"
+preferred_targets = ["characters", "elite_infantry"]
+weaknesses = ["magic", "holy", "massed_attacks"]
+keywords = ["Infantry", "Undead", "Vampire", "Hero"]
+special_rules = ["Hero", "Fearless", "Flying", "Regeneration", "Wizard(2)"]
+
+[units.stats]
+Quality = "3+"
+Defense = "4+"
+Tough = 6
+
+[[units.weapons]]
+name = "Vampiric Blade"
+range = "Melee"
+shots = "5"
+strength = "User+1"
+ap = "-2"
+damage = "1"
+type = "Melee"
+abilities = ["Life Drain"]
+
+[[units]]
+name = "Necromancer"
+type = "character"
+points = 75
+models = "1"
+tactical_role = "support"
+threat_level = "medium"
+preferred_targets = ["infantry"]
+weaknesses = ["assassination", "combat"]
+keywords = ["Infantry", "Undead", "Human", "Hero", "Wizard"]
+special_rules = ["Hero", "Wizard(2)", "Raise Dead"]
+
+[units.stats]
+Quality = "5+"
+Defense = "6+"
+Tough = 3
+
+[[units.weapons]]
+name = "Cursed Staff"
+range = "Melee"
+shots = "1"
+strength = "User"
+ap = "0"
+damage = "1"
+type = "Melee"
+
+[[units.weapons]]
+name = "Curse of Years"
+range = "18\""
+shots = "D6"
+strength = "3"
+ap = "0"
+damage = "1"
+type = "Spell"
+
+[[units]]
+name = "Bone Giant"
+type = "monster"
+points = 220
+models = "1"
+tactical_role = "monster"
+threat_level = "extreme"
+preferred_targets = ["infantry", "monsters"]
+weaknesses = ["massed_attacks", "artillery"]
+keywords = ["Monster", "Undead", "Construct"]
+special_rules = ["Fearless", "Regeneration", "Terror"]
+
+[units.stats]
+Quality = "4+"
+Defense = "4+"
+Tough = 10
+
+[[units.weapons]]
+name = "Massive Blade"
+range = "Melee"
+shots = "4"
+strength = "7"
+ap = "-2"
+damage = "2"
+type = "Melee"
+
+[[units.weapons]]
+name = "Bone Bow"
+range = "30\""
+shots = "2"
+strength = "6"
+ap = "-1"
+damage = "2"
+type = "Heavy"

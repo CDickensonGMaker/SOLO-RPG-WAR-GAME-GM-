@@ -1,0 +1,65 @@
+# Cyberpunk Netrunning Encounters
+# Digital combat and intrusion scenarios
+
+[encounters]
+entries = [
+  # ICE encounters
+  { text = "Black ICE activation - lethal countermeasure, damage to your brain incoming", weight = 2 },
+  { text = "Hellhound patrol - aggressive hunter-killer program on your trail", weight = 2 },
+  { text = "Maze protocol triggered - architecture shifting, exit routes closing", weight = 2 },
+  { text = "Flatline trap sprung - designed to kill, not capture", weight = 1 },
+  { text = "Tar pit ICE - slowing your processes, backup arriving", weight = 2 },
+  { text = "Mirror ICE reflection - your own attacks redirected at you", weight = 1 },
+  { text = "Cascading firewall - multiple security layers activating sequentially", weight = 2 },
+  { text = "Tracer ICE lock - your location being pinpointed in meatspace", weight = 2 },
+  { text = "Scorched earth protocol - entire subnet destroying itself with you inside", weight = 1 },
+  { text = "Neural shock feedback - ICE trying to fry your interface", weight = 2 },
+
+  # Counter-intrusion
+  { text = "Corporate netrunner response - skilled operator hunting you", weight = 2 },
+  { text = "Net security team - multiple hostile runners converging", weight = 1 },
+  { text = "AI guardian activation - machine intelligence defending the system", weight = 2 },
+  { text = "Sysadmin awareness - human operator manually tracking your intrusion", weight = 2 },
+  { text = "Automated lockdown - all access points sealing, trap closing", weight = 2 },
+  { text = "Counter-hack initiated - your home system under attack", weight = 2 },
+  { text = "Trace program execution - physical location being triangulated", weight = 2 },
+  { text = "Backup runner ambush - hidden defender revealing position", weight = 2 },
+  { text = "Kill team dispatch - your meatspace location compromised", weight = 1 },
+  { text = "System administrator alert - network-wide hunt beginning", weight = 2 },
+
+  # Data obstacles
+  { text = "Encrypted archive - heavy cryptography, time pressure", weight = 2 },
+  { text = "Fragmented data - information scattered across multiple nodes", weight = 2 },
+  { text = "Honeypot database - fake data, real trap", weight = 2 },
+  { text = "Corrupted files - target data degraded, partial recovery possible", weight = 2 },
+  { text = "Dynamic encryption - security constantly shifting", weight = 1 },
+  { text = "Biometric lock - requires data from meatspace to proceed", weight = 2 },
+  { text = "Air-gapped system - no network connection, physical access required", weight = 1 },
+  { text = "Quantum encryption - current tools insufficient", weight = 1 },
+  { text = "Time-locked vault - data inaccessible until specific moment", weight = 1 },
+  { text = "Self-destructing file - reading triggers deletion", weight = 2 },
+
+  # Environmental hazards
+  { text = "Net architecture collapse - node failing, escape needed", weight = 2 },
+  { text = "Data storm - massive traffic surge, orientation lost", weight = 2 },
+  { text = "Malware infestation - hostile programs everywhere", weight = 2 },
+  { text = "Dead zone pocket - connection weakening, signal failing", weight = 2 },
+  { text = "Rogue process swarm - chaotic programs interfering", weight = 2 },
+  { text = "Legacy system compatibility - ancient architecture, modern tools failing", weight = 1 },
+  { text = "Bandwidth throttle - operations slowing to dangerous pace", weight = 2 },
+  { text = "Dimensional pocket - trapped in isolated subnet", weight = 1 },
+  { text = "Viral corruption spreading - infection threatening your systems", weight = 2 },
+  { text = "Power fluctuation - real-world infrastructure threatening connection", weight = 2 },
+
+  # Social and deception
+  { text = "Cover identity compromised - your fake credentials flagged", weight = 2 },
+  { text = "Social engineering target suspicious - bluff being challenged", weight = 2 },
+  { text = "Insider contact burned - your access point discovered", weight = 2 },
+  { text = "Impersonation detected - pretending to be authorized user failing", weight = 2 },
+  { text = "Double agent revelation - your contact was always working for them", weight = 1 },
+  { text = "Parallel investigation - someone else running the same target", weight = 2 },
+  { text = "Disinformation planted - you've been fed false data", weight = 2 },
+  { text = "Compromised deck - your hardware has been tampered with", weight = 1 },
+  { text = "Blackmail attempt - someone knows what you're doing", weight = 2 },
+  { text = "Net cult encounter - digital zealots with unpredictable agenda", weight = 1 },
+]

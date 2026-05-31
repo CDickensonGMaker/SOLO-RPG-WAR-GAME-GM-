@@ -1,0 +1,75 @@
+# Historical Settlement Locations
+# 50+ town and city locations across eras
+
+[locations]
+entries = [
+  # Markets and Commerce
+  { text = "Bustling market square where merchants hawk wares from stalls and carts", weight = 2 },
+  { text = "Guild hall where craftsmen gather to conduct business and settle disputes", weight = 1 },
+  { text = "Merchant warehouse near the docks, goods stacked to the rafters", weight = 2 },
+  { text = "Money changer's shop in a narrow alley, iron bars on the windows", weight = 1 },
+  { text = "Livestock market where animals are traded amid noise and smells", weight = 2 },
+  { text = "Covered bazaar, a maze of shops selling everything imaginable", weight = 2 },
+  { text = "Grain exchange where prices are set and fortunes made or lost", weight = 1 },
+  { text = "Pawnbroker's shop, windows filled with unredeemed goods", weight = 2 },
+  { text = "Silk merchant's elegant showroom catering to wealthy clients", weight = 1 },
+  { text = "Street vendor's corner where food and gossip are exchanged", weight = 2 },
+
+  # Governance and Law
+  { text = "Town hall where the council meets to govern local affairs", weight = 1 },
+  { text = "Courthouse where justice is dispensed, sometimes fairly", weight = 1 },
+  { text = "Prison with thick walls and barred windows, guards at every door", weight = 1 },
+  { text = "Customs house at the city gate where taxes are collected", weight = 2 },
+  { text = "Governor's mansion, seat of colonial or regional power", weight = 1 },
+  { text = "Gallows square where public executions draw crowds", weight = 1 },
+  { text = "Watch house where the night patrol is coordinated", weight = 2 },
+  { text = "Tax office where records are kept and debts collected", weight = 2 },
+  { text = "Embassy or legation representing a foreign power", weight = 1 },
+  { text = "Revolutionary meeting hall, now legitimate or still underground", weight = 1 },
+
+  # Religious Spaces
+  { text = "Cathedral dominating the skyline, centuries in the building", weight = 1 },
+  { text = "Parish church, the heart of community life", weight = 2 },
+  { text = "Monastery with cloisters, library, and extensive gardens", weight = 1 },
+  { text = "Synagogue in the Jewish quarter, centuries of tradition within", weight = 1 },
+  { text = "Mosque with minaret calling the faithful to prayer", weight = 1 },
+  { text = "Graveyard where generations lie beneath weathered stones", weight = 2 },
+  { text = "Chapel of ease serving a distant corner of the parish", weight = 2 },
+  { text = "Religious school teaching scripture and basic literacy", weight = 2 },
+
+  # Hospitality and Lodging
+  { text = "Coaching inn on the main road, a hub of news and travelers", weight = 2 },
+  { text = "Tavern frequented by soldiers, sailors, or working men", weight = 2 },
+  { text = "Upscale hotel catering to the wealthy and influential", weight = 1 },
+  { text = "Boarding house offering cheap rooms and shared meals", weight = 2 },
+  { text = "Coffee house where politics and philosophy are debated", weight = 2 },
+  { text = "Brothel in the less respectable part of town", weight = 2 },
+  { text = "Gambling den operating behind a legitimate front", weight = 1 },
+  { text = "Private club for gentlemen of a certain class", weight = 1 },
+
+  # Services and Crafts
+  { text = "Blacksmith's forge, sparks flying and hammers ringing", weight = 2 },
+  { text = "Apothecary shop lined with jars and dried herbs", weight = 2 },
+  { text = "Tailor's workshop where uniforms and fine clothes are made", weight = 2 },
+  { text = "Printer's shop producing newspapers, pamphlets, and books", weight = 1 },
+  { text = "Barber-surgeon's establishment offering cuts and medical care", weight = 2 },
+  { text = "Undertaker's premises, coffins on display", weight = 2 },
+  { text = "Lawyer's office, shelves heavy with legal volumes", weight = 1 },
+  { text = "Stables where horses are kept, hired, and traded", weight = 2 },
+
+  # Residential Areas
+  { text = "Noble's townhouse, elegant facade hiding political intrigue", weight = 1 },
+  { text = "Worker's tenement, families crammed into tiny rooms", weight = 2 },
+  { text = "Merchant's comfortable home above the shop", weight = 2 },
+  { text = "Cramped attic room let to students and artists", weight = 2 },
+  { text = "Servant's quarters in the back of a great house", weight = 2 },
+  { text = "Refugee quarters, temporary shelter becoming permanent", weight = 2 },
+
+  # Infrastructure
+  { text = "City gate where traffic is checked and controlled", weight = 2 },
+  { text = "Bridge spanning the river, the oldest structure in town", weight = 2 },
+  { text = "Fountain in the central plaza, a gathering spot for all", weight = 2 },
+  { text = "Public baths offering cleanliness and social connection", weight = 2 },
+  { text = "Hospital run by religious orders, serving the sick poor", weight = 1 },
+  { text = "Poorhouse where the destitute find grim shelter", weight = 1 }
+]

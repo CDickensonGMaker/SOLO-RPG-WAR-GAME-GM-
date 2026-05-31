@@ -1,0 +1,668 @@
+# Robot Legions - Grimdark Future
+# Ancient machine warriors rising from eons of slumber
+# One Page Rules - Free Wargaming System
+
+[faction]
+name = "Robot Legions"
+description = "Ancient machine warriors awakening to reclaim their galaxy"
+playstyle = "Durable, slow, regenerating, elite"
+difficulty = "intermediate"
+strengths = [
+    "Excellent defense across all units",
+    "Regeneration heals wounds",
+    "Fearless machines ignore morale",
+    "Powerful ranged weapons",
+    "Resurrection protocols return models"
+]
+weaknesses = [
+    "Slow movement speed",
+    "Expensive units",
+    "Limited melee capability on most units",
+    "Poor against massed attacks"
+]
+tactics = """
+Robot Legions win through attrition. Your units don't stay dead - leverage Regeneration
+and Resurrection Protocols to outlast enemies. Move deliberately toward objectives,
+using your superior firepower to degrade enemy forces. Avoid getting charged - most
+robots are poor in melee. Use Destroyers and Wraiths to threaten flanks while your
+phalanx advances implacably. Focus fire to remove entire units before Regeneration
+becomes irrelevant.
+"""
+
+# =============================================================================
+# HQ UNITS
+# =============================================================================
+
+[[units]]
+name = "Robot Lord"
+type = "infantry"
+category = "hq"
+points = 95
+models = "1"
+base_size = "40mm"
+tactical_role = "durable_commander"
+threat_level = "high"
+priority_target = true
+preferred_targets = ["infantry", "characters"]
+avoid_targets = ["massed_fire", "tarpit_units"]
+weaknesses = ["focused_fire", "overwhelming_attacks"]
+synergies = ["Resurrection Orb affects nearby units", "Melee anchor"]
+special_rules = ["Hero", "Fearless", "Tough(4)", "Regeneration"]
+keywords = ["Infantry", "Character", "Robot"]
+notes = "Incredibly durable with Tough(4) and Regeneration. Resurrection Orb helps nearby units. Strong in melee."
+
+[units.stats]
+quality = "3+"
+defense = "3+"
+tough = 4
+movement = "5\""
+
+[[units.weapons]]
+name = "Staff of Light"
+range = "24\""
+shots = "3"
+ap = "2"
+
+[[units.weapons]]
+name = "Staff of Light"
+range = "Melee"
+shots = "4"
+ap = "2"
+special = ["Deadly(3)"]
+
+[[units.upgrades]]
+name = "Resurrection Orb"
+points = 20
+effect = "Friendly Robot units within 6\" re-roll failed Regeneration"
+
+[[units.upgrades]]
+name = "War Scythe"
+points = 10
+weapon = { name = "War Scythe", range = "Melee", shots = "4", ap = "4", special = ["Deadly(3)"] }
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Annihilation Lord"
+type = "infantry"
+category = "hq"
+points = 85
+models = "1"
+base_size = "40mm"
+tactical_role = "ranged_commander"
+threat_level = "high"
+priority_target = true
+preferred_targets = ["vehicles", "heavy_infantry"]
+avoid_targets = ["melee_units"]
+weaknesses = ["close_combat", "focused_fire"]
+synergies = ["Boosts nearby Annihilators", "Anti-armor fire support"]
+special_rules = ["Hero", "Fearless", "Tough(4)", "Regeneration"]
+keywords = ["Infantry", "Character", "Robot", "Annihilator"]
+notes = "Gun platform lord. Pairs with Annihilator squads for devastating anti-tank fire."
+
+[units.stats]
+quality = "3+"
+defense = "3+"
+tough = 4
+movement = "5\""
+
+[[units.weapons]]
+name = "Annihilation Cannon"
+range = "36\""
+shots = "2"
+ap = "4"
+special = ["Deadly(6)"]
+
+[[units.weapons]]
+name = "Staff"
+range = "Melee"
+shots = "3"
+ap = "2"
+special = ["Deadly(3)"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Cryptek"
+type = "infantry"
+category = "hq"
+points = 60
+models = "1"
+base_size = "32mm"
+tactical_role = "support"
+threat_level = "medium"
+priority_target = true
+preferred_targets = ["support_role"]
+avoid_targets = ["direct_combat"]
+weaknesses = ["assassination", "focused_fire"]
+synergies = ["Tech abilities support army", "Buffs and debuffs"]
+special_rules = ["Hero", "Fearless", "Tough(3)", "Technomancer"]
+keywords = ["Infantry", "Character", "Robot", "Cryptek"]
+notes = "Tech support character. Technomancer repairs vehicles and enhances units. Keep safe."
+
+[units.stats]
+quality = "3+"
+defense = "4+"
+tough = 3
+movement = "5\""
+
+[[units.weapons]]
+name = "Staff of Light"
+range = "24\""
+shots = "2"
+ap = "2"
+
+[[units.weapons]]
+name = "Staff"
+range = "Melee"
+shots = "2"
+ap = "1"
+
+[[units.abilities]]
+name = "Technomancer"
+description = "Once per round, repair D3 wounds on a friendly Robot vehicle within 6\""
+
+# =============================================================================
+# TROOPS
+# =============================================================================
+
+[[units]]
+name = "Robot Warriors"
+type = "infantry"
+category = "troops"
+points = 85
+models = "10"
+base_size = "32mm"
+tactical_role = "line_infantry"
+threat_level = "medium"
+priority_target = false
+preferred_targets = ["infantry"]
+avoid_targets = ["melee_specialists", "heavy_armor"]
+weaknesses = ["slow", "melee"]
+synergies = ["Resurrection Protocols", "Lord buffs"]
+special_rules = ["Fearless", "Regeneration"]
+keywords = ["Infantry", "Robot", "Warrior"]
+notes = "Basic troops. Regeneration and numbers make them resilient. Slow but steady advance."
+
+[units.stats]
+quality = "4+"
+defense = "4+"
+tough = 1
+movement = "5\""
+
+[[units.weapons]]
+name = "Gauss Rifle"
+range = "24\""
+shots = "1"
+ap = "1"
+
+[[units.weapons]]
+name = "Metal Fist"
+range = "Melee"
+shots = "1"
+ap = "0"
+
+[[units.upgrades]]
+name = "20 Warriors"
+points = 85
+models_affected = 10
+effect = "Add 10 more warriors to the unit"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Robot Immortals"
+type = "infantry"
+category = "troops"
+points = 110
+models = "5"
+base_size = "32mm"
+tactical_role = "elite_infantry"
+threat_level = "medium"
+priority_target = false
+preferred_targets = ["infantry", "light_vehicles"]
+avoid_targets = ["melee_specialists"]
+weaknesses = ["melee", "expensive"]
+synergies = ["Better guns than Warriors", "Tougher with Defense 3+"]
+special_rules = ["Fearless", "Regeneration"]
+keywords = ["Infantry", "Robot", "Immortal"]
+notes = "Elite troops with better armor and guns. Defense 3+ makes them very durable."
+
+[units.stats]
+quality = "3+"
+defense = "3+"
+tough = 1
+movement = "5\""
+
+[[units.weapons]]
+name = "Gauss Blaster"
+range = "24\""
+shots = "2"
+ap = "1"
+
+[[units.weapons]]
+name = "Metal Fist"
+range = "Melee"
+shots = "1"
+ap = "0"
+
+[[units.upgrades]]
+name = "Tesla Carbines"
+points = 0
+weapon = { name = "Tesla Carbine", range = "18\"", shots = "2", ap = "0", special = ["Reliable"] }
+
+# =============================================================================
+# ELITES
+# =============================================================================
+
+[[units]]
+name = "Flayed Ones"
+type = "infantry"
+category = "elite"
+points = 100
+models = "5"
+base_size = "32mm"
+tactical_role = "melee_assassin"
+threat_level = "high"
+priority_target = true
+preferred_targets = ["light_infantry", "artillery"]
+avoid_targets = ["heavy_armor"]
+weaknesses = ["shooting", "no_ranged"]
+synergies = ["Ambush deployment", "Terrifying melee"]
+special_rules = ["Fearless", "Ambush", "Fear"]
+keywords = ["Infantry", "Robot", "Flayed"]
+notes = "Melee specialists that Ambush. Fear debuffs enemy morale. Devastating charges."
+
+[units.stats]
+quality = "3+"
+defense = "4+"
+tough = 1
+movement = "6\""
+
+[[units.weapons]]
+name = "Flayer Claws"
+range = "Melee"
+shots = "3"
+ap = "1"
+special = ["Rending"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Deathmarks"
+type = "infantry"
+category = "elite"
+points = 100
+models = "5"
+base_size = "32mm"
+tactical_role = "assassin"
+threat_level = "high"
+priority_target = true
+preferred_targets = ["characters", "special_weapons"]
+avoid_targets = ["hordes", "vehicles"]
+weaknesses = ["close_combat", "low_shots"]
+synergies = ["Ambush to assassinate characters", "Sniper protocol"]
+special_rules = ["Fearless", "Ambush", "Stealth"]
+keywords = ["Infantry", "Robot", "Deathmark"]
+notes = "Sniper assassins. Ambush behind enemy lines and eliminate key targets."
+
+[units.stats]
+quality = "3+"
+defense = "4+"
+tough = 1
+movement = "5\""
+
+[[units.weapons]]
+name = "Synaptic Disintegrator"
+range = "36\""
+shots = "1"
+ap = "2"
+special = ["Sniper", "Deadly(3)"]
+
+[[units.weapons]]
+name = "Metal Fist"
+range = "Melee"
+shots = "1"
+ap = "0"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Annihilators"
+type = "infantry"
+category = "elite"
+points = 140
+models = "5"
+base_size = "32mm"
+tactical_role = "heavy_fire_support"
+threat_level = "very_high"
+priority_target = true
+preferred_targets = ["vehicles", "monsters"]
+avoid_targets = ["fast_melee"]
+weaknesses = ["close_combat", "slow"]
+synergies = ["Annihilation Lord buffs", "Anti-tank firebase"]
+special_rules = ["Fearless", "Regeneration"]
+keywords = ["Infantry", "Robot", "Annihilator"]
+notes = "Heavy anti-tank infantry. Annihilation cannons destroy vehicles. Protect from melee."
+
+[units.stats]
+quality = "3+"
+defense = "3+"
+tough = 1
+movement = "5\""
+
+[[units.weapons]]
+name = "Annihilation Cannon"
+range = "36\""
+shots = "1"
+ap = "4"
+special = ["Deadly(6)"]
+
+[[units.weapons]]
+name = "Metal Fist"
+range = "Melee"
+shots = "1"
+ap = "0"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Wraiths"
+type = "infantry"
+category = "elite"
+points = 165
+models = "3"
+base_size = "40mm"
+tactical_role = "fast_assault"
+threat_level = "high"
+priority_target = true
+preferred_targets = ["infantry", "vehicles"]
+avoid_targets = ["tar_pits"]
+weaknesses = ["massed_attacks"]
+synergies = ["Fast flankers", "Phase through terrain"]
+special_rules = ["Fearless", "Fast", "Flying", "Tough(2)", "Regeneration"]
+keywords = ["Infantry", "Robot", "Wraith"]
+notes = "Fast assault wraiths. Flying and Fast make them very mobile. Excellent for flanking."
+
+[units.stats]
+quality = "3+"
+defense = "4+"
+tough = 2
+movement = "10\""
+
+[[units.weapons]]
+name = "Phase Claws"
+range = "Melee"
+shots = "3"
+ap = "2"
+special = ["Rending"]
+
+[[units.upgrades]]
+name = "Particle Beamers"
+points = 15
+weapon = { name = "Particle Beamer", range = "12\"", shots = "2", ap = "2" }
+
+# =============================================================================
+# FAST ATTACK
+# =============================================================================
+
+[[units]]
+name = "Scarab Swarms"
+type = "swarm"
+category = "fast_attack"
+points = 60
+models = "4"
+base_size = "40mm"
+tactical_role = "screening"
+threat_level = "low"
+priority_target = false
+preferred_targets = ["screening", "objectives"]
+avoid_targets = ["blast_weapons"]
+weaknesses = ["low_damage", "blast_weapons"]
+synergies = ["Screen for valuable units", "Tarpit melee units"]
+special_rules = ["Fearless", "Fast", "Strider", "Tough(3)", "Regeneration"]
+keywords = ["Swarm", "Robot", "Scarab"]
+notes = "Screening swarms. Fast and regenerating. Excellent for holding up enemy units."
+
+[units.stats]
+quality = "5+"
+defense = "5+"
+tough = 3
+movement = "10\""
+
+[[units.weapons]]
+name = "Feeder Mandibles"
+range = "Melee"
+shots = "4"
+ap = "0"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Tomb Blades"
+type = "vehicle"
+category = "fast_attack"
+points = 100
+models = "3"
+base_size = "32mm flight"
+tactical_role = "mobile_firepower"
+threat_level = "medium"
+priority_target = false
+preferred_targets = ["infantry", "light_vehicles"]
+avoid_targets = ["dedicated_anti_air"]
+weaknesses = ["anti_air", "focused_fire"]
+synergies = ["Fast harassment", "Flank and shoot"]
+special_rules = ["Fearless", "Fast", "Flying", "Tough(2)", "Regeneration"]
+keywords = ["Vehicle", "Robot", "Tomb Blade"]
+notes = "Fast attack bikes. Harass enemy flanks. Twin gauss or tesla for different roles."
+
+[units.stats]
+quality = "3+"
+defense = "4+"
+tough = 2
+movement = "12\""
+
+[[units.weapons]]
+name = "Twin Gauss Blaster"
+range = "24\""
+shots = "4"
+ap = "1"
+
+[[units.upgrades]]
+name = "Twin Tesla Carbine"
+points = 0
+weapon = { name = "Twin Tesla Carbine", range = "18\"", shots = "4", ap = "0", special = ["Reliable"] }
+
+# =============================================================================
+# HEAVY SUPPORT
+# =============================================================================
+
+[[units]]
+name = "Doomsday Ark"
+type = "vehicle"
+category = "heavy_support"
+points = 170
+models = "1"
+base_size = "hull"
+tactical_role = "heavy_fire_support"
+threat_level = "very_high"
+priority_target = true
+preferred_targets = ["vehicles", "monsters", "heavy_infantry"]
+avoid_targets = ["fast_melee"]
+weaknesses = ["close_combat", "mobility"]
+synergies = ["Long range fire support", "Gauss flayers for close defense"]
+special_rules = ["Fearless", "Tough(10)", "Regeneration"]
+keywords = ["Vehicle", "Robot", "Doomsday"]
+notes = "Devastating long-range gun platform. Doomsday cannon deletes targets. Protect from melee."
+
+[units.stats]
+quality = "4+"
+defense = "3+"
+tough = 10
+movement = "8\""
+
+[[units.weapons]]
+name = "Doomsday Cannon"
+range = "48\""
+shots = "D3"
+ap = "4"
+special = ["Deadly(6)", "Blast(3)"]
+
+[[units.weapons]]
+name = "Gauss Flayer Arrays"
+range = "24\""
+shots = "10"
+ap = "1"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Annihilation Barge"
+type = "vehicle"
+category = "heavy_support"
+points = 115
+models = "1"
+base_size = "hull"
+tactical_role = "anti_infantry"
+threat_level = "high"
+priority_target = true
+preferred_targets = ["infantry", "light_vehicles"]
+avoid_targets = ["heavy_armor"]
+weaknesses = ["anti_tank", "close_combat"]
+synergies = ["Tesla devastation", "Mobile firebase"]
+special_rules = ["Fearless", "Tough(8)", "Fast", "Regeneration"]
+keywords = ["Vehicle", "Robot", "Barge"]
+notes = "Fast anti-infantry platform. Tesla destructor chains through units. Mobile."
+
+[units.stats]
+quality = "4+"
+defense = "3+"
+tough = 8
+movement = "12\""
+
+[[units.weapons]]
+name = "Tesla Destructor"
+range = "24\""
+shots = "6"
+ap = "0"
+special = ["Reliable", "Blast(3)"]
+
+[[units.weapons]]
+name = "Twin Tesla Carbine"
+range = "18\""
+shots = "4"
+ap = "0"
+special = ["Reliable"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Monolith"
+type = "vehicle"
+category = "heavy_support"
+points = 280
+models = "1"
+base_size = "hull"
+tactical_role = "heavy_assault"
+threat_level = "extreme"
+priority_target = true
+preferred_targets = ["everything"]
+avoid_targets = ["nothing"]
+weaknesses = ["massed_anti_tank", "expensive"]
+synergies = ["Deep strikes troops", "Terrifying presence"]
+special_rules = ["Fearless", "Tough(16)", "Regeneration", "Deep Strike", "Transport(10)"]
+keywords = ["Vehicle", "Robot", "Monolith"]
+notes = "Iconic Robot vehicle. Deep strikes and delivers troops. Incredibly tough. Point investment."
+
+[units.stats]
+quality = "4+"
+defense = "2+"
+tough = 16
+movement = "6\""
+
+[[units.weapons]]
+name = "Particle Whip"
+range = "24\""
+shots = "6"
+ap = "3"
+special = ["Blast(3)", "Deadly(3)"]
+
+[[units.weapons]]
+name = "Gauss Flux Arcs"
+range = "24\""
+shots = "12"
+ap = "1"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Doom Scythe"
+type = "vehicle"
+category = "heavy_support"
+points = 200
+models = "1"
+base_size = "hull"
+tactical_role = "air_superiority"
+threat_level = "very_high"
+priority_target = true
+preferred_targets = ["aircraft", "vehicles"]
+avoid_targets = ["anti_air_saturation"]
+weaknesses = ["dedicated_anti_air", "grounding"]
+synergies = ["Air support", "Death ray devastation"]
+special_rules = ["Fearless", "Tough(10)", "Aircraft", "Regeneration"]
+keywords = ["Vehicle", "Robot", "Aircraft"]
+notes = "Flying death ray. Death ray is devastating. Aircraft rules for hit-and-run attacks."
+
+[units.stats]
+quality = "4+"
+defense = "3+"
+tough = 10
+movement = "20\""
+
+[[units.weapons]]
+name = "Death Ray"
+range = "24\""
+shots = "1"
+ap = "5"
+special = ["Deadly(12)"]
+
+[[units.weapons]]
+name = "Twin Tesla Destructor"
+range = "24\""
+shots = "12"
+ap = "0"
+special = ["Reliable"]
+
+# =============================================================================
+# EXAMPLE ARMY LISTS
+# =============================================================================
+
+[army_lists.starter_750]
+name = "Awakening Phalanx - 750 points"
+description = "Balanced starter force with core Robot elements"
+points = 745
+units = [
+    { name = "Robot Lord", count = 1, points = 95, notes = "Durable commander" },
+    { name = "Cryptek", count = 1, points = 60, notes = "Tech support" },
+    { name = "Robot Warriors", count = 2, points = 170, notes = "Objective holders" },
+    { name = "Robot Immortals", count = 1, points = 110, notes = "Elite firepower" },
+    { name = "Wraiths", count = 1, points = 165, notes = "Fast assault" },
+    { name = "Annihilation Barge", count = 1, points = 115, notes = "Mobile firebase" }
+]
+tactics = "Warriors and Immortals advance on objectives. Lord provides melee punch and buffs Regeneration. Wraiths flank. Barge provides mobile firepower."
+
+[army_lists.competitive_1500]
+name = "Silent Tomb - 1500 points"
+description = "Competitive attrition army"
+points = 1495
+units = [
+    { name = "Robot Lord", count = 1, points = 115, upgrades = ["Resurrection Orb"] },
+    { name = "Annihilation Lord", count = 1, points = 85 },
+    { name = "Robot Warriors", count = 2, points = 170 },
+    { name = "Robot Immortals", count = 2, points = 220 },
+    { name = "Annihilators", count = 1, points = 140 },
+    { name = "Wraiths", count = 2, points = 330 },
+    { name = "Doomsday Ark", count = 1, points = 170 },
+    { name = "Doom Scythe", count = 1, points = 200 }
+]
+tactics = "Multi-threat army. Annihilators and Doomsday Ark delete vehicles. Wraiths flank and tie up threats. Doom Scythe dominates the skies. Warriors hold objectives while everything regenerates."

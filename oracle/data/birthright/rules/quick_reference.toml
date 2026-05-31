@@ -1,0 +1,486 @@
+# =============================================================================
+# BIRTHRIGHT QUICK REFERENCE - 5E INTEGRATION
+# =============================================================================
+# Fast-reference tables for play. Print this or keep it open during sessions.
+# =============================================================================
+
+[meta]
+title = "Birthright Quick Reference"
+version = "1.0"
+system = "5e"
+
+# =============================================================================
+# COMMON DCS
+# =============================================================================
+
+[difficulty_class]
+description = "Standard 5e DCs with Birthright context"
+
+[[difficulty_class.table]]
+dc = 5
+difficulty = "Very Easy"
+birthright_example = "Recall basic Cerilian history, recognize a major noble house"
+
+[[difficulty_class.table]]
+dc = 10
+difficulty = "Easy"
+birthright_example = "Identify a blooded scion (if obvious signs), basic domain knowledge"
+
+[[difficulty_class.table]]
+dc = 15
+difficulty = "Medium"
+birthright_example = "Sense a Source, identify bloodline derivation, common domain action"
+
+[[difficulty_class.table]]
+dc = 20
+difficulty = "Hard"
+birthright_example = "Resist blood ability, complex domain action, identify awnsheghlien in disguise"
+
+[[difficulty_class.table]]
+dc = 25
+difficulty = "Very Hard"
+birthright_example = "Resist powerful blood ability, realm spell against defended target"
+
+[[difficulty_class.table]]
+dc = 30
+difficulty = "Nearly Impossible"
+birthright_example = "Resist true bloodline power, oppose divine-strength scion"
+
+# =============================================================================
+# BLOODLINE QUICK REFERENCE
+# =============================================================================
+
+[bloodline_quick]
+title = "Bloodline Strength at a Glance"
+
+[[bloodline_quick.table]]
+strength = "Tainted"
+score = "1-10"
+abilities = 0
+regency_mod = -2
+arcane_limit = "Magician only"
+
+[[bloodline_quick.table]]
+strength = "Minor"
+score = "11-20"
+abilities = 1
+regency_mod = 0
+arcane_limit = "Full casting"
+
+[[bloodline_quick.table]]
+strength = "Major"
+score = "21-35"
+abilities = 2
+regency_mod = "+1"
+arcane_limit = "Full casting"
+
+[[bloodline_quick.table]]
+strength = "Great"
+score = "36-55"
+abilities = 3
+regency_mod = "+2"
+arcane_limit = "Full + realm magic"
+
+[[bloodline_quick.table]]
+strength = "True"
+score = "56-75"
+abilities = 4
+regency_mod = "+3"
+arcane_limit = "Full + realm magic"
+
+[[bloodline_quick.table]]
+strength = "Divine"
+score = "76+"
+abilities = 5
+regency_mod = "+4"
+arcane_limit = "Full + realm magic"
+
+# =============================================================================
+# DERIVATION SUMMARY
+# =============================================================================
+
+[derivation_quick]
+title = "Bloodline Derivation Quick Reference"
+
+[[derivation_quick.table]]
+derivation = "Anduiras"
+aspect = "War, Nobility"
+common_ability = "Courage, Battlewise"
+alignment = "Lawful"
+cultures = "Anuirean, Rjurik"
+
+[[derivation_quick.table]]
+derivation = "Basaia"
+aspect = "Sun, Light"
+common_ability = "Fire Resistance, Mebhaighl Sense"
+alignment = "Good"
+cultures = "Khinasi"
+
+[[derivation_quick.table]]
+derivation = "Brenna"
+aspect = "Commerce, Luck"
+common_ability = "Alertness, Persuasion"
+alignment = "Neutral"
+cultures = "Brecht"
+
+[[derivation_quick.table]]
+derivation = "Masela"
+aspect = "Sea, Storms"
+common_ability = "Water Breathing, Sea Song"
+alignment = "Chaotic"
+cultures = "Coastal"
+
+[[derivation_quick.table]]
+derivation = "Reynir"
+aspect = "Nature, Hunt"
+common_ability = "Animal Affinity, Healing"
+alignment = "Neutral"
+cultures = "Rjurik"
+
+[[derivation_quick.table]]
+derivation = "Vorynn"
+aspect = "Magic, Moon"
+common_ability = "Detect Magic, Heightened Ability"
+alignment = "Neutral"
+cultures = "Wizards"
+
+[[derivation_quick.table]]
+derivation = "Azrai"
+aspect = "Shadow, Evil"
+common_ability = "Fear, Shadow Form"
+alignment = "Evil"
+cultures = "Vos, Awnsheghlien"
+
+# =============================================================================
+# INCOME FORMULAS
+# =============================================================================
+
+[income_formulas]
+title = "Domain Income Quick Calc"
+
+[income_formulas.regency]
+formula = "Province Level x Holding Level = RP"
+example = "Level 6 province, Level 4 law = 24 RP"
+note = "Sum all holdings, add Bloodline modifier"
+
+[income_formulas.gold_bars]
+province_tax = "Province Level / 2 (round down)"
+guild_bonus = "+ Guild Holding Level"
+trade_route = "1d6 GB per route"
+example = "Level 6 province + Level 3 guild = 3 + 3 = 6 GB"
+
+[income_formulas.maintenance]
+military = "1 GB per 2 units"
+castle = "Castle Level / 2 GB"
+court = "1-5 GB by status"
+holdings = "1 GB per 5 holding levels"
+
+# =============================================================================
+# COMBAT SHORTCUTS
+# =============================================================================
+
+[combat_shortcuts]
+title = "Quick Combat Reference"
+
+[combat_shortcuts.blood_ability_save_dc]
+formula = "8 + Proficiency + (Bloodline Score / 10, round down)"
+example = "Bloodline 35, Proficiency +3 = 8 + 3 + 3 = DC 14"
+
+[combat_shortcuts.bloodtheft]
+trigger = "Killing blow with bladed weapon in melee"
+roll = "d100 vs victim's Bloodline Score"
+gain_if_under = "Victim's score - your roll"
+gain_if_over = "1 point"
+ability_theft = "50% chance per ability"
+
+[combat_shortcuts.awnsheghlien]
+identifying = "DC 15 + CR to see through disguise"
+extra_damage = "Paladin smite, ranger favored enemy apply"
+bloodtheft_risk = "Slaying may corrupt (Azrai blood)"
+
+# =============================================================================
+# ORACLE QUESTION TEMPLATES
+# =============================================================================
+
+[oracle_templates]
+description = "Common oracle questions for solo Birthright play"
+
+[[oracle_templates.domain]]
+situation = "Does another regent take action against me?"
+likely_if = "Low diplomatic relations, contested border, rival blood"
+question_format = "Does [Regent] [action] this domain turn?"
+
+[[oracle_templates.domain]]
+situation = "Is my domain action successful?"
+likely_if = "High skill modifier, RP spent, favorable circumstances"
+question_format = "Does [action] on [target] succeed? (DC [X])"
+
+[[oracle_templates.domain]]
+situation = "What is the domain event this turn?"
+method = "Roll d100 on Domain Events table"
+question_format = "What event occurs? (roll on table)"
+
+[[oracle_templates.intrigue]]
+situation = "Is this NPC blooded?"
+likely_if = "Noble family, magical ability, ruling position"
+question_format = "Is [NPC] a blooded scion?"
+
+[[oracle_templates.intrigue]]
+situation = "What is this scion's derivation?"
+method = "Roll or choose based on culture"
+question_format = "What bloodline does [NPC] carry? (roll on derivation table)"
+
+[[oracle_templates.intrigue]]
+situation = "Is assassination attempted?"
+likely_if = "Political enemies, Azrai cultists, contested succession"
+question_format = "Is there an assassination attempt this [period]?"
+
+[[oracle_templates.adventure]]
+situation = "Does the awnsheghlien appear?"
+likely_if = "In its territory, threatening its interests"
+question_format = "Does [Awnsheghlien] become involved?"
+
+[[oracle_templates.adventure]]
+situation = "Is the treasure significant?"
+likely_if = "Ancient site, dragon hoard, royal tomb"
+question_format = "Does the treasure include [bloodsilver/realm artifact/GB]?"
+
+[[oracle_templates.adventure]]
+situation = "Are there Shadow World complications?"
+likely_if = "Near known portal, magical site, halfling present"
+question_format = "Is the Shadow World bleeding through here?"
+
+# =============================================================================
+# CULTURE QUICK REFERENCE
+# =============================================================================
+
+[culture_quick]
+title = "Cerilian Cultures at a Glance"
+
+[[culture_quick.table]]
+culture = "Anuirean"
+theme = "Feudal nobility"
+common_classes = "Fighter, Paladin, Cleric"
+bloodlines = "Anduiras, Basaia, Brenna"
+faith = "Haelyn"
+
+[[culture_quick.table]]
+culture = "Brecht"
+theme = "Merchant republics"
+common_classes = "Rogue, Fighter, Bard"
+bloodlines = "Brenna, Sera"
+faith = "Sera, Eloele"
+
+[[culture_quick.table]]
+culture = "Khinasi"
+theme = "Scholar-mages"
+common_classes = "Wizard, Cleric, Fighter"
+bloodlines = "Basaia, Vorynn"
+faith = "Avani"
+
+[[culture_quick.table]]
+culture = "Rjurik"
+theme = "Norse druids"
+common_classes = "Ranger, Druid, Barbarian"
+bloodlines = "Reynir, Vorynn"
+faith = "Erik"
+
+[[culture_quick.table]]
+culture = "Vos"
+theme = "Brutal warriors"
+common_classes = "Barbarian, Fighter, Warlock"
+bloodlines = "Azrai, Vorynn"
+faith = "Belinik, Kriesha"
+
+# =============================================================================
+# PROVINCE AND HOLDING LIMITS
+# =============================================================================
+
+[province_limits]
+title = "Province Level Limits"
+
+[[province_limits.table]]
+province_level = 1
+max_holding_levels = 1
+max_source_level = 9
+population = "Hamlet"
+character = "Wilderness outpost"
+
+[[province_limits.table]]
+province_level = 3
+max_holding_levels = 3
+max_source_level = 7
+population = "Village"
+character = "Frontier settlement"
+
+[[province_limits.table]]
+province_level = 5
+max_holding_levels = 5
+max_source_level = 5
+population = "Town"
+character = "Established community"
+
+[[province_limits.table]]
+province_level = 7
+max_holding_levels = 7
+max_source_level = 3
+population = "City"
+character = "Major urban center"
+
+[[province_limits.table]]
+province_level = 10
+max_holding_levels = 10
+max_source_level = 0
+population = "Metropolis"
+character = "Capital, no wild magic remains"
+
+# =============================================================================
+# MILITARY UNIT QUICK REFERENCE
+# =============================================================================
+
+[military_quick]
+title = "Basic Military Units"
+
+[[military_quick.units]]
+unit = "Infantry"
+muster_cost = "2 GB"
+maintenance = "1 GB / 2 turns"
+attack = "+2"
+defense = "12"
+movement = "1 province"
+
+[[military_quick.units]]
+unit = "Archers"
+muster_cost = "2 GB"
+maintenance = "1 GB / 2 turns"
+attack = "+3 (ranged)"
+defense = "10"
+movement = "1 province"
+
+[[military_quick.units]]
+unit = "Cavalry"
+muster_cost = "4 GB"
+maintenance = "1 GB / turn"
+attack = "+4"
+defense = "14"
+movement = "2 provinces"
+
+[[military_quick.units]]
+unit = "Knights"
+muster_cost = "6 GB"
+maintenance = "2 GB / turn"
+attack = "+5"
+defense = "16"
+movement = "2 provinces"
+
+[[military_quick.units]]
+unit = "Pikemen"
+muster_cost = "3 GB"
+maintenance = "1 GB / 2 turns"
+attack = "+3 (+5 vs cavalry)"
+defense = "13"
+movement = "1 province"
+
+[[military_quick.units]]
+unit = "Irregulars"
+muster_cost = "1 GB"
+maintenance = "1 GB / 3 turns"
+attack = "+1"
+defense = "10"
+movement = "1 province"
+
+# =============================================================================
+# RANDOM TABLES
+# =============================================================================
+
+[random_tables]
+title = "Quick Random Tables"
+
+[random_tables.npc_bloodline_strength]
+description = "For random blooded NPC"
+d20_1_5 = "Tainted (1d10)"
+d20_6_12 = "Minor (10 + 1d10)"
+d20_13_17 = "Major (20 + 1d15)"
+d20_18_19 = "Great (35 + 1d20)"
+d20_20 = "True (55 + 1d20)"
+
+[random_tables.derivation_by_culture]
+anuirean = "1-3 Anduiras, 4-5 Basaia, 6 Brenna"
+brecht = "1-3 Brenna, 4-5 Masela, 6 Sera (use Brenna)"
+khinasi = "1-3 Basaia, 4-5 Vorynn, 6 Anduiras"
+rjurik = "1-3 Reynir, 4-5 Vorynn, 6 Anduiras"
+vos = "1-3 Azrai, 4-5 Vorynn, 6 Anduiras"
+
+[random_tables.blood_ability_rank]
+d6_1_3 = "Minor ability"
+d6_4_5 = "Major ability"
+d6_6 = "Great ability"
+
+# =============================================================================
+# SESSION CHECKLIST
+# =============================================================================
+
+[session_checklist]
+title = "Birthright Session Flow"
+
+[[session_checklist.steps]]
+order = 1
+phase = "Domain Review"
+tasks = ["Check RP total", "Check GB total", "Review holding status", "Note any pending actions"]
+
+[[session_checklist.steps]]
+order = 2
+phase = "Domain Turn (if applicable)"
+tasks = ["Collect RP and GB", "Take 3 domain actions", "Roll domain event", "Adjust holdings", "Pay maintenance"]
+
+[[session_checklist.steps]]
+order = 3
+phase = "Adventure Hooks"
+tasks = ["Check domain event for adventure", "Check NPC agendas", "Review outstanding threats"]
+
+[[session_checklist.steps]]
+order = 4
+phase = "Adventure Play"
+tasks = ["Standard 5e adventuring", "Track bloodtheft opportunities", "Note domain implications"]
+
+[[session_checklist.steps]]
+order = 5
+phase = "Session End"
+tasks = ["Convert treasure to GB if desired", "Update RP from accomplishments", "Note loyalty changes", "Record NPC relationships"]
+
+# =============================================================================
+# CONVERSION QUICK REFERENCE
+# =============================================================================
+
+[conversions]
+title = "Quick Conversions"
+
+[[conversions.table]]
+from = "Gold Pieces"
+to = "Gold Bars"
+rate = "2000 gp = 1 GB"
+
+[[conversions.table]]
+from = "Monster CR"
+to = "RP reward"
+rate = "CR / 2 = RP (for domain threats)"
+
+[[conversions.table]]
+from = "Bloodline Score"
+to = "Modifier"
+rate = "Score / 10 (round down)"
+
+[[conversions.table]]
+from = "Province Level"
+to = "Approx Population"
+rate = "Level 1 = 500, x3 per level"
+
+[[conversions.table]]
+from = "Domain Turn"
+to = "Real Time"
+rate = "1 turn = 3 months = 1 season"
+
+[[conversions.table]]
+from = "Adventure Days"
+to = "Domain Progress"
+rate = "30 days = 1/3 domain turn"

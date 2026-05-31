@@ -1,0 +1,1068 @@
+# =============================================================================
+# ANUIRE PROVINCES - The Heartland of the Old Empire
+# =============================================================================
+# Province data for the Anuirean region of Cerilia
+# Based on the Birthright campaign setting
+# =============================================================================
+
+# =============================================================================
+# AVANIL - The Heartland
+# =============================================================================
+# The most powerful domain in Anuire, ruled by Prince Darien Avan
+# Claims descent from the Roele emperors through marriage
+# =============================================================================
+
+[[provinces]]
+name = "Anuire City"
+realm = "Avanil"
+level = 8
+terrain = "plains"
+coastal = false
+source_potential = 2
+loyalty = "high"
+
+[provinces.holdings]
+law = [
+    { holder = "Prince Avan", level = 5 },
+    { holder = "Impregnable Heart of Haelyn", level = 2 }
+]
+temple = [
+    { holder = "Western Imperial Temple", level = 6 },
+    { holder = "Haelyn's Aegis", level = 2 }
+]
+guild = [
+    { holder = "Endier Guilds (Kalien)", level = 4 },
+    { holder = "Siele Ghoried", level = 3 }
+]
+source = [
+    { holder = "Caine the Sorcerer", level = 2 }
+]
+
+[provinces.features]
+description = "The ancient capital of the Anuirean Empire, still the largest city in Cerilia. The Iron Throne sits empty, awaiting one worthy to claim it."
+landmarks = ["The Iron Throne (empty)", "Imperial Palace", "Cathedral of Haelyn", "The Archduke's Tower"]
+adventure_sites = ["Imperial Catacombs", "Old Imperial Archives", "Thieves' Quarter", "Abandoned Wizard Tower"]
+
+[[provinces]]
+name = "Avanil"
+realm = "Avanil"
+level = 6
+terrain = "plains"
+coastal = true
+source_potential = 4
+loyalty = "high"
+
+[provinces.holdings]
+law = [
+    { holder = "Prince Avan", level = 4 },
+    { holder = "Impregnable Heart of Haelyn", level = 2 }
+]
+temple = [
+    { holder = "Western Imperial Temple", level = 5 },
+    { holder = "Haelyn's Aegis", level = 1 }
+]
+guild = [
+    { holder = "Endier Guilds (Kalien)", level = 3 },
+    { holder = "Siele Ghoried", level = 2 }
+]
+source = [
+    { holder = "Caine the Sorcerer", level = 4 }
+]
+
+[provinces.features]
+description = "The heartland province, seat of Prince Avan's power. Rich farmlands feed the capital."
+landmarks = ["Castle Avan", "Temple of the Sun", "Merchant Quarter"]
+adventure_sites = ["Haunted Manor of House Boeran", "Ancient Masetian Ruins", "Smugglers' Caves"]
+
+[[provinces]]
+name = "Daulton"
+realm = "Avanil"
+level = 5
+terrain = "plains"
+coastal = false
+source_potential = 5
+loyalty = "loyal"
+
+[provinces.holdings]
+law = [
+    { holder = "Prince Avan", level = 3 },
+    { holder = "Impregnable Heart of Haelyn", level = 1 }
+]
+temple = [
+    { holder = "Western Imperial Temple", level = 4 },
+    { holder = "Life and Protection of Avanalae", level = 1 }
+]
+guild = [
+    { holder = "Endier Guilds (Kalien)", level = 2 },
+    { holder = "Siele Ghoried", level = 2 }
+]
+source = [
+    { holder = "Caine the Sorcerer", level = 5 }
+]
+
+[provinces.features]
+description = "Agricultural heartland with ancient forests. Known for horse breeding."
+landmarks = ["Daulton Fair Grounds", "Temple of Avanalae"]
+adventure_sites = ["Faerie Circle", "Abandoned Druid Grove", "Bandit Stronghold"]
+
+[[provinces]]
+name = "Bhrein"
+realm = "Avanil"
+level = 4
+terrain = "plains"
+coastal = true
+source_potential = 6
+loyalty = "loyal"
+
+[provinces.holdings]
+law = [
+    { holder = "Prince Avan", level = 3 },
+    { holder = "Impregnable Heart of Haelyn", level = 1 }
+]
+temple = [
+    { holder = "Western Imperial Temple", level = 3 },
+    { holder = "Nesirie's Blessing", level = 1 }
+]
+guild = [
+    { holder = "Endier Guilds (Kalien)", level = 2 },
+    { holder = "Siele Ghoried", level = 1 }
+]
+source = [
+    { holder = "Caine the Sorcerer", level = 6 }
+]
+
+[provinces.features]
+description = "Coastal province with fishing villages and untamed woodlands. Source magic runs strong here."
+landmarks = ["Lighthouse of Nesirie", "Ancient Standing Stones"]
+adventure_sites = ["Sea Caves", "Mebhaighl Nexus", "Ruined Wizard Tower"]
+
+[[provinces]]
+name = "Taeghas"
+realm = "Avanil"
+level = 3
+terrain = "forest"
+coastal = false
+source_potential = 7
+loyalty = "neutral"
+
+[provinces.holdings]
+law = [
+    { holder = "Prince Avan", level = 2 },
+    { holder = "Impregnable Heart of Haelyn", level = 1 }
+]
+temple = [
+    { holder = "Western Imperial Temple", level = 2 },
+    { holder = "Erik's Sacred Grove", level = 1 }
+]
+guild = [
+    { holder = "Siele Ghoried", level = 2 }
+]
+source = [
+    { holder = "Caine the Sorcerer", level = 7 }
+]
+
+[provinces.features]
+description = "Dense forests and scattered settlements. The source potential draws wizards."
+landmarks = ["The Greenwood", "Druid's Crossing"]
+adventure_sites = ["Elven Ruins", "Haunted Dell", "Wild Magic Zone"]
+
+# =============================================================================
+# BOERUINE - The Military Power
+# =============================================================================
+# Ruled by Archduke Aeric Boeruine, the most militarily powerful realm
+# Claims the throne through ancient lineage and martial prowess
+# =============================================================================
+
+[[provinces]]
+name = "Boeruine"
+realm = "Boeruine"
+level = 5
+terrain = "hills"
+coastal = false
+source_potential = 5
+loyalty = "high"
+
+[provinces.holdings]
+law = [
+    { holder = "Archduke Boeruine", level = 4 },
+    { holder = "Impregnable Heart of Haelyn", level = 1 }
+]
+temple = [
+    { holder = "Haelyn's Aegis", level = 4 },
+    { holder = "Western Imperial Temple", level = 1 }
+]
+guild = [
+    { holder = "Mheillie Bireon", level = 3 }
+]
+source = [
+    { holder = "Albiele Isilviere", level = 5 }
+]
+
+[provinces.features]
+description = "The seat of Boeruine power. Castle Boeruine dominates the landscape, housing the finest army in Anuire."
+landmarks = ["Castle Boeruine", "Temple of the Warrior", "War College"]
+adventure_sites = ["Old Armory Dungeons", "Veteran's Crypts", "Training Grounds"]
+
+[[provinces]]
+name = "Tariene"
+realm = "Boeruine"
+level = 4
+terrain = "plains"
+coastal = false
+source_potential = 6
+loyalty = "loyal"
+
+[provinces.holdings]
+law = [
+    { holder = "Archduke Boeruine", level = 3 }
+]
+temple = [
+    { holder = "Haelyn's Aegis", level = 3 },
+    { holder = "Western Imperial Temple", level = 1 }
+]
+guild = [
+    { holder = "Mheillie Bireon", level = 2 }
+]
+source = [
+    { holder = "Albiele Isilviere", level = 6 }
+]
+
+[provinces.features]
+description = "Rich agricultural lands that feed Boeruine's armies."
+landmarks = ["Granaries of Tariene", "Lord's Manor"]
+adventure_sites = ["Abandoned Mine", "Haunted Battlefield"]
+
+[[provinces]]
+name = "Seasedge"
+realm = "Boeruine"
+level = 4
+terrain = "plains"
+coastal = true
+source_potential = 6
+loyalty = "loyal"
+
+[provinces.holdings]
+law = [
+    { holder = "Archduke Boeruine", level = 3 },
+    { holder = "Impregnable Heart of Haelyn", level = 1 }
+]
+temple = [
+    { holder = "Haelyn's Aegis", level = 2 },
+    { holder = "Nesirie's Blessing", level = 2 }
+]
+guild = [
+    { holder = "Mheillie Bireon", level = 3 }
+]
+source = [
+    { holder = "Albiele Isilviere", level = 6 }
+]
+
+[provinces.features]
+description = "Coastal province with important naval facilities. Gateway to the Straits of Aerele."
+landmarks = ["Seasedge Harbor", "Naval Yards"]
+adventure_sites = ["Sunken Ships", "Pirate Caves", "Lighthouse Ruins"]
+
+[[provinces]]
+name = "Dhalaene"
+realm = "Boeruine"
+level = 3
+terrain = "forest"
+coastal = false
+source_potential = 7
+loyalty = "neutral"
+
+[provinces.holdings]
+law = [
+    { holder = "Archduke Boeruine", level = 2 }
+]
+temple = [
+    { holder = "Haelyn's Aegis", level = 2 },
+    { holder = "Erik's Sacred Grove", level = 1 }
+]
+guild = [
+    { holder = "Mheillie Bireon", level = 1 }
+]
+source = [
+    { holder = "Albiele Isilviere", level = 7 }
+]
+
+[provinces.features]
+description = "Deep forests mark this frontier province. Lumber is the primary industry."
+landmarks = ["The Great Oak", "Forestry Lodge"]
+adventure_sites = ["Fey Crossing", "Lost Logging Camp", "Wolf Den"]
+
+[[provinces]]
+name = "Trasalain"
+realm = "Boeruine"
+level = 3
+terrain = "hills"
+coastal = false
+source_potential = 7
+loyalty = "loyal"
+
+[provinces.holdings]
+law = [
+    { holder = "Archduke Boeruine", level = 2 },
+    { holder = "Impregnable Heart of Haelyn", level = 1 }
+]
+temple = [
+    { holder = "Haelyn's Aegis", level = 3 }
+]
+guild = [
+    { holder = "Mheillie Bireon", level = 1 }
+]
+source = [
+    { holder = "Albiele Isilviere", level = 7 }
+]
+
+[provinces.features]
+description = "Mining province in the hills. Iron and copper fuel Boeruine's war machine."
+landmarks = ["Iron Mines", "Smelters"]
+adventure_sites = ["Abandoned Mine Shaft", "Dwarven Ruins", "Ore Smuggler's Trail"]
+
+# =============================================================================
+# GHOERE - The Aggressor
+# =============================================================================
+# Ruled by Baron Gavin Tael, the most aggressive expansionist
+# Known for military ambition and ruthless politics
+# =============================================================================
+
+[[provinces]]
+name = "Bhalaene"
+realm = "Ghoere"
+level = 5
+terrain = "plains"
+coastal = false
+source_potential = 5
+loyalty = "high"
+
+[provinces.holdings]
+law = [
+    { holder = "Baron Tael", level = 5 }
+]
+temple = [
+    { holder = "Sword of Haelyn", level = 4 }
+]
+guild = [
+    { holder = "Siele Ghoried", level = 4 }
+]
+source = [
+    { holder = "Aglondier", level = 5 }
+]
+
+[provinces.features]
+description = "The capital of Ghoere. Baron Tael rules with an iron fist from his fortress."
+landmarks = ["Fortress Tael", "Temple of the Sword", "Training Grounds"]
+adventure_sites = ["Tael Dungeons", "Secret Police Headquarters", "Underground Arena"]
+
+[[provinces]]
+name = "Ghieste"
+realm = "Ghoere"
+level = 4
+terrain = "plains"
+coastal = false
+source_potential = 6
+loyalty = "loyal"
+
+[provinces.holdings]
+law = [
+    { holder = "Baron Tael", level = 4 }
+]
+temple = [
+    { holder = "Sword of Haelyn", level = 3 }
+]
+guild = [
+    { holder = "Siele Ghoried", level = 3 }
+]
+source = [
+    { holder = "Aglondier", level = 6 }
+]
+
+[provinces.features]
+description = "Agricultural heartland, heavily taxed to support Ghoere's military."
+landmarks = ["Tax Collection Station", "Military Camp"]
+adventure_sites = ["Resistance Hideout", "Burned Village", "Mass Grave"]
+
+[[provinces]]
+name = "Rhumannen"
+realm = "Ghoere"
+level = 4
+terrain = "plains"
+coastal = false
+source_potential = 6
+loyalty = "neutral"
+
+[provinces.holdings]
+law = [
+    { holder = "Baron Tael", level = 3 }
+]
+temple = [
+    { holder = "Sword of Haelyn", level = 3 },
+    { holder = "Life and Protection of Avanalae", level = 1 }
+]
+guild = [
+    { holder = "Siele Ghoried", level = 3 }
+]
+source = [
+    { holder = "Aglondier", level = 6 }
+]
+
+[provinces.features]
+description = "Border province, often sees troop movements. Population is war-weary."
+landmarks = ["Border Fort", "Refugee Camp"]
+adventure_sites = ["Deserter's Haven", "Spy Network", "Hidden Temple"]
+
+[[provinces]]
+name = "Tornilen"
+realm = "Ghoere"
+level = 3
+terrain = "hills"
+coastal = false
+source_potential = 7
+loyalty = "neutral"
+
+[provinces.holdings]
+law = [
+    { holder = "Baron Tael", level = 3 }
+]
+temple = [
+    { holder = "Sword of Haelyn", level = 2 }
+]
+guild = [
+    { holder = "Siele Ghoried", level = 2 }
+]
+source = [
+    { holder = "Aglondier", level = 7 }
+]
+
+[provinces.features]
+description = "Mining hills, source of Ghoere's iron. Harsh working conditions."
+landmarks = ["Iron Mines", "Labor Camp"]
+adventure_sites = ["Mine Collapse", "Slave Revolt Site", "Hidden Treasure"]
+
+[[provinces]]
+name = "Danaroene"
+realm = "Ghoere"
+level = 3
+terrain = "plains"
+coastal = false
+source_potential = 7
+loyalty = "oppressed"
+
+[provinces.holdings]
+law = [
+    { holder = "Baron Tael", level = 3 }
+]
+temple = [
+    { holder = "Sword of Haelyn", level = 2 }
+]
+guild = [
+    { holder = "Siele Ghoried", level = 2 }
+]
+source = [
+    { holder = "Aglondier", level = 7 }
+]
+
+[provinces.features]
+description = "Recently conquered territory. Resistance simmers beneath the surface."
+landmarks = ["Occupation Garrison", "Destroyed Castle"]
+adventure_sites = ["Resistance Cell", "Hidden Arms Cache", "Escape Route"]
+
+# =============================================================================
+# MHORIED - The Defender
+# =============================================================================
+# Ruled by the Mhor, protector of the realm against the Gorgon
+# Ancient bloodline, traditional allies of the Empire
+# =============================================================================
+
+[[provinces]]
+name = "Shieldhaven"
+realm = "Mhoried"
+level = 5
+terrain = "hills"
+coastal = false
+source_potential = 5
+loyalty = "high"
+
+[provinces.holdings]
+law = [
+    { holder = "The Mhor", level = 4 },
+    { holder = "Impregnable Heart of Haelyn", level = 1 }
+]
+temple = [
+    { holder = "Haelyn's Aegis", level = 4 },
+    { holder = "Western Imperial Temple", level = 1 }
+]
+guild = [
+    { holder = "Mheillie Bireon", level = 2 }
+]
+source = [
+    { holder = "The Eyeless One", level = 5 }
+]
+
+[provinces.features]
+description = "Capital of Mhoried. The Mhor's castle has never fallen to the Gorgon's forces."
+landmarks = ["Shieldhaven Castle", "Temple of Vigilance", "War Memorial"]
+adventure_sites = ["Ancient Catacombs", "Goblin Tunnel Entrance", "Refugee Quarter"]
+
+[[provinces]]
+name = "Byrnnor"
+realm = "Mhoried"
+level = 4
+terrain = "hills"
+coastal = false
+source_potential = 6
+loyalty = "loyal"
+
+[provinces.holdings]
+law = [
+    { holder = "The Mhor", level = 3 }
+]
+temple = [
+    { holder = "Haelyn's Aegis", level = 3 }
+]
+guild = [
+    { holder = "Mheillie Bireon", level = 2 }
+]
+source = [
+    { holder = "The Eyeless One", level = 6 }
+]
+
+[provinces.features]
+description = "Secondary defensive position. Veterans retire here to train new soldiers."
+landmarks = ["Training Fort", "Veteran's Hall"]
+adventure_sites = ["Old Battlefield", "Haunted Barracks", "Secret Armory"]
+
+[[provinces]]
+name = "Bevaldruor"
+realm = "Mhoried"
+level = 3
+terrain = "hills"
+coastal = false
+source_potential = 7
+loyalty = "loyal"
+
+[provinces.holdings]
+law = [
+    { holder = "The Mhor", level = 3 }
+]
+temple = [
+    { holder = "Haelyn's Aegis", level = 2 }
+]
+guild = [
+    { holder = "Mheillie Bireon", level = 1 }
+]
+source = [
+    { holder = "The Eyeless One", level = 7 }
+]
+
+[provinces.features]
+description = "Front-line province against the Gorgon. Constant raids and skirmishes."
+landmarks = ["Watchtowers", "Siege Works"]
+adventure_sites = ["No Man's Land", "Goblin Warcamp", "Fallen Hero's Tomb"]
+
+[[provinces]]
+name = "Torien's Watch"
+realm = "Mhoried"
+level = 2
+terrain = "mountains"
+coastal = false
+source_potential = 8
+loyalty = "high"
+
+[provinces.holdings]
+law = [
+    { holder = "The Mhor", level = 2 }
+]
+temple = [
+    { holder = "Haelyn's Aegis", level = 2 }
+]
+guild = []
+source = [
+    { holder = "The Eyeless One", level = 8 }
+]
+
+[provinces.features]
+description = "Mountain fortress province. The first line of defense against the Gorgon's Crown."
+landmarks = ["Torien's Tower", "The Great Wall"]
+adventure_sites = ["Gorgon's Crown Border", "Abandoned Outpost", "Mountain Pass"]
+
+[[provinces]]
+name = "Maesil"
+realm = "Mhoried"
+level = 4
+terrain = "plains"
+coastal = false
+source_potential = 6
+loyalty = "loyal"
+
+[provinces.holdings]
+law = [
+    { holder = "The Mhor", level = 3 }
+]
+temple = [
+    { holder = "Haelyn's Aegis", level = 2 },
+    { holder = "Western Imperial Temple", level = 1 }
+]
+guild = [
+    { holder = "Mheillie Bireon", level = 3 }
+]
+source = [
+    { holder = "The Eyeless One", level = 6 }
+]
+
+[provinces.features]
+description = "The breadbasket of Mhoried. River trade brings prosperity."
+landmarks = ["River Port", "Grain Silos"]
+adventure_sites = ["River Pirates", "Smuggler's Cove", "Sunken Barge"]
+
+# =============================================================================
+# ROESONE - The Young Realm
+# =============================================================================
+# Ruled by Baroness Marlae Roesone, daughter of Black Baron Roesone
+# Small but strategic, carved from the Spider's holdings
+# =============================================================================
+
+[[provinces]]
+name = "Caercas"
+realm = "Roesone"
+level = 4
+terrain = "plains"
+coastal = true
+source_potential = 6
+loyalty = "high"
+
+[provinces.holdings]
+law = [
+    { holder = "Baroness Roesone", level = 3 },
+    { holder = "Impregnable Heart of Haelyn", level = 1 }
+]
+temple = [
+    { holder = "Haelyn's Aegis", level = 3 },
+    { holder = "Life and Protection of Avanalae", level = 1 }
+]
+guild = [
+    { holder = "Endier Guilds (Kalien)", level = 2 },
+    { holder = "Siele Ghoried", level = 1 }
+]
+source = [
+    { holder = "Aerele", level = 6 }
+]
+
+[provinces.features]
+description = "Capital of the young realm. The Baroness rules from her father's castle."
+landmarks = ["Castle Roesone", "Harbor Quarter", "New Temple"]
+adventure_sites = ["Black Baron's Vault", "Spider Cultist Hideout", "Coastal Caves"]
+
+[[provinces]]
+name = "Edlin"
+realm = "Roesone"
+level = 3
+terrain = "plains"
+coastal = false
+source_potential = 7
+loyalty = "loyal"
+
+[provinces.holdings]
+law = [
+    { holder = "Baroness Roesone", level = 2 }
+]
+temple = [
+    { holder = "Haelyn's Aegis", level = 2 }
+]
+guild = [
+    { holder = "Endier Guilds (Kalien)", level = 2 }
+]
+source = [
+    { holder = "Aerele", level = 7 }
+]
+
+[provinces.features]
+description = "Agricultural province, still rebuilding from the Spider's raids."
+landmarks = ["Rebuilt Village", "Mill"]
+adventure_sites = ["Spider Nest", "Burned Manor", "Hidden Refugees"]
+
+[[provinces]]
+name = "Fairfield"
+realm = "Roesone"
+level = 3
+terrain = "plains"
+coastal = false
+source_potential = 7
+loyalty = "loyal"
+
+[provinces.holdings]
+law = [
+    { holder = "Baroness Roesone", level = 2 }
+]
+temple = [
+    { holder = "Haelyn's Aegis", level = 2 },
+    { holder = "Life and Protection of Avanalae", level = 1 }
+]
+guild = [
+    { holder = "Endier Guilds (Kalien)", level = 2 }
+]
+source = [
+    { holder = "Aerele", level = 7 }
+]
+
+[provinces.features]
+description = "Rich farmland, the name is aspiration as much as description."
+landmarks = ["Fair Field (market)", "Temple of Healing"]
+adventure_sites = ["Spider Tunnel", "Abandoned Farm", "Hidden Well"]
+
+[[provinces]]
+name = "Abbatuor"
+realm = "Roesone"
+level = 2
+terrain = "forest"
+coastal = false
+source_potential = 8
+loyalty = "neutral"
+
+[provinces.holdings]
+law = [
+    { holder = "Baroness Roesone", level = 1 }
+]
+temple = [
+    { holder = "Haelyn's Aegis", level = 1 }
+]
+guild = []
+source = [
+    { holder = "Aerele", level = 8 }
+]
+
+[provinces.features]
+description = "Wild frontier province. The Spider's influence lingers here."
+landmarks = ["Ranger Station", "Old Watchtower"]
+adventure_sites = ["Spider Temple Ruins", "Fey Wood", "Monster Lair"]
+
+[[provinces]]
+name = "Ghoried"
+realm = "Roesone"
+level = 2
+terrain = "hills"
+coastal = false
+source_potential = 8
+loyalty = "neutral"
+
+[provinces.holdings]
+law = [
+    { holder = "Baroness Roesone", level = 1 },
+    { holder = "The Spider", level = 1 }
+]
+temple = [
+    { holder = "Haelyn's Aegis", level = 1 }
+]
+guild = [
+    { holder = "Siele Ghoried", level = 1 }
+]
+source = [
+    { holder = "Aerele", level = 6 },
+    { holder = "The Spider", level = 2 }
+]
+
+[provinces.features]
+description = "Contested border province. The Spider still holds influence here."
+landmarks = ["Border Fort", "Contested Bridge"]
+adventure_sites = ["Spider Spy Network", "Goblin Raider Camp", "Hidden Pass"]
+
+# =============================================================================
+# ENDIER - The Free City
+# =============================================================================
+# Ruled by Guilder Kalien, the only true merchant prince
+# No noble blood, rules through commerce and cunning
+# =============================================================================
+
+[[provinces]]
+name = "Endier"
+realm = "Endier"
+level = 7
+terrain = "plains"
+coastal = false
+source_potential = 3
+loyalty = "mercantile"
+
+[provinces.holdings]
+law = [
+    { holder = "Guilder Kalien", level = 4 }
+]
+temple = [
+    { holder = "Western Imperial Temple", level = 3 },
+    { holder = "Haelyn's Aegis", level = 2 },
+    { holder = "Sarimie's Fortune", level = 2 }
+]
+guild = [
+    { holder = "Endier Guilds (Kalien)", level = 7 }
+]
+source = [
+    { holder = "Bannier Andien", level = 3 }
+]
+
+[provinces.features]
+description = "The greatest trading hub in Anuire. Caravans and merchants from across Cerilia meet here."
+landmarks = ["Grand Exchange", "Merchant's Quarter", "Kalien's Tower", "Caravan Grounds"]
+adventure_sites = ["Thieves' Guild", "Smuggler's Warehouse", "Underground Market", "Spy Network"]
+
+# =============================================================================
+# ADDITIONAL MAJOR REALMS - Brief Coverage
+# =============================================================================
+
+# DIEMED - The Pretender
+[[provinces]]
+name = "Aerele"
+realm = "Diemed"
+level = 5
+terrain = "plains"
+coastal = true
+source_potential = 5
+loyalty = "high"
+
+[provinces.holdings]
+law = [
+    { holder = "Baron Diem", level = 4 }
+]
+temple = [
+    { holder = "Impregnable Heart of Haelyn", level = 4 }
+]
+guild = [
+    { holder = "Siele Ghoried", level = 3 }
+]
+source = [
+    { holder = "Court Wizard of Diemed", level = 5 }
+]
+
+[provinces.features]
+description = "Capital of Diemed, ancient claimant to the Iron Throne through the Diems."
+landmarks = ["Castle Diem", "Temple of Haelyn", "Harbor"]
+adventure_sites = ["Old Imperial Records", "Secret Passage", "Pretender's Vault"]
+
+[[provinces]]
+name = "Ciliene"
+realm = "Diemed"
+level = 4
+terrain = "plains"
+coastal = true
+source_potential = 6
+loyalty = "loyal"
+
+[provinces.holdings]
+law = [
+    { holder = "Baron Diem", level = 3 }
+]
+temple = [
+    { holder = "Impregnable Heart of Haelyn", level = 3 }
+]
+guild = [
+    { holder = "Siele Ghoried", level = 2 }
+]
+source = [
+    { holder = "Court Wizard of Diemed", level = 6 }
+]
+
+[provinces.features]
+description = "Secondary port of Diemed, trade with the southern coast."
+landmarks = ["Port Authority", "Lighthouse"]
+adventure_sites = ["Pirate Contact", "Sunken Temple", "Merchant Conspiracy"]
+
+# MEDOERE - The Theocracy
+[[provinces]]
+name = "Braeme"
+realm = "Medoere"
+level = 3
+terrain = "plains"
+coastal = true
+source_potential = 7
+loyalty = "devout"
+
+[provinces.holdings]
+law = [
+    { holder = "Archpriest of Ruornil", level = 2 }
+]
+temple = [
+    { holder = "Celestial Jewel of Sarimie", level = 3 }
+]
+guild = [
+    { holder = "Endier Guilds (Kalien)", level = 2 }
+]
+source = [
+    { holder = "College of Sorcery", level = 7 }
+]
+
+[provinces.features]
+description = "Temple-ruled province, the faithful of Ruornil hold sway here."
+landmarks = ["Temple of the Silver Moon", "Library of Mysteries"]
+adventure_sites = ["Hidden Observatory", "Portal Site", "Heretic's Hideout"]
+
+# TALINIE - The Northern Guardian
+[[provinces]]
+name = "Greensward"
+realm = "Talinie"
+level = 4
+terrain = "plains"
+coastal = true
+source_potential = 6
+loyalty = "high"
+
+[provinces.holdings]
+law = [
+    { holder = "Thane of Talinie", level = 3 }
+]
+temple = [
+    { holder = "Northern Reformed Church of Haelyn", level = 4 }
+]
+guild = [
+    { holder = "Northern Exchange", level = 3 }
+]
+source = [
+    { holder = "Wizard of Talinie", level = 6 }
+]
+
+[provinces.features]
+description = "Capital of Talinie, gateway to the northern lands. Strong naval tradition."
+landmarks = ["Thane's Hall", "Northern Cathedral", "Shipyards"]
+adventure_sites = ["Rjurik Trader's Quarter", "Northern Smugglers", "Sea Monster Sightings"]
+
+# ELINIE - The Buffer State
+[[provinces]]
+name = "Elinie"
+realm = "Elinie"
+level = 4
+terrain = "plains"
+coastal = false
+source_potential = 6
+loyalty = "loyal"
+
+[provinces.holdings]
+law = [
+    { holder = "Count of Elinie", level = 3 }
+]
+temple = [
+    { holder = "Eastern Temple of Nesirie", level = 3 }
+]
+guild = [
+    { holder = "Elinie Traders", level = 3 }
+]
+source = [
+    { holder = "Court Mage", level = 6 }
+]
+
+[provinces.features]
+description = "Buffer state between major powers. Survives through diplomacy."
+landmarks = ["Castle Elinie", "Temple of Peace"]
+adventure_sites = ["Spy Crossroads", "Neutral Meeting Ground", "Hidden Allegiance"]
+
+# ALAMIE - The Forgotten
+[[provinces]]
+name = "Sorelies"
+realm = "Alamie"
+level = 3
+terrain = "forest"
+coastal = false
+source_potential = 7
+loyalty = "mixed"
+
+[provinces.holdings]
+law = [
+    { holder = "Duke of Alamie", level = 2 }
+]
+temple = [
+    { holder = "Western Imperial Temple", level = 2 }
+]
+guild = [
+    { holder = "Mheillie Bireon", level = 2 }
+]
+source = [
+    { holder = "Wizard of Alamie", level = 7 }
+]
+
+[provinces.features]
+description = "Capital of the diminished duchy. Once greater, now struggles to survive."
+landmarks = ["Crumbling Castle", "Old Imperial Road"]
+adventure_sites = ["Abandoned Manor", "Forest Outlaws", "Lost Treasure"]
+
+# =============================================================================
+# SPECIAL TERRITORIES
+# =============================================================================
+
+# THE GORGON'S CROWN (Enemy Territory)
+[[provinces]]
+name = "Kal-Saitharak"
+realm = "Gorgon's Crown"
+level = 6
+terrain = "mountains"
+coastal = false
+source_potential = 4
+loyalty = "enslaved"
+
+[provinces.holdings]
+law = [
+    { holder = "The Gorgon", level = 6 }
+]
+temple = [
+    { holder = "Temple of Azrai", level = 6 }
+]
+guild = []
+source = [
+    { holder = "The Gorgon", level = 4 }
+]
+
+[provinces.features]
+description = "The Gorgon's fortress. Ancient evil dwells here, plotting the conquest of Anuire."
+landmarks = ["Kal-Saitharak (The Fortress)", "Altar of Azrai", "Petrified Garden"]
+adventure_sites = ["Slave Pits", "Ancient Weapon Vault", "Portal to Shadow"]
+
+# SPIDERFELL (Monster Realm)
+[[provinces]]
+name = "Spiderfell"
+realm = "The Spider"
+level = 2
+terrain = "forest"
+coastal = false
+source_potential = 8
+loyalty = "terror"
+
+[provinces.holdings]
+law = [
+    { holder = "The Spider", level = 2 }
+]
+temple = [
+    { holder = "Spider Cult", level = 2 }
+]
+guild = []
+source = [
+    { holder = "The Spider", level = 8 }
+]
+
+[provinces.features]
+description = "Nightmare forest realm of the awnshegh known as the Spider. Web-choked and crawling with monstrous spiders."
+landmarks = ["The Great Web", "Spider's Throne"]
+adventure_sites = ["Cocoon Prisons", "Spider Hatchery", "Lost Expedition"]
+
+# =============================================================================
+# PROVINCE LOOKUP TABLES
+# =============================================================================
+
+[realm_summary]
+Avanil = { provinces = 5, total_level = 26, regent = "Prince Darien Avan", claim = "Marriage to Roele line" }
+Boeruine = { provinces = 5, total_level = 19, regent = "Archduke Aeric Boeruine", claim = "Ancient lineage and military might" }
+Ghoere = { provinces = 5, total_level = 19, regent = "Baron Gavin Tael", claim = "Conquest and power" }
+Mhoried = { provinces = 5, total_level = 18, regent = "The Mhor", claim = "Imperial loyalty and sacrifice" }
+Roesone = { provinces = 5, total_level = 14, regent = "Baroness Marlae Roesone", claim = "Black Baron's legacy" }
+Endier = { provinces = 1, total_level = 7, regent = "Guilder Kalien", claim = "None - merchant rule" }
+
+[terrain_modifiers]
+plains = { movement = 1.0, defense = 0, supply = 1.0 }
+hills = { movement = 0.75, defense = 1, supply = 0.8 }
+mountains = { movement = 0.5, defense = 2, supply = 0.5 }
+forest = { movement = 0.6, defense = 1, supply = 0.7 }
+
+[loyalty_levels]
+high = { tax_modifier = 1.0, rebellion_chance = 0.0, recruitment = 1.0 }
+loyal = { tax_modifier = 0.9, rebellion_chance = 0.05, recruitment = 0.9 }
+neutral = { tax_modifier = 0.75, rebellion_chance = 0.1, recruitment = 0.75 }
+oppressed = { tax_modifier = 0.5, rebellion_chance = 0.25, recruitment = 0.5 }
+mercantile = { tax_modifier = 1.2, rebellion_chance = 0.05, recruitment = 0.6 }
+devout = { tax_modifier = 0.8, rebellion_chance = 0.0, recruitment = 0.8 }
+enslaved = { tax_modifier = 0.3, rebellion_chance = 0.4, recruitment = 1.5 }
+terror = { tax_modifier = 0.0, rebellion_chance = 0.0, recruitment = 0.0 }

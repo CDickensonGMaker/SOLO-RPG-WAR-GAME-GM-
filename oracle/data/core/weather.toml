@@ -1,0 +1,234 @@
+# Dynamic Weather Conditions
+# Universal weather system for any setting - fantasy, sci-fi, modern, historical
+# 150+ entries across categories for environmental storytelling
+
+# =============================================================================
+# CLEAR CONDITIONS (25 entries)
+# =============================================================================
+[clear]
+entries = [
+  { text = "Bright sunshine, excellent visibility in all directions", weight = 3 },
+  { text = "Partly cloudy, pleasant temperature with occasional shade", weight = 3 },
+  { text = "Clear skies, unusually hot - heat waves shimmer on the horizon", weight = 1 },
+  { text = "Clear but bitterly cold - breath visible, exposed skin stings", weight = 1 },
+  { text = "Perfect weather - suspiciously so, an ominous calm", weight = 1 },
+  { text = "Cloudless azure sky, gentle warmth - ideal conditions", weight = 2 },
+  { text = "High thin clouds, bright but not harsh sunlight", weight = 2 },
+  { text = "Crystal clear air, can see for miles - no place to hide", weight = 1 },
+  { text = "Warm and humid, sweat beads on exposed skin", weight = 2 },
+  { text = "Cool and crisp, invigorating air fills the lungs", weight = 2 },
+  { text = "Scattered clouds casting moving shadows across the terrain", weight = 2 },
+  { text = "Hazy sunshine, comfortable but visibility slightly reduced", weight = 2 },
+  { text = "Oppressive heat, even in shade - movement is exhausting", weight = 1 },
+  { text = "Bone-dry air, lips crack and throat parches quickly", weight = 1 },
+  { text = "Still and silent, not even a breeze - sounds carry far", weight = 1 },
+  { text = "Clear skies but unusual color - atmospheric disturbance", weight = 1 },
+  { text = "Painfully bright, squinting required without eye protection", weight = 1 },
+  { text = "Mild overcast, diffuse light with no harsh shadows", weight = 2 },
+  { text = "Unseasonably warm for this time of year", weight = 1 },
+  { text = "Unseasonably cold despite clear skies", weight = 1 },
+  { text = "High pressure system, stable conditions expected for hours", weight = 2 },
+  { text = "Beautiful day masking recent devastation in the area", weight = 1 },
+  { text = "Dry heat, bearable in shade but brutal in direct sun", weight = 1 },
+  { text = "Muggy and close, storm likely brewing despite clear sky", weight = 1 },
+  { text = "Picture-perfect weather, locals say it means trouble coming", weight = 1 }
+]
+
+# =============================================================================
+# PRECIPITATION (35 entries)
+# =============================================================================
+[precipitation]
+entries = [
+  { text = "Light drizzle, steady and soaking - visibility moderately reduced", weight = 2 },
+  { text = "Heavy rain, difficult terrain, sound masked by downpour", weight = 2 },
+  { text = "Thunderstorm with lightning - exposed positions dangerous", weight = 1 },
+  { text = "Freezing rain, treacherous footing on all surfaces", weight = 1 },
+  { text = "Torrential downpour, flash flood risk in low areas", weight = 1 },
+  { text = "Light snow, peaceful and muffling - tracks visible", weight = 2 },
+  { text = "Heavy blizzard, near-zero visibility, hypothermia risk", weight = 1 },
+  { text = "Sleet, miserable conditions - cold and wet combined", weight = 1 },
+  { text = "Hail, seek cover immediately - injury risk from stones", weight = 1 },
+  { text = "Gentle rain, refreshing but persistent", weight = 2 },
+  { text = "Driving rain, stings exposed skin, limits visibility", weight = 1 },
+  { text = "Intermittent showers, periods of rain alternating with breaks", weight = 2 },
+  { text = "Monsoon-like deluge, overwhelming drainage systems", weight = 1 },
+  { text = "Cold rain, chilling to the bone within minutes", weight = 1 },
+  { text = "Warm tropical rain, heavy but not unpleasant", weight = 1 },
+  { text = "Scattered thunderstorms, dangerous and unpredictable", weight = 1 },
+  { text = "Snow flurries, light accumulation, visibility fair", weight = 2 },
+  { text = "Wet snow, heavy and clinging to everything", weight = 1 },
+  { text = "Ice storm, coating everything in treacherous glaze", weight = 1 },
+  { text = "Acid rain, stinging sensation, corrosive to materials", weight = 1 },
+  { text = "Black rain, contaminated precipitation from unknown source", weight = 1 },
+  { text = "Rain turning to snow as temperature drops", weight = 1 },
+  { text = "Snow turning to rain as temperature rises - slush everywhere", weight = 1 },
+  { text = "Mist rain, so fine it seems to hang in the air", weight = 2 },
+  { text = "Sudden cloudburst, intense but brief", weight = 1 },
+  { text = "Steady soaking rain, puddles forming rapidly", weight = 2 },
+  { text = "Lightning storm without rain - dry thunder, fire risk", weight = 1 },
+  { text = "Graupel - soft hail that accumulates like snow", weight = 1 },
+  { text = "Freezing fog, ice forming on all cold surfaces", weight = 1 },
+  { text = "Rain with embedded thunderstorms passing through", weight = 1 },
+  { text = "Persistent drizzle, light but ceaseless for hours", weight = 2 },
+  { text = "Winter mix - rain, sleet, snow alternating chaotically", weight = 1 },
+  { text = "Post-storm clearing, everything soaked and dripping", weight = 2 },
+  { text = "Precipitation tapering off, final drops falling", weight = 2 },
+  { text = "Unusual colored rain - chemical or supernatural origin", weight = 1 }
+]
+
+# =============================================================================
+# ATMOSPHERIC CONDITIONS (25 entries)
+# =============================================================================
+[atmospheric]
+entries = [
+  { text = "Dense fog, visibility under 50 feet - navigation hazardous", weight = 1 },
+  { text = "Light mist, ethereal atmosphere, sound dampened", weight = 2 },
+  { text = "Dust storm, choking conditions - respiratory protection needed", weight = 1 },
+  { text = "Sandstorm, skin-scouring winds - seek shelter immediately", weight = 1 },
+  { text = "Smoke from distant fires, air quality poor", weight = 1 },
+  { text = "Unusual haze, source unknown - visibility affected", weight = 1 },
+  { text = "Aurora or strange lights in the sky - unnatural phenomenon", weight = 1 },
+  { text = "Ground fog, waist-deep mist obscuring lower terrain", weight = 1 },
+  { text = "Rolling fog banks, visibility changing moment to moment", weight = 1 },
+  { text = "Sea fog, thick and cold, carries the smell of salt", weight = 1 },
+  { text = "Volcanic haze, sulfurous smell, irritates eyes and throat", weight = 1 },
+  { text = "Industrial smog, acrid taste, reduced visibility", weight = 1 },
+  { text = "Pollen thick in the air, visibility hazy, allergies triggered", weight = 1 },
+  { text = "Ash falling like snow from distant conflagration", weight = 1 },
+  { text = "Morning mist burning off, visibility improving", weight = 2 },
+  { text = "Evening fog rolling in, visibility deteriorating", weight = 2 },
+  { text = "Patchy fog, some areas clear, others blind", weight = 1 },
+  { text = "Steam rising from hot springs or geothermal vents", weight = 1 },
+  { text = "Mirage conditions, distant objects distorted", weight = 1 },
+  { text = "Particulate haze from recent explosion or collapse", weight = 1 },
+  { text = "Supernatural darkness, deeper than natural night", weight = 1 },
+  { text = "Strange luminescence in the air, no apparent source", weight = 1 },
+  { text = "Low clouds touching ground, indistinguishable from fog", weight = 1 },
+  { text = "Air shimmering with heat distortion", weight = 1 },
+  { text = "Unnatural stillness in the atmosphere, pressure building", weight = 1 }
+]
+
+# =============================================================================
+# WIND CONDITIONS (20 entries)
+# =============================================================================
+[wind]
+entries = [
+  { text = "Dead calm, oppressive stillness - smoke rises straight up", weight = 1 },
+  { text = "Light breeze, pleasant and cooling", weight = 3 },
+  { text = "Moderate wind, flags flutter, loose items shift", weight = 2 },
+  { text = "Strong gusts, affects ranged accuracy and balance", weight = 1 },
+  { text = "Gale force winds, movement difficult, flying debris", weight = 1 },
+  { text = "Hurricane or tornado conditions - shelter critical", weight = 1 },
+  { text = "Biting cold wind, wind chill dangerous", weight = 1 },
+  { text = "Hot dry wind, dehydrating and uncomfortable", weight = 1 },
+  { text = "Variable gusting, unpredictable wind direction", weight = 1 },
+  { text = "Steady headwind, slowing progress", weight = 1 },
+  { text = "Favorable tailwind, aiding movement", weight = 1 },
+  { text = "Crosswind, affecting trajectories and balance", weight = 1 },
+  { text = "Whirlwind or dust devil in the area", weight = 1 },
+  { text = "Swirling winds, no consistent direction", weight = 1 },
+  { text = "Wind picking up, conditions worsening", weight = 2 },
+  { text = "Wind dying down, conditions improving", weight = 2 },
+  { text = "Howling wind, making communication difficult", weight = 1 },
+  { text = "Whistling wind through terrain features, eerie sound", weight = 1 },
+  { text = "Updraft near cliffs or thermal sources", weight = 1 },
+  { text = "Downdraft pushing downward, affects flight and jumping", weight = 1 }
+]
+
+# =============================================================================
+# WEATHER CHANGES AND TRANSITIONS (20 entries)
+# =============================================================================
+[weather_changes]
+entries = [
+  { text = "Weather worsening rapidly, conditions deteriorating by the hour", weight = 2 },
+  { text = "Storm approaching, visible on horizon - hours away", weight = 2 },
+  { text = "Conditions improving, sky brightening", weight = 2 },
+  { text = "Sudden dramatic shift, weather changing without warning", weight = 1 },
+  { text = "Unseasonable conditions, locals are concerned", weight = 1 },
+  { text = "Weather front moving through, expect rapid changes", weight = 1 },
+  { text = "Eye of the storm - brief calm before conditions worsen again", weight = 1 },
+  { text = "Storm passing, worst is over but still rough", weight = 2 },
+  { text = "Temperature dropping rapidly, frost forming", weight = 1 },
+  { text = "Temperature rising quickly, uncomfortable heat building", weight = 1 },
+  { text = "Barometric pressure dropping, storm coming", weight = 1 },
+  { text = "Pressure rising, fair weather approaching", weight = 1 },
+  { text = "Conditions stable, expect same weather for extended period", weight = 2 },
+  { text = "Clearing after storm, damage assessment possible", weight = 2 },
+  { text = "Weather pattern stuck, same conditions persist abnormally long", weight = 1 },
+  { text = "Freak weather event, completely unexpected for region", weight = 1 },
+  { text = "Seasonal transition, weather unpredictable", weight = 1 },
+  { text = "Brief break in weather, window of opportunity", weight = 1 },
+  { text = "Multiple weather systems colliding, chaotic conditions", weight = 1 },
+  { text = "Artificial weather manipulation evident - unnatural patterns", weight = 1 }
+]
+
+# =============================================================================
+# TIME OF DAY (20 entries)
+# =============================================================================
+[time_of_day]
+entries = [
+  { text = "Pre-dawn darkness, first hints of light on horizon", weight = 1 },
+  { text = "Dawn - golden light, long shadows stretching westward", weight = 1 },
+  { text = "Early morning - dew on surfaces, world awakening", weight = 1 },
+  { text = "Morning - activity picking up, good visibility", weight = 2 },
+  { text = "Late morning - sun gaining strength, shadows shortening", weight = 1 },
+  { text = "Midday - sun at zenith, minimal shadows, peak heat", weight = 1 },
+  { text = "Early afternoon - heat of the day, activity slowing", weight = 1 },
+  { text = "Afternoon - sun descending, shadows lengthening eastward", weight = 1 },
+  { text = "Late afternoon - golden hour approaching, warm light", weight = 1 },
+  { text = "Dusk - fading light, visibility decreasing", weight = 1 },
+  { text = "Twilight - neither day nor night, deep blue sky", weight = 1 },
+  { text = "Evening - darkness settling, artificial lights appear", weight = 1 },
+  { text = "Night - full darkness, stars visible if clear", weight = 2 },
+  { text = "Late night - minimal activity, world asleep", weight = 1 },
+  { text = "Witching hour - deepest night, strange things stir", weight = 1 },
+  { text = "False dawn - brief lightening before true sunrise", weight = 1 },
+  { text = "Solar eclipse - unnatural darkness at midday", weight = 1 },
+  { text = "Moonrise - silver light adding to scene", weight = 1 },
+  { text = "Full moon night - bright enough to see clearly", weight = 1 },
+  { text = "New moon night - complete darkness without artificial light", weight = 1 }
+]
+
+# =============================================================================
+# LUNAR AND CELESTIAL (15 entries)
+# =============================================================================
+[celestial]
+entries = [
+  { text = "Full moon - bright silver light, enhanced visibility at night", weight = 1 },
+  { text = "New moon - darkest night, stars brilliant if clear", weight = 1 },
+  { text = "Waxing moon - growing illumination each night", weight = 2 },
+  { text = "Waning moon - fading illumination each night", weight = 2 },
+  { text = "Blood moon - lunar eclipse casting red light", weight = 1 },
+  { text = "Double moon or unusual celestial bodies visible", weight = 1 },
+  { text = "Meteor shower - streaks of light across the sky", weight = 1 },
+  { text = "Comet visible - ill omen to the superstitious", weight = 1 },
+  { text = "Planetary alignment - multiple bodies visible", weight = 1 },
+  { text = "Star particularly bright tonight - navigation aid", weight = 1 },
+  { text = "Overcast hiding all celestial bodies", weight = 2 },
+  { text = "Ring of light around moon - weather changing", weight = 1 },
+  { text = "Shooting star - make a wish, or a warning", weight = 1 },
+  { text = "Strange lights in sky - natural or artificial unknown", weight = 1 },
+  { text = "Celestial event causing unusual tides or behavior", weight = 1 }
+]
+
+# =============================================================================
+# SEASONAL MODIFIERS (15 entries)
+# =============================================================================
+[seasonal]
+entries = [
+  { text = "Deep winter - short days, long freezing nights", weight = 1 },
+  { text = "Late winter - thaw beginning, mud everywhere", weight = 1 },
+  { text = "Early spring - unpredictable, warm then cold", weight = 1 },
+  { text = "Spring - mild temperatures, frequent rain", weight = 2 },
+  { text = "Late spring - warming rapidly, vegetation bursting", weight = 1 },
+  { text = "Early summer - pleasant warmth, long days", weight = 2 },
+  { text = "Midsummer - peak heat, oppressive afternoons", weight = 1 },
+  { text = "Late summer - heat breaking, harvest time", weight = 1 },
+  { text = "Early autumn - cooling, leaves changing", weight = 2 },
+  { text = "Autumn - crisp air, dramatic weather possible", weight = 1 },
+  { text = "Late autumn - bare trees, winter approaching", weight = 1 },
+  { text = "Early winter - first frosts, short days", weight = 1 },
+  { text = "Dry season - parched earth, fire risk high", weight = 1 },
+  { text = "Wet season - daily rains, flooding possible", weight = 1 },
+  { text = "Monsoon season - torrential daily rains", weight = 1 }
+]

@@ -1,0 +1,75 @@
+# Trench and Battlefield Locations - Weird War Setting
+# WWI/WWII trench warfare locations with supernatural elements
+
+[trenches]
+entries = [
+  # Standard Trench Positions
+  { text = "Fire step position, worn smooth by countless boots", weight = 1 },
+  { text = "Communication trench, zigzagging toward the rear", weight = 1 },
+  { text = "Support trench, filled with reserves awaiting their turn", weight = 1 },
+  { text = "Reserve trench, the last line before retreat", weight = 1 },
+  { text = "Sap extending into No Man's Land, vulnerable and exposed", weight = 1 },
+  { text = "Listening post, an isolated pocket of dread", weight = 1 },
+  { text = "Machine gun nest, commanding a field of death", weight = 1 },
+  { text = "Command dugout, buried deep beneath the lines", weight = 1 },
+  { text = "Trench junction, where three passages meet in confusion", weight = 1 },
+  { text = "Sniper position, camouflaged among the sandbags", weight = 1 },
+
+  # Bunkers and Fortifications
+  { text = "Concrete pillbox, bullet-scarred and stinking of cordite", weight = 1 },
+  { text = "Underground bunker, walls weeping with moisture", weight = 1 },
+  { text = "Artillery observation post, exposed on a slight rise", weight = 1 },
+  { text = "Ammunition storage dugout, sweating explosives", weight = 1 },
+  { text = "Command post bunker, maps covering every surface", weight = 1 },
+  { text = "Medical dugout, floor perpetually slick with blood", weight = 1 },
+  { text = "Collapsed bunker, half-buried but possibly passable", weight = 1 },
+  { text = "Reinforced strongpoint, the anchor of the defensive line", weight = 1 },
+  { text = "Anti-aircraft position, sandbags surrounding the gun", weight = 1 },
+  { text = "Forward observation bunker, windows facing enemy lines", weight = 1 },
+
+  # No Man's Land
+  { text = "Shell crater filled with stagnant, oily water", weight = 1 },
+  { text = "Barbed wire entanglement, corpses still hanging in the wire", weight = 1 },
+  { text = "Abandoned tank, rusted hulk providing meager cover", weight = 1 },
+  { text = "Blasted tree stumps, the skeleton of a forest", weight = 1 },
+  { text = "Minefield, marked only by the craters of previous victims", weight = 1 },
+  { text = "Gas-contaminated hollow, yellow residue coating everything", weight = 1 },
+  { text = "Mass grave, hastily covered between offensives", weight = 1 },
+  { text = "Impact crater from a siege gun, deep enough to hide a squad", weight = 1 },
+  { text = "Destroyed church spire, fallen across the battlefield", weight = 1 },
+  { text = "Mudflat of churned earth, swallowing men and machines alike", weight = 1 },
+
+  # Underground
+  { text = "Mining tunnel, shored with rotting timber", weight = 1 },
+  { text = "Sewer junction beneath a destroyed town", weight = 1 },
+  { text = "Natural cave system accessed through shell damage", weight = 1 },
+  { text = "Catacomb entrance, bones visible in the walls", weight = 1 },
+  { text = "Flooded underground passage, water up to the chest", weight = 1 },
+  { text = "Collapsed tunnel section, bodies still trapped within", weight = 1 },
+  { text = "Enemy counter-tunnel, evidence of recent activity", weight = 1 },
+  { text = "Underground river channel, flowing with dark water", weight = 1 },
+  { text = "Chamber containing pre-war construction, its purpose unclear", weight = 1 },
+  { text = "Root cellar expanded into a hidden network", weight = 1 },
+
+  # Supernatural Locations
+  { text = "Trench section where voices whisper from the walls", weight = 1 },
+  { text = "Crater where the sky looks wrong after dark", weight = 1 },
+  { text = "Bunker that appears on no maps but everyone avoids", weight = 1 },
+  { text = "No Man's Land position where compasses spin uselessly", weight = 1 },
+  { text = "Dugout that goes deeper than it should, far deeper", weight = 1 },
+  { text = "Mass grave where the earth still moves at night", weight = 1 },
+  { text = "Artillery impact site with a hole that doesn't end", weight = 1 },
+  { text = "Trench section that was sanctified, now corrupted", weight = 1 },
+  { text = "Underground chamber with walls covered in strange symbols", weight = 1 },
+  { text = "Crater ringed with glass from intense heat, but no fire", weight = 1 },
+  { text = "Listening post where you hear things that cannot be", weight = 1 },
+  { text = "Tunnel that connects to places that shouldn't exist", weight = 1 },
+  { text = "Position where the dead from both sides rose together", weight = 1 },
+  { text = "Sniper nest where the previous occupant still watches", weight = 1 },
+  { text = "Command bunker sealed since the incident, guards refusing orders to open it", weight = 1 },
+  { text = "Trench line that appears at dawn and vanishes at dusk", weight = 1 },
+  { text = "Shell crater that whispers the names of those who will die tomorrow", weight = 1 },
+  { text = "Underground temple, ancient and hungry, revealed by shelling", weight = 1 },
+  { text = "No Man's Land path that the entities won't cross, for some reason", weight = 1 },
+  { text = "Medical dugout where the wounded heal too fast and wrong", weight = 1 },
+]

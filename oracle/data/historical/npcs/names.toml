@@ -1,0 +1,109 @@
+# Historical Names
+# 150+ names spanning Medieval, Renaissance, Colonial, Victorian, and WWII eras
+# Includes European, American, and period-appropriate international names
+
+[names]
+
+# Medieval Era (English, French, German, Italian)
+medieval = [
+  "William", "Robert", "Richard", "Henry", "Edward",
+  "Thomas", "John", "Geoffrey", "Roger", "Hugh",
+  "Eleanor", "Matilda", "Isabella", "Margaret", "Joan",
+  "Guillaume", "Philippe", "Louis", "Charles", "Jacques",
+  "Marguerite", "Blanche", "Jeanne", "Marie", "Catherine",
+  "Heinrich", "Friedrich", "Konrad", "Otto", "Ludwig",
+  "Hildegard", "Gertrude", "Brunhilde", "Adelheid", "Agnes",
+  "Giovanni", "Marco", "Lorenzo", "Francesco", "Antonio",
+  "Lucrezia", "Bianca", "Caterina", "Francesca", "Giulia"
+]
+
+# Renaissance Era (Italian, Spanish, English, French)
+renaissance = [
+  "Leonardo", "Michelangelo", "Raphael", "Nicolo", "Cesare",
+  "Ludovico", "Alessandro", "Cosimo", "Piero", "Gian",
+  "Isabella", "Beatrice", "Vittoria", "Sofonisba", "Artemisia",
+  "Fernando", "Alfonso", "Diego", "Hernan", "Gonzalo",
+  "Catalina", "Leonor", "Juana", "Ines", "Beatriz",
+  "Francis", "Thomas", "Walter", "Edmund", "Philip",
+  "Elizabeth", "Mary", "Anne", "Katherine", "Jane",
+  "Francois", "Henri", "Claude", "Antoine", "Gaspard",
+  "Diane", "Margot", "Louise", "Charlotte", "Gabrielle"
+]
+
+# Colonial Era (English, French, Dutch, Spanish colonial)
+colonial = [
+  "Nathaniel", "Ezekiel", "Josiah", "Ebenezer", "Cornelius",
+  "Samuel", "Benjamin", "Jeremiah", "Increase", "Cotton",
+  "Prudence", "Mercy", "Patience", "Charity", "Hope",
+  "Abigail", "Susannah", "Rebecca", "Sarah", "Hannah",
+  "Pierre", "Jean-Baptiste", "Antoine", "Jacques", "Louis",
+  "Marie-Claire", "Marguerite", "Genevieve", "Therese", "Anne-Marie",
+  "Willem", "Pieter", "Hendrick", "Jan", "Dirk",
+  "Katrina", "Anneke", "Margaretha", "Cornelia", "Aeltje",
+  "Rodrigo", "Alonso", "Bartolome", "Cristobal", "Pedro"
+]
+
+# Victorian Era (British, American, European)
+victorian = [
+  "Albert", "Alfred", "Arthur", "Charles", "Edmund",
+  "Frederick", "George", "Herbert", "James", "Reginald",
+  "Theodore", "Walter", "Winston", "Percival", "Algernon",
+  "Victoria", "Adelaide", "Florence", "Beatrice", "Constance",
+  "Edith", "Harriet", "Mabel", "Millicent", "Prudence",
+  "Augustus", "Bartholomew", "Clarence", "Horace", "Mortimer",
+  "Wilhelm", "Franz", "Gustav", "Rudolf", "Maximilian",
+  "Eugenie", "Josephine", "Mathilde", "Wilhelmina", "Olga",
+  "Silas", "Elijah", "Abraham", "Ulysses", "Rutherford"
+]
+
+# World War Era (British, American, German, French, Russian)
+world_war = [
+  "William", "James", "Robert", "John", "George",
+  "Henry", "Edward", "Thomas", "Jack", "Harold",
+  "Frank", "Walter", "Albert", "Charlie", "Frederick",
+  "Dorothy", "Gladys", "Vera", "Edna", "Mildred",
+  "Hans", "Fritz", "Klaus", "Werner", "Helmut",
+  "Karl", "Heinrich", "Erich", "Otto", "Wolfgang",
+  "Helga", "Greta", "Ingrid", "Liesel", "Frieda",
+  "Pierre", "Jean", "Marcel", "Henri", "Georges",
+  "Colette", "Simone", "Madeleine", "Yvonne", "Renee",
+  "Ivan", "Sergei", "Nikolai", "Dmitri", "Alexei",
+  "Natasha", "Katya", "Olga", "Irina", "Ludmila"
+]
+
+# Surnames by Era/Region
+surnames_medieval = [
+  "de Montfort", "Plantagenet", "de Beaumont", "FitzWilliam", "de Clare",
+  "Lancaster", "York", "Neville", "Percy", "Stafford",
+  "de Medici", "Sforza", "Borgia", "Visconti", "Este",
+  "von Habsburg", "von Hohenstaufen", "von Bayern", "von Sachsen", "von Brandenburg"
+]
+
+surnames_renaissance = [
+  "Machiavelli", "Verrocchio", "Botticelli", "Ghirlandaio", "Perugino",
+  "Cortes", "Pizarro", "de Soto", "Coronado", "Balboa",
+  "More", "Wolsey", "Cromwell", "Boleyn", "Howard",
+  "de Valois", "de Guise", "de Bourbon", "de Lorraine", "de Montmorency"
+]
+
+surnames_colonial = [
+  "Adams", "Hancock", "Revere", "Warren", "Putnam",
+  "Standish", "Bradford", "Winthrop", "Mather", "Cotton",
+  "de Champlain", "de Frontenac", "de La Salle", "Marquette", "Joliet",
+  "van Rensselaer", "Stuyvesant", "Minuit", "de Vries", "Kieft"
+]
+
+surnames_victorian = [
+  "Gladstone", "Disraeli", "Palmerston", "Wellington", "Nightingale",
+  "Brunel", "Darwin", "Dickens", "Tennyson", "Livingstone",
+  "Bismarck", "von Moltke", "Krupp", "Siemens", "Humboldt",
+  "Carnegie", "Rockefeller", "Morgan", "Vanderbilt", "Astor"
+]
+
+surnames_world_war = [
+  "Smith", "Johnson", "Williams", "Brown", "Jones",
+  "Davis", "Miller", "Wilson", "Moore", "Taylor",
+  "Mueller", "Schmidt", "Schneider", "Fischer", "Weber",
+  "Dubois", "Martin", "Bernard", "Moreau", "Laurent",
+  "Petrov", "Volkov", "Sokolov", "Kuznetsov", "Popov"
+]

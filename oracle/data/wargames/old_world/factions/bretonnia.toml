@@ -1,0 +1,689 @@
+# Warhammer: The Old World - Bretonnia
+# The chivalric realm of knights and the Lady of the Lake
+
+[faction]
+name = "Bretonnia"
+description = "A feudal kingdom of knights sworn to the Lady of the Lake. Bretonnian armies are built around devastating cavalry charges and the blessing of their goddess"
+playstyle = "Heavy cavalry focus with peasant support. Devastating lance formations"
+strengths = ["Best cavalry in the game", "Blessing of the Lady (ward saves)", "Multiple lances per army", "Devastating Charge"]
+weaknesses = ["Weak infantry", "Limited shooting", "No war machines", "Reliant on the charge"]
+lore_notes = "Bretonnia is a land of noble knights and downtrodden peasants, where chivalric ideals mask feudal oppression. Knights seek the Grail to become immortal Grail Knights"
+
+# =============================================================================
+# LORDS
+# =============================================================================
+
+[[units]]
+name = "Bretonnian Lord"
+type = "character"
+category = "Lords"
+points = 110
+models = "1"
+tactical_role = "combat_commander"
+threat_level = "very_high"
+preferred_targets = ["enemy_characters", "monsters"]
+weaknesses = ["mass_infantry", "war_machines"]
+special_rules = ["The Knight's Vow", "Blessing of the Lady", "Lance Formation"]
+keywords = ["Character", "Cavalry", "Bretonnia", "Lord", "Knight"]
+equipment = ["Lance", "Hand weapon", "Heavy armor", "Shield", "Barded Warhorse"]
+options = ["May take Virtue of Knighthood", "May take magic items up to 100 points", "May take Pegasus (+50 pts) or Royal Pegasus (+65 pts)", "May take Hippogryph (+200 pts)"]
+
+[units.stats]
+M = 4
+WS = 6
+BS = 3
+S = 4
+T = 4
+W = 3
+I = 6
+A = 4
+Ld = 9
+Sv = "2+"
+
+[units.mount]
+name = "Barded Warhorse"
+M = 8
+WS = 3
+S = 3
+T = 3
+W = 1
+I = 3
+A = 1
+
+[[units]]
+name = "Prophetess of the Lady"
+type = "character"
+category = "Lords"
+points = 165
+models = "1"
+tactical_role = "magic"
+threat_level = "very_high"
+preferred_targets = ["enemy_units", "undead"]
+weaknesses = ["assassins", "anti_magic"]
+special_rules = ["Level 3 Wizard", "May upgrade to Level 4 (+35 pts)", "Blessing of the Lady"]
+keywords = ["Character", "Infantry", "Bretonnia", "Lord", "Wizard"]
+equipment = ["Hand weapon"]
+options = ["May take Lore of Life, Beasts, or Heavens", "May take mount", "May take arcane items up to 100 points"]
+
+[units.stats]
+M = 4
+WS = 3
+BS = 3
+S = 3
+T = 3
+W = 3
+I = 3
+A = 1
+Ld = 8
+Sv = "-"
+
+[[units]]
+name = "Grail Knight Lord"
+type = "character"
+category = "Lords"
+points = 175
+models = "1"
+tactical_role = "elite_combat"
+threat_level = "extreme"
+preferred_targets = ["characters", "monsters"]
+weaknesses = ["massed_attacks"]
+special_rules = ["The Grail Vow", "Blessing of the Lady", "Immune to Psychology", "Magic Resistance (2)"]
+keywords = ["Character", "Cavalry", "Bretonnia", "Lord", "Grail Knight"]
+equipment = ["Lance", "Hand weapon", "Heavy armor", "Shield", "Barded Warhorse"]
+options = ["May take Virtue of Knighthood", "May take magic items up to 100 points"]
+
+[units.stats]
+M = 4
+WS = 7
+BS = 3
+S = 4
+T = 4
+W = 3
+I = 6
+A = 4
+Ld = 9
+Sv = "2+"
+
+# =============================================================================
+# HEROES
+# =============================================================================
+
+[[units]]
+name = "Paladin"
+type = "character"
+category = "Heroes"
+points = 55
+models = "1"
+tactical_role = "support_combat"
+threat_level = "high"
+preferred_targets = ["enemy_champions"]
+weaknesses = ["powerful_characters"]
+special_rules = ["The Knight's Vow", "Blessing of the Lady", "Lance Formation"]
+keywords = ["Character", "Cavalry", "Bretonnia", "Hero", "Knight"]
+equipment = ["Lance", "Hand weapon", "Heavy armor", "Shield", "Barded Warhorse"]
+options = ["May carry Battle Standard (+25 pts)", "May take magic items up to 50 points"]
+
+[units.stats]
+M = 4
+WS = 5
+BS = 3
+S = 4
+T = 4
+W = 2
+I = 5
+A = 3
+Ld = 8
+Sv = "2+"
+
+[[units]]
+name = "Damsel of the Lady"
+type = "character"
+category = "Heroes"
+points = 65
+models = "1"
+tactical_role = "magic_support"
+threat_level = "medium"
+preferred_targets = ["enemy_units"]
+weaknesses = ["close_combat", "snipers"]
+special_rules = ["Level 1 Wizard", "May upgrade to Level 2 (+35 pts)", "Blessing of the Lady"]
+keywords = ["Character", "Infantry", "Bretonnia", "Hero", "Wizard"]
+equipment = ["Hand weapon"]
+options = ["May take Lore of Life, Beasts, or Heavens", "May take arcane items up to 50 points"]
+
+[units.stats]
+M = 4
+WS = 3
+BS = 3
+S = 3
+T = 3
+W = 2
+I = 3
+A = 1
+Ld = 7
+Sv = "-"
+
+# =============================================================================
+# CORE UNITS
+# =============================================================================
+
+[[units]]
+name = "Knights of the Realm"
+type = "cavalry"
+category = "Core"
+points = 24
+models = "8+"
+tactical_role = "shock_cavalry"
+threat_level = "very_high"
+preferred_targets = ["infantry", "war_machines"]
+weaknesses = ["pikes", "mass_shooting"]
+special_rules = ["The Knight's Vow", "Blessing of the Lady", "Lance Formation", "Devastating Charge (+1S)"]
+keywords = ["Cavalry", "Bretonnia", "Core", "Knights"]
+equipment = ["Lance", "Hand weapon", "Heavy armor", "Shield", "Barded Warhorse"]
+options = ["May add musician (+10 pts)", "May add standard bearer (+10 pts)", "May take magic standard up to 50 pts"]
+
+[units.stats]
+M = 4
+WS = 4
+BS = 3
+S = 3
+T = 3
+W = 1
+I = 3
+A = 1
+Ld = 8
+Sv = "2+"
+
+[units.mount]
+name = "Barded Warhorse"
+M = 8
+WS = 3
+S = 3
+T = 3
+W = 1
+I = 3
+A = 1
+
+[[units.weapons]]
+name = "Lance"
+range = "Melee"
+strength = "+2 on charge"
+ap = "0"
+damage = "1"
+abilities = ["Devastating Charge (+1S)", "First round only"]
+
+[[units]]
+name = "Knights Errant"
+type = "cavalry"
+category = "Core"
+points = 20
+models = "8+"
+tactical_role = "impetuous_cavalry"
+threat_level = "high"
+preferred_targets = ["infantry"]
+weaknesses = ["traps", "baiting"]
+special_rules = ["The Knight's Vow", "Blessing of the Lady", "Lance Formation", "Impetuous", "Devastating Charge (+1S)"]
+keywords = ["Cavalry", "Bretonnia", "Core", "Knights"]
+equipment = ["Lance", "Hand weapon", "Heavy armor", "Shield", "Warhorse"]
+options = ["May add musician (+10 pts)", "May add standard bearer (+10 pts)", "May upgrade to Errantry Banner (+15 pts)"]
+
+[units.stats]
+M = 4
+WS = 3
+BS = 3
+S = 3
+T = 3
+W = 1
+I = 3
+A = 1
+Ld = 7
+Sv = "3+"
+
+[[units]]
+name = "Men-at-Arms"
+type = "infantry"
+category = "Core"
+points = 5
+models = "20-50"
+tactical_role = "anvil"
+threat_level = "low"
+preferred_targets = ["nothing"]
+weaknesses = ["everything"]
+special_rules = ["Peasant's Duty", "Fight in Extra Ranks"]
+keywords = ["Infantry", "Bretonnia", "Core", "Peasant"]
+equipment = ["Halberd or spear", "Light armor", "Shield"]
+options = ["May add musician (+5 pts)", "May add standard bearer (+10 pts)"]
+
+[units.stats]
+M = 4
+WS = 2
+BS = 2
+S = 3
+T = 3
+W = 1
+I = 2
+A = 1
+Ld = 5
+Sv = "5+"
+
+[[units]]
+name = "Peasant Bowmen"
+type = "infantry"
+category = "Core"
+points = 6
+models = "10-30"
+tactical_role = "ranged_support"
+threat_level = "low"
+preferred_targets = ["light_targets"]
+weaknesses = ["cavalry", "any_combat"]
+special_rules = ["Peasant's Duty", "Volley Fire"]
+keywords = ["Infantry", "Bretonnia", "Core", "Peasant"]
+equipment = ["Longbow", "Hand weapon"]
+options = ["May take defensive stakes (+1 pt/model)", "May add Villein (+5 pts)", "May take braziers (+2 pts/model)"]
+
+[units.stats]
+M = 4
+WS = 2
+BS = 3
+S = 3
+T = 3
+W = 1
+I = 2
+A = 1
+Ld = 5
+Sv = "-"
+
+[[units.weapons]]
+name = "Longbow"
+range = "30\""
+strength = "3"
+ap = "0"
+damage = "1"
+abilities = ["Volley Fire"]
+
+# =============================================================================
+# SPECIAL UNITS
+# =============================================================================
+
+[[units]]
+name = "Questing Knights"
+type = "cavalry"
+category = "Special"
+points = 28
+models = "5-12"
+tactical_role = "elite_cavalry"
+threat_level = "very_high"
+preferred_targets = ["monsters", "heavy_cavalry"]
+weaknesses = ["mass_shooting"]
+special_rules = ["The Questing Vow", "Blessing of the Lady", "Immune to Psychology"]
+keywords = ["Cavalry", "Bretonnia", "Special", "Knights"]
+equipment = ["Great weapon", "Hand weapon", "Heavy armor", "Barded Warhorse"]
+options = ["May add musician (+10 pts)", "May add standard bearer (+10 pts)", "May take magic standard up to 50 pts"]
+
+[units.stats]
+M = 4
+WS = 4
+BS = 3
+S = 3
+T = 3
+W = 1
+I = 3
+A = 1
+Ld = 8
+Sv = "3+"
+
+[units.mount]
+name = "Barded Warhorse"
+M = 8
+WS = 3
+S = 3
+T = 3
+W = 1
+I = 3
+A = 1
+
+[[units.weapons]]
+name = "Great Weapon"
+range = "Melee"
+strength = "+2"
+ap = "2"
+damage = "1"
+abilities = ["Requires two hands", "Always Strikes Last", "Armor Piercing (2)"]
+
+[[units]]
+name = "Pegasus Knights"
+type = "monstrous_cavalry"
+category = "Special"
+points = 55
+models = "3-9"
+tactical_role = "flying_cavalry"
+threat_level = "very_high"
+preferred_targets = ["war_machines", "wizards", "isolated_units"]
+weaknesses = ["massed_shooting"]
+special_rules = ["The Knight's Vow", "Blessing of the Lady", "Fly", "Devastating Charge (+1S)"]
+keywords = ["Monstrous Cavalry", "Bretonnia", "Special", "Knights", "Fly"]
+equipment = ["Lance", "Hand weapon", "Heavy armor", "Shield"]
+options = ["May add musician (+10 pts)", "May add standard bearer (+10 pts)"]
+
+[units.stats]
+M = 4
+WS = 4
+BS = 3
+S = 3
+T = 3
+W = 1
+I = 3
+A = 1
+Ld = 8
+Sv = "3+"
+
+[units.mount]
+name = "Pegasus"
+M = 8
+WS = 3
+S = 4
+T = 4
+W = 2
+I = 4
+A = 2
+
+[[units]]
+name = "Mounted Yeomen"
+type = "cavalry"
+category = "Special"
+points = 12
+models = "5-10"
+tactical_role = "fast_cavalry"
+threat_level = "low"
+preferred_targets = ["war_machines", "skirmishers"]
+weaknesses = ["real_cavalry", "infantry"]
+special_rules = ["Peasant's Duty", "Fast Cavalry", "Vanguard", "Scouts"]
+keywords = ["Cavalry", "Bretonnia", "Special", "Peasant"]
+equipment = ["Spear", "Bow", "Shield", "Warhorse"]
+options = ["May add musician (+5 pts)"]
+
+[units.stats]
+M = 4
+WS = 2
+BS = 3
+S = 3
+T = 3
+W = 1
+I = 2
+A = 1
+Ld = 6
+Sv = "5+"
+
+[[units]]
+name = "Battle Pilgrims"
+type = "infantry"
+category = "Special"
+points = 9
+models = "10-30"
+tactical_role = "tarpit"
+threat_level = "medium"
+preferred_targets = ["any"]
+weaknesses = ["shooting"]
+special_rules = ["Immune to Psychology", "Hatred", "Blessing of the Lady"]
+keywords = ["Infantry", "Bretonnia", "Special", "Peasant"]
+equipment = ["Great weapon"]
+options = ["May add Grail Reliquae (+50 pts)"]
+
+[units.stats]
+M = 4
+WS = 2
+BS = 2
+S = 3
+T = 3
+W = 1
+I = 2
+A = 1
+Ld = 8
+Sv = "-"
+
+[[units]]
+name = "Grail Reliquae"
+type = "infantry"
+category = "Special"
+points = 50
+models = "1 (joins Battle Pilgrims)"
+tactical_role = "anchor"
+threat_level = "medium"
+preferred_targets = ["NA"]
+weaknesses = ["ranged_attacks"]
+special_rules = ["Unbreakable (unit)", "Grail Blessing (5+ ward)"]
+keywords = ["Infantry", "Bretonnia", "Special"]
+equipment = ["Reliquae"]
+
+[units.stats]
+M = 4
+WS = 3
+BS = 3
+S = 4
+T = 4
+W = 3
+I = 3
+A = 3
+Ld = 8
+Sv = "-"
+
+[[units]]
+name = "Field Trebuchet"
+type = "warmachine"
+category = "Special"
+points = 90
+models = "1 trebuchet, 3 crew"
+tactical_role = "artillery"
+threat_level = "high"
+preferred_targets = ["ranked_infantry", "cavalry"]
+weaknesses = ["fast_units", "close_combat"]
+special_rules = ["Move or Fire", "Indirect Fire"]
+keywords = ["War Machine", "Bretonnia", "Special"]
+equipment = ["Hand weapons"]
+notes = "The only war machine available to Bretonnia"
+
+[units.stats]
+M = "-"
+WS = 2
+BS = 2
+S = 3
+T = 7
+W = 3
+I = 2
+A = "-"
+Ld = 5
+Sv = "-"
+
+[[units.weapons]]
+name = "Trebuchet"
+range = "12-60\""
+strength = "5(10)"
+ap = "3"
+damage = "1(D6)"
+abilities = ["Large Blast (5\")", "Direct hit S10 Multiple Wounds D6", "Indirect Fire"]
+
+# =============================================================================
+# RARE UNITS
+# =============================================================================
+
+[[units]]
+name = "Grail Knights"
+type = "cavalry"
+category = "Rare"
+points = 38
+models = "3-10"
+tactical_role = "elite_shock_cavalry"
+threat_level = "extreme"
+preferred_targets = ["anything"]
+weaknesses = ["mass_shooting", "magic"]
+special_rules = ["The Grail Vow", "Blessing of the Lady", "Immune to Psychology", "Magic Resistance (2)", "Devastating Charge (+1S)"]
+keywords = ["Cavalry", "Bretonnia", "Rare", "Knights", "Grail Knight"]
+equipment = ["Lance", "Hand weapon", "Heavy armor", "Shield", "Barded Warhorse"]
+options = ["May add musician (+10 pts)", "May add standard bearer (+10 pts)", "May take magic standard up to 75 pts"]
+
+[units.stats]
+M = 4
+WS = 5
+BS = 3
+S = 4
+T = 4
+W = 1
+I = 5
+A = 2
+Ld = 9
+Sv = "2+"
+
+[units.mount]
+name = "Barded Warhorse"
+M = 8
+WS = 3
+S = 3
+T = 3
+W = 1
+I = 3
+A = 1
+
+[[units]]
+name = "Royal Hippogryph Knights"
+type = "monstrous_cavalry"
+category = "Rare"
+points = 100
+models = "1-3"
+tactical_role = "flying_monster_cavalry"
+threat_level = "extreme"
+preferred_targets = ["monsters", "characters", "war_machines"]
+weaknesses = ["massed_shooting", "war_machines"]
+special_rules = ["Fly", "Terror", "Devastating Charge (+1S)", "Blessing of the Lady"]
+keywords = ["Monstrous Cavalry", "Bretonnia", "Rare", "Knights", "Fly"]
+equipment = ["Lance", "Hand weapon", "Heavy armor", "Shield"]
+
+[units.stats]
+M = 4
+WS = 5
+BS = 3
+S = 4
+T = 4
+W = 1
+I = 4
+A = 2
+Ld = 8
+Sv = "2+"
+
+[units.mount]
+name = "Hippogryph"
+M = 8
+WS = 4
+S = 5
+T = 5
+W = 4
+I = 4
+A = 4
+
+# =============================================================================
+# FACTION SPECIAL RULES
+# =============================================================================
+
+[[faction_rules]]
+name = "Blessing of the Lady"
+description = "At deployment, declare if your army prays. If it does, all units with this rule gain a 6+ ward save (5+ vs Strength 5+ attacks), but enemy gets +1 to first turn roll"
+
+[[faction_rules]]
+name = "Lance Formation"
+description = "Knight units fight in lance formation. A character in the front rank fights with +2 Strength (not just +1) when charging. The unit may adopt wedge formation for bonuses"
+
+[[faction_rules]]
+name = "The Knight's Vow"
+description = "Knights may never flee as a charge reaction if they would flee through peasants. Knights and characters with this rule must issue and accept challenges"
+
+[[faction_rules]]
+name = "The Questing Vow"
+description = "As Knight's Vow, plus may not use lances and are Immune to Psychology"
+
+[[faction_rules]]
+name = "The Grail Vow"
+description = "As Questing Vow, plus Magic Resistance (2)"
+
+[[faction_rules]]
+name = "Peasant's Duty"
+description = "Peasant units use the General's Leadership only if within 6 inches. If all Knights flee, peasants must test for Panic"
+
+[[faction_rules]]
+name = "Impetuous"
+description = "Knights Errant must declare a charge against the nearest visible enemy if able to do so. Re-roll failed Panic tests"
+
+# =============================================================================
+# VIRTUES (Character Upgrades)
+# =============================================================================
+
+[[faction_items]]
+name = "Virtue of the Ideal"
+type = "virtue"
+points = 50
+description = "+1 Weapon Skill, +1 Initiative, +1 Attack for each character you kill in a challenge"
+restrictions = ["Bretonnian Lords and Paladins only"]
+
+[[faction_items]]
+name = "Virtue of Heroism"
+type = "virtue"
+points = 45
+description = "Always wound monsters and characters on 2+ in close combat. Heroic Killing Blow against such targets"
+restrictions = ["Bretonnian Lords and Paladins only"]
+
+[[faction_items]]
+name = "Virtue of the Joust"
+type = "virtue"
+points = 35
+description = "+3 Strength on the charge instead of +2. Always strikes first on the charge"
+restrictions = ["Bretonnian Lords and Paladins only"]
+
+[[faction_items]]
+name = "Virtue of Discipline"
+type = "virtue"
+points = 25
+description = "Unit is Stubborn as long as character is alive"
+restrictions = ["Bretonnian Lords and Paladins only"]
+
+[[faction_items]]
+name = "Virtue of Noble Disdain"
+type = "virtue"
+points = 15
+description = "4+ ward save against non-magical, non-Strength attacks"
+restrictions = ["Bretonnian Lords and Paladins only"]
+
+# =============================================================================
+# FACTION MAGIC ITEMS
+# =============================================================================
+
+[[faction_items]]
+name = "Sword of the Lady's Champion"
+type = "magic_weapon"
+points = 65
+description = "+1 Strength, +1 Attack. Attacks that wound cause an additional wound on a roll of 6"
+restrictions = ["Bretonnian characters only"]
+
+[[faction_items]]
+name = "The Heartwood Lance"
+type = "magic_weapon"
+points = 30
+description = "Lance. +1 Strength on the charge. Attacks cause Multiple Wounds (D3)"
+restrictions = ["Bretonnian characters only"]
+
+[[faction_items]]
+name = "Grail Shield"
+type = "magic_armor"
+points = 40
+description = "Shield. Bearer has Magic Resistance (2) and 5+ ward save"
+restrictions = ["Bretonnian characters only"]
+
+[[faction_items]]
+name = "Banner of the Lady"
+type = "banner"
+points = 75
+description = "Unit gains Magic Resistance (2). Blessing of the Lady ward save becomes 5+ (4+ vs S5+)"
+restrictions = ["Bretonnian standard bearer only"]
+
+[[faction_items]]
+name = "Errantry Banner"
+type = "banner"
+points = 25
+description = "Knights Errant only. Unit may re-roll failed charge distance rolls and failed Break tests"
+restrictions = ["Knights Errant standard bearer only"]

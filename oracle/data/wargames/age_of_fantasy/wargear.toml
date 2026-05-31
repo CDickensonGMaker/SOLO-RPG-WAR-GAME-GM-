@@ -1,0 +1,503 @@
+# Age of Fantasy - Wargear Compendium
+# Equipment catalog for One Page Rules fantasy wargame
+
+[metadata]
+name = "Age of Fantasy Wargear"
+version = "1.0"
+description = "Equipment catalog for Age of Fantasy armies"
+
+# =============================================================================
+# RANGED WEAPONS - MUNDANE
+# =============================================================================
+
+[[weapons]]
+name = "Short Bow"
+category = "ranged"
+range = "18\""
+attacks = "1"
+cost = 0
+description = "Basic hunting bow"
+keywords = ["Basic"]
+
+[[weapons]]
+name = "Bow"
+category = "ranged"
+range = "24\""
+attacks = "1"
+cost = 5
+description = "Standard military bow"
+keywords = ["Basic"]
+
+[[weapons]]
+name = "Longbow"
+category = "ranged"
+range = "30\""
+attacks = "1"
+cost = 10
+description = "Powerful war bow"
+keywords = ["Armor Piercing(1)"]
+
+[[weapons]]
+name = "Crossbow"
+category = "ranged"
+range = "24\""
+attacks = "1"
+ap = "1"
+cost = 5
+description = "Mechanical ranged weapon"
+keywords = ["Armor Piercing(1)"]
+
+[[weapons]]
+name = "Repeater Crossbow"
+category = "ranged"
+range = "18\""
+attacks = "3"
+cost = 10
+description = "Rapid-fire crossbow"
+keywords = []
+
+[[weapons]]
+name = "Throwing Weapons"
+category = "ranged"
+range = "6\""
+attacks = "1"
+cost = 0
+description = "Daggers, axes, or javelins"
+keywords = ["Quick"]
+
+[[weapons]]
+name = "Javelin"
+category = "ranged"
+range = "12\""
+attacks = "1"
+ap = "1"
+cost = 5
+description = "Heavy throwing spear"
+keywords = ["One Use"]
+
+[[weapons]]
+name = "Sling"
+category = "ranged"
+range = "18\""
+attacks = "1"
+cost = 0
+description = "Simple ranged weapon"
+keywords = ["Basic"]
+
+# =============================================================================
+# RANGED WEAPONS - SPECIAL
+# =============================================================================
+
+[[weapons]]
+name = "Handgun"
+category = "ranged"
+range = "18\""
+attacks = "1"
+ap = "2"
+cost = 15
+description = "Blackpowder weapon"
+keywords = ["Armor Piercing(2)"]
+
+[[weapons]]
+name = "Musket"
+category = "ranged"
+range = "24\""
+attacks = "1"
+ap = "2"
+cost = 15
+description = "Long blackpowder rifle"
+keywords = ["Armor Piercing(2)"]
+
+[[weapons]]
+name = "Blunderbuss"
+category = "ranged"
+range = "12\""
+attacks = "2"
+ap = "1"
+cost = 10
+description = "Spread-shot weapon"
+keywords = []
+
+[[weapons]]
+name = "Cannon"
+category = "ranged"
+range = "48\""
+attacks = "1"
+ap = "4"
+cost = 50
+description = "Artillery piece"
+keywords = ["Deadly(6)", "Heavy"]
+
+# =============================================================================
+# RANGED WEAPONS - MAGICAL
+# =============================================================================
+
+[[weapons]]
+name = "Staff of Fire"
+category = "ranged"
+range = "18\""
+attacks = "1"
+ap = "1"
+cost = 20
+description = "Magical fire projectiles"
+keywords = ["Wizard Only", "Magical"]
+
+[[weapons]]
+name = "Lightning Arc"
+category = "ranged"
+range = "24\""
+attacks = "1"
+ap = "2"
+cost = 25
+description = "Electrical discharge"
+keywords = ["Wizard Only", "Magical", "Deadly(3)"]
+
+[[weapons]]
+name = "Warpfire"
+category = "ranged"
+range = "12\""
+attacks = "D6"
+ap = "1"
+cost = 20
+description = "Chaotic flame"
+keywords = ["Magical"]
+
+# =============================================================================
+# MELEE WEAPONS - ONE-HANDED
+# =============================================================================
+
+[[weapons]]
+name = "Hand Weapon"
+category = "melee"
+range = "Melee"
+attacks = "1"
+cost = 0
+description = "Sword, axe, or mace"
+keywords = ["Basic"]
+
+[[weapons]]
+name = "Spear"
+category = "melee"
+range = "Melee"
+attacks = "1"
+cost = 0
+description = "Reach weapon"
+keywords = ["Phalanx"]
+
+[[weapons]]
+name = "Lance"
+category = "melee"
+range = "Melee"
+attacks = "1"
+ap = "2"
+cost = 10
+description = "Cavalry lance"
+keywords = ["Impact(1)", "Mounted Only"]
+
+[[weapons]]
+name = "Flail"
+category = "melee"
+range = "Melee"
+attacks = "1"
+ap = "1"
+cost = 5
+description = "Flexible weapon"
+keywords = ["Rending"]
+
+# =============================================================================
+# MELEE WEAPONS - TWO-HANDED
+# =============================================================================
+
+[[weapons]]
+name = "Great Weapon"
+category = "melee"
+range = "Melee"
+attacks = "1"
+ap = "1"
+cost = 5
+description = "Large two-handed weapon"
+keywords = ["Two-Handed"]
+
+[[weapons]]
+name = "Halberd"
+category = "melee"
+range = "Melee"
+attacks = "1"
+ap = "1"
+cost = 5
+description = "Polearm"
+keywords = ["Phalanx", "Two-Handed"]
+
+[[weapons]]
+name = "Pike"
+category = "melee"
+range = "Melee"
+attacks = "1"
+cost = 5
+description = "Very long spear"
+keywords = ["Phalanx", "Two-Handed"]
+
+# =============================================================================
+# MELEE WEAPONS - PAIRED
+# =============================================================================
+
+[[weapons]]
+name = "Paired Weapons"
+category = "melee"
+range = "Melee"
+attacks = "2"
+cost = 5
+description = "Two weapons, dual wielding"
+keywords = []
+
+[[weapons]]
+name = "Claws"
+category = "melee"
+range = "Melee"
+attacks = "2"
+ap = "1"
+cost = 10
+description = "Natural or magical claws"
+keywords = ["Rending"]
+
+# =============================================================================
+# MELEE WEAPONS - MAGICAL
+# =============================================================================
+
+[[weapons]]
+name = "Magic Weapon"
+category = "melee"
+range = "Melee"
+attacks = "1"
+ap = "2"
+cost = 15
+description = "Enchanted blade"
+keywords = ["Magical"]
+
+[[weapons]]
+name = "Rune Weapon"
+category = "melee"
+range = "Melee"
+attacks = "1"
+ap = "3"
+cost = 25
+description = "Rune-inscribed weapon"
+keywords = ["Magical", "Deadly(3)"]
+
+[[weapons]]
+name = "Chaos Blade"
+category = "melee"
+range = "Melee"
+attacks = "1"
+ap = "2"
+cost = 20
+description = "Daemon-touched weapon"
+keywords = ["Magical", "Poison"]
+
+# =============================================================================
+# ARMOR
+# =============================================================================
+
+[[armor]]
+name = "Light Armor"
+category = "armor"
+defense = "6+"
+cost = 0
+description = "Leather or padded"
+keywords = ["Basic"]
+
+[[armor]]
+name = "Heavy Armor"
+category = "armor"
+defense = "4+"
+cost = 10
+description = "Mail or scale"
+keywords = ["Heavy"]
+
+[[armor]]
+name = "Plate Armor"
+category = "armor"
+defense = "3+"
+cost = 20
+description = "Full plate"
+keywords = ["Heavy"]
+
+[[armor]]
+name = "Shield"
+category = "armor"
+defense_bonus = 1
+cost = 5
+description = "Personal shield"
+keywords = ["Shield"]
+
+[[armor]]
+name = "Large Shield"
+category = "armor"
+defense_bonus = 2
+cost = 10
+description = "Tower or kite shield"
+keywords = ["Shield", "Phalanx"]
+
+[[armor]]
+name = "Magical Armor"
+category = "armor"
+defense = "3+"
+cost = 25
+description = "Enchanted protection"
+keywords = ["Magical", "Regeneration"]
+
+# =============================================================================
+# MOUNTS
+# =============================================================================
+
+[[mount]]
+name = "War Horse"
+category = "mount"
+cost = 10
+movement_bonus = 4
+description = "Trained warhorse"
+keywords = ["Cavalry"]
+
+[[mount]]
+name = "Barded Horse"
+category = "mount"
+cost = 20
+movement_bonus = 4
+description = "Armored warhorse"
+keywords = ["Cavalry", "Defense 4+"]
+
+[[mount]]
+name = "Giant Wolf"
+category = "mount"
+cost = 15
+movement_bonus = 6
+description = "Massive wolf mount"
+keywords = ["Fast"]
+
+[[mount]]
+name = "Giant Spider"
+category = "mount"
+cost = 20
+movement_bonus = 4
+description = "Large spider"
+keywords = ["Strider", "Poison"]
+
+[[mount]]
+name = "Chariot"
+category = "mount"
+cost = 30
+movement_bonus = 4
+description = "War chariot"
+keywords = ["Impact(3)", "Transport(2)"]
+
+[[mount]]
+name = "Monster"
+category = "mount"
+cost = 50
+movement_bonus = 2
+description = "Large creature"
+keywords = ["Monster", "Fear"]
+
+# =============================================================================
+# WARGEAR
+# =============================================================================
+
+[[wargear]]
+name = "Standard Bearer"
+category = "equipment"
+cost = 15
+description = "Unit banner"
+effect = "+1 to Morale within 12\""
+keywords = ["Leadership"]
+
+[[wargear]]
+name = "Musician"
+category = "equipment"
+cost = 10
+description = "Horn or drum"
+effect = "+1\" to charge moves"
+keywords = ["Support"]
+
+[[wargear]]
+name = "Champion"
+category = "equipment"
+cost = 10
+description = "Unit champion upgrade"
+effect = "+1 Attack"
+keywords = ["Leader"]
+
+[[wargear]]
+name = "Potion"
+category = "equipment"
+cost = 10
+description = "Single-use magical drink"
+effect = "One use, various effects"
+keywords = ["One Use"]
+
+[[wargear]]
+name = "Talisman"
+category = "equipment"
+cost = 15
+description = "Protective charm"
+effect = "Magic resistance"
+keywords = ["Magical Defense"]
+
+[[wargear]]
+name = "Ring of Power"
+category = "equipment"
+cost = 20
+description = "Magical ring"
+effect = "+1 to casting"
+keywords = ["Wizard Only"]
+
+[[wargear]]
+name = "Scroll"
+category = "equipment"
+cost = 15
+description = "Magic scroll"
+effect = "Cast one spell automatically"
+keywords = ["One Use", "Wizard Only"]
+
+# =============================================================================
+# MAGIC ITEMS
+# =============================================================================
+
+[[magic_item]]
+name = "Sword of Heroes"
+category = "weapon"
+cost = 30
+description = "Legendary blade"
+effect = "AP4, Deadly(6)"
+keywords = ["Character Only"]
+
+[[magic_item]]
+name = "Crown of Command"
+category = "armor"
+cost = 25
+description = "Leadership crown"
+effect = "12\" Command aura"
+keywords = ["Character Only"]
+
+[[magic_item]]
+name = "Cloak of Shadows"
+category = "armor"
+cost = 20
+description = "Concealing cloak"
+effect = "Stealth, Ambush"
+keywords = ["Character Only"]
+
+[[magic_item]]
+name = "Horn of War"
+category = "equipment"
+cost = 20
+description = "Rally horn"
+effect = "Once per game, remove all Shaken within 12\""
+keywords = ["One Use"]
+
+[[magic_item]]
+name = "Dragon Helm"
+category = "armor"
+cost = 25
+description = "Fire-breathing helm"
+effect = "One 12\" A3 AP1 attack per game"
+keywords = ["One Use"]

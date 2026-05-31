@@ -1,0 +1,683 @@
+# The Cerilian Alliance Campaign
+# Theme: Pan-continental diplomacy, multi-front coalition warfare
+# Scope: Major regent coordinating realm-wide defense
+
+[campaign]
+id = "cerilian_alliance"
+name = "The Cerilian Alliance"
+tagline = "Alone, each realm falls. Together, they might yet stand."
+theme = "coalition_building"
+difficulty = "very_hard"
+recommended_bloodline = ["Anduiras", "Brenna", "Masela"]
+starting_season = "spring"
+starting_year = 552
+
+[campaign.description]
+short = "Unite the fractured realms of Cerilia against a coordinated awnshegh offensive."
+long = """
+They have done what none thought possible: the awnsheghlien are working together.
+The Gorgon moves from the north, the Spider weaves chaos from within, the Serpent
+stirs in the southern seas, and darker things yet rise from forgotten places. This
+is no coincidence - some force has united the children of Azrai's blood.
+
+Cerilia's defenders are scattered, suspicious, and unprepared. Anuirean lords
+still squabble over the Iron Throne. The Khinasi pursue ancient grudges. The
+Brecht count their gold while the Rjurik watch their borders alone. The elves
+retreat into ancient grudges. The dwarves seal their mountain halls.
+
+Someone must forge these disparate peoples into an alliance capable of facing
+the greatest threat since Deismaar itself. That someone may be you - but first,
+you must convince bitter enemies to fight as allies, proud lords to follow a
+common banner, and ancient peoples that the old hatreds must wait.
+"""
+
+[campaign.pillars]
+primary = "Unity is the only path to survival"
+secondary = "Every culture has something to offer - respect earns alliance"
+tone = "epic fantasy with diplomatic complexity"
+stakes = "The survival of Cerilia's free peoples"
+
+[campaign.special_mechanics]
+multi_faction_diplomacy = true
+continental_map = true
+coalition_management = true
+parallel_fronts = true
+
+# ============================================================================
+# ACT STRUCTURE
+# ============================================================================
+
+[acts.act_1]
+name = "The Warning"
+description = "Recognize the threat and begin diplomatic outreach"
+turn_range = [1, 15]
+objectives = [
+    "Gather proof of coordinated awnshegh activity",
+    "Secure alliance or non-aggression from Anuirean realms",
+    "Make contact with at least one non-Anuirean culture"
+]
+completion_trigger = "first_alliance_forged"
+
+[acts.act_1.starting_state]
+alliance_strength = 0
+fronts_active = 1
+awnshegh_coordination = 30
+continental_awareness = 10
+
+[acts.act_2]
+name = "The Gathering"
+description = "Build the alliance while containing early attacks"
+turn_range = [16, 35]
+objectives = [
+    "Forge alliance with at least three major power blocs",
+    "Establish a unified command structure",
+    "Hold the line on at least two fronts"
+]
+completion_trigger = "alliance_formed"
+prerequisites = ["act_1_complete"]
+
+[acts.act_2.state_changes]
+fronts_active = 3
+awnshegh_coordination = 60
+war_footing = true
+
+[acts.act_3]
+name = "The Reckoning"
+description = "Launch the coordinated counter-offensive"
+turn_range = [36, 48]
+objectives = [
+    "Maintain alliance cohesion under pressure",
+    "Defeat or neutralize the awnshegh coalition leadership",
+    "Establish lasting peace structure"
+]
+completion_trigger = "war_resolved"
+prerequisites = ["act_2_complete"]
+
+[acts.act_3.state_changes]
+total_war = true
+stakes = "existential"
+
+# ============================================================================
+# FACTIONS
+# ============================================================================
+
+[factions.anuire]
+name = "The Anuirean Realms"
+culture = "anuirean"
+strength = "divided_major"
+disposition_base = 20  # Share culture with likely player
+
+[factions.anuire.requirements]
+alliance = ["Resolve succession dispute", "Promise Anuirean leadership role"]
+obstacle = "Civil war over Iron Throne"
+key_npcs = ["avan", "boeruine", "diem"]
+
+[factions.khinasi]
+name = "The Khinasi States"
+culture = "khinasi"
+strength = "moderate"
+disposition_base = -10  # Ancient grudges with Anuire
+
+[factions.khinasi.requirements]
+alliance = ["Acknowledge Khinasi sovereignty", "Trade concessions", "Non-interference pledge"]
+obstacle = "Memory of Anuirean conquest attempts"
+key_npcs = ["el_arrasi", "zikalan"]
+
+[factions.brecht]
+name = "The Brecht League"
+culture = "brecht"
+strength = "economic"
+disposition_base = 0  # Neutral, profit-focused
+
+[factions.brecht.requirements]
+alliance = ["Guarantee trade route protection", "War contracts for Brecht guilds"]
+obstacle = "Brecht prefer neutrality and profit"
+key_npcs = ["adalhardt", "guild_council"]
+
+[factions.rjurik]
+name = "The Rjurik Highlands"
+culture = "rjurik"
+strength = "defensive"
+disposition_base = 10  # Already fighting the Blood Skull
+
+[factions.rjurik.requirements]
+alliance = ["Respect Erik's ways", "Support against the Blood Skull"]
+obstacle = "Distrust of 'southern' politics"
+key_npcs = ["storm_holtson", "erik_druids"]
+
+[factions.vos]
+name = "The Vos Nations"
+culture = "vos"
+strength = "unpredictable"
+disposition_base = -30  # Many serve darkness
+
+[factions.vos.requirements]
+alliance = ["Nearly impossible - most serve awnsheghlien", "Only the Free Vos might join"]
+obstacle = "Cultural alignment with Azrai"
+key_npcs = ["free_vos_hetman"]
+
+[factions.sidhelien]
+name = "The Sidhelien"
+culture = "elven"
+strength = "ancient"
+disposition_base = -40  # Millennia of human-elf conflict
+
+[factions.sidhelien.requirements]
+alliance = ["Return of stolen lands", "Recognition of elven claims", "Personal trust of Thorn"]
+obstacle = "Gheallie Sidhe - the elven hunt for humans"
+key_npcs = ["thorn_of_sielwode", "rhuobhe_manslayer"]
+
+[factions.dwarves]
+name = "The Dwarven Realms"
+culture = "dwarven"
+strength = "fortified"
+disposition_base = 5
+
+[factions.dwarves.requirements]
+alliance = ["Aid against goblin incursions", "Respect dwarven autonomy"]
+obstacle = "Dwarves prefer isolation"
+key_npcs = ["muden_overlord"]
+
+# ============================================================================
+# KEY NPCS
+# ============================================================================
+
+[npcs.the_coordinator]
+name = "The Voice"
+title = "Unknown"
+role = "hidden_antagonist"
+bloodline = { derivation = "Azrai", strength = "great", score = 60 }
+disposition_base = -100
+
+[npcs.the_coordinator.personality]
+traits = ["ancient", "patient", "strategic", "invisible"]
+approach = "coordination"
+weakness = "depends on awnshegh cooperation"
+quote = "The children of Azrai have been divided for too long. It is time we remembered we are family."
+
+[npcs.the_coordinator.goals]
+primary = "Unite the awnsheghlien to destroy the human realms"
+secondary = "Prove itself worthy to lead the awnshegh"
+hidden = "Is actually the Raven - the Spider's former lieutenant, now independent"
+
+[npcs.avan]
+name = "Prince Darien Avan"
+title = "Prince of Avanil"
+role = "potential_leader"
+bloodline = { derivation = "Anduiras", strength = "great", score = 45 }
+disposition_base = 0
+
+[npcs.avan.personality]
+traits = ["ambitious", "cultured", "strategic"]
+approach = "political_maneuvering"
+weakness = "prioritizes claim over unity"
+quote = "I will lead this alliance - as is my right by blood."
+
+[npcs.avan.alliance_conditions]
+join_if = ["Recognized as alliance leader", "or", "Boeruine excluded"]
+break_if = ["Boeruine given equal standing", "Authority publicly challenged"]
+
+[npcs.boeruine]
+name = "Archduke Aeric Boeruine"
+title = "Archduke of Boeruine"
+role = "military_powerhouse"
+bloodline = { derivation = "Anduiras", strength = "great", score = 42 }
+disposition_base = -10
+
+[npcs.boeruine.personality]
+traits = ["martial", "proud", "pragmatic"]
+approach = "military_command"
+weakness = "bristles at any authority above him"
+quote = "Pretty words win no battles. I bring armies. What do the diplomats bring?"
+
+[npcs.boeruine.alliance_conditions]
+join_if = ["Given military command", "Direct role in fighting Gorgon"]
+break_if = ["Avan given leadership", "Military decisions overruled"]
+
+[npcs.el_arrasi]
+name = "Sultana Elara el-Arrasi"
+title = "Sultana of Ariya"
+role = "khinasi_leader"
+bloodline = { derivation = "Basaia", strength = "major", score = 35 }
+disposition_base = -15
+
+[npcs.el_arrasi.personality]
+traits = ["wise", "proud", "sophisticated"]
+approach = "cultural_pride"
+weakness = "will not accept perceived disrespect"
+quote = "Khinasi civilization stood while Anuire was still young. Do not presume to lead us."
+
+[npcs.el_arrasi.alliance_conditions]
+join_if = ["Khinasi treated as equals", "Southern front given priority"]
+break_if = ["Dismissed as minor power", "Anuirean condescension"]
+
+[npcs.adalhardt]
+name = "Guildmeister Wilhelm Adalhardt"
+title = "Master of the Brecht League"
+role = "economic_power"
+bloodline = { derivation = "Brenna", strength = "minor", score = 20 }
+disposition_base = 5
+
+[npcs.adalhardt.personality]
+traits = ["mercantile", "pragmatic", "cautious"]
+approach = "profit_calculation"
+weakness = "sometimes too cautious"
+quote = "War is expensive. What is our return on investment?"
+
+[npcs.adalhardt.alliance_conditions]
+join_if = ["Guaranteed war contracts", "Trade route protection", "No direct conscription"]
+break_if = ["Brecht goods seized", "Unreasonable financial demands"]
+
+[npcs.storm_holtson]
+name = "Storm Holtson"
+title = "High Druid of the Oaken Grove"
+role = "rjurik_voice"
+bloodline = { derivation = "Reynir", strength = "major", score = 38 }
+disposition_base = 15
+
+[npcs.storm_holtson.personality]
+traits = ["spiritual", "fierce", "traditional"]
+approach = "erik_doctrine"
+weakness = "suspicious of foreign ways"
+quote = "Erik teaches that the land must be defended. We will fight, but on our terms."
+
+[npcs.storm_holtson.alliance_conditions]
+join_if = ["Respect for Erik", "Support against Blood Skull Barony"]
+break_if = ["Demands for tribute", "Interference with druidic ways"]
+
+[npcs.thorn_of_sielwode]
+name = "Thorn"
+title = "Watcher of Sielwode"
+role = "elven_contact"
+bloodline = { derivation = "Other", strength = "major", score = 40, elven = true }
+disposition_base = -30
+
+[npcs.thorn_of_sielwode.personality]
+traits = ["ancient", "patient", "protective", "ambivalent"]
+approach = "elven_preservation"
+weakness = "torn between isolation and alliance"
+quote = "Humans have been our enemies for a thousand years. Why should this change?"
+
+[npcs.thorn_of_sielwode.alliance_conditions]
+join_if = ["Genuine remorse for human actions", "Territorial concessions", "Personal trust"]
+break_if = ["Elven lands threatened", "Rhuobhe convinced it's a trap"]
+
+# ============================================================================
+# CAMPAIGN EVENTS
+# ============================================================================
+
+[events.coordinated_attack]
+id = "coordinated_attack"
+name = "The Storm Breaks"
+act = 1
+turn = 1
+type = "story"
+mandatory = true
+
+[events.coordinated_attack.description]
+text = """
+It happens on the same day across the continent. The Gorgon's armies pour through
+the northern passes. The Serpent's ships attack Khinasi ports. The Blood Skull
+Barony erupts into Rjurik lands. The Spider's assassins strike at key leaders.
+A dozen other awnsheghlien make their moves.
+
+This is no coincidence. This is coordination.
+
+As the smoke rises and the reports flood in, one thing becomes clear: individually,
+no realm can survive this. Only together do the free peoples have a chance.
+"""
+
+[[events.coordinated_attack.choices]]
+id = "rally_anuire"
+text = "Focus on uniting Anuire first as the core of the alliance"
+effects = { anuire_focus = true, anuire_disposition = 10 }
+consequences = "Build from the strongest base"
+oracle_prompt = "Do the squabbling Anuirean lords recognize the greater threat?"
+
+[[events.coordinated_attack.choices]]
+id = "reach_outward"
+text = "Immediately reach out to non-Anuirean realms"
+effects = { multi_cultural = true, khinasi_disposition = 5, brecht_disposition = 5 }
+consequences = "Show this is a continental effort"
+oracle_prompt = "Do foreign realms respond to your overtures?"
+
+[[events.coordinated_attack.choices]]
+id = "military_response"
+text = "Focus on the immediate military crisis"
+effects = { military = true, tactical_success = 20 }
+consequences = "Prove yourself in battle first"
+oracle_prompt = "Can you achieve a significant early victory?"
+
+[[events.coordinated_attack.choices]]
+id = "identify_coordinator"
+text = "Focus on finding who is coordinating the awnsheghlien"
+effects = { intel = 20, coordinator_awareness = 10 }
+consequences = "Understand the enemy first"
+oracle_prompt = "Do you uncover evidence of who unites the awnsheghlien?"
+
+[events.anuirean_summit]
+id = "anuirean_summit"
+name = "The Council of Crowns"
+act = 1
+turn_range = [5, 10]
+type = "story"
+mandatory = true
+
+[events.anuirean_summit.description]
+text = """
+The great lords of Anuire gather - not to dispute the throne, but to face an
+existential threat. Avan and Boeruine eye each other across the council table.
+Lesser lords watch to see who they should follow. The tension is thick enough
+to cut.
+
+Someone must speak. Someone must propose a path forward. The question is whether
+pride or survival will win.
+"""
+
+[[events.anuirean_summit.choices]]
+id = "propose_dual_command"
+text = "Propose dual command: Avan for diplomacy, Boeruine for war"
+effects = { compromise = true, avan_disposition = -5, boeruine_disposition = -5, unity = 20 }
+consequences = "Neither gets everything, but both get something"
+oracle_prompt = "Do both lords accept this compromise?"
+
+[[events.anuirean_summit.choices]]
+id = "support_avan"
+text = "Support Avan's leadership claim"
+effects = { avan_alliance = true, avan_disposition = 30, boeruine_disposition = -30 }
+consequences = "Choose legitimacy over strength"
+oracle_prompt = "Does Boeruine walk out or grudgingly accept?"
+
+[[events.anuirean_summit.choices]]
+id = "support_boeruine"
+text = "Support Boeruine's military leadership"
+effects = { boeruine_alliance = true, boeruine_disposition = 30, avan_disposition = -30 }
+consequences = "Choose strength over legitimacy"
+oracle_prompt = "Does Avan undermine Boeruine or accept the situation?"
+
+[[events.anuirean_summit.choices]]
+id = "propose_council"
+text = "Propose a council of equals with rotating leadership"
+effects = { democratic = true, all_disposition = 5, efficiency = -10 }
+consequences = "No one leads alone, no one is subordinate"
+oracle_prompt = "Can a council function in wartime?"
+
+[events.khinasi_approach]
+id = "khinasi_approach"
+name = "Words Across the Sea"
+act = 2
+turn_range = [16, 22]
+type = "story"
+mandatory = true
+
+[events.khinasi_approach.description]
+text = """
+The Khinasi states have been fighting their own war against the Serpent and other
+threats. Sultana el-Arrasi of Ariya has emerged as a potential leader - but she
+remembers when Anuirean armies tried to conquer her ancestors' lands.
+
+You have been granted an audience. The Sultana will hear your proposal for alliance.
+Her court watches, skeptical of northern barbarians come to beg for help.
+"""
+
+[[events.khinasi_approach.choices]]
+id = "humble_approach"
+text = "Approach with humility, acknowledging past wrongs"
+effects = { humility = true, khinasi_disposition = 20, anuire_reputation = -5 }
+consequences = "Swallow pride for the greater good"
+oracle_prompt = "Does the Sultana respond to genuine humility?"
+
+[[events.khinasi_approach.choices]]
+id = "equal_approach"
+text = "Approach as equals facing a common threat"
+effects = { diplomatic = true, khinasi_disposition = 10 }
+consequences = "Mutual respect, mutual need"
+oracle_prompt = "Does the Sultana accept you as an equal?"
+
+[[events.khinasi_approach.choices]]
+id = "trade_approach"
+text = "Lead with offers of trade and mutual benefit"
+effects = { mercantile = true, khinasi_disposition = 15, brecht_approval = 10 }
+consequences = "Practical benefits speak louder than words"
+oracle_prompt = "Do material benefits outweigh cultural hesitation?"
+
+[[events.khinasi_approach.choices]]
+id = "military_approach"
+text = "Offer immediate military support against the Serpent"
+effects = { military_aid = true, khinasi_disposition = 25, resource_cost = "high" }
+consequences = "Actions before words"
+oracle_prompt = "Does aid against the Serpent win Khinasi trust?"
+
+[events.elven_contact]
+id = "elven_contact"
+name = "The Ancient Grudge"
+act = 2
+turn_range = [25, 32]
+type = "conditional"
+trigger = "alliance_strength >= 40"
+
+[events.elven_contact.description]
+text = """
+Thorn of Sielwode has agreed to speak with you - the first serious human-elven
+diplomatic contact in generations. The Sidhelien remember everything: every
+broken treaty, every inch of stolen land, every elven life lost to human expansion.
+
+Convincing the elves to join will require addressing millennia of justified grievance.
+Some say it's impossible. But the awnsheghlien threaten elven lands too.
+"""
+
+[[events.elven_contact.choices]]
+id = "full_apology"
+text = "Offer formal apology and territorial concessions"
+effects = { territorial_cost = true, elven_disposition = 30, human_criticism = 20 }
+consequences = "Give up human claims for elven alliance"
+oracle_prompt = "Are the concessions enough to satisfy elven demands?"
+
+[[events.elven_contact.choices]]
+id = "pragmatic_alliance"
+text = "Appeal to mutual survival without addressing history"
+effects = { pragmatic = true, elven_disposition = 10 }
+consequences = "Focus on the present, not the past"
+oracle_prompt = "Will the elves accept a purely pragmatic alliance?"
+
+[[events.elven_contact.choices]]
+id = "personal_bond"
+text = "Attempt to forge personal trust with Thorn"
+effects = { personal = true, time_investment = true, elven_disposition = 20 }
+consequences = "Win one elf to win their people"
+oracle_prompt = "Can you earn Thorn's personal trust?"
+
+[[events.elven_contact.choices]]
+id = "limited_alliance"
+text = "Propose limited cooperation against specific awnsheghlien"
+effects = { limited = true, elven_disposition = 15 }
+consequences = "Start small, build trust over time"
+oracle_prompt = "Will the elves accept limited engagement?"
+
+[events.alliance_crisis]
+id = "alliance_crisis"
+name = "The Breaking Point"
+act = 3
+turn_range = [38, 42]
+type = "story"
+mandatory = true
+
+[events.alliance_crisis.description]
+text = """
+The alliance is fracturing. A major defeat has shaken confidence. Avan and Boeruine
+blame each other. The Khinasi withdraw troops after a perceived slight. The Brecht
+demand unpayable sums to continue supply. The Rjurik want to focus on their own lands.
+
+Everything you have built threatens to collapse. The awnsheghlien sense weakness
+and press their attacks. This is the moment that will determine victory or defeat.
+"""
+
+[[events.alliance_crisis.choices]]
+id = "dramatic_gesture"
+text = "Make a dramatic personal sacrifice to reunite the alliance"
+effects = { sacrifice = true, alliance_restored = true }
+consequences = "Put everything on the line"
+oracle_prompt = "What sacrifice would be meaningful enough?"
+
+[[events.alliance_crisis.choices]]
+id = "brilliant_victory"
+text = "Win a decisive victory to restore confidence"
+effects = { military = true, risk = "high", alliance_restored = "if_successful" }
+consequences = "Success unites, failure destroys"
+oracle_prompt = "Can you achieve victory with reduced forces?"
+
+[[events.alliance_crisis.choices]]
+id = "address_grievances"
+text = "Call an emergency summit to address all grievances"
+effects = { diplomatic = true, time_cost = true }
+consequences = "Hear everyone out, find compromise"
+oracle_prompt = "Can you satisfy competing demands?"
+
+[[events.alliance_crisis.choices]]
+id = "accept_losses"
+text = "Accept some factions will leave and continue with the rest"
+effects = { pragmatic = true, alliance_reduced = true }
+consequences = "Better a smaller alliance that functions"
+oracle_prompt = "Who stays loyal to the reduced alliance?"
+
+[events.final_offensive]
+id = "final_offensive"
+name = "The Reckoning"
+act = 3
+turn = 48
+type = "story"
+mandatory = true
+
+[events.final_offensive.description]
+text = """
+The alliance - whatever remains of it - has one chance. A coordinated strike against
+the awnshegh leadership. If the Voice who coordinates them can be found and destroyed,
+the coalition will shatter. If not, the war will grind on until exhaustion claims
+the free peoples.
+
+Intelligence suggests the Voice meets with its lieutenants at a hidden location
+deep in hostile territory. This is the opportunity. This is the risk.
+"""
+
+[[events.final_offensive.choices]]
+id = "full_assault"
+text = "Launch full multi-front offensive to mask the true target"
+effects = { grand_strategy = true, resource_cost = "total" }
+consequences = "Everything committed to one throw of the dice"
+oracle_prompt = "Does the multi-front assault succeed?"
+
+[[events.final_offensive.choices]]
+id = "surgical_strike"
+text = "Send elite force directly at the Voice"
+effects = { special_ops = true, risk = "extreme" }
+consequences = "Small force, massive target"
+oracle_prompt = "Can an elite team penetrate awnshegh defenses?"
+
+[[events.final_offensive.choices]]
+id = "diplomatic_fracture"
+text = "Attempt to fracture the awnshegh coalition through negotiation"
+effects = { negotiation = true, awnshegh_contact = true }
+consequences = "If they can unite, they can be divided"
+oracle_prompt = "Can any awnshegh be turned or neutralized?"
+
+[[events.final_offensive.choices]]
+id = "defensive_posture"
+text = "Fortify and wait for the awnshegh coalition to fracture naturally"
+effects = { defensive = true, patience = true }
+consequences = "Let time be your ally"
+oracle_prompt = "Does the awnshegh coalition hold together?"
+
+# ============================================================================
+# VICTORY AND FAILURE CONDITIONS
+# ============================================================================
+
+[victory_conditions]
+primary = { type = "awnshegh_defeated", requirement = "Coordinating force destroyed, awnshegh coalition broken" }
+alternative_1 = { type = "lasting_alliance", requirement = "Alliance holds through end of war, peace treaty signed" }
+alternative_2 = { type = "defensive_victory", requirement = "All fronts stabilized, awnshegh forced to withdraw" }
+
+[failure_conditions]
+alliance_collapse = { trigger = "alliance_strength <= 0", description = "The alliance dissolves completely" }
+continental_conquest = { trigger = "fronts_lost >= 3", description = "The awnsheghlien overrun Cerilia" }
+coordinator_victory = { trigger = "voice_achieves_goals", description = "The awnshegh coalition triumphs" }
+
+# ============================================================================
+# ALLIANCE MECHANICS
+# ============================================================================
+
+[alliance]
+tracking = true
+max_members = 10
+
+[alliance.contribution_types]
+military = { weight = 30, description = "Armies and commanders" }
+economic = { weight = 25, description = "Gold and supplies" }
+magical = { weight = 20, description = "Wizards and realm magic" }
+intelligence = { weight = 15, description = "Spies and information" }
+diplomatic = { weight = 10, description = "Legitimacy and prestige" }
+
+[alliance.cohesion_factors]
+shared_victory = 10
+shared_defeat = -15
+internal_conflict = -20
+resolved_grievance = 15
+broken_promise = -30
+
+# ============================================================================
+# MULTI-FRONT WAR
+# ============================================================================
+
+[fronts]
+northern = { enemy = "Gorgon", allies_needed = ["Anuire", "Rjurik"], severity = "extreme" }
+eastern = { enemy = "Blood_Skull", allies_needed = ["Rjurik"], severity = "high" }
+southern = { enemy = "Serpent", allies_needed = ["Khinasi"], severity = "high" }
+internal = { enemy = "Spider", allies_needed = ["All"], severity = "moderate" }
+shadow = { enemy = "Various", allies_needed = ["Elves", "Wizards"], severity = "moderate" }
+
+[fronts.tracking]
+victory_points = 100  # Per front, lose at 0
+reinforcement_cost = 10  # Per turn to maintain
+collapse_consequence = "adjacent_fronts_-20"
+
+# ============================================================================
+# CAMPAIGN VARIABLES AND TRACKING
+# ============================================================================
+
+[tracking]
+variables = [
+    "alliance_strength",      # Overall coalition power
+    "fronts_active",          # Number of active war fronts
+    "awnshegh_coordination",  # Enemy coalition strength
+    "continental_awareness",  # How aware Cerilia is of threat
+    "anuire_disposition",     # Anuirean faction relations
+    "khinasi_disposition",    # Khinasi faction relations
+    "brecht_disposition",     # Brecht faction relations
+    "rjurik_disposition",     # Rjurik faction relations
+    "elven_disposition",      # Sidhelien faction relations
+    "coordinator_identified", # Whether the Voice is known
+]
+
+[tracking.thresholds]
+alliance_formed = { variable = "alliance_strength", above = 50, event = "formal_alliance_declared" }
+front_collapse = { variable = "any_front", below = 0, event = "front_lost" }
+coordinator_found = { variable = "coordinator_identified", above = 80, event = "voice_location_known" }
+
+# ============================================================================
+# CAMPAIGN REWARDS
+# ============================================================================
+
+[rewards]
+awnshegh_defeated = { title = "Savior of Cerilia", continental_prestige = 100, legend = true }
+lasting_alliance = { title = "Unifier", alliance_leader = true, peace_bonus = 50 }
+defensive_victory = { title = "Shield of the Free Peoples", military_renown = 40 }
+
+# ============================================================================
+# INTEGRATION HOOKS
+# ============================================================================
+
+[integration]
+oracle_table = "birthright/politics/diplomacy"
+domain_action_mods = { diplomacy = 3, alliance = 2, foreign_relations = 2 }
+bloodline_focus = ["Anduiras", "Brenna", "Masela"]
+connects_to = ["iron_throne", "gorgons_shadow", "chosen_bloodline"]
+requires_diplomacy_mode = true

@@ -1,0 +1,512 @@
+# The Iron Throne Campaign
+# Theme: Political intrigue, succession crisis in Anuire
+# Scope: Regent-level play focused on the empty Iron Throne
+
+[campaign]
+id = "iron_throne"
+name = "The Iron Throne"
+tagline = "The Throne of Anuire stands empty. Who shall claim it?"
+theme = "political_intrigue"
+difficulty = "standard"
+recommended_bloodline = ["Anduiras", "Brenna"]
+starting_season = "spring"
+starting_year = 551  # MR (Michaeline Reckoning)
+
+[campaign.description]
+short = "Navigate the deadly politics of succession as rival claimants vie for the Iron Throne."
+long = """
+For five centuries the Iron Throne has stood empty, a monument to the death of Michael Roele
+and the end of the Anuirean Empire. Now whispers grow louder - the time has come for a new
+Emperor to unite the fractured realms.
+
+You are a regent of Anuire, whether a mighty prince of ancient blood or a cunning newcomer
+risen through guile and steel. The great houses circle like wolves, each believing their
+claim strongest. Avan speaks of lineage, Boeruine of strength, Alamie of treachery dressed
+as diplomacy.
+
+To claim the throne you must master the game of courts and councils, forge alliances that
+will shatter others, and prove yourself worthy of Michael's legacy - or forge your own.
+"""
+
+[campaign.pillars]
+primary = "Diplomacy and political maneuvering triumph over brute force"
+secondary = "Every alliance has a price, every betrayal consequences"
+tone = "intrigue with moments of martial valor"
+stakes = "The future of Anuire itself"
+
+# ============================================================================
+# ACT STRUCTURE
+# ============================================================================
+
+[acts.act_1]
+name = "The Gathering Storm"
+description = "Establish your claim and assess the field of rivals"
+turn_range = [1, 12]  # Turns 1-12 (one game year)
+objectives = [
+    "Secure your home domain against internal threats",
+    "Make contact with at least two potential allies",
+    "Publicly declare your position on the succession"
+]
+completion_trigger = "player_declares_position"
+
+[acts.act_1.starting_state]
+player_influence = 0
+throne_stability = 50  # 0-100, lower = more chaos
+factions_declared = 0
+
+[acts.act_2]
+name = "The Dance of Crowns"
+description = "Build coalitions and undermine rivals"
+turn_range = [13, 30]
+objectives = [
+    "Secure the support of the Imperial Temple or College of Sorcery",
+    "Eliminate or neutralize at least one major rival",
+    "Control or influence three strategic provinces"
+]
+completion_trigger = "council_called"
+prerequisites = ["act_1_complete"]
+
+[acts.act_2.state_changes]
+throne_stability = -20  # Tensions escalate
+random_event_frequency = "elevated"
+
+[acts.act_3]
+name = "The Reckoning"
+description = "The final contest for the Iron Throne"
+turn_range = [31, 48]
+objectives = [
+    "Secure majority support in the Council of Regents",
+    "Defeat or submit your final rival",
+    "Claim the Iron Throne or accept another's claim"
+]
+completion_trigger = "throne_claimed"
+prerequisites = ["act_2_complete"]
+
+[acts.act_3.state_changes]
+throne_stability = -30
+war_likelihood = "high"
+
+# ============================================================================
+# KEY NPCS
+# ============================================================================
+
+[npcs.darien_avan]
+name = "Prince Darien Avan"
+title = "Prince of Avanil"
+role = "major_rival"
+bloodline = { derivation = "Anduiras", strength = "great", score = 45 }
+disposition_base = -10  # Competitive but not hostile initially
+
+[npcs.darien_avan.personality]
+traits = ["ambitious", "cultured", "patient"]
+approach = "legitimacy"  # Claims descent from Roele
+weakness = "pride"
+quote = "The blood of emperors flows in my veins. What flows in yours?"
+
+[npcs.darien_avan.goals]
+primary = "Claim the Iron Throne through recognized legitimacy"
+secondary = "Prevent Boeruine from gaining military supremacy"
+hidden = "Suppress knowledge of his ancestor's role in Deismaar"
+
+[npcs.darien_avan.resources]
+military_strength = "moderate"
+gold_reserves = "substantial"
+spy_network = "extensive"
+key_allies = ["Brosengae", "Taeghas"]
+
+[npcs.archduke_boeruine]
+name = "Archduke Aeric Boeruine"
+title = "Archduke of Boeruine"
+role = "major_rival"
+bloodline = { derivation = "Anduiras", strength = "great", score = 42 }
+disposition_base = -20  # More aggressive
+
+[npcs.archduke_boeruine.personality]
+traits = ["martial", "direct", "honorable"]
+approach = "strength"  # Believes strength makes right
+weakness = "impatience"
+quote = "The strong rule, the weak serve. It has always been thus."
+
+[npcs.archduke_boeruine.goals]
+primary = "Unite Anuire under strong military leadership"
+secondary = "Crush Avan's pretensions to imperial blood"
+hidden = "Fears his bloodline is weakening across generations"
+
+[npcs.archduke_boeruine.resources]
+military_strength = "overwhelming"
+gold_reserves = "moderate"
+spy_network = "minimal"
+key_allies = ["Talinie", "Cariele"]
+
+[npcs.duchess_tael]
+name = "Duchess Caliedhe Tael"
+title = "Duchess of Brosengae"
+role = "potential_ally"
+bloodline = { derivation = "Brenna", strength = "major", score = 35 }
+disposition_base = 15  # Open to alliance
+
+[npcs.duchess_tael.personality]
+traits = ["pragmatic", "diplomatic", "shrewd"]
+approach = "balance"  # Seeks to prevent any single power from dominating
+weakness = "indecision in crisis"
+quote = "The strongest position is often in the middle."
+
+[npcs.duchess_tael.goals]
+primary = "Prevent any tyrant from claiming absolute power"
+secondary = "Expand Brosengae's influence through trade"
+hidden = "Secretly negotiating with the Khinasi to open southern routes"
+
+[npcs.duchess_tael.resources]
+military_strength = "light"
+gold_reserves = "substantial"
+spy_network = "moderate"
+key_allies = ["Avanil", "Diemed"]
+
+[npcs.hierarch_diem]
+name = "Hierarch Rhobher Diem"
+title = "Hierarch of the Northern Imperial Temple"
+role = "kingmaker"
+bloodline = { derivation = "Anduiras", strength = "major", score = 38 }
+disposition_base = 0  # Neutral, must be courted
+
+[npcs.hierarch_diem.personality]
+traits = ["pious", "political", "calculating"]
+approach = "legitimacy"  # Supports whoever serves the faith
+weakness = "temple politics"
+quote = "Haelyn chooses emperors, not armies."
+
+[npcs.hierarch_diem.goals]
+primary = "Ensure the next emperor supports temple supremacy"
+secondary = "Heal the schism between temple factions"
+hidden = "Possesses documents that could delegitimize several claimants"
+
+[npcs.hierarch_diem.resources]
+military_strength = "temple_knights"
+gold_reserves = "vast"
+spy_network = "confessional"
+key_allies = ["All who kneel to Haelyn"]
+
+[npcs.the_spider]
+name = "The Spider"
+title = "Unknown"
+role = "hidden_antagonist"
+bloodline = { derivation = "Azrai", strength = "unknown", score = "unknown" }
+disposition_base = -50  # Secretly hostile to all
+
+[npcs.the_spider.personality]
+traits = ["patient", "manipulative", "invisible"]
+approach = "chaos"  # Profits from instability
+weakness = "overconfidence"
+quote = ""  # Never speaks directly
+
+[npcs.the_spider.goals]
+primary = "Prevent any resolution to the succession crisis"
+secondary = "Increase awnshegh influence over Anuire"
+hidden = "Seeks to corrupt the eventual winner"
+
+# ============================================================================
+# CAMPAIGN EVENTS
+# ============================================================================
+
+[events.opening_gambit]
+id = "opening_gambit"
+name = "The Opening Gambit"
+act = 1
+turn = 1
+type = "story"
+mandatory = true
+
+[events.opening_gambit.description]
+text = """
+Word reaches you that Prince Avan has called for a 'Council of Succession' to be held
+at the Imperial City. The invitation is addressed to all regents of ancient blood,
+though the Prince's intent seems more to position himself than seek consensus.
+
+The Archduke Boeruine has already publicly denounced the council as "Avanite theatrics."
+Other regents watch and wait to see who will attend and who will refuse.
+"""
+
+[[events.opening_gambit.choices]]
+id = "attend_openly"
+text = "Attend the council and present your own claim"
+effects = { avan_disposition = -5, visibility = 20, legitimacy = 10 }
+consequences = "You are now a declared player in the succession game"
+oracle_prompt = "Does Prince Avan welcome your presence or see you as a threat?"
+
+[[events.opening_gambit.choices]]
+id = "attend_as_observer"
+text = "Attend as an observer, making no declarations"
+effects = { avan_disposition = 5, visibility = 5, legitimacy = 0 }
+consequences = "You gather intelligence while remaining uncommitted"
+oracle_prompt = "Do you learn useful secrets at the council?"
+
+[[events.opening_gambit.choices]]
+id = "refuse_attend"
+text = "Refuse to attend, citing the council's illegitimacy"
+effects = { avan_disposition = -15, boeruine_disposition = 10, visibility = 10 }
+consequences = "You align yourself against Avan's faction"
+oracle_prompt = "Does Boeruine reach out to you as a potential ally?"
+
+[[events.opening_gambit.choices]]
+id = "send_proxy"
+text = "Send a representative to observe while you remain home"
+effects = { avan_disposition = 0, visibility = 0, spy_intel = 10 }
+consequences = "You learn what transpires without commitment"
+oracle_prompt = "Does your representative uncover any plots or secrets?"
+
+[events.boeruine_ultimatum]
+id = "boeruine_ultimatum"
+name = "The Archduke's Ultimatum"
+act = 1
+turn_range = [4, 8]
+type = "conditional"
+trigger = "player_visibility >= 15"
+
+[events.boeruine_ultimatum.description]
+text = """
+A herald arrives bearing the Archduke's personal seal. The message is blunt:
+
+"The succession will be decided by strength of arms, as Haelyn intended.
+Those who would oppose the natural order should consider their position
+carefully. Those who would stand with strength shall find reward."
+
+It is not quite a threat. Not quite an offer. But the implication is clear -
+Boeruine is assessing who will resist and who will submit.
+"""
+
+[[events.boeruine_ultimatum.choices]]
+id = "defiant_response"
+text = "Send a defiant response asserting your independence"
+effects = { boeruine_disposition = -20, legitimacy = 5, honor = 10 }
+consequences = "Boeruine marks you as an enemy to be dealt with"
+oracle_prompt = "Does Boeruine begin preparations to move against you?"
+
+[[events.boeruine_ultimatum.choices]]
+id = "diplomatic_response"
+text = "Respond diplomatically, neither accepting nor refusing"
+effects = { boeruine_disposition = -5, diplomacy_reputation = 5 }
+consequences = "You buy time, though Boeruine's patience is limited"
+oracle_prompt = "Does Boeruine accept your neutrality or press for commitment?"
+
+[[events.boeruine_ultimatum.choices]]
+id = "submit_terms"
+text = "Express interest in alliance on acceptable terms"
+effects = { boeruine_disposition = 15, avan_disposition = -10 }
+consequences = "You are drawn into Boeruine's orbit"
+oracle_prompt = "What terms does Boeruine demand for alliance?"
+
+[[events.boeruine_ultimatum.choices]]
+id = "ignore_message"
+text = "Simply ignore the message as beneath your notice"
+effects = { boeruine_disposition = -10, mystery = 5 }
+consequences = "Boeruine is uncertain whether you are foolish or have hidden strength"
+oracle_prompt = "Does your silence make Boeruine cautious or contemptuous?"
+
+[events.temple_schism]
+id = "temple_schism"
+name = "The Temple Schism"
+act = 2
+turn_range = [15, 20]
+type = "story"
+mandatory = true
+
+[events.temple_schism.description]
+text = """
+The Imperial Temple splits! Hierarch Diem of the north and Patriarch Agalmore of the
+south have excommunicated each other over the succession question. Each claims the
+authority to crown the next emperor.
+
+This is both crisis and opportunity. Whichever faction you support will grant you
+religious legitimacy - but the other will denounce you as a heretic.
+"""
+
+[[events.temple_schism.choices]]
+id = "support_diem"
+text = "Support Hierarch Diem and the Northern Temple"
+effects = { diem_disposition = 30, southern_temple = -30, legitimacy = 15 }
+consequences = "The Northern Temple endorses your claim"
+oracle_prompt = "Does Diem's support bring Talinie to your side?"
+
+[[events.temple_schism.choices]]
+id = "support_agalmore"
+text = "Support Patriarch Agalmore and the Southern Temple"
+effects = { diem_disposition = -30, southern_temple = 30, legitimacy = 15 }
+consequences = "The Southern Temple endorses your claim"
+oracle_prompt = "Does this win you Diemed's alliance?"
+
+[[events.temple_schism.choices]]
+id = "mediate"
+text = "Attempt to mediate and heal the schism"
+effects = { diem_disposition = 5, southern_temple = 5, legitimacy = 20 }
+consequences = "If successful, you become the unifying figure"
+difficulty = "hard"
+oracle_prompt = "Can you find common ground between the factions?"
+
+[[events.temple_schism.choices]]
+id = "exploit_chaos"
+text = "Exploit the chaos to weaken temple influence entirely"
+effects = { diem_disposition = -15, southern_temple = -15, secular_support = 20 }
+consequences = "The guilds and secular lords support your pragmatism"
+oracle_prompt = "Does the Sword Mage offer you an alternative source of legitimacy?"
+
+[events.assassination_attempt]
+id = "assassination_attempt"
+name = "Shadows in the Night"
+act = 2
+turn_range = [18, 28]
+type = "conditional"
+trigger = "player_visibility >= 30"
+
+[events.assassination_attempt.description]
+text = """
+You wake to sounds of combat. Your guards are fighting for their lives against
+black-clad figures who move like shadows. This is no common attack - these are
+professional killers sent by someone who fears your rise.
+
+You have moments to act before the assassins reach your chambers.
+"""
+
+[[events.assassination_attempt.choices]]
+id = "stand_fight"
+text = "Arm yourself and fight alongside your guards"
+effects = { honor = 15, risk = "high" }
+consequences = "Your personal valor becomes legendary - if you survive"
+oracle_prompt = "Do you defeat the assassins through personal combat?"
+
+[[events.assassination_attempt.choices]]
+id = "escape_tunnels"
+text = "Use the secret passages to escape"
+effects = { survival = "guaranteed", honor = -5 }
+consequences = "You live, but some question your courage"
+oracle_prompt = "Do you identify any clues about who sent the assassins?"
+
+[[events.assassination_attempt.choices]]
+id = "use_bloodline"
+text = "Invoke your blood abilities against the attackers"
+effects = { bloodline_revealed = true, terror = 15 }
+consequences = "Your enemies now know the extent of your divine power"
+oracle_prompt = "Does your bloodline ability manifest in unexpected ways?"
+
+[[events.assassination_attempt.choices]]
+id = "call_for_aid"
+text = "Rally your household and call for reinforcements"
+effects = { loyalty_test = true, survival = "likely" }
+consequences = "You learn who in your household is truly loyal"
+oracle_prompt = "Does everyone respond to your call, or do some hesitate?"
+
+[events.final_council]
+id = "final_council"
+name = "The Council of Crowns"
+act = 3
+turn = 40
+type = "story"
+mandatory = true
+
+[events.final_council.description]
+text = """
+At last, the great lords of Anuire gather in the Imperial City. Whoever emerges
+from this council with majority support will have the strongest claim to the
+Iron Throne - though claims mean little without the power to enforce them.
+
+The factions are crystallized: Avan and his allies, Boeruine and his, and those
+who remain uncommitted. Where do you stand as the final votes are cast?
+"""
+
+[[events.final_council.choices]]
+id = "claim_throne"
+text = "Put forward your own claim to the throne"
+effects = { legitimacy_check = true, all_factions_react = true }
+prerequisites = ["legitimacy >= 40", "allies >= 3"]
+consequences = "You declare yourself a candidate for emperor"
+oracle_prompt = "How many lords support your claim?"
+
+[[events.final_council.choices]]
+id = "support_avan"
+text = "Declare support for Prince Avan"
+effects = { avan_disposition = 40, boeruine_disposition = -30 }
+consequences = "You become a kingmaker for Avan"
+oracle_prompt = "Does Avan promise you a position in his empire?"
+
+[[events.final_council.choices]]
+id = "support_boeruine"
+text = "Declare support for Archduke Boeruine"
+effects = { boeruine_disposition = 40, avan_disposition = -30 }
+consequences = "You ally with strength"
+oracle_prompt = "Does Boeruine honor your alliance, or see you as subordinate?"
+
+[[events.final_council.choices]]
+id = "oppose_all"
+text = "Oppose all candidates and call for delay"
+effects = { chaos = 20, independent_reputation = 20 }
+consequences = "You prevent any resolution, for now"
+oracle_prompt = "Does this make you enemies of all, or create a third faction?"
+
+# ============================================================================
+# VICTORY AND FAILURE CONDITIONS
+# ============================================================================
+
+[victory_conditions]
+primary = { type = "claim_throne", requirement = "Iron Throne claimed by player" }
+alternative_1 = { type = "kingmaker", requirement = "Allied candidate claims throne, player gains Chancellor position" }
+alternative_2 = { type = "survivor", requirement = "Maintain independence through Act 3 with domain intact" }
+
+[failure_conditions]
+domain_loss = { trigger = "player_provinces == 0", description = "Your domain is conquered" }
+assassination = { trigger = "assassination_successful", description = "You are killed by enemies" }
+submission = { trigger = "player_submits_unconditionally", description = "You bend the knee without terms" }
+exile = { trigger = "player_exiled", description = "You are forced to flee Anuire" }
+
+# ============================================================================
+# CAMPAIGN VARIABLES AND TRACKING
+# ============================================================================
+
+[tracking]
+variables = [
+    "throne_stability",      # 0-100, affects random event severity
+    "player_visibility",     # 0-100, how well-known the player is
+    "legitimacy",            # 0-100, strength of player's claim
+    "player_influence",      # Points tracking political power
+    "avan_disposition",      # -100 to +100
+    "boeruine_disposition",  # -100 to +100
+    "diem_disposition",      # -100 to +100
+    "tael_disposition",      # -100 to +100
+    "spider_attention",      # 0-100, higher = more interference
+]
+
+[tracking.thresholds]
+war_declaration = { variable = "boeruine_disposition", below = -50, event = "boeruine_declares_war" }
+alliance_offer = { variable = "avan_disposition", above = 50, event = "avan_offers_alliance" }
+temple_support = { variable = "diem_disposition", above = 40, event = "diem_endorses_player" }
+spider_intervention = { variable = "spider_attention", above = 70, event = "spider_moves_against_player" }
+
+# ============================================================================
+# RANDOM EVENT MODIFIERS
+# ============================================================================
+
+[random_events]
+base_chance = 30  # % chance per turn of additional random event
+chaos_modifier = 2  # Additional % per point of session chaos
+
+[random_events.pools]
+act_1 = ["diplomatic_overture", "trade_dispute", "border_skirmish", "court_rumor", "bloodline_vision"]
+act_2 = ["assassination_plot", "alliance_collapse", "military_buildup", "temple_demand", "guild_strike"]
+act_3 = ["war_declaration", "betrayal", "divine_sign", "final_ultimatum", "unexpected_ally"]
+
+# ============================================================================
+# CAMPAIGN REWARDS
+# ============================================================================
+
+[rewards]
+throne_claimed = { title = "Emperor/Empress of Anuire", regency_bonus = 50, gold_bonus = 100 }
+kingmaker = { title = "Lord/Lady Chancellor", regency_bonus = 25, gold_bonus = 40 }
+survivor = { title = "Prince/Princess of [Domain]", regency_bonus = 10, gold_bonus = 20 }
+
+# ============================================================================
+# INTEGRATION HOOKS
+# ============================================================================
+
+[integration]
+oracle_table = "birthright/politics/succession"
+domain_action_mods = { diplomacy = 2, espionage = 1, agitate = 1 }
+bloodline_focus = ["Anduiras", "Brenna"]  # Most relevant derivations
+connects_to = ["gorgons_shadow", "web_of_shadows"]  # Other campaigns affected

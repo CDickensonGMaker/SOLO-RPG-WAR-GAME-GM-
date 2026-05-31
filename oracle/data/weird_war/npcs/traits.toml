@@ -1,0 +1,125 @@
+# NPC Traits - Weird War Setting
+# Personality traits reflecting the psychological toll of supernatural warfare
+
+[traits]
+entries = [
+  # Trauma and Shell Shock
+  { text = "Shell-shocked and prone to flashbacks", weight = 1 },
+  { text = "Haunted by specific faces of the dead", weight = 1 },
+  { text = "Twitches uncontrollably at loud noises", weight = 1 },
+  { text = "Cannot sleep without nightmares", weight = 1 },
+  { text = "Thousand-yard stare that never quite focuses", weight = 1 },
+  { text = "Speaks to companions only they can see", weight = 1 },
+  { text = "Obsessively cleans weapons to cope with anxiety", weight = 1 },
+  { text = "Has developed a pronounced stutter since the incident", weight = 1 },
+  { text = "Freezes completely in moments of extreme stress", weight = 1 },
+  { text = "Experiences time differently, moments stretching or compressing", weight = 1 },
+
+  # Faith and Religion
+  { text = "Devout and draws strength from prayer", weight = 1 },
+  { text = "Lost faith after witnessing the unnatural", weight = 1 },
+  { text = "Carries blessed items compulsively", weight = 1 },
+  { text = "Converted to a new religion after being saved by divine intervention", weight = 1 },
+  { text = "Recites scripture constantly under breath", weight = 1 },
+  { text = "Believes they are on a holy mission", weight = 1 },
+  { text = "Tormented by religious doubt", weight = 1 },
+  { text = "Sees signs and omens everywhere", weight = 1 },
+  { text = "Has begun worshipping something other than God", weight = 1 },
+  { text = "Militant atheist despite supernatural experiences", weight = 1 },
+
+  # Cynicism and Worldview
+  { text = "Bitterly cynical about command and country", weight = 1 },
+  { text = "Dark sense of humor as a coping mechanism", weight = 1 },
+  { text = "Has abandoned all belief in human goodness", weight = 1 },
+  { text = "Sardonic and quick with cutting remarks", weight = 1 },
+  { text = "Treats everything as a transaction", weight = 1 },
+  { text = "Expects betrayal from everyone", weight = 1 },
+  { text = "No longer distinguishes between sides as morally different", weight = 1 },
+  { text = "Views all ideology as a lie told by those in power", weight = 1 },
+  { text = "Believes death is the only honest constant", weight = 1 },
+  { text = "Laughs at inappropriate moments", weight = 1 },
+
+  # Courage and Leadership
+  { text = "Impossibly brave in the face of horror", weight = 1 },
+  { text = "Natural leader who others instinctively follow", weight = 1 },
+  { text = "Calm under fire, voice of reason in chaos", weight = 1 },
+  { text = "First to volunteer for dangerous missions", weight = 1 },
+  { text = "Protective of subordinates to a fault", weight = 1 },
+  { text = "Inspires others through personal example", weight = 1 },
+  { text = "Remains cheerful despite everything", weight = 1 },
+  { text = "Stubborn refusal to surrender or retreat", weight = 1 },
+  { text = "Radiates quiet confidence", weight = 1 },
+  { text = "Takes responsibility for others' welfare", weight = 1 },
+
+  # Fear and Cowardice
+  { text = "Paralyzed by specific phobia developed during the war", weight = 1 },
+  { text = "Will sacrifice others to ensure own survival", weight = 1 },
+  { text = "Freezes when confronted with supernatural threats", weight = 1 },
+  { text = "Constantly looking for escape routes", weight = 1 },
+  { text = "Trembling hands that betray inner terror", weight = 1 },
+  { text = "Refuses to be alone, ever", weight = 1 },
+  { text = "Hides cowardice behind bluster and aggression", weight = 1 },
+  { text = "Has fled from battle and lives with the shame", weight = 1 },
+  { text = "Terrified of the dark since what happened", weight = 1 },
+  { text = "Cannot face death and goes to extremes to avoid it", weight = 1 },
+
+  # Obsession and Fixation
+  { text = "Obsessed with a specific supernatural mystery", weight = 1 },
+  { text = "Collects trophies from kills in disturbing fashion", weight = 1 },
+  { text = "Fixated on returning home at any cost", weight = 1 },
+  { text = "Cannot stop researching forbidden knowledge", weight = 1 },
+  { text = "Driven by revenge against a specific enemy", weight = 1 },
+  { text = "Keeps meticulous records of everything witnessed", weight = 1 },
+  { text = "Hoards supplies and resources compulsively", weight = 1 },
+  { text = "Obsessed with a lost love or family member", weight = 1 },
+  { text = "Cannot rest until a specific mission is complete", weight = 1 },
+  { text = "Addicted to morphine or alcohol", weight = 1 },
+
+  # Supernatural Sensitivity
+  { text = "Can sense when supernatural entities are nearby", weight = 1 },
+  { text = "Dreams of events before they happen", weight = 1 },
+  { text = "Hears whispers from the dead", weight = 1 },
+  { text = "Has glimpsed beyond the veil and was changed", weight = 1 },
+  { text = "Attracted to cursed objects unconsciously", weight = 1 },
+  { text = "Animals react strangely in their presence", weight = 1 },
+  { text = "Casts no shadow in certain lights", weight = 1 },
+  { text = "Touched by something that left a mark", weight = 1 },
+  { text = "Can see things others cannot", weight = 1 },
+  { text = "Immune to certain supernatural effects for unknown reasons", weight = 1 },
+
+  # Professional and Skilled
+  { text = "Expert in ancient languages and texts", weight = 1 },
+  { text = "Photographic memory for details", weight = 1 },
+  { text = "Natural talent for fieldcraft and survival", weight = 1 },
+  { text = "Skilled mechanic who can fix anything", weight = 1 },
+  { text = "Medical knowledge beyond formal training", weight = 1 },
+  { text = "Linguist who speaks multiple languages", weight = 1 },
+  { text = "Expert marksman with supernatural accuracy", weight = 1 },
+  { text = "Knows local area like the back of their hand", weight = 1 },
+  { text = "Talented forger and counterfeiter", weight = 1 },
+  { text = "Master of infiltration and disguise", weight = 1 },
+
+  # Social and Interpersonal
+  { text = "Charismatic and silver-tongued", weight = 1 },
+  { text = "Completely socially withdrawn", weight = 1 },
+  { text = "Pathological liar who cannot help but deceive", weight = 1 },
+  { text = "Brutally honest to the point of cruelty", weight = 1 },
+  { text = "Protective of the innocent and vulnerable", weight = 1 },
+  { text = "Sadistic streak that emerges in combat", weight = 1 },
+  { text = "Genuinely kind despite everything witnessed", weight = 1 },
+  { text = "Manipulative and always working an angle", weight = 1 },
+  { text = "Loyal to a fault to chosen companions", weight = 1 },
+  { text = "Cannot trust anyone, not even proven allies", weight = 1 },
+
+  # Unique Quirks
+  { text = "Never removes a specific lucky charm", weight = 1 },
+  { text = "Refuses to speak their real name", weight = 1 },
+  { text = "Eats only specific foods due to superstition", weight = 1 },
+  { text = "Carries a journal with encrypted entries", weight = 1 },
+  { text = "Speaks to a deceased person as if still alive", weight = 1 },
+  { text = "Has adopted a strange routine that must be completed daily", weight = 1 },
+  { text = "Collects dog tags from the fallen", weight = 1 },
+  { text = "Sings quietly while doing dangerous tasks", weight = 1 },
+  { text = "Never walks under doorways without knocking", weight = 1 },
+  { text = "Keeps count of something silently", weight = 1 },
+]

@@ -1,0 +1,850 @@
+# Warhammer: The Old World - Dwarfs
+# Ancient mountain folk with grudges older than human memory
+
+[faction]
+name = "Dwarfs"
+description = "The Dwarfs are an ancient and proud race who dwell in mountain strongholds. Master craftsmen and warriors, they maintain the Book of Grudges recording every wrong done to their kind"
+playstyle = "Defensive gunline with stubborn infantry and powerful artillery. Grind enemies down"
+strengths = ["Excellent shooting and artillery", "Very tough infantry", "Runic magic items", "Immune to Psychology on Lords/Heroes", "High Leadership"]
+weaknesses = ["Slow movement (M3)", "No cavalry", "No wizards", "Limited mobility", "Vulnerable to fast armies"]
+lore_notes = "The Karaz Ankor (Dwarf empire) once spanned the World's Edge Mountains. Now reduced, Dwarfs fight to reclaim lost holds and settle ancient grudges"
+
+# =============================================================================
+# LORDS
+# =============================================================================
+
+[[units]]
+name = "Dwarf Lord"
+type = "character"
+category = "Lords"
+points = 105
+models = "1"
+tactical_role = "combat_commander"
+threat_level = "very_high"
+preferred_targets = ["enemy_characters", "monsters"]
+weaknesses = ["mobility"]
+special_rules = ["Ancestral Grudge", "Resolute", "Relentless", "Shieldwall"]
+keywords = ["Character", "Infantry", "Dwarf", "Lord"]
+equipment = ["Great weapon or hand weapon", "Gromril armor"]
+options = ["May take runic items up to 150 points", "May take Shieldbearers (+40 pts)", "May take Oathstone (+25 pts)"]
+
+[units.stats]
+M = 3
+WS = 7
+BS = 4
+S = 4
+T = 5
+W = 3
+I = 4
+A = 4
+Ld = 10
+Sv = "4+"
+
+[[units]]
+name = "Runelord"
+type = "character"
+category = "Lords"
+points = 120
+models = "1"
+tactical_role = "runic_support"
+threat_level = "high"
+preferred_targets = ["magic_users"]
+weaknesses = ["powerful_characters"]
+special_rules = ["Runesmith", "Forgefire", "Ancestral Grudge"]
+keywords = ["Character", "Infantry", "Dwarf", "Lord", "Runesmith"]
+equipment = ["Hand weapon", "Gromril armor"]
+options = ["May take runic items up to 150 points", "May take Anvil of Doom (+175 pts)"]
+
+[units.stats]
+M = 3
+WS = 5
+BS = 3
+S = 4
+T = 5
+W = 3
+I = 3
+A = 2
+Ld = 10
+Sv = "4+"
+
+[[units]]
+name = "Daemon Slayer"
+type = "character"
+category = "Lords"
+points = 150
+models = "1"
+tactical_role = "monster_hunter"
+threat_level = "very_high"
+preferred_targets = ["monsters", "daemons", "characters"]
+weaknesses = ["mass_infantry"]
+special_rules = ["Slayer", "Deathwish", "Dragon Slayer", "Daemon Slayer", "Unbreakable"]
+keywords = ["Character", "Infantry", "Dwarf", "Lord", "Slayer"]
+equipment = ["Two hand weapons or great weapon"]
+
+[units.stats]
+M = 3
+WS = 7
+BS = 3
+S = 4
+T = 5
+W = 3
+I = 5
+A = 5
+Ld = 10
+Sv = "-"
+
+# =============================================================================
+# HEROES
+# =============================================================================
+
+[[units]]
+name = "Thane"
+type = "character"
+category = "Heroes"
+points = 50
+models = "1"
+tactical_role = "support_commander"
+threat_level = "medium"
+preferred_targets = ["enemy_champions"]
+weaknesses = ["powerful_characters"]
+special_rules = ["Ancestral Grudge", "Resolute", "Relentless"]
+keywords = ["Character", "Infantry", "Dwarf", "Hero"]
+equipment = ["Hand weapon", "Gromril armor"]
+options = ["May carry Battle Standard (+25 pts)", "May take runic items up to 75 points"]
+
+[units.stats]
+M = 3
+WS = 6
+BS = 4
+S = 4
+T = 5
+W = 2
+I = 3
+A = 3
+Ld = 9
+Sv = "4+"
+
+[[units]]
+name = "Runesmith"
+type = "character"
+category = "Heroes"
+points = 70
+models = "1"
+tactical_role = "runic_support"
+threat_level = "medium"
+preferred_targets = ["magic_users"]
+weaknesses = ["powerful_characters"]
+special_rules = ["Runesmith", "Forgefire", "Ancestral Grudge"]
+keywords = ["Character", "Infantry", "Dwarf", "Hero", "Runesmith"]
+equipment = ["Hand weapon", "Gromril armor"]
+options = ["May take runic items up to 75 points"]
+
+[units.stats]
+M = 3
+WS = 4
+BS = 3
+S = 4
+T = 4
+W = 2
+I = 2
+A = 1
+Ld = 9
+Sv = "4+"
+
+[[units]]
+name = "Dragon Slayer"
+type = "character"
+category = "Heroes"
+points = 50
+models = "1"
+tactical_role = "monster_hunter"
+threat_level = "medium"
+preferred_targets = ["monsters", "characters"]
+weaknesses = ["mass_attacks"]
+special_rules = ["Slayer", "Deathwish", "Dragon Slayer", "Unbreakable"]
+keywords = ["Character", "Infantry", "Dwarf", "Hero", "Slayer"]
+equipment = ["Two hand weapons or great weapon"]
+
+[units.stats]
+M = 3
+WS = 5
+BS = 3
+S = 4
+T = 4
+W = 2
+I = 4
+A = 3
+Ld = 10
+Sv = "-"
+
+[[units]]
+name = "Master Engineer"
+type = "character"
+category = "Heroes"
+points = 70
+models = "1"
+tactical_role = "war_machine_support"
+threat_level = "low"
+preferred_targets = ["war_machines"]
+weaknesses = ["close_combat"]
+special_rules = ["Artillery Expert", "Entrenchment"]
+keywords = ["Character", "Infantry", "Dwarf", "Hero", "Engineer"]
+equipment = ["Hand weapon", "Light armor"]
+options = ["May take brace of pistols (+6 pts)", "May take runic items up to 50 points"]
+
+[units.stats]
+M = 3
+WS = 4
+BS = 4
+S = 3
+T = 4
+W = 2
+I = 2
+A = 1
+Ld = 9
+Sv = "6+"
+
+# =============================================================================
+# CORE UNITS
+# =============================================================================
+
+[[units]]
+name = "Dwarf Warriors"
+type = "infantry"
+category = "Core"
+points = 8
+models = "10-40"
+tactical_role = "anvil"
+threat_level = "medium"
+preferred_targets = ["light_infantry"]
+weaknesses = ["cavalry_flanks", "shooting"]
+special_rules = ["Resolute", "Relentless", "Shieldwall"]
+keywords = ["Infantry", "Dwarf", "Core"]
+equipment = ["Hand weapon", "Heavy armor", "Shield"]
+options = ["May swap for great weapons (+2 pts/model)", "May add musician (+5 pts)", "May add standard bearer (+10 pts)"]
+
+[units.stats]
+M = 3
+WS = 4
+BS = 3
+S = 3
+T = 4
+W = 1
+I = 2
+A = 1
+Ld = 9
+Sv = "4+"
+
+[[units]]
+name = "Longbeards"
+type = "infantry"
+category = "Core"
+points = 12
+models = "10-30"
+tactical_role = "elite_anvil"
+threat_level = "medium"
+preferred_targets = ["elite_infantry"]
+weaknesses = ["cavalry_flanks"]
+special_rules = ["Resolute", "Relentless", "Old Grumblers", "Immune to Psychology", "Shieldwall"]
+keywords = ["Infantry", "Dwarf", "Core", "Longbeard"]
+equipment = ["Hand weapon", "Heavy armor", "Shield"]
+options = ["May swap for great weapons (+2 pts/model)", "May add musician (+5 pts)", "May add standard bearer (+10 pts)", "May take magic standard up to 75 pts"]
+
+[units.stats]
+M = 3
+WS = 5
+BS = 3
+S = 4
+T = 4
+W = 1
+I = 2
+A = 1
+Ld = 9
+Sv = "4+"
+
+[[units]]
+name = "Quarrellers"
+type = "infantry"
+category = "Core"
+points = 11
+models = "10-20"
+tactical_role = "ranged_infantry"
+threat_level = "medium"
+preferred_targets = ["light_targets", "cavalry"]
+weaknesses = ["close_combat_specialists"]
+special_rules = ["Resolute", "Relentless", "Move or Fire"]
+keywords = ["Infantry", "Dwarf", "Core", "Crossbow"]
+equipment = ["Crossbow", "Hand weapon", "Light armor"]
+options = ["May add shields (+1 pt/model)", "May add musician (+5 pts)", "May add standard bearer (+10 pts)"]
+
+[units.stats]
+M = 3
+WS = 4
+BS = 3
+S = 3
+T = 4
+W = 1
+I = 2
+A = 1
+Ld = 9
+Sv = "6+"
+
+[[units.weapons]]
+name = "Dwarf Crossbow"
+range = "30\""
+strength = "4"
+ap = "0"
+damage = "1"
+abilities = ["Move or Fire"]
+
+[[units]]
+name = "Thunderers"
+type = "infantry"
+category = "Core"
+points = 12
+models = "10-20"
+tactical_role = "ranged_infantry"
+threat_level = "high"
+preferred_targets = ["armored_targets"]
+weaknesses = ["close_combat"]
+special_rules = ["Resolute", "Relentless", "Move or Fire"]
+keywords = ["Infantry", "Dwarf", "Core", "Gunpowder"]
+equipment = ["Dwarf handgun", "Hand weapon", "Light armor"]
+options = ["May add shields (+1 pt/model)", "May add musician (+5 pts)"]
+
+[units.stats]
+M = 3
+WS = 4
+BS = 3
+S = 3
+T = 4
+W = 1
+I = 2
+A = 1
+Ld = 9
+Sv = "6+"
+
+[[units.weapons]]
+name = "Dwarf Handgun"
+range = "24\""
+strength = "4"
+ap = "1"
+damage = "1"
+abilities = ["Armor Piercing (1)", "Move or Fire"]
+
+# =============================================================================
+# SPECIAL UNITS
+# =============================================================================
+
+[[units]]
+name = "Hammerers"
+type = "infantry"
+category = "Special"
+points = 14
+models = "10-30"
+tactical_role = "elite_infantry"
+threat_level = "very_high"
+preferred_targets = ["heavy_infantry", "monstrous_infantry"]
+weaknesses = ["mass_shooting"]
+special_rules = ["Resolute", "Relentless", "Stubborn", "Bodyguard"]
+keywords = ["Infantry", "Dwarf", "Special", "Hammerer"]
+equipment = ["Great hammer", "Heavy armor"]
+options = ["May add shields (+1 pt/model)", "May add musician (+5 pts)", "May add standard bearer (+10 pts)", "May take magic standard up to 75 pts"]
+
+[units.stats]
+M = 3
+WS = 5
+BS = 3
+S = 4
+T = 4
+W = 1
+I = 2
+A = 1
+Ld = 9
+Sv = "5+"
+
+[[units.weapons]]
+name = "Great Hammer"
+range = "Melee"
+strength = "+2"
+ap = "2"
+damage = "1"
+abilities = ["Requires two hands", "Always Strikes Last", "Armor Piercing (2)"]
+
+[[units]]
+name = "Ironbreakers"
+type = "infantry"
+category = "Special"
+points = 14
+models = "10-30"
+tactical_role = "elite_anvil"
+threat_level = "high"
+preferred_targets = ["monsters", "elite_infantry"]
+weaknesses = ["mass_attacks"]
+special_rules = ["Resolute", "Relentless", "Shieldwall", "Immune to Psychology"]
+keywords = ["Infantry", "Dwarf", "Special", "Ironbreaker"]
+equipment = ["Hand weapon", "Gromril armor", "Shield"]
+options = ["May take Cinderblast Bombs (+10 pts)", "May add musician (+5 pts)", "May add standard bearer (+10 pts)", "May take magic standard up to 75 pts"]
+
+[units.stats]
+M = 3
+WS = 5
+BS = 3
+S = 4
+T = 4
+W = 1
+I = 2
+A = 1
+Ld = 10
+Sv = "3+"
+
+[[units]]
+name = "Slayers"
+type = "infantry"
+category = "Special"
+points = 12
+models = "10-30"
+tactical_role = "monster_hunters"
+threat_level = "high"
+preferred_targets = ["monsters", "monstrous_infantry"]
+weaknesses = ["mass_shooting"]
+special_rules = ["Slayer", "Deathwish", "Unbreakable"]
+keywords = ["Infantry", "Dwarf", "Special", "Slayer"]
+equipment = ["Two hand weapons or great weapon"]
+options = ["May add musician (+5 pts)", "May add Giant Slayer (+5 pts)"]
+
+[units.stats]
+M = 3
+WS = 4
+BS = 3
+S = 3
+T = 4
+W = 1
+I = 3
+A = 1
+Ld = 10
+Sv = "-"
+
+[[units]]
+name = "Miners"
+type = "infantry"
+category = "Special"
+points = 10
+models = "10-20"
+tactical_role = "ambushers"
+threat_level = "medium"
+preferred_targets = ["war_machines", "isolated_units"]
+weaknesses = ["cavalry"]
+special_rules = ["Resolute", "Relentless", "Underground Advance"]
+keywords = ["Infantry", "Dwarf", "Special"]
+equipment = ["Great weapon", "Heavy armor"]
+options = ["May take blasting charges (+5 pts)", "May add steam drill (+25 pts)"]
+
+[units.stats]
+M = 3
+WS = 4
+BS = 3
+S = 3
+T = 4
+W = 1
+I = 2
+A = 1
+Ld = 9
+Sv = "5+"
+
+[[units]]
+name = "Cannon"
+type = "warmachine"
+category = "Special"
+points = 90
+models = "1 cannon, 3 crew"
+tactical_role = "artillery"
+threat_level = "very_high"
+preferred_targets = ["monsters", "cavalry", "characters"]
+weaknesses = ["fast_units", "misfire"]
+special_rules = ["Move or Fire"]
+keywords = ["War Machine", "Dwarf", "Special", "Gunpowder"]
+equipment = ["Hand weapons"]
+
+[units.stats]
+M = "-"
+WS = 4
+BS = 3
+S = 3
+T = 7
+W = 3
+I = 2
+A = "-"
+Ld = 9
+Sv = "-"
+
+[[units.weapons]]
+name = "Dwarf Cannon"
+range = "48\""
+strength = "10"
+ap = "6"
+damage = "D6"
+abilities = ["Armor Piercing (6)", "Multiple Wounds (D6)", "Bounce through ranks"]
+
+[[units]]
+name = "Grudge Thrower"
+type = "warmachine"
+category = "Special"
+points = 80
+models = "1 stone thrower, 3 crew"
+tactical_role = "artillery"
+threat_level = "high"
+preferred_targets = ["ranked_infantry", "cavalry_blocks"]
+weaknesses = ["fast_units"]
+special_rules = ["Move or Fire", "Indirect Fire"]
+keywords = ["War Machine", "Dwarf", "Special"]
+equipment = ["Hand weapons"]
+
+[units.stats]
+M = "-"
+WS = 4
+BS = 3
+S = 3
+T = 7
+W = 3
+I = 2
+A = "-"
+Ld = 9
+Sv = "-"
+
+[[units.weapons]]
+name = "Grudge Thrower"
+range = "12-60\""
+strength = "4(9)"
+ap = "2(5)"
+damage = "1(D6)"
+abilities = ["Large Blast (5\")", "Direct hit S9 AP5 D6 wounds", "Indirect Fire"]
+
+[[units]]
+name = "Bolt Thrower"
+type = "warmachine"
+category = "Special"
+points = 45
+models = "1 bolt thrower, 3 crew"
+tactical_role = "anti_monster"
+threat_level = "medium"
+preferred_targets = ["monsters", "chariots", "cavalry"]
+weaknesses = ["massed_infantry"]
+special_rules = ["Move or Fire"]
+keywords = ["War Machine", "Dwarf", "Special"]
+equipment = ["Hand weapons"]
+
+[units.stats]
+M = "-"
+WS = 4
+BS = 3
+S = 3
+T = 7
+W = 3
+I = 2
+A = "-"
+Ld = 9
+Sv = "-"
+
+[[units.weapons]]
+name = "Dwarf Bolt Thrower"
+range = "48\""
+strength = "6"
+ap = "2"
+damage = "D3"
+abilities = ["Multiple Wounds (D3)"]
+
+[[units]]
+name = "Gyrocopter"
+type = "warmachine"
+category = "Special"
+points = 80
+models = "1"
+tactical_role = "harasser"
+threat_level = "medium"
+preferred_targets = ["war_machines", "lone_characters", "skirmishers"]
+weaknesses = ["massed_shooting", "flyers"]
+special_rules = ["Fly", "Armored Copter"]
+keywords = ["War Machine", "Dwarf", "Special", "Fly"]
+equipment = ["Steam gun"]
+
+[units.stats]
+M = "fly"
+WS = 4
+BS = 3
+S = 4
+T = 5
+W = 3
+I = 2
+A = 2
+Ld = 9
+Sv = "4+"
+
+[[units.weapons]]
+name = "Steam Gun"
+range = "Template"
+strength = "3"
+ap = "0"
+damage = "1"
+abilities = ["Flaming Attacks"]
+
+# =============================================================================
+# RARE UNITS
+# =============================================================================
+
+[[units]]
+name = "Irondrakes"
+type = "infantry"
+category = "Rare"
+points = 15
+models = "10-20"
+tactical_role = "anti_armor"
+threat_level = "very_high"
+preferred_targets = ["heavy_infantry", "monstrous_infantry", "cavalry"]
+weaknesses = ["fast_cavalry", "flanking"]
+special_rules = ["Resolute", "Relentless", "Immune to Psychology", "Move or Fire"]
+keywords = ["Infantry", "Dwarf", "Rare"]
+equipment = ["Drakefire pistol and Drakegun", "Gromril armor"]
+options = ["May upgrade to Trollhammer Torpedo (+5 pts/model)"]
+
+[units.stats]
+M = 3
+WS = 5
+BS = 3
+S = 4
+T = 4
+W = 1
+I = 2
+A = 1
+Ld = 10
+Sv = "3+"
+
+[[units.weapons]]
+name = "Drakegun"
+range = "18\""
+strength = "5"
+ap = "2"
+damage = "1"
+abilities = ["Armor Piercing (2)", "Flaming Attacks", "Dwarf-crafted"]
+
+[[units]]
+name = "Organ Gun"
+type = "warmachine"
+category = "Rare"
+points = 120
+models = "1 organ gun, 3 crew"
+tactical_role = "anti_infantry"
+threat_level = "extreme"
+preferred_targets = ["ranked_infantry", "monstrous_infantry"]
+weaknesses = ["misfire", "close_combat"]
+special_rules = ["Move or Fire"]
+keywords = ["War Machine", "Dwarf", "Rare", "Gunpowder"]
+equipment = ["Hand weapons"]
+
+[units.stats]
+M = "-"
+WS = 4
+BS = 3
+S = 3
+T = 7
+W = 3
+I = 2
+A = "-"
+Ld = 9
+Sv = "-"
+
+[[units.weapons]]
+name = "Organ Gun"
+range = "30\""
+strength = "5"
+ap = "2"
+damage = "1"
+abilities = ["Armor Piercing (2)", "Artillery dice x2 shots", "Misfire on double"]
+
+[[units]]
+name = "Flame Cannon"
+type = "warmachine"
+category = "Rare"
+points = 140
+models = "1 flame cannon, 3 crew"
+tactical_role = "anti_horde"
+threat_level = "extreme"
+preferred_targets = ["massed_infantry", "regenerating_targets"]
+weaknesses = ["misfire", "close_combat"]
+special_rules = ["Move or Fire", "Flaming Attacks"]
+keywords = ["War Machine", "Dwarf", "Rare", "Gunpowder"]
+equipment = ["Hand weapons"]
+
+[units.stats]
+M = "-"
+WS = 4
+BS = 3
+S = 3
+T = 7
+W = 3
+I = 2
+A = "-"
+Ld = 9
+Sv = "-"
+
+[[units.weapons]]
+name = "Flame Cannon"
+range = "Template (12\")"
+strength = "5"
+ap = "1"
+damage = "1"
+abilities = ["Flaming Attacks", "No armor saves", "D3 wounds to monsters"]
+
+[[units]]
+name = "Gyrobomber"
+type = "warmachine"
+category = "Rare"
+points = 125
+models = "1"
+tactical_role = "bomber"
+threat_level = "very_high"
+preferred_targets = ["ranked_infantry", "cavalry_blocks"]
+weaknesses = ["shooting", "flying_units"]
+special_rules = ["Fly", "Armored Copter", "Bombing Run"]
+keywords = ["War Machine", "Dwarf", "Rare", "Fly"]
+equipment = ["Clattergun"]
+
+[units.stats]
+M = "fly"
+WS = 4
+BS = 3
+S = 4
+T = 5
+W = 4
+I = 2
+A = 2
+Ld = 9
+Sv = "3+"
+
+[[units.weapons]]
+name = "Bombs"
+range = "-"
+strength = "3"
+ap = "0"
+damage = "1"
+abilities = ["Drop up to 4 bombs per game", "Large Blast (5\")"]
+
+# =============================================================================
+# FACTION SPECIAL RULES
+# =============================================================================
+
+[[faction_rules]]
+name = "Ancestral Grudge"
+description = "Dwarfs have Hatred against Orcs and Goblins. Characters may purchase additional grudges against specific factions"
+
+[[faction_rules]]
+name = "Resolute"
+description = "Dwarfs may not pursue or overrun more than D6\" regardless of other factors"
+
+[[faction_rules]]
+name = "Relentless"
+description = "Dwarfs do not suffer penalties for moving and shooting with crossbows and handguns (but still cannot march and shoot)"
+
+[[faction_rules]]
+name = "Shieldwall"
+description = "Units with shields in base contact with rank bonus of +1 or more gain +1 to armor saves against attacks to the front"
+
+[[faction_rules]]
+name = "Runesmith/Runelord"
+description = "Grants Magic Resistance (1) to unit. May attempt to dispel one spell per turn as if it were a Level 2/3 wizard. Can craft Runic items"
+
+[[faction_rules]]
+name = "Slayer"
+description = "Slayers have Ward Save (4+) against wounds caused by monsters or characters. Cannot wear armor"
+
+[[faction_rules]]
+name = "Deathwish"
+description = "Slayers are Unbreakable. Must always pursue. Must always issue and accept challenges"
+
+# =============================================================================
+# RUNIC ITEMS
+# =============================================================================
+
+[[faction_items]]
+name = "Master Rune of Smiting"
+type = "weapon_rune"
+points = 45
+description = "Multiple Wounds (D6)"
+restrictions = ["One Master Rune per item", "Runic weapon only"]
+
+[[faction_items]]
+name = "Rune of Cleaving"
+type = "weapon_rune"
+points = 10
+description = "+1 Strength. May be taken twice for +2 Strength"
+restrictions = ["Runic weapon only"]
+
+[[faction_items]]
+name = "Rune of Striking"
+type = "weapon_rune"
+points = 10
+description = "+1 to hit. May be taken twice for +2 to hit"
+restrictions = ["Runic weapon only"]
+
+[[faction_items]]
+name = "Master Rune of Steel"
+type = "armor_rune"
+points = 35
+description = "2+ armor save"
+restrictions = ["One Master Rune per item", "Runic armor only"]
+
+[[faction_items]]
+name = "Rune of Stone"
+type = "armor_rune"
+points = 5
+description = "+1 armor save. May be taken up to three times"
+restrictions = ["Runic armor only"]
+
+[[faction_items]]
+name = "Rune of Warding"
+type = "armor_rune"
+points = 25
+description = "6+ ward save. May be taken twice for 5+, thrice for 4+"
+restrictions = ["Runic armor only"]
+
+[[faction_items]]
+name = "Master Rune of Spite"
+type = "talisman_rune"
+points = 45
+description = "4+ ward save"
+restrictions = ["One Master Rune per item", "Runic talisman only"]
+
+[[faction_items]]
+name = "Rune of Spellbreaking"
+type = "talisman_rune"
+points = 25
+description = "One use. Automatically dispel one spell"
+restrictions = ["Runic talisman only"]
+
+[[faction_items]]
+name = "Master Rune of Grungni"
+type = "banner_rune"
+points = 50
+description = "All units within 6\" have 5+ ward save against shooting"
+restrictions = ["One Master Rune per item", "Runic banner only"]
+
+[[faction_items]]
+name = "Rune of Slowness"
+type = "banner_rune"
+points = 35
+description = "Enemies charging the unit subtract D6\" from charge range"
+restrictions = ["Runic banner only"]
+
+[[faction_items]]
+name = "Rune of Forging"
+type = "war_machine_rune"
+points = 25
+description = "Re-roll one artillery dice per turn"
+restrictions = ["War machines only"]
+
+[[faction_items]]
+name = "Rune of Burning"
+type = "war_machine_rune"
+points = 5
+description = "Attacks are Flaming Attacks"
+restrictions = ["War machines only"]

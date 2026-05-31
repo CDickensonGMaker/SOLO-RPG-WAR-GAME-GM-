@@ -1,0 +1,781 @@
+# Warhammer: The Old World - Lizardmen
+# The Servants of the Old Ones, guardians of the Great Plan
+
+[faction]
+name = "Lizardmen"
+description = "The ancient servants of the Old Ones, created to fight Chaos. The Slann are the most powerful wizards, Saurus are born warriors, and Skinks are cunning skirmishers"
+playstyle = "Combined arms with powerful magic, elite infantry, and devastating dinosaur monsters"
+strengths = ["Most powerful wizards", "Very tough Saurus", "Powerful monsters", "Cold Blooded Leadership", "Predatory Fighter"]
+weaknesses = ["Slow infantry", "Expensive", "Reliant on magic and monsters", "Limited ranged options"]
+lore_notes = "The Lizardmen were created by the Old Ones to serve the Great Plan. The Slann Mage-Priests interpret the Plan while Saurus wage eternal war against Chaos"
+
+# =============================================================================
+# LORDS
+# =============================================================================
+
+[[units]]
+name = "Slann Mage-Priest"
+type = "character"
+category = "Lords"
+points = 275
+models = "1"
+tactical_role = "supreme_wizard"
+threat_level = "extreme"
+preferred_targets = ["enemy_units"]
+weaknesses = ["close_combat", "war_machines"]
+special_rules = ["Level 4 Wizard", "Cold Blooded", "Large Target", "Disciplines of the Old Ones"]
+keywords = ["Character", "Infantry", "Slann", "Lord", "Wizard"]
+equipment = ["Claws"]
+options = ["May take Disciplines of the Old Ones", "May take Palanquin (joins Temple Guard)", "May take magic items up to 100 points"]
+
+[units.stats]
+M = 4
+WS = 3
+BS = 0
+S = 4
+T = 5
+W = 5
+I = 1
+A = 1
+Ld = 9
+Sv = "-"
+
+[[units]]
+name = "Saurus Oldblood"
+type = "character"
+category = "Lords"
+points = 145
+models = "1"
+tactical_role = "combat_commander"
+threat_level = "very_high"
+preferred_targets = ["enemy_characters", "monsters"]
+weaknesses = ["massed_attacks"]
+special_rules = ["Cold Blooded", "Predatory Fighter", "Scaly Skin (5+)"]
+keywords = ["Character", "Infantry", "Saurus", "Lord"]
+equipment = ["Hand weapon"]
+options = ["May take Cold One (+30 pts)", "May take Carnosaur (+235 pts)", "May take magic items up to 100 points"]
+
+[units.stats]
+M = 4
+WS = 6
+BS = 3
+S = 5
+T = 5
+W = 3
+I = 4
+A = 5
+Ld = 9
+Sv = "5+"
+
+[[units]]
+name = "Kroq-Gar"
+type = "character"
+category = "Lords"
+points = 470
+models = "1"
+tactical_role = "named_hero"
+threat_level = "extreme"
+preferred_targets = ["anything"]
+weaknesses = ["massed_shooting"]
+special_rules = ["Cold Blooded", "Predatory Fighter", "Last Defender of Xhotl"]
+keywords = ["Character", "Monster", "Saurus", "Lord", "Unique"]
+equipment = ["Revered Spear of Tlanxla", "Hand of Gods"]
+
+[units.stats]
+M = 4
+WS = 7
+BS = 3
+S = 5
+T = 5
+W = 3
+I = 4
+A = 5
+Ld = 9
+Sv = "4+"
+
+# =============================================================================
+# HEROES
+# =============================================================================
+
+[[units]]
+name = "Saurus Scar-Veteran"
+type = "character"
+category = "Heroes"
+points = 75
+models = "1"
+tactical_role = "support_combat"
+threat_level = "high"
+preferred_targets = ["enemy_champions"]
+weaknesses = ["powerful_characters"]
+special_rules = ["Cold Blooded", "Predatory Fighter", "Scaly Skin (5+)"]
+keywords = ["Character", "Infantry", "Saurus", "Hero"]
+equipment = ["Hand weapon"]
+options = ["May carry Battle Standard (+25 pts)", "May take Cold One (+30 pts)", "May take magic items up to 50 points"]
+
+[units.stats]
+M = 4
+WS = 5
+BS = 3
+S = 5
+T = 5
+W = 2
+I = 3
+A = 4
+Ld = 8
+Sv = "5+"
+
+[[units]]
+name = "Skink Priest"
+type = "character"
+category = "Heroes"
+points = 65
+models = "1"
+tactical_role = "magic_support"
+threat_level = "medium"
+preferred_targets = ["buffing_units"]
+weaknesses = ["close_combat"]
+special_rules = ["Level 1 Wizard", "May upgrade to Level 2 (+35 pts)", "Cold Blooded", "Aquatic"]
+keywords = ["Character", "Infantry", "Skink", "Hero", "Wizard"]
+equipment = ["Hand weapon"]
+options = ["May take Lore of Heavens or Beasts", "May take Ancient Stegadon mount (+215 pts)", "May take arcane items up to 50 points"]
+
+[units.stats]
+M = 6
+WS = 2
+BS = 3
+S = 3
+T = 2
+W = 2
+I = 4
+A = 1
+Ld = 6
+Sv = "-"
+
+[[units]]
+name = "Skink Chief"
+type = "character"
+category = "Heroes"
+points = 50
+models = "1"
+tactical_role = "cheap_hero"
+threat_level = "low"
+preferred_targets = ["war_machines"]
+weaknesses = ["close_combat"]
+special_rules = ["Cold Blooded", "Aquatic"]
+keywords = ["Character", "Infantry", "Skink", "Hero"]
+equipment = ["Hand weapon", "Blowpipe", "Shield"]
+options = ["May take Terradon (+35 pts)", "May take Ripperdactyl (+40 pts)", "May take Stegadon (+220 pts)", "May take magic items up to 50 points"]
+
+[units.stats]
+M = 6
+WS = 4
+BS = 5
+S = 3
+T = 2
+W = 2
+I = 6
+A = 3
+Ld = 6
+Sv = "-"
+
+# =============================================================================
+# CORE UNITS
+# =============================================================================
+
+[[units]]
+name = "Saurus Warriors"
+type = "infantry"
+category = "Core"
+points = 11
+models = "10-30"
+tactical_role = "elite_infantry"
+threat_level = "high"
+preferred_targets = ["infantry"]
+weaknesses = ["shooting", "cavalry_charges"]
+special_rules = ["Cold Blooded", "Predatory Fighter", "Scaly Skin (5+)"]
+keywords = ["Infantry", "Saurus", "Core"]
+equipment = ["Hand weapon", "Shield"]
+options = ["May swap for spears (+1 pt/model)", "May add musician (+5 pts)", "May add standard bearer (+10 pts)", "May take magic standard up to 50 pts"]
+
+[units.stats]
+M = 4
+WS = 3
+BS = 0
+S = 4
+T = 4
+W = 1
+I = 1
+A = 2
+Ld = 8
+Sv = "5+"
+
+[[units]]
+name = "Skink Cohort"
+type = "infantry"
+category = "Core"
+points = 5
+models = "10-40"
+tactical_role = "skirmishers"
+threat_level = "low"
+preferred_targets = ["light_targets"]
+weaknesses = ["close_combat"]
+special_rules = ["Cold Blooded", "Aquatic", "Skirmishers"]
+keywords = ["Infantry", "Skink", "Core"]
+equipment = ["Hand weapon", "Blowpipe", "Shield"]
+options = ["May swap for javelins (+1 pt/model)", "May add musician (+5 pts)", "May add standard bearer (+10 pts)", "May add up to 3 Kroxigor (+44 pts each)"]
+
+[units.stats]
+M = 6
+WS = 2
+BS = 3
+S = 3
+T = 2
+W = 1
+I = 4
+A = 1
+Ld = 5
+Sv = "6+"
+
+[[units.weapons]]
+name = "Blowpipe"
+range = "12\""
+strength = "3"
+ap = "0"
+damage = "1"
+abilities = ["Poisoned Attacks", "Quick to Fire", "Multiple Shots (2)"]
+
+[[units]]
+name = "Skink Skirmishers"
+type = "infantry"
+category = "Core"
+points = 6
+models = "10-20"
+tactical_role = "harrassers"
+threat_level = "low"
+preferred_targets = ["light_targets"]
+weaknesses = ["close_combat"]
+special_rules = ["Cold Blooded", "Aquatic", "Skirmishers", "Scouts"]
+keywords = ["Infantry", "Skink", "Core"]
+equipment = ["Javelins", "Shield"]
+
+[units.stats]
+M = 6
+WS = 2
+BS = 3
+S = 3
+T = 2
+W = 1
+I = 4
+A = 1
+Ld = 5
+Sv = "6+"
+
+[[units]]
+name = "Jungle Swarms"
+type = "swarm"
+category = "Core"
+points = 35
+models = "2-5 bases"
+tactical_role = "tarpit"
+threat_level = "low"
+preferred_targets = ["tarpitting"]
+weaknesses = ["everything"]
+special_rules = ["Poisoned Attacks", "Unbreakable"]
+keywords = ["Swarm", "Lizardmen", "Core"]
+equipment = ["Fangs and stingers"]
+
+[units.stats]
+M = 5
+WS = 3
+BS = 0
+S = 2
+T = 2
+W = 5
+I = 1
+A = 5
+Ld = 10
+Sv = "-"
+
+# =============================================================================
+# SPECIAL UNITS
+# =============================================================================
+
+[[units]]
+name = "Saurus Cavalry (Cold Ones)"
+type = "cavalry"
+category = "Special"
+points = 30
+models = "5-15"
+tactical_role = "shock_cavalry"
+threat_level = "very_high"
+preferred_targets = ["infantry", "cavalry"]
+weaknesses = ["stupidity", "shooting"]
+special_rules = ["Cold Blooded", "Predatory Fighter", "Scaly Skin (4+)", "Fear", "Stupidity"]
+keywords = ["Cavalry", "Saurus", "Special"]
+equipment = ["Spear", "Hand weapon", "Shield"]
+options = ["May add musician (+5 pts)", "May add standard bearer (+10 pts)", "May take magic standard up to 75 pts"]
+
+[units.stats]
+M = 4
+WS = 3
+BS = 0
+S = 4
+T = 4
+W = 1
+I = 1
+A = 2
+Ld = 8
+Sv = "4+"
+
+[units.mount]
+name = "Cold One"
+M = 7
+WS = 3
+S = 4
+T = 4
+W = 1
+I = 1
+A = 2
+
+[[units]]
+name = "Temple Guard"
+type = "infantry"
+category = "Special"
+points = 14
+models = "10-30"
+tactical_role = "elite_infantry"
+threat_level = "very_high"
+preferred_targets = ["anything"]
+weaknesses = ["shooting"]
+special_rules = ["Cold Blooded", "Predatory Fighter", "Scaly Skin (5+)", "Stubborn", "Bodyguard"]
+keywords = ["Infantry", "Saurus", "Temple Guard", "Special"]
+equipment = ["Halberd", "Shield"]
+options = ["May add musician (+5 pts)", "May add standard bearer (+10 pts)", "May take magic standard up to 75 pts"]
+
+[units.stats]
+M = 4
+WS = 4
+BS = 0
+S = 4
+T = 4
+W = 1
+I = 1
+A = 2
+Ld = 8
+Sv = "4+"
+
+[[units]]
+name = "Kroxigor"
+type = "monstrous_infantry"
+category = "Special"
+points = 44
+models = "3-6"
+tactical_role = "monster"
+threat_level = "high"
+preferred_targets = ["infantry"]
+weaknesses = ["high_strength"]
+special_rules = ["Cold Blooded", "Fear", "Scaly Skin (4+)", "Predatory Fighter"]
+keywords = ["Monstrous Infantry", "Kroxigor", "Special"]
+equipment = ["Great weapon"]
+
+[units.stats]
+M = 6
+WS = 3
+BS = 0
+S = 5
+T = 4
+W = 3
+I = 1
+A = 3
+Ld = 7
+Sv = "4+"
+
+[[units]]
+name = "Chameleon Skinks"
+type = "infantry"
+category = "Special"
+points = 12
+models = "5-15"
+tactical_role = "snipers"
+threat_level = "high"
+preferred_targets = ["war_machines", "characters"]
+weaknesses = ["close_combat"]
+special_rules = ["Cold Blooded", "Scouts", "Skirmishers", "Chameleon (-1 to be hit)"]
+keywords = ["Infantry", "Skink", "Special"]
+equipment = ["Blowpipe"]
+
+[units.stats]
+M = 6
+WS = 2
+BS = 4
+S = 3
+T = 2
+W = 1
+I = 4
+A = 1
+Ld = 5
+Sv = "-"
+
+[[units]]
+name = "Terradon Riders"
+type = "monstrous_cavalry"
+category = "Special"
+points = 30
+models = "3-6"
+tactical_role = "flyers"
+threat_level = "medium"
+preferred_targets = ["war_machines", "skirmishers"]
+weaknesses = ["shooting"]
+special_rules = ["Cold Blooded", "Fly", "Drop Rocks"]
+keywords = ["Monstrous Cavalry", "Skink", "Special", "Fly"]
+equipment = ["Javelin", "Hand weapon"]
+
+[units.stats]
+M = 6
+WS = 2
+BS = 3
+S = 3
+T = 2
+W = 1
+I = 4
+A = 1
+Ld = 5
+Sv = "-"
+
+[units.mount]
+name = "Terradon"
+M = 2
+WS = 3
+S = 4
+T = 4
+W = 2
+I = 3
+A = 2
+
+[[units]]
+name = "Ripperdactyl Riders"
+type = "monstrous_cavalry"
+category = "Special"
+points = 40
+models = "3-6"
+tactical_role = "flying_assault"
+threat_level = "very_high"
+preferred_targets = ["anything"]
+weaknesses = ["shooting"]
+special_rules = ["Cold Blooded", "Fly", "Frenzy", "Toad Rage"]
+keywords = ["Monstrous Cavalry", "Skink", "Special", "Fly"]
+equipment = ["Spear", "Hand weapon"]
+
+[units.stats]
+M = 6
+WS = 2
+BS = 3
+S = 3
+T = 2
+W = 1
+I = 4
+A = 1
+Ld = 5
+Sv = "-"
+
+[units.mount]
+name = "Ripperdactyl"
+M = 2
+WS = 3
+S = 4
+T = 4
+W = 2
+I = 3
+A = 3
+
+[[units]]
+name = "Bastiladon"
+type = "monster"
+category = "Special"
+points = 150
+models = "1"
+tactical_role = "support_monster"
+threat_level = "high"
+preferred_targets = ["varies"]
+weaknesses = ["war_machines"]
+special_rules = ["Cold Blooded", "Fear", "Scaly Skin (1+)", "Solar Engine OR Revivification Crystal"]
+keywords = ["Monster", "Lizardmen", "Special"]
+equipment = ["Crushing bulk"]
+options = ["Solar Engine (shooting attack)", "Revivification Crystal (healing)"]
+
+[units.stats]
+M = 4
+WS = 3
+BS = 0
+S = 5
+T = 5
+W = 5
+I = 1
+A = 3
+Ld = 6
+Sv = "1+"
+
+[[units]]
+name = "Stegadon"
+type = "monster"
+category = "Special"
+points = 220
+models = "1 Stegadon, 5 Skink crew"
+tactical_role = "monster"
+threat_level = "very_high"
+preferred_targets = ["infantry", "cavalry"]
+weaknesses = ["war_machines"]
+special_rules = ["Cold Blooded", "Terror", "Scaly Skin (3+)", "Impact Hits (D6+1)"]
+keywords = ["Monster", "Lizardmen", "Special"]
+equipment = ["Giant Bow or Giant Blowpipes"]
+
+[units.stats]
+M = 6
+WS = 3
+BS = 3
+S = 5
+T = 6
+W = 5
+I = 2
+A = 4
+Ld = 6
+Sv = "3+"
+
+# =============================================================================
+# RARE UNITS
+# =============================================================================
+
+[[units]]
+name = "Carnosaur"
+type = "monster"
+category = "Rare"
+points = 235
+models = "1"
+tactical_role = "monster"
+threat_level = "extreme"
+preferred_targets = ["monsters", "cavalry"]
+weaknesses = ["mass_shooting"]
+special_rules = ["Cold Blooded", "Terror", "Scaly Skin (4+)", "Devastating Charge (+1S)", "Bloodroar"]
+keywords = ["Monster", "Lizardmen", "Rare"]
+equipment = ["Massive jaws"]
+notes = "Typically ridden by Oldblood"
+
+[units.stats]
+M = 7
+WS = 4
+BS = 0
+S = 7
+T = 5
+W = 5
+I = 3
+A = 5
+Ld = 5
+Sv = "4+"
+
+[[units]]
+name = "Ancient Stegadon"
+type = "monster"
+category = "Rare"
+points = 260
+models = "1 Stegadon, Skink Priest crew"
+tactical_role = "monster"
+threat_level = "extreme"
+preferred_targets = ["infantry", "monsters"]
+weaknesses = ["war_machines"]
+special_rules = ["Cold Blooded", "Terror", "Scaly Skin (3+)", "Impact Hits (D6+1)", "Unstoppable Stampede"]
+keywords = ["Monster", "Lizardmen", "Rare"]
+equipment = ["Engine of the Gods"]
+
+[units.stats]
+M = 6
+WS = 3
+BS = 3
+S = 6
+T = 6
+W = 6
+I = 2
+A = 5
+Ld = 6
+Sv = "3+"
+
+[[units]]
+name = "Salamander Hunting Pack"
+type = "warbeast"
+category = "Rare"
+points = 75
+models = "1 Salamander, 3 Skink handlers"
+tactical_role = "flamer"
+threat_level = "high"
+preferred_targets = ["infantry", "regenerating"]
+weaknesses = ["close_combat"]
+special_rules = ["Cold Blooded", "Aquatic", "Breath Weapon", "Handlers"]
+keywords = ["War Beast", "Lizardmen", "Rare"]
+equipment = ["Flame breath"]
+
+[units.stats]
+M = 6
+WS = 3
+BS = 0
+S = 4
+T = 4
+W = 3
+I = 2
+A = 3
+Ld = 5
+Sv = "-"
+
+[[units.weapons]]
+name = "Flame Breath"
+range = "Template"
+strength = "4"
+ap = "2"
+damage = "1"
+abilities = ["Flaming Attacks", "No armor saves"]
+
+[[units]]
+name = "Razordon Hunting Pack"
+type = "warbeast"
+category = "Rare"
+points = 65
+models = "1 Razordon, 3 Skink handlers"
+tactical_role = "ranged_beast"
+threat_level = "high"
+preferred_targets = ["infantry"]
+weaknesses = ["close_combat"]
+special_rules = ["Cold Blooded", "Handlers", "Stand and Shoot"]
+keywords = ["War Beast", "Lizardmen", "Rare"]
+equipment = ["Spike volley"]
+
+[units.stats]
+M = 6
+WS = 3
+BS = 0
+S = 4
+T = 4
+W = 3
+I = 2
+A = 3
+Ld = 5
+Sv = "-"
+
+[[units.weapons]]
+name = "Spike Volley"
+range = "12\""
+strength = "4"
+ap = "1"
+damage = "1"
+abilities = ["Artillery dice shots", "Armor Piercing (1)"]
+
+[[units]]
+name = "Troglodon"
+type = "monster"
+category = "Rare"
+points = 200
+models = "1"
+tactical_role = "monster"
+threat_level = "high"
+preferred_targets = ["infantry"]
+weaknesses = ["war_machines"]
+special_rules = ["Cold Blooded", "Terror", "Poisoned Attacks", "Aura of Primeval Fury", "Predatory Fighter"]
+keywords = ["Monster", "Lizardmen", "Rare"]
+equipment = ["Massive jaws", "Roar"]
+
+[units.stats]
+M = 7
+WS = 4
+BS = 0
+S = 5
+T = 5
+W = 5
+I = 3
+A = 4
+Ld = 5
+Sv = "5+"
+
+# =============================================================================
+# FACTION SPECIAL RULES
+# =============================================================================
+
+[[faction_rules]]
+name = "Cold Blooded"
+description = "May roll 3D6 for Leadership tests and discard the highest. Re-roll failed Panic tests"
+
+[[faction_rules]]
+name = "Predatory Fighter"
+description = "For each 6 to hit in close combat, the model gains an additional attack (max 1 per model). These bonus attacks cannot generate further attacks"
+
+[[faction_rules]]
+name = "Scaly Skin"
+description = "Natural armor save (varies by unit: Saurus 5+, Cold One riders 4+, Stegadon 3+, etc.)"
+
+[[faction_rules]]
+name = "Aquatic"
+description = "Unit can move through water terrain as open ground. Treats rivers as open terrain"
+
+[[faction_rules]]
+name = "Disciplines of the Old Ones"
+description = "Slann may take special abilities such as: Focused Rumination (re-roll one die), Higher State of Consciousness (Ethereal), The Becalming Cogitation (+1 to dispel)"
+
+[[faction_rules]]
+name = "Blessed Spawnings"
+description = "Units may take Sacred Spawning upgrades granting additional abilities (Sotek, Tepok, Tlazcotl, etc.)"
+
+# =============================================================================
+# FACTION MAGIC ITEMS
+# =============================================================================
+
+[[faction_items]]
+name = "The Blade of Realities"
+type = "magic_weapon"
+points = 100
+description = "Ignores armor and ward saves. Wounds caused cannot be regenerated"
+restrictions = ["Saurus characters only"]
+
+[[faction_items]]
+name = "Piranha Blade"
+type = "magic_weapon"
+points = 30
+description = "+1 Attack. Predatory Fighter triggers on 5+ instead of 6"
+restrictions = ["Lizardmen characters only"]
+
+[[faction_items]]
+name = "Sacred Stegadon Helm"
+type = "magic_armor"
+points = 30
+description = "+1 armor save. Impact Hits (D3)"
+restrictions = ["Saurus characters only"]
+
+[[faction_items]]
+name = "Egg of Quango"
+type = "enchanted"
+points = 30
+description = "One use. Terradon unit may re-enter play from any table edge on a later turn"
+restrictions = ["Skink characters only"]
+
+[[faction_items]]
+name = "Cloak of Feathers"
+type = "enchanted"
+points = 30
+description = "Bearer has Fly. If already has Fly, gains +2 to armor save vs shooting"
+restrictions = ["Skink characters only"]
+
+[[faction_items]]
+name = "Plaque of Dominion"
+type = "arcane"
+points = 70
+description = "Bound Spell (Power Level 4). Enemy wizard within 18\" loses D3 spells for rest of game"
+restrictions = ["Slann only"]
+
+[[faction_items]]
+name = "Sun Standard of Chotec"
+type = "banner"
+points = 50
+description = "Unit has 5+ ward save against Flaming Attacks. Unit's attacks are Flaming"
+restrictions = ["Lizardmen standard bearer only"]
+
+[[faction_items]]
+name = "Jaguar Standard"
+type = "banner"
+points = 60
+description = "+1 Movement. May re-roll charge distance"
+restrictions = ["Lizardmen standard bearer only"]

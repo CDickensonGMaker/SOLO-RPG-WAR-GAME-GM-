@@ -1,0 +1,221 @@
+# Grimdark Future - Orc Marauders (Ork equivalents)
+# One Page Rules - Free wargame system
+
+name = "Orc Marauders"
+description = "Brutal green-skinned warriors who live for war and destruction."
+playstyle = "Aggressive horde tactics with overwhelming numbers and devastating charges"
+strengths = [
+    "Large unit sizes",
+    "Excellent melee capability",
+    "High Tough values",
+    "Cheap points costs",
+]
+weaknesses = [
+    "Poor shooting accuracy",
+    "Low armor saves",
+    "Poor leadership",
+    "Requires numbers to be effective",
+]
+
+[[units]]
+name = "Orc Boyz"
+type = "infantry"
+points = 75
+models = "10"
+tactical_role = "line_infantry"
+threat_level = "medium"
+preferred_targets = ["infantry"]
+weaknesses = ["shooting", "armor_piercing"]
+keywords = ["Infantry", "Orc"]
+special_rules = ["Furious"]
+
+[units.stats]
+Quality = "5+"
+Defense = "6+"
+Tough = 3
+
+[[units.weapons]]
+name = "Slugga"
+range = "12\""
+shots = "1"
+strength = "3"
+ap = "0"
+damage = "1"
+type = "Assault"
+
+[[units.weapons]]
+name = "Choppa"
+range = "Melee"
+shots = "1"
+strength = "User"
+ap = "0"
+damage = "1"
+type = "Melee"
+
+[[units]]
+name = "Orc Shootas"
+type = "infantry"
+points = 85
+models = "10"
+tactical_role = "fire_support"
+threat_level = "medium"
+preferred_targets = ["infantry"]
+weaknesses = ["assault", "accuracy"]
+keywords = ["Infantry", "Orc"]
+special_rules = []
+
+[units.stats]
+Quality = "5+"
+Defense = "6+"
+Tough = 3
+
+[[units.weapons]]
+name = "Big Shoota"
+range = "18\""
+shots = "3"
+strength = "4"
+ap = "0"
+damage = "1"
+type = "Assault"
+
+[[units.weapons]]
+name = "Choppa"
+range = "Melee"
+shots = "1"
+strength = "User"
+ap = "0"
+damage = "1"
+type = "Melee"
+
+[[units]]
+name = "Orc Nobz"
+type = "infantry"
+points = 130
+models = "5"
+tactical_role = "assault"
+threat_level = "high"
+preferred_targets = ["infantry", "characters"]
+weaknesses = ["ranged_fire", "armor_piercing"]
+keywords = ["Infantry", "Orc", "Nob"]
+special_rules = ["Fearless", "Furious"]
+
+[units.stats]
+Quality = "4+"
+Defense = "5+"
+Tough = 3
+
+[[units.weapons]]
+name = "Big Choppa"
+range = "Melee"
+shots = "2"
+strength = "User+1"
+ap = "-1"
+damage = "1"
+type = "Melee"
+
+[[units]]
+name = "Warboss"
+type = "character"
+points = 110
+models = "1"
+tactical_role = "leader"
+threat_level = "extreme"
+preferred_targets = ["characters", "monsters"]
+weaknesses = ["ranged_fire", "snipers"]
+keywords = ["Infantry", "Orc", "Hero", "Warboss"]
+special_rules = ["Fearless", "Hero", "Furious", "Tough(6)"]
+
+[units.stats]
+Quality = "4+"
+Defense = "4+"
+Tough = 6
+
+[[units.weapons]]
+name = "Big Shoota"
+range = "18\""
+shots = "3"
+strength = "4"
+ap = "0"
+damage = "1"
+type = "Assault"
+
+[[units.weapons]]
+name = "Power Klaw"
+range = "Melee"
+shots = "4"
+strength = "User+2"
+ap = "-2"
+damage = "3"
+type = "Melee"
+
+[[units]]
+name = "Battlewagon"
+type = "vehicle"
+points = 220
+models = "1"
+tactical_role = "transport"
+threat_level = "high"
+preferred_targets = ["infantry", "vehicles"]
+weaknesses = ["anti_tank", "melta"]
+keywords = ["Vehicle", "Orc", "Transport"]
+special_rules = ["Transport(20)"]
+
+[units.stats]
+Quality = "5+"
+Defense = "3+"
+Tough = 12
+
+[[units.weapons]]
+name = "Big Shoota Array"
+range = "18\""
+shots = "6"
+strength = "4"
+ap = "0"
+damage = "1"
+type = "Assault"
+
+[[units.weapons]]
+name = "Deff Rolla"
+range = "Melee"
+shots = "D6"
+strength = "8"
+ap = "-2"
+damage = "2"
+type = "Melee"
+abilities = ["Impact"]
+
+[[units]]
+name = "Kommandos"
+type = "infantry"
+points = 95
+models = "5"
+tactical_role = "scouts"
+threat_level = "medium"
+preferred_targets = ["characters", "artillery"]
+weaknesses = ["sustained_combat"]
+keywords = ["Infantry", "Orc", "Kommando"]
+special_rules = ["Scout", "Stealth", "Ambush"]
+
+[units.stats]
+Quality = "5+"
+Defense = "6+"
+Tough = 3
+
+[[units.weapons]]
+name = "Slugga"
+range = "12\""
+shots = "1"
+strength = "3"
+ap = "0"
+damage = "1"
+type = "Assault"
+
+[[units.weapons]]
+name = "Choppa"
+range = "Melee"
+shots = "2"
+strength = "User"
+ap = "0"
+damage = "1"
+type = "Melee"
+abilities = ["Backstab"]

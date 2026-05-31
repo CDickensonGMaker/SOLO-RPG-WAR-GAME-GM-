@@ -1,0 +1,133 @@
+# Age of Fantasy - Core Rules Reference
+# One Page Rules - Free wargame system
+
+[[rules]]
+name = "Phalanx"
+description = "This unit gets +1 to Defense against charges from the front. Spears and pikes gain this bonus."
+page = "Special Rules p.1"
+keywords = ["melee", "defense", "spear"]
+examples = [
+    "Defense 5+ becomes 4+ when enemy charges into front arc",
+    "Stack with shields for Defense 3+ against frontal charges",
+]
+
+[[rules]]
+name = "Lance"
+description = "This weapon gains +1 AP on the turn the unit charges."
+page = "Special Rules p.1"
+keywords = ["charge", "melee", "cavalry"]
+examples = [
+    "Lance at AP-1 becomes AP-2 when charging",
+]
+
+[[rules]]
+name = "Impact"
+description = "When this unit charges, it inflicts X automatic hits at its Strength before combat begins."
+page = "Special Rules p.1"
+keywords = ["charge", "melee", "cavalry"]
+examples = [
+    "Impact(1) means 1 automatic hit per model when charging",
+    "Knights with Impact(1) deal 5 hits before combat with 5 models",
+]
+
+[[rules]]
+name = "Regeneration"
+description = "At the start of each round, this unit regains 1 lost wound or returns 1 slain model to the unit."
+page = "Special Rules p.2"
+keywords = ["healing", "undead", "monster"]
+examples = [
+    "Skeleton unit lost 3 models, regains 1 at start of round",
+    "Vampire Lord with 2 wounds lost regains 1",
+]
+
+[[rules]]
+name = "Slow"
+description = "This unit moves at half speed (typically 3\" instead of 6\")."
+page = "Special Rules p.2"
+keywords = ["movement", "slow"]
+examples = [
+    "Zombie unit moves 3\" instead of normal 6\"",
+]
+
+[[rules]]
+name = "Flying"
+description = "This unit can move over terrain and other units. It ignores terrain penalties and can charge over obstacles."
+page = "Special Rules p.2"
+keywords = ["movement", "flying"]
+examples = [
+    "Flying character moves 12\" over buildings to charge",
+]
+
+[[rules]]
+name = "Terror"
+description = "Enemy units within 12\" must pass a morale test or suffer -1 to hit this unit."
+page = "Special Rules p.2"
+keywords = ["morale", "fear", "monster"]
+examples = [
+    "Bone Giant causes Terror - nearby enemies test or suffer -1 to hit",
+]
+
+[[rules]]
+name = "Ethereal"
+description = "This unit ignores all AP modifiers (treat all AP as 0). Cannot be affected by non-magical attacks unless they roll 6 to hit."
+page = "Special Rules p.2"
+keywords = ["ghost", "magic", "invulnerable"]
+examples = [
+    "Black Knights only wounded by natural 6s from mundane weapons",
+    "Magic weapons bypass Ethereal completely",
+]
+
+[[rules]]
+name = "Wizard"
+description = "This model knows X spells from its army's spell list. Can cast one spell per activation."
+page = "Magic Rules p.1"
+keywords = ["magic", "spells", "wizard"]
+examples = [
+    "Wizard(1) knows 1 spell",
+    "Wizard(2) knows 2 spells",
+]
+
+[[rules]]
+name = "Raise Dead"
+description = "This wizard can return D3 slain models to a friendly Undead unit within 12\" instead of casting a normal spell."
+page = "Magic Rules p.2"
+keywords = ["magic", "undead", "resurrection"]
+examples = [
+    "Necromancer raises D3 Skeleton Warriors back to unit",
+]
+
+[[rules]]
+name = "Life Drain"
+description = "For each wound inflicted by this weapon in melee, the wielder regains 1 lost wound."
+page = "Special Rules p.2"
+keywords = ["vampire", "healing", "melee"]
+examples = [
+    "Vampire Lord deals 3 wounds, regains 3 lost wounds",
+]
+
+[[rules]]
+name = "Shield Wall"
+description = "When this unit is charged, enemy units suffer -1 to hit in the first round of combat."
+page = "Special Rules p.1"
+keywords = ["defense", "melee", "infantry"]
+examples = [
+    "Swordsmen with Shield Wall - attackers hit at -1 first round",
+]
+
+[[rules]]
+name = "Indirect"
+description = "This weapon can target units out of line of sight. Suffers -1 to hit when doing so."
+page = "Shooting Rules p.1"
+keywords = ["shooting", "artillery", "indirect"]
+examples = [
+    "Cannon fires over a hill at hidden unit, hitting at -1",
+]
+
+[[rules]]
+name = "Blast"
+description = "This weapon hits all models in a X\" radius from target point."
+page = "Shooting Rules p.1"
+keywords = ["shooting", "template", "area"]
+examples = [
+    "Blast(3) hits all models within 3\" of the target point",
+]

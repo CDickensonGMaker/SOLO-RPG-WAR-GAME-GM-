@@ -1,0 +1,566 @@
+# The Gorgon's Shadow Campaign
+# Theme: Military conquest, monster hunting, frontier defense
+# Scope: Variable scale from adventurer to regent
+
+[campaign]
+id = "gorgons_shadow"
+name = "The Gorgon's Shadow"
+tagline = "The Crown of Anuire's greatest enemy stirs in the Iron Peaks."
+theme = "military_conquest"
+difficulty = "hard"
+recommended_bloodline = ["Anduiras", "Basaia"]
+starting_season = "autumn"
+starting_year = 551
+
+[campaign.description]
+short = "Defend the Heartlands against the Gorgon's awakening war machine."
+long = """
+For centuries the Gorgon has brooded in his mountain fortress of Kal-Saitharak,
+the greatest and most terrible of the awnsheghlien. His armies of goblinoids and
+the twisted monsters he has created have tested the borders of civilized Anuire
+countless times, but always he has withdrawn before total commitment.
+
+Now the signs are unmistakable - the Gorgon prepares for true war. Goblin raids
+grow bolder. His lieutenants appear where they have not been seen in generations.
+And stranger rumors speak of new horrors emerging from his laboratories.
+
+You stand in his path. Whether you are a frontier lord whose lands will burn first,
+an adventuring company seeking glory and plunder, or a great prince marshaling
+the realm's defenses - the Gorgon comes, and all Anuire will answer for it.
+"""
+
+[campaign.pillars]
+primary = "Military excellence and strategic thinking determine survival"
+secondary = "Monster hunting requires preparation, knowledge, and courage"
+tone = "heroic with grimdark undertones"
+stakes = "The survival of human civilization in Anuire"
+
+[campaign.scale_options]
+adventurer = "Fight as a small band against the Gorgon's minions"
+commander = "Lead armies and defend strategic positions"
+regent = "Coordinate realm-wide defense and wage total war"
+
+# ============================================================================
+# ACT STRUCTURE
+# ============================================================================
+
+[acts.act_1]
+name = "Storm Gathering"
+description = "The first signs of the Gorgon's awakening"
+turn_range = [1, 10]
+objectives = [
+    "Confirm the threat level through reconnaissance",
+    "Secure defensive positions and alliances",
+    "Identify and neutralize Gorgon infiltrators"
+]
+completion_trigger = "gorgon_invasion_confirmed"
+
+[acts.act_1.starting_state]
+gorgon_strength = 100
+frontier_readiness = 30
+alliance_strength = 0
+monster_sightings = 5
+
+[acts.act_2]
+name = "The Iron Tide"
+description = "The Gorgon's armies pour forth"
+turn_range = [11, 28]
+objectives = [
+    "Hold the key passes and fortresses",
+    "Rally reinforcements from reluctant allies",
+    "Strike at the Gorgon's supply lines"
+]
+completion_trigger = "invasion_blunted"
+prerequisites = ["act_1_complete"]
+
+[acts.act_2.state_changes]
+gorgon_strength = 150  # Reinforcements arrive
+random_event_frequency = "war_footing"
+civilian_casualties = "tracking_enabled"
+
+[acts.act_3]
+name = "The Crown's Bane"
+description = "Take the war to the enemy or face annihilation"
+turn_range = [29, 40]
+objectives = [
+    "Launch counteroffensive into Gorgon territory",
+    "Confront and defeat the Gorgon's champions",
+    "Face the Gorgon himself or break his power"
+]
+completion_trigger = "gorgon_defeated_or_war_ended"
+prerequisites = ["act_2_complete"]
+
+[acts.act_3.state_changes]
+stakes = "total"
+retreat_impossible = true
+
+# ============================================================================
+# KEY NPCS
+# ============================================================================
+
+[npcs.the_gorgon]
+name = "Raesene the Gorgon"
+title = "Prince of Kal-Saitharak"
+role = "primary_antagonist"
+bloodline = { derivation = "Azrai", strength = "true", score = 95 }
+disposition_base = -100  # Implacable enemy
+
+[npcs.the_gorgon.personality]
+traits = ["patient", "brilliant", "cruel", "ancient"]
+approach = "total_domination"
+weakness = "arrogance born of millennia"
+quote = "I was ancient when your ancestors' ancestors built their first huts."
+
+[npcs.the_gorgon.goals]
+primary = "Conquer all Anuire and establish awnshegh dominion"
+secondary = "Destroy all who bear the blood of Haelyn's champions"
+hidden = "Seeks to replicate his own transformation in chosen servants"
+
+[npcs.the_gorgon.resources]
+military_strength = "overwhelming"
+gold_reserves = "inexhaustible"
+monster_legions = true
+key_lieutenants = ["Sword Mage", "General Kar'thak", "The Viper"]
+
+[npcs.sword_mage]
+name = "The Sword Mage"
+title = "High Arcanist of Kal-Saitharak"
+role = "lieutenant"
+bloodline = { derivation = "Vorynn", strength = "great", score = 40 }
+disposition_base = -80
+
+[npcs.sword_mage.personality]
+traits = ["mysterious", "powerful", "calculating"]
+approach = "magical_superiority"
+weakness = "isolation from human contact"
+quote = "Magic is the only truth. Blood is merely its vessel."
+
+[npcs.sword_mage.goals]
+primary = "Serve the Gorgon and advance magical knowledge"
+secondary = "Claim the sources of Anuire for the Gorgon"
+hidden = "Studies realm magic to potentially overthrow the Gorgon someday"
+
+[npcs.general_karthak]
+name = "General Kar'thak"
+title = "Warlord of the Goblin Legions"
+role = "military_commander"
+bloodline = { derivation = "Azrai", strength = "minor", score = 15 }
+disposition_base = -70
+
+[npcs.general_karthak.personality]
+traits = ["brutal", "cunning", "ambitious"]
+approach = "overwhelming_force"
+weakness = "underestimates human resilience"
+quote = "Drown them in bodies. We have more."
+
+[npcs.general_karthak.goals]
+primary = "Conquer Mhoried and claim it for himself"
+secondary = "Prove goblin superiority over humans"
+hidden = "Dreams of replacing the Gorgon as overlord"
+
+[npcs.mhor_daeric]
+name = "Mhor Daeric Mhoried"
+title = "Mhor of Mhoried"
+role = "key_ally"
+bloodline = { derivation = "Anduiras", strength = "great", score = 38 }
+disposition_base = 20  # Desperate for allies
+
+[npcs.mhor_daeric.personality]
+traits = ["stubborn", "brave", "traditional"]
+approach = "defensive_valor"
+weakness = "refuses to retreat even when necessary"
+quote = "Mhoried has stood against the Gorgon for five hundred years. We shall not fall now."
+
+[npcs.mhor_daeric.goals]
+primary = "Defend Mhoried at any cost"
+secondary = "Unite the northern realms against the Gorgon"
+hidden = "His bloodline is stronger than he admits - he has visions"
+
+[npcs.mhor_daeric.resources]
+military_strength = "moderate"
+defensive_fortifications = "excellent"
+bloodline_allies = ["Cariele", "Talinie"]
+
+[npcs.high_mage_aelies]
+name = "High Mage Aelies Maeselin"
+title = "Regent of the Sources of Maesil"
+role = "magical_ally"
+bloodline = { derivation = "Vorynn", strength = "major", score = 32 }
+disposition_base = 10
+
+[npcs.high_mage_aelies.personality]
+traits = ["intellectual", "cautious", "pragmatic"]
+approach = "magical_support"
+weakness = "values sources over lives"
+quote = "The ley lines speak of darkness coming. We must be prepared."
+
+[npcs.high_mage_aelies.goals]
+primary = "Protect the sources from Gorgon corruption"
+secondary = "Develop counter-magic against awnshegh powers"
+hidden = "Experiments with tapping awnshegh bloodlines for power"
+
+# ============================================================================
+# CAMPAIGN EVENTS
+# ============================================================================
+
+[events.first_blood]
+id = "first_blood"
+name = "First Blood"
+act = 1
+turn = 1
+type = "story"
+mandatory = true
+
+[events.first_blood.description]
+text = """
+The border village of Thornhaven has been destroyed. Not raided - destroyed utterly.
+No survivors, no bodies to bury, only ash and the acrid stink of something unnatural.
+
+This is no ordinary goblin raid. The tracks lead into the Gorgon's Crown, and among
+them are prints no natural creature could have made. Something new hunts these lands.
+"""
+
+[[events.first_blood.choices]]
+id = "investigate_personally"
+text = "Lead an investigation into the ruins yourself"
+effects = { intel = 20, risk = "moderate", monster_knowledge = 10 }
+consequences = "You may discover what destroyed Thornhaven"
+oracle_prompt = "Do you find evidence of what attacked the village?"
+
+[[events.first_blood.choices]]
+id = "send_scouts"
+text = "Send scouts while you prepare defenses"
+effects = { intel = 10, defenses = 10 }
+consequences = "Cautious approach that may miss clues"
+oracle_prompt = "Do your scouts return with useful intelligence?"
+
+[[events.first_blood.choices]]
+id = "rally_forces"
+text = "Immediately begin rallying military forces"
+effects = { defenses = 20, preparation = 15 }
+consequences = "You prepare for war before understanding the threat"
+oracle_prompt = "Do neighboring lords heed your call to arms?"
+
+[[events.first_blood.choices]]
+id = "seek_magical_aid"
+text = "Consult with wizards and seers about the attack"
+effects = { magical_intel = 20, time_spent = 5 }
+consequences = "Magical insight may reveal the nature of the threat"
+oracle_prompt = "Does magical divination reveal the truth of Thornhaven?"
+
+[events.monster_emergence]
+id = "monster_emergence"
+name = "The Chimera of Kar'thak"
+act = 1
+turn_range = [4, 7]
+type = "conditional"
+trigger = "monster_sightings >= 10"
+
+[events.monster_emergence.description]
+text = """
+Reports converge on an impossible creature - a massive beast combining the features of
+lion, goat, and dragon, breathing fire that burns even stone. The Chimera, they call it,
+though veterans say the old stories described nothing so terrible.
+
+This is no creature of nature. This is one of the Gorgon's creations, and it hunts
+along the frontier passes, destroying any force sent against it.
+"""
+
+[[events.monster_emergence.choices]]
+id = "hunt_chimera"
+text = "Organize a hunting party to slay the beast"
+effects = { glory = 30, risk = "extreme" }
+consequences = "Legendary victory or catastrophic defeat"
+oracle_prompt = "Can you assemble the heroes needed to face a chimera?"
+
+[[events.monster_emergence.choices]]
+id = "trap_chimera"
+text = "Prepare an elaborate trap using terrain and bait"
+effects = { preparation = 20, risk = "high" }
+consequences = "Cunning may succeed where strength fails"
+oracle_prompt = "Does your trap work as planned?"
+
+[[events.monster_emergence.choices]]
+id = "avoid_chimera"
+text = "Evacuate the region and cede the passes"
+effects = { defenses = -20, civilian_saved = 30 }
+consequences = "You save lives but lose strategic ground"
+oracle_prompt = "Does the Chimera pursue or remain in the passes?"
+
+[[events.monster_emergence.choices]]
+id = "magical_counter"
+text = "Seek magical means to defeat or bind the creature"
+effects = { magical_cost = "high", risk = "moderate" }
+consequences = "Magic may be the only answer"
+oracle_prompt = "Do the realm's wizards have power enough to challenge the Chimera?"
+
+[events.invasion_begins]
+id = "invasion_begins"
+name = "The Iron Tide Descends"
+act = 2
+turn = 11
+type = "story"
+mandatory = true
+
+[events.invasion_begins.description]
+text = """
+The passes thunder with the march of armies. Goblin hordes beyond counting pour from
+the Gorgon's Crown, their banners bearing the mark of the Iron Prince. Behind them
+come ogres, trolls, and worse things - the monsters bred in the Gorgon's pits.
+
+General Kar'thak leads the vanguard, his challenge echoing from every peak:
+"MHORIED WILL FALL! ANUIRE WILL BURN! THE GORGON COMES!"
+
+This is not a raid. This is conquest.
+"""
+
+[[events.invasion_begins.choices]]
+id = "hold_passes"
+text = "Commit all forces to holding the mountain passes"
+effects = { defensive_battle = true, casualties = "heavy", delay = "significant" }
+consequences = "Buy time, but at terrible cost"
+oracle_prompt = "Can your forces hold against the initial onslaught?"
+
+[[events.invasion_begins.choices]]
+id = "strategic_retreat"
+text = "Execute fighting retreat to prepared positions"
+effects = { army_preserved = true, territory_lost = "frontier", time_gained = "moderate" }
+consequences = "Trade space for survival"
+oracle_prompt = "Do you successfully disengage without being overrun?"
+
+[[events.invasion_begins.choices]]
+id = "guerrilla_warfare"
+text = "Disperse forces for guerrilla warfare"
+effects = { unconventional = true, supply_disruption = 20 }
+consequences = "Harass the enemy but cannot stop their advance"
+oracle_prompt = "How effective are your guerrilla tactics?"
+
+[[events.invasion_begins.choices]]
+id = "counterattack"
+text = "Launch immediate counterattack into the vanguard"
+effects = { aggression = 30, risk = "extreme" }
+consequences = "Shock the enemy or be annihilated"
+oracle_prompt = "Does your audacity catch Kar'thak off guard?"
+
+[events.mhoried_siege]
+id = "mhoried_siege"
+name = "The Siege of Bevaldruor"
+act = 2
+turn_range = [18, 25]
+type = "story"
+mandatory = true
+
+[events.mhoried_siege.description]
+text = """
+The fortress-city of Bevaldruor, heart of Mhoried, is besieged. Mhor Daeric leads the
+defense with desperate valor, but his forces dwindle with each assault. Goblin siege
+engines pound the ancient walls while monsters test the defenses each night.
+
+If Bevaldruor falls, the road to the Heartlands lies open.
+
+The Mhor sends a final plea: "Send aid, or send prayers. We can hold for one more
+month, no more."
+"""
+
+[[events.mhoried_siege.choices]]
+id = "relief_force"
+text = "Lead a relief force to break the siege"
+effects = { military_commitment = "total", glory = 40, risk = "extreme" }
+consequences = "Victory or death before the walls of Bevaldruor"
+oracle_prompt = "Can you break through the Gorgon's siege lines?"
+
+[[events.mhoried_siege.choices]]
+id = "secret_resupply"
+text = "Organize secret resupply through hidden routes"
+effects = { logistics = 25, siege_duration = "extended" }
+consequences = "Keep Bevaldruor alive without direct battle"
+oracle_prompt = "Do your supply convoys reach the city undetected?"
+
+[[events.mhoried_siege.choices]]
+id = "diversionary_attack"
+text = "Attack elsewhere to draw off siege forces"
+effects = { diversion = true, risk = "high" }
+consequences = "Force the Gorgon to respond to a new threat"
+oracle_prompt = "Does your diversionary attack draw significant forces from the siege?"
+
+[[events.mhoried_siege.choices]]
+id = "negotiate_withdrawal"
+text = "Attempt to negotiate Mhoried's surrender with terms"
+effects = { mhor_disposition = -50, casualties_prevented = true }
+consequences = "Pragmatic betrayal that saves lives but costs honor"
+oracle_prompt = "Does the Gorgon offer any terms, or demand unconditional surrender?"
+
+[events.champion_duel]
+id = "champion_duel"
+name = "Challenge of the Viper"
+act = 3
+turn_range = [30, 35]
+type = "conditional"
+trigger = "player_military_victories >= 3"
+
+[events.champion_duel.description]
+text = """
+A single rider approaches your lines under flag of parley. She is called the Viper -
+one of the Gorgon's deadliest champions, an awnshegh herself with the blood of Azrai
+running strong. Her scales glitter like black emeralds, and poison drips from her blades.
+
+"The Iron Prince grows tired of this war," she hisses. "He offers you a choice: face
+me in single combat. If you win, his armies withdraw for one year. If I win... well,
+you will not care about the terms."
+"""
+
+[[events.champion_duel.choices]]
+id = "accept_duel"
+text = "Accept the Viper's challenge in single combat"
+effects = { honor = 30, risk = "lethal", potential_reward = "year_of_peace" }
+consequences = "Face the Viper alone"
+oracle_prompt = "How does the duel unfold?"
+
+[[events.champion_duel.choices]]
+id = "champion_proxy"
+text = "Name a champion to fight in your place"
+effects = { honor = 10, champion_risk = "lethal" }
+consequences = "Your champion faces the Viper"
+oracle_prompt = "Who accepts this deadly honor?"
+
+[[events.champion_duel.choices]]
+id = "refuse_trap"
+text = "Refuse, suspecting treachery"
+effects = { honor = -10, strategic_sense = 15 }
+consequences = "The war continues unchanged"
+oracle_prompt = "Does the Viper attempt treachery regardless?"
+
+[[events.champion_duel.choices]]
+id = "counterproposal"
+text = "Counter-propose terms for the duel"
+effects = { negotiation = true }
+consequences = "Attempt to improve the stakes"
+oracle_prompt = "Does the Viper accept modified terms?"
+
+[events.gorgon_confrontation]
+id = "gorgon_confrontation"
+name = "The Crown's Bane"
+act = 3
+turn = 40
+type = "story"
+mandatory = true
+
+[events.gorgon_confrontation.description]
+text = """
+At last, you face him. The Gorgon himself has taken the field, his massive form
+towering above even his monstrous creations. Stone spreads from his footsteps. His
+gaze freezes warriors where they stand. In his hand, the great axe that felled
+Michael Roele five centuries ago still drips with the blood of heroes.
+
+"You have impressed me, little mortal," the Gorgon says, and his voice echoes like
+avalanches in mountain halls. "That is rare. I offer you one chance: kneel, and live
+as my servant. Refuse, and join the statues in my garden."
+
+This is the moment. Everything has led to this.
+"""
+
+[[events.gorgon_confrontation.choices]]
+id = "defy_gorgon"
+text = "Defy the Gorgon and fight"
+effects = { honor = 100, risk = "legendary" }
+consequences = "Face the greatest monster in Cerilia"
+oracle_prompt = "How do you survive the Gorgon's opening assault?"
+
+[[events.gorgon_confrontation.choices]]
+id = "bloodline_power"
+text = "Invoke your bloodline's full power against him"
+effects = { bloodline_surge = true, divine_favor_check = true }
+consequences = "Call upon your divine heritage"
+oracle_prompt = "Does your bloodline manifest power sufficient to challenge an awnshegh?"
+
+[[events.gorgon_confrontation.choices]]
+id = "coordinated_assault"
+text = "Signal the coordinated assault by all allied forces"
+effects = { army_assault = true, casualties = "catastrophic" }
+consequences = "Drown the Gorgon in numbers"
+oracle_prompt = "Can mortal armies wound the Gorgon?"
+
+[[events.gorgon_confrontation.choices]]
+id = "desperate_gambit"
+text = "Execute the desperate plan you've prepared"
+effects = { plan_execution = true }
+prerequisites = ["special_weapon_obtained", "or", "magical_trap_prepared", "or", "alliance_secret_formed"]
+consequences = "Your last, best hope"
+oracle_prompt = "Does your desperate gambit work?"
+
+# ============================================================================
+# VICTORY AND FAILURE CONDITIONS
+# ============================================================================
+
+[victory_conditions]
+primary = { type = "gorgon_slain", requirement = "The Gorgon is destroyed" }
+alternative_1 = { type = "gorgon_driven_back", requirement = "The Gorgon's forces routed, peace forced for decade" }
+alternative_2 = { type = "heroic_sacrifice", requirement = "Die defeating the Gorgon or his chief lieutenant" }
+alternative_3 = { type = "alliance_victory", requirement = "United Anuire defeats the invasion" }
+
+[failure_conditions]
+death = { trigger = "player_killed", description = "You fall in battle" }
+petrification = { trigger = "gorgon_gaze_failed", description = "You are turned to stone by the Gorgon" }
+conquest = { trigger = "heartlands_conquered", description = "The Gorgon conquers Anuire" }
+submission = { trigger = "player_serves_gorgon", description = "You bend the knee to darkness" }
+
+# ============================================================================
+# CAMPAIGN VARIABLES AND TRACKING
+# ============================================================================
+
+[tracking]
+variables = [
+    "gorgon_strength",        # Enemy military power
+    "frontier_readiness",     # Defensive preparation
+    "alliance_strength",      # Allied military contribution
+    "monster_sightings",      # Creature activity level
+    "civilian_casualties",    # War's human cost
+    "territory_controlled",   # Strategic positions
+    "supply_lines",           # Logistics health
+    "morale",                 # Army spirit
+    "gorgon_lieutenants_killed", # Progress against command structure
+]
+
+[tracking.thresholds]
+total_war = { variable = "gorgon_strength", above = 120, event = "escalation" }
+collapse = { variable = "morale", below = 20, event = "army_rout" }
+breakthrough = { variable = "gorgon_lieutenants_killed", above = 2, event = "command_disrupted" }
+
+# ============================================================================
+# WARFARE INTEGRATION
+# ============================================================================
+
+[warfare]
+enabled = true
+unit_pools = ["anuire_armies", "mhoried_defenders", "gorgon_legions", "monster_units"]
+terrain_map = "northern_anuire"
+
+[warfare.special_units]
+chimera = { type = "monster", attacks = 3, defense = 8, morale = "fearless", special = "fire_breath" }
+viper_guard = { type = "elite", attacks = 4, defense = 6, morale = "elite", special = "poison" }
+stone_giants = { type = "monster", attacks = 4, defense = 7, morale = "steady", special = "siege_break" }
+
+[warfare.fortifications]
+bevaldruor = { defense_bonus = 30, garrison_max = 5, special = "bloodline_wards" }
+markazor = { defense_bonus = 20, garrison_max = 3, special = "mountain_pass" }
+
+# ============================================================================
+# CAMPAIGN REWARDS
+# ============================================================================
+
+[rewards]
+gorgon_slain = { title = "Gorgonslayer", legendary_item = "Axe of Michael Roele", bloodline_boost = 10 }
+gorgon_driven_back = { title = "Defender of Anuire", regency_bonus = 30, military_renown = 50 }
+heroic_sacrifice = { title = "Martyr of the Realm", domain_inherits_bonus = true, legend = true }
+alliance_victory = { title = "Warlord of the Alliance", political_influence = 30 }
+
+# ============================================================================
+# INTEGRATION HOOKS
+# ============================================================================
+
+[integration]
+oracle_table = "birthright/warfare/gorgon_war"
+domain_action_mods = { muster_armies = 2, fortify = 2, diplomacy_north = 1 }
+bloodline_focus = ["Anduiras", "Basaia"]
+connects_to = ["iron_throne", "cerilian_alliance"]
+requires_warfare_mode = true

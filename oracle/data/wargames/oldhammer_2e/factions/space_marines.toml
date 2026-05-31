@@ -1,0 +1,808 @@
+# Warhammer 40,000 2nd Edition - Space Marines
+# The Adeptus Astartes - The Emperor's Finest
+
+name = "Space Marines"
+codex = "Codex: Space Marines (1993)"
+description = "Genetically enhanced super-soldiers clad in power armor, the Space Marines are humanity's greatest defenders"
+playstyle = "Elite combined arms with excellent stats across the board"
+strengths = ["High stats across the board", "Excellent armor saves", "Versatile units", "And They Shall Know No Fear"]
+weaknesses = ["Expensive points cost", "Low model count", "Limited numbers"]
+
+[faction_rules]
+name = "And They Shall Know No Fear"
+description = "Space Marines automatically rally and cannot be destroyed by fall back moves"
+
+# =============================================================================
+# HQ UNITS
+# =============================================================================
+
+[[units]]
+name = "Space Marine Captain"
+type = "infantry"
+category = "HQ"
+points = 75
+models = "1"
+tactical_role = "commander"
+threat_level = "high"
+preferred_targets = ["characters", "elite_infantry"]
+weaknesses = ["massed fire", "high_strength_weapons"]
+special_rules = ["And They Shall Know No Fear", "Independent Character", "Chapter Tactics"]
+keywords = ["Infantry", "Character", "Adeptus Astartes"]
+wargear_options = ["Power Sword", "Power Fist", "Storm Bolter", "Plasma Pistol", "Thunder Hammer", "Lightning Claws"]
+
+[units.stats]
+M = 4
+WS = 6
+BS = 5
+S = 4
+T = 4
+W = 3
+I = 5
+A = 3
+Ld = 10
+Sv = "3+"
+
+[[units.weapons]]
+name = "Bolt Pistol"
+range = "12\""
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Pistol"
+shots = "1"
+
+[[units.weapons]]
+name = "Power Sword"
+range = "Melee"
+strength = "User"
+ap = "-"
+damage = "1"
+type = "Melee"
+abilities = ["Ignores Armor Saves"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Space Marine Chaplain"
+type = "infantry"
+category = "HQ"
+points = 85
+models = "1"
+tactical_role = "support_commander"
+threat_level = "high"
+preferred_targets = ["infantry", "characters"]
+weaknesses = ["ranged_attacks", "psychic"]
+special_rules = ["And They Shall Know No Fear", "Independent Character", "Litanies of Hate", "Fearless (unit)"]
+keywords = ["Infantry", "Character", "Adeptus Astartes", "Chaplain"]
+
+[units.stats]
+M = 4
+WS = 5
+BS = 4
+S = 4
+T = 4
+W = 2
+I = 5
+A = 2
+Ld = 10
+Sv = "3+"
+
+[[units.weapons]]
+name = "Bolt Pistol"
+range = "12\""
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Pistol"
+shots = "1"
+
+[[units.weapons]]
+name = "Crozius Arcanum"
+range = "Melee"
+strength = "+2"
+ap = "-"
+damage = "1"
+type = "Melee"
+abilities = ["Ignores Armor Saves"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Space Marine Librarian"
+type = "infantry"
+category = "HQ"
+points = 80
+models = "1"
+tactical_role = "psyker"
+threat_level = "high"
+preferred_targets = ["infantry", "psykers", "characters"]
+weaknesses = ["nullification", "perils_of_the_warp"]
+special_rules = ["And They Shall Know No Fear", "Independent Character", "Psyker (Level 1-2)", "Psychic Hood"]
+keywords = ["Infantry", "Character", "Adeptus Astartes", "Psyker"]
+
+[units.stats]
+M = 4
+WS = 5
+BS = 4
+S = 4
+T = 4
+W = 2
+I = 4
+A = 2
+Ld = 10
+Sv = "3+"
+
+[[units.weapons]]
+name = "Bolt Pistol"
+range = "12\""
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Pistol"
+shots = "1"
+
+[[units.weapons]]
+name = "Force Sword"
+range = "Melee"
+strength = "User"
+ap = "-"
+damage = "1"
+type = "Melee"
+abilities = ["Ignores Armor Saves", "Instant Death on Psychic Test"]
+
+# =============================================================================
+# ELITES
+# =============================================================================
+
+[[units]]
+name = "Terminator Squad"
+type = "infantry"
+category = "Elites"
+points = 65
+models = "5"
+tactical_role = "elite_assault"
+threat_level = "very_high"
+preferred_targets = ["infantry", "vehicles", "monsters"]
+weaknesses = ["massed_fire", "power_weapons"]
+special_rules = ["And They Shall Know No Fear", "Deep Strike", "Terminator Armor", "Power Fists"]
+keywords = ["Infantry", "Terminator", "Adeptus Astartes"]
+
+[units.stats]
+M = 4
+WS = 4
+BS = 4
+S = 4
+T = 4
+W = 1
+I = 4
+A = 2
+Ld = 9
+Sv = "2+/5++"
+
+[[units.weapons]]
+name = "Storm Bolter"
+range = "24\""
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Assault 2"
+shots = "2"
+
+[[units.weapons]]
+name = "Power Fist"
+range = "Melee"
+strength = "x2"
+ap = "-"
+damage = "1"
+type = "Melee"
+abilities = ["Ignores Armor Saves", "Strikes Last"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Assault Terminator Squad"
+type = "infantry"
+category = "Elites"
+points = 80
+models = "5"
+tactical_role = "elite_assault"
+threat_level = "very_high"
+preferred_targets = ["infantry", "monsters", "characters"]
+weaknesses = ["massed_fire", "kiting"]
+special_rules = ["And They Shall Know No Fear", "Deep Strike", "Terminator Armor"]
+keywords = ["Infantry", "Terminator", "Adeptus Astartes"]
+
+[units.stats]
+M = 4
+WS = 4
+BS = 4
+S = 4
+T = 4
+W = 1
+I = 4
+A = 2
+Ld = 9
+Sv = "2+/5++"
+
+[[units.weapons]]
+name = "Lightning Claws (pair)"
+range = "Melee"
+strength = "User"
+ap = "-"
+damage = "1"
+type = "Melee"
+abilities = ["Ignores Armor Saves", "Re-roll Wounds", "+1 Attack"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Dreadnought"
+type = "vehicle"
+category = "Elites"
+points = 105
+models = "1"
+tactical_role = "fire_support"
+threat_level = "high"
+preferred_targets = ["infantry", "vehicles"]
+weaknesses = ["melta", "power_fists", "rear_armor"]
+special_rules = ["Walker", "Venerable (optional)", "Fire Frenzy"]
+keywords = ["Vehicle", "Walker", "Dreadnought", "Adeptus Astartes"]
+
+[units.stats]
+M = 6
+WS = 4
+BS = 4
+S = 10
+T = "-"
+W = "-"
+I = 4
+A = 2
+Ld = "-"
+Sv = "-"
+
+[units.armor]
+front = 12
+side = 12
+rear = 10
+
+[[units.weapons]]
+name = "Assault Cannon"
+range = "24\""
+strength = "6"
+ap = "4"
+damage = "1"
+type = "Heavy 4"
+abilities = ["Sustained Fire 3", "Rending"]
+
+[[units.weapons]]
+name = "Dreadnought Close Combat Weapon"
+range = "Melee"
+strength = "10"
+ap = "-"
+damage = "1"
+type = "Melee"
+abilities = ["Ignores Armor Saves"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Veteran Squad"
+type = "infantry"
+category = "Elites"
+points = 22
+models = "5-10"
+tactical_role = "veteran_infantry"
+threat_level = "high"
+preferred_targets = ["infantry", "light_vehicles"]
+weaknesses = ["heavy_weapons", "templates"]
+special_rules = ["And They Shall Know No Fear", "Veteran Skills"]
+keywords = ["Infantry", "Veteran", "Adeptus Astartes"]
+
+[units.stats]
+M = 4
+WS = 4
+BS = 4
+S = 4
+T = 4
+W = 1
+I = 4
+A = 2
+Ld = 9
+Sv = "3+"
+
+[[units.weapons]]
+name = "Boltgun"
+range = "24\""
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Rapid Fire"
+shots = "1"
+
+# =============================================================================
+# TROOPS
+# =============================================================================
+
+[[units]]
+name = "Tactical Squad"
+type = "infantry"
+category = "Troops"
+points = 30
+models = "5-10"
+tactical_role = "line_infantry"
+threat_level = "medium"
+preferred_targets = ["infantry"]
+weaknesses = ["heavy_weapons", "assault_units"]
+special_rules = ["And They Shall Know No Fear", "Combat Squads"]
+keywords = ["Infantry", "Adeptus Astartes"]
+
+[units.stats]
+M = 4
+WS = 4
+BS = 4
+S = 4
+T = 4
+W = 1
+I = 4
+A = 1
+Ld = 8
+Sv = "3+"
+
+[[units.weapons]]
+name = "Boltgun"
+range = "24\""
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Rapid Fire"
+shots = "1"
+
+[[units.weapons]]
+name = "Bolt Pistol"
+range = "12\""
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Pistol"
+shots = "1"
+
+[[units.weapons]]
+name = "Frag Grenades"
+range = "8\""
+strength = "3"
+ap = "-"
+damage = "1"
+type = "Assault 1"
+abilities = ["Blast"]
+
+[[units.weapons]]
+name = "Krak Grenades"
+range = "8\""
+strength = "6"
+ap = "4"
+damage = "1"
+type = "Assault 1"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Scout Squad"
+type = "infantry"
+category = "Troops"
+points = 15
+models = "5-10"
+tactical_role = "reconnaissance"
+threat_level = "low"
+preferred_targets = ["infantry", "light_targets"]
+weaknesses = ["any_combat"]
+special_rules = ["And They Shall Know No Fear", "Infiltrate", "Move Through Cover", "Scout"]
+keywords = ["Infantry", "Scout", "Adeptus Astartes"]
+
+[units.stats]
+M = 4
+WS = 3
+BS = 3
+S = 4
+T = 4
+W = 1
+I = 4
+A = 1
+Ld = 8
+Sv = "4+"
+
+[[units.weapons]]
+name = "Boltgun"
+range = "24\""
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Rapid Fire"
+shots = "1"
+
+# =============================================================================
+# FAST ATTACK
+# =============================================================================
+
+[[units]]
+name = "Assault Squad"
+type = "infantry"
+category = "Fast Attack"
+points = 25
+models = "5-10"
+tactical_role = "assault"
+threat_level = "medium"
+preferred_targets = ["infantry", "characters"]
+weaknesses = ["overwatch", "massed_fire"]
+special_rules = ["And They Shall Know No Fear", "Jump Packs", "Hammer of Wrath"]
+keywords = ["Infantry", "Jump Pack", "Adeptus Astartes"]
+
+[units.stats]
+M = 12
+WS = 4
+BS = 4
+S = 4
+T = 4
+W = 1
+I = 4
+A = 1
+Ld = 8
+Sv = "3+"
+
+[[units.weapons]]
+name = "Bolt Pistol"
+range = "12\""
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Pistol"
+shots = "1"
+
+[[units.weapons]]
+name = "Chainsword"
+range = "Melee"
+strength = "User"
+ap = "-"
+damage = "1"
+type = "Melee"
+abilities = ["+1 Attack"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Bike Squad"
+type = "bike"
+category = "Fast Attack"
+points = 45
+models = "3-8"
+tactical_role = "fast_attack"
+threat_level = "medium"
+preferred_targets = ["infantry", "light_vehicles"]
+weaknesses = ["heavy_weapons", "difficult_terrain"]
+special_rules = ["And They Shall Know No Fear", "Turbo-boost", "Relentless"]
+keywords = ["Bike", "Adeptus Astartes"]
+
+[units.stats]
+M = 12
+WS = 4
+BS = 4
+S = 4
+T = 5
+W = 1
+I = 4
+A = 1
+Ld = 8
+Sv = "3+"
+
+[[units.weapons]]
+name = "Twin-linked Boltgun"
+range = "24\""
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Rapid Fire"
+shots = "2"
+abilities = ["Twin-linked"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Land Speeder"
+type = "vehicle"
+category = "Fast Attack"
+points = 50
+models = "1-3"
+tactical_role = "fast_attack"
+threat_level = "medium"
+preferred_targets = ["infantry", "light_vehicles"]
+weaknesses = ["any_shooting"]
+special_rules = ["Skimmer", "Deep Strike"]
+keywords = ["Vehicle", "Skimmer", "Adeptus Astartes"]
+
+[units.stats]
+M = 14
+WS = "-"
+BS = 4
+S = "-"
+T = "-"
+W = "-"
+I = "-"
+A = "-"
+Ld = "-"
+Sv = "-"
+
+[units.armor]
+front = 10
+side = 10
+rear = 10
+
+[[units.weapons]]
+name = "Heavy Bolter"
+range = "36\""
+strength = "5"
+ap = "4"
+damage = "1"
+type = "Heavy 3"
+abilities = ["Sustained Fire 1"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Attack Bike Squad"
+type = "bike"
+category = "Fast Attack"
+points = 45
+models = "1-3"
+tactical_role = "heavy_support"
+threat_level = "medium"
+preferred_targets = ["vehicles", "heavy_infantry"]
+weaknesses = ["heavy_weapons"]
+special_rules = ["And They Shall Know No Fear", "Turbo-boost"]
+keywords = ["Bike", "Adeptus Astartes"]
+
+[units.stats]
+M = 12
+WS = 4
+BS = 4
+S = 4
+T = 5
+W = 2
+I = 4
+A = 1
+Ld = 8
+Sv = "3+"
+
+[[units.weapons]]
+name = "Multi-melta"
+range = "24\""
+strength = "8"
+ap = "1"
+damage = "1"
+type = "Heavy 1"
+abilities = ["Melta"]
+
+# =============================================================================
+# HEAVY SUPPORT
+# =============================================================================
+
+[[units]]
+name = "Devastator Squad"
+type = "infantry"
+category = "Heavy Support"
+points = 25
+models = "5-10"
+tactical_role = "fire_support"
+threat_level = "high"
+preferred_targets = ["vehicles", "monsters", "heavy_infantry"]
+weaknesses = ["assault", "deep_strike"]
+special_rules = ["And They Shall Know No Fear", "Signum"]
+keywords = ["Infantry", "Adeptus Astartes"]
+
+[units.stats]
+M = 4
+WS = 4
+BS = 4
+S = 4
+T = 4
+W = 1
+I = 4
+A = 1
+Ld = 8
+Sv = "3+"
+
+[[units.weapons]]
+name = "Lascannon"
+range = "48\""
+strength = "9"
+ap = "2"
+damage = "1"
+type = "Heavy 1"
+
+[[units.weapons]]
+name = "Missile Launcher"
+range = "48\""
+strength = "4/8"
+ap = "6/3"
+damage = "1"
+type = "Heavy 1"
+abilities = ["Frag or Krak"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Predator"
+type = "vehicle"
+category = "Heavy Support"
+points = 70
+models = "1"
+tactical_role = "armored_fire_support"
+threat_level = "high"
+preferred_targets = ["vehicles", "monsters"]
+weaknesses = ["melta", "assault", "rear_armor"]
+special_rules = ["Tank"]
+keywords = ["Vehicle", "Tank", "Adeptus Astartes"]
+
+[units.stats]
+M = 10
+WS = "-"
+BS = 4
+S = "-"
+T = "-"
+W = "-"
+I = "-"
+A = "-"
+Ld = "-"
+Sv = "-"
+
+[units.armor]
+front = 13
+side = 11
+rear = 10
+
+[[units.weapons]]
+name = "Autocannon"
+range = "48\""
+strength = "7"
+ap = "4"
+damage = "1"
+type = "Heavy 2"
+
+[[units.weapons]]
+name = "Heavy Bolter Sponsons"
+range = "36\""
+strength = "5"
+ap = "4"
+damage = "1"
+type = "Heavy 3"
+abilities = ["Sustained Fire 1"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Whirlwind"
+type = "vehicle"
+category = "Heavy Support"
+points = 85
+models = "1"
+tactical_role = "artillery"
+threat_level = "medium"
+preferred_targets = ["infantry_blobs", "light_vehicles"]
+weaknesses = ["assault", "any_shooting"]
+special_rules = ["Tank", "Barrage"]
+keywords = ["Vehicle", "Tank", "Adeptus Astartes"]
+
+[units.stats]
+M = 10
+WS = "-"
+BS = 4
+S = "-"
+T = "-"
+W = "-"
+I = "-"
+A = "-"
+Ld = "-"
+Sv = "-"
+
+[units.armor]
+front = 11
+side = 11
+rear = 10
+
+[[units.weapons]]
+name = "Whirlwind Multiple Missile Launcher"
+range = "48\""
+strength = "5"
+ap = "5"
+damage = "1"
+type = "Heavy 1"
+abilities = ["Barrage", "Large Blast", "Ignores Cover"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Land Raider"
+type = "vehicle"
+category = "Heavy Support"
+points = 250
+models = "1"
+tactical_role = "assault_transport"
+threat_level = "very_high"
+preferred_targets = ["all_targets"]
+weaknesses = ["melta", "power_fists", "rear_armor"]
+special_rules = ["Tank", "Assault Vehicle", "Transport (12)", "Power of the Machine Spirit"]
+keywords = ["Vehicle", "Tank", "Transport", "Adeptus Astartes"]
+
+[units.stats]
+M = 10
+WS = "-"
+BS = 4
+S = "-"
+T = "-"
+W = "-"
+I = "-"
+A = "-"
+Ld = "-"
+Sv = "-"
+
+[units.armor]
+front = 14
+side = 14
+rear = 14
+
+[[units.weapons]]
+name = "Twin-linked Lascannon (x2)"
+range = "48\""
+strength = "9"
+ap = "2"
+damage = "1"
+type = "Heavy 1"
+abilities = ["Twin-linked"]
+
+[[units.weapons]]
+name = "Twin-linked Heavy Bolter"
+range = "36\""
+strength = "5"
+ap = "4"
+damage = "1"
+type = "Heavy 3"
+abilities = ["Twin-linked", "Sustained Fire 1"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Vindicator"
+type = "vehicle"
+category = "Heavy Support"
+points = 115
+models = "1"
+tactical_role = "siege"
+threat_level = "very_high"
+preferred_targets = ["infantry", "fortifications", "vehicles"]
+weaknesses = ["assault", "rear_armor", "short_range"]
+special_rules = ["Tank"]
+keywords = ["Vehicle", "Tank", "Adeptus Astartes"]
+
+[units.stats]
+M = 10
+WS = "-"
+BS = 4
+S = "-"
+T = "-"
+W = "-"
+I = "-"
+A = "-"
+Ld = "-"
+Sv = "-"
+
+[units.armor]
+front = 13
+side = 11
+rear = 10
+
+[[units.weapons]]
+name = "Demolisher Cannon"
+range = "24\""
+strength = "10"
+ap = "1"
+damage = "D6"
+type = "Ordnance 1"
+abilities = ["Large Blast", "Demolisher"]

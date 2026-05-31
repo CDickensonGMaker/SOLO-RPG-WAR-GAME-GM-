@@ -1,0 +1,62 @@
+# Historical Wilderness Locations
+# 40+ wilderness and travel locations
+
+[locations]
+entries = [
+  # Forest and Woodland
+  { text = "Dense forest where sunlight barely penetrates the canopy", weight = 2 },
+  { text = "Clearing in the woods, signs of recent woodcutting", weight = 2 },
+  { text = "Hunter's blind overlooking a game trail", weight = 2 },
+  { text = "Charcoal burner's camp, mounds smoldering day and night", weight = 2 },
+  { text = "Ancient oak marking a boundary known for generations", weight = 1 },
+  { text = "Woodcutter's cottage on the forest edge", weight = 2 },
+  { text = "Overgrown ruins reclaimed by nature", weight = 1 },
+  { text = "Poacher's path through noble hunting grounds", weight = 2 },
+
+  # Mountains and Hills
+  { text = "Mountain pass, the only route through for miles", weight = 2 },
+  { text = "Alpine meadow where shepherds bring flocks in summer", weight = 2 },
+  { text = "Rocky outcrop providing a defensible position", weight = 2 },
+  { text = "Abandoned mine, timber supports rotting", weight = 1 },
+  { text = "Shepherd's stone hut, offering shelter from storms", weight = 2 },
+  { text = "Narrow ravine where ambushes are all too easy", weight = 2 },
+  { text = "Ridge line path with steep drops on either side", weight = 2 },
+  { text = "Mountain spring, cold and clear", weight = 2 },
+
+  # Rivers and Water
+  { text = "River ford, the water running swift and cold", weight = 2 },
+  { text = "Mill by the stream, wheel turning slowly", weight = 2 },
+  { text = "Fishing weir where the catch is reliable", weight = 2 },
+  { text = "Riverside camp where boatmen rest for the night", weight = 2 },
+  { text = "Waterfall hiding a rocky hollow behind it", weight = 1 },
+  { text = "Swampy ground where the unwary sink to their knees", weight = 2 },
+  { text = "Bridge of old stone, its origins forgotten", weight = 2 },
+  { text = "Confluence where two rivers meet", weight = 2 },
+
+  # Open Country
+  { text = "Rolling farmland, fields stretching to the horizon", weight = 2 },
+  { text = "Moor where mist gathers and footing is treacherous", weight = 2 },
+  { text = "Crossroads with a weathered signpost", weight = 2 },
+  { text = "Heath where nothing grows taller than heather", weight = 2 },
+  { text = "Vineyard on a sunny slope, grapes ripening on the vine", weight = 2 },
+  { text = "Abandoned farmstead, owners fled or dead", weight = 2 },
+  { text = "Roadside shrine where travelers pause to pray", weight = 2 },
+  { text = "Windswept plateau with nowhere to hide", weight = 2 },
+
+  # Travel Infrastructure
+  { text = "Milestone marking the distance to the next town", weight = 2 },
+  { text = "Relay station where horses are changed", weight = 2 },
+  { text = "Wayside inn, the only shelter for miles", weight = 2 },
+  { text = "Toll gate on a well-maintained road", weight = 2 },
+  { text = "Pilgrim's hostel on the route to a holy site", weight = 1 },
+  { text = "Border post where territories meet", weight = 2 },
+  { text = "Smugglers' trail avoiding official roads", weight = 1 },
+
+  # Coastal Wilderness
+  { text = "Rocky coastline battered by waves", weight = 2 },
+  { text = "Hidden cove known to smugglers", weight = 1 },
+  { text = "Clifftop path with sea spray and screaming gulls", weight = 2 },
+  { text = "Fishing village, boats drawn up on the beach", weight = 2 },
+  { text = "Lighthouse on a lonely promontory", weight = 1 },
+  { text = "Salt marsh where land and sea blur together", weight = 2 }
+]

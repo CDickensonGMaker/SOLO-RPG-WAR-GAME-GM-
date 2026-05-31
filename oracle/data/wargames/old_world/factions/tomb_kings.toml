@@ -1,0 +1,740 @@
+# Warhammer: The Old World - Tomb Kings
+# The Undying legions of Nehekhara, ancient kings risen to reclaim their glory
+
+[faction]
+name = "Tomb Kings"
+description = "The ancient kings of Nehekhara who were mummified in death, now risen with their skeletal legions. Unlike Vampire Counts, Tomb Kings have constructs, chariots, and powerful incantations"
+playstyle = "Combined arms undead with constructs, chariots, and archery. More mobile than Vampire Counts"
+strengths = ["Immune to Psychology", "Construct monsters", "Mass chariots", "Incantation magic", "Multiple attacks through Nehekara"]
+weaknesses = ["Cannot heal above starting models", "Crumble when Hierophant dies", "No march normally", "Relies on magic for extra attacks"]
+lore_notes = "Nehekhara was the greatest human civilization until Nagash cursed the land. Now the Tomb Kings seek to restore their empire and punish those who disturb their tombs"
+
+# =============================================================================
+# LORDS
+# =============================================================================
+
+[[units]]
+name = "Tomb King"
+type = "character"
+category = "Lords"
+points = 170
+models = "1"
+tactical_role = "combat_commander"
+threat_level = "very_high"
+preferred_targets = ["enemy_characters", "monsters"]
+weaknesses = ["massed_attacks", "magic"]
+special_rules = ["Undead", "My Will Be Done", "The Curse", "Flammable"]
+keywords = ["Character", "Infantry", "Tomb Kings", "Lord"]
+equipment = ["Hand weapon", "Light armor"]
+options = ["May take Chariot (+35 pts)", "May take Khemrian Warsphinx (+230 pts)", "May take magic items up to 100 points"]
+
+[units.stats]
+M = 4
+WS = 6
+BS = 3
+S = 5
+T = 5
+W = 4
+I = 3
+A = 4
+Ld = 10
+Sv = "6+"
+
+[[units]]
+name = "High Liche Priest"
+type = "character"
+category = "Lords"
+points = 175
+models = "1"
+tactical_role = "magic"
+threat_level = "high"
+preferred_targets = ["buffing_units"]
+weaknesses = ["close_combat", "snipers"]
+special_rules = ["Undead", "Level 3 Wizard", "May upgrade to Level 4 (+35 pts)", "Hierophant"]
+keywords = ["Character", "Infantry", "Tomb Kings", "Lord", "Wizard"]
+equipment = ["Hand weapon"]
+options = ["May take Skeletal Steed (+10 pts)", "May take magic items up to 100 points"]
+
+[units.stats]
+M = 4
+WS = 3
+BS = 3
+S = 3
+T = 4
+W = 3
+I = 2
+A = 1
+Ld = 8
+Sv = "-"
+
+# =============================================================================
+# HEROES
+# =============================================================================
+
+[[units]]
+name = "Tomb Prince"
+type = "character"
+category = "Heroes"
+points = 100
+models = "1"
+tactical_role = "support_combat"
+threat_level = "high"
+preferred_targets = ["enemy_champions"]
+weaknesses = ["powerful_characters"]
+special_rules = ["Undead", "My Will Be Done", "The Curse", "Flammable"]
+keywords = ["Character", "Infantry", "Tomb Kings", "Hero"]
+equipment = ["Hand weapon", "Light armor"]
+options = ["May take Chariot (+35 pts)", "May take magic items up to 50 points"]
+
+[units.stats]
+M = 4
+WS = 5
+BS = 3
+S = 4
+T = 5
+W = 3
+I = 3
+A = 3
+Ld = 9
+Sv = "6+"
+
+[[units]]
+name = "Liche Priest"
+type = "character"
+category = "Heroes"
+points = 70
+models = "1"
+tactical_role = "magic_support"
+threat_level = "medium"
+preferred_targets = ["buffing_units"]
+weaknesses = ["close_combat"]
+special_rules = ["Undead", "Level 1 Wizard", "May upgrade to Level 2 (+35 pts)", "Hierophant"]
+keywords = ["Character", "Infantry", "Tomb Kings", "Hero", "Wizard"]
+equipment = ["Hand weapon"]
+options = ["May take Skeletal Steed (+10 pts)", "May take arcane items up to 50 points"]
+
+[units.stats]
+M = 4
+WS = 3
+BS = 3
+S = 3
+T = 3
+W = 2
+I = 2
+A = 1
+Ld = 7
+Sv = "-"
+
+[[units]]
+name = "Tomb Herald"
+type = "character"
+category = "Heroes"
+points = 60
+models = "1"
+tactical_role = "standard_bearer"
+threat_level = "medium"
+preferred_targets = ["enemy_champions"]
+weaknesses = ["powerful_characters"]
+special_rules = ["Undead", "Sworn Bodyguard", "Flammable"]
+keywords = ["Character", "Infantry", "Tomb Kings", "Hero"]
+equipment = ["Hand weapon", "Light armor"]
+options = ["May carry Battle Standard (+25 pts)", "May take magic items up to 50 points"]
+
+[units.stats]
+M = 4
+WS = 4
+BS = 3
+S = 4
+T = 4
+W = 2
+I = 3
+A = 2
+Ld = 8
+Sv = "6+"
+
+[[units]]
+name = "Necrotect"
+type = "character"
+category = "Heroes"
+points = 60
+models = "1"
+tactical_role = "construct_support"
+threat_level = "medium"
+preferred_targets = ["constructs_support"]
+weaknesses = ["close_combat"]
+special_rules = ["Undead", "Stone Shaper", "Hatred", "Wrath of the Creator"]
+keywords = ["Character", "Infantry", "Tomb Kings", "Hero"]
+equipment = ["Hand weapon"]
+options = ["May take magic items up to 50 points"]
+
+[units.stats]
+M = 4
+WS = 4
+BS = 3
+S = 4
+T = 4
+W = 2
+I = 2
+A = 2
+Ld = 8
+Sv = "-"
+
+# =============================================================================
+# CORE UNITS
+# =============================================================================
+
+[[units]]
+name = "Skeleton Warriors"
+type = "infantry"
+category = "Core"
+points = 5
+models = "10-40"
+tactical_role = "line_infantry"
+threat_level = "low"
+preferred_targets = ["weak_targets"]
+weaknesses = ["everything"]
+special_rules = ["Undead", "Nehekhara Warriors"]
+keywords = ["Infantry", "Skeleton", "Tomb Kings", "Core"]
+equipment = ["Hand weapon", "Light armor", "Shield"]
+options = ["May swap for spears (+0.5 pt/model) or bows (+1 pt/model)", "May add musician (+5 pts)", "May add standard bearer (+10 pts)", "May take magic standard up to 25 pts"]
+
+[units.stats]
+M = 4
+WS = 2
+BS = 2
+S = 3
+T = 3
+W = 1
+I = 2
+A = 1
+Ld = 5
+Sv = "5+"
+
+[[units]]
+name = "Skeleton Archers"
+type = "infantry"
+category = "Core"
+points = 6
+models = "10-30"
+tactical_role = "ranged_infantry"
+threat_level = "low"
+preferred_targets = ["light_targets"]
+weaknesses = ["close_combat"]
+special_rules = ["Undead", "Nehekhara Warriors"]
+keywords = ["Infantry", "Skeleton", "Tomb Kings", "Core"]
+equipment = ["Bow", "Hand weapon"]
+options = ["May add musician (+5 pts)", "May add standard bearer (+10 pts)"]
+
+[units.stats]
+M = 4
+WS = 2
+BS = 2
+S = 3
+T = 3
+W = 1
+I = 2
+A = 1
+Ld = 5
+Sv = "-"
+
+[[units.weapons]]
+name = "Bow"
+range = "24\""
+strength = "3"
+ap = "0"
+damage = "1"
+abilities = ["Volley Fire"]
+
+[[units]]
+name = "Skeleton Horsemen"
+type = "cavalry"
+category = "Core"
+points = 12
+models = "5-15"
+tactical_role = "light_cavalry"
+threat_level = "low"
+preferred_targets = ["war_machines", "skirmishers"]
+weaknesses = ["heavy_cavalry"]
+special_rules = ["Undead", "Nehekhara Warriors", "Vanguard"]
+keywords = ["Cavalry", "Skeleton", "Tomb Kings", "Core"]
+equipment = ["Spear", "Hand weapon", "Light armor", "Shield", "Skeletal Steed"]
+options = ["May swap for bows (+1 pt/model)", "May add musician (+5 pts)", "May add standard bearer (+10 pts)"]
+
+[units.stats]
+M = 4
+WS = 2
+BS = 2
+S = 3
+T = 3
+W = 1
+I = 2
+A = 1
+Ld = 5
+Sv = "4+"
+
+[units.mount]
+name = "Skeletal Steed"
+M = 8
+WS = 2
+S = 3
+T = 3
+W = 1
+I = 2
+A = 1
+
+[[units]]
+name = "Skeleton Chariots"
+type = "chariot"
+category = "Core"
+points = 55
+models = "3-6"
+tactical_role = "chariot_swarm"
+threat_level = "high"
+preferred_targets = ["infantry"]
+weaknesses = ["war_machines", "monstrous_infantry"]
+special_rules = ["Undead", "Nehekhara Warriors", "Impact Hits (D6)"]
+keywords = ["Chariot", "Skeleton", "Tomb Kings", "Core"]
+equipment = ["Spears", "Bows"]
+options = ["May add standard bearer (+10 pts)", "May take magic standard up to 50 pts"]
+
+[units.stats]
+M = 8
+WS = 2
+BS = 2
+S = 3
+T = 4
+W = 3
+I = 2
+A = 2
+Ld = 5
+Sv = "5+"
+
+# =============================================================================
+# SPECIAL UNITS
+# =============================================================================
+
+[[units]]
+name = "Tomb Guard"
+type = "infantry"
+category = "Special"
+points = 11
+models = "10-30"
+tactical_role = "elite_infantry"
+threat_level = "high"
+preferred_targets = ["elite_infantry"]
+weaknesses = ["shooting"]
+special_rules = ["Undead", "Nehekhara Warriors", "Killing Blow"]
+keywords = ["Infantry", "Tomb Guard", "Tomb Kings", "Special"]
+equipment = ["Hand weapon", "Heavy armor", "Shield"]
+options = ["May swap for halberds (+1 pt/model)", "May add musician (+5 pts)", "May add standard bearer (+10 pts)", "May take magic standard up to 75 pts"]
+
+[units.stats]
+M = 4
+WS = 3
+BS = 3
+S = 4
+T = 4
+W = 1
+I = 3
+A = 1
+Ld = 8
+Sv = "4+"
+
+[[units]]
+name = "Necropolis Knights"
+type = "monstrous_cavalry"
+category = "Special"
+points = 65
+models = "3-6"
+tactical_role = "monstrous_cavalry"
+threat_level = "very_high"
+preferred_targets = ["cavalry", "monsters"]
+weaknesses = ["war_machines"]
+special_rules = ["Undead", "Nehekhara Warriors", "Fear", "Killing Blow", "Poisoned Attacks (mount)"]
+keywords = ["Monstrous Cavalry", "Tomb Kings", "Special"]
+equipment = ["Spear", "Hand weapon", "Light armor", "Shield"]
+
+[units.stats]
+M = 4
+WS = 3
+BS = 3
+S = 4
+T = 4
+W = 1
+I = 3
+A = 1
+Ld = 8
+Sv = "4+"
+
+[units.mount]
+name = "Necroserpent"
+M = 7
+WS = 4
+S = 5
+T = 4
+W = 3
+I = 1
+A = 3
+
+[[units]]
+name = "Ushabti"
+type = "monstrous_infantry"
+category = "Special"
+points = 50
+models = "3-9"
+tactical_role = "monster"
+threat_level = "high"
+preferred_targets = ["infantry", "light_cavalry"]
+weaknesses = ["war_machines"]
+special_rules = ["Undead", "Construct", "Animated Constructs"]
+keywords = ["Monstrous Infantry", "Construct", "Tomb Kings", "Special"]
+equipment = ["Great bow and great weapon"]
+options = ["May swap bows for additional hand weapon"]
+
+[units.stats]
+M = 5
+WS = 4
+BS = 2
+S = 6
+T = 4
+W = 3
+I = 3
+A = 3
+Ld = 8
+Sv = "5+"
+
+[[units.weapons]]
+name = "Ushabti Great Bow"
+range = "30\""
+strength = "6"
+ap = "3"
+damage = "1"
+abilities = ["Armor Piercing (3)"]
+
+[[units]]
+name = "Carrion"
+type = "warbeast"
+category = "Special"
+points = 24
+models = "3-6"
+tactical_role = "war_machine_hunters"
+threat_level = "medium"
+preferred_targets = ["war_machines", "lone_characters"]
+weaknesses = ["shooting"]
+special_rules = ["Undead", "Fly"]
+keywords = ["War Beast", "Tomb Kings", "Special", "Fly"]
+equipment = ["Claws"]
+
+[units.stats]
+M = 2
+WS = 3
+BS = 0
+S = 4
+T = 4
+W = 2
+I = 3
+A = 2
+Ld = 4
+Sv = "-"
+
+[[units]]
+name = "Tomb Scorpion"
+type = "monstrous_beast"
+category = "Special"
+points = 85
+models = "1"
+tactical_role = "ambusher"
+threat_level = "high"
+preferred_targets = ["war_machines", "flanks"]
+weaknesses = ["high_strength_attacks"]
+special_rules = ["Undead", "Construct", "Entombed Beneath the Sands", "Killing Blow", "Poisoned Attacks"]
+keywords = ["Monstrous Beast", "Construct", "Tomb Kings", "Special"]
+equipment = ["Claws and sting"]
+
+[units.stats]
+M = 7
+WS = 4
+BS = 0
+S = 5
+T = 5
+W = 4
+I = 3
+A = 4
+Ld = 8
+Sv = "4+"
+
+[[units]]
+name = "Sepulchral Stalkers"
+type = "monstrous_infantry"
+category = "Special"
+points = 55
+models = "3-6"
+tactical_role = "ambushers"
+threat_level = "high"
+preferred_targets = ["low_init_targets"]
+weaknesses = ["high_initiative_targets"]
+special_rules = ["Undead", "Construct", "Entombed Beneath the Sands", "Transmogrifying Gaze"]
+keywords = ["Monstrous Infantry", "Construct", "Tomb Kings", "Special"]
+equipment = ["Halberds"]
+
+[units.stats]
+M = 7
+WS = 3
+BS = 0
+S = 4
+T = 4
+W = 3
+I = 3
+A = 2
+Ld = 8
+Sv = "5+"
+
+[[units]]
+name = "Screaming Skull Catapult"
+type = "warmachine"
+category = "Special"
+points = 90
+models = "1 catapult, 3 crew"
+tactical_role = "artillery"
+threat_level = "high"
+preferred_targets = ["ranked_infantry"]
+weaknesses = ["fast_units"]
+special_rules = ["Undead", "Move or Fire", "Screaming Skulls"]
+keywords = ["War Machine", "Tomb Kings", "Special"]
+equipment = ["Hand weapons"]
+
+[units.stats]
+M = "-"
+WS = 2
+BS = 2
+S = 3
+T = 7
+W = 3
+I = 2
+A = "-"
+Ld = 5
+Sv = "-"
+
+[[units.weapons]]
+name = "Screaming Skulls"
+range = "12-48\""
+strength = "3"
+ap = "0"
+damage = "1"
+abilities = ["Large Blast (5\")", "Enemies hit take Panic test", "Screaming Skulls of the Damned"]
+
+# =============================================================================
+# RARE UNITS
+# =============================================================================
+
+[[units]]
+name = "Warsphinx"
+type = "monster"
+category = "Rare"
+points = 210
+models = "1"
+tactical_role = "monster"
+threat_level = "extreme"
+preferred_targets = ["infantry", "cavalry"]
+weaknesses = ["war_machines"]
+special_rules = ["Undead", "Construct", "Terror", "Killing Blow", "Thundercrush Attack"]
+keywords = ["Monster", "Construct", "Tomb Kings", "Rare"]
+equipment = ["Claws", "Crew with bows"]
+
+[units.stats]
+M = 6
+WS = 4
+BS = 0
+S = 5
+T = 8
+W = 5
+I = 1
+A = 4
+Ld = 8
+Sv = "5+"
+
+[[units]]
+name = "Necrosphinx"
+type = "monster"
+category = "Rare"
+points = 225
+models = "1"
+tactical_role = "monster_slayer"
+threat_level = "extreme"
+preferred_targets = ["monsters", "characters"]
+weaknesses = ["ranked_infantry"]
+special_rules = ["Undead", "Construct", "Terror", "Fly", "Killing Blow", "Decapitating Strike (Heroic Killing Blow)"]
+keywords = ["Monster", "Construct", "Tomb Kings", "Rare", "Fly"]
+equipment = ["Massive scything blades"]
+
+[units.stats]
+M = 6
+WS = 4
+BS = 0
+S = 6
+T = 8
+W = 5
+I = 1
+A = 5
+Ld = 8
+Sv = "5+"
+
+[[units]]
+name = "Hierotitan"
+type = "monster"
+category = "Rare"
+points = 175
+models = "1"
+tactical_role = "magic_support"
+threat_level = "high"
+preferred_targets = ["NA"]
+weaknesses = ["war_machines"]
+special_rules = ["Undead", "Construct", "Terror", "Spirit Conduit", "Bound Spells"]
+keywords = ["Monster", "Construct", "Tomb Kings", "Rare"]
+equipment = ["Massive fists"]
+
+[units.stats]
+M = 6
+WS = 3
+BS = 0
+S = 6
+T = 6
+W = 5
+I = 1
+A = 4
+Ld = 8
+Sv = "5+"
+
+[[units]]
+name = "Casket of Souls"
+type = "warmachine"
+category = "Rare"
+points = 135
+models = "1 casket, 2 Keeper guards"
+tactical_role = "magic_support"
+threat_level = "high"
+preferred_targets = ["low_ld_targets"]
+weaknesses = ["close_combat"]
+special_rules = ["Undead", "Construct", "Light of Death (bound spell)", "Covenant of Power"]
+keywords = ["War Machine", "Tomb Kings", "Rare"]
+equipment = ["Souls of the damned"]
+
+[units.stats]
+M = "-"
+WS = 4
+BS = 0
+S = 4
+T = 7
+W = 4
+I = 2
+A = 2
+Ld = 8
+Sv = "5+"
+
+[[units]]
+name = "Bone Giant"
+type = "monster"
+category = "Rare"
+points = 150
+models = "1"
+tactical_role = "monster"
+threat_level = "high"
+preferred_targets = ["infantry", "cavalry"]
+weaknesses = ["war_machines", "high_strength"]
+special_rules = ["Undead", "Construct", "Terror", "Unstoppable Assault"]
+keywords = ["Monster", "Construct", "Tomb Kings", "Rare"]
+equipment = ["Giant bone club or twin giant blade"]
+
+[units.stats]
+M = 6
+WS = 3
+BS = 0
+S = 6
+T = 5
+W = 5
+I = 1
+A = 4
+Ld = 8
+Sv = "-"
+
+# =============================================================================
+# FACTION SPECIAL RULES
+# =============================================================================
+
+[[faction_rules]]
+name = "Undead"
+description = "Immune to Psychology. Never flee. Cannot march outside of incantations. Unstable - if lose combat, take wounds equal to combat resolution difference (no saves)"
+
+[[faction_rules]]
+name = "Nehekhara Warriors"
+description = "Units with this rule can be affected by the Righteous Smiting incantation for +1 Attack"
+
+[[faction_rules]]
+name = "My Will Be Done"
+description = "Tomb King or Prince grants his WS to the unit he joins"
+
+[[faction_rules]]
+name = "The Curse"
+description = "When a Tomb King or Prince is slain, the model that killed them takes D6 S5 hits"
+
+[[faction_rules]]
+name = "Hierophant"
+description = "One Liche Priest must be the Hierophant. If slain, all Undead units immediately take D6 wounds per unit (no saves)"
+
+[[faction_rules]]
+name = "Animated Constructs"
+description = "Constructs have a 5+ armor save and are affected by the Righteous Smiting incantation"
+
+[[faction_rules]]
+name = "Entombed Beneath the Sands"
+description = "Unit deploys underground. From Turn 2 onwards, roll D6 in Movement phase: on 3+, unit emerges anywhere 1\" from terrain/enemy"
+
+[[faction_rules]]
+name = "Incantations"
+description = "Lore of Nehekhara spells grant extra movement, extra attacks, and healing to Tomb Kings units"
+
+# =============================================================================
+# FACTION MAGIC ITEMS
+# =============================================================================
+
+[[faction_items]]
+name = "Blade of Setep"
+type = "magic_weapon"
+points = 60
+description = "Ignores armor saves. +1 Strength. Can be taken by a Tomb King on a Warsphinx"
+restrictions = ["Tomb Kings characters only"]
+
+[[faction_items]]
+name = "Destroyer of Eternities"
+type = "magic_weapon"
+points = 70
+description = "Great weapon. Heroic Killing Blow. Multiple Wounds (D3)"
+restrictions = ["Tomb Kings characters only"]
+
+[[faction_items]]
+name = "Armor of Ages"
+type = "magic_armor"
+points = 50
+description = "Heavy armor. For each wound suffered, gain +1 Toughness (max T10)"
+restrictions = ["Tomb Kings characters only"]
+
+[[faction_items]]
+name = "Cloak of the Dunes"
+type = "enchanted"
+points = 35
+description = "Bearer has Ethereal and Fly until they enter combat"
+restrictions = ["Tomb Kings characters only"]
+
+[[faction_items]]
+name = "Banner of the Undying Legion"
+type = "banner"
+points = 50
+description = "Incantations cast on the unit restore D3+1 wounds instead of D3"
+restrictions = ["Tomb Kings standard bearer only"]
+
+[[faction_items]]
+name = "Standard of the Sands"
+type = "banner"
+points = 75
+description = "Unit has Entombed Beneath the Sands. May re-roll emergence roll"
+restrictions = ["Tomb Kings standard bearer only"]

@@ -1,0 +1,1176 @@
+# ============================================================================
+# ESPIONAGE SYSTEM - Birthright Solo Oracle
+# ============================================================================
+# The shadow war between regents - spies, assassins, and intrigue.
+# Every court has its secrets; espionage is how those secrets are found,
+# exploited, or protected.
+# ============================================================================
+
+[meta]
+title = "Espionage Operations"
+description = "Covert actions, spy networks, and shadow warfare for regent play"
+version = "1.0.0"
+author = "Birthright Oracle System"
+
+# ============================================================================
+# ESPIONAGE INFRASTRUCTURE
+# ============================================================================
+# Building and maintaining intelligence capabilities
+
+[spy_networks]
+description = "Establishing covert intelligence operations"
+
+[spy_networks.creation]
+name = "Create Spy Network"
+type = "domain_action"
+cost = "2 GB, 1 RP"
+time = "1 domain turn to establish, ongoing maintenance"
+dc = "DC 15"
+description = "Establish network of informants, agents, and safe houses in target domain"
+requirements = [
+    "Access to target domain (trade, diplomacy, or covert entry)",
+    "Initial contacts to recruit",
+    "Funding for bribes and expenses"
+]
+success_effects = [
+    "Gain intelligence on target domain's actions",
+    "Enables espionage operations in that domain",
+    "+2 to all espionage actions in target domain",
+    "Early warning of actions against you"
+]
+failure_effects = [
+    "Agents exposed",
+    "Diplomatic incident possible",
+    "Target aware of your interest",
+    "Investment lost"
+]
+maintenance = "1 GB per turn to maintain, or network degrades"
+discovery_risk = "Each turn, 10% base chance of partial exposure"
+oracle_questions = [
+    "Is the network compromised from the start?",
+    "Who is the key agent running the network?",
+    "What unexpected intelligence comes first?",
+    "Is there a double agent in the network?",
+    "What does the network cost beyond gold?"
+]
+
+[spy_networks.levels]
+description = "Quality levels of spy networks"
+
+[[spy_networks.levels.tiers]]
+level = 1
+name = "Informant Network"
+description = "Basic contacts and observers"
+capabilities = [
+    "General political news",
+    "Public troop movements",
+    "Court rumors"
+]
+cost = "1 GB/turn"
+discovery_risk = "5%/turn"
+
+[[spy_networks.levels.tiers]]
+level = 2
+name = "Agent Network"
+description = "Trained operatives and recruited insiders"
+capabilities = [
+    "Private council discussions",
+    "Economic intelligence",
+    "Military disposition details",
+    "Enables basic operations"
+]
+cost = "2 GB/turn"
+discovery_risk = "10%/turn"
+
+[[spy_networks.levels.tiers]]
+level = 3
+name = "Intelligence Service"
+description = "Professional organization with deep penetration"
+capabilities = [
+    "Access to secret documents",
+    "Highly placed sources",
+    "Counterintelligence capability",
+    "Enables all operations"
+]
+cost = "4 GB/turn"
+discovery_risk = "15%/turn"
+
+# ============================================================================
+# ESPIONAGE ACTIONS
+# ============================================================================
+# Specific covert operations
+
+[[espionage_actions]]
+name = "Assassination - Regent"
+type = "espionage_action"
+cost = "5 GB minimum, often more"
+time = "1-3 domain turns preparation"
+dc = "DC 25 (modified by target security)"
+risk_level = "extreme"
+description = "Eliminate the ruler of a domain"
+requirements = [
+    "Spy network in target domain (level 2+)",
+    "Skilled assassin(s)",
+    "Intelligence on target's habits and security",
+    "Escape plan or suicide mission"
+]
+success_effects = [
+    "Target regent killed",
+    "Succession crisis likely",
+    "Domain weakened",
+    "Bloodline potentially available if assassin is scion"
+]
+failure_effects = [
+    "Assassin captured or killed",
+    "Diplomatic catastrophe if traced",
+    "Casus belli provided to target",
+    "Your spy network exposed",
+    "Coalition may form against you"
+]
+modifiers = [
+    { condition = "Target is blooded regent", modifier = "+5 DC (bloodline warns of danger)" },
+    { condition = "Strong blood ability active", modifier = "+2 to +8 DC depending on ability" },
+    { condition = "Target uses body doubles", modifier = "+4 DC" },
+    { condition = "Target has divination protection", modifier = "+6 DC" },
+    { condition = "Insider access obtained", modifier = "-4 DC" },
+    { condition = "Public event opportunity", modifier = "-2 DC but +4 to discovery" },
+    { condition = "Elite assassin (Serpent, etc.)", modifier = "-4 DC" }
+]
+consequences_if_traced = [
+    "War declaration likely",
+    "Reputation as kinslayer/regent-killer",
+    "Religious condemnation possible",
+    "Coalition against you",
+    "Your own nobles may question loyalty"
+]
+oracle_questions = [
+    "Does the assassin get close to the target?",
+    "Is there an unexpected complication?",
+    "Does the target have a decoy or body double?",
+    "Is the assassin compromised before the attempt?",
+    "What evidence is left behind?",
+    "Does anyone witness the act?",
+    "Does the assassin escape?",
+    "Can the assassination be traced to you?"
+]
+
+[[espionage_actions]]
+name = "Assassination - Lieutenant"
+type = "espionage_action"
+cost = "3 GB"
+time = "1-2 domain turns"
+dc = "DC 20"
+risk_level = "high"
+description = "Eliminate key advisor, general, or other important figure"
+requirements = [
+    "Spy network in target domain (level 1+)",
+    "Assassin available",
+    "Target identified"
+]
+success_effects = [
+    "Target eliminated",
+    "Domain loses their abilities/bonuses",
+    "Regent must find replacement",
+    "May create succession of problems"
+]
+failure_effects = [
+    "Assassin captured",
+    "Security increased",
+    "Possible diplomatic incident"
+]
+modifiers = [
+    { condition = "Target is wizard", modifier = "+6 DC" },
+    { condition = "Target is military commander", modifier = "+2 DC (guards)" },
+    { condition = "Target is court official", modifier = "-2 DC (accessible)" }
+]
+oracle_questions = [
+    "How well protected is the target?",
+    "Does the target have enemies who might help?",
+    "Is the target actually important or a decoy position?",
+    "What unexpected skills does the target have?",
+    "Does anyone mourn the target or celebrate?"
+]
+
+[[espionage_actions]]
+name = "Assassination - Heir"
+type = "espionage_action"
+cost = "4 GB"
+time = "1-2 domain turns"
+dc = "DC 22"
+risk_level = "very high"
+description = "Kill the designated successor to create succession crisis"
+requirements = [
+    "Spy network in target domain (level 2+)",
+    "Heir identified and located",
+    "Assassin capable of reaching them"
+]
+success_effects = [
+    "Succession crisis created",
+    "Regent must name new heir",
+    "Other claimants may emerge",
+    "Domain potentially destabilized"
+]
+failure_effects = [
+    "Heir protected more heavily",
+    "Regent warned of your intentions",
+    "Possible war",
+    "Severe reputation damage"
+]
+modifiers = [
+    { condition = "Heir is child (heavily guarded)", modifier = "+4 DC" },
+    { condition = "Heir is adult in public life", modifier = "-2 DC" },
+    { condition = "Heir is adventuring abroad", modifier = "Variable" }
+]
+oracle_questions = [
+    "Where is the heir most vulnerable?",
+    "Does the regent have other children?",
+    "Who benefits from the heir's death besides you?",
+    "Is the heir loved or resented?",
+    "Could the death be made to look natural?"
+]
+
+[[espionage_actions]]
+name = "Bribery"
+type = "espionage_action"
+cost = "Variable (1-10+ GB depending on target)"
+time = "Immediate to 1 domain turn"
+dc = "DC 12-20 depending on target"
+risk_level = "moderate"
+description = "Pay someone to betray their master or cause"
+requirements = [
+    "Target who can be bought",
+    "Knowledge of what they want",
+    "Sufficient funds"
+]
+success_effects = [
+    "Target provides information, access, or takes specific action",
+    "Ongoing source if relationship maintained",
+    "May turn into recruited agent"
+]
+failure_effects = [
+    "Target refuses and may report approach",
+    "Target takes money and betrays you anyway",
+    "Money lost",
+    "Your interest revealed"
+]
+target_susceptibility = [
+    { target = "Underpaid official", dc = 12 },
+    { target = "Greedy merchant", dc = 14 },
+    { target = "Disgruntled noble", dc = 16 },
+    { target = "Loyal retainer", dc = 20 },
+    { target = "Ideologically committed", dc = 25 }
+]
+modifiers = [
+    { condition = "Target has gambling debts", modifier = "-4 DC" },
+    { condition = "Target has expensive tastes", modifier = "-2 DC" },
+    { condition = "Target is fanatically loyal", modifier = "+8 DC" },
+    { condition = "Target hates their master", modifier = "-4 DC" },
+    { condition = "Offer includes non-monetary benefits", modifier = "-2 DC" }
+]
+oracle_questions = [
+    "What does the target actually want?",
+    "Is the target genuinely corruptible or setting a trap?",
+    "Will they stay bought?",
+    "Do they have access to what you need?",
+    "Who else knows about this arrangement?"
+]
+
+[[espionage_actions]]
+name = "Corruption"
+type = "espionage_action"
+cost = "2-6 GB"
+time = "1-4 domain turns"
+dc = "DC 18"
+risk_level = "moderate"
+description = "Systematically compromise officials, institutions, or processes"
+requirements = [
+    "Spy network in target domain",
+    "Targets for corruption identified",
+    "Ongoing funding"
+]
+success_effects = [
+    "Target domain actions at -2 penalty",
+    "Domain income reduced",
+    "Information flows to you",
+    "Officials act in your interest"
+]
+failure_effects = [
+    "Corruption exposed",
+    "Officials purged (may improve efficiency)",
+    "Your involvement suspected"
+]
+corruption_targets = [
+    "Tax collectors (reduce domain income by 1 GB/turn)",
+    "Military officers (reduce army effectiveness)",
+    "Court officials (gain intelligence)",
+    "Guild factors (disrupt trade)",
+    "Temple priests (spread doubt)"
+]
+oracle_questions = [
+    "How deep does the corruption spread?",
+    "Is there a reformer trying to root it out?",
+    "Does corruption create its own power structure?",
+    "Are the corrupted officials effective or incompetent?",
+    "What happens when the original corrupter is revealed?"
+]
+
+[[espionage_actions]]
+name = "Infiltration"
+type = "espionage_action"
+cost = "2 GB"
+time = "1-4 domain turns"
+dc = "DC 16"
+risk_level = "moderate"
+description = "Place agent in position within target organization"
+requirements = [
+    "Suitable agent with cover identity",
+    "Opening in target organization",
+    "Supporting documentation/references"
+]
+success_effects = [
+    "Agent gains position",
+    "Ongoing intelligence from inside",
+    "Can influence decisions",
+    "May enable other operations"
+]
+failure_effects = [
+    "Agent rejected",
+    "Cover blown",
+    "Target alerted",
+    "Agent possibly captured"
+]
+infiltration_targets = [
+    { target = "Military unit", time = "2-4 turns", dc = 18 },
+    { target = "Noble household", time = "1-2 turns", dc = 16 },
+    { target = "Guild operation", time = "1 turn", dc = 14 },
+    { target = "Temple hierarchy", time = "2-4 turns", dc = 18 },
+    { target = "Court position", time = "3-6 turns", dc = 20 },
+    { target = "Personal staff", time = "2-3 turns", dc = 19 }
+]
+oracle_questions = [
+    "How convincing is the cover identity?",
+    "What unexpected challenges does the infiltrator face?",
+    "Does anyone suspect the infiltrator?",
+    "What opportunities for action emerge?",
+    "Does the infiltrator develop genuine relationships?"
+]
+
+[[espionage_actions]]
+name = "Sabotage"
+type = "espionage_action"
+cost = "1-4 GB"
+time = "1 domain turn"
+dc = "DC 14-20 depending on target"
+risk_level = "moderate to high"
+description = "Damage or destroy target's infrastructure, resources, or capabilities"
+requirements = [
+    "Access to target",
+    "Appropriate skills/tools",
+    "Escape plan"
+]
+success_effects = [
+    "Target damaged or destroyed",
+    "Enemy capabilities reduced",
+    "May cause cascading problems"
+]
+failure_effects = [
+    "Saboteur captured",
+    "Damage minimal or repaired",
+    "Security increased",
+    "Possible retaliation"
+]
+sabotage_targets = [
+    { target = "Bridge or road", dc = 14, effect = "Slows movement, costs GB to repair" },
+    { target = "Fortification", dc = 18, effect = "Reduces defensive value" },
+    { target = "Shipyard", dc = 16, effect = "Delays naval construction" },
+    { target = "Warehouse/Granary", dc = 14, effect = "Destroys supplies, causes shortage" },
+    { target = "Source manifestation", dc = 22, effect = "Reduces source level temporarily" },
+    { target = "Guild operation", dc = 15, effect = "Reduces income" },
+    { target = "Military equipment", dc = 16, effect = "Reduces army effectiveness" },
+    { target = "Temple relics", dc = 20, effect = "Reduces temple influence, may cause divine response" }
+]
+oracle_questions = [
+    "Is the sabotage successful and complete?",
+    "Are there unexpected casualties?",
+    "Does the sabotage look like an accident?",
+    "What security measures were bypassed?",
+    "Does the sabotage have unintended consequences?"
+]
+
+[[espionage_actions]]
+name = "Spread Rumors"
+type = "espionage_action"
+cost = "1 GB"
+time = "1-2 domain turns to take effect"
+dc = "DC 12"
+risk_level = "low"
+description = "Disseminate false or damaging information to undermine target"
+requirements = [
+    "Network to spread information",
+    "Plausible rumor to spread",
+    "Target population receptive"
+]
+success_effects = [
+    "Target's reputation damaged",
+    "Public opinion shifts",
+    "May cause internal strife",
+    "May justify other actions"
+]
+failure_effects = [
+    "Rumor doesn't spread",
+    "Rumor traced to you",
+    "Counter-propaganda succeeds"
+]
+rumor_types = [
+    { type = "Moral failing", target = "Regent", effect = "Reduced loyalty, RP loss" },
+    { type = "Military weakness", target = "Domain", effect = "Encourages enemies" },
+    { type = "Economic trouble", target = "Guild", effect = "Merchant confidence drops" },
+    { type = "Heresy accusations", target = "Temple/Regent", effect = "Religious conflict" },
+    { type = "Blood curse rumors", target = "Blooded regent", effect = "Fear, reduced cooperation" },
+    { type = "Succession doubts", target = "Heir", effect = "Instability" },
+    { type = "Foreign allegiance", target = "Anyone", effect = "Suspicion, isolation" }
+]
+oracle_questions = [
+    "Does the rumor spread as intended?",
+    "Do people believe it?",
+    "Does it mutate into something different?",
+    "Is there a kernel of truth that makes it stick?",
+    "Who tries to counter the rumor?"
+]
+
+[[espionage_actions]]
+name = "Steal Secrets"
+type = "espionage_action"
+cost = "2-4 GB"
+time = "1-2 domain turns"
+dc = "DC 16-22"
+risk_level = "high"
+description = "Obtain confidential documents, plans, or information"
+requirements = [
+    "Spy network or infiltrated agent",
+    "Knowledge of what secrets exist",
+    "Means to extract information"
+]
+success_effects = [
+    "Gain valuable intelligence",
+    "May include: military plans, diplomatic correspondence, financial records, magical research",
+    "Can use for blackmail, planning, or exposure"
+]
+failure_effects = [
+    "Operation detected",
+    "Agent compromised",
+    "False information planted",
+    "Security increased"
+]
+secret_types = [
+    { type = "Military plans", dc = 18, value = "Know enemy strategy" },
+    { type = "Diplomatic correspondence", dc = 16, value = "Know alliances/negotiations" },
+    { type = "Financial records", dc = 15, value = "Know domain resources" },
+    { type = "Personal secrets", dc = 17, value = "Blackmail material" },
+    { type = "Magical research", dc = 20, value = "Spell or ritual knowledge" },
+    { type = "Bloodline records", dc = 19, value = "Know derivation and strength" },
+    { type = "Temple mysteries", dc = 21, value = "Religious secrets" }
+]
+oracle_questions = [
+    "What secrets are actually available?",
+    "How valuable is the stolen information?",
+    "Is any of it false or planted?",
+    "How does the target react to the theft?",
+    "What can you actually do with this information?"
+]
+
+[[espionage_actions]]
+name = "Counter-Espionage"
+type = "espionage_action"
+cost = "1-3 GB/turn"
+time = "Ongoing"
+dc = "Opposed check vs enemy operations"
+risk_level = "low"
+description = "Detect and neutralize enemy spy operations"
+requirements = [
+    "Intelligence apparatus",
+    "Security personnel",
+    "Awareness of potential threats"
+]
+success_effects = [
+    "Enemy operations detected",
+    "Spies captured or turned",
+    "Operations disrupted",
+    "May gain intelligence on enemy"
+]
+failure_effects = [
+    "Enemy operations continue undetected",
+    "Resources wasted",
+    "May create paranoid atmosphere"
+]
+counter_intelligence_methods = [
+    "Monitor suspicious foreigners",
+    "Vet court appointees",
+    "Protect sensitive documents",
+    "Create honeypots",
+    "Feed false information",
+    "Turn captured agents"
+]
+oracle_questions = [
+    "Are there actually enemy spies to find?",
+    "Is someone falsely accused?",
+    "Can captured spies be turned?",
+    "What do captured spies reveal about enemy intentions?",
+    "Does counter-espionage become paranoid witch-hunt?"
+]
+
+[[espionage_actions]]
+name = "Blackmail"
+type = "espionage_action"
+cost = "Variable (depends on leverage obtained)"
+time = "Immediate once leverage obtained"
+dc = "DC 15 (to apply pressure successfully)"
+risk_level = "moderate to high"
+description = "Use compromising information to coerce target"
+requirements = [
+    "Compromising information about target",
+    "Proof or credible threat of exposure",
+    "Target cares about the secret"
+]
+success_effects = [
+    "Target complies with demands",
+    "Ongoing leverage if secret preserved",
+    "May gain information, actions, or payments"
+]
+failure_effects = [
+    "Target calls bluff or confesses",
+    "Target attempts to silence you",
+    "Target seeks protection from third party",
+    "You gain enemy willing to take extreme action"
+]
+blackmail_targets = [
+    { type = "Moral failing", leverage = "Adultery, vice, etc." },
+    { type = "Criminal activity", leverage = "Murder, theft, treason" },
+    { type = "Heresy/apostasy", leverage = "Religious violations" },
+    { type = "Illegitimacy", leverage = "False bloodline claims" },
+    { type = "Past betrayals", leverage = "Hidden treachery" },
+    { type = "Secret alliances", leverage = "Hidden relationships" }
+]
+oracle_questions = [
+    "How damaging is the secret really?",
+    "Does the target believe you'll follow through?",
+    "What is the target willing to do to keep the secret?",
+    "Are there others who know the same secret?",
+    "Does the blackmail attempt become public?"
+]
+
+[[espionage_actions]]
+name = "Frame Target"
+type = "espionage_action"
+cost = "2-5 GB"
+time = "1-3 domain turns"
+dc = "DC 18"
+risk_level = "high"
+description = "Create false evidence to implicate target in wrongdoing"
+requirements = [
+    "Means to plant evidence",
+    "Plausible crime to frame for",
+    "Evidence that will be discovered"
+]
+success_effects = [
+    "Target accused and possibly punished",
+    "Target's reputation destroyed",
+    "May remove rival without direct action",
+    "Creates chaos in target organization"
+]
+failure_effects = [
+    "Frame-up exposed",
+    "Your involvement revealed",
+    "Target becomes sympathetic victim",
+    "Severe reputation damage to you"
+]
+frame_targets = [
+    { crime = "Treason", effect = "Execution/exile" },
+    { crime = "Embezzlement", effect = "Disgrace, financial ruin" },
+    { crime = "Heresy", effect = "Temple action, social death" },
+    { crime = "Murder", effect = "Legal prosecution" },
+    { crime = "Espionage", effect = "Imprisonment, diplomatic incident" },
+    { crime = "Adultery", effect = "Scandal, divorce, disinheritance" }
+]
+oracle_questions = [
+    "Is the planted evidence convincing?",
+    "Does anyone investigate thoroughly?",
+    "Does the target have an alibi?",
+    "Are there witnesses to contradict the frame?",
+    "Does the truth ever come out?"
+]
+
+[[espionage_actions]]
+name = "Extract Agent"
+type = "espionage_action"
+cost = "1-3 GB"
+time = "Immediate to 1 domain turn"
+dc = "DC 14"
+risk_level = "moderate"
+description = "Rescue compromised agent before capture"
+requirements = [
+    "Warning of compromise",
+    "Extraction route prepared",
+    "Resources for escape"
+]
+success_effects = [
+    "Agent escapes",
+    "Agent's knowledge preserved",
+    "Can be redeployed elsewhere"
+]
+failure_effects = [
+    "Agent captured",
+    "Extraction team captured or killed",
+    "Network further compromised"
+]
+extraction_methods = [
+    "Overland escape through sympathetic territory",
+    "Sea extraction",
+    "Disguise and hidden travel",
+    "Diplomatic cover",
+    "Magical extraction (expensive)"
+]
+oracle_questions = [
+    "How compromised is the agent?",
+    "Is the extraction window closing?",
+    "Are pursuers close behind?",
+    "Does the agent have valuable intelligence to bring?",
+    "Is this an enemy trap?"
+]
+
+[[espionage_actions]]
+name = "Establish Safe House"
+type = "espionage_action"
+cost = "1 GB"
+time = "1 domain turn"
+dc = "DC 12"
+risk_level = "low"
+description = "Create secure location for covert operations"
+requirements = [
+    "Location in target area",
+    "Trustworthy caretaker",
+    "Cover story for the property"
+]
+success_effects = [
+    "+2 to all espionage operations from this location",
+    "Emergency refuge for agents",
+    "Secure meeting location"
+]
+failure_effects = [
+    "Location compromised",
+    "May be used as trap by enemy"
+]
+oracle_questions = [
+    "Is the location truly secure?",
+    "Is the caretaker trustworthy?",
+    "Do neighbors notice unusual activity?",
+    "What cover story explains the property?",
+    "Has the enemy identified this location?"
+]
+
+# ============================================================================
+# ESPIONAGE CONSEQUENCES
+# ============================================================================
+# What happens when espionage is discovered or suspected
+
+[discovery_consequences]
+description = "Consequences when espionage operations are exposed"
+
+[[discovery_consequences.levels]]
+level = "Suspicion"
+description = "Target suspects espionage but has no proof"
+consequences = [
+    "Increased security",
+    "Diplomatic cooling",
+    "Counter-intelligence focus on you"
+]
+oracle_questions = [
+    "Does suspicion grow or fade?",
+    "Does the target accuse you publicly?",
+    "Are innocent parties accused?"
+]
+
+[[discovery_consequences.levels]]
+level = "Detection"
+description = "Operation discovered but sponsorship unclear"
+consequences = [
+    "Agents captured or forced to flee",
+    "Network disrupted",
+    "Multiple suspects accused",
+    "Investigation launched"
+]
+oracle_questions = [
+    "Do captured agents reveal anything?",
+    "Does evidence point to you or another party?",
+    "Can you frame someone else?"
+]
+
+[[discovery_consequences.levels]]
+level = "Attribution"
+description = "You are definitively identified as responsible"
+consequences = [
+    "Diplomatic incident",
+    "Possible casus belli",
+    "Reputation damage",
+    "Allies may distance themselves",
+    "Retaliation likely"
+]
+oracle_questions = [
+    "How damaging is the revelation?",
+    "Can you deny convincingly?",
+    "Do allies abandon you?",
+    "What form does retaliation take?"
+]
+
+[[discovery_consequences.levels]]
+level = "Public Scandal"
+description = "Espionage becomes public knowledge"
+consequences = [
+    "Massive reputation damage",
+    "International condemnation",
+    "Coalition may form against you",
+    "Internal dissent",
+    "War possible"
+]
+oracle_questions = [
+    "How does the public react?",
+    "Do other powers use this against you?",
+    "Can you recover from this?",
+    "Does this overshadow the actual results?"
+]
+
+# ============================================================================
+# ESPIONAGE AGENTS
+# ============================================================================
+# Types of agents and their capabilities
+
+[[agent_types]]
+name = "Informant"
+description = "Local contact who provides information for payment"
+recruitment_dc = 12
+cost = "Variable bribes"
+capabilities = [
+    "Local news and rumors",
+    "Basic surveillance",
+    "Message relay"
+]
+limitations = [
+    "Limited access",
+    "Unreliable loyalty",
+    "May sell to highest bidder"
+]
+oracle_questions = [
+    "Is the informant's information reliable?",
+    "Does the informant have divided loyalties?",
+    "What does the informant want beyond money?"
+]
+
+[[agent_types]]
+name = "Agent"
+description = "Trained operative capable of active operations"
+recruitment_dc = 16
+cost = "2 GB to recruit, 1 GB/turn to maintain"
+capabilities = [
+    "Infiltration",
+    "Document theft",
+    "Sabotage",
+    "Surveillance"
+]
+limitations = [
+    "Cannot operate openly",
+    "Needs cover identity",
+    "Risk of capture"
+]
+oracle_questions = [
+    "What is the agent's background?",
+    "What are the agent's personal motivations?",
+    "Does the agent have any weaknesses?"
+]
+
+[[agent_types]]
+name = "Assassin"
+description = "Specialist in targeted killing"
+recruitment_dc = 20
+cost = "5+ GB per contract"
+capabilities = [
+    "Assassination",
+    "Poison",
+    "Combat",
+    "Stealth"
+]
+limitations = [
+    "Expensive",
+    "May have moral limits",
+    "Failure is often fatal"
+]
+guild_options = [
+    "The Serpent (Khinasi) - Professional, expensive, reliable",
+    "Spider's Web (Brecht) - Poison specialists",
+    "Independent contractors - Variable quality"
+]
+oracle_questions = [
+    "Is the assassin truly skilled?",
+    "Does the assassin have any code or limits?",
+    "Will the assassin betray you if captured?",
+    "What does the assassin know about other clients?"
+]
+
+[[agent_types]]
+name = "Double Agent"
+description = "Agent who appears to work for another power but truly serves you"
+recruitment_dc = 18
+cost = "Variable"
+capabilities = [
+    "Deep intelligence on enemy",
+    "Misdirection of enemy operations",
+    "Feeding false information"
+]
+limitations = [
+    "Constant risk of exposure",
+    "May become triple agent",
+    "Difficult to maintain"
+]
+oracle_questions = [
+    "Is the double agent truly loyal to you?",
+    "Has the enemy discovered the deception?",
+    "What false information should be fed?",
+    "Is the double agent playing all sides?"
+]
+
+[[agent_types]]
+name = "Sleeper Agent"
+description = "Agent in deep cover activated only for major operations"
+recruitment_dc = 16
+cost = "1 GB/year to maintain"
+capabilities = [
+    "Deep cover for years",
+    "Access to high-value targets",
+    "One-time major operation"
+]
+limitations = [
+    "May lose motivation over time",
+    "May be discovered through other means",
+    "Single use in most cases"
+]
+oracle_questions = [
+    "Has the sleeper agent maintained cover?",
+    "Does the sleeper still answer to you after years?",
+    "What position has the sleeper achieved?",
+    "Is now the right time to activate?"
+]
+
+# ============================================================================
+# ESPIONAGE COMPLICATIONS
+# ============================================================================
+# Things that can go wrong or add drama to espionage operations
+
+[[espionage_complications]]
+name = "Agent Goes Rogue"
+description = "An agent develops their own agenda"
+trigger = "Agent in deep cover or with significant autonomy"
+effects = [
+    "Agent pursues personal goals",
+    "May sell information to multiple parties",
+    "May become obstacle rather than asset"
+]
+resolution_options = [
+    "Recall and control",
+    "Eliminate agent",
+    "Negotiate new arrangement",
+    "Accept new situation"
+]
+oracle_questions = [
+    "What does the rogue agent want?",
+    "Have they betrayed you yet?",
+    "Can they be brought back under control?",
+    "Are they now an enemy?"
+]
+
+[[espionage_complications]]
+name = "Honey Trap"
+description = "Agent becomes romantically involved with target or mark"
+trigger = "Close contact over time"
+effects = [
+    "Agent's loyalty divided",
+    "Intelligence may be compromised",
+    "Agent may protect target"
+]
+resolution_options = [
+    "Extract agent",
+    "Use relationship as additional leverage",
+    "Accept complications",
+    "Terminate agent's involvement"
+]
+oracle_questions = [
+    "Are the feelings genuine?",
+    "Does the target know the agent's true role?",
+    "Will the agent choose mission or love?",
+    "Can this be exploited further?"
+]
+
+[[espionage_complications]]
+name = "False Flag Discovery"
+description = "Evidence of espionage points to wrong party"
+trigger = "Failed operation with misleading evidence"
+effects = [
+    "Innocent party blamed",
+    "Real perpetrator hidden",
+    "Diplomatic incident with wrong target"
+]
+resolution_options = [
+    "Let false attribution stand",
+    "Correct the record",
+    "Exploit the confusion"
+]
+oracle_questions = [
+    "Who is falsely blamed?",
+    "Do they protest innocence?",
+    "Does anyone believe them?",
+    "What are the consequences of false attribution?"
+]
+
+[[espionage_complications]]
+name = "Compromised Network"
+description = "Enemy has penetrated your intelligence operations"
+trigger = "Counter-espionage success by enemy"
+effects = [
+    "Information flows to enemy",
+    "Operations compromised",
+    "Agents at risk"
+]
+resolution_options = [
+    "Purge and rebuild network",
+    "Feed disinformation",
+    "Identify and turn double agent",
+    "Accept loss and start over"
+]
+oracle_questions = [
+    "How deep is the compromise?",
+    "Which operations are affected?",
+    "Can the mole be identified?",
+    "What damage has already been done?"
+]
+
+[[espionage_complications]]
+name = "Blown Operation Escalates"
+description = "Failed operation creates international incident"
+trigger = "Botched high-profile operation"
+effects = [
+    "Public accusation",
+    "Diplomatic crisis",
+    "Possible war"
+]
+resolution_options = [
+    "Deny everything",
+    "Sacrifice scapegoat",
+    "Admit and apologize",
+    "Escalate further"
+]
+oracle_questions = [
+    "What evidence exists?",
+    "Is denial credible?",
+    "Who can be sacrificed?",
+    "What does the target demand?"
+]
+
+[[espionage_complications]]
+name = "Competing Spy Services"
+description = "Another power's spies interfere with your operations"
+trigger = "Multiple powers operating in same area"
+effects = [
+    "Operations conflict",
+    "Confusion over intelligence",
+    "Possible cooperation or competition"
+]
+resolution_options = [
+    "Coordinate with other spies",
+    "Sabotage their operations",
+    "Maintain separation",
+    "Share targets"
+]
+oracle_questions = [
+    "Whose spies are these?",
+    "Are they working with or against you?",
+    "Can you cooperate?",
+    "Do they know about you?"
+]
+
+[[espionage_complications]]
+name = "Magical Detection"
+description = "Divination magic reveals espionage operations"
+trigger = "Target employs magical security"
+effects = [
+    "Operations detected supernaturally",
+    "Agents identified",
+    "Plans revealed"
+]
+countermeasures = [
+    "Anti-divination protections (expensive)",
+    "Compartmentalized knowledge",
+    "Mundane-only operations",
+    "Counter-magical support"
+]
+oracle_questions = [
+    "What does divination reveal?",
+    "Can counter-magic protect operations?",
+    "Does the target have a court wizard?",
+    "Are magical countermeasures available?"
+]
+
+[[espionage_complications]]
+name = "Innocent Casualties"
+description = "Espionage operation causes unintended harm"
+trigger = "Collateral damage from operation"
+effects = [
+    "Moral complications",
+    "Possible investigation",
+    "Reputation risk if revealed",
+    "Agent may have crisis of conscience"
+]
+resolution_options = [
+    "Cover up",
+    "Compensate victims secretly",
+    "Accept consequences",
+    "Blame others"
+]
+oracle_questions = [
+    "Who was harmed?",
+    "Is the harm discovered?",
+    "How do agents react?",
+    "Can this be traced back?"
+]
+
+# ============================================================================
+# ORACLE TABLES FOR ESPIONAGE
+# ============================================================================
+# Random elements to add unpredictability to espionage
+
+[oracle_tables]
+
+[[oracle_tables.random_complications]]
+d20 = 1
+result = "Agent captured - interrogation begins"
+
+[[oracle_tables.random_complications]]
+d20 = 2
+result = "Target has magical wards you didn't know about"
+
+[[oracle_tables.random_complications]]
+d20 = 3
+result = "Another power's spies interfere"
+
+[[oracle_tables.random_complications]]
+d20 = 4
+result = "Agent develops conflicting loyalty"
+
+[[oracle_tables.random_complications]]
+d20 = 5
+result = "Information turns out to be false"
+
+[[oracle_tables.random_complications]]
+d20 = 6
+result = "Target was warned by unknown source"
+
+[[oracle_tables.random_complications]]
+d20 = 7
+result = "Cover identity questioned"
+
+[[oracle_tables.random_complications]]
+d20 = 8
+result = "Bribe recipient wants more"
+
+[[oracle_tables.random_complications]]
+d20 = 9
+result = "Safe house compromised"
+
+[[oracle_tables.random_complications]]
+d20 = 10
+result = "Unexpected witness appears"
+
+[[oracle_tables.random_complications]]
+d20 = 11
+result = "Agent goes dark - status unknown"
+
+[[oracle_tables.random_complications]]
+d20 = 12
+result = "Target moved or changed plans"
+
+[[oracle_tables.random_complications]]
+d20 = 13
+result = "Equipment failure at critical moment"
+
+[[oracle_tables.random_complications]]
+d20 = 14
+result = "Local authorities suspicious"
+
+[[oracle_tables.random_complications]]
+d20 = 15
+result = "Weather or natural event delays operation"
+
+[[oracle_tables.random_complications]]
+d20 = 16
+result = "Agent discovers unexpected information"
+
+[[oracle_tables.random_complications]]
+d20 = 17
+result = "Payment funds traced or stolen"
+
+[[oracle_tables.random_complications]]
+d20 = 18
+result = "Target has body double"
+
+[[oracle_tables.random_complications]]
+d20 = 19
+result = "Rival faction within target offers help"
+
+[[oracle_tables.random_complications]]
+d20 = 20
+result = "Operation discovered but attributed to wrong party"
+
+[[oracle_tables.unexpected_discoveries]]
+d12 = 1
+result = "Target is also spying on you"
+
+[[oracle_tables.unexpected_discoveries]]
+d12 = 2
+result = "Target planning action against third party"
+
+[[oracle_tables.unexpected_discoveries]]
+d12 = 3
+result = "Target has secret alliance"
+
+[[oracle_tables.unexpected_discoveries]]
+d12 = 4
+result = "Target has hidden weakness (debt, illness, scandal)"
+
+[[oracle_tables.unexpected_discoveries]]
+d12 = 5
+result = "Target has secret bloodline ability"
+
+[[oracle_tables.unexpected_discoveries]]
+d12 = 6
+result = "Target is puppet of hidden power"
+
+[[oracle_tables.unexpected_discoveries]]
+d12 = 7
+result = "Target's heir plotting against them"
+
+[[oracle_tables.unexpected_discoveries]]
+d12 = 8
+result = "Target involved in forbidden magic"
+
+[[oracle_tables.unexpected_discoveries]]
+d12 = 9
+result = "Target has awnshegh contact"
+
+[[oracle_tables.unexpected_discoveries]]
+d12 = 10
+result = "Target planning major campaign"
+
+[[oracle_tables.unexpected_discoveries]]
+d12 = 11
+result = "Target's resources greater/less than believed"
+
+[[oracle_tables.unexpected_discoveries]]
+d12 = 12
+result = "Target has information about you"

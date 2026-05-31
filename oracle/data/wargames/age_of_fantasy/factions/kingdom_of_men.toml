@@ -1,0 +1,252 @@
+# Age of Fantasy - Kingdom of Men (Empire/Bretonnia equivalents)
+# One Page Rules - Free wargame system
+
+name = "Kingdom of Men"
+description = "Noble human warriors defending their lands with steel, faith, and courage."
+playstyle = "Balanced combined arms with strong cavalry and ranged support"
+strengths = [
+    "Versatile army composition",
+    "Strong cavalry options",
+    "Good shooting capability",
+    "Reliable leadership",
+]
+weaknesses = [
+    "Average infantry stats",
+    "No monstrous units",
+    "Dependent on synergies",
+    "Limited magic",
+]
+
+[[units]]
+name = "Spearmen"
+type = "infantry"
+points = 80
+models = "10"
+tactical_role = "line_infantry"
+threat_level = "low"
+preferred_targets = ["cavalry", "monsters"]
+weaknesses = ["shooting", "elite_infantry"]
+keywords = ["Infantry", "Humans"]
+special_rules = ["Phalanx"]
+
+[units.stats]
+Quality = "5+"
+Defense = "5+"
+Tough = 1
+
+[[units.weapons]]
+name = "Spear"
+range = "Melee"
+shots = "1"
+strength = "User"
+ap = "0"
+damage = "1"
+type = "Melee"
+abilities = ["Phalanx"]
+
+[[units.weapons]]
+name = "Shield"
+range = "Melee"
+shots = "0"
+strength = "-"
+ap = "-"
+damage = "-"
+type = "Shield"
+abilities = ["Defense +1 in melee"]
+
+[[units]]
+name = "Swordsmen"
+type = "infantry"
+points = 90
+models = "10"
+tactical_role = "line_infantry"
+threat_level = "medium"
+preferred_targets = ["infantry"]
+weaknesses = ["cavalry", "shooting"]
+keywords = ["Infantry", "Humans"]
+special_rules = ["Shield Wall"]
+
+[units.stats]
+Quality = "5+"
+Defense = "4+"
+Tough = 1
+
+[[units.weapons]]
+name = "Sword"
+range = "Melee"
+shots = "1"
+strength = "User"
+ap = "0"
+damage = "1"
+type = "Melee"
+
+[[units.weapons]]
+name = "Shield"
+range = "Melee"
+shots = "0"
+strength = "-"
+ap = "-"
+damage = "-"
+type = "Shield"
+abilities = ["Defense +1 in melee"]
+
+[[units]]
+name = "Crossbowmen"
+type = "infantry"
+points = 95
+models = "10"
+tactical_role = "fire_support"
+threat_level = "medium"
+preferred_targets = ["infantry", "monsters"]
+weaknesses = ["assault", "cavalry"]
+keywords = ["Infantry", "Humans"]
+special_rules = []
+
+[units.stats]
+Quality = "5+"
+Defense = "6+"
+Tough = 1
+
+[[units.weapons]]
+name = "Crossbow"
+range = "24\""
+shots = "1"
+strength = "4"
+ap = "-1"
+damage = "1"
+type = "Heavy"
+
+[[units.weapons]]
+name = "Dagger"
+range = "Melee"
+shots = "1"
+strength = "User"
+ap = "0"
+damage = "1"
+type = "Melee"
+
+[[units]]
+name = "Knights"
+type = "cavalry"
+points = 180
+models = "5"
+tactical_role = "assault"
+threat_level = "high"
+preferred_targets = ["infantry", "monsters"]
+weaknesses = ["spears", "pikes"]
+keywords = ["Cavalry", "Humans", "Knight"]
+special_rules = ["Impact(1)", "Lance"]
+
+[units.stats]
+Quality = "4+"
+Defense = "4+"
+Tough = 1
+
+[[units.weapons]]
+name = "Lance"
+range = "Melee"
+shots = "1"
+strength = "User+1"
+ap = "-1"
+damage = "1"
+type = "Melee"
+abilities = ["Lance (+1 AP on charge)"]
+
+[[units.weapons]]
+name = "Sword"
+range = "Melee"
+shots = "1"
+strength = "User"
+ap = "0"
+damage = "1"
+type = "Melee"
+
+[[units]]
+name = "Lord on Warhorse"
+type = "character"
+points = 120
+models = "1"
+tactical_role = "leader"
+threat_level = "high"
+preferred_targets = ["characters", "infantry"]
+weaknesses = ["massed_fire", "monsters"]
+keywords = ["Cavalry", "Humans", "Hero", "Lord"]
+special_rules = ["Hero", "Inspiring", "Impact(1)"]
+
+[units.stats]
+Quality = "3+"
+Defense = "4+"
+Tough = 3
+
+[[units.weapons]]
+name = "Magic Sword"
+range = "Melee"
+shots = "4"
+strength = "User+1"
+ap = "-2"
+damage = "1"
+type = "Melee"
+abilities = ["Rending"]
+
+[[units]]
+name = "Cannon"
+type = "warmachine"
+points = 120
+models = "1"
+tactical_role = "artillery"
+threat_level = "high"
+preferred_targets = ["monsters", "vehicles", "cavalry"]
+weaknesses = ["assault", "flanking"]
+keywords = ["War Machine", "Humans", "Artillery"]
+special_rules = ["Slow", "Indirect"]
+
+[units.stats]
+Quality = "5+"
+Defense = "6+"
+Tough = 4
+
+[[units.weapons]]
+name = "Cannon"
+range = "48\""
+shots = "1"
+strength = "8"
+ap = "-3"
+damage = "D6"
+type = "Heavy"
+abilities = ["Blast(3)"]
+
+[[units]]
+name = "Wizard"
+type = "character"
+points = 85
+models = "1"
+tactical_role = "support"
+threat_level = "medium"
+preferred_targets = ["infantry", "monsters"]
+weaknesses = ["assassination", "dispel"]
+keywords = ["Infantry", "Humans", "Hero", "Wizard"]
+special_rules = ["Hero", "Wizard(1)"]
+
+[units.stats]
+Quality = "5+"
+Defense = "6+"
+Tough = 3
+
+[[units.weapons]]
+name = "Staff"
+range = "Melee"
+shots = "1"
+strength = "User"
+ap = "0"
+damage = "1"
+type = "Melee"
+
+[[units.weapons]]
+name = "Fireball"
+range = "18\""
+shots = "1"
+strength = "5"
+ap = "-1"
+damage = "D3"
+type = "Spell"
+abilities = ["Blast(3)"]

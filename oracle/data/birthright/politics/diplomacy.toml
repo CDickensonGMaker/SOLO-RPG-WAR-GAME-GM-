@@ -1,0 +1,1275 @@
+# ============================================================================
+# DIPLOMACY SYSTEM - Birthright Solo Oracle
+# ============================================================================
+# Political relationships between regents drive Cerilian history.
+# This system provides mechanics for alliances, treaties, and negotiations.
+# ============================================================================
+
+[meta]
+title = "Diplomatic Relations"
+description = "Alliance types, treaty mechanics, and international relations for regent play"
+version = "1.0.0"
+author = "Birthright Oracle System"
+
+# ============================================================================
+# ALLIANCE TYPES
+# ============================================================================
+# The fundamental forms of political cooperation between regents
+
+[[alliance_types]]
+name = "Military Alliance"
+description = "Mutual defense pact between regents sworn to protect each other"
+formality = "high"
+typical_duration = "Permanent until broken"
+benefits = [
+    "Allied units may be mustered in allied territory",
+    "Coordinated military actions without diplomacy checks",
+    "+2 to domain actions against common enemies",
+    "Share military intelligence freely",
+    "May garrison allied provinces with permission"
+]
+obligations = [
+    "Must declare war if ally is attacked",
+    "Cannot attack ally or ally's allies",
+    "Must contribute to mutual defense efforts",
+    "Share warning of known threats",
+    "Cannot negotiate separately with common enemies"
+]
+formation_requirements = [
+    "Both parties must have positive relations",
+    "No active conflicts between signatories",
+    "Treaty ratification costs 1 RP each",
+    "Often sealed with hostage exchange or marriage"
+]
+breaking_cost = "Lose 1d6 RP, severe reputation penalty, possible casus belli for former ally"
+oracle_questions = [
+    "Does the ally honor their commitment when tested?",
+    "Are there secret clauses to the alliance?",
+    "Does a third party try to break the alliance?",
+    "Is the ally's commitment genuine or are they using you?",
+    "What concession does your ally demand in crisis?"
+]
+
+[[alliance_types]]
+name = "Trade Agreement"
+description = "Economic cooperation ensuring favorable commerce between domains"
+formality = "medium"
+typical_duration = "5-10 years, renewable"
+benefits = [
+    "+1 GB per trade route between domains",
+    "Reduced tariffs on goods",
+    "Merchants may operate freely in allied territory",
+    "Shared market information",
+    "Preferential treatment for guild holdings"
+]
+obligations = [
+    "Cannot impose trade sanctions on partner",
+    "Must allow partner merchants safe passage",
+    "Cannot support piracy against partner's shipping",
+    "Must negotiate before changing tariffs"
+]
+formation_requirements = [
+    "At least one guild holding in each domain",
+    "No active trade wars",
+    "Costs 1 GB to formalize"
+]
+breaking_cost = "Lose 1d4 GB immediately, trade disruption, reputation penalty with merchants"
+oracle_questions = [
+    "Is smuggling undermining the agreement?",
+    "Does a guild secretly favor one party?",
+    "Are the terms actually equitable?",
+    "What goods become contentious?",
+    "Does a third party offer a better deal?"
+]
+
+[[alliance_types]]
+name = "Marriage Alliance"
+description = "Dynastic union binding two houses through blood"
+formality = "very high"
+typical_duration = "Permanent (until death or annulment)"
+benefits = [
+    "Bloodline potential merger in heirs",
+    "Strong political bond difficult to break",
+    "Shared claim to both domains' succession",
+    "Family connections provide +2 to diplomacy",
+    "Hostage situation resolved naturally"
+]
+obligations = [
+    "Must treat spouse's family as kin",
+    "Cannot attack spouse's natal domain",
+    "Must support spouse's family in succession disputes",
+    "Children's marriages become joint decisions"
+]
+formation_requirements = [
+    "Eligible parties of appropriate status",
+    "Dowry negotiation (typically 2-10 GB)",
+    "No blood feud between families",
+    "Temple blessing (variable requirements)"
+]
+breaking_cost = "Annulment requires temple and church approval, causes blood feud, RP and GB losses, possible war"
+oracle_questions = [
+    "Is the marriage happy or purely political?",
+    "Does the spouse have their own agenda?",
+    "Are there fertility concerns?",
+    "Does the spouse's family meddle?",
+    "What secrets does the new spouse bring?"
+]
+
+[[alliance_types]]
+name = "Vassalage"
+description = "Feudal subordination where one regent swears fealty to another"
+formality = "very high"
+typical_duration = "Permanent (hereditary)"
+benefits_for_lord = [
+    "Vassal provides military service when called",
+    "Vassal pays tribute (typically 10-20% of domain income)",
+    "Vassal cannot conduct independent foreign policy",
+    "Lord may mediate vassal's disputes",
+    "Lord gains prestige and RP from vassal's holdings"
+]
+benefits_for_vassal = [
+    "Lord provides military protection",
+    "Lord cannot interfere in internal domain affairs",
+    "Vassal retains autonomy in domestic matters",
+    "Access to lord's court and resources",
+    "Legitimacy through association with powerful lord"
+]
+obligations = [
+    "Vassal must answer military summons",
+    "Vassal must attend lord's court when summoned",
+    "Lord must protect vassal from external threats",
+    "Lord must not demand impossible service"
+]
+formation_requirements = [
+    "Significant power imbalance or defeat in war",
+    "Formal oath of fealty ceremony",
+    "Often follows conquest or protection agreement"
+]
+breaking_cost = "Rebellion is casus belli, oath-breaker status, loss of all RP, potential excommunication"
+oracle_questions = [
+    "Is the vassal plotting independence?",
+    "Does the lord demand too much?",
+    "Are other vassals jealous?",
+    "Is the oath genuinely binding?",
+    "What happens when interests diverge?"
+]
+
+[[alliance_types]]
+name = "Federation"
+description = "League of equals united for common purpose while retaining sovereignty"
+formality = "high"
+typical_duration = "Indefinite with withdrawal provisions"
+benefits = [
+    "Collective security against external threats",
+    "Shared resources for major projects",
+    "Common foreign policy on key issues",
+    "Internal free trade and movement",
+    "Combined weight in international negotiations"
+]
+obligations = [
+    "Contribute to common defense fund",
+    "Abide by federation council decisions",
+    "Cannot make separate peace with federation enemies",
+    "Must submit internal disputes to federation arbitration"
+]
+formation_requirements = [
+    "Multiple willing participants",
+    "Common threat or interest",
+    "Agreement on governance structure",
+    "Foundation treaty negotiation"
+]
+breaking_cost = "Loss of federation benefits, possible sanctions, reputation penalty"
+oracle_questions = [
+    "Which member is seeking dominance?",
+    "Does the federation have a free-rider problem?",
+    "Are the voting rules fair?",
+    "What happens when members disagree fundamentally?",
+    "Is there a secret inner council?"
+]
+
+[[alliance_types]]
+name = "Non-Aggression Pact"
+description = "Simple agreement not to attack each other, often between rivals"
+formality = "low"
+typical_duration = "1-5 years, renewable"
+benefits = [
+    "Freedom from immediate threat",
+    "May reduce border garrison costs",
+    "Opens door to further negotiations",
+    "Stabilizes one front during other conflicts"
+]
+obligations = [
+    "Cannot attack signatory",
+    "Cannot support signatory's enemies",
+    "Must warn of known third-party threats"
+]
+formation_requirements = [
+    "Willingness to pause hostilities",
+    "No active war (or armistice first)",
+    "Minimal cost to establish"
+]
+breaking_cost = "Loss of 1d4 RP, reputation as oath-breaker, possible coalition against you"
+oracle_questions = [
+    "Is this just buying time to prepare for war?",
+    "Are both parties sincere?",
+    "What triggers the agreement's end?",
+    "Does a third party try to provoke violation?",
+    "What happens at the borders despite the pact?"
+]
+
+[[alliance_types]]
+name = "Temple Concordat"
+description = "Religious agreement governing church relations and spheres of influence"
+formality = "high"
+typical_duration = "Permanent unless circumstances change"
+benefits = [
+    "Peaceful coexistence between faiths or church branches",
+    "Defined temple holding territories",
+    "Joint action against heresy or common religious foes",
+    "Shared pilgrimage rights"
+]
+obligations = [
+    "Respect other church's holdings",
+    "No aggressive conversion in agreed territories",
+    "Mutual support against persecution",
+    "Joint holy day observances where appropriate"
+]
+formation_requirements = [
+    "Compatible or tolerant theologies",
+    "Approval from highest religious authorities",
+    "Clear territorial demarcation"
+]
+breaking_cost = "Religious scandal, loss of temple support, possible excommunication, holy war risk"
+oracle_questions = [
+    "Do the congregations accept the concordat?",
+    "Are there zealots who reject compromise?",
+    "What theological disputes remain?",
+    "Does a third religion threaten both?",
+    "Are there secret missionary efforts despite the pact?"
+]
+
+# ============================================================================
+# TREATY MECHANICS
+# ============================================================================
+# How treaties are negotiated, maintained, and broken
+
+[treaty_mechanics]
+description = "Rules for creating and maintaining formal agreements between regents"
+
+[treaty_mechanics.negotiation]
+description = "The process of reaching agreement"
+steps = [
+    "1. Initial contact - establish willingness to negotiate",
+    "2. Preconditions - resolve any barriers to talks",
+    "3. Draft terms - propose initial agreement",
+    "4. Bargaining - negotiate final terms",
+    "5. Ratification - formal acceptance by all parties",
+    "6. Implementation - put treaty into effect"
+]
+modifiers = [
+    { condition = "Common enemy", modifier = "+4 to negotiation" },
+    { condition = "Recent conflict", modifier = "-4 to negotiation" },
+    { condition = "Blood feud exists", modifier = "-8 to negotiation" },
+    { condition = "Marriage ties exist", modifier = "+2 to negotiation" },
+    { condition = "Same religion", modifier = "+1 to negotiation" },
+    { condition = "Different religions", modifier = "-1 to negotiation" },
+    { condition = "Shared cultural heritage", modifier = "+2 to negotiation" },
+    { condition = "Historic enmity", modifier = "-2 to negotiation" },
+    { condition = "Major power imbalance", modifier = "+2 for stronger party" },
+    { condition = "Neutral mediator present", modifier = "+2 to both parties" }
+]
+oracle_questions = [
+    "What does the other party secretly want?",
+    "Is there a dealbreaker neither side will compromise on?",
+    "Does a third party try to sabotage negotiations?",
+    "Are the negotiators authorized to make final decisions?",
+    "What unexpected complication arises?"
+]
+
+[treaty_mechanics.enforcement]
+description = "How treaties are maintained"
+mechanisms = [
+    "Hostage exchange - noble children or heirs held as guarantee",
+    "Temple guarantees - religious authority backs agreement",
+    "Third-party enforcement - powerful neutral ensures compliance",
+    "Reputation stakes - breaking treaty damages standing",
+    "Mutual interest - both parties benefit from compliance"
+]
+violation_detection = [
+    "Spy networks report violations",
+    "Merchant complaints reveal trade violations",
+    "Military movements observed",
+    "Defectors reveal secret breaches",
+    "Third parties report observed violations"
+]
+oracle_questions = [
+    "Is either party secretly violating the treaty?",
+    "Do accusations of violation have merit?",
+    "Is the treaty being followed to the letter but violated in spirit?",
+    "Are third parties spreading false violation rumors?",
+    "Has the situation changed enough to justify renegotiation?"
+]
+
+[treaty_mechanics.modification]
+description = "Changing existing treaties"
+reasons = [
+    "Changed circumstances",
+    "One party gained/lost significant power",
+    "Original terms proved unworkable",
+    "New threats require adjustment",
+    "Succession changed one party's government"
+]
+process = [
+    "Request modification formally",
+    "Demonstrate changed circumstances",
+    "Negotiate new terms",
+    "Ratify modifications",
+    "Update all records"
+]
+oracle_questions = [
+    "Is the modification request in good faith?",
+    "Does the other party see this as a betrayal?",
+    "Are modified terms actually better for both parties?",
+    "Does modification open the door to further demands?",
+    "Should the treaty be replaced entirely?"
+]
+
+# ============================================================================
+# DIPLOMATIC ACTIONS
+# ============================================================================
+# Specific actions regents can take in international relations
+
+[[diplomatic_actions]]
+name = "Establish Embassy"
+type = "domain_action"
+cost = "1 GB, 1 RP"
+time = "1 domain turn"
+description = "Create permanent diplomatic presence in another regent's domain"
+requirements = [
+    "Permission from host regent",
+    "Suitable location in capital",
+    "Diplomatic staff"
+]
+effects = [
+    "+2 to all diplomatic actions with that regent",
+    "Early warning of political developments",
+    "Easier espionage operations (if desired)",
+    "Facilitates trade negotiations"
+]
+risks = [
+    "Embassy staff may be taken hostage in crisis",
+    "Diplomats may be expelled",
+    "Espionage discovery damages relations severely"
+]
+oracle_questions = [
+    "What is the ambassador's hidden agenda?",
+    "Does the host regent trust the embassy?",
+    "Are rival powers jealous of the relationship?",
+    "What local customs cause friction?",
+    "Is the embassy being watched?"
+]
+
+[[diplomatic_actions]]
+name = "Send Envoy"
+type = "domain_action"
+cost = "1 GB"
+time = "Variable"
+description = "Dispatch representative with specific diplomatic mission"
+requirements = [
+    "Suitable envoy available",
+    "Clear mandate and authority",
+    "Safe passage (or risk)"
+]
+effects = [
+    "Can propose treaties, deliver ultimatums, gather information",
+    "Success depends on envoy skill and situation",
+    "May require multiple turns for distant realms"
+]
+risks = [
+    "Envoy may be killed or captured",
+    "Mission may fail",
+    "Envoy may exceed authority",
+    "Envoy may be turned by enemy"
+]
+oracle_questions = [
+    "Does the envoy arrive safely?",
+    "How is the envoy received?",
+    "Does the envoy have their own agenda?",
+    "What obstacles delay the mission?",
+    "Does the envoy bring back unexpected information?"
+]
+
+[[diplomatic_actions]]
+name = "Issue Ultimatum"
+type = "domain_action"
+cost = "None"
+time = "Immediate"
+description = "Demand specific action with threat of consequences"
+requirements = [
+    "Credible threat capability",
+    "Clear demand",
+    "Defined deadline"
+]
+effects = [
+    "May force compliance without conflict",
+    "Establishes casus belli if refused",
+    "Demonstrates resolve to other powers",
+    "May escalate to war"
+]
+risks = [
+    "May provoke immediate war",
+    "Bluff may be called",
+    "May appear unreasonable to neutral parties",
+    "Damages relationship permanently"
+]
+oracle_questions = [
+    "Does the target comply?",
+    "Does the target counter with their own demands?",
+    "Do third parties intervene?",
+    "Is the threat credible?",
+    "What happens when the deadline passes?"
+]
+
+[[diplomatic_actions]]
+name = "Offer Tribute"
+type = "domain_action"
+cost = "Variable (tribute amount)"
+time = "1 domain turn"
+description = "Give gifts or payments to secure favor or avoid conflict"
+requirements = [
+    "Resources to offer",
+    "Willingness to accept subordinate position"
+]
+effects = [
+    "May prevent war or invasion",
+    "May secure alliance or favor",
+    "Demonstrates submission",
+    "Buys time"
+]
+risks = [
+    "Appears weak to other powers",
+    "Recipient may demand more",
+    "Never satisfies aggressive neighbor permanently",
+    "Internal opposition to 'paying off' enemies"
+]
+oracle_questions = [
+    "Is the tribute accepted?",
+    "Does the recipient demand more?",
+    "How do other powers view this?",
+    "How do your own nobles react?",
+    "Does tribute become expected regular payment?"
+]
+
+[[diplomatic_actions]]
+name = "Recognize Legitimacy"
+type = "domain_action"
+cost = "1 RP"
+time = "Immediate"
+description = "Formally acknowledge another regent's right to rule"
+requirements = [
+    "Regent to recognize",
+    "No competing claims you support"
+]
+effects = [
+    "+1 to relations with recognized regent",
+    "May gain favor or alliance opportunity",
+    "Affects regional power dynamics",
+    "May anger competing claimants"
+]
+risks = [
+    "Backing wrong claimant if they lose",
+    "Alienating other claimants",
+    "Being seen as meddling in internal affairs"
+]
+oracle_questions = [
+    "Is the recognized regent grateful?",
+    "Do other claimants become hostile?",
+    "Does recognition actually help their position?",
+    "Are there strings attached?",
+    "Does this draw you into their conflicts?"
+]
+
+[[diplomatic_actions]]
+name = "Mediate Dispute"
+type = "domain_action"
+cost = "1 RP, 1 GB"
+time = "1-4 domain turns"
+description = "Attempt to resolve conflict between two other powers"
+requirements = [
+    "Neutral position or trusted by both parties",
+    "Both parties willing to negotiate",
+    "Venue for talks"
+]
+effects = [
+    "If successful, gain prestige and goodwill from both parties",
+    "May prevent regional war",
+    "Establish yourself as regional power broker",
+    "Gain insight into both parties' positions"
+]
+risks = [
+    "May fail and damage your reputation",
+    "May be blamed for bad settlement",
+    "May be drawn into conflict",
+    "One party may see you as favoring the other"
+]
+oracle_questions = [
+    "Are both parties negotiating in good faith?",
+    "What does each party really want?",
+    "Is there actually a solution that satisfies both?",
+    "Does a third party sabotage the talks?",
+    "What compromise can you propose?"
+]
+
+[[diplomatic_actions]]
+name = "Denounce"
+type = "free_action"
+cost = "None"
+time = "Immediate"
+description = "Publicly condemn another regent's actions"
+requirements = [
+    "Specific action to condemn",
+    "Platform for announcement"
+]
+effects = [
+    "Damages target's reputation",
+    "May rally opposition to target",
+    "Establishes moral position",
+    "May precede further action"
+]
+risks = [
+    "Target may retaliate",
+    "May appear hypocritical if you've done similar",
+    "Neutral parties may not care",
+    "Raises tensions without resolution"
+]
+oracle_questions = [
+    "Do other powers support your denunciation?",
+    "How does the target respond?",
+    "Is your own record clean enough to criticize?",
+    "Does this escalate the conflict?",
+    "Do the facts support your accusations?"
+]
+
+[[diplomatic_actions]]
+name = "Host Summit"
+type = "domain_action"
+cost = "2-5 GB"
+time = "1 domain turn"
+description = "Organize major diplomatic gathering in your domain"
+requirements = [
+    "Suitable venue",
+    "Invitations accepted",
+    "Security arrangements",
+    "Hospitality expenses"
+]
+effects = [
+    "Central role in regional diplomacy",
+    "Opportunity for multiple negotiations",
+    "Prestige from hosting",
+    "Intelligence gathering opportunity"
+]
+risks = [
+    "Security breach could be disastrous",
+    "Summit failure reflects on host",
+    "Expensive if prolonged",
+    "May be drawn into disputes you wanted to avoid"
+]
+oracle_questions = [
+    "Who accepts the invitation?",
+    "Who declines and why?",
+    "What secret meetings occur?",
+    "Does anything dramatic happen at the summit?",
+    "What agreements are reached?"
+]
+
+[[diplomatic_actions]]
+name = "Request Arbitration"
+type = "domain_action"
+cost = "1 RP"
+time = "1-2 domain turns"
+description = "Ask neutral third party to judge a dispute"
+requirements = [
+    "Ongoing dispute",
+    "Suitable arbitrator (often Emperor or religious authority)",
+    "Both parties must accept arbitration"
+]
+effects = [
+    "Peaceful resolution possible",
+    "Arbitrator's decision carries weight",
+    "Avoids direct confrontation",
+    "Demonstrates willingness for peace"
+]
+risks = [
+    "May lose the arbitration",
+    "Arbitrator may be biased",
+    "Other party may not accept result",
+    "Binding decision may be unfavorable"
+]
+oracle_questions = [
+    "Does the arbitrator have any bias?",
+    "What evidence sways the decision?",
+    "Does the losing party accept the judgment?",
+    "Are there appeals or further challenges?",
+    "Does the arbitration actually end the dispute?"
+]
+
+# ============================================================================
+# REPUTATION SYSTEM
+# ============================================================================
+# How a regent's standing affects diplomatic relations
+
+[reputation]
+description = "A regent's reputation affects all diplomatic interactions"
+
+[[reputation.traits]]
+name = "Honorable"
+description = "Known for keeping promises and fair dealing"
+effects = [
+    "+2 to treaty negotiations",
+    "Others more willing to trust agreements",
+    "Easier to form alliances"
+]
+how_to_gain = [
+    "Keep all treaty obligations",
+    "Deal fairly even when advantageous not to",
+    "Honor agreements even after circumstances change"
+]
+how_to_lose = [
+    "Break any sworn agreement",
+    "Act treacherously in any context",
+    "Lie in official diplomatic communications"
+]
+
+[[reputation.traits]]
+name = "Oath-Breaker"
+description = "Known for violating agreements when convenient"
+effects = [
+    "-4 to treaty negotiations",
+    "Others demand extreme guarantees",
+    "Difficult to form genuine alliances"
+]
+how_to_gain = [
+    "Break a sworn treaty or oath",
+    "Betray an ally",
+    "Lie in official diplomatic communications"
+]
+how_to_lose = [
+    "Years of honorable behavior",
+    "Major sacrifice to uphold an inconvenient agreement",
+    "Public penance and restitution"
+]
+
+[[reputation.traits]]
+name = "Aggressor"
+description = "Known for military expansion and starting wars"
+effects = [
+    "-2 to defensive alliances (others fear being drawn into your wars)",
+    "Neighbors maintain larger militaries",
+    "Coalitions may form against you"
+]
+how_to_gain = [
+    "Start multiple wars",
+    "Conquer neighbors without casus belli",
+    "Reject peaceful solutions repeatedly"
+]
+how_to_lose = [
+    "Long period of peace",
+    "Accept mediated settlements",
+    "Return conquered territories"
+]
+
+[[reputation.traits]]
+name = "Defender of the Realm"
+description = "Known for protecting others and maintaining peace"
+effects = [
+    "+2 to defensive alliance formation",
+    "Weaker powers seek your protection",
+    "Good standing with temples of lawful gods"
+]
+how_to_gain = [
+    "Defend allies when attacked",
+    "Protect weaker realms from aggression",
+    "Maintain regional peace"
+]
+how_to_lose = [
+    "Fail to honor defensive commitments",
+    "Attack weaker neighbors",
+    "Start aggressive wars"
+]
+
+[[reputation.traits]]
+name = "Reliable Ally"
+description = "Known for supporting allies consistently"
+effects = [
+    "+3 to alliance formation and maintenance",
+    "Allies share information freely",
+    "Attracts potential allies"
+]
+how_to_gain = [
+    "Support allies in their conflicts",
+    "Provide assistance when asked",
+    "Never abandon an ally in need"
+]
+how_to_lose = [
+    "Fail to support ally when tested",
+    "Prioritize self-interest over alliance",
+    "Make separate peace abandoning allies"
+]
+
+[[reputation.traits]]
+name = "Fair Dealer"
+description = "Known for equitable trade and honest commerce"
+effects = [
+    "+2 to trade agreements",
+    "Merchants prefer your markets",
+    "Guild holdings prosper"
+]
+how_to_gain = [
+    "Honor trade agreements fully",
+    "Resolve commercial disputes fairly",
+    "Avoid exploitative practices"
+]
+how_to_lose = [
+    "Cheat trade partners",
+    "Impose unfair tariffs",
+    "Support piracy or smuggling"
+]
+
+[[reputation.traits]]
+name = "Patron of Faith"
+description = "Known for supporting religious institutions"
+effects = [
+    "+2 to dealings with temple regents",
+    "Temple support more forthcoming",
+    "Religious leaders advocate for you"
+]
+how_to_gain = [
+    "Build and support temples",
+    "Defend religious rights",
+    "Act in accordance with religious principles"
+]
+how_to_lose = [
+    "Persecute religious institutions",
+    "Violate religious law flagrantly",
+    "Support enemies of the faith"
+]
+
+[reputation.tracking]
+description = "How to track reputation"
+method = "Track notable actions by season. Major actions establish or change traits."
+persistence = "Reputation traits persist until contradicted by significant actions"
+regional_variation = "Reputation may vary by region based on local knowledge and propaganda"
+oracle_questions = [
+    "What is the general perception of this regent?",
+    "Has recent news changed anyone's opinion?",
+    "Do different groups have different views?",
+    "Is someone spreading propaganda about this regent?",
+    "What would it take to change this reputation?"
+]
+
+# ============================================================================
+# CASUS BELLI
+# ============================================================================
+# Valid justifications for war that affect legitimacy and alliances
+
+[casus_belli]
+description = "Recognized legitimate reasons for war that affect how other powers view the conflict"
+
+[[casus_belli.types]]
+name = "Defensive War"
+legitimacy = "universally recognized"
+description = "War in response to direct attack on your domain"
+effects = [
+    "Full legitimacy, no reputation penalty",
+    "Allies obligated to assist",
+    "Neutral powers sympathetic",
+    "May call for coalition against aggressor"
+]
+requirements = [
+    "Actually attacked first",
+    "Not provoked attack through aggression"
+]
+oracle_questions = [
+    "Was the attack unprovoked?",
+    "Did you do anything that could be seen as provocation?",
+    "Do neutral powers accept your defensive framing?"
+]
+
+[[casus_belli.types]]
+name = "Treaty Violation"
+legitimacy = "generally recognized"
+description = "War due to other party breaking sworn agreement"
+effects = [
+    "Strong legitimacy if violation clear",
+    "Treaty guarantors may support you",
+    "Violator loses reputation",
+    "Neutral powers may accept your position"
+]
+requirements = [
+    "Clear, documented violation",
+    "Attempted peaceful resolution first",
+    "Proportional response"
+]
+oracle_questions = [
+    "Is the violation clear-cut or debatable?",
+    "Did you attempt diplomatic resolution?",
+    "Do others agree the violation occurred?",
+    "Is your response proportional?"
+]
+
+[[casus_belli.types]]
+name = "Dynastic Claim"
+legitimacy = "contested"
+description = "War to press inheritance or succession claim"
+effects = [
+    "Legitimacy depends on claim strength",
+    "Some powers may support, others oppose",
+    "Long wars common as claims disputed",
+    "May need to defeat all rival claimants"
+]
+requirements = [
+    "Plausible legal claim through blood or marriage",
+    "Claim not previously renounced",
+    "Current ruler's legitimacy questionable"
+]
+oracle_questions = [
+    "How strong is your claim legally?",
+    "Who supports your claim?",
+    "Are there rival claimants?",
+    "Will the population accept you as ruler?"
+]
+
+[[casus_belli.types]]
+name = "Holy War"
+legitimacy = "varies by faith"
+description = "War declared for religious purposes"
+effects = [
+    "Co-religionists may support or join",
+    "Other faiths may ally against you",
+    "Temples provide support",
+    "May become existential conflict"
+]
+requirements = [
+    "Religious authority supports the war",
+    "Clear religious objective",
+    "Temple backing"
+]
+oracle_questions = [
+    "Do religious authorities truly support this war?",
+    "Does the faith community rally to the cause?",
+    "Do other faiths unite in opposition?",
+    "Is this genuinely religious or using religion as excuse?"
+]
+
+[[casus_belli.types]]
+name = "Punitive War"
+legitimacy = "situational"
+description = "War to punish specific offenses (raids, insults, crimes)"
+effects = [
+    "Legitimacy depends on offense severity",
+    "Limited war objectives expected",
+    "Exceeding stated aims damages legitimacy",
+    "May be seen as excuse for expansion"
+]
+requirements = [
+    "Documented offense",
+    "Peaceful redress refused",
+    "Proportional objectives"
+]
+oracle_questions = [
+    "Was the offense genuine and serious?",
+    "Did you actually seek peaceful resolution?",
+    "Are your war aims proportional?",
+    "Do others see this as legitimate or pretext?"
+]
+
+[[casus_belli.types]]
+name = "Liberation"
+legitimacy = "contested"
+description = "War to free oppressed population or overthrow tyrant"
+effects = [
+    "Legitimacy depends on target ruler's reputation",
+    "Liberated population's response crucial",
+    "May be seen as interference or genuine aid",
+    "Other tyrants may ally against you"
+]
+requirements = [
+    "Target ruler is demonstrably oppressive",
+    "Population actually wants liberation",
+    "Not using liberation as expansion excuse"
+]
+oracle_questions = [
+    "Is the target ruler actually oppressive?",
+    "Does the population want outside intervention?",
+    "Will you actually free them or just conquer?",
+    "How do other powers view your motives?"
+]
+
+[[casus_belli.types]]
+name = "Imperial Mandate"
+legitimacy = "depends on imperial authority"
+description = "War authorized by Emperor or overarching authority"
+effects = [
+    "Full legitimacy within imperial system",
+    "Resistance seen as rebellion",
+    "Imperial resources may support you",
+    "Those outside system may not recognize"
+]
+requirements = [
+    "Actual imperial authorization",
+    "Operating within imperial framework",
+    "Target is imperial subject"
+]
+oracle_questions = [
+    "Did the Emperor actually authorize this?",
+    "Is the imperial mandate legitimate?",
+    "Does the target recognize imperial authority?",
+    "Will other imperial subjects support this?"
+]
+
+[[casus_belli.types]]
+name = "Alliance Obligation"
+legitimacy = "generally recognized"
+description = "War entered to support an ally"
+effects = [
+    "Legitimacy inherited from ally's cause",
+    "Alliance reputation maintained",
+    "May negotiate limited involvement",
+    "Separate peace possible but damages reputation"
+]
+requirements = [
+    "Valid alliance requiring support",
+    "Ally actually called for assistance",
+    "Ally's war has some legitimacy"
+]
+oracle_questions = [
+    "Is your ally's cause legitimate?",
+    "Did they properly invoke the alliance?",
+    "Can you limit your involvement?",
+    "What happens if your ally's cause fails?"
+]
+
+[[casus_belli.types]]
+name = "Reconquest"
+legitimacy = "generally recognized"
+description = "War to recover recently lost territories"
+effects = [
+    "Strong legitimacy for reclaiming own lands",
+    "Time limit - claim weakens over generations",
+    "Population loyalty matters",
+    "May be limited to specific territories"
+]
+requirements = [
+    "Territories were yours within living memory",
+    "Lost through war or treachery",
+    "Population has some loyalty to you"
+]
+oracle_questions = [
+    "How recently were the territories lost?",
+    "Does the population want to return?",
+    "Has the new ruler established legitimacy?",
+    "Can you limit the war to reconquest?"
+]
+
+[[casus_belli.types]]
+name = "No Casus Belli (Naked Aggression)"
+legitimacy = "none"
+description = "War without legitimate justification"
+effects = [
+    "Massive reputation penalty",
+    "Neutral powers may join against you",
+    "Coalitions likely to form",
+    "Temples may deny support",
+    "Even victory tainted by illegitimacy"
+]
+requirements = [
+    "None - this is attacking without justification"
+]
+oracle_questions = [
+    "How do neutral powers react?",
+    "Does a coalition form against you?",
+    "Do your own nobles support this war?",
+    "What are the long-term consequences?"
+]
+
+# ============================================================================
+# PEACE NEGOTIATIONS
+# ============================================================================
+# How wars end through diplomacy
+
+[peace_negotiations]
+description = "Mechanics for ending wars through negotiation"
+
+[peace_negotiations.preconditions]
+description = "What must happen before peace talks can begin"
+factors = [
+    "Mutual exhaustion",
+    "Decisive victory by one side",
+    "Third-party pressure",
+    "Changed circumstances",
+    "Death of key leaders",
+    "Stalemate"
+]
+oracle_questions = [
+    "Is either side willing to negotiate?",
+    "What would make them willing?",
+    "Are there hardliners blocking peace?",
+    "Does a third party offer to mediate?"
+]
+
+[[peace_negotiations.terms]]
+category = "Territorial"
+options = [
+    "Status quo ante bellum - return to pre-war borders",
+    "Uti possidetis - keep what you hold",
+    "Cede specific provinces",
+    "Create buffer zones",
+    "Demilitarize border regions",
+    "Allow occupation for limited time"
+]
+oracle_questions = [
+    "What territories are in dispute?",
+    "What is each side's minimum acceptable territory?",
+    "Are there strategically vital areas neither will yield?",
+    "Can creative solutions resolve territorial disputes?"
+]
+
+[[peace_negotiations.terms]]
+category = "Financial"
+options = [
+    "War reparations",
+    "Tribute payments",
+    "Trade concessions",
+    "Debt forgiveness",
+    "Resource access rights"
+]
+oracle_questions = [
+    "Can the loser afford demanded payments?",
+    "Are payments realistic or punitive?",
+    "What happens if payments aren't made?",
+    "Are there creative financial solutions?"
+]
+
+[[peace_negotiations.terms]]
+category = "Political"
+options = [
+    "Recognition of rulers",
+    "Succession arrangements",
+    "Alliance terms",
+    "Vassalage relationships",
+    "Neutrality requirements",
+    "Third-party guarantees"
+]
+oracle_questions = [
+    "What political changes does each side demand?",
+    "Are succession arrangements acceptable to all claimants?",
+    "Who guarantees the political terms?",
+    "Are there face-saving compromises?"
+]
+
+[[peace_negotiations.terms]]
+category = "Holding-Related"
+options = [
+    "Transfer of holdings",
+    "Creation of new holdings",
+    "Destruction of fortifications",
+    "Trade route access",
+    "Temple rights and restrictions",
+    "Source access and restrictions"
+]
+oracle_questions = [
+    "Which holdings are disputed?",
+    "What access rights are demanded?",
+    "Are there magical assets at stake?",
+    "How do holding transfers affect domain power?"
+]
+
+[[peace_negotiations.terms]]
+category = "Symbolic"
+options = [
+    "Public apology",
+    "Prisoner release",
+    "Hostage exchange",
+    "Marriage alliance",
+    "Honorary titles exchanged",
+    "Religious ceremonies"
+]
+oracle_questions = [
+    "What symbolic gestures matter most?",
+    "Can honor be satisfied without substance?",
+    "Are there prisoners or hostages to exchange?",
+    "What ceremonies mark the peace?"
+]
+
+[peace_negotiations.durability]
+description = "Factors affecting whether peace lasts"
+positive_factors = [
+    "Terms address underlying causes",
+    "Both sides exhausted",
+    "Strong enforcement mechanism",
+    "Mutual benefit from peace",
+    "New generation less invested in conflict"
+]
+negative_factors = [
+    "Humiliating terms create resentment",
+    "Underlying issues unresolved",
+    "Revanchist sentiment builds",
+    "Power balance shifts",
+    "New leaders don't accept old agreements"
+]
+oracle_questions = [
+    "Do the terms address root causes?",
+    "Is either side planning for the next war?",
+    "Are there revanchist factions?",
+    "How long before tensions rise again?",
+    "What could trigger renewed conflict?"
+]
+
+# ============================================================================
+# DIPLOMATIC CRISIS EVENTS
+# ============================================================================
+# Random events that can trigger diplomatic situations
+
+[[diplomatic_crisis_events]]
+name = "Border Incident"
+description = "Armed clash at disputed border escalates tensions"
+trigger = "Random or during tense relations"
+immediate_effects = [
+    "Both sides blame the other",
+    "Troops mobilize",
+    "War hawks gain influence"
+]
+resolution_options = [
+    "Joint investigation",
+    "Exchange apologies",
+    "Punish responsible officers",
+    "Escalate to ultimatum",
+    "Allow incident to simmer"
+]
+oracle_questions = [
+    "What actually happened?",
+    "Who is responsible?",
+    "Was it deliberate provocation?",
+    "Do cooler heads prevail?",
+    "Does either side want to escalate?"
+]
+
+[[diplomatic_crisis_events]]
+name = "Ambassador Killed"
+description = "Your diplomatic representative murdered in foreign court"
+trigger = "Random or during hostile relations"
+immediate_effects = [
+    "Diplomatic relations severed",
+    "Casus belli established if deliberate",
+    "International outrage possible"
+]
+resolution_options = [
+    "Demand investigation and justice",
+    "Accept it was not state-sanctioned",
+    "Declare war",
+    "Demand compensation",
+    "Break relations without war"
+]
+oracle_questions = [
+    "Was it state-sanctioned or rogue action?",
+    "Who actually did it and why?",
+    "Does the host government cooperate?",
+    "What do other powers think happened?",
+    "What does the evidence show?"
+]
+
+[[diplomatic_crisis_events]]
+name = "Refugee Crisis"
+description = "Mass migration from troubled region into your domain"
+trigger = "War, famine, or disaster elsewhere"
+immediate_effects = [
+    "Strain on resources",
+    "Political tensions with neighbors",
+    "Opportunity for population growth or labor"
+]
+resolution_options = [
+    "Accept refugees and integrate",
+    "Close borders and turn back",
+    "Create refugee camps",
+    "Negotiate distribution with neighbors",
+    "Address root cause in origin land"
+]
+oracle_questions = [
+    "Where are the refugees from?",
+    "What caused the exodus?",
+    "Are there infiltrators among refugees?",
+    "How do your people react?",
+    "Do neighbors blame you for the problem?"
+]
+
+[[diplomatic_crisis_events]]
+name = "Trade Dispute"
+description = "Commercial conflict threatens to escalate"
+trigger = "Competing economic interests"
+immediate_effects = [
+    "Tariffs raised",
+    "Merchants complain",
+    "Guild regents involved"
+]
+resolution_options = [
+    "Negotiate new trade terms",
+    "Economic sanctions",
+    "Seek third-party arbitration",
+    "Accept losses for peace",
+    "Escalate to conflict"
+]
+oracle_questions = [
+    "What goods are disputed?",
+    "Who benefits from the dispute continuing?",
+    "Are guild regents neutral or partisan?",
+    "Is there a face-saving compromise?",
+    "Does the dispute mask other conflicts?"
+]
+
+[[diplomatic_crisis_events]]
+name = "Succession Dispute"
+description = "Neighboring ruler dies without clear heir"
+trigger = "Random noble death"
+immediate_effects = [
+    "Multiple claimants emerge",
+    "Opportunity to influence outcome",
+    "Risk of civil war spilling over"
+]
+resolution_options = [
+    "Support a claimant",
+    "Stay neutral",
+    "Mediate between claimants",
+    "Press your own claim if any",
+    "Take advantage of chaos"
+]
+oracle_questions = [
+    "Who are the claimants?",
+    "Which has the strongest claim?",
+    "Which would be best for your interests?",
+    "Is there risk of wider war?",
+    "Do you have any claim yourself?"
+]
+
+[[diplomatic_crisis_events]]
+name = "Alliance Tested"
+description = "Ally makes demands or requests significant support"
+trigger = "Ally in conflict or crisis"
+immediate_effects = [
+    "Must decide whether to honor commitment",
+    "Reputation at stake",
+    "Resources may be demanded"
+]
+resolution_options = [
+    "Full support as promised",
+    "Limited support citing circumstances",
+    "Refuse and break alliance",
+    "Negotiate modified obligations",
+    "Delay while seeking diplomatic solution"
+]
+oracle_questions = [
+    "What does the ally actually need?",
+    "Is their cause legitimate?",
+    "Can you afford to help?",
+    "What happens if you refuse?",
+    "Are there creative solutions?"
+]

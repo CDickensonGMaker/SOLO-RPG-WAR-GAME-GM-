@@ -1,0 +1,353 @@
+# =============================================================================
+# BIRTHRIGHT CHARACTER CREATION - 5E INTEGRATION
+# =============================================================================
+# Adapts Cerilian cultures and races to 5th Edition D&D mechanics.
+# These rules replace standard PHB human variants and modify elf/dwarf/halfling.
+# =============================================================================
+
+[meta]
+title = "Cerilian Character Creation"
+version = "1.0"
+system = "5e"
+source = "Birthright Campaign Setting (adapted)"
+
+# =============================================================================
+# CERILIAN HUMAN CULTURES
+# =============================================================================
+# In Cerilia, humans are defined by their culture rather than generic "human."
+# Each culture functions as a human subrace with distinct features.
+# =============================================================================
+
+[[cultures]]
+name = "Anuirean"
+type = "human"
+description = """
+The Anuireans are the inheritors of the Anuirean Empire, the greatest human
+civilization Cerilia has known. They value honor, nobility, law, and civilization.
+Anuireans believe they are destined to rule and bring order to the world.
+"""
+ability_bonus = "+1 to two abilities of choice"
+languages = ["Common (Anuirean)", "One additional"]
+proficiencies = ["One martial weapon", "One skill of choice"]
+features = [
+    { name = "Noble Heritage", description = "Advantage on History checks related to Anuirean politics, heraldry, and the old Empire" },
+    { name = "Born to Rule", description = "Proficiency in Persuasion or Intimidation (choose one)" },
+    { name = "Imperial Legacy", description = "You can read and write Anuirean, the language of law and diplomacy across much of Cerilia" }
+]
+typical_classes = ["Fighter", "Paladin", "Cleric", "Wizard"]
+bloodline_derivations = ["Anduiras", "Basaia", "Brenna"]
+common_faiths = ["Haelyn", "Cuiraecen", "Nesirie", "Sarimie"]
+naming_conventions = """
+Anuirean names often sound Roman or medieval European. Noble families have
+hereditary surnames. Common first names: Darien, Gaelin, Aeric, Moira, Carilon.
+"""
+
+[[cultures]]
+name = "Brecht"
+type = "human"
+description = """
+The Brecht are a practical, mercantile people who value wealth, cleverness, and
+independence. They rejected the feudal nobility of the Anuireans in favor of
+guilds and free cities. A Brecht's worth is measured by their cunning and coin.
+"""
+ability_bonus = "+2 Intelligence or +1 Intelligence and +1 Dexterity"
+languages = ["Common (Anuirean)", "Low Brecht"]
+proficiencies = ["Navigator's tools or one artisan's tools", "One Intelligence-based skill"]
+features = [
+    { name = "Merchant's Eye", description = "Advantage on Investigation checks to appraise goods or detect forgeries" },
+    { name = "Guild Connections", description = "You can find guild contacts in any major port or trade city. Once per long rest, you can call in a minor favor (information, lodging, introduction)" },
+    { name = "Shrewd Negotiator", description = "Proficiency in Insight or Deception (choose one)" }
+]
+typical_classes = ["Rogue", "Fighter", "Wizard", "Bard"]
+bloodline_derivations = ["Brenna", "Sera"]
+common_faiths = ["Sera", "Eloele", "Cuiraecen"]
+naming_conventions = """
+Brecht names have Germanic influences. They favor compound names and
+patronymics. Common names: Albrecht, Gretta, Wilhelm, Brigitta, Haldred.
+"""
+
+[[cultures]]
+name = "Khinasi"
+type = "human"
+description = """
+The Khinasi are scholars, traders, and seekers of knowledge. Unlike other
+Cerilian cultures, they do not fear arcane magic but celebrate it as el-Arrasi,
+the study of the divine order. They value learning, hospitality, and honor.
+"""
+ability_bonus = "+1 Intelligence and +1 Wisdom or +1 Intelligence and +1 Charisma"
+languages = ["Common (Anuirean)", "Basarji"]
+proficiencies = ["Calligrapher's supplies or herbalism kit", "Arcana or History"]
+features = [
+    { name = "Scholar's Mind", description = "When you make an Intelligence check for a subject you've studied, you can add your proficiency bonus if you aren't already proficient" },
+    { name = "Arcane Respect", description = "You have advantage on Charisma checks when dealing with wizards and magical institutions. In Khinasi lands, being a wizard is honorable, not suspicious" },
+    { name = "Keeper of Lore", description = "You know the Prestidigitation cantrip. Intelligence is your spellcasting ability for it" }
+]
+typical_classes = ["Wizard", "Sorcerer", "Cleric", "Fighter"]
+bloodline_derivations = ["Basaia", "Vorynn", "Reynir"]
+common_faiths = ["Avani", "Nasri (Law)", "Rilni (Knowledge)"]
+naming_conventions = """
+Khinasi names have Arabic and Persian influences. They use elaborate titles and
+honorifics. Common names: Rashid, Farid, Zarina, Amira, el-Hadid, ibn-Khalil.
+"""
+
+[[cultures]]
+name = "Rjurik"
+type = "human"
+description = """
+The Rjurik are a proud, independent people of the cold northern highlands. They
+live close to nature and revere Erik, the god of forests and hunting. They
+distrust civilization and value personal freedom, courage, and the old ways.
+"""
+ability_bonus = "+1 Wisdom and +1 Constitution or +1 Wisdom and +1 Strength"
+languages = ["Common (Anuirean)", "Rjuven"]
+proficiencies = ["Survival", "One set of artisan's tools (typically woodcarver's, leatherworker's, or weaver's)"]
+features = [
+    { name = "Child of the Wilds", description = "You have advantage on Survival checks in forests, mountains, and arctic environments. You can find food and fresh water for yourself and up to five others each day, provided the land offers berries, small game, and water" },
+    { name = "Hardened by Winter", description = "You have resistance to cold damage from natural sources (weather, environment) and advantage on Constitution saving throws against exhaustion from cold" },
+    { name = "Druidic Respect", description = "Druids and rangers recognize you as kin to the land. You have advantage on Charisma checks with followers of Erik" }
+]
+typical_classes = ["Ranger", "Druid", "Barbarian", "Fighter"]
+bloodline_derivations = ["Reynir", "Vorynn", "Anduiras"]
+common_faiths = ["Erik", "Cuiraecen"]
+naming_conventions = """
+Rjurik names have Scandinavian influences. They use descriptive bynames and
+clan associations. Common names: Bjorn, Freya, Sigrid, Hrogar, Ulfdan, Asta.
+"""
+
+[[cultures]]
+name = "Vos"
+type = "human"
+description = """
+The Vos are a fierce, warlike people from the harsh eastern lands of Vosgaard.
+They were corrupted by the dark god Azrai before Deismaar and now follow
+Belinik (war) and Kriesha (winter). They respect only strength and see mercy
+as weakness. Vos society is brutal but not without its own harsh honor.
+"""
+ability_bonus = "+2 Strength or +1 Strength and +1 Constitution"
+languages = ["Common (Anuirean)", "Vos"]
+proficiencies = ["Two martial weapons of choice", "Intimidation"]
+features = [
+    { name = "Strength is Truth", description = "When you make a Strength-based ability check or saving throw, you can give yourself advantage. Once you use this feature, you can't use it again until you finish a short or long rest" },
+    { name = "Bred for War", description = "When you score a critical hit with a melee weapon, you can roll one of the weapon's damage dice one additional time and add it to the extra damage" },
+    { name = "Fearsome Presence", description = "You have proficiency in Intimidation. If you already have it, you gain expertise instead" }
+]
+typical_classes = ["Barbarian", "Fighter", "Warlock", "Cleric"]
+bloodline_derivations = ["Azrai", "Vorynn", "Anduiras"]
+common_faiths = ["Belinik", "Kriesha"]
+naming_conventions = """
+Vos names have Slavic influences. They use patronymics and clan names.
+Common names: Torsk, Vaska, Gregor, Pyotr, Marisha, Yelena, Drago.
+"""
+
+# =============================================================================
+# NONHUMAN RACES OF CERILIA
+# =============================================================================
+# Cerilian nonhumans differ significantly from their Faerunian counterparts.
+# =============================================================================
+
+[[races]]
+name = "Sidhelien (Cerilian Elves)"
+type = "elf"
+description = """
+The Sidhelien are the true elves of Cerilia - ancient, immortal, and utterly
+alien to human understanding. They are not the friendly elves of other worlds.
+They remember millennia of human encroachment, broken treaties, and the loss of
+their sacred groves. Many Sidhelien view humans as a plague upon the land.
+"""
+ability_bonus = "+2 Dexterity, +1 Intelligence or Charisma"
+age = "Sidhelien mature at the same rate as humans but are considered adults at 100. They can live indefinitely, with some being thousands of years old."
+size = "Medium (5-6 feet tall, slender)"
+speed = 30
+languages = ["Sidhelien", "Common (Anuirean)"]
+traits = [
+    { name = "Darkvision", description = "60 feet" },
+    { name = "Fey Ancestry", description = "Advantage on saves vs. charm, immune to magical sleep" },
+    { name = "Trance", description = "4 hours of trance replaces 8 hours of sleep" },
+    { name = "Keen Senses", description = "Proficiency in Perception" }
+]
+features = [
+    { name = "Children of the Seeming", description = "You can cast Disguise Self once per long rest without expending a spell slot. At 5th level, you can also cast Invisibility once per long rest. Charisma is your spellcasting ability" },
+    { name = "Timeless Memory", description = "You have advantage on History checks about events from the past 500 years that you might have witnessed or heard firsthand accounts of" },
+    { name = "Natural Arcanist", description = "Sidhelien can be wizards without being blooded. Their magic comes from their connection to the land, not from divine bloodlines" },
+    { name = "Forest Bond", description = "While in a forest, you can communicate simple ideas with beasts and plants. You know if the forest has been corrupted or if hostile creatures have passed through recently" }
+]
+typical_classes = ["Wizard", "Ranger", "Fighter", "Rogue"]
+bloodline_note = "Sidhelien cannot have bloodlines. They gain their magical abilities from their fey nature, not from the divine essence shed at Deismaar."
+subraces = [
+    { name = "High Sidhelien", bonus = "+1 Intelligence", feature = "Extra cantrip from wizard list" },
+    { name = "Wood Sidhelien", bonus = "+1 Wisdom", feature = "Mask of the Wild - hide when lightly obscured by natural phenomena" }
+]
+
+[[races]]
+name = "Karamhul (Cerilian Dwarves)"
+type = "dwarf"
+description = """
+The Karamhul are the dwarves of Cerilia, an ancient race who have dwelt beneath
+the mountains since before humans arrived. They are master craftsmen and fierce
+warriors who guard their mountain homes jealously. Unlike elves, they have
+generally maintained peaceful relations with humans.
+"""
+ability_bonus = "+2 Constitution, +1 Strength or Wisdom"
+age = "Mature at 50, live to around 350 years"
+size = "Medium (4-5 feet tall, stocky)"
+speed = 25
+speed_note = "Speed not reduced by heavy armor"
+languages = ["Karamhul (Dwarvish)", "Common (Anuirean)"]
+traits = [
+    { name = "Darkvision", description = "60 feet" },
+    { name = "Dwarven Resilience", description = "Advantage on saves vs. poison, resistance to poison damage" },
+    { name = "Tool Proficiency", description = "Smith's tools, brewer's supplies, or mason's tools" },
+    { name = "Stonecunning", description = "Double proficiency on History checks related to stonework" }
+]
+features = [
+    { name = "Dwarven Combat Training", description = "Proficiency with battleaxe, handaxe, throwing hammer, and warhammer" },
+    { name = "Mountain Born", description = "Acclimated to high altitude and underground environments. Advantage on saves against cave-ins, altitude sickness, and similar hazards" },
+    { name = "Ancient Grudges", description = "You have advantage on attack rolls against orogs (Cerilian orcs) and goblins" }
+]
+typical_classes = ["Fighter", "Cleric", "Paladin", "Artificer"]
+bloodline_note = "Karamhul can have bloodlines, though it is rare. Dwarven bloodlines typically derive from Moradin (treated as Anduiras for mechanics) or Azrai (for those corrupted)."
+
+[[races]]
+name = "Cerilian Halfling"
+type = "halfling"
+description = """
+Halflings in Cerilia are a rare folk, found primarily in the Shadow World or in
+small communities hidden from the affairs of the great powers. They are
+secretive, cautious, and often serve as intermediaries between worlds.
+"""
+ability_bonus = "+2 Dexterity, +1 Charisma or Constitution"
+age = "Mature at 20, live to around 150 years"
+size = "Small (3 feet tall)"
+speed = 25
+languages = ["Halfling", "Common (Anuirean)"]
+traits = [
+    { name = "Lucky", description = "Reroll 1s on attack rolls, ability checks, and saves" },
+    { name = "Brave", description = "Advantage on saves vs. being frightened" },
+    { name = "Halfling Nimbleness", description = "Move through spaces of larger creatures" }
+]
+features = [
+    { name = "Shadow Touched", description = "Cerilian halflings have a connection to the Shadow World. Once per long rest, you can sense the presence of portals to the Shadow World within 60 feet" },
+    { name = "Naturally Stealthy", description = "You can attempt to hide when obscured by a creature at least one size larger than you" },
+    { name = "Unassuming", description = "Others tend to overlook you. You have advantage on Stealth checks in crowds and social situations where being unnoticed is beneficial" }
+]
+typical_classes = ["Rogue", "Bard", "Ranger", "Warlock"]
+bloodline_note = "Halflings almost never have bloodlines. Their connection to the Shadow World serves a similar narrative purpose."
+
+# =============================================================================
+# BLOODLINE AT CHARACTER CREATION
+# =============================================================================
+# Characters with bloodlines must select their derivation and strength at
+# character creation. See bloodline_mechanics.toml for full rules.
+# =============================================================================
+
+[bloodline_creation]
+description = """
+Blooded scions carry divine power in their veins, inherited from ancestors who
+fought at the Battle of Deismaar. At character creation, a blooded character
+must determine their bloodline derivation and strength.
+"""
+
+options = [
+    { method = "Random", description = "Roll for derivation and strength per bloodline_mechanics.toml" },
+    { method = "Point Buy", description = "Allocate bloodline points based on campaign tier" },
+    { method = "DM Assigned", description = "DM determines based on character background and story" }
+]
+
+starting_strength_by_tier = [
+    { tier = "Commoner Hero", strength = "None or Tainted (1-10)", blood_abilities = 0 },
+    { tier = "Minor Noble", strength = "Minor (11-20)", blood_abilities = 1 },
+    { tier = "Major Noble", strength = "Major (21-35)", blood_abilities = "1-2" },
+    { tier = "Royal Blood", strength = "Great (36-55)", blood_abilities = "2-3" },
+    { tier = "Ancient Lineage", strength = "True (56+)", blood_abilities = "3-4" }
+]
+
+# =============================================================================
+# BACKGROUND MODIFICATIONS
+# =============================================================================
+# Standard 5e backgrounds can be used, but some have Cerilian variants.
+# =============================================================================
+
+[[backgrounds]]
+name = "Noble (Anuirean)"
+description = "You are of noble blood in the Anuirean tradition, heir to lands and title."
+proficiencies = ["History", "Persuasion"]
+languages = ["One of choice"]
+equipment = "Fine clothes, signet ring, scroll of pedigree, purse with 25 gp"
+feature = "Position of Privilege"
+feature_description = "Common folk make every effort to accommodate you. You can secure an audience with local nobles."
+bloodline_note = "Anuirean nobles are almost always blooded. If unblooded, you are likely a cadet branch or recently elevated family."
+
+[[backgrounds]]
+name = "Guild Merchant (Brecht)"
+description = "You are a member of one of the great Brecht guilds."
+proficiencies = ["Insight", "Persuasion"]
+tools = ["Navigator's tools or one artisan's tools"]
+languages = ["Low Brecht"]
+equipment = "Letter of introduction from guild, traveler's clothes, belt pouch with 15 gp"
+feature = "Guild Membership"
+feature_description = "Guild members will provide lodging and food. Guild can provide legal/political backing in guild cities."
+bloodline_note = "Brecht guild masters may or may not be blooded. Commercial power often rivals landed nobility."
+
+[[backgrounds]]
+name = "Temple Initiate (Khinasi)"
+description = "You were raised in the temples of el-Arrasi, trained in both faith and arcane lore."
+proficiencies = ["Arcana", "Religion"]
+languages = ["Basarji", "One of choice"]
+equipment = "Holy symbol, prayer book, vestments, incense, 10 gp"
+feature = "Shelter of the Faithful"
+feature_description = "You can receive healing and care at temples of your faith. Temple will support you in modest circumstances."
+bloodline_note = "Temple hierarchies in Khinasi often include both blooded and unblooded. Merit matters more than blood in matters of faith."
+
+[[backgrounds]]
+name = "Outlander (Rjurik)"
+description = "You grew up in the wild highlands, far from the corruption of cities."
+proficiencies = ["Athletics", "Survival"]
+tools = ["One musical instrument"]
+languages = ["Rjuven"]
+equipment = "Staff, hunting trap, trophy from animal, traveler's clothes, 10 gp"
+feature = "Wanderer"
+feature_description = "You have excellent memory for maps and geography. You can always find food and water for yourself and up to five others in the wild."
+bloodline_note = "Rjurik jarls are typically blooded, but many powerful druids derive their power from Erik rather than bloodline."
+
+[[backgrounds]]
+name = "Warrior (Vos)"
+description = "You were raised in the brutal warrior traditions of Vosgaard."
+proficiencies = ["Athletics", "Intimidation"]
+tools = ["Vehicles (land)"]
+languages = ["Vos"]
+equipment = "War trophy (ear, finger, or weapon), traveler's clothes, belt pouch with 10 gp"
+feature = "Might Makes Right"
+feature_description = "Among Vos, you can challenge another to single combat to resolve disputes. Others will not interfere in a declared challenge."
+bloodline_note = "Vos tsarevos (rulers) are invariably blooded, often with the tainted blood of Azrai."
+
+# =============================================================================
+# ABILITY SCORE GENERATION
+# =============================================================================
+
+[ability_scores]
+methods = [
+    { name = "Standard Array", values = [15, 14, 13, 12, 10, 8] },
+    { name = "Point Buy", points = 27, range = "8-15 before racial mods" },
+    { name = "Rolling", method = "4d6 drop lowest, arrange as desired" }
+]
+
+bloodline_as_seventh_stat = """
+Some campaigns treat Bloodline Score as a seventh ability score (see
+bloodline_mechanics.toml). In these campaigns, bloodline is rolled or assigned
+separately from the six standard abilities.
+"""
+
+# =============================================================================
+# STARTING EQUIPMENT MODIFICATIONS
+# =============================================================================
+
+[starting_equipment]
+standard = "Use class and background starting equipment as per PHB"
+
+cultural_modifications = [
+    { culture = "Anuirean", add = "Family crest or signet if noble", note = "Anuirean equipment tends toward quality over quantity" },
+    { culture = "Brecht", add = "50% more starting gold option", note = "Brecht start with more coin but less gear" },
+    { culture = "Khinasi", add = "Scholar's pack alternative", note = "Khinasi value books and learning materials" },
+    { culture = "Rjurik", add = "Cold weather gear (free)", note = "Rjurik equipment suits the northern climate" },
+    { culture = "Vos", add = "War trophy (intimidation tool)", note = "Vos equipment is functional and often bloodstained" }
+]

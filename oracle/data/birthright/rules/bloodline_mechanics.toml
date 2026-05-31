@@ -1,0 +1,641 @@
+# =============================================================================
+# BLOODLINE MECHANICS - 5E INTEGRATION
+# =============================================================================
+# Converts the Birthright bloodline system to 5th Edition D&D mechanics.
+# Multiple implementation options provided for different campaign styles.
+# =============================================================================
+
+[meta]
+title = "Cerilian Bloodline System"
+version = "1.0"
+system = "5e"
+source = "Birthright Campaign Setting (adapted)"
+
+# =============================================================================
+# BLOODLINE OVERVIEW
+# =============================================================================
+
+[bloodline]
+description = """
+The bloodlines of Cerilia are the inheritance of divine power from the gods who
+died at the Battle of Deismaar. When the gods perished, their essence scattered
+across the battlefield, infusing the champions who fought there. These bloodlines
+have been passed down through generations, though they can be stolen, lost, or
+strengthened through various means.
+
+Bloodline grants several benefits:
+1. The ability to cast true arcane magic
+2. The ability to rule domains and collect regency
+3. Supernatural blood abilities unique to each derivation
+4. Resistance to the blood abilities of others
+"""
+
+# =============================================================================
+# IMPLEMENTATION OPTIONS
+# =============================================================================
+# Choose ONE of these systems for your campaign. Each has trade-offs.
+# =============================================================================
+
+[implementation.option_1_ability_score]
+name = "Bloodline as Seventh Ability Score"
+description = """
+Treat Bloodline Score as a seventh ability, ranging from 1-100+. This is the
+most faithful adaptation of the original 2e system but requires the most
+bookkeeping.
+"""
+pros = ["Most faithful to original", "Granular progression", "Clear numerical tracking"]
+cons = ["Extra stat to track", "More complex", "Doesn't use 5e advantage/proficiency systems"]
+
+[implementation.option_1_ability_score.generation]
+methods = [
+    { name = "Roll", method = "2d20 + cultural modifier", average = 21 },
+    { name = "Standard Array", values = [30, 25, 20, 15, 10] },
+    { name = "Point Buy", points = "15 points, 1:1 ratio, range 1-40" }
+]
+cultural_modifiers = [
+    { culture = "Anuirean Noble", modifier = "+10" },
+    { culture = "Anuirean Common", modifier = "+0" },
+    { culture = "Brecht Guild", modifier = "+5" },
+    { culture = "Khinasi Noble", modifier = "+8" },
+    { culture = "Rjurik Jarl", modifier = "+6" },
+    { culture = "Vos Tsarevo", modifier = "+8" },
+    { culture = "Sidhelien", modifier = "N/A (elves have no bloodline)" }
+]
+
+[implementation.option_1_ability_score.strength_categories]
+tainted = { range = "1-10", abilities = 0, regency_modifier = -2 }
+minor = { range = "11-20", abilities = 1, regency_modifier = 0 }
+major = { range = "21-35", abilities = 2, regency_modifier = "+1" }
+great = { range = "36-55", abilities = 3, regency_modifier = "+2" }
+true = { range = "56-75", abilities = 4, regency_modifier = "+3" }
+divine = { range = "76+", abilities = 5, regency_modifier = "+4" }
+
+# ---
+
+[implementation.option_2_feat_chain]
+name = "Bloodline as Feat Chain"
+description = """
+Represent bloodline through a chain of feats. Characters sacrifice ASIs for
+bloodline power. Works well with 5e's existing systems.
+"""
+pros = ["Uses existing 5e mechanics", "Player choice in progression", "No extra tracking"]
+cons = ["Costs ASI opportunities", "Less granular", "Harder to represent bloodline theft"]
+
+[[implementation.option_2_feat_chain.feats]]
+name = "Blooded Scion"
+prerequisite = "Character creation or DM approval"
+description = """
+You carry divine blood from an ancestor who fought at Deismaar.
+- Choose a bloodline derivation (see Derivations section)
+- You gain one minor blood ability from your derivation
+- You count as blooded for all game purposes (true magic, regency, etc.)
+- You can sense other blooded individuals within 30 feet
+"""
+cost = "Starting feat or 1 ASI"
+
+[[implementation.option_2_feat_chain.feats]]
+name = "Awakened Blood"
+prerequisite = "Blooded Scion feat"
+description = """
+Your bloodline stirs with greater power.
+- Your bloodline strength increases by one category
+- You gain one additional blood ability (minor or major)
+- Your regency collection increases by 1 per domain turn
+"""
+cost = "1 ASI"
+
+[[implementation.option_2_feat_chain.feats]]
+name = "True Bloodline"
+prerequisite = "Awakened Blood feat, 8th level"
+description = """
+Your bloodline reaches its full potential.
+- Your bloodline strength increases to Great or True
+- You gain one additional blood ability (any rank)
+- You have advantage on saves against blood abilities from weaker bloodlines
+- Your regency collection increases by 2 per domain turn
+"""
+cost = "1 ASI"
+
+[[implementation.option_2_feat_chain.feats]]
+name = "Blood of Kings"
+prerequisite = "True Bloodline feat, 12th level"
+description = """
+Your divine heritage marks you as destined to rule.
+- You are immune to blood abilities from Minor or lesser bloodlines
+- You gain one great blood ability
+- Domain actions you take have advantage on their success rolls
+- You can sense the bloodline strength of any scion within 60 feet
+"""
+cost = "1 ASI"
+
+# ---
+
+[implementation.option_3_background]
+name = "Bloodline as Background Feature"
+description = """
+The simplest option: bloodline is part of your background, granting a
+specific package of abilities that don't scale.
+"""
+pros = ["Simplest implementation", "No extra tracking", "Easy to understand"]
+cons = ["No progression", "Less impactful", "Doesn't capture bloodline's importance"]
+
+[[implementation.option_3_background.backgrounds]]
+name = "Blooded Noble"
+description = "You carry divine blood and may rule a domain"
+proficiencies = ["Persuasion", "History"]
+languages = ["One of choice"]
+equipment = "Fine clothes, signet ring, proof of lineage, 25 gp"
+feature_name = "Divine Heritage"
+feature_description = """
+You are blooded and can:
+- Cast true arcane magic (if you have spellcasting)
+- Collect regency from domain holdings
+- Use one blood ability appropriate to your derivation
+- Sense other blooded individuals within 30 feet
+"""
+
+# =============================================================================
+# BLOODLINE DERIVATIONS
+# =============================================================================
+# Each derivation comes from a different god of Deismaar.
+# =============================================================================
+
+[[derivations]]
+name = "Anduiras"
+god = "Anduiras, God of Nobility and War"
+description = """
+Anduiras was the god of noble warfare, courage, and leadership. His bloodline
+flows strongest in the royal families of Anuire. Scions of Anduiras are natural
+leaders, inspiring courage in allies and fear in enemies.
+"""
+alignment_tendency = "Lawful"
+domains = ["War", "Order", "Protection"]
+common_among = ["Anuirean nobility", "Rjurik jarls"]
+
+[[derivations.blood_abilities]]
+name = "Battlewise"
+rank = "Minor"
+description = "You have advantage on Initiative rolls."
+
+[[derivations.blood_abilities]]
+name = "Courage"
+rank = "Minor"
+description = "You are immune to the frightened condition. As an action, you can grant this immunity to allies within 30 feet for 1 minute. Once used, you cannot use the aura again until you finish a long rest."
+
+[[derivations.blood_abilities]]
+name = "Detect Lie"
+rank = "Major"
+description = "You can cast Zone of Truth once per long rest without expending a spell slot. Additionally, you have advantage on Insight checks to detect deception."
+
+[[derivations.blood_abilities]]
+name = "Divine Aura"
+rank = "Major"
+description = "As an action, you can project an aura of authority in a 30-foot radius. For 1 minute, allies gain +2 to attack rolls and saving throws while enemies have -2. Once used, you cannot use this ability again until you finish a long rest."
+
+[[derivations.blood_abilities]]
+name = "Iron Will"
+rank = "Great"
+description = "You have advantage on all Wisdom saving throws. Once per long rest, you can automatically succeed on a Wisdom saving throw."
+
+[[derivations.blood_abilities]]
+name = "Invulnerability"
+rank = "Great"
+description = "Once per long rest, you can use your reaction when hit by an attack to reduce the damage to 0. You also gain resistance to nonmagical bludgeoning, piercing, and slashing damage."
+
+# ---
+
+[[derivations]]
+name = "Basaia"
+god = "Basaia, Goddess of the Sun"
+description = """
+Basaia was the goddess of the sun, light, and wisdom. Her bloodline burns
+brightest in Khinasi lands. Scions of Basaia are often scholars, seers, and
+wielders of fire magic.
+"""
+alignment_tendency = "Lawful Good"
+domains = ["Light", "Knowledge", "Life"]
+common_among = ["Khinasi royalty", "Temple hierarchies"]
+
+[[derivations.blood_abilities]]
+name = "Enhanced Sense"
+rank = "Minor"
+description = "Choose one sense (sight, hearing, smell, etc.). You have advantage on Perception checks using that sense, and magical darkness doesn't impede your chosen sense."
+
+[[derivations.blood_abilities]]
+name = "Resistance (Fire)"
+rank = "Minor"
+description = "You have resistance to fire damage."
+
+[[derivations.blood_abilities]]
+name = "Light of Reason"
+rank = "Major"
+description = "You can cast Daylight once per long rest without expending a spell slot. You also have advantage on saving throws against illusions."
+
+[[derivations.blood_abilities]]
+name = "Mebhaighl Sense"
+rank = "Major"
+description = "You can sense magical auras as if constantly under Detect Magic. You can also sense Sources within 1 mile and know their relative strength."
+
+[[derivations.blood_abilities]]
+name = "Touch of Decay (Inverted)"
+rank = "Great"
+description = "Your touch can restore rather than destroy. Once per long rest, you can touch a creature to heal 4d10 hit points and end one disease or condition."
+
+[[derivations.blood_abilities]]
+name = "Regeneration"
+rank = "Great"
+description = "At the start of each of your turns, you regain hit points equal to your Constitution modifier if you have at least 1 hit point. This doesn't function if you've taken fire or acid damage since your last turn."
+
+# ---
+
+[[derivations]]
+name = "Brenna"
+god = "Brenna, Goddess of Commerce and Fortune"
+description = """
+Brenna was the goddess of commerce, travel, and luck. Her bloodline runs
+through the merchant princes of Brechttur. Scions of Brenna are lucky,
+persuasive, and always seem to find opportunities.
+"""
+alignment_tendency = "Neutral"
+domains = ["Trickery", "Travel", "Fortune"]
+common_among = ["Brecht guilders", "Anuirean merchants"]
+
+[[derivations.blood_abilities]]
+name = "Alertness"
+rank = "Minor"
+description = "You cannot be surprised while conscious. You also have advantage on Initiative rolls."
+
+[[derivations.blood_abilities]]
+name = "Character Reading"
+rank = "Minor"
+description = "After observing a creature for 1 minute, you learn its emotional state and general intentions. You have advantage on Insight checks against that creature for 24 hours."
+
+[[derivations.blood_abilities]]
+name = "Persuasion"
+rank = "Major"
+description = "You can cast Suggestion once per long rest without expending a spell slot. Your spell save DC equals 8 + proficiency bonus + Charisma modifier."
+
+[[derivations.blood_abilities]]
+name = "Divine Luck"
+rank = "Major"
+description = "You have 3 luck points. When you make an attack roll, ability check, or saving throw, you can spend one luck point to roll an additional d20 and choose which to use. You regain all luck points on a long rest."
+
+[[derivations.blood_abilities]]
+name = "Travel"
+rank = "Great"
+description = "Once per long rest, you can cast Teleport without expending a spell slot. You can only teleport to locations you have personally visited."
+
+[[derivations.blood_abilities]]
+name = "Home Hearkening"
+rank = "Great"
+description = "Once per long rest, you can teleport yourself and up to 8 willing creatures to your domain's capital or seat of power, regardless of distance."
+
+# ---
+
+[[derivations]]
+name = "Masela"
+god = "Masela, Goddess of the Sea"
+description = """
+Masela was the goddess of the sea, storms, and sailors. Her bloodline flows
+through the coastal kingdoms. Scions of Masela are drawn to water and command
+the power of storms.
+"""
+alignment_tendency = "Chaotic Neutral"
+domains = ["Tempest", "Water", "Travel"]
+common_among = ["Coastal rulers", "Island kingdoms", "Naval powers"]
+
+[[derivations.blood_abilities]]
+name = "Water Breathing"
+rank = "Minor"
+description = "You can breathe underwater and have a swimming speed equal to your walking speed."
+
+[[derivations.blood_abilities]]
+name = "Resistance (Cold)"
+rank = "Minor"
+description = "You have resistance to cold damage."
+
+[[derivations.blood_abilities]]
+name = "Sea Song"
+rank = "Major"
+description = "You can cast Control Water once per long rest without expending a spell slot. Sea creatures are not hostile to you unless provoked."
+
+[[derivations.blood_abilities]]
+name = "Storm Voice"
+rank = "Major"
+description = "You can cast Call Lightning once per long rest without expending a spell slot (requires stormy conditions or outdoor environment). You can also predict weather accurately for 24 hours."
+
+[[derivations.blood_abilities]]
+name = "Ocean's Embrace"
+rank = "Great"
+description = "While in contact with a body of water, you gain the following: AC +2, immunity to cold damage, and the ability to cast Control Weather once per long rest."
+
+# ---
+
+[[derivations]]
+name = "Reynir"
+god = "Reynir, God of the Forest"
+description = """
+Reynir was the god of forests, nature, and the hunt. His bloodline is strongest
+among the Rjurik and those who dwell in the wild places. Scions of Reynir are
+at home in nature and command its denizens.
+"""
+alignment_tendency = "Neutral"
+domains = ["Nature", "Hunt", "Life"]
+common_among = ["Rjurik jarls", "Forest dwellers", "Druids"]
+
+[[derivations.blood_abilities]]
+name = "Animal Affinity"
+rank = "Minor"
+description = "Beasts have a starting attitude of friendly toward you. You can communicate simple ideas with beasts, and they understand you."
+
+[[derivations.blood_abilities]]
+name = "Forest Walk"
+rank = "Minor"
+description = "Difficult terrain composed of plants doesn't cost you extra movement. You can pass through plants without being slowed or taking damage from thorns, spines, or similar hazards."
+
+[[derivations.blood_abilities]]
+name = "Nature's Ally"
+rank = "Major"
+description = "You can cast Conjure Animals once per long rest without expending a spell slot. The summoned creatures remain for up to 8 hours."
+
+[[derivations.blood_abilities]]
+name = "Healing"
+rank = "Major"
+description = "Once per long rest, you can touch a creature to restore hit points equal to 5 times your proficiency bonus and end one disease or condition affecting it."
+
+[[derivations.blood_abilities]]
+name = "Master of the Wild"
+rank = "Great"
+description = "You can cast Awaken once per week without expending a spell slot or material components. Awakened creatures serve you willingly."
+
+# ---
+
+[[derivations]]
+name = "Vorynn"
+god = "Vorynn, God of Magic"
+description = """
+Vorynn was the god of the moon, magic, and secrets. His bloodline grants
+mastery over the arcane arts. Scions of Vorynn are powerful mages who see
+beyond the veil of reality.
+"""
+alignment_tendency = "Neutral"
+domains = ["Arcana", "Knowledge", "Moon"]
+common_among = ["Wizard families", "Magical orders", "Seers"]
+
+[[derivations.blood_abilities]]
+name = "Detect Magic"
+rank = "Minor"
+description = "You can cast Detect Magic at will without expending a spell slot."
+
+[[derivations.blood_abilities]]
+name = "Spell Resistance"
+rank = "Minor"
+description = "You have advantage on saving throws against spells."
+
+[[derivations.blood_abilities]]
+name = "Arcane Sight"
+rank = "Major"
+description = "You can see magical auras automatically (no concentration required). You can identify spells being cast as a reaction."
+
+[[derivations.blood_abilities]]
+name = "Heightened Ability"
+rank = "Major"
+description = "Choose one school of magic. Your spell save DC for spells of that school increases by 2, and you have advantage on attack rolls for those spells."
+
+[[derivations.blood_abilities]]
+name = "True Sight"
+rank = "Great"
+description = "You have truesight out to 60 feet."
+
+[[derivations.blood_abilities]]
+name = "Magic Resistance"
+rank = "Great"
+description = "You have advantage on all saving throws against magical effects. Once per long rest, you can automatically succeed on a saving throw against a spell."
+
+# ---
+
+[[derivations]]
+name = "Azrai"
+god = "Azrai, God of Shadow"
+description = """
+Azrai was the god of shadow, corruption, and pride. He was the enemy of the
+other gods and his bloodline carries his taint. Scions of Azrai often become
+awnsheghlien - monsters twisted by their blood. Yet some resist the corruption
+and use their dark gifts for their own purposes.
+"""
+alignment_tendency = "Evil (but not required)"
+domains = ["Shadow", "Death", "Deception"]
+common_among = ["Vos tsarevos", "Awnsheghlien", "Dark rulers"]
+special_note = """
+Azrai's bloodline is both powerful and dangerous. Each time a scion of Azrai
+uses a blood ability or commits an evil act, they must make a Wisdom saving
+throw (DC 10 + number of uses that day) or gain a point of corruption. At
+10 corruption points, they begin transforming into an awnsheghlien.
+"""
+
+[[derivations.blood_abilities]]
+name = "Detect Life"
+rank = "Minor"
+description = "You can sense living creatures within 60 feet, even through walls. You know their general size and number but not their exact location."
+
+[[derivations.blood_abilities]]
+name = "Fear"
+rank = "Minor"
+description = "As an action, you can force one creature within 30 feet to make a Wisdom saving throw (DC 8 + proficiency + Charisma) or become frightened of you for 1 minute. The creature can repeat the save at the end of each turn."
+
+[[derivations.blood_abilities]]
+name = "Shadow Form"
+rank = "Major"
+description = "As an action, you can become a shadow for up to 1 minute. While in shadow form, you have resistance to nonmagical damage, can move through spaces as small as 1 inch, and have advantage on Stealth checks. You cannot attack or cast spells in this form. Once used, you cannot use this ability again until you finish a long rest."
+
+[[derivations.blood_abilities]]
+name = "Death Touch"
+rank = "Major"
+description = "Your touch deals 4d6 necrotic damage. On a critical hit or if this damage reduces a creature to 0 hit points, you regain hit points equal to half the necrotic damage dealt."
+
+[[derivations.blood_abilities]]
+name = "Wither Touch"
+rank = "Great"
+description = "Your touch can age creatures. A touched creature must make a Constitution saving throw or age 3d10 years. Creatures aged past their natural lifespan die. You also do not age while you have this ability."
+
+[[derivations.blood_abilities]]
+name = "Charm Aura"
+rank = "Great"
+description = "Creatures within 30 feet that can see you must make a Wisdom saving throw at the start of their turn or be charmed by you until the start of their next turn. A creature that succeeds is immune for 24 hours."
+
+# =============================================================================
+# BLOODTHEFT
+# =============================================================================
+# The most feared way to increase bloodline power.
+# =============================================================================
+
+[bloodtheft]
+description = """
+Bloodtheft is the act of slaying a blooded scion and absorbing their divine
+essence. This dark act is the primary way bloodlines strengthen - and the
+reason blooded scions fear assassination.
+"""
+
+[bloodtheft.mechanics]
+method = """
+To commit bloodtheft, you must:
+1. Deal the killing blow to a blooded scion
+2. Use a bladed weapon forged of tighmaevril (bloodsilver) OR
+3. Use any bladed weapon while within melee range at the moment of death
+"""
+
+[bloodtheft.effects]
+success = """
+When you commit bloodtheft:
+1. Roll 1d100 and compare to the victim's Bloodline Score
+   - Roll under: Gain points equal to (victim's score - your roll)
+   - Roll over: Gain 1 point (you grasped only a fragment)
+2. If the victim had blood abilities you don't have, roll percentile for each:
+   - 50% or less: You gain that blood ability
+3. Your bloodline derivation may shift toward the victim's if they had
+   stronger blood of a different derivation
+"""
+
+[bloodtheft.tighmaevril]
+description = """
+Tighmaevril (bloodsilver) is a rare metal that can conduct divine essence.
+A tighmaevril blade guarantees successful bloodtheft on a killing blow,
+even at range. Such weapons are priceless artifacts - perhaps a dozen
+exist in all Cerilia.
+"""
+game_effect = "Tighmaevril weapons automatically trigger bloodtheft mechanics on a killing blow against a blooded scion, regardless of range"
+
+[bloodtheft.feat_implementation]
+name = "Blooded Slayer"
+prerequisite = "Have committed bloodtheft at least once"
+description = """
+You have learned to harvest divine essence efficiently.
+- When you commit bloodtheft, you gain an additional 1d10 bloodline points
+- You have advantage on the roll to steal blood abilities
+- You can sense when a creature you've damaged is close to death (below 10 HP)
+"""
+
+# =============================================================================
+# USURPATION
+# =============================================================================
+# Taking a domain through force or treachery.
+# =============================================================================
+
+[usurpation]
+description = """
+Usurpation is the act of claiming another regent's domain through conquest or
+assassination. Unlike bloodtheft, usurpation concerns domain control rather
+than personal bloodline power.
+"""
+
+[usurpation.investiture]
+description = """
+A regent's connection to their domain is formalized through Investiture - a
+ceremony that binds the regent to the land. This bond can only be broken by:
+1. The regent's death
+2. Willing divestiture (giving up the domain)
+3. Forced divestiture through a realm spell
+4. Successful usurpation
+"""
+
+[usurpation.mechanics]
+conquest = """
+Military Usurpation:
+1. Conquer all provinces of the domain (occupy with military force)
+2. Control the capital for at least one domain turn (3 months)
+3. Perform Investiture ceremony in the capital
+4. Make a Charisma check (DC = former regent's Bloodline modifier + 10)
+   - Success: Domain transfers to you
+   - Failure: Domain becomes contested (civil unrest, loyalty issues)
+"""
+
+assassination = """
+Assassination Usurpation:
+1. Kill the current regent (ideally via bloodtheft)
+2. Be the designated heir OR be the strongest blooded claimant
+3. Perform Investiture ceremony within one domain turn
+4. If contested, make opposed Charisma checks with other claimants
+"""
+
+[usurpation.resistance]
+description = """
+A domain can resist usurpation:
+- Loyalty checks for each holding
+- Law holdings oppose or support based on alignment
+- Temple holdings may refuse to recognize new regent
+- Guild holdings may withdraw economic support
+"""
+
+# =============================================================================
+# BLOODLINE AND REGENCY
+# =============================================================================
+# How bloodline interacts with domain rulership.
+# =============================================================================
+
+[bloodline_regency]
+description = """
+Only blooded scions can collect regency - the mystical currency of rulership.
+Your bloodline strength determines how much regency you can collect and hold.
+"""
+
+[bloodline_regency.collection]
+base_formula = "Regency per turn = Domain level + Bloodline modifier"
+bloodline_modifier_table = [
+    { strength = "Tainted (1-10)", modifier = -2 },
+    { strength = "Minor (11-20)", modifier = 0 },
+    { strength = "Major (21-35)", modifier = "+1" },
+    { strength = "Great (36-55)", modifier = "+2" },
+    { strength = "True (56-75)", modifier = "+3" },
+    { strength = "Divine (76+)", modifier = "+4" }
+]
+
+[bloodline_regency.maximum]
+description = "Maximum regency you can hold equals your Bloodline Score"
+overflow = "Regency over your maximum is lost at the end of each domain turn"
+
+# =============================================================================
+# BLOOD ABILITY ACQUISITION
+# =============================================================================
+
+[blood_ability_acquisition]
+description = """
+Blood abilities can be gained through several means beyond character creation.
+"""
+
+[blood_ability_acquisition.methods]
+bloodtheft = "As described above - chance to steal victim's abilities"
+natural_awakening = "At certain bloodline thresholds, new abilities may manifest"
+divine_intervention = "Gods may grant abilities to favored scions"
+realm_magic = "Certain realm spells can grant or transfer blood abilities"
+
+[blood_ability_acquisition.awakening_thresholds]
+description = "When your bloodline score crosses these thresholds, you gain one new blood ability"
+thresholds = [20, 35, 50, 65, 80]
+ability_rank = "The ability gained is appropriate to your bloodline strength at the new threshold"
+
+# =============================================================================
+# BLOODLINE LOSS AND DEGRADATION
+# =============================================================================
+
+[bloodline_loss]
+description = """
+Bloodlines can weaken or be lost entirely through various means.
+"""
+
+[bloodline_loss.methods]
+bloodtheft_victim = "Being killed via bloodtheft (obviously ends your bloodline)"
+divestiture = "Willingly giving up your bloodline (rare ritual)"
+dilution = "Each generation without consolidation loses 1d6 bloodline points"
+corruption = "For Azrai scions, transformation into awnsheghlien destroys humanity"
+realm_magic = "Certain spells can suppress or drain bloodlines"
+
+[bloodline_loss.dilution]
+description = """
+If two blooded scions have a child, the child's bloodline is:
+- Average of parents' scores + 1d10
+- Takes derivation from the stronger parent (or DM choice if equal)
+
+If one parent is unblooded:
+- Child has 50% chance of being blooded
+- If blooded, score is parent's score / 2 + 1d10
+"""

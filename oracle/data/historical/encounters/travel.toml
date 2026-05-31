@@ -1,0 +1,61 @@
+# Historical Travel Encounters
+# 40+ journey and road encounters
+
+[encounters]
+entries = [
+  # Road Encounters
+  { text = "A messenger galloping past carries urgent news", weight = 2 },
+  { text = "A broken wagon blocks the road, travelers stranded", weight = 2 },
+  { text = "Refugees fleeing conflict crowd the road with their belongings", weight = 2 },
+  { text = "A toll collector demands payment at a narrow point", weight = 2 },
+  { text = "A patrol stops travelers to check papers and ask questions", weight = 2 },
+  { text = "A funeral procession winds its way to the churchyard", weight = 2 },
+  { text = "Pilgrims on their way to a holy site seek company for safety", weight = 2 },
+  { text = "A peddler offers wares and gossip from the last town", weight = 2 },
+  { text = "A coach has overturned, passengers requiring assistance", weight = 2 },
+  { text = "Drovers moving livestock create chaos on the road", weight = 2 },
+
+  # Dangerous Roads
+  { text = "Bandits or highwaymen block the path and demand valuables", weight = 1 },
+  { text = "Deserters from an army roam the countryside looking for supplies", weight = 2 },
+  { text = "A press gang targets able-bodied travelers for forced service", weight = 1 },
+  { text = "Suspicious characters appear to be following at a distance", weight = 2 },
+  { text = "A wanted poster bears an uncomfortable resemblance to someone present", weight = 1 },
+  { text = "The road ahead has been washed out or blocked by a landslide", weight = 2 },
+  { text = "A body lies by the roadside, signs of violence evident", weight = 1 },
+  { text = "Armed men challenge travelers to explain their business", weight = 2 },
+
+  # Lodging and Rest
+  { text = "The inn is full and travelers must share rooms with strangers", weight = 2 },
+  { text = "A fellow traveler at the inn offers information or requests help", weight = 2 },
+  { text = "The innkeeper warns of dangers on the road ahead", weight = 2 },
+  { text = "Drunken soldiers make the common room uncomfortable", weight = 2 },
+  { text = "A traveling merchant seeks guards for the next leg of the journey", weight = 2 },
+  { text = "Someone at the inn recognizes a traveler from a previous life", weight = 1 },
+  { text = "The food is terrible and the beds are worse, but it is shelter", weight = 2 },
+  { text = "A servant brings a mysterious note under cover of darkness", weight = 1 },
+
+  # Weather and Nature
+  { text = "A sudden storm forces shelter in an abandoned building", weight = 2 },
+  { text = "Flooding makes the road impassable for days", weight = 2 },
+  { text = "Snow blocks the mountain pass until spring", weight = 1 },
+  { text = "Heat and dust exhaust both travelers and horses", weight = 2 },
+  { text = "Fog descends and the trail becomes impossible to follow", weight = 2 },
+  { text = "A horse goes lame miles from anywhere", weight = 2 },
+
+  # Maritime Travel
+  { text = "Storm forces the ship to seek harbor in an unplanned port", weight = 2 },
+  { text = "Becalmed for days, water rationing begins", weight = 2 },
+  { text = "Unknown sails on the horizon could be friend or foe", weight = 2 },
+  { text = "A fellow passenger is more than they appear", weight = 2 },
+  { text = "Seasickness leaves passengers helpless and miserable", weight = 2 },
+  { text = "The crew whispers of bad omens and ill fortune", weight = 2 },
+  { text = "A stowaway is discovered and must be dealt with", weight = 1 },
+  { text = "Damaged rigging or hull threatens the voyage", weight = 1 },
+
+  # Border Crossings
+  { text = "Papers are scrutinized and questions asked at the border", weight = 2 },
+  { text = "A bribe is expected to smooth passage through checkpoints", weight = 2 },
+  { text = "Smuggling operation offers a way past closed borders", weight = 1 },
+  { text = "A guide who knows the secret paths offers services for a price", weight = 2 }
+]

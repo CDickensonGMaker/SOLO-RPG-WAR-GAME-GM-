@@ -1,0 +1,30 @@
+# NPC Dispositions - Weird War Setting
+# Initial attitudes and demeanors for NPCs in supernatural warfare
+
+[dispositions]
+entries = [
+  { text = "Hostile and aggressive, sees threats everywhere", weight = 1 },
+  { text = "Suspicious and guarded, trusts no one initially", weight = 1 },
+  { text = "Fearful and skittish, ready to flee at any sign of danger", weight = 1 },
+  { text = "Desperate and pleading, will do anything for help", weight = 1 },
+  { text = "Resigned and fatalistic, expects only death", weight = 1 },
+  { text = "Professional and businesslike, emotions suppressed", weight = 1 },
+  { text = "Cooperative and helpful, eager to assist", weight = 1 },
+  { text = "Cautiously friendly, willing to give benefit of the doubt", weight = 1 },
+  { text = "Curious and inquisitive, asks many questions", weight = 1 },
+  { text = "Indifferent and detached, caring for nothing", weight = 1 },
+  { text = "Zealous and fervent, burning with conviction", weight = 1 },
+  { text = "Calculating and watchful, always assessing", weight = 1 },
+  { text = "Manic and unstable, shifting rapidly between emotions", weight = 1 },
+  { text = "Eerily calm, unsettlingly peaceful given circumstances", weight = 1 },
+  { text = "Grief-stricken and barely functional", weight = 1 },
+  { text = "Predatory and hungry, viewing others as resources", weight = 1 },
+  { text = "Jovial and darkly humorous, deflecting with jokes", weight = 1 },
+  { text = "Commanding and authoritative, expecting obedience", weight = 1 },
+  { text = "Servile and submissive, eager to please authority", weight = 1 },
+  { text = "Paranoid and conspiratorial, seeing hidden patterns", weight = 1 },
+  { text = "Protective and maternal/paternal, focused on others' safety", weight = 1 },
+  { text = "Vengeful and bitter, nursing old wounds", weight = 1 },
+  { text = "Hopeful and optimistic, somehow still believing in better days", weight = 1 },
+  { text = "Broken and hollow, a shell going through motions", weight = 1 },
+]

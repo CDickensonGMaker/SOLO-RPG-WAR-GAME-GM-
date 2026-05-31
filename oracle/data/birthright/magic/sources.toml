@@ -1,0 +1,477 @@
+# =============================================================================
+# BIRTHRIGHT REALM MAGIC: MAGICAL SOURCES
+# =============================================================================
+# Sources represent the magical potential of the land - the mebhaighl that
+# flows through Cerilia. Wizards tap this power through source holdings.
+# =============================================================================
+
+[metadata]
+version = "1.0"
+description = "Magical source rules, terrain potentials, and mebhaighl collection"
+setting = "Cerilia"
+
+# -----------------------------------------------------------------------------
+# MEBHAIGHL: THE MAGICAL ESSENCE
+# -----------------------------------------------------------------------------
+
+[mebhaighl]
+description = """
+Mebhaighl (pronounced meh-VALE) is the magical essence that permeates the
+land of Cerilia. It flows through the earth, pools in wild places, and
+can be tapped by those with the blood of the old gods.
+
+After the Battle of Deismaar, where the old gods perished, their divine
+essence merged with the land itself. Those who absorbed bloodline powers
+can sense and channel this mebhaighl through source holdings.
+"""
+
+collection_rules = """
+Mebhaighl is collected automatically by source holdings:
+- Each source holding collects mebhaighl equal to its level per domain turn
+- This magical energy is used to power realm spells
+- Excess mebhaighl cannot be stored (use it or lose it)
+- Ley lines allow mebhaighl to flow between connected sources
+"""
+
+sensing_mebhaighl = """
+Blooded characters can sense mebhaighl:
+- True bloodline: Can sense major source locations automatically
+- Major bloodline: Bloodline check to sense sources in a province
+- Minor bloodline: Bloodline check -4 to sense strong sources only
+- Great bloodline: Can sense mebhaighl flows and ley lines
+
+Sensing range: Bloodline score in miles for strong sources
+"""
+
+# -----------------------------------------------------------------------------
+# SOURCE POTENTIAL BY TERRAIN
+# -----------------------------------------------------------------------------
+# Source potential represents the maximum source level possible in a province.
+# Civilization reduces source potential as the land is tamed.
+# Maximum Source = Source Potential - Province Level
+# -----------------------------------------------------------------------------
+
+[terrain_potential]
+description = """
+Each terrain type has a base source potential representing the natural
+magical energy of wild, untamed land of that type. As provinces develop
+(increase in level), source potential is consumed by civilization.
+"""
+
+[[terrain_potential.terrain]]
+type = "Forest (Ancient/Old Growth)"
+base_potential = 9
+description = "Ancient forests teem with mebhaighl. The oldest trees channel deep earth magic."
+special = "Elven forests maintain full potential regardless of population"
+magical_affinity = ["Nature magic", "Illusion", "Enchantment"]
+
+[[terrain_potential.terrain]]
+type = "Forest (Managed/Young)"
+base_potential = 6
+description = "Younger or managed forests have reduced but significant potential."
+special = "Reforestation can slowly restore potential (centuries)"
+magical_affinity = ["Nature magic", "Growth magic"]
+
+[[terrain_potential.terrain]]
+type = "Mountains"
+base_potential = 8
+description = "Mountains hold deep reserves of earth magic and are slow to be tamed."
+special = "Dwarven settlements reduce potential less than human ones"
+magical_affinity = ["Earth magic", "Divination (height advantage)"]
+
+[[terrain_potential.terrain]]
+type = "Hills"
+base_potential = 5
+description = "Rolling hills have moderate magical potential."
+special = "None"
+magical_affinity = ["General magic", "Weather magic"]
+
+[[terrain_potential.terrain]]
+type = "Plains"
+base_potential = 4
+description = "Open plains have lower potential but are easy to tap."
+special = "Large herds of wild animals can increase potential by 1"
+magical_affinity = ["Weather magic", "Movement magic"]
+
+[[terrain_potential.terrain]]
+type = "Swamp/Marsh"
+base_potential = 7
+description = "Wetlands are rich with chaotic, unpredictable magic."
+special = "Shadow World connection may increase potential"
+magical_affinity = ["Necromancy", "Illusion", "Transformation"]
+
+[[terrain_potential.terrain]]
+type = "Desert"
+base_potential = 5
+description = "Deserts hold hidden magical depths, preserved by their inhospitable nature."
+special = "Oases have +2 potential"
+magical_affinity = ["Fire magic", "Illusion", "Preservation"]
+
+[[terrain_potential.terrain]]
+type = "Tundra"
+base_potential = 6
+description = "Frozen lands preserve ancient magic in their permafrost."
+special = "Ice mages gain +1 effective source level"
+magical_affinity = ["Ice magic", "Preservation", "Death magic"]
+
+[[terrain_potential.terrain]]
+type = "Coastal"
+base_potential = 3
+description = "The meeting of land and sea dilutes magical potential."
+special = "Sea mages can tap both land and sea sources"
+magical_affinity = ["Water magic", "Weather magic"]
+
+[[terrain_potential.terrain]]
+type = "Ocean/Islands"
+base_potential = 2
+description = "Ocean provinces have minimal land-based source potential."
+special = "Magical islands may have much higher potential (case by case)"
+magical_affinity = ["Water magic", "Storm magic"]
+
+[[terrain_potential.terrain]]
+type = "Wasteland (Magical)"
+base_potential = 0
+description = "Areas blasted by magical catastrophe have no source potential."
+special = "May have wild magic effects instead of usable sources"
+magical_affinity = ["None - magic is unpredictable here"]
+
+[[terrain_potential.terrain]]
+type = "Shadow-touched"
+base_potential = 10
+description = "Areas with strong Shadow World connection have immense but dangerous potential."
+special = "All magic has 10% chance of Shadow corruption"
+magical_affinity = ["Shadow magic", "Necromancy", "Illusion"]
+
+# -----------------------------------------------------------------------------
+# SOURCE POTENTIAL CALCULATION
+# -----------------------------------------------------------------------------
+
+[potential_calculation]
+formula = "Available Source = Base Terrain Potential - Province Level"
+
+examples = [
+    { terrain = "Ancient Forest", base = 9, province_level = 3, available = 6 },
+    { terrain = "Plains", base = 4, province_level = 4, available = 0 },
+    { terrain = "Mountains", base = 8, province_level = 2, available = 6 },
+    { terrain = "Swamp", base = 7, province_level = 1, available = 6 }
+]
+
+minimum = """
+Source potential cannot go below 0. When province level equals or exceeds
+base potential, no sources can exist. Existing sources are destroyed if
+the province level increases past the point where they could exist.
+"""
+
+special_cases = """
+- Elven realms: Province level does not reduce forest source potential
+- Dwarven realms: Province level reduces mountain potential by only half
+- Magical sites: Some locations have bonus potential (+1 to +3)
+- Cursed lands: Potential may be reduced by 1-3
+- Shadow World proximity: +1 to +3 potential but with corruption risk
+"""
+
+# -----------------------------------------------------------------------------
+# SOURCE HOLDINGS
+# -----------------------------------------------------------------------------
+
+[source_holdings]
+description = """
+Source holdings represent a wizard's control over the mebhaighl in a province.
+Unlike other holdings, sources cannot be built - they must be claimed from
+existing magical potential. A province's total source holdings cannot exceed
+its available source potential.
+"""
+
+claiming_sources = """
+To claim a source, a wizard must:
+1. Have a bloodline (unblooded cannot hold sources)
+2. Spend 1 GB and 1 RP per source level claimed
+3. Succeed at a domain action (Rule holding for sources)
+4. Not exceed the province's available potential
+
+Multiple wizards can hold sources in the same province, but total levels
+cannot exceed available potential.
+"""
+
+source_income = """
+Sources do not generate GB directly. Instead they provide:
+- Mebhaighl for casting realm spells
+- RP collection equal to half source level (round up)
+- Ability to cast certain spells
+- Connection points for ley lines
+"""
+
+source_levels = """
+Source Level | Regency Collection | Spell Access
+-------------|-------------------|---------------
+1-2          | 1 RP              | Scry, Dispel (basic)
+3-4          | 2 RP              | Deception, Warding, Ley Trap, Transport
+5-6          | 3 RP              | Alchemy, Raze, Subversion, Summoning
+7-8          | 4 RP              | Legion of Dead, Death Plague
+9-10         | 5 RP              | All spells at maximum power
+"""
+
+# -----------------------------------------------------------------------------
+# SOURCE CONTEST RULES
+# -----------------------------------------------------------------------------
+
+[source_contest]
+description = """
+Wizards compete for control over limited source potential. When source
+holdings exceed available potential (usually due to province development),
+a contest occurs.
+"""
+
+automatic_contest = """
+When province level increases:
+1. Check if total source levels > available potential
+2. If yes, lowest-level source holding loses 1 level
+3. Ties broken by: lower bloodline score, newer holding, random
+
+This continues until total sources equal available potential.
+"""
+
+active_contest = """
+A wizard may attempt to Contest another's source holding:
+1. Challenger spends 1 GB per level contested
+2. Challenger spends RP equal to target source level
+3. Both wizards roll: Bloodline + Source Level + 1d20
+4. Higher roll wins; ties favor defender
+
+Winner's Choices:
+- Reduce enemy source by contest amount
+- Claim reduced levels for self (if potential allows)
+- Merely damage enemy source (reduces by 1 regardless)
+"""
+
+contest_modifiers = [
+    { condition = "Challenger has ley line to province", modifier = "+2" },
+    { condition = "Defender has Warding active", modifier = "-4 to challenger" },
+    { condition = "Province loyalty favors one party", modifier = "+/- 1-3" },
+    { condition = "One party has major bloodline advantage (5+ higher)", modifier = "+3" },
+    { condition = "Challenger attempting hostile takeover", modifier = "-2" },
+    { condition = "During magical event (comet, eclipse)", modifier = "Variable" }
+]
+
+oracle_prompts_contest = [
+    "Does the contest attract wider attention?",
+    "Are there side effects from the magical struggle?",
+    "Does either wizard gain insight into the other's abilities?",
+    "Does the contested source suffer damage regardless of winner?",
+    "Do neutral parties intervene in the contest?"
+]
+
+# -----------------------------------------------------------------------------
+# MEBHAIGHL COLLECTION
+# -----------------------------------------------------------------------------
+
+[mebhaighl_collection]
+description = """
+Each domain turn, source holdings automatically collect mebhaighl.
+This magical energy powers realm spells.
+"""
+
+base_collection = """
+Mebhaighl collected = Sum of all source levels controlled
+
+This is the wizard's 'spell fuel' for the domain turn.
+Unused mebhaighl dissipates at turn's end.
+"""
+
+collection_modifiers = [
+    { condition = "Source in elven province", modifier = "+1 per source" },
+    { condition = "Source near Shadow World rift", modifier = "+2 but corruption risk" },
+    { condition = "Magical site in province", modifier = "+1 to +3" },
+    { condition = "Multiple sources connected by ley lines", modifier = "+1 per connection" },
+    { condition = "Province under Bless Land", modifier = "+1" },
+    { condition = "Province under curse/plague", modifier = "-1 to -3" },
+    { condition = "Eclipse, comet, or magical event", modifier = "x2 for one turn" }
+]
+
+spending_mebhaighl = """
+Realm spells require mebhaighl expenditure:
+- Most spells cost mebhaighl equal to minimum source requirement
+- Some powerful spells cost additional mebhaighl
+- Mebhaighl cannot be saved between turns
+- Ley line networks allow pooling mebhaighl from multiple sources
+"""
+
+# -----------------------------------------------------------------------------
+# MAGICAL CORRUPTION
+# -----------------------------------------------------------------------------
+
+[corruption]
+description = """
+Some magical practices corrupt both the wizard and the land. Repeated use
+of dark magic or drawing power from tainted sources leads to corruption.
+"""
+
+corruption_sources = [
+    "Casting evil realm spells (Death Plague, Legion of Dead, etc.)",
+    "Drawing mebhaighl from Shadow-touched sources",
+    "Using bloodtheft to steal bloodline power",
+    "Prolonged use of necromantic magic",
+    "Dealing with fiends or dark powers",
+    "Razing sources through destruction magic"
+]
+
+corruption_effects = """
+Corruption Level | Effects
+-----------------|------------------------------------------
+1-2 (Tainted)    | Faint dark aura visible to true seeing
+3-4 (Corrupt)    | -2 to dealings with good-aligned regents
+5-6 (Dark)       | Animals flee, plants wilt in presence
+7-8 (Fell)       | Good priests can sense you as evil
+9+ (Abomination) | Shadow World creatures serve you; hunted
+"""
+
+land_corruption = """
+Repeated dark magic corrupts the land itself:
+- Source potential in province drops by 1 (permanent)
+- Province may become 'blighted' (-1 loyalty, -1 income)
+- Shadow World connection strengthens
+- Animals become twisted, plants sicken
+- May spawn undead or shadow creatures
+
+Cleansing requires: Bless Land (multiple castings), Consecrate,
+or decades of natural recovery.
+"""
+
+corruption_table = """
+Roll 1d10 when performing dark magic:
+1-4: No additional corruption
+5-6: Gain 1 corruption point
+7-8: Gain 1d2 corruption points, minor manifestation
+9:   Gain 1d4 corruption points, province affected
+10:  Major corruption event - roll on special table
+"""
+
+oracle_prompts_corruption = [
+    "Does the corruption manifest visibly?",
+    "Do others notice the wizard's taint?",
+    "Is the land showing signs of corruption?",
+    "Does the corruption attract dark entities?",
+    "Is there a path to redemption visible?"
+]
+
+# -----------------------------------------------------------------------------
+# MAGICAL PHENOMENA
+# -----------------------------------------------------------------------------
+
+[phenomena]
+description = """
+Cerilia has various magical phenomena that affect source holdings and
+realm magic.
+"""
+
+[[phenomena.events]]
+name = "Mebhaighl Surge"
+frequency = "Rare (once every few years)"
+description = "A wave of magical energy sweeps across a region"
+effects = [
+    "All sources in affected area collect double mebhaighl for 1 turn",
+    "Realm spells cast during surge are enhanced",
+    "Wild magic effects may occur",
+    "Latent magical sites may activate"
+]
+
+[[phenomena.events]]
+name = "Source Storm"
+frequency = "Very Rare"
+description = "Magical energy becomes chaotic and dangerous"
+effects = [
+    "Spell casting in affected area requires bloodline check",
+    "Failed checks cause backlash (1d6 damage to holding level)",
+    "Ley lines may be disrupted or rerouted",
+    "New sources may spontaneously appear"
+]
+
+[[phenomena.events]]
+name = "Shadow Tide"
+frequency = "Rare"
+description = "The Shadow World presses close to the material plane"
+effects = [
+    "Source potential temporarily increases by 2",
+    "All magic has 20% corruption chance",
+    "Shadow creatures may cross over",
+    "Necromancy is greatly enhanced"
+]
+
+[[phenomena.events]]
+name = "Magical Eclipse"
+frequency = "Predictable (celestial event)"
+description = "Celestial alignment blocks or enhances certain magic"
+effects = [
+    "Divination magic enhanced or blocked (depends on type)",
+    "Some sources go dormant, others surge",
+    "Prophecies may be revealed",
+    "Ley lines visible to all blooded"
+]
+
+[[phenomena.events]]
+name = "Wild Magic Zone"
+frequency = "Permanent locations"
+description = "Areas where magic behaves unpredictably"
+effects = [
+    "All spell effects have random modifiers",
+    "Sources cannot be controlled normally",
+    "Spells may transform or redirect",
+    "Magical creatures drawn to the area"
+]
+
+# -----------------------------------------------------------------------------
+# ORACLE TABLES FOR SOURCES
+# -----------------------------------------------------------------------------
+
+[oracle_tables.source_discovery]
+description = "When searching for unclaimed sources"
+entries = [
+    { roll = [1, 2], result = "Strong source found (level 4-6 potential)" },
+    { roll = [3, 4], result = "Moderate source found (level 2-3 potential)" },
+    { roll = [5, 6], result = "Weak source found (level 1 potential)" },
+    { roll = [7, 8], result = "No unclaimed sources in this province" },
+    { roll = [9, 9], result = "Source found but already claimed by another" },
+    { roll = [10, 10], result = "Unusual source - special characteristics (roll again)" }
+]
+
+[oracle_tables.source_special]
+description = "Special characteristics of unusual sources"
+entries = [
+    { roll = [1, 2], result = "Shadow-touched: +2 potential but corruption risk" },
+    { roll = [3, 4], result = "Elemental affinity: +2 to specific element spells" },
+    { roll = [5, 6], result = "Ancient site: Contains lost magical knowledge" },
+    { roll = [7, 8], result = "Guarded: Magical creatures protect this source" },
+    { roll = [9, 9], result = "Unstable: Surges and wanes unpredictably" },
+    { roll = [10, 10], result = "Connected: Hidden ley line to distant source" }
+]
+
+[oracle_tables.mebhaighl_fluctuation]
+description = "When mebhaighl collection is uncertain"
+entries = [
+    { roll = [1, 1], result = "Surge: Double collection this turn" },
+    { roll = [2, 3], result = "Strong flow: +2 mebhaighl" },
+    { roll = [4, 7], result = "Normal collection" },
+    { roll = [8, 9], result = "Weak flow: -2 mebhaighl" },
+    { roll = [10, 10], result = "Disruption: Half collection, strange effects" }
+]
+
+[oracle_tables.corruption_manifestation]
+description = "How corruption manifests in a wizard"
+entries = [
+    { roll = [1, 2], result = "Physical: Pale skin, dark veins, cold touch" },
+    { roll = [3, 4], result = "Aural: Dark shadow surrounds you in magical sight" },
+    { roll = [5, 6], result = "Environmental: Plants wilt, animals flee" },
+    { roll = [7, 8], result = "Emotional: Mood swings, dark urges" },
+    { roll = [9, 10], result = "Magical: Spells have shadowy visual effects" }
+]
+
+[oracle_tables.land_corruption_effects]
+description = "Effects of magical corruption on the land"
+entries = [
+    { roll = [1, 2], result = "Crops fail in affected areas" },
+    { roll = [3, 4], result = "Water sources become tainted" },
+    { roll = [5, 6], result = "Wildlife becomes aggressive or mutated" },
+    { roll = [7, 8], result = "Unnatural weather patterns" },
+    { roll = [9, 9], result = "Minor undead spontaneously rise" },
+    { roll = [10, 10], result = "Shadow World rift begins to form" }
+]

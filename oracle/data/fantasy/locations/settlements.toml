@@ -1,0 +1,81 @@
+# Fantasy Settlement Locations
+# Towns, cities, villages, and civilized places
+
+[settlements]
+entries = [
+  # Taverns & Inns
+  { text = "a rowdy tavern filled with off-duty soldiers", weight = 2 },
+  { text = "a quiet inn favored by traveling merchants", weight = 2 },
+  { text = "a disreputable dive where thieves broker deals", weight = 1 },
+  { text = "a tavern with a famous bard in residence", weight = 1 },
+  { text = "an inn built into an old watchtower", weight = 1 },
+  { text = "a roadside tavern at a major crossroads", weight = 1 },
+  { text = "a halfling-run inn with excellent food and small doors", weight = 1 },
+  { text = "a dwarven alehouse serving potent brews", weight = 1 },
+
+  # Shops & Markets
+  { text = "a bustling market square on trading day", weight = 2 },
+  { text = "a blacksmith's forge ringing with hammers", weight = 2 },
+  { text = "an apothecary shop with strange specimens in jars", weight = 1 },
+  { text = "a curio shop selling items of dubious provenance", weight = 1 },
+  { text = "a weapon merchant's shop with exotic blades", weight = 1 },
+  { text = "a jeweler's workshop in an upscale district", weight = 1 },
+  { text = "a general store serving the basic needs of adventurers", weight = 2 },
+  { text = "a bookshop with a restricted section", weight = 1 },
+  { text = "a pawn shop that asks no questions", weight = 1 },
+  { text = "a stable offering horses and pack animals", weight = 1 },
+
+  # Religious Sites
+  { text = "a grand cathedral dominating the city center", weight = 1 },
+  { text = "a modest shrine at a street corner", weight = 2 },
+  { text = "a temple district with multiple faiths represented", weight = 1 },
+  { text = "an abbey with monks who brew healing potions", weight = 1 },
+  { text = "a hidden shrine to a forbidden deity", weight = 1 },
+  { text = "a cemetery with an attached mortuary chapel", weight = 1 },
+  { text = "a pilgrimage site with holy relics on display", weight = 1 },
+
+  # Government & Law
+  { text = "the lord's castle overlooking the town", weight = 1 },
+  { text = "a town hall where the council meets", weight = 1 },
+  { text = "the guard barracks and watch station", weight = 1 },
+  { text = "a courthouse where justice is dispensed", weight = 1 },
+  { text = "a prison tower holding dangerous criminals", weight = 1 },
+  { text = "a tax collector's office", weight = 1 },
+  { text = "gallows square where executions are public", weight = 1 },
+
+  # Entertainment
+  { text = "a fighting pit where gladiators battle", weight = 1 },
+  { text = "a theater performing classic tragedies", weight = 1 },
+  { text = "a gambling hall with games of chance", weight = 1 },
+  { text = "a bathhouse popular with all classes", weight = 1 },
+  { text = "a racing track for horses or stranger beasts", weight = 1 },
+  { text = "a pleasure garden with hidden alcoves", weight = 1 },
+
+  # Guilds & Organizations
+  { text = "the adventurer's guild hall with a job board", weight = 2 },
+  { text = "the thieves' guild headquarters, hidden in plain sight", weight = 1 },
+  { text = "a merchant guild hall where deals are made", weight = 1 },
+  { text = "a wizard's academy with towers and laboratories", weight = 1 },
+  { text = "a warrior's training yard", weight = 1 },
+  { text = "a bard college where music and secrets flow freely", weight = 1 },
+  { text = "a chapter house of a knightly order", weight = 1 },
+
+  # Districts & Areas
+  { text = "the slums where the desperate survive", weight = 1 },
+  { text = "a wealthy merchant district with fine houses", weight = 1 },
+  { text = "the noble quarter with guarded estates", weight = 1 },
+  { text = "a foreign quarter with exotic goods and customs", weight = 1 },
+  { text = "the docks where ships unload cargo day and night", weight = 1 },
+  { text = "a crafters' district filled with workshops", weight = 1 },
+  { text = "the old town with narrow medieval streets", weight = 1 },
+
+  # Special Locations
+  { text = "an ancient tree in the town square, sacred to the old faith", weight = 1 },
+  { text = "a fountain said to grant wishes for a price", weight = 1 },
+  { text = "ruins predating the town built around them", weight = 1 },
+  { text = "a haunted house that no one will enter", weight = 1 },
+  { text = "a monument to heroes of a past war", weight = 1 },
+  { text = "a clock tower that chimes at odd hours", weight = 1 },
+  { text = "an underground market operating illegally", weight = 1 },
+  { text = "a healing house run by charitable priests", weight = 1 },
+]

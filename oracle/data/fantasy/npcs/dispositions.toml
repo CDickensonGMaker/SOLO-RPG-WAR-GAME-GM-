@@ -1,0 +1,41 @@
+# Fantasy NPC Dispositions
+# Initial attitudes and reactions toward strangers/adventurers
+
+[dispositions]
+entries = [
+  # Hostile Range
+  { text = "openly hostile - attacks on sight", weight = 1 },
+  { text = "deeply suspicious - assumes the worst", weight = 2 },
+  { text = "resentful - blames adventurers for past troubles", weight = 1 },
+  { text = "contemptuous - views party as beneath notice", weight = 1 },
+  { text = "fearful and aggressive - cornered animal mentality", weight = 1 },
+
+  # Unfriendly Range
+  { text = "cold and dismissive - wants nothing to do with strangers", weight = 2 },
+  { text = "grudging - will help only if forced or paid well", weight = 2 },
+  { text = "wary - watches for any sign of threat", weight = 2 },
+  { text = "distrustful - has been burned before", weight = 2 },
+  { text = "annoyed - sees adventurers as troublemakers", weight = 2 },
+
+  # Neutral Range
+  { text = "indifferent - treats party as any other customer", weight = 3 },
+  { text = "businesslike - interested only in fair transactions", weight = 3 },
+  { text = "cautiously neutral - waiting to see what kind of people they are", weight = 2 },
+  { text = "preoccupied - too busy with own problems to care", weight = 2 },
+  { text = "reserved - polite but maintains distance", weight = 2 },
+
+  # Friendly Range
+  { text = "welcoming - happy to see new faces", weight = 2 },
+  { text = "curious - fascinated by adventurers' tales", weight = 2 },
+  { text = "helpful - goes out of their way to assist", weight = 2 },
+  { text = "respectful - admires those who take risks", weight = 2 },
+  { text = "grateful - owes a debt to adventurers", weight = 1 },
+  { text = "eager - hopes party can solve their problems", weight = 2 },
+
+  # Very Friendly Range
+  { text = "enthusiastic - treats party like heroes already", weight = 1 },
+  { text = "devoted - will follow party anywhere", weight = 1 },
+  { text = "worshipful - believes party is destined for greatness", weight = 1 },
+  { text = "conspiratorial - immediately trusts party with secrets", weight = 1 },
+  { text = "desperate - clings to party as last hope", weight = 1 },
+]

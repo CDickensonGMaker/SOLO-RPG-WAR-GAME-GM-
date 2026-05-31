@@ -1,0 +1,1611 @@
+# ============================================================================
+# COURT INTRIGUE SYSTEM - Birthright Solo Oracle
+# ============================================================================
+# The regent's court is where power is wielded, alliances forged, and
+# reputations made or destroyed. This system provides NPCs, events, and
+# mechanics for generating endless courtly drama.
+# ============================================================================
+
+[meta]
+title = "Court Intrigue"
+description = "Courtier NPCs, favor economy, scandals, and court events for regent play"
+version = "1.0.0"
+author = "Birthright Oracle System"
+
+# ============================================================================
+# COURTIER ARCHETYPES
+# ============================================================================
+# Templates for generating court NPCs
+
+[[courtier_archetypes]]
+name = "The Ambitious Newcomer"
+description = "Recently arrived at court, eager to rise quickly"
+typical_background = [
+    "Minor noble seeking advancement",
+    "Wealthy merchant buying respectability",
+    "Military hero rewarded with position",
+    "Skilled professional (lawyer, administrator)",
+    "Foreign noble seeking new opportunities"
+]
+motivations = [
+    "Gain title and lands",
+    "Accumulate wealth",
+    "Marry into better family",
+    "Gain regent's ear",
+    "Establish dynasty"
+]
+typical_methods = [
+    "Flattery and sycophancy",
+    "Exceptional competence",
+    "Strategic marriage",
+    "Bribes and gifts",
+    "Undermining rivals"
+]
+secrets = [
+    "Humble origins hidden",
+    "Debts to dangerous parties",
+    "Previous disgrace elsewhere",
+    "Hidden patron pulling strings",
+    "Spy for foreign power"
+]
+oracle_questions = [
+    "How talented is this newcomer actually?",
+    "Who is backing their rise?",
+    "What do they want most?",
+    "Who do they threaten?",
+    "What are they willing to do to succeed?"
+]
+
+[[courtier_archetypes]]
+name = "The Old Guard"
+description = "Longtime courtier from established family"
+typical_background = [
+    "Multi-generational noble family",
+    "Served previous regent",
+    "Holder of traditional position",
+    "Keeper of court customs",
+    "Memory of how things were done"
+]
+motivations = [
+    "Preserve family position",
+    "Maintain traditions",
+    "Resist change",
+    "Protect established order",
+    "Pass legacy to heirs"
+]
+typical_methods = [
+    "Invoking precedent",
+    "Alliance with other old families",
+    "Controlling court ritual",
+    "Subtle obstruction of newcomers",
+    "Long institutional memory"
+]
+secrets = [
+    "Family secrets from generations",
+    "Knows where bodies are buried",
+    "Hidden decline of family fortunes",
+    "Past favors owed by powerful",
+    "Resentment of current regime"
+]
+oracle_questions = [
+    "What does this family remember?",
+    "Are they adapting or declining?",
+    "What old alliances still hold?",
+    "What old enemies remain?",
+    "What traditions do they guard?"
+]
+
+[[courtier_archetypes]]
+name = "The Royal Favorite"
+description = "Currently enjoys special access to the regent"
+typical_background = [
+    "Childhood friend of regent",
+    "Romantic interest (past or present)",
+    "Provider of valued service",
+    "Amusing companion",
+    "Relative or family connection"
+]
+motivations = [
+    "Maintain favored position",
+    "Gain tangible rewards",
+    "Protect from enemies",
+    "Influence policy",
+    "Help family and friends"
+]
+typical_methods = [
+    "Private access to regent",
+    "Entertaining personality",
+    "Emotional connection",
+    "Making regent look good",
+    "Being useful in ways others aren't"
+]
+secrets = [
+    "True nature of relationship with regent",
+    "What they've seen in private",
+    "Regent's secrets they know",
+    "Who they report to besides regent",
+    "Their own agenda"
+]
+oracle_questions = [
+    "What is the basis of the favoritism?",
+    "How long will it last?",
+    "Who is jealous?",
+    "What would cause a falling out?",
+    "Are they loyal or exploiting position?"
+]
+
+[[courtier_archetypes]]
+name = "The Spymaster"
+description = "Intelligence gatherer with eyes and ears everywhere"
+typical_background = [
+    "Former spy or agent",
+    "Master of servants who hear everything",
+    "Blackmail collector",
+    "Information broker",
+    "Security officer"
+]
+motivations = [
+    "Know everything",
+    "Be indispensable",
+    "Protect from threats",
+    "Accumulate leverage",
+    "Control through knowledge"
+]
+typical_methods = [
+    "Network of informants",
+    "Cultivating trust to extract secrets",
+    "Strategic revelation of information",
+    "Blackmail when necessary",
+    "Trading information"
+]
+secrets = [
+    "Doesn't share everything with regent",
+    "Has own agenda",
+    "May serve multiple masters",
+    "Knows things that could destroy anyone",
+    "Has enemies who want them dead"
+]
+oracle_questions = [
+    "What do they actually know?",
+    "Who do they really serve?",
+    "What leverage do they have?",
+    "Can they be trusted?",
+    "What would happen if they fell?"
+]
+
+[[courtier_archetypes]]
+name = "The Religious Authority"
+description = "Temple representative at court"
+typical_background = [
+    "High priest or bishop",
+    "Temple regent's representative",
+    "Chaplain to the court",
+    "Religious advisor to regent",
+    "Inquisitor or judge"
+]
+motivations = [
+    "Advance temple interests",
+    "Maintain religious influence",
+    "Guide regent's morality",
+    "Expand temple holdings",
+    "Counter heresy and sin"
+]
+typical_methods = [
+    "Moral authority and guilt",
+    "Religious ceremonies and access",
+    "Excommunication threats",
+    "Divine guidance claims",
+    "Control of marriages, deaths, legitimacy"
+]
+secrets = [
+    "Temple political interests",
+    "Sins heard in confession",
+    "Own religious doubts",
+    "Temple scandals covered up",
+    "Conflicts with religious hierarchy"
+]
+oracle_questions = [
+    "How devout are they personally?",
+    "Do they serve god or temple?",
+    "What do they want politically?",
+    "What leverage does confession give?",
+    "How do they view the regent's morality?"
+]
+
+[[courtier_archetypes]]
+name = "The Foreign Ambassador"
+description = "Representative of another power at court"
+typical_background = [
+    "Career diplomat",
+    "Noble sent abroad",
+    "Spy with diplomatic cover",
+    "Hostage with diplomatic status",
+    "Trade representative"
+]
+motivations = [
+    "Serve home country's interests",
+    "Gather intelligence",
+    "Build relationships",
+    "Influence policy",
+    "Personal advancement"
+]
+typical_methods = [
+    "Official diplomatic functions",
+    "Social cultivation",
+    "Gifts and bribes",
+    "Cultural events and hospitality",
+    "Back-channel communications"
+]
+secrets = [
+    "True instructions from home",
+    "Intelligence gathering activities",
+    "Personal opinions vs. official position",
+    "Health of relations with home government",
+    "What they report about this court"
+]
+oracle_questions = [
+    "What does their country really want?",
+    "Are they personally friendly or hostile?",
+    "Are they also a spy?",
+    "What leverage do they have?",
+    "What happens if relations break down?"
+]
+
+[[courtier_archetypes]]
+name = "The Court Wizard"
+description = "Magical advisor and practitioner"
+typical_background = [
+    "Source regent's representative",
+    "Court-employed mage",
+    "Regent's magical tutor",
+    "Researcher granted patronage",
+    "Mysterious advisor"
+]
+motivations = [
+    "Access to resources for research",
+    "Political protection",
+    "Influence magical policy",
+    "Accumulate magical power",
+    "Pursue esoteric goals"
+]
+typical_methods = [
+    "Magical services and advice",
+    "Cryptic warnings and prophecies",
+    "Scrying and divination",
+    "Enchantments and protections",
+    "Implied magical threats"
+]
+secrets = [
+    "True magical capabilities",
+    "What divinations have revealed",
+    "Connections to other mages",
+    "Forbidden magical interests",
+    "True source of power"
+]
+oracle_questions = [
+    "How powerful are they really?",
+    "What do they know through magic?",
+    "What are their real goals?",
+    "Can they be trusted with secrets?",
+    "What would they do for more power?"
+]
+
+[[courtier_archetypes]]
+name = "The Military Commander"
+description = "Warrior presence at court"
+typical_background = [
+    "General or marshal",
+    "Royal guard commander",
+    "War hero",
+    "Military advisor",
+    "Noble with military command"
+]
+motivations = [
+    "Military resources and support",
+    "Honor and glory",
+    "Protect domain from threats",
+    "Advance military career",
+    "Maintain troop loyalty"
+]
+typical_methods = [
+    "Military expertise and advice",
+    "Control of armed forces",
+    "Martial reputation",
+    "Loyalty of soldiers",
+    "Implied force"
+]
+secrets = [
+    "True military readiness",
+    "Soldiers' real loyalty",
+    "Past military failures",
+    "Ambitions beyond military role",
+    "Connections with other commanders"
+]
+oracle_questions = [
+    "How loyal are the troops to them vs. regent?",
+    "What are their political ambitions?",
+    "Are they a potential threat?",
+    "What would make them act?",
+    "Who do they really serve?"
+]
+
+[[courtier_archetypes]]
+name = "The Merchant Prince"
+description = "Wealthy commoner with economic power"
+typical_background = [
+    "Guild master",
+    "Trade magnate",
+    "Financier to nobility",
+    "Shipping or caravan lord",
+    "Commodity monopolist"
+]
+motivations = [
+    "Protect business interests",
+    "Gain social advancement",
+    "Influence economic policy",
+    "Secure trade privileges",
+    "Buy nobility for heirs"
+]
+typical_methods = [
+    "Wealth and gifts",
+    "Loans to nobles",
+    "Economic leverage",
+    "Funding court activities",
+    "Social climbing through marriage"
+]
+secrets = [
+    "True extent of wealth",
+    "Debts owed by nobles",
+    "Criminal connections",
+    "Foreign trade partners",
+    "Economic intelligence"
+]
+oracle_questions = [
+    "How wealthy are they really?",
+    "Who owes them money?",
+    "What trade secrets do they hold?",
+    "Are they buying respectability or power?",
+    "What would they do to protect their interests?"
+]
+
+[[courtier_archetypes]]
+name = "The Royal Consort"
+description = "Spouse or romantic partner of regent"
+typical_background = [
+    "Foreign princess/prince",
+    "Domestic noble chosen for alliance",
+    "Love match against advice",
+    "Second spouse after first's death",
+    "Unofficial but recognized partner"
+]
+motivations = [
+    "Protect children's inheritance",
+    "Advance natal family interests",
+    "Influence regent's decisions",
+    "Build own power base",
+    "Secure personal position"
+]
+typical_methods = [
+    "Intimate access to regent",
+    "Separate court and faction",
+    "Cultivation of their own favorites",
+    "Influence through pillow talk",
+    "Motherhood/fatherhood status"
+]
+secrets = [
+    "True feelings about marriage",
+    "Communications with natal family",
+    "Own political agenda",
+    "Romantic complications",
+    "Children's true parentage"
+]
+oracle_questions = [
+    "Is the marriage happy or political?",
+    "What do they want for their children?",
+    "Do they have their own faction?",
+    "Are they loyal to regent or natal family?",
+    "What happens if regent dies?"
+]
+
+[[courtier_archetypes]]
+name = "The Heir Apparent"
+description = "Designated successor to the regent"
+typical_background = [
+    "Eldest child raised for rule",
+    "Younger child after others' deaths",
+    "Adopted or designated heir",
+    "Regent's sibling",
+    "Nephew/niece or cousin"
+]
+motivations = [
+    "Prepare for rule",
+    "Build own support network",
+    "Prove worthiness",
+    "Survive until succession",
+    "Sometimes: hasten succession"
+]
+typical_methods = [
+    "Cultivating future supporters",
+    "Demonstrating competence",
+    "Building military reputation",
+    "Making strategic marriage",
+    "Carefully disagreeing with regent"
+]
+secrets = [
+    "True feelings about waiting",
+    "Plans for when they rule",
+    "People they'll promote or demote",
+    "Doubts about own legitimacy",
+    "Impatience with current regime"
+]
+oracle_questions = [
+    "How long are they willing to wait?",
+    "Do they have their own faction?",
+    "What will they change when they rule?",
+    "Who wants them to fail?",
+    "Are they plotting or loyal?"
+]
+
+# ============================================================================
+# COURTIER GENERATION
+# ============================================================================
+# Rules for creating random courtiers
+
+[courtier_generation]
+description = "Generate a random courtier for the regent's court"
+
+[[courtier_generation.names_male]]
+region = "Anuirean"
+names = ["Aeric", "Braedan", "Cormac", "Daeric", "Eldred", "Faelar", "Gaelin", "Hadrian", "Isen", "Jaren", "Kaelen", "Laeron", "Maerik", "Naeric", "Oren", "Paeric", "Raelin", "Saeric", "Taeghen", "Vaeren"]
+
+[[courtier_generation.names_female]]
+region = "Anuirean"
+names = ["Aeris", "Brienne", "Ceara", "Daera", "Eliane", "Faela", "Gaela", "Halia", "Isara", "Jaera", "Kaela", "Laera", "Maera", "Naela", "Orielle", "Paela", "Raela", "Saera", "Taela", "Vaela"]
+
+[[courtier_generation.family_names]]
+region = "Anuirean"
+names = ["Avan", "Boeruine", "Cariele", "Diemed", "Endier", "Flaertes", "Ghoried", "Haelyn", "Isilviere", "Jhalaene", "Kaelind", "Lannister", "Mhoried", "Nieren", "Osoerde", "Paerlin", "Roesone", "Sarten", "Taeghas", "Velarion"]
+
+[[courtier_generation.personality_traits]]
+d20 = 1
+trait = "Ambitious"
+description = "Always seeking advancement"
+
+[[courtier_generation.personality_traits]]
+d20 = 2
+trait = "Loyal"
+description = "Genuinely devoted to their lord"
+
+[[courtier_generation.personality_traits]]
+d20 = 3
+trait = "Scheming"
+description = "Always planning multiple moves ahead"
+
+[[courtier_generation.personality_traits]]
+d20 = 4
+trait = "Hedonistic"
+description = "Seeks pleasure and luxury"
+
+[[courtier_generation.personality_traits]]
+d20 = 5
+trait = "Pious"
+description = "Deeply religious in all matters"
+
+[[courtier_generation.personality_traits]]
+d20 = 6
+trait = "Greedy"
+description = "Primarily motivated by wealth"
+
+[[courtier_generation.personality_traits]]
+d20 = 7
+trait = "Vengeful"
+description = "Never forgets a slight"
+
+[[courtier_generation.personality_traits]]
+d20 = 8
+trait = "Honorable"
+description = "Acts according to strict principles"
+
+[[courtier_generation.personality_traits]]
+d20 = 9
+trait = "Paranoid"
+description = "Sees threats everywhere"
+
+[[courtier_generation.personality_traits]]
+d20 = 10
+trait = "Charming"
+description = "Naturally likeable and persuasive"
+
+[[courtier_generation.personality_traits]]
+d20 = 11
+trait = "Cruel"
+description = "Takes pleasure in others' suffering"
+
+[[courtier_generation.personality_traits]]
+d20 = 12
+trait = "Cowardly"
+description = "Avoids any personal risk"
+
+[[courtier_generation.personality_traits]]
+d20 = 13
+trait = "Wise"
+description = "Offers genuinely good counsel"
+
+[[courtier_generation.personality_traits]]
+d20 = 14
+trait = "Vain"
+description = "Obsessed with appearance and reputation"
+
+[[courtier_generation.personality_traits]]
+d20 = 15
+trait = "Cunning"
+description = "Clever and manipulative"
+
+[[courtier_generation.personality_traits]]
+d20 = 16
+trait = "Melancholic"
+description = "Prone to depression and pessimism"
+
+[[courtier_generation.personality_traits]]
+d20 = 17
+trait = "Hot-tempered"
+description = "Quick to anger, slow to forgive"
+
+[[courtier_generation.personality_traits]]
+d20 = 18
+trait = "Patient"
+description = "Willing to wait for the right moment"
+
+[[courtier_generation.personality_traits]]
+d20 = 19
+trait = "Reckless"
+description = "Acts without considering consequences"
+
+[[courtier_generation.personality_traits]]
+d20 = 20
+trait = "Mysterious"
+description = "Keeps their own counsel, hard to read"
+
+[[courtier_generation.competence_levels]]
+d6 = 1
+level = "Incompetent"
+description = "Position through birth or favor, not ability"
+
+[[courtier_generation.competence_levels]]
+d6 = 2
+level = "Mediocre"
+description = "Adequate but unremarkable"
+
+[[courtier_generation.competence_levels]]
+d6 = 3
+level = "Competent"
+description = "Reliable and capable"
+
+[[courtier_generation.competence_levels]]
+d6 = 4
+level = "Skilled"
+description = "Notably talented in their role"
+
+[[courtier_generation.competence_levels]]
+d6 = 5
+level = "Expert"
+description = "Among the best at what they do"
+
+[[courtier_generation.competence_levels]]
+d6 = 6
+level = "Exceptional"
+description = "Genuinely remarkable abilities"
+
+# ============================================================================
+# FAVOR ECONOMY
+# ============================================================================
+# How influence and social capital work at court
+
+[favor_economy]
+description = "The currency of courtly influence"
+
+[favor_economy.mechanics]
+explanation = """
+Favor represents social capital at court - the ability to call upon
+relationships, owed debts, and accumulated goodwill. Courtiers
+accumulate, spend, and trade favor constantly.
+"""
+
+[[favor_economy.gaining_favor]]
+method = "Service to regent"
+description = "Completing tasks, providing good advice, or solving problems"
+favor_gain = "+1 to +3 depending on importance"
+oracle_questions = [
+    "Was the service publicly recognized?",
+    "Did it make enemies?",
+    "Does the regent remember?"
+]
+
+[[favor_economy.gaining_favor]]
+method = "Service to powerful courtier"
+description = "Helping someone with influence at court"
+favor_gain = "+1 with that person, may spread"
+oracle_questions = [
+    "Is the favor reciprocal?",
+    "Do others know about it?",
+    "Are there strings attached?"
+]
+
+[[favor_economy.gaining_favor]]
+method = "Social success"
+description = "Hosting successful event, making good marriage, winning tournament"
+favor_gain = "+1 general favor"
+oracle_questions = [
+    "Who was impressed?",
+    "Did anyone feel shown up?",
+    "Is this sustainable?"
+]
+
+[[favor_economy.gaining_favor]]
+method = "Gifts and bribes"
+description = "Material generosity to the right people"
+favor_gain = "Variable, depends on gift and recipient"
+oracle_questions = [
+    "Is it seen as generosity or bribery?",
+    "Can you afford to continue?",
+    "Does it create obligation?"
+]
+
+[[favor_economy.gaining_favor]]
+method = "Information sharing"
+description = "Providing valuable intelligence or gossip"
+favor_gain = "+1 to +2 with recipient"
+oracle_questions = [
+    "Is the information valuable?",
+    "Does sharing create enemies?",
+    "Are you becoming known as informant?"
+]
+
+[[favor_economy.spending_favor]]
+use = "Request appointment or position"
+cost = "2-4 favor points"
+risk = "Request may still be denied"
+
+[[favor_economy.spending_favor]]
+use = "Gain audience with regent"
+cost = "1-2 favor points"
+risk = "Must have something worthwhile to say"
+
+[[favor_economy.spending_favor]]
+use = "Suppress scandal"
+cost = "2-5 favor points"
+risk = "May not stay suppressed"
+
+[[favor_economy.spending_favor]]
+use = "Get someone else in trouble"
+cost = "2-3 favor points"
+risk = "May backfire, create enemies"
+
+[[favor_economy.spending_favor]]
+use = "Obtain commercial privilege"
+cost = "3-4 favor points"
+risk = "Creates resentment in competitors"
+
+[[favor_economy.spending_favor]]
+use = "Arrange marriage"
+cost = "2-5 favor points"
+risk = "Both families must agree"
+
+[[favor_economy.spending_favor]]
+use = "Avoid punishment"
+cost = "3-6 favor points"
+risk = "May be noted and resented"
+
+[[favor_economy.losing_favor]]
+cause = "Public failure"
+description = "Military defeat, scandal, incompetence exposed"
+favor_loss = "-1 to -4 depending on severity"
+
+[[favor_economy.losing_favor]]
+cause = "Offending powerful person"
+description = "Insult, competition, or accidental slight"
+favor_loss = "-1 to -3 with that person and allies"
+
+[[favor_economy.losing_favor]]
+cause = "Backing wrong side"
+description = "Supporting losing faction or unpopular cause"
+favor_loss = "-1 to -3 generally"
+
+[[favor_economy.losing_favor]]
+cause = "Absence from court"
+description = "Out of sight, out of mind"
+favor_loss = "-1 per extended period away"
+
+[[favor_economy.losing_favor]]
+cause = "Association with disgraced person"
+description = "Friend, family, or ally falls from favor"
+favor_loss = "-1 to -2 by association"
+
+# ============================================================================
+# SCANDAL GENERATION
+# ============================================================================
+# Creating and managing court scandals
+
+[scandal_system]
+description = "How scandals arise, spread, and affect court life"
+
+[[scandal_types]]
+name = "Sexual Scandal"
+description = "Adultery, inappropriate relationships, or impropriety"
+severity_range = "Minor to Major"
+affected_parties = [
+    "Direct participants",
+    "Their spouses",
+    "Their families",
+    "Their patrons"
+]
+potential_consequences = [
+    "Social ostracism",
+    "Divorce proceedings",
+    "Duel challenges",
+    "Loss of position",
+    "Exile from court",
+    "Disinheritance"
+]
+oracle_questions = [
+    "How public is the scandal?",
+    "Who actually cares?",
+    "Can it be hushed up?",
+    "Is there sympathy for the participants?",
+    "What do the spouses want?"
+]
+
+[[scandal_types]]
+name = "Financial Scandal"
+description = "Embezzlement, debt, corruption, or fraud"
+severity_range = "Minor to Major"
+affected_parties = [
+    "The corrupt individual",
+    "Those who trusted them",
+    "Victims of fraud",
+    "Those who should have noticed"
+]
+potential_consequences = [
+    "Loss of position",
+    "Requirement to repay",
+    "Criminal prosecution",
+    "Ruin of reputation",
+    "Exile or imprisonment"
+]
+oracle_questions = [
+    "How much money is involved?",
+    "Who are the victims?",
+    "Was it discovered or confessed?",
+    "Who else was involved?",
+    "Can restitution be made?"
+]
+
+[[scandal_types]]
+name = "Religious Scandal"
+description = "Heresy, apostasy, violation of religious law"
+severity_range = "Moderate to Major"
+affected_parties = [
+    "The accused",
+    "Their family",
+    "Their temple associations",
+    "Anyone who defended them"
+]
+potential_consequences = [
+    "Excommunication",
+    "Religious penance",
+    "Loss of temple support",
+    "Inquisition attention",
+    "Execution in extreme cases"
+]
+oracle_questions = [
+    "Is the accusation true?",
+    "How does the temple respond?",
+    "Is there genuine heresy or political persecution?",
+    "Can they recant?",
+    "Who benefits from the accusation?"
+]
+
+[[scandal_types]]
+name = "Bloodline Scandal"
+description = "False claims, hidden heritage, or bloodline crimes"
+severity_range = "Major to Catastrophic"
+affected_parties = [
+    "Those whose bloodline is questioned",
+    "Potential true heirs",
+    "Anyone who benefited from false status",
+    "Regent (legitimacy questions)"
+]
+potential_consequences = [
+    "Loss of regency",
+    "Succession crisis",
+    "Stripping of titles",
+    "Criminal prosecution",
+    "Bloodtheft (dark solution)"
+]
+oracle_questions = [
+    "What is the truth about the bloodline?",
+    "Who knows the real story?",
+    "Can the scandal be verified or disproven?",
+    "What happens to bloodline claims?",
+    "Does this affect domain regency?"
+]
+
+[[scandal_types]]
+name = "Political Scandal"
+description = "Treason, foreign allegiance, conspiracy"
+severity_range = "Major to Catastrophic"
+affected_parties = [
+    "The accused traitor",
+    "Their family",
+    "Their faction",
+    "Anyone who associated with them"
+]
+potential_consequences = [
+    "Execution",
+    "Imprisonment",
+    "Exile",
+    "Attainder (lands seized)",
+    "Family punishment"
+]
+oracle_questions = [
+    "Is the accusation true?",
+    "What evidence exists?",
+    "Is this genuine treason or political purge?",
+    "Who benefits from the accusation?",
+    "What happens to the accused's family?"
+]
+
+[[scandal_types]]
+name = "Military Scandal"
+description = "Cowardice, incompetence, or betrayal in war"
+severity_range = "Moderate to Major"
+affected_parties = [
+    "The failed commander",
+    "Those who died under their command",
+    "Those who promoted them",
+    "Their military allies"
+]
+potential_consequences = [
+    "Loss of command",
+    "Public disgrace",
+    "Exile",
+    "Execution for betrayal",
+    "Loss of noble status"
+]
+oracle_questions = [
+    "What actually happened?",
+    "Were the circumstances impossible?",
+    "Did anyone witness the failure?",
+    "Is there a scapegoat?",
+    "What do the soldiers say?"
+]
+
+[scandal_generation]
+description = "How to generate random scandals"
+
+[[scandal_generation.triggers]]
+d10 = 1
+trigger = "Deliberate exposure by enemy"
+
+[[scandal_generation.triggers]]
+d10 = 2
+trigger = "Accidental discovery"
+
+[[scandal_generation.triggers]]
+d10 = 3
+trigger = "Confession under pressure"
+
+[[scandal_generation.triggers]]
+d10 = 4
+trigger = "Deathbed revelation"
+
+[[scandal_generation.triggers]]
+d10 = 5
+trigger = "Document or letter found"
+
+[[scandal_generation.triggers]]
+d10 = 6
+trigger = "Witness comes forward"
+
+[[scandal_generation.triggers]]
+d10 = 7
+trigger = "Rumor becomes too widespread"
+
+[[scandal_generation.triggers]]
+d10 = 8
+trigger = "Failed cover-up"
+
+[[scandal_generation.triggers]]
+d10 = 9
+trigger = "Child or bastard appears"
+
+[[scandal_generation.triggers]]
+d10 = 10
+trigger = "Magical revelation"
+
+[[scandal_generation.spread_rate]]
+d6 = 1
+rate = "Contained"
+description = "Known only to few"
+
+[[scandal_generation.spread_rate]]
+d6 = 2
+rate = "Court whispers"
+description = "Insiders know, public doesn't"
+
+[[scandal_generation.spread_rate]]
+d6 = 3
+rate = "Open secret"
+description = "Everyone knows but pretends not to"
+
+[[scandal_generation.spread_rate]]
+d6 = 4
+rate = "Court scandal"
+description = "Openly discussed at court"
+
+[[scandal_generation.spread_rate]]
+d6 = 5
+rate = "Public knowledge"
+description = "Known throughout capital"
+
+[[scandal_generation.spread_rate]]
+d6 = 6
+rate = "National/International"
+description = "Known in other domains"
+
+# ============================================================================
+# COURT EVENTS
+# ============================================================================
+# Things that happen at court to drive drama
+
+[[court_events]]
+name = "Grand Feast"
+description = "Major social event with all important courtiers"
+frequency = "Seasonal or for special occasions"
+opportunities = [
+    "Network and build relationships",
+    "Observe who speaks to whom",
+    "Make public statements",
+    "Arrange private meetings",
+    "Display wealth and status"
+]
+complications = [
+    "Seating arrangement disputes",
+    "Drunken revelations",
+    "Public arguments",
+    "Romantic assignations",
+    "Poisoning attempts"
+]
+oracle_questions = [
+    "What is the occasion?",
+    "Who is notably present or absent?",
+    "What is the gossip topic?",
+    "Does anything dramatic happen?",
+    "Who gains or loses status?"
+]
+
+[[court_events]]
+name = "Tournament"
+description = "Martial competition among knights and nobles"
+frequency = "Annual or for special occasions"
+opportunities = [
+    "Demonstrate martial prowess",
+    "Win fame and fortune",
+    "Gain favor of onlookers",
+    "Identify potential military talent",
+    "Arrange marriages through success"
+]
+complications = [
+    "Death or injury of important person",
+    "Accusations of cheating",
+    "Vendetta settled through 'accident'",
+    "Unknown knight defeats champions",
+    "Romance sparked through competition"
+]
+oracle_questions = [
+    "Who are the favorites?",
+    "Are there any unknown entrants?",
+    "Does anyone die or get seriously injured?",
+    "What romances develop?",
+    "Who sponsors whom?"
+]
+
+[[court_events]]
+name = "Royal Audience"
+description = "Formal session where regent hears petitions and gives judgments"
+frequency = "Regular (weekly or monthly)"
+opportunities = [
+    "Present petitions",
+    "Observe regent's decisions",
+    "Gain access to regent",
+    "Public recognition",
+    "Legal resolution"
+]
+complications = [
+    "Surprising ruling",
+    "Petitioner makes scene",
+    "Rival uses opportunity to attack",
+    "Regent in bad mood",
+    "Unexpected guest arrives"
+]
+oracle_questions = [
+    "What petitions are heard?",
+    "How does regent decide?",
+    "Does anything unexpected happen?",
+    "Who gains or loses from decisions?",
+    "What does this reveal about regent's priorities?"
+]
+
+[[court_events]]
+name = "Religious Ceremony"
+description = "Temple event with court participation required"
+frequency = "Holy days and special occasions"
+opportunities = [
+    "Demonstrate piety",
+    "Network with temple figures",
+    "Observe who is devout",
+    "Seek blessings",
+    "Make religious announcements"
+]
+complications = [
+    "Prophecy or portent",
+    "Someone refuses to participate",
+    "Accusations of insincerity",
+    "Divine manifestation (or claim of one)",
+    "Interfaith tension"
+]
+oracle_questions = [
+    "What deity is being honored?",
+    "Is the ceremony routine or special?",
+    "Does anything miraculous occur?",
+    "Who is notably pious or impious?",
+    "What does the temple expect from attendees?"
+]
+
+[[court_events]]
+name = "Diplomatic Reception"
+description = "Foreign dignitary visits court"
+frequency = "As needed for diplomacy"
+opportunities = [
+    "Influence foreign relations",
+    "Gather intelligence",
+    "Make international connections",
+    "Demonstrate domain's power",
+    "Arrange foreign marriages"
+]
+complications = [
+    "Cultural misunderstandings",
+    "Diplomatic incidents",
+    "Spy accusations",
+    "Treaty disagreements public",
+    "Assassination attempt"
+]
+oracle_questions = [
+    "Who is visiting and why?",
+    "What do they want?",
+    "How are they received?",
+    "Are there any incidents?",
+    "What agreements are reached?"
+]
+
+[[court_events]]
+name = "Trial or Judgment"
+description = "Important legal proceeding at court"
+frequency = "As crimes/disputes arise"
+opportunities = [
+    "Influence outcome",
+    "Observe power dynamics",
+    "Support or condemn accused",
+    "Legal precedent set",
+    "Justice (or its appearance)"
+]
+complications = [
+    "Evidence of other crimes emerges",
+    "Trial becomes political",
+    "Accused escapes",
+    "Champion demanded",
+    "Verdict unpopular"
+]
+oracle_questions = [
+    "Who is on trial for what?",
+    "Is the trial fair?",
+    "What evidence is presented?",
+    "What is the verdict?",
+    "What are the consequences?"
+]
+
+[[court_events]]
+name = "Marriage Celebration"
+description = "Wedding of important court figures"
+frequency = "As marriages occur"
+opportunities = [
+    "Celebrate alliance",
+    "Network during festivities",
+    "Evaluate new connections",
+    "Romance and intrigue",
+    "Gifts establish relationships"
+]
+complications = [
+    "Objection to marriage",
+    "Spurned lover causes scene",
+    "Drunken revelations",
+    "Political opponents use event",
+    "Wedding night complications"
+]
+oracle_questions = [
+    "Who is marrying?",
+    "Is it a love match or political?",
+    "Who objects?",
+    "What gifts are given?",
+    "Does the marriage seem likely to succeed?"
+]
+
+[[court_events]]
+name = "Funeral"
+description = "Death of important court figure"
+frequency = "As deaths occur"
+opportunities = [
+    "Pay respects",
+    "Observe succession",
+    "Network during mourning",
+    "Evaluate power shifts",
+    "Comfort (or manipulate) bereaved"
+]
+complications = [
+    "Disputed inheritance",
+    "Accusations of murder",
+    "Rivals press advantage",
+    "Mourning becomes political",
+    "Ghost or portent"
+]
+oracle_questions = [
+    "Who died and how?",
+    "Who inherits?",
+    "Is foul play suspected?",
+    "How does this change court dynamics?",
+    "Who benefits from the death?"
+]
+
+[[court_events]]
+name = "New Arrival"
+description = "Important new person joins court"
+frequency = "As newcomers arrive"
+opportunities = [
+    "Evaluate new player",
+    "Build relationship early",
+    "Shape their perception",
+    "Ally or enemy identification",
+    "Intelligence on their background"
+]
+complications = [
+    "Newcomer challenges established order",
+    "Hidden agenda",
+    "Old rival from past",
+    "Newcomer spreads false information",
+    "Seducer or spy"
+]
+oracle_questions = [
+    "Who is the newcomer?",
+    "Why have they come?",
+    "What is their agenda?",
+    "Who do they align with?",
+    "What do they bring to court?"
+]
+
+[[court_events]]
+name = "Departure or Exile"
+description = "Important figure leaves court"
+frequency = "As circumstances require"
+opportunities = [
+    "Fill vacuum left behind",
+    "Take over their projects/allies",
+    "Learn from their fall",
+    "Maintain contact if exile",
+    "Avoid similar fate"
+]
+complications = [
+    "Associates suspect themselves next",
+    "Secrets may be revealed in departure",
+    "Power struggle for their position",
+    "Exile may return",
+    "Revenge from distance"
+]
+oracle_questions = [
+    "Why are they leaving?",
+    "Is it voluntary or forced?",
+    "What do they leave behind?",
+    "Will they return?",
+    "What does this mean for court balance?"
+]
+
+# ============================================================================
+# MARRIAGE PROSPECTS
+# ============================================================================
+# Strategic marriage options and complications
+
+[marriage_system]
+description = "Marriage as political tool in Cerilian courts"
+
+[marriage_system.considerations]
+factors = [
+    "Bloodline - does the match strengthen or dilute bloodlines?",
+    "Political alliance - what domains or powers are connected?",
+    "Wealth - what resources come with the match?",
+    "Heirs - can the match produce acceptable heirs?",
+    "Religion - are the families of compatible faiths?",
+    "Age - is the match appropriate in years?",
+    "Existing obligations - are there prior betrothals?",
+    "Personal compatibility - can they tolerate each other?"
+]
+
+[[marriage_system.prospect_types]]
+type = "Political Alliance"
+description = "Marriage to cement treaty or alliance"
+benefits = [
+    "Binds domains together",
+    "Creates heir with claims to both",
+    "Hostage situation resolved naturally"
+]
+risks = [
+    "May not love each other",
+    "If alliance breaks, marriage awkward",
+    "Foreign spouse seen as outsider"
+]
+oracle_questions = [
+    "Is the alliance genuine?",
+    "Will the foreign spouse adapt?",
+    "How do the court view the match?",
+    "What happens if relations sour?"
+]
+
+[[marriage_system.prospect_types]]
+type = "Bloodline Match"
+description = "Marriage to combine or strengthen bloodlines"
+benefits = [
+    "Children may have stronger bloodline",
+    "Specific abilities might combine",
+    "Preserves bloodline in family"
+]
+risks = [
+    "Bloodline strength unpredictable",
+    "May produce competition for inheritance",
+    "Blood of Azrai marriages especially risky"
+]
+oracle_questions = [
+    "What bloodlines are being combined?",
+    "What abilities might manifest?",
+    "Are there bloodline conflicts?",
+    "What do the bloodlines' histories suggest?"
+]
+
+[[marriage_system.prospect_types]]
+type = "Wealth Match"
+description = "Marriage for economic benefit"
+benefits = [
+    "Substantial dowry",
+    "Trade connections",
+    "Land or holdings",
+    "Ongoing economic support"
+]
+risks = [
+    "May be seen as mercenary",
+    "Spouse may be unappealing",
+    "Wealth may come with obligations"
+]
+oracle_questions = [
+    "What wealth is involved?",
+    "Are there strings attached?",
+    "Does the wealthy family demand too much?",
+    "Is the wealth real or exaggerated?"
+]
+
+[[marriage_system.prospect_types]]
+type = "Love Match"
+description = "Marriage for genuine affection"
+benefits = [
+    "Happy couple",
+    "Stable family",
+    "Genuine partnership",
+    "Good for heirs' upbringing"
+]
+risks = [
+    "May sacrifice political advantage",
+    "Family opposition",
+    "Love may not last",
+    "May be inappropriate match"
+]
+oracle_questions = [
+    "Is the love genuine and lasting?",
+    "What political costs result?",
+    "Do families accept the match?",
+    "Will love survive marriage's realities?"
+]
+
+[[marriage_system.prospect_types]]
+type = "Healing Match"
+description = "Marriage to end feud or heal division"
+benefits = [
+    "Ends conflict",
+    "Unites former enemies",
+    "Creates peace"
+]
+risks = [
+    "Old wounds may not heal",
+    "Spouse may be hated for family's sins",
+    "Children caught between families"
+]
+oracle_questions = [
+    "Can the families truly reconcile?",
+    "Will the spouses overcome history?",
+    "Do hardliners accept the match?",
+    "Is peace genuine or temporary?"
+]
+
+[[marriage_system.complications]]
+complication = "Prior Betrothal"
+description = "One party already promised to another"
+effects = [
+    "Must break existing betrothal",
+    "Jilted party becomes enemy",
+    "Legal complications possible"
+]
+
+[[marriage_system.complications]]
+complication = "Religious Impediment"
+description = "Temple objects to the marriage"
+effects = [
+    "Cannot get temple blessing",
+    "Marriage may be illegal",
+    "Religious scandal"
+]
+
+[[marriage_system.complications]]
+complication = "Hidden Defect"
+description = "Secret that would prevent marriage if known"
+effects = [
+    "Discovery after marriage causes crisis",
+    "Blackmail potential",
+    "Annulment grounds"
+]
+
+[[marriage_system.complications]]
+complication = "Rival Suitor"
+description = "Another party wants the same match"
+effects = [
+    "Competition for hand",
+    "Possible violence",
+    "Creates enemy"
+]
+
+[[marriage_system.complications]]
+complication = "Family Opposition"
+description = "One family objects to the match"
+effects = [
+    "Political pressure",
+    "Inheritance threatened",
+    "Elopement possible"
+]
+
+[[marriage_system.complications]]
+complication = "Fertility Questions"
+description = "Concerns about ability to produce heirs"
+effects = [
+    "Marriage's purpose in doubt",
+    "Pressure to produce quickly",
+    "Alternative heir arrangements"
+]
+
+# ============================================================================
+# ORACLE TABLES - COURT INTRIGUE
+# ============================================================================
+# Random generation tables for court drama
+
+[oracle_tables]
+
+[[oracle_tables.daily_court_mood]]
+d8 = 1
+mood = "Tense"
+description = "Something has the court on edge"
+
+[[oracle_tables.daily_court_mood]]
+d8 = 2
+mood = "Celebratory"
+description = "Good news or event has spirits high"
+
+[[oracle_tables.daily_court_mood]]
+d8 = 3
+mood = "Gossipy"
+description = "A scandal or rumor dominates talk"
+
+[[oracle_tables.daily_court_mood]]
+d8 = 4
+mood = "Anxious"
+description = "Uncertainty about the future"
+
+[[oracle_tables.daily_court_mood]]
+d8 = 5
+mood = "Business as usual"
+description = "Routine court activities"
+
+[[oracle_tables.daily_court_mood]]
+d8 = 6
+mood = "Factional"
+description = "Court divided into camps"
+
+[[oracle_tables.daily_court_mood]]
+d8 = 7
+mood = "Mourning"
+description = "Recent loss affects the court"
+
+[[oracle_tables.daily_court_mood]]
+d8 = 8
+mood = "Scheming"
+description = "Everyone planning something"
+
+[[oracle_tables.random_court_encounter]]
+d12 = 1
+encounter = "Courtier seeks alliance"
+
+[[oracle_tables.random_court_encounter]]
+d12 = 2
+encounter = "Rival makes veiled threat"
+
+[[oracle_tables.random_court_encounter]]
+d12 = 3
+encounter = "Someone shares gossip"
+
+[[oracle_tables.random_court_encounter]]
+d12 = 4
+encounter = "Request for favor"
+
+[[oracle_tables.random_court_encounter]]
+d12 = 5
+encounter = "Invitation to private meeting"
+
+[[oracle_tables.random_court_encounter]]
+d12 = 6
+encounter = "Witness to scandal"
+
+[[oracle_tables.random_court_encounter]]
+d12 = 7
+encounter = "Unexpected ally approaches"
+
+[[oracle_tables.random_court_encounter]]
+d12 = 8
+encounter = "Old enemy resurfaces"
+
+[[oracle_tables.random_court_encounter]]
+d12 = 9
+encounter = "Mysterious message received"
+
+[[oracle_tables.random_court_encounter]]
+d12 = 10
+encounter = "Romantic overture"
+
+[[oracle_tables.random_court_encounter]]
+d12 = 11
+encounter = "Warning of danger"
+
+[[oracle_tables.random_court_encounter]]
+d12 = 12
+encounter = "Opportunity presented"
+
+[[oracle_tables.court_rumor_topics]]
+d20 = 1
+topic = "Someone's infidelity"
+
+[[oracle_tables.court_rumor_topics]]
+d20 = 2
+topic = "Financial troubles"
+
+[[oracle_tables.court_rumor_topics]]
+d20 = 3
+topic = "Secret alliance"
+
+[[oracle_tables.court_rumor_topics]]
+d20 = 4
+topic = "Impending marriage"
+
+[[oracle_tables.court_rumor_topics]]
+d20 = 5
+topic = "Falling from favor"
+
+[[oracle_tables.court_rumor_topics]]
+d20 = 6
+topic = "Rising star"
+
+[[oracle_tables.court_rumor_topics]]
+d20 = 7
+topic = "Hidden child"
+
+[[oracle_tables.court_rumor_topics]]
+d20 = 8
+topic = "Treason whispers"
+
+[[oracle_tables.court_rumor_topics]]
+d20 = 9
+topic = "Magical scandal"
+
+[[oracle_tables.court_rumor_topics]]
+d20 = 10
+topic = "Religious impropriety"
+
+[[oracle_tables.court_rumor_topics]]
+d20 = 11
+topic = "Military embarrassment"
+
+[[oracle_tables.court_rumor_topics]]
+d20 = 12
+topic = "Foreign intrigue"
+
+[[oracle_tables.court_rumor_topics]]
+d20 = 13
+topic = "Succession concerns"
+
+[[oracle_tables.court_rumor_topics]]
+d20 = 14
+topic = "Health worries"
+
+[[oracle_tables.court_rumor_topics]]
+d20 = 15
+topic = "Business failures"
+
+[[oracle_tables.court_rumor_topics]]
+d20 = 16
+topic = "Romantic rejection"
+
+[[oracle_tables.court_rumor_topics]]
+d20 = 17
+topic = "Family feud"
+
+[[oracle_tables.court_rumor_topics]]
+d20 = 18
+topic = "Criminal activity"
+
+[[oracle_tables.court_rumor_topics]]
+d20 = 19
+topic = "Prophecy or omen"
+
+[[oracle_tables.court_rumor_topics]]
+d20 = 20
+topic = "Mysterious stranger"
+
+[[oracle_tables.what_do_they_want]]
+d10 = 1
+want = "Your support against someone"
+
+[[oracle_tables.what_do_they_want]]
+d10 = 2
+want = "Information you have"
+
+[[oracle_tables.what_do_they_want]]
+d10 = 3
+want = "Introduction to someone"
+
+[[oracle_tables.what_do_they_want]]
+d10 = 4
+want = "Marriage alliance"
+
+[[oracle_tables.what_do_they_want]]
+d10 = 5
+want = "Financial arrangement"
+
+[[oracle_tables.what_do_they_want]]
+d10 = 6
+want = "Position or appointment"
+
+[[oracle_tables.what_do_they_want]]
+d10 = 7
+want = "Protection from threat"
+
+[[oracle_tables.what_do_they_want]]
+d10 = 8
+want = "Revenge against enemy"
+
+[[oracle_tables.what_do_they_want]]
+d10 = 9
+want = "Genuine friendship"
+
+[[oracle_tables.what_do_they_want]]
+d10 = 10
+want = "To use you for larger scheme"

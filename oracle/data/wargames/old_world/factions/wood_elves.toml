@@ -1,0 +1,774 @@
+# Warhammer: The Old World - Wood Elves
+# Guardians of Athel Loren, swift and deadly forest spirits
+
+[faction]
+name = "Wood Elves"
+description = "The Asrai of Athel Loren are masters of guerilla warfare, striking from the shadows of their enchanted forest. They combine devastating archery with swift charges and forest spirits"
+playstyle = "Fast, fragile glass cannon. Hit and run tactics with exceptional archery"
+strengths = ["Best archers in the game", "Very mobile", "Forest Spirits", "Devastating ambushes", "Always Strikes First"]
+weaknesses = ["Extremely fragile (T3, light armor)", "Low model count", "No anvil units", "Expensive"]
+lore_notes = "The Wood Elves separated from their High Elf kin to dwell in Athel Loren. They exist in symbiosis with the forest spirits, defending the forest from all intruders"
+
+# =============================================================================
+# LORDS
+# =============================================================================
+
+[[units]]
+name = "Highborn"
+type = "character"
+category = "Lords"
+points = 120
+models = "1"
+tactical_role = "combat_commander"
+threat_level = "very_high"
+preferred_targets = ["enemy_characters"]
+weaknesses = ["mass_attacks"]
+special_rules = ["Always Strikes First", "Forest Strider"]
+keywords = ["Character", "Infantry", "Wood Elf", "Lord"]
+equipment = ["Hand weapon", "Asrai Longbow", "Light armor"]
+options = ["May take Great Eagle (+50 pts)", "May take Elven Steed (+18 pts)", "May take Great Stag (+65 pts)", "May take Forest Dragon (+320 pts)", "May take magic items up to 100 points"]
+
+[units.stats]
+M = 5
+WS = 7
+BS = 7
+S = 4
+T = 3
+W = 3
+I = 8
+A = 4
+Ld = 10
+Sv = "6+"
+
+[[units]]
+name = "Spellweaver"
+type = "character"
+category = "Lords"
+points = 185
+models = "1"
+tactical_role = "magic"
+threat_level = "very_high"
+preferred_targets = ["enemy_units"]
+weaknesses = ["assassins", "war_machines"]
+special_rules = ["Level 3 Wizard", "May upgrade to Level 4 (+35 pts)", "Always Strikes First", "Forest Strider"]
+keywords = ["Character", "Infantry", "Wood Elf", "Lord", "Wizard"]
+equipment = ["Hand weapon"]
+options = ["May take Lore of Beasts, Life, Shadow, or Athel Loren", "May take mount", "May take arcane items up to 100 points"]
+
+[units.stats]
+M = 5
+WS = 4
+BS = 5
+S = 3
+T = 3
+W = 3
+I = 5
+A = 1
+Ld = 9
+Sv = "-"
+
+[[units]]
+name = "Treeman Ancient"
+type = "character"
+category = "Lords"
+points = 270
+models = "1"
+tactical_role = "monster_commander"
+threat_level = "extreme"
+preferred_targets = ["infantry", "cavalry"]
+weaknesses = ["fire"]
+special_rules = ["Forest Spirit", "Terror", "Stubborn", "Flammable", "Tree Singing"]
+keywords = ["Character", "Monster", "Forest Spirit", "Lord"]
+equipment = ["Strangleroots", "Massive limbs"]
+options = ["May be a Level 1 or 2 Wizard (+50/100 pts)"]
+
+[units.stats]
+M = 5
+WS = 6
+BS = 6
+S = 6
+T = 6
+W = 6
+I = 2
+A = 5
+Ld = 10
+Sv = "3+"
+
+# =============================================================================
+# HEROES
+# =============================================================================
+
+[[units]]
+name = "Noble"
+type = "character"
+category = "Heroes"
+points = 70
+models = "1"
+tactical_role = "support_commander"
+threat_level = "medium"
+preferred_targets = ["enemy_champions"]
+weaknesses = ["powerful_characters"]
+special_rules = ["Always Strikes First", "Forest Strider"]
+keywords = ["Character", "Infantry", "Wood Elf", "Hero"]
+equipment = ["Hand weapon", "Asrai Longbow", "Light armor"]
+options = ["May carry Battle Standard (+25 pts)", "May take magic items up to 50 points", "May take mount"]
+
+[units.stats]
+M = 5
+WS = 6
+BS = 6
+S = 4
+T = 3
+W = 2
+I = 7
+A = 3
+Ld = 9
+Sv = "6+"
+
+[[units]]
+name = "Spellsinger"
+type = "character"
+category = "Heroes"
+points = 85
+models = "1"
+tactical_role = "magic_support"
+threat_level = "medium"
+preferred_targets = ["enemy_units"]
+weaknesses = ["close_combat"]
+special_rules = ["Level 1 Wizard", "May upgrade to Level 2 (+35 pts)", "Always Strikes First", "Forest Strider"]
+keywords = ["Character", "Infantry", "Wood Elf", "Hero", "Wizard"]
+equipment = ["Hand weapon"]
+options = ["May take Lore of Beasts, Life, Shadow, or Athel Loren", "May take arcane items up to 50 points"]
+
+[units.stats]
+M = 5
+WS = 4
+BS = 5
+S = 3
+T = 3
+W = 2
+I = 5
+A = 1
+Ld = 8
+Sv = "-"
+
+[[units]]
+name = "Branchwraith"
+type = "character"
+category = "Heroes"
+points = 75
+models = "1"
+tactical_role = "forest_spirit_support"
+threat_level = "medium"
+preferred_targets = ["enemy_units"]
+weaknesses = ["fire"]
+special_rules = ["Forest Spirit", "Level 1 Wizard (Lore of Athel Loren)", "Flammable"]
+keywords = ["Character", "Infantry", "Forest Spirit", "Hero", "Wizard"]
+equipment = ["Branched limbs"]
+
+[units.stats]
+M = 5
+WS = 6
+BS = 0
+S = 4
+T = 4
+W = 2
+I = 6
+A = 3
+Ld = 8
+Sv = "5+"
+
+[[units]]
+name = "Waystalker"
+type = "character"
+category = "Heroes"
+points = 90
+models = "1"
+tactical_role = "assassin"
+threat_level = "high"
+preferred_targets = ["characters", "wizards"]
+weaknesses = ["close_combat"]
+special_rules = ["Always Strikes First", "Scouts", "Sniper", "Killing Blow (shooting)"]
+keywords = ["Character", "Infantry", "Wood Elf", "Hero"]
+equipment = ["Asrai Longbow", "Two hand weapons"]
+
+[units.stats]
+M = 5
+WS = 6
+BS = 7
+S = 4
+T = 3
+W = 2
+I = 7
+A = 2
+Ld = 8
+Sv = "-"
+
+# =============================================================================
+# CORE UNITS
+# =============================================================================
+
+[[units]]
+name = "Glade Guard"
+type = "infantry"
+category = "Core"
+points = 12
+models = "10-30"
+tactical_role = "ranged_infantry"
+threat_level = "high"
+preferred_targets = ["light_targets", "cavalry"]
+weaknesses = ["close_combat"]
+special_rules = ["Always Strikes First", "Forest Strider"]
+keywords = ["Infantry", "Wood Elf", "Core"]
+equipment = ["Asrai Longbow", "Hand weapon"]
+options = ["May take musician (+5 pts)", "May take standard bearer (+10 pts)", "May take enchanted arrows"]
+
+[units.stats]
+M = 5
+WS = 4
+BS = 4
+S = 3
+T = 3
+W = 1
+I = 5
+A = 1
+Ld = 8
+Sv = "-"
+
+[[units.weapons]]
+name = "Asrai Longbow"
+range = "30\""
+strength = "3"
+ap = "1"
+damage = "1"
+abilities = ["Armor Piercing (1)", "Volley Fire"]
+
+[[units]]
+name = "Glade Riders"
+type = "cavalry"
+category = "Core"
+points = 19
+models = "5-15"
+tactical_role = "fast_cavalry"
+threat_level = "medium"
+preferred_targets = ["war_machines", "skirmishers", "flanks"]
+weaknesses = ["heavy_cavalry"]
+special_rules = ["Always Strikes First", "Fast Cavalry", "Vanguard", "Forest Strider"]
+keywords = ["Cavalry", "Wood Elf", "Core"]
+equipment = ["Asrai Longbow", "Spear", "Hand weapon", "Elven Steed"]
+options = ["May add musician (+5 pts)"]
+
+[units.stats]
+M = 5
+WS = 4
+BS = 4
+S = 3
+T = 3
+W = 1
+I = 5
+A = 1
+Ld = 8
+Sv = "-"
+
+[units.mount]
+name = "Elven Steed"
+M = 9
+WS = 3
+S = 3
+T = 3
+W = 1
+I = 4
+A = 1
+
+[[units]]
+name = "Eternal Guard"
+type = "infantry"
+category = "Core"
+points = 12
+models = "10-30"
+tactical_role = "defensive_infantry"
+threat_level = "medium"
+preferred_targets = ["cavalry"]
+weaknesses = ["shooting"]
+special_rules = ["Always Strikes First", "Forest Strider", "Stubborn (in forest)", "Fight in Extra Ranks"]
+keywords = ["Infantry", "Wood Elf", "Core"]
+equipment = ["Asrai Spear", "Light armor", "Shield"]
+options = ["May add musician (+5 pts)", "May add standard bearer (+10 pts)", "May take magic standard up to 50 pts"]
+
+[units.stats]
+M = 5
+WS = 5
+BS = 4
+S = 3
+T = 3
+W = 1
+I = 5
+A = 1
+Ld = 9
+Sv = "5+"
+
+[[units]]
+name = "Dryads"
+type = "infantry"
+category = "Core"
+points = 12
+models = "8-16"
+tactical_role = "flankers"
+threat_level = "medium"
+preferred_targets = ["light_infantry"]
+weaknesses = ["fire"]
+special_rules = ["Forest Spirit", "Skirmishers", "Immune to Psychology", "Flammable"]
+keywords = ["Infantry", "Forest Spirit", "Core"]
+equipment = ["Branched limbs (two hand weapons)"]
+
+[units.stats]
+M = 5
+WS = 4
+BS = 0
+S = 4
+T = 4
+W = 1
+I = 6
+A = 2
+Ld = 8
+Sv = "5+"
+
+# =============================================================================
+# SPECIAL UNITS
+# =============================================================================
+
+[[units]]
+name = "Wardancers"
+type = "infantry"
+category = "Special"
+points = 15
+models = "5-15"
+tactical_role = "elite_infantry"
+threat_level = "high"
+preferred_targets = ["elite_infantry", "characters"]
+weaknesses = ["shooting"]
+special_rules = ["Always Strikes First", "Skirmishers", "Talismanic Tattoos (6+ ward)", "Shadow Dances"]
+keywords = ["Infantry", "Wood Elf", "Special", "Wardancer"]
+equipment = ["Two hand weapons"]
+options = ["May add musician (+5 pts)"]
+
+[units.stats]
+M = 5
+WS = 6
+BS = 4
+S = 4
+T = 3
+W = 1
+I = 6
+A = 2
+Ld = 8
+Sv = "6+"
+
+[[units]]
+name = "Wildwood Rangers"
+type = "infantry"
+category = "Special"
+points = 12
+models = "10-30"
+tactical_role = "monster_hunters"
+threat_level = "high"
+preferred_targets = ["monsters", "monstrous_infantry"]
+weaknesses = ["shooting"]
+special_rules = ["Always Strikes First", "Forest Strider", "Guardians of the Wildwood"]
+keywords = ["Infantry", "Wood Elf", "Special"]
+equipment = ["Great weapon", "Light armor"]
+options = ["May add musician (+5 pts)", "May add standard bearer (+10 pts)"]
+
+[units.stats]
+M = 5
+WS = 5
+BS = 4
+S = 3
+T = 3
+W = 1
+I = 5
+A = 1
+Ld = 8
+Sv = "6+"
+
+[[units]]
+name = "Waywatchers"
+type = "infantry"
+category = "Special"
+points = 18
+models = "5-20"
+tactical_role = "snipers"
+threat_level = "very_high"
+preferred_targets = ["characters", "monsters"]
+weaknesses = ["close_combat"]
+special_rules = ["Always Strikes First", "Scouts", "Skirmishers", "Killing Blow (shooting)", "Multiple Shots (2)"]
+keywords = ["Infantry", "Wood Elf", "Special"]
+equipment = ["Asrai Longbow", "Two hand weapons"]
+
+[units.stats]
+M = 5
+WS = 5
+BS = 5
+S = 3
+T = 3
+W = 1
+I = 5
+A = 1
+Ld = 8
+Sv = "-"
+
+[[units]]
+name = "Wild Riders of Kurnous"
+type = "cavalry"
+category = "Special"
+points = 26
+models = "5-10"
+tactical_role = "shock_cavalry"
+threat_level = "very_high"
+preferred_targets = ["infantry", "cavalry"]
+weaknesses = ["mass_shooting"]
+special_rules = ["Always Strikes First", "Fear", "Frenzy", "Fast Cavalry", "Forest Strider", "Devastating Charge (+1S)"]
+keywords = ["Cavalry", "Wood Elf", "Special"]
+equipment = ["Spear", "Hand weapon", "Light armor", "Shield", "Elven Steed"]
+options = ["May add musician (+10 pts)", "May add standard bearer (+10 pts)", "May take magic standard up to 50 pts"]
+
+[units.stats]
+M = 5
+WS = 5
+BS = 4
+S = 4
+T = 3
+W = 1
+I = 6
+A = 1
+Ld = 9
+Sv = "5+"
+
+[[units]]
+name = "Sisters of the Thorn"
+type = "cavalry"
+category = "Special"
+points = 26
+models = "5-10"
+tactical_role = "magic_cavalry"
+threat_level = "high"
+preferred_targets = ["support_role"]
+weaknesses = ["close_combat"]
+special_rules = ["Always Strikes First", "Fast Cavalry", "4+ Ward Save", "Poisoned Attacks"]
+keywords = ["Cavalry", "Wood Elf", "Special", "Wizard"]
+equipment = ["Blackbriar Javelins", "Hand weapon"]
+
+[units.stats]
+M = 5
+WS = 4
+BS = 4
+S = 3
+T = 3
+W = 1
+I = 5
+A = 1
+Ld = 8
+Sv = "-"
+
+[units.mount]
+name = "Steed of Isha"
+M = 8
+WS = 3
+S = 3
+T = 4
+W = 1
+I = 4
+A = 1
+
+[[units]]
+name = "Warhawk Riders"
+type = "monstrous_cavalry"
+category = "Special"
+points = 45
+models = "3-6"
+tactical_role = "flyers"
+threat_level = "high"
+preferred_targets = ["war_machines", "wizards"]
+weaknesses = ["shooting"]
+special_rules = ["Always Strikes First", "Fly", "Killing Blow (on the charge)"]
+keywords = ["Monstrous Cavalry", "Wood Elf", "Special", "Fly"]
+equipment = ["Asrai Longbow", "Spear"]
+
+[units.stats]
+M = 5
+WS = 4
+BS = 4
+S = 3
+T = 3
+W = 1
+I = 5
+A = 1
+Ld = 8
+Sv = "-"
+
+[units.mount]
+name = "War Hawk"
+M = 2
+WS = 4
+S = 4
+T = 4
+W = 2
+I = 4
+A = 2
+
+[[units]]
+name = "Treekin"
+type = "monstrous_infantry"
+category = "Special"
+points = 45
+models = "3-6"
+tactical_role = "monster"
+threat_level = "high"
+preferred_targets = ["infantry"]
+weaknesses = ["fire"]
+special_rules = ["Forest Spirit", "Fear", "Flammable", "Scaly Skin (4+)"]
+keywords = ["Monstrous Infantry", "Forest Spirit", "Special"]
+equipment = ["Branched limbs"]
+
+[units.stats]
+M = 5
+WS = 4
+BS = 0
+S = 5
+T = 5
+W = 3
+I = 3
+A = 3
+Ld = 8
+Sv = "4+"
+
+[[units]]
+name = "Great Eagle"
+type = "monstrous_beast"
+category = "Special"
+points = 50
+models = "1"
+tactical_role = "war_machine_hunter"
+threat_level = "medium"
+preferred_targets = ["war_machines", "lone_characters"]
+weaknesses = ["shooting"]
+special_rules = ["Fly"]
+keywords = ["Monstrous Beast", "Wood Elf", "Special", "Fly"]
+equipment = ["Beak and talons"]
+
+[units.stats]
+M = 2
+WS = 5
+BS = 0
+S = 4
+T = 4
+W = 3
+I = 4
+A = 2
+Ld = 8
+Sv = "-"
+
+# =============================================================================
+# RARE UNITS
+# =============================================================================
+
+[[units]]
+name = "Treeman"
+type = "monster"
+category = "Rare"
+points = 225
+models = "1"
+tactical_role = "monster"
+threat_level = "extreme"
+preferred_targets = ["infantry", "cavalry"]
+weaknesses = ["fire", "war_machines"]
+special_rules = ["Forest Spirit", "Terror", "Stubborn", "Flammable", "Strangleroots", "Tree Singing"]
+keywords = ["Monster", "Forest Spirit", "Rare"]
+equipment = ["Massive limbs"]
+
+[units.stats]
+M = 5
+WS = 5
+BS = 5
+S = 6
+T = 6
+W = 5
+I = 2
+A = 4
+Ld = 9
+Sv = "3+"
+
+[[units.weapons]]
+name = "Strangleroots"
+range = "12\""
+strength = "5"
+ap = "0"
+damage = "1"
+abilities = ["D6 shots", "Quick to Fire"]
+
+[[units]]
+name = "Glade Captain on Forest Dragon"
+type = "monster"
+category = "Rare"
+points = 470
+models = "1"
+tactical_role = "flying_monster"
+threat_level = "extreme"
+preferred_targets = ["anything"]
+weaknesses = ["war_machines"]
+special_rules = ["Always Strikes First", "Terror", "Fly", "Breath Weapon", "Scaly Skin (3+)"]
+keywords = ["Monster", "Wood Elf", "Rare", "Fly"]
+equipment = ["Asrai weapons"]
+notes = "Highborn on Forest Dragon"
+
+[units.stats]
+M = 6
+WS = 7
+BS = 7
+S = 4
+T = 3
+W = 3
+I = 8
+A = 4
+Ld = 10
+Sv = "3+"
+
+# Separate dragon stats
+[[units]]
+name = "Forest Dragon"
+type = "monster"
+category = "mount"
+points = 320
+models = "0 (mount only)"
+tactical_role = "monster_mount"
+threat_level = "extreme"
+preferred_targets = ["anything"]
+weaknesses = ["war_machines"]
+special_rules = ["Terror", "Fly", "Breath Weapon (S3 no AS)", "Scaly Skin (3+)"]
+keywords = ["Monster", "Dragon", "Mount"]
+equipment = ["Claws and fangs"]
+
+[units.stats]
+M = 6
+WS = 6
+BS = 0
+S = 6
+T = 6
+W = 6
+I = 3
+A = 5
+Ld = 8
+Sv = "3+"
+
+# =============================================================================
+# FACTION SPECIAL RULES
+# =============================================================================
+
+[[faction_rules]]
+name = "Always Strikes First"
+description = "Wood Elves strike at Initiative 10 in close combat. If their actual Initiative is 10+, they re-roll missed attacks"
+
+[[faction_rules]]
+name = "Forest Strider"
+description = "Wood Elves treat all forests as open terrain. No dangerous terrain tests in forests"
+
+[[faction_rules]]
+name = "Forest Spirit"
+description = "5+ ward save. Immune to Psychology. Flammable. Magical Attacks. Count as Causes Fear"
+
+[[faction_rules]]
+name = "Flammable"
+description = "Double wounds from Flaming Attacks. Re-roll successful ward saves against Flaming Attacks"
+
+[[faction_rules]]
+name = "Shadow Dances"
+description = "At the start of each combat, Wardancers choose a dance: +1 Attack, +1 to hit, Killing Blow, or 3+ ward save"
+
+[[faction_rules]]
+name = "Tree Singing"
+description = "Can move forests D6\" in the Movement phase"
+
+# =============================================================================
+# ENCHANTED ARROWS
+# =============================================================================
+
+[[faction_items]]
+name = "Arcane Bodkins"
+type = "arrow"
+points = "3 pts/model"
+description = "Armor Piercing (3)"
+restrictions = ["Glade Guard only"]
+
+[[faction_items]]
+name = "Hagbane Tips"
+type = "arrow"
+points = "3 pts/model"
+description = "Poisoned Attacks"
+restrictions = ["Glade Guard only"]
+
+[[faction_items]]
+name = "Starfire Shafts"
+type = "arrow"
+points = "4 pts/model"
+description = "Flaming Attacks. Re-roll failed to-wound against Flammable targets"
+restrictions = ["Glade Guard only"]
+
+[[faction_items]]
+name = "Trueflight Arrows"
+type = "arrow"
+points = "3 pts/model"
+description = "No penalties for long range, moving, or cover"
+restrictions = ["Glade Guard only"]
+
+# =============================================================================
+# FACTION MAGIC ITEMS
+# =============================================================================
+
+[[faction_items]]
+name = "The Bow of Loren"
+type = "magic_weapon"
+points = 30
+description = "Asrai Longbow that fires an extra shot for each successful hit (max 6 shots total)"
+restrictions = ["Wood Elf characters only"]
+
+[[faction_items]]
+name = "Daith's Reaper"
+type = "magic_weapon"
+points = 50
+description = "+1 Strength, +1 Attack. Always wounds on 3+ regardless of Toughness"
+restrictions = ["Wood Elf characters only"]
+
+[[faction_items]]
+name = "The Spirit Sword"
+type = "magic_weapon"
+points = 85
+description = "Attacks made with this sword wound automatically. Target must pass a Leadership test for each wound or die instantly"
+restrictions = ["Wood Elf characters only"]
+
+[[faction_items]]
+name = "Helm of the Hunt"
+type = "magic_armor"
+points = 20
+description = "+1 armor save. +1 Weapon Skill and +1 Attack when charging"
+restrictions = ["Wood Elf characters only"]
+
+[[faction_items]]
+name = "Moonstone of the Hidden Ways"
+type = "enchanted"
+points = 40
+description = "Unit containing bearer may use the Worldroots. Remove from play and return in any forest"
+restrictions = ["Wood Elf characters only"]
+
+[[faction_items]]
+name = "Banner of the Eternal Queen"
+type = "banner"
+points = 50
+description = "Unit has Magic Resistance (2). 5+ ward save against shooting"
+restrictions = ["Wood Elf standard bearer only"]
+
+[[faction_items]]
+name = "Banner of the Hunter King"
+type = "banner"
+points = 75
+description = "Unit may re-roll failed charges. +1 to combat resolution when charging"
+restrictions = ["Wild Riders standard bearer only"]

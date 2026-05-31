@@ -1,0 +1,367 @@
+# =============================================================================
+# CONSEQUENCES.TOML - Universal Results of Player Choices
+# =============================================================================
+# What happens as a result of player actions - immediate and delayed.
+# Weights determine relative frequency (higher = more common).
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# POSITIVE CONSEQUENCES - When things work out
+# -----------------------------------------------------------------------------
+[positive_consequences]
+entries = [
+  # Reputation effects
+  { text = "Your reputation improves among locals", weight = 3 },
+  { text = "Word of your deed spreads favorably", weight = 2 },
+  { text = "You become known for this quality", weight = 1 },
+  { text = "Strangers recognize you positively", weight = 1 },
+  { text = "A faction views you more favorably", weight = 2 },
+  { text = "You earn a title or epithet", weight = 1 },
+
+  # Relationship changes
+  { text = "An enemy becomes a reluctant ally", weight = 1 },
+  { text = "Someone decides to trust you", weight = 2 },
+  { text = "A powerful figure takes interest in you", weight = 1 },
+  { text = "You gain a loyal contact", weight = 1 },
+  { text = "Someone offers ongoing assistance", weight = 1 },
+  { text = "A debt is owed to you", weight = 2 },
+
+  # Resources gained
+  { text = "You gain unexpected resources", weight = 2 },
+  { text = "Access to previously closed areas", weight = 1 },
+  { text = "Information comes your way freely", weight = 2 },
+  { text = "Discounts and favors become available", weight = 1 },
+  { text = "Safe havens open to you", weight = 1 },
+  { text = "Equipment or supplies gifted", weight = 1 },
+
+  # Opportunities created
+  { text = "A new path forward reveals itself", weight = 2 },
+  { text = "Your options expand", weight = 2 },
+  { text = "Doors previously closed now open", weight = 1 },
+  { text = "An opportunity arises from your success", weight = 2 },
+  { text = "Someone offers you work", weight = 1 },
+  { text = "Your skills attract attention", weight = 1 },
+
+  # Problem resolution
+  { text = "A lingering threat is eliminated", weight = 2 },
+  { text = "A mystery is solved", weight = 1 },
+  { text = "A danger is neutralized", weight = 2 },
+  { text = "Balance is restored", weight = 1 },
+  { text = "Justice is served", weight = 1 },
+
+  # Personal growth
+  { text = "You learn something valuable", weight = 2 },
+  { text = "Your confidence in this area grows", weight = 1 },
+  { text = "You prove yourself capable", weight = 1 },
+  { text = "Experience makes you stronger", weight = 1 },
+]
+
+# -----------------------------------------------------------------------------
+# NEGATIVE CONSEQUENCES - When actions backfire
+# -----------------------------------------------------------------------------
+[negative_consequences]
+entries = [
+  # Reputation damage
+  { text = "Word of your actions spreads to enemies", weight = 3 },
+  { text = "Your reputation suffers locally", weight = 2 },
+  { text = "You become known for this failing", weight = 1 },
+  { text = "A faction views you negatively", weight = 2 },
+  { text = "Trust in you erodes", weight = 2 },
+  { text = "You gain an unflattering nickname", weight = 1 },
+
+  # Relationship damage
+  { text = "An ally distances themselves", weight = 2 },
+  { text = "A friend becomes an enemy", weight = 1 },
+  { text = "Someone you helped turns against you", weight = 1 },
+  { text = "A powerful figure marks you", weight = 1 },
+  { text = "You lose a valuable contact", weight = 1 },
+  { text = "Trust is broken, possibly forever", weight = 1 },
+
+  # Threat escalation
+  { text = "A price is placed on your head", weight = 1 },
+  { text = "Enemies begin actively hunting you", weight = 1 },
+  { text = "Your actions provoke retaliation", weight = 2 },
+  { text = "Someone swears vengeance", weight = 1 },
+  { text = "You make a powerful enemy", weight = 1 },
+  { text = "Forces mobilize against you", weight = 1 },
+
+  # Resource loss
+  { text = "Access is revoked", weight = 1 },
+  { text = "Prices increase for you", weight = 1 },
+  { text = "Resources become harder to obtain", weight = 2 },
+  { text = "Safe places become dangerous", weight = 1 },
+  { text = "Information is withheld from you", weight = 2 },
+  { text = "Supplies are cut off", weight = 1 },
+
+  # Opportunity loss
+  { text = "A path forward closes", weight = 2 },
+  { text = "Your options narrow", weight = 2 },
+  { text = "Doors slam shut", weight = 1 },
+  { text = "Future opportunities are compromised", weight = 1 },
+  { text = "You burn a bridge", weight = 1 },
+  { text = "An advantage is lost", weight = 1 },
+
+  # Problem creation
+  { text = "A new threat emerges", weight = 2 },
+  { text = "Collateral damage affects innocents", weight = 1 },
+  { text = "Unintended consequences ripple outward", weight = 2 },
+  { text = "You create a power vacuum", weight = 1 },
+  { text = "Your actions destabilize the situation", weight = 1 },
+  { text = "Something worse fills the void", weight = 1 },
+
+  # Personal cost
+  { text = "You suffer injury or exhaustion", weight = 2 },
+  { text = "Resources are depleted", weight = 2 },
+  { text = "Time is lost that cannot be recovered", weight = 1 },
+  { text = "You carry a burden from this", weight = 1 },
+  { text = "The experience leaves a mark", weight = 1 },
+]
+
+# -----------------------------------------------------------------------------
+# TWIST CONSEQUENCES - Unexpected complications
+# -----------------------------------------------------------------------------
+[twist_consequences]
+entries = [
+  # Success complications
+  { text = "Your success creates a new problem", weight = 3 },
+  { text = "Victory comes at an unexpected cost", weight = 2 },
+  { text = "You got what you wanted, but...", weight = 2 },
+  { text = "The cure may be worse than the disease", weight = 1 },
+  { text = "Winning this battle may lose the war", weight = 1 },
+
+  # Misattribution
+  { text = "Someone else takes credit for your actions", weight = 2 },
+  { text = "Your actions are misunderstood", weight = 2 },
+  { text = "The wrong party is blamed", weight = 1 },
+  { text = "Your motives are misinterpreted", weight = 2 },
+  { text = "You're credited for something you didn't do", weight = 1 },
+
+  # Reality reveals
+  { text = "The situation was not what it appeared", weight = 3 },
+  { text = "You were manipulated from the start", weight = 1 },
+  { text = "Your information was wrong", weight = 2 },
+  { text = "The enemy was never the real threat", weight = 1 },
+  { text = "You helped the wrong side", weight = 1 },
+  { text = "Your ally had ulterior motives", weight = 1 },
+
+  # Escalation
+  { text = "This was just the beginning", weight = 2 },
+  { text = "A larger plot is revealed", weight = 1 },
+  { text = "The stakes were higher than you knew", weight = 2 },
+  { text = "What you stopped was a symptom, not the cause", weight = 1 },
+  { text = "Your actions accelerate events", weight = 1 },
+
+  # Reversals
+  { text = "An ally reveals their true nature", weight = 1 },
+  { text = "An enemy proves more complex than expected", weight = 1 },
+  { text = "The victim was actually the villain", weight = 1 },
+  { text = "The threat was protecting something worse", weight = 1 },
+  { text = "You removed the only thing holding chaos back", weight = 1 },
+
+  # Moral complexity
+  { text = "There were no good choices here", weight = 2 },
+  { text = "Everyone had reasons you didn't know", weight = 1 },
+  { text = "The truth makes simple judgment impossible", weight = 1 },
+  { text = "You understand why they did it now", weight = 1 },
+  { text = "Both sides had legitimate grievances", weight = 1 },
+
+  # Strange connections
+  { text = "This connects to something from your past", weight = 1 },
+  { text = "A pattern emerges you didn't see before", weight = 1 },
+  { text = "This was not coincidence", weight = 1 },
+  { text = "Someone has been watching your progress", weight = 1 },
+  { text = "Events were orchestrated to bring you here", weight = 1 },
+]
+
+# -----------------------------------------------------------------------------
+# DELAYED CONSEQUENCES - Effects that manifest later
+# -----------------------------------------------------------------------------
+[delayed_consequences]
+entries = [
+  # Seeds planted
+  { text = "Someone remembers what you did here", weight = 3 },
+  { text = "Word will spread, eventually", weight = 2 },
+  { text = "This will come up again", weight = 2 },
+  { text = "A survivor will remember", weight = 1 },
+  { text = "Evidence of your involvement exists", weight = 1 },
+
+  # Debts accrued
+  { text = "A favor is owed, to be called in later", weight = 2 },
+  { text = "You've created an obligation", weight = 1 },
+  { text = "Someone feels they owe you", weight = 1 },
+  { text = "A debt must eventually be repaid", weight = 1 },
+
+  # Grudges formed
+  { text = "Someone plots revenge", weight = 2 },
+  { text = "An enemy bides their time", weight = 1 },
+  { text = "A family will not forget", weight = 1 },
+  { text = "Hatred smolders, waiting", weight = 1 },
+  { text = "Someone learns of your involvement", weight = 2 },
+
+  # Changes in motion
+  { text = "Events are set in motion that cannot be stopped", weight = 2 },
+  { text = "The balance of power begins to shift", weight = 1 },
+  { text = "Consequences ripple outward slowly", weight = 2 },
+  { text = "This changes the trajectory of events", weight = 1 },
+  { text = "A chain reaction begins", weight = 1 },
+
+  # Future opportunities
+  { text = "This opens possibilities down the road", weight = 2 },
+  { text = "A door opens that you'll find later", weight = 1 },
+  { text = "Someone watches with interest", weight = 1 },
+  { text = "Your name is noted for future reference", weight = 1 },
+  { text = "This qualifies you for something", weight = 1 },
+
+  # Knowledge gained
+  { text = "You learned something that will matter later", weight = 2 },
+  { text = "A piece of a larger puzzle", weight = 1 },
+  { text = "Context you'll need for future events", weight = 1 },
+  { text = "A name or place to remember", weight = 2 },
+]
+
+# -----------------------------------------------------------------------------
+# IRONIC CONSEQUENCES - When results are opposite of intent
+# -----------------------------------------------------------------------------
+[ironic_consequences]
+entries = [
+  # Opposite effects
+  { text = "Your mercy creates a greater threat", weight = 2 },
+  { text = "Your cruelty inspires resistance", weight = 1 },
+  { text = "Helping makes things worse", weight = 2 },
+  { text = "Standing aside would have been better", weight = 1 },
+  { text = "Your protection becomes a prison", weight = 1 },
+
+  # Unexpected beneficiaries
+  { text = "Your enemies benefit from your success", weight = 1 },
+  { text = "The wrong people learn from your example", weight = 1 },
+  { text = "Your sacrifice empowers the unworthy", weight = 1 },
+  { text = "Your failure helps those who deserve it", weight = 1 },
+
+  # Circular outcomes
+  { text = "You've become what you fought against", weight = 1 },
+  { text = "The cycle repeats with you in a new role", weight = 1 },
+  { text = "You've created the next version of this problem", weight = 1 },
+  { text = "History will repeat because of what you did", weight = 1 },
+
+  # Self-fulfilling prophecy
+  { text = "Your attempts to prevent this caused it", weight = 2 },
+  { text = "Running toward safety led you to danger", weight = 1 },
+  { text = "What you feared happened because you feared it", weight = 1 },
+  { text = "Your caution created the opening", weight = 1 },
+
+  # Poetic justice
+  { text = "You suffer the fate you gave others", weight = 1 },
+  { text = "Your methods are used against you", weight = 1 },
+  { text = "Your allies treat you as you treated enemies", weight = 1 },
+  { text = "The tool you used now threatens you", weight = 1 },
+]
+
+# -----------------------------------------------------------------------------
+# MIXED CONSEQUENCES - Both good and bad results
+# -----------------------------------------------------------------------------
+[mixed_consequences]
+entries = [
+  # Trade-offs
+  { text = "Gained an ally, but made an enemy", weight = 2 },
+  { text = "Saved lives, but lost resources", weight = 1 },
+  { text = "Won the battle, position weakened", weight = 1 },
+  { text = "Reputation improved here, damaged there", weight = 2 },
+  { text = "Achieved goal, but at personal cost", weight = 2 },
+
+  # Different audiences
+  { text = "Some praise you, others condemn", weight = 2 },
+  { text = "Heroes to some, villains to others", weight = 1 },
+  { text = "Faction A is pleased, Faction B is furious", weight = 2 },
+  { text = "Locals celebrate, authorities investigate", weight = 1 },
+
+  # Short vs long term
+  { text = "Immediate success, future complications", weight = 2 },
+  { text = "Short-term loss, long-term gain", weight = 1 },
+  { text = "Solved today's problem, created tomorrow's", weight = 2 },
+  { text = "Invested now for later benefit", weight = 1 },
+
+  # Personal vs external
+  { text = "Good for others, hard on you", weight = 1 },
+  { text = "Benefited yourself at others' expense", weight = 1 },
+  { text = "Your success came from another's sacrifice", weight = 1 },
+  { text = "Others prosper while you struggle", weight = 1 },
+
+  # Partial success
+  { text = "Achieved part of your goal", weight = 2 },
+  { text = "Succeeded, but not the way you planned", weight = 2 },
+  { text = "Got what you asked for, not what you needed", weight = 1 },
+  { text = "Victory, but at unexpected cost", weight = 2 },
+  { text = "The mission succeeded, the purpose failed", weight = 1 },
+]
+
+# -----------------------------------------------------------------------------
+# POLITICAL CONSEQUENCES - Effects on power structures
+# -----------------------------------------------------------------------------
+[political_consequences]
+entries = [
+  # Power shifts
+  { text = "A faction's influence grows", weight = 2 },
+  { text = "A leader is weakened or strengthened", weight = 2 },
+  { text = "The balance of power shifts", weight = 2 },
+  { text = "A power vacuum is created", weight = 1 },
+  { text = "Alliances form or dissolve", weight = 1 },
+
+  # Authority responses
+  { text = "Authorities take notice", weight = 2 },
+  { text = "Investigation is launched", weight = 1 },
+  { text = "New rules or restrictions enacted", weight = 1 },
+  { text = "Enforcement increases in the area", weight = 1 },
+  { text = "Officials seek scapegoats", weight = 1 },
+
+  # Social effects
+  { text = "Public opinion shifts", weight = 2 },
+  { text = "Unrest increases or decreases", weight = 1 },
+  { text = "People choose sides", weight = 1 },
+  { text = "A movement gains or loses momentum", weight = 1 },
+  { text = "Fear spreads or subsides", weight = 1 },
+
+  # Diplomatic effects
+  { text = "Relations between groups change", weight = 2 },
+  { text = "A truce is threatened or enabled", weight = 1 },
+  { text = "Negotiations begin or collapse", weight = 1 },
+  { text = "An insult or offense is registered", weight = 1 },
+  { text = "Formal complaint is lodged", weight = 1 },
+
+  # Economic effects
+  { text = "Trade routes affected", weight = 1 },
+  { text = "Prices shift in response", weight = 1 },
+  { text = "Resources become scarce or available", weight = 1 },
+  { text = "Economic interests mobilize", weight = 1 },
+]
+
+# -----------------------------------------------------------------------------
+# SUPERNATURAL CONSEQUENCES - For settings with mystical elements
+# -----------------------------------------------------------------------------
+[supernatural_consequences]
+entries = [
+  # Spiritual effects
+  { text = "Something takes notice of you", weight = 2 },
+  { text = "A ward or protection is weakened", weight = 1 },
+  { text = "The veil between worlds thins here", weight = 1 },
+  { text = "A debt is owed to powers beyond", weight = 1 },
+  { text = "Something marks you for attention", weight = 1 },
+
+  # Magical effects
+  { text = "Residual energy lingers at this place", weight = 2 },
+  { text = "The land itself is affected", weight = 1 },
+  { text = "A curse is lifted or laid", weight = 1 },
+  { text = "Magical balance shifts", weight = 1 },
+  { text = "Power flows to or from something", weight = 1 },
+
+  # Prophetic elements
+  { text = "A prophecy advances", weight = 1 },
+  { text = "An omen is fulfilled", weight = 1 },
+  { text = "Fate's threads tangle", weight = 1 },
+  { text = "A pattern completes or breaks", weight = 1 },
+
+  # Entity responses
+  { text = "A being's attention is drawn here", weight = 1 },
+  { text = "Something old awakens", weight = 1 },
+  { text = "A pact is honored or violated", weight = 1 },
+  { text = "Something is summoned or banished", weight = 1 },
+]

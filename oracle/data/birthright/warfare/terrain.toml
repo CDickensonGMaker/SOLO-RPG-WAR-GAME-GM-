@@ -1,0 +1,380 @@
+# Birthright Domain-Level Warfare - Terrain Types and Modifiers
+# Compatible with Oracle WargameAI system
+# Defines how terrain affects unit movement, combat, and tactics
+
+# =============================================================================
+# BASIC TERRAIN TYPES
+# =============================================================================
+
+[[terrain]]
+name = "Plains"
+type = "open"
+description = "Flat, open grassland ideal for cavalry maneuvers"
+movement_modifier = 0
+defense_modifier = 0
+attack_modifier = 0
+[terrain.unit_modifiers]
+cavalry = { movement = "+1", attack = "+1", description = "Open ground favors mounted units" }
+infantry = { movement = "0", attack = "0" }
+archers = { movement = "0", attack = "0", description = "Clear lines of fire" }
+siege = { movement = "-1", attack = "0", description = "Difficult to position" }
+[terrain.tactical_notes]
+advantages = ["Cavalry charges at full effectiveness", "Clear sightlines for ranged units", "Easy to maneuver formations"]
+disadvantages = ["No natural cover", "Difficult to hold against superior numbers", "Vulnerable to flanking"]
+birthright_notes = "Common in Anuire and the Khinasi basin. Anuirean knights excel here."
+
+[[terrain]]
+name = "Hills"
+type = "elevated"
+description = "Rolling hills and elevated ground providing tactical advantage"
+movement_modifier = -1
+defense_modifier = "+1"
+attack_modifier = 0
+[terrain.unit_modifiers]
+cavalry = { movement = "-1", attack = "0", description = "Difficult charges uphill" }
+infantry = { movement = "0", attack = "+1 from high ground" }
+archers = { movement = "0", attack = "+1 from elevation", description = "Extended range and visibility" }
+siege = { movement = "-2", attack = "+1 downhill bombardment" }
+[terrain.tactical_notes]
+advantages = ["Defensive bonus for holders", "Extended visibility", "Ranged advantage downhill"]
+disadvantages = ["Slower movement", "Cavalry less effective", "Difficult to retreat from"]
+birthright_notes = "Highland terrain common in Cariele, Mhoried, and the Five Peaks. Favors defensive warfare."
+
+[[terrain]]
+name = "Mountains"
+type = "rough"
+description = "Steep mountainous terrain with limited paths"
+movement_modifier = -2
+defense_modifier = "+2"
+attack_modifier = -1
+[terrain.unit_modifiers]
+cavalry = { movement = "-3", attack = "-2", description = "Nearly impassable for mounted units" }
+infantry = { movement = "-1", attack = "0" }
+archers = { movement = "-1", attack = "0", description = "Limited positions" }
+siege = { movement = "Cannot move", attack = "Limited deployment" }
+[terrain.tactical_notes]
+advantages = ["Excellent defensive positions", "Channeled approach routes", "Ambush opportunities"]
+disadvantages = ["Extremely slow movement", "Cavalry nearly useless", "Supply lines vulnerable"]
+birthright_notes = "The Iron Peaks, Stonecrown Mountains, and Giantdowns. Dwarven and orog strongholds."
+
+[[terrain]]
+name = "Forest"
+type = "concealing"
+description = "Dense woodland limiting visibility and formation fighting"
+movement_modifier = -1
+defense_modifier = "+1"
+attack_modifier = 0
+[terrain.unit_modifiers]
+cavalry = { movement = "-2", attack = "-1", description = "Trees prevent charges and maneuver" }
+infantry = { movement = "0", attack = "0" }
+archers = { movement = "0", attack = "-1", description = "Limited sightlines" }
+scouts = { movement = "+1", attack = "+1", description = "Natural environment for irregular troops" }
+[terrain.tactical_notes]
+advantages = ["Natural concealment", "Negates cavalry advantage", "Ambush terrain"]
+disadvantages = ["Difficult to maintain formations", "Limited visibility", "Fire hazard"]
+birthright_notes = "Aelvinnwode, Erebannien, and northern Rjurik. Elven and Rjurik forces excel here."
+
+[[terrain]]
+name = "Swamp"
+type = "hazardous"
+description = "Waterlogged ground, treacherous footing, disease risk"
+movement_modifier = -2
+defense_modifier = 0
+attack_modifier = -1
+[terrain.unit_modifiers]
+cavalry = { movement = "-3", attack = "-2", description = "Horses flounder in mud" }
+infantry = { movement = "-1", attack = "-1", description = "Difficult footing" }
+archers = { movement = "-1", attack = "-1", description = "Wet bowstrings" }
+monsters = { movement = "0", attack = "+1", description = "Many monsters native to swamps" }
+[terrain.tactical_notes]
+advantages = ["Difficult for invaders", "Natural monster allies", "Disease affects attackers"]
+disadvantages = ["Limits all troop types", "Disease risk", "Difficult supply lines"]
+birthright_notes = "Mistmoor, parts of Vosgaard, and The Chimaeron. Home to trolls and other creatures."
+
+[[terrain]]
+name = "River"
+type = "obstacle"
+description = "Significant waterway requiring crossing"
+movement_modifier = -2
+defense_modifier = "+2 for defenders"
+attack_modifier = "-1 for attackers crossing"
+[terrain.unit_modifiers]
+cavalry = { movement = "-2 crossing", attack = "-1", description = "Vulnerable while crossing" }
+infantry = { movement = "-1 crossing", attack = "-1 while in water" }
+archers = { movement = "-1", attack = "+1 vs crossing enemies", description = "Easy targets" }
+naval = { movement = "+2", attack = "+1", description = "Natural environment" }
+[terrain.tactical_notes]
+advantages = ["Excellent defensive line", "Channeled crossing points", "Archers devastating vs crossing troops"]
+disadvantages = ["Can trap your own forces", "Fordable at multiple points", "Bridges critical"]
+birthright_notes = "The Maesil, Krakennauricht, and Ruide rivers define many borders. River crossings are major battles."
+
+[[terrain]]
+name = "Coast"
+type = "amphibious"
+description = "Shoreline terrain allowing naval support"
+movement_modifier = 0
+defense_modifier = 0
+attack_modifier = 0
+[terrain.unit_modifiers]
+cavalry = { movement = "0", attack = "0", description = "Sand may slow charges" }
+infantry = { movement = "0", attack = "0" }
+naval = { movement = "Adjacent", attack = "+1 bombardment", description = "Can support land forces" }
+marines = { movement = "+1", attack = "+1", description = "Trained for amphibious operations" }
+[terrain.tactical_notes]
+advantages = ["Naval support possible", "Escape route by sea", "Supply by ship"]
+disadvantages = ["Vulnerable to naval blockade", "Limited retreat routes inland", "Storms dangerous"]
+birthright_notes = "Brecht coast critical for trade. Khinasi coast faces piracy. Naval power projects here."
+
+[[terrain]]
+name = "Castle"
+type = "fortification"
+description = "Stone fortress with walls, towers, and defensive works"
+movement_modifier = "N/A"
+defense_modifier = "+4"
+attack_modifier = "-2 for attackers"
+[terrain.unit_modifiers]
+infantry_defending = { defense = "+4", description = "Stone walls provide excellent protection" }
+infantry_attacking = { attack = "-2", description = "Must scale walls or breach gates" }
+cavalry = { attack = "Cannot participate until breach", description = "Useless against walls" }
+archers_defending = { attack = "+2", description = "Fire from walls and towers" }
+siege = { attack = "+2 vs walls", description = "Essential for breaching" }
+[terrain.tactical_notes]
+advantages = ["Massive defensive bonus", "Can hold with small force", "Forces attacker to siege"]
+disadvantages = ["Can be bypassed", "Starvation if besieged", "Requires garrison"]
+birthright_notes = "Every domain has castles. The Iron Throne in Anuire, Kira's Tower in Khinasi. Sieges common."
+
+[[terrain]]
+name = "City"
+type = "urban"
+description = "Walled city with streets, buildings, and civilian population"
+movement_modifier = -1
+defense_modifier = "+3"
+attack_modifier = "-1 for attackers"
+[terrain.unit_modifiers]
+cavalry = { movement = "-2", attack = "-2", description = "Narrow streets prevent maneuver" }
+infantry = { movement = "0", attack = "0", description = "Street fighting favors infantry" }
+archers = { movement = "0", attack = "-1", description = "Limited sightlines between buildings" }
+irregulars = { attack = "+1", description = "Urban warfare suits irregular tactics" }
+[terrain.tactical_notes]
+advantages = ["Strong defensive position", "Multiple defensive lines", "Civilian support possible"]
+disadvantages = ["Collateral damage concerns", "Fire risk", "Disease in prolonged siege"]
+birthright_notes = "Anuire City, Ilien, Ariya, Berhagen. Urban battles can devastate valuable holdings."
+
+# =============================================================================
+# SPECIAL TERRAIN TYPES - Birthright Specific
+# =============================================================================
+
+[[terrain]]
+name = "Source Site"
+type = "magical"
+description = "Location of concentrated mebhaighl, the magical essence of the land"
+movement_modifier = 0
+defense_modifier = 0
+attack_modifier = 0
+[terrain.unit_modifiers]
+blooded = { special = "Bloodline abilities enhanced" }
+wizards = { attack = "+2 for realm magic", description = "Abundant magical power" }
+undead = { attack = "-1", defense = "-1", description = "Life energy opposes undeath" }
+[terrain.tactical_notes]
+advantages = ["Magical power amplified", "Bloodline abilities stronger", "Strategic magical value"]
+disadvantages = ["Attracts magical attention", "Wild magic possible", "Valuable target"]
+birthright_notes = "Sources power realm magic. The Eyeless One, Rhoubhe, and wizard regents covet these sites."
+
+[[terrain]]
+name = "Shadow Crossing"
+type = "planar"
+description = "Location where the Shadow World touches Cerilia"
+movement_modifier = 0
+defense_modifier = -1
+attack_modifier = 0
+[terrain.unit_modifiers]
+undead = { attack = "+2", defense = "+1", description = "Shadow energy empowers undead" }
+living = { morale = "-1", description = "Unnatural dread" }
+blooded_azrai = { special = "Azrai bloodline powers enhanced" }
+[terrain.tactical_notes]
+advantages = ["Undead reinforcement possible", "Azrai powers enhanced", "Strategic shadow access"]
+disadvantages = ["Living troops demoralized", "Unpredictable phenomena", "Things come through"]
+birthright_notes = "The Gorgon exploits these. The Cold Rider and other awnsheghlien draw power here."
+
+[[terrain]]
+name = "Ancient Battlefield"
+type = "haunted"
+description = "Site of historical battle where spirits linger"
+movement_modifier = 0
+defense_modifier = 0
+attack_modifier = 0
+[terrain.unit_modifiers]
+all = { special = "Spirits may manifest and intervene" }
+necromancers = { special = "Can raise the fallen", description = "Abundant corpses" }
+[terrain.tactical_notes]
+advantages = ["Necromantic opportunity", "Historical significance may inspire", "Spirits may aid worthy cause"]
+disadvantages = ["Unpredictable ghostly intervention", "Soldiers superstitious", "May attract the Lost"]
+birthright_notes = "Deismaar's echo. The Battle of Mount Deismaar changed everything. Other sites carry memory."
+
+[[terrain]]
+name = "Elven Ruins"
+type = "magical_ruins"
+description = "Remains of ancient Sidhe civilization"
+movement_modifier = -1
+defense_modifier = "+1"
+attack_modifier = 0
+[terrain.unit_modifiers]
+elves = { movement = "+1", attack = "+1", description = "Ancestral ground" }
+humans = { morale = "-1", description = "Uncanny architecture" }
+undead = { defense = "-2", description = "Ancient wards still function" }
+[terrain.tactical_notes]
+advantages = ["Defensive structures", "Anti-undead wards", "Possible magical treasures"]
+disadvantages = ["Disturbing to humans", "May attract elven attention", "Traps still active"]
+birthright_notes = "Scattered across Cerilia, especially in Aelvinnwode. The Sidhe remember their glory."
+
+[[terrain]]
+name = "Temple Grounds"
+type = "consecrated"
+description = "Land blessed by divine power"
+movement_modifier = 0
+defense_modifier = "+1"
+attack_modifier = 0
+[terrain.unit_modifiers]
+temple_troops = { attack = "+1", morale = "+1", description = "Fighting on holy ground" }
+undead = { attack = "-2", defense = "-2", description = "Divine power opposes undeath" }
+opposing_faith = { morale = "-1", description = "Enemy god's domain" }
+[terrain.tactical_notes]
+advantages = ["Morale bonus for faithful", "Undead weakened", "Divine intervention possible"]
+disadvantages = ["Sacrilege damages relations with temple", "Other faiths penalized", "Strategic value makes it target"]
+birthright_notes = "Haelyn's temples fortified. Ruornil's hidden. Belinik's bloody. Temple loyalty matters."
+
+# =============================================================================
+# WEATHER MODIFIERS - Affect terrain and combat
+# =============================================================================
+
+[weather]
+
+[[weather.types]]
+name = "Clear"
+description = "Good visibility and conditions"
+movement_modifier = 0
+ranged_modifier = 0
+morale_modifier = 0
+
+[[weather.types]]
+name = "Rain"
+description = "Rainfall reducing visibility and making ground slick"
+movement_modifier = -1
+ranged_modifier = -1
+morale_modifier = 0
+special = ["Cavalry charges less effective", "Bowstrings may fail", "Rivers rise"]
+
+[[weather.types]]
+name = "Storm"
+description = "Heavy rain, wind, and possible lightning"
+movement_modifier = -2
+ranged_modifier = -2
+morale_modifier = -1
+special = ["Battle may need to pause", "Lightning strike possible", "Flooding risk"]
+
+[[weather.types]]
+name = "Fog"
+description = "Reduced visibility, sounds muffled"
+movement_modifier = 0
+ranged_modifier = -3
+morale_modifier = -1
+special = ["Units may get lost", "Surprise attacks easier", "Command difficult"]
+
+[[weather.types]]
+name = "Snow"
+description = "Snowfall and cold conditions"
+movement_modifier = -1
+ranged_modifier = -1
+morale_modifier = -1
+special = ["Non-Rjurik/Vos suffer additional -1", "Tracks visible", "Frostbite risk"]
+
+[[weather.types]]
+name = "Blizzard"
+description = "Severe winter storm"
+movement_modifier = -3
+ranged_modifier = "-Impossible"
+morale_modifier = -2
+special = ["Battle may be impossible", "Lost units possible", "Rjurik/Vos only -1 movement"]
+
+[[weather.types]]
+name = "Heat Wave"
+description = "Extreme heat, especially in Khinasi"
+movement_modifier = -1
+ranged_modifier = 0
+morale_modifier = -1
+special = ["Armor penalties doubled", "Water critical", "Khinasi unaffected"]
+
+[[weather.types]]
+name = "Sandstorm"
+description = "Desert storm of blinding sand"
+movement_modifier = -2
+ranged_modifier = -3
+morale_modifier = -1
+special = ["Khinasi only -1 movement", "Equipment damage", "Visibility near zero"]
+
+# =============================================================================
+# DOCTRINE-TERRAIN INTERACTIONS
+# =============================================================================
+
+[doctrine_terrain]
+
+[doctrine_terrain.horde]
+preferred = ["Plains", "Hills"]
+avoided = ["Mountains", "Swamp", "Castle"]
+notes = "Mass tactics need room to maneuver and overwhelm"
+
+[doctrine_terrain.elite]
+preferred = ["Plains", "Castle", "City"]
+avoided = ["Swamp", "Mountains"]
+notes = "Elite forces excel with proper ground or fortifications"
+
+[doctrine_terrain.defensive]
+preferred = ["Castle", "Hills", "City", "River"]
+avoided = ["Plains", "Swamp"]
+notes = "Defensive doctrine needs terrain that provides advantage"
+
+[doctrine_terrain.alpha_strike]
+preferred = ["Plains", "Hills", "Forest edge"]
+avoided = ["Mountains", "Castle", "Swamp"]
+notes = "Shock assault needs room to strike and room to pursue"
+
+[doctrine_terrain.guerrilla]
+preferred = ["Forest", "Mountains", "Swamp", "Hills"]
+avoided = ["Plains", "Castle", "City"]
+notes = "Hit and run needs terrain that provides concealment and escape"
+
+# =============================================================================
+# REGIONAL TERRAIN PROFILES - Typical terrain by Birthright region
+# =============================================================================
+
+[regional_profiles]
+
+[regional_profiles.anuire_heartland]
+common_terrain = ["Plains", "Hills", "River"]
+fortifications = "Extensive castle network, ancient roads"
+notes = "Cavalry country. Knights dominate. Rivers define borders."
+
+[regional_profiles.rjurik_highlands]
+common_terrain = ["Forest", "Hills", "Mountains"]
+fortifications = "Scattered holdfasts, natural defenses"
+notes = "Forest warfare. Guerrilla tactics. Winter is an ally."
+
+[regional_profiles.khinasi_basin]
+common_terrain = ["Plains", "Coast", "Hills"]
+fortifications = "Walled cities, coastal fortresses"
+notes = "Mobile warfare. Cavalry raids. Desert edges deadly."
+
+[regional_profiles.brecht_coast]
+common_terrain = ["Coast", "Hills", "Plains"]
+fortifications = "Port cities, guild strongholds"
+notes = "Naval power critical. Trade routes are strategic targets."
+
+[regional_profiles.vosgaard]
+common_terrain = ["Forest", "Swamp", "Plains"]
+fortifications = "Tribal holdfasts, few permanent structures"
+notes = "Harsh land. Raiders prevail. Cold kills invaders."
+
+[regional_profiles.gorgons_crown]
+common_terrain = ["Mountains", "Shadow Crossing", "Ancient Battlefield"]
+fortifications = "Kal-Saitharak and lesser fortresses"
+notes = "Undead legions. Mountain passes. The Gorgon's domain."

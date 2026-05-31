@@ -1,0 +1,387 @@
+# Grimdark Future - Wargear Compendium
+# Equipment catalog for One Page Rules sci-fi wargame
+
+[metadata]
+name = "Grimdark Future Wargear"
+version = "1.0"
+description = "Equipment catalog for Grimdark Future armies"
+
+# =============================================================================
+# RANGED WEAPONS - BASIC
+# =============================================================================
+
+[[weapons]]
+name = "Pistol"
+category = "ranged"
+range = "12\""
+attacks = "1"
+cost = 0
+description = "Standard sidearm"
+keywords = ["Basic", "Sidearm"]
+
+[[weapons]]
+name = "Rifle"
+category = "ranged"
+range = "24\""
+attacks = "1"
+cost = 0
+description = "Standard infantry weapon"
+keywords = ["Basic"]
+
+[[weapons]]
+name = "Carbine"
+category = "ranged"
+range = "18\""
+attacks = "2"
+cost = 5
+description = "Rapid-fire short rifle"
+keywords = ["Assault"]
+
+[[weapons]]
+name = "Shotgun"
+category = "ranged"
+range = "12\""
+attacks = "2"
+ap = "1"
+cost = 5
+description = "Close-range devastation"
+keywords = ["Assault"]
+
+# =============================================================================
+# RANGED WEAPONS - SPECIAL
+# =============================================================================
+
+[[weapons]]
+name = "Flamethrower"
+category = "ranged"
+range = "12\""
+attacks = "6"
+cost = 15
+description = "Area denial weapon"
+keywords = ["Auto-Hit"]
+
+[[weapons]]
+name = "Fusion Rifle"
+category = "ranged"
+range = "12\""
+attacks = "1"
+ap = "4"
+cost = 20
+description = "Anti-armor melta weapon"
+keywords = ["Deadly(3)"]
+
+[[weapons]]
+name = "Plasma Rifle"
+category = "ranged"
+range = "24\""
+attacks = "1"
+ap = "2"
+cost = 15
+description = "Superheated plasma"
+keywords = ["Deadly(3)"]
+
+[[weapons]]
+name = "Sniper Rifle"
+category = "ranged"
+range = "36\""
+attacks = "1"
+ap = "1"
+cost = 15
+description = "Long-range precision"
+keywords = ["Sniper"]
+
+[[weapons]]
+name = "Grenade Launcher"
+category = "ranged"
+range = "24\""
+attacks = "1"
+cost = 10
+description = "Indirect fire support"
+keywords = ["Blast(3)"]
+
+# =============================================================================
+# RANGED WEAPONS - HEAVY
+# =============================================================================
+
+[[weapons]]
+name = "Heavy Machinegun"
+category = "ranged"
+range = "36\""
+attacks = "3"
+ap = "1"
+cost = 20
+description = "Sustained fire weapon"
+keywords = ["Heavy"]
+
+[[weapons]]
+name = "Autocannon"
+category = "ranged"
+range = "48\""
+attacks = "2"
+ap = "2"
+cost = 25
+description = "Medium anti-vehicle"
+keywords = ["Heavy", "Deadly(3)"]
+
+[[weapons]]
+name = "Missile Launcher"
+category = "ranged"
+range = "48\""
+attacks = "1"
+ap = "3"
+cost = 30
+description = "Versatile heavy weapon"
+keywords = ["Heavy", "Deadly(3)"]
+
+[[weapons]]
+name = "Lascannon"
+category = "ranged"
+range = "48\""
+attacks = "1"
+ap = "4"
+cost = 35
+description = "High-powered anti-armor"
+keywords = ["Heavy", "Deadly(6)"]
+
+# =============================================================================
+# MELEE WEAPONS
+# =============================================================================
+
+[[weapons]]
+name = "Combat Knife"
+category = "melee"
+range = "Melee"
+attacks = "1"
+cost = 0
+description = "Standard close combat weapon"
+keywords = ["Basic"]
+
+[[weapons]]
+name = "Energy Sword"
+category = "melee"
+range = "Melee"
+attacks = "1"
+ap = "1"
+cost = 5
+description = "Powered blade"
+keywords = ["Rending"]
+
+[[weapons]]
+name = "Energy Fist"
+category = "melee"
+range = "Melee"
+attacks = "1"
+ap = "2"
+cost = 10
+description = "Powered gauntlet"
+keywords = ["Deadly(3)"]
+
+[[weapons]]
+name = "Energy Hammer"
+category = "melee"
+range = "Melee"
+attacks = "1"
+ap = "3"
+cost = 15
+description = "Devastating two-handed weapon"
+keywords = ["Deadly(3)"]
+
+[[weapons]]
+name = "Energy Claws"
+category = "melee"
+range = "Melee"
+attacks = "2"
+ap = "1"
+cost = 10
+description = "Paired powered talons"
+keywords = ["Rending"]
+
+[[weapons]]
+name = "Heavy Chainblade"
+category = "melee"
+range = "Melee"
+attacks = "2"
+ap = "1"
+cost = 10
+description = "Massive chain weapon"
+keywords = []
+
+# =============================================================================
+# GRENADES
+# =============================================================================
+
+[[weapons]]
+name = "Frag Grenades"
+category = "grenade"
+range = "6\""
+attacks = "1"
+cost = 0
+description = "Anti-infantry explosives"
+keywords = ["Blast(3)"]
+
+[[weapons]]
+name = "Krak Grenades"
+category = "grenade"
+range = "6\""
+attacks = "1"
+ap = "3"
+cost = 0
+description = "Anti-armor charges"
+keywords = ["Deadly(3)"]
+
+[[weapons]]
+name = "EMP Grenades"
+category = "grenade"
+range = "6\""
+attacks = "1"
+cost = 5
+description = "Anti-vehicle pulse"
+keywords = ["Anti-Vehicle"]
+
+# =============================================================================
+# ARMOR
+# =============================================================================
+
+[[armor]]
+name = "Light Armor"
+category = "armor"
+defense = "6+"
+cost = 0
+description = "Standard protective gear"
+keywords = ["Basic"]
+
+[[armor]]
+name = "Heavy Armor"
+category = "armor"
+defense = "4+"
+cost = 10
+description = "Reinforced plating"
+keywords = ["Heavy"]
+
+[[armor]]
+name = "Power Armor"
+category = "armor"
+defense = "3+"
+cost = 20
+description = "Powered exoskeleton"
+keywords = ["Powered"]
+
+[[armor]]
+name = "Terminator Armor"
+category = "armor"
+defense = "2+"
+cost = 35
+description = "Heavy tactical armor"
+keywords = ["Powered", "Slow"]
+
+[[armor]]
+name = "Stealth Suit"
+category = "armor"
+defense = "5+"
+cost = 15
+description = "Cloaking technology"
+keywords = ["Stealth"]
+
+# =============================================================================
+# WARGEAR
+# =============================================================================
+
+[[wargear]]
+name = "Combat Shield"
+category = "equipment"
+cost = 5
+description = "Personal defense"
+effect = "+1 to Defense in melee"
+keywords = ["Defensive"]
+
+[[wargear]]
+name = "Jump Pack"
+category = "equipment"
+cost = 15
+description = "Personal flight system"
+effect = "Fly special rule"
+keywords = ["Mobility"]
+
+[[wargear]]
+name = "Teleporter"
+category = "equipment"
+cost = 20
+description = "Short-range teleportation"
+effect = "Ambush special rule"
+keywords = ["Mobility"]
+
+[[wargear]]
+name = "Camo Cloak"
+category = "equipment"
+cost = 5
+description = "Camouflage covering"
+effect = "Stealth special rule"
+keywords = ["Stealth"]
+
+[[wargear]]
+name = "Medi-Kit"
+category = "equipment"
+cost = 10
+description = "Medical equipment"
+effect = "Medic special rule"
+keywords = ["Support"]
+
+[[wargear]]
+name = "Banner"
+category = "equipment"
+cost = 15
+description = "Unit standard"
+effect = "+1 to Morale within 12\""
+keywords = ["Leadership"]
+
+[[wargear]]
+name = "Auspex/Scanner"
+category = "equipment"
+cost = 10
+description = "Detection equipment"
+effect = "Scout special rule"
+keywords = ["Scouting"]
+
+[[wargear]]
+name = "Servo-Arm"
+category = "equipment"
+cost = 10
+description = "Mechanical appendage"
+effect = "One additional A3 AP2 melee attack"
+keywords = ["Melee Upgrade"]
+
+# =============================================================================
+# VEHICLE UPGRADES
+# =============================================================================
+
+[[vehicle_upgrade]]
+name = "Extra Armor"
+category = "vehicle"
+cost = 10
+description = "Reinforced plating"
+effect = "+1 Tough"
+keywords = ["Defensive"]
+
+[[vehicle_upgrade]]
+name = "Smoke Launchers"
+category = "vehicle"
+cost = 5
+description = "Concealment system"
+effect = "Once per game, gain Stealth until next activation"
+keywords = ["Defensive"]
+
+[[vehicle_upgrade]]
+name = "Dozer Blade"
+category = "vehicle"
+cost = 10
+description = "Ramming prow"
+effect = "Impact(3) special rule"
+keywords = ["Offensive"]
+
+[[vehicle_upgrade]]
+name = "Storm Bolter"
+category = "vehicle"
+cost = 10
+description = "Pintle-mounted weapon"
+effect = "24\" A2 weapon"
+keywords = ["Offensive"]

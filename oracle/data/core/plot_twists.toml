@@ -1,0 +1,401 @@
+# Plot Twists - Unexpected story developments for narrative generation
+# System-agnostic entries suitable for any genre or setting
+# Weight determines relative probability (higher = more common)
+
+[betrayal]
+description = "Trust shattered by those closest to the protagonists"
+entries = [
+  # Inner Circle Betrayals
+  { text = "A trusted ally has been working for the enemy all along", weight = 1 },
+  { text = "The quest giver's true motives are revealed - and they're not good", weight = 1 },
+  { text = "Someone you saved returns as an enemy", weight = 1 },
+  { text = "Your employer has sold you out", weight = 1 },
+  { text = "A family member is involved with the opposition", weight = 1 },
+  { text = "The information you've been given was deliberately false", weight = 1 },
+  { text = "Your contact is a double agent", weight = 1 },
+  { text = "Someone in your group has a hidden agenda", weight = 1 },
+  { text = "Your mentor has been manipulating you from the start", weight = 1 },
+  { text = "The person you're protecting is actually the threat", weight = 1 },
+
+  # Institutional Betrayals
+  { text = "The organization you serve has abandoned you", weight = 1 },
+  { text = "Your allies cut a deal without you", weight = 1 },
+  { text = "The promised reinforcements were never coming", weight = 1 },
+  { text = "Your faction has been compromised from within", weight = 1 },
+  { text = "The authorities you trusted are complicit", weight = 1 },
+  { text = "Your supply line has been deliberately sabotaged", weight = 1 },
+  { text = "The safe house was never safe", weight = 1 },
+  { text = "Your communications have been intercepted all along", weight = 1 },
+
+  # Personal Betrayals
+  { text = "A lover has been reporting your movements", weight = 1 },
+  { text = "Your oldest friend chose the other side", weight = 1 },
+  { text = "Someone used your compassion against you", weight = 1 },
+  { text = "The refugee you sheltered brought enemies to your door", weight = 1 },
+  { text = "Your apprentice has surpassed you and turned hostile", weight = 1 },
+  { text = "The healer has been slowly poisoning someone important", weight = 1 },
+  { text = "Your confidant has been selling your secrets", weight = 1 },
+  { text = "The one who vouched for you set you up", weight = 1 },
+
+  # Surprise Betrayals
+  { text = "The dead ally faked their death to escape with something valuable", weight = 1 },
+  { text = "Your rescuer arranged your capture in the first place", weight = 1 },
+  { text = "The friendly rival was playing a long game", weight = 1 },
+  { text = "Someone has been impersonating an ally", weight = 1 },
+  { text = "The grateful community sold you out for safety", weight = 1 },
+  { text = "Your informant feeds information both ways", weight = 1 },
+  { text = "The third party mediator serves only themselves", weight = 1 },
+  { text = "Your creation has turned against its creator", weight = 1 },
+]
+
+[revelation]
+description = "Truth unveiled that recontextualizes everything"
+entries = [
+  # Villain Revelations
+  { text = "The villain has a sympathetic motivation", weight = 1 },
+  { text = "The true enemy is someone else entirely", weight = 1 },
+  { text = "You've been fighting the wrong side", weight = 1 },
+  { text = "The villain is trying to prevent something worse", weight = 1 },
+  { text = "The enemy was created by those you serve", weight = 1 },
+  { text = "The antagonist is a future or alternate version of an ally", weight = 1 },
+  { text = "The villain's atrocities were exaggerated or fabricated", weight = 1 },
+  { text = "Your enemy is bound by forces beyond their control", weight = 1 },
+  { text = "The villain and your patron are the same person", weight = 1 },
+  { text = "The enemy wants to die but cannot", weight = 1 },
+
+  # Truth About the Mission
+  { text = "The objective was a decoy or distraction", weight = 1 },
+  { text = "The prophecy or intel was misinterpreted", weight = 1 },
+  { text = "There are no good guys in this conflict", weight = 1 },
+  { text = "The real threat is much larger than believed", weight = 1 },
+  { text = "Everything connects to something from your past", weight = 1 },
+  { text = "The treasure was never physical", weight = 1 },
+  { text = "The goal was already accomplished before you started", weight = 1 },
+  { text = "What you're protecting is already destroyed or lost", weight = 1 },
+  { text = "The mission was a test, not a real assignment", weight = 1 },
+  { text = "The quest item does something entirely different than claimed", weight = 1 },
+
+  # Personal Revelations
+  { text = "Someone presumed dead is alive", weight = 1 },
+  { text = "Someone presumed alive is dead", weight = 1 },
+  { text = "You have a connection to the enemy you didn't know about", weight = 1 },
+  { text = "Your origin is not what you believed", weight = 1 },
+  { text = "You've met the villain before but didn't know it", weight = 1 },
+  { text = "A childhood friend is central to the current conflict", weight = 1 },
+  { text = "Your skills come from a source you'd find abhorrent", weight = 1 },
+  { text = "The person you're avenging is not who you thought", weight = 1 },
+
+  # World Revelations
+  { text = "The war ended long ago but someone profits from continued conflict", weight = 1 },
+  { text = "The founding myth is a lie", weight = 1 },
+  { text = "The forbidden zone protects something, not imprisons it", weight = 1 },
+  { text = "The old enemy and old ally have switched places", weight = 1 },
+  { text = "The disaster was not natural", weight = 1 },
+  { text = "The savior figure caused the original crisis", weight = 1 },
+  { text = "The monsters are the original inhabitants", weight = 1 },
+  { text = "The barrier that protects also imprisons", weight = 1 },
+  { text = "The great victory of the past was actually a great crime", weight = 1 },
+  { text = "Two factions are secretly the same organization", weight = 1 },
+  { text = "The peace treaty has a secret clause no one speaks of", weight = 1 },
+  { text = "The disappeared people are not dead", weight = 1 },
+]
+
+[complication]
+description = "New factors that increase difficulty and complexity"
+entries = [
+  # Time Pressure
+  { text = "The timeline suddenly accelerates - no time for careful planning", weight = 2 },
+  { text = "A deadline appears that cannot be extended", weight = 1 },
+  { text = "Events are happening faster than anyone predicted", weight = 1 },
+  { text = "You learn you're already too late for the original goal", weight = 1 },
+  { text = "A rival is about to reach the objective first", weight = 1 },
+  { text = "The window of opportunity is closing", weight = 1 },
+  { text = "What was supposed to take weeks must happen in days", weight = 1 },
+
+  # New Players
+  { text = "A third party enters the conflict with their own agenda", weight = 1 },
+  { text = "Powerful new players take interest", weight = 1 },
+  { text = "An old enemy resurfaces at the worst time", weight = 1 },
+  { text = "Authorities become involved", weight = 1 },
+  { text = "A neutral party is forced to choose sides", weight = 1 },
+  { text = "Someone with leverage over you appears", weight = 1 },
+  { text = "A wildcard element enters that no one can predict", weight = 1 },
+  { text = "The victims organize and become a faction", weight = 1 },
+
+  # Changed Circumstances
+  { text = "The objective has moved or changed", weight = 1 },
+  { text = "Innocent lives are now at stake", weight = 1 },
+  { text = "Success will come at a terrible cost", weight = 1 },
+  { text = "You need the help of an enemy", weight = 1 },
+  { text = "The solution creates a bigger problem", weight = 1 },
+  { text = "Someone important has been captured", weight = 1 },
+  { text = "Resources you counted on are unavailable", weight = 1 },
+  { text = "The terrain or environment has changed dramatically", weight = 1 },
+  { text = "Your identity or cover has been compromised", weight = 1 },
+  { text = "The rules of engagement have changed", weight = 1 },
+
+  # Personal Complications
+  { text = "Someone you care about is on the other side", weight = 1 },
+  { text = "Your actions will harm people who don't deserve it", weight = 1 },
+  { text = "A personal obligation conflicts with the mission", weight = 1 },
+  { text = "Your reputation precedes you - and it's not helpful here", weight = 1 },
+  { text = "An old debt is called in at the worst time", weight = 1 },
+  { text = "Someone from your past recognizes you", weight = 1 },
+  { text = "Completing the mission means betraying your principles", weight = 1 },
+
+  # Resource Complications
+  { text = "Supplies have been stolen or destroyed", weight = 1 },
+  { text = "Your transportation is gone", weight = 1 },
+  { text = "Money runs out at a critical moment", weight = 1 },
+  { text = "A key tool or weapon is broken or lost", weight = 1 },
+  { text = "You're cut off from support", weight = 1 },
+  { text = "The expert you need is dead, missing, or hostile", weight = 1 },
+  { text = "The map or information is outdated or wrong", weight = 1 },
+  { text = "Someone you need is incapacitated", weight = 1 },
+]
+
+[reversal]
+description = "Situations that flip dynamics or expectations"
+entries = [
+  # Role Reversals
+  { text = "The hunter becomes the hunted", weight = 1 },
+  { text = "Your greatest strength becomes a liability", weight = 1 },
+  { text = "An enemy becomes a necessary ally", weight = 1 },
+  { text = "The rescuer needs rescuing", weight = 1 },
+  { text = "The student must now teach", weight = 1 },
+  { text = "The leader must now follow", weight = 1 },
+  { text = "The interrogator becomes the interrogated", weight = 1 },
+  { text = "The judge stands accused", weight = 1 },
+
+  # Outcome Reversals
+  { text = "Victory leads to a worse situation", weight = 1 },
+  { text = "What seemed like failure was actually success", weight = 1 },
+  { text = "The curse was actually a blessing", weight = 1 },
+  { text = "The blessing reveals its true cost", weight = 1 },
+  { text = "Defeat opens an unexpected door", weight = 1 },
+  { text = "Winning this battle loses the war", weight = 1 },
+  { text = "The worst outcome prevents something even worse", weight = 1 },
+  { text = "Getting what you wanted shows you wanted wrong", weight = 1 },
+
+  # Power Reversals
+  { text = "The powerless gain sudden leverage", weight = 1 },
+  { text = "The mighty are brought low", weight = 1 },
+  { text = "Former servants now hold the power", weight = 1 },
+  { text = "The prisoner controls the jail", weight = 1 },
+  { text = "Knowledge shifts the balance of power", weight = 1 },
+  { text = "The masses rise against their masters", weight = 1 },
+  { text = "A perceived weakness is the only way forward", weight = 1 },
+
+  # Situational Reversals
+  { text = "The rules suddenly change", weight = 1 },
+  { text = "Safe haven becomes a trap", weight = 1 },
+  { text = "Dangerous territory offers sanctuary", weight = 1 },
+  { text = "The lie becomes truth", weight = 1 },
+  { text = "The symbol becomes literal", weight = 1 },
+  { text = "The metaphor manifests physically", weight = 1 },
+  { text = "What was hidden must now be displayed", weight = 1 },
+  { text = "What was displayed was hiding something", weight = 1 },
+]
+
+[escalation]
+description = "Stakes rise and conflicts expand"
+entries = [
+  # Scope Escalation
+  { text = "The conflict goes public or political", weight = 1 },
+  { text = "What was personal becomes war", weight = 1 },
+  { text = "The situation spreads to new areas", weight = 1 },
+  { text = "Local events trigger regional consequences", weight = 1 },
+  { text = "Multiple conflicts merge into one", weight = 1 },
+  { text = "The problem is spreading and cannot be contained", weight = 1 },
+  { text = "What affected few now affects many", weight = 1 },
+  { text = "Other factions are being drawn in", weight = 1 },
+
+  # Power Escalation
+  { text = "Powerful new players take interest", weight = 1 },
+  { text = "Supernatural or unusual forces manifest", weight = 1 },
+  { text = "The enemy reveals they've been holding back", weight = 1 },
+  { text = "Ancient powers awaken", weight = 1 },
+  { text = "The arms race intensifies", weight = 1 },
+  { text = "Forbidden methods are now on the table", weight = 1 },
+  { text = "The gloves come off on all sides", weight = 1 },
+  { text = "Someone unleashes something they cannot control", weight = 1 },
+
+  # Stakes Escalation
+  { text = "The stakes increase dramatically", weight = 1 },
+  { text = "Failure now means total catastrophe", weight = 1 },
+  { text = "The threat extends to everything you care about", weight = 1 },
+  { text = "This is now about survival, not victory", weight = 1 },
+  { text = "The point of no return is crossed", weight = 1 },
+  { text = "Compromise is no longer possible", weight = 1 },
+  { text = "The cost of failure becomes unthinkable", weight = 1 },
+  { text = "Even success will leave permanent scars", weight = 1 },
+
+  # Consequence Escalation
+  { text = "Collateral damage mounts", weight = 1 },
+  { text = "The body count rises", weight = 1 },
+  { text = "Environmental destruction spreads", weight = 1 },
+  { text = "Trust erodes between all parties", weight = 1 },
+  { text = "Each action provokes stronger reaction", weight = 1 },
+  { text = "The cycle of violence accelerates", weight = 1 },
+  { text = "What was reversible becomes permanent", weight = 1 },
+]
+
+[personal]
+description = "The conflict becomes deeply personal"
+entries = [
+  # Direct Threats
+  { text = "The conflict becomes deeply personal", weight = 1 },
+  { text = "A loved one is directly threatened", weight = 1 },
+  { text = "Your home or sanctuary is violated", weight = 1 },
+  { text = "Someone you care about is taken hostage", weight = 1 },
+  { text = "Your reputation is deliberately destroyed", weight = 1 },
+  { text = "Everything you built is being undone", weight = 1 },
+  { text = "Your legacy is at stake", weight = 1 },
+
+  # Past Connections
+  { text = "Your past catches up with you", weight = 1 },
+  { text = "You recognize someone unexpected", weight = 1 },
+  { text = "An old debt comes due at the worst time", weight = 1 },
+  { text = "Your reputation precedes you - for better or worse", weight = 1 },
+  { text = "A childhood promise must now be kept", weight = 1 },
+  { text = "Something you buried long ago resurfaces", weight = 1 },
+  { text = "The consequences of old choices arrive", weight = 1 },
+  { text = "A forgotten enemy remembers you", weight = 1 },
+
+  # Identity Challenges
+  { text = "You must become someone you despise to succeed", weight = 1 },
+  { text = "Your core beliefs are challenged", weight = 1 },
+  { text = "Everything you knew about yourself is questioned", weight = 1 },
+  { text = "You must face your greatest fear", weight = 1 },
+  { text = "The mission requires betraying your principles", weight = 1 },
+  { text = "Your identity is stolen or compromised", weight = 1 },
+  { text = "You discover you're capable of things you denied", weight = 1 },
+
+  # Emotional Stakes
+  { text = "You must choose between people you love", weight = 1 },
+  { text = "Success means losing someone forever", weight = 1 },
+  { text = "The truth will destroy someone you care about", weight = 1 },
+  { text = "Your actions will make you a hypocrite", weight = 1 },
+  { text = "You must ask forgiveness from an enemy", weight = 1 },
+  { text = "The only way forward is through grief", weight = 1 },
+  { text = "What you want and what's right diverge", weight = 1 },
+]
+
+[mystery]
+description = "Questions and enigmas that demand answers"
+entries = [
+  # Identity Mysteries
+  { text = "Someone is not who they claim to be", weight = 1 },
+  { text = "There's a hidden player no one has identified", weight = 1 },
+  { text = "The dead person's identity is wrong", weight = 1 },
+  { text = "Someone has been replaced", weight = 1 },
+  { text = "Multiple people claim to be the same person", weight = 1 },
+  { text = "The legendary figure is actually several people", weight = 1 },
+
+  # Motive Mysteries
+  { text = "The crime makes no sense with current information", weight = 1 },
+  { text = "Someone is acting against their own interests", weight = 1 },
+  { text = "The true goal is still hidden", weight = 1 },
+  { text = "What looks like malice might be mercy", weight = 1 },
+  { text = "The obvious motive is too obvious", weight = 1 },
+  { text = "There's a pattern no one has seen yet", weight = 1 },
+
+  # Historical Mysteries
+  { text = "The records have been altered", weight = 1 },
+  { text = "An important event has been erased from memory", weight = 1 },
+  { text = "The founding story contradicts physical evidence", weight = 1 },
+  { text = "Someone went to great lengths to hide something mundane", weight = 1 },
+  { text = "The treasure map leads to something unexpected", weight = 1 },
+
+  # Circumstantial Mysteries
+  { text = "The clues point in impossible directions", weight = 1 },
+  { text = "Everyone has an alibi that's too perfect", weight = 1 },
+  { text = "The evidence has been planted", weight = 1 },
+  { text = "What happened here makes no physical sense", weight = 1 },
+  { text = "Multiple incompatible things are all true", weight = 1 },
+  { text = "The absence of something is significant", weight = 1 },
+]
+
+[opportunity]
+description = "Unexpected chances that arise from chaos"
+entries = [
+  # Power Vacuum
+  { text = "A leader falls, creating a power vacuum", weight = 1 },
+  { text = "Two enemies weaken each other", weight = 1 },
+  { text = "The guardian of something valuable is distracted", weight = 1 },
+  { text = "An impregnable defense has a temporary gap", weight = 1 },
+  { text = "The enemy's attention is elsewhere", weight = 1 },
+
+  # Unlikely Allies
+  { text = "An enemy offers unexpected help", weight = 1 },
+  { text = "Someone powerful owes you a favor", weight = 1 },
+  { text = "A neutral party is willing to act", weight = 1 },
+  { text = "Internal dissent within the enemy camp offers an opening", weight = 1 },
+  { text = "Someone with nothing to lose will help", weight = 1 },
+
+  # Resource Windfalls
+  { text = "Vital supplies fall into your hands", weight = 1 },
+  { text = "Critical information becomes available", weight = 1 },
+  { text = "A shortcut or secret passage is revealed", weight = 1 },
+  { text = "Something thought lost is found", weight = 1 },
+  { text = "The enemy's plans are exposed", weight = 1 },
+
+  # Situational Advantages
+  { text = "Chaos creates cover for your actions", weight = 1 },
+  { text = "Natural events work in your favor", weight = 1 },
+  { text = "An unexpected distraction draws attention away", weight = 1 },
+  { text = "The enemy's strength becomes their weakness", weight = 1 },
+  { text = "Circumstances force enemies to stand down", weight = 1 },
+]
+
+[sacrifice]
+description = "Moments demanding meaningful loss"
+entries = [
+  # Life and Death
+  { text = "Someone must stay behind", weight = 1 },
+  { text = "Only willing death can accomplish the goal", weight = 1 },
+  { text = "The rescue can only save some", weight = 1 },
+  { text = "A life for a life is the only trade", weight = 1 },
+  { text = "Someone chooses to die so others may live", weight = 1 },
+
+  # Ideals and Identity
+  { text = "Victory requires abandoning principles", weight = 1 },
+  { text = "The mission demands becoming what you hate", weight = 1 },
+  { text = "Success means losing who you are", weight = 1 },
+  { text = "You must betray someone to save others", weight = 1 },
+  { text = "Honor must be traded for results", weight = 1 },
+
+  # Relationships
+  { text = "Protecting one means abandoning another", weight = 1 },
+  { text = "The truth will end a relationship", weight = 1 },
+  { text = "Someone must be exiled for the good of all", weight = 1 },
+  { text = "Trust must be broken to maintain cover", weight = 1 },
+  { text = "Love must be denied for duty", weight = 1 },
+
+  # Material Sacrifices
+  { text = "Everything you've built must be destroyed", weight = 1 },
+  { text = "Wealth must be abandoned to survive", weight = 1 },
+  { text = "The weapon must be used up to win", weight = 1 },
+  { text = "Home must be left behind forever", weight = 1 },
+  { text = "The evidence must be destroyed, along with the truth", weight = 1 },
+]
+
+[twist_combinations]
+description = "Complex twists that combine multiple elements"
+entries = [
+  { text = "The betrayer was being blackmailed with something you could have helped with", weight = 1 },
+  { text = "The villain's defeat triggers a worse threat they were secretly containing", weight = 1 },
+  { text = "The rescue mission arrives to find the prisoner has become the new leader", weight = 1 },
+  { text = "Both sides have been manipulated by a third party that profits from conflict", weight = 1 },
+  { text = "The curse can only be broken by the one who cast it, who is long dead", weight = 1 },
+  { text = "The weapon against the enemy requires sacrifice of the thing you're protecting", weight = 1 },
+  { text = "The traitor and the hero are both telling the truth from their perspectives", weight = 1 },
+  { text = "The disaster was prevented, but the preventers are now the new threat", weight = 1 },
+  { text = "The monster was human once, and the cure exists but at terrible cost", weight = 1 },
+  { text = "Two enemies unite against you, but their alliance will destroy them both eventually", weight = 1 },
+  { text = "The informant's false information was accidentally true", weight = 1 },
+  { text = "The key to victory lies with someone who has every reason to want you to fail", weight = 1 },
+  { text = "The safeguard against the threat has become the new form of the threat", weight = 1 },
+  { text = "Time-sensitive mission reveals the crisis was manufactured to force hasty action", weight = 1 },
+  { text = "The rescue target doesn't want to be rescued and has good reasons", weight = 1 },
+]

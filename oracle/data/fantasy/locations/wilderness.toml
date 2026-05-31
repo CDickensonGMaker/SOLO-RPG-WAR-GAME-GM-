@@ -1,0 +1,84 @@
+# Fantasy Wilderness Locations
+# Hexcrawl terrain, natural features, and outdoor environments
+
+[wilderness]
+entries = [
+  # Forests
+  { text = "a dense old-growth forest where sunlight barely reaches the floor", weight = 2 },
+  { text = "a clearing dominated by a massive ancient oak", weight = 1 },
+  { text = "a forest path marked by old standing stones", weight = 1 },
+  { text = "a copse of silver birch surrounding a spring", weight = 1 },
+  { text = "a dark hollow where mist clings to twisted trees", weight = 1 },
+  { text = "a forest fire's aftermath - blackened stumps and ash", weight = 1 },
+  { text = "a hunting lodge abandoned and overgrown", weight = 1 },
+  { text = "a fairy ring of mushrooms in a moonlit glade", weight = 1 },
+  { text = "a logger's camp with fresh-cut timber", weight = 1 },
+  { text = "a tree struck by lightning, still smoking", weight = 1 },
+
+  # Mountains & Hills
+  { text = "a narrow mountain pass between sheer cliffs", weight = 1 },
+  { text = "a rocky outcrop offering views for miles", weight = 1 },
+  { text = "a cave mouth in a cliff face, accessible by climbing", weight = 1 },
+  { text = "a mountain meadow with wildflowers and grazing animals", weight = 1 },
+  { text = "a dwarf-carved stairway ascending the mountainside", weight = 1 },
+  { text = "a treacherous scree slope", weight = 1 },
+  { text = "a glacier-fed stream cascading down rocks", weight = 1 },
+  { text = "an abandoned mine entrance with rusted tracks", weight = 1 },
+  { text = "a highland moor shrouded in fog", weight = 1 },
+  { text = "a volcanic hot spring surrounded by strange plants", weight = 1 },
+
+  # Plains & Grasslands
+  { text = "rolling grassland stretching to the horizon", weight = 2 },
+  { text = "a lone tree on a hilltop used as a landmark", weight = 1 },
+  { text = "the ruins of a watchtower in open fields", weight = 1 },
+  { text = "a nomad camp with colorful tents and horse herds", weight = 1 },
+  { text = "a battlefield where old bones still surface", weight = 1 },
+  { text = "a standing stone circle on a gentle rise", weight = 1 },
+  { text = "a traveler's waystation - a well and a shelter", weight = 1 },
+  { text = "a prairie dog town covering several acres", weight = 1 },
+  { text = "tall grass concealing old foundation stones", weight = 1 },
+
+  # Swamps & Wetlands
+  { text = "a murky swamp where the path disappears into brackish water", weight = 1 },
+  { text = "a raised hummock with a hermit's hut", weight = 1 },
+  { text = "a cypress grove draped in hanging moss", weight = 1 },
+  { text = "quicksand marked by the bones of the unwary", weight = 1 },
+  { text = "a will-o-wisp dancing over stagnant pools", weight = 1 },
+  { text = "a hidden channel navigable by small boats", weight = 1 },
+  { text = "a ruined causeway, partially collapsed", weight = 1 },
+  { text = "a crannog - an artificial island with a hut", weight = 1 },
+
+  # Rivers & Lakes
+  { text = "a ford across a swift-running river", weight = 1 },
+  { text = "a covered wooden bridge, suspiciously inviting", weight = 1 },
+  { text = "a waterfall with a cave behind the cascade", weight = 1 },
+  { text = "a misty lake with an island barely visible", weight = 1 },
+  { text = "a ferry crossing with a rope-pulled raft", weight = 1 },
+  { text = "a fishing village on stilts over the water", weight = 1 },
+  { text = "a river confluence where three streams meet", weight = 1 },
+  { text = "a dam built by giant beavers or something worse", weight = 1 },
+
+  # Coasts & Seas
+  { text = "a rocky coastline with tide pools and sea caves", weight = 1 },
+  { text = "a sandy beach with the wreck of a ship", weight = 1 },
+  { text = "a lighthouse on a lonely headland", weight = 1 },
+  { text = "a hidden cove favored by smugglers", weight = 1 },
+  { text = "cliffs where seabirds nest by the thousands", weight = 1 },
+  { text = "a tidal causeway to a small island", weight = 1 },
+
+  # Deserts & Wastelands
+  { text = "endless dunes with no landmark in sight", weight = 1 },
+  { text = "an oasis with date palms and a pool", weight = 1 },
+  { text = "the skeleton of an enormous creature half-buried in sand", weight = 1 },
+  { text = "a ruined city swallowed by the desert", weight = 1 },
+  { text = "a canyon carved by flash floods", weight = 1 },
+  { text = "a mesa with ancient carvings on its sides", weight = 1 },
+
+  # Supernatural Locations
+  { text = "a blighted land where nothing grows", weight = 1 },
+  { text = "a ley line crossing where magic is stronger", weight = 1 },
+  { text = "a thin place where the veil between worlds wavers", weight = 1 },
+  { text = "a cursed battlefield where ghosts still fight", weight = 1 },
+  { text = "a forest where the trees seem to watch", weight = 1 },
+  { text = "a perpetually storm-shrouded peak", weight = 1 },
+]

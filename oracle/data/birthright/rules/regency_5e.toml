@@ -1,0 +1,592 @@
+# =============================================================================
+# REGENCY AND DOMAIN RULES - 5E INTEGRATION
+# =============================================================================
+# Adapts the Birthright domain system to 5th Edition D&D mechanics.
+# Integrates with downtime rules and adventure-level play.
+# =============================================================================
+
+[meta]
+title = "Cerilian Regency System"
+version = "1.0"
+system = "5e"
+source = "Birthright Campaign Setting (adapted)"
+
+# =============================================================================
+# REGENCY OVERVIEW
+# =============================================================================
+
+[regency]
+description = """
+Regency (RP) is the currency of rulership in Cerilia. It represents the mystical
+connection between a blooded regent and their domain - the accumulated faith,
+loyalty, and invested power of the land and its people. Only blooded scions
+can collect and use regency.
+"""
+
+[regency.uses]
+domain_actions = "Spend RP to take domain actions during domain turns"
+realm_spells = "Power realm-level magic that affects entire provinces"
+blood_abilities = "Some powerful blood abilities cost RP to activate"
+contests = "Oppose other regents' actions against your domain"
+
+# =============================================================================
+# TIME SCALE
+# =============================================================================
+
+[time_scale]
+description = """
+Birthright operates on two time scales: Adventure Time and Domain Time.
+"""
+
+[time_scale.adventure_time]
+description = "Standard 5e time - rounds, minutes, hours, days"
+uses = "Combat, exploration, roleplay, dungeon delving"
+note = "Most 5e sessions operate entirely in adventure time"
+
+[time_scale.domain_time]
+description = "Domain turns last approximately 3 months (one season)"
+uses = "Domain actions, regency collection, holding management"
+structure = """
+Each domain turn consists of:
+1. Collection Phase - Collect regency and gold bar income
+2. Action Phase - Take domain actions (typically 3 per turn)
+3. Event Phase - Resolve random events and consequences
+4. Adjustment Phase - Update holding levels, pay maintenance
+"""
+
+[time_scale.integration]
+description = """
+A typical campaign month might include:
+- 1-4 adventures (several sessions of play)
+- Advancement of the domain turn (1/3 of a season)
+- Resolution of domain events that spawn adventures
+"""
+
+# =============================================================================
+# REGENCY COLLECTION
+# =============================================================================
+
+[regency_collection]
+formula = "RP per turn = Sum of (Province Level x Holding Level) for all holdings + Bloodline Modifier"
+explanation = """
+Each holding you control generates regency based on:
+- The level of the province it's in (0-10)
+- The level of the holding itself (0 to province level)
+- Multiplied together
+"""
+
+[regency_collection.example]
+description = """
+Duke Avan controls:
+- Province of Avanil (Level 7)
+  - Law Holding (Level 5): 7 x 5 = 35 RP
+  - Law Holding (Level 2): 7 x 2 = 14 RP
+- Province of Taeghas (Level 4)
+  - Law Holding (Level 4): 4 x 4 = 16 RP
+Total from holdings: 65 RP
+Bloodline Modifier (Great bloodline): +2
+Total Regency per Turn: 67 RP
+"""
+
+[regency_collection.bloodline_modifier]
+table = [
+    { strength = "Tainted (1-10)", modifier = -2 },
+    { strength = "Minor (11-20)", modifier = 0 },
+    { strength = "Major (21-35)", modifier = "+1" },
+    { strength = "Great (36-55)", modifier = "+2" },
+    { strength = "True (56-75)", modifier = "+3" },
+    { strength = "Divine (76+)", modifier = "+4" }
+]
+
+[regency_collection.holding_types]
+law = "Control over justice, military, and civil order"
+temple = "Religious influence and divine favor"
+guild = "Commercial and economic control"
+source = "Magical ley lines (wizard only)"
+
+# =============================================================================
+# DOMAIN ACTIONS
+# =============================================================================
+
+[domain_actions]
+description = """
+During each domain turn, a regent can take up to 3 domain actions. Some actions
+are free (no RP cost), others require RP expenditure, and some are reactions
+to other regents' actions.
+"""
+
+[[domain_actions.list]]
+name = "Agitate"
+type = "Standard"
+rp_cost = "1 RP per province level"
+gb_cost = "1 GB"
+description = "Spread unrest in a province, reducing loyalty and control"
+success = "DC 15 Charisma (Deception or Persuasion) check"
+effect = "Target province loyalty decreases by 1 step"
+
+[[domain_actions.list]]
+name = "Build"
+type = "Standard"
+rp_cost = "Variable"
+gb_cost = "Variable (see construction table)"
+description = "Construct fortifications, roads, ships, or other infrastructure"
+success = "Automatic with sufficient resources"
+effect = "Structure is built over 1-4 domain turns depending on size"
+
+[[domain_actions.list]]
+name = "Contest"
+type = "Reaction"
+rp_cost = "1+ RP"
+gb_cost = "None"
+description = "Oppose another regent's action in your domain"
+success = "Opposed check - your domain skill vs. theirs"
+effect = "If successful, negate or reduce the opposed action"
+
+[[domain_actions.list]]
+name = "Create Holding"
+type = "Standard"
+rp_cost = "Province Level RP"
+gb_cost = "Province Level GB"
+description = "Establish a new holding (level 0) in a province"
+success = "DC 10 + opposing holding levels"
+effect = "New holding established at level 0"
+
+[[domain_actions.list]]
+name = "Create Province"
+type = "Standard"
+rp_cost = "5 RP per target level"
+gb_cost = "5 GB per target level"
+description = "Colonize wilderness, creating a new province"
+success = "DC 15 Wisdom (Survival) or Charisma check"
+effect = "New province established at level 1"
+
+[[domain_actions.list]]
+name = "Decree"
+type = "Free"
+rp_cost = "None"
+gb_cost = "Variable"
+description = "Issue laws, proclamations, or edicts"
+success = "Automatic"
+effect = "Depends on decree - may affect loyalty, law, or relations"
+
+[[domain_actions.list]]
+name = "Diplomacy"
+type = "Standard"
+rp_cost = "1 RP"
+gb_cost = "1 GB (gifts)"
+description = "Negotiate with another regent"
+success = "Opposed Charisma checks or roleplay"
+effect = "Alliance, treaty, trade agreement, or other accord"
+
+[[domain_actions.list]]
+name = "Espionage"
+type = "Standard"
+rp_cost = "2 RP"
+gb_cost = "1-5 GB"
+description = "Spy on another domain, sabotage holdings, or assassinate"
+success = "DC varies by target security"
+effect = "Information gained, holding damaged, or target eliminated"
+
+[[domain_actions.list]]
+name = "Fortify"
+type = "Standard"
+rp_cost = "1 RP per holding level"
+gb_cost = "1 GB per holding level"
+description = "Improve defenses of a holding"
+success = "Automatic"
+effect = "Holding gains +2 to defense against Contest and Espionage"
+
+[[domain_actions.list]]
+name = "Grant"
+type = "Free"
+rp_cost = "None"
+gb_cost = "None"
+description = "Give a holding or province to another regent"
+success = "Automatic (requires recipient acceptance)"
+effect = "Control transfers to recipient"
+
+[[domain_actions.list]]
+name = "Investiture"
+type = "Standard"
+rp_cost = "5 RP"
+gb_cost = "1 GB (ceremony)"
+description = "Formally transfer bloodline connection to a domain"
+success = "Automatic if willing, DC 20 if forced"
+effect = "New regent gains bloodline connection to domain"
+
+[[domain_actions.list]]
+name = "Lieutenant"
+type = "Free"
+rp_cost = "None"
+gb_cost = "2 GB per turn (salary)"
+description = "Appoint an NPC to act as your domain agent"
+success = "Automatic"
+effect = "Lieutenant can take 1 domain action per turn on your behalf"
+
+[[domain_actions.list]]
+name = "Muster"
+type = "Standard"
+rp_cost = "1 RP per unit"
+gb_cost = "Variable (unit cost)"
+description = "Raise military units from your provinces"
+success = "Automatic with sufficient population"
+effect = "New military units available"
+
+[[domain_actions.list]]
+name = "Realm Spell"
+type = "Standard"
+rp_cost = "Spell cost"
+gb_cost = "Spell cost"
+description = "Cast a realm-level spell affecting provinces or holdings"
+success = "Spellcasting check vs. spell DC"
+effect = "Spell effect (see Realm Magic section)"
+
+[[domain_actions.list]]
+name = "Rule"
+type = "Standard"
+rp_cost = "Holding Level RP"
+gb_cost = "Holding Level GB"
+description = "Increase the level of a holding by 1"
+success = "DC 10 + current holding level"
+effect = "Holding level increases by 1"
+
+[[domain_actions.list]]
+name = "Trade Route"
+type = "Standard"
+rp_cost = "1 RP"
+gb_cost = "1 GB per province crossed"
+description = "Establish a trade route between provinces"
+success = "DC 10 + distance in provinces"
+effect = "Trade route generates 1d6 GB per domain turn"
+
+# =============================================================================
+# DOMAIN ACTIONS IN 5E TERMS
+# =============================================================================
+
+[domain_actions_5e]
+description = """
+Domain actions use 5e ability checks and DCs. The 'domain skill' is typically:
+- Charisma (Persuasion) for diplomatic actions
+- Intelligence (Investigation) for espionage
+- Wisdom (Insight) for detecting threats
+- Constitution for endurance actions
+- Your spellcasting ability for realm magic
+"""
+
+[[domain_actions_5e.skill_mapping]]
+action = "Agitate"
+skill = "Charisma (Deception) or Charisma (Persuasion)"
+dc_base = 15
+
+[[domain_actions_5e.skill_mapping]]
+action = "Contest"
+skill = "Opposed - your best domain skill vs. theirs"
+dc_base = "Opposed"
+
+[[domain_actions_5e.skill_mapping]]
+action = "Create Holding"
+skill = "Charisma (Persuasion) or relevant holding skill"
+dc_base = 10
+
+[[domain_actions_5e.skill_mapping]]
+action = "Diplomacy"
+skill = "Charisma (Persuasion) or roleplay"
+dc_base = "Opposed or DM set"
+
+[[domain_actions_5e.skill_mapping]]
+action = "Espionage"
+skill = "Dexterity (Stealth) or Intelligence (Investigation)"
+dc_base = "Target security level x 5"
+
+[[domain_actions_5e.skill_mapping]]
+action = "Rule"
+skill = "Relevant holding skill (see below)"
+dc_base = 10
+
+[domain_actions_5e.holding_skills]
+law = "Charisma (Intimidation) or Intelligence (History)"
+temple = "Wisdom (Religion) or Charisma (Persuasion)"
+guild = "Intelligence (Investigation) or Charisma (Persuasion)"
+source = "Intelligence (Arcana)"
+
+# =============================================================================
+# ADVENTURE REWARDS TO DOMAIN BENEFITS
+# =============================================================================
+
+[adventure_rewards]
+description = """
+Adventures and domain play should reinforce each other. Here's how adventure
+accomplishments translate to domain benefits.
+"""
+
+[[adventure_rewards.conversions]]
+adventure = "Defeat a monster threatening the province"
+domain_benefit = "+1 to loyalty in affected province for 1 domain turn"
+rp_award = "Monster CR / 2 RP"
+
+[[adventure_rewards.conversions]]
+adventure = "Recover a significant treasure hoard"
+domain_benefit = "Gold converts to GB at 2000 gp = 1 GB"
+rp_award = "None (gold is reward)"
+
+[[adventure_rewards.conversions]]
+adventure = "Complete a quest for a temple"
+domain_benefit = "+1 to temple holding level OR new holding at level 0"
+rp_award = "5 RP from grateful faithful"
+
+[[adventure_rewards.conversions]]
+adventure = "Negotiate a treaty with neighboring power"
+domain_benefit = "Diplomatic agreement (trade, alliance, non-aggression)"
+rp_award = "1-5 RP depending on significance"
+
+[[adventure_rewards.conversions]]
+adventure = "Defeat an enemy army in battle"
+domain_benefit = "Enemy province loyalty -1, your province loyalty +1"
+rp_award = "Enemy unit strength in RP"
+
+[[adventure_rewards.conversions]]
+adventure = "Discover and claim a Source"
+domain_benefit = "New source holding at level 0"
+rp_award = "Source level x 2 RP"
+
+[[adventure_rewards.conversions]]
+adventure = "Expose and defeat an enemy spy network"
+domain_benefit = "Immune to Espionage from that domain for 1 year"
+rp_award = "3 RP"
+
+[[adventure_rewards.conversions]]
+adventure = "Rescue important NPC (noble, priest, guildmaster)"
+domain_benefit = "Favor from relevant domain (+2 to Diplomacy for 1 year)"
+rp_award = "2 RP"
+
+[[adventure_rewards.conversions]]
+adventure = "Slay an awnsheghlien"
+domain_benefit = "Threat removed, provinces freed, possible bloodtheft"
+rp_award = "Awnsheghlien's Bloodline Score / 5 RP"
+
+# =============================================================================
+# DOWNTIME AND DOMAIN INTEGRATION
+# =============================================================================
+
+[downtime_integration]
+description = """
+5e downtime activities can contribute to domain play.
+"""
+
+[[downtime_integration.activities]]
+activity = "Crafting"
+duration = "Standard 5e"
+domain_effect = "Items can be sold, contributing to GB income"
+special = "Magic items require being blooded for permanent enchantment"
+
+[[downtime_integration.activities]]
+activity = "Research"
+duration = "1 week per question"
+domain_effect = "Can research enemy domains, historical claims, or realm magic"
+special = "Advantage on next related domain action"
+
+[[downtime_integration.activities]]
+activity = "Running a Business"
+duration = "1 month"
+domain_effect = "Contributes to guild holding income"
+special = "Can establish guild holding at level 0 with 3 months of success"
+
+[[downtime_integration.activities]]
+activity = "Training"
+duration = "10 weeks"
+domain_effect = "Can train lieutenants or military officers"
+special = "Trained lieutenant gains +1 to domain checks"
+
+[[downtime_integration.activities]]
+activity = "Religious Service"
+duration = "1 week"
+domain_effect = "Contributes to temple holding"
+special = "Can establish temple holding at level 0 with month of service"
+
+[[downtime_integration.activities]]
+activity = "Crime"
+duration = "1 week"
+domain_effect = "Espionage preparation"
+special = "+2 to next Espionage action in that province"
+
+[[downtime_integration.activities]]
+activity = "Carousing"
+duration = "1 week"
+domain_effect = "Information gathering"
+special = "Learn one rumor about domain politics"
+
+# =============================================================================
+# REGENCY COSTS FOR COMMON ACTIONS
+# =============================================================================
+
+[regency_costs]
+description = "Quick reference for RP costs"
+
+[[regency_costs.table]]
+action = "Contest (base)"
+cost = "1 RP"
+notes = "Add more to increase success chance"
+
+[[regency_costs.table]]
+action = "Create Holding"
+cost = "Province Level RP"
+notes = "Higher level provinces cost more"
+
+[[regency_costs.table]]
+action = "Rule Holding (increase level)"
+cost = "Current Level RP"
+notes = "Increasing from 3 to 4 costs 3 RP"
+
+[[regency_costs.table]]
+action = "Fortify Holding"
+cost = "1 RP per level"
+notes = "Level 4 holding costs 4 RP"
+
+[[regency_costs.table]]
+action = "Muster Army"
+cost = "1 RP per unit"
+notes = "Plus GB for unit cost"
+
+[[regency_costs.table]]
+action = "Basic Realm Spell"
+cost = "5-10 RP"
+notes = "Plus spell-specific costs"
+
+[[regency_costs.table]]
+action = "Major Realm Spell"
+cost = "20-50 RP"
+notes = "Province-affecting spells"
+
+[[regency_costs.table]]
+action = "Investiture"
+cost = "5 RP"
+notes = "To transfer domain control"
+
+# =============================================================================
+# GOLD BAR ECONOMY
+# =============================================================================
+
+[gold_bars]
+description = """
+Domain wealth is measured in Gold Bars (GB), each representing approximately
+2000 gold pieces of liquid wealth. GB is used for domain maintenance, military
+upkeep, and domain actions.
+"""
+
+[gold_bars.income]
+formula = "GB per turn = Sum of all taxation + Trade route income - Maintenance"
+taxation = "Each province generates GB equal to Province Level / 2 (round down)"
+trade = "Each trade route generates 1d6 GB"
+guild_bonus = "Guild holdings add their level to province taxation"
+
+[gold_bars.maintenance]
+military = "1 GB per 2 units"
+fortifications = "Castle level / 2 GB per turn"
+court = "1-5 GB depending on regent status"
+holdings = "1 GB per 5 holding levels total"
+
+[gold_bars.conversion]
+to_gp = "1 GB = 2000 gp (selling assets, liquidating)"
+from_gp = "2000 gp = 1 GB (converting adventure treasure)"
+note = "Conversion is not perfectly efficient - may lose 10-20%"
+
+# =============================================================================
+# DOMAIN EVENTS
+# =============================================================================
+
+[domain_events]
+description = """
+At the end of each domain turn, roll for random events that may affect
+the domain. These often spawn adventures.
+"""
+
+[[domain_events.table]]
+roll = "1-5"
+event = "Assassination Attempt"
+description = "Someone tries to kill the regent or a lieutenant"
+adventure_hook = "Investigate the conspiracy, protect the target"
+domain_effect = "If successful, bloodtheft possible"
+
+[[domain_events.table]]
+roll = "6-10"
+event = "Blood Challenge"
+description = "A rival scion challenges your right to rule"
+adventure_hook = "Duel of honor, political maneuvering"
+domain_effect = "Loser may lose holdings or bloodline points"
+
+[[domain_events.table]]
+roll = "11-15"
+event = "Brigandage"
+description = "Bandits or monsters plague a province"
+adventure_hook = "Hunt down the threat"
+domain_effect = "-1 province level until resolved"
+
+[[domain_events.table]]
+roll = "16-25"
+event = "Diplomatic Mission"
+description = "Envoy arrives from another domain"
+adventure_hook = "Negotiate, possibly uncover plot"
+domain_effect = "Opportunity for alliance or conflict"
+
+[[domain_events.table]]
+roll = "26-35"
+event = "Festival/Holy Day"
+description = "Major celebration in the domain"
+adventure_hook = "Attend, deal with complications"
+domain_effect = "+1 loyalty for the turn, costs 1 GB"
+
+[[domain_events.table]]
+roll = "36-45"
+event = "Great Captain"
+description = "Exceptional military leader emerges"
+adventure_hook = "Recruit them, deal with their demands"
+domain_effect = "Can hire as lieutenant with +2 to military actions"
+
+[[domain_events.table]]
+roll = "46-55"
+event = "Intrigue"
+description = "Plot against the regent uncovered (or not)"
+adventure_hook = "Investigate, counter-intrigue"
+domain_effect = "May prevent enemy action or suffer consequences"
+
+[[domain_events.table]]
+roll = "56-65"
+event = "Matter of Justice"
+description = "Major legal dispute requires regent's judgment"
+adventure_hook = "Investigate the truth, make judgment"
+domain_effect = "Affects loyalty based on decision"
+
+[[domain_events.table]]
+roll = "66-75"
+event = "Monster/Awnsheghlien"
+description = "Creature threatens the domain"
+adventure_hook = "Slay the beast"
+domain_effect = "Province damaged until resolved"
+
+[[domain_events.table]]
+roll = "76-85"
+event = "Natural Event"
+description = "Weather, earthquake, plague, or other disaster"
+adventure_hook = "Mitigate damage, find cause if magical"
+domain_effect = "Province level -1, costs GB to repair"
+
+[[domain_events.table]]
+roll = "86-90"
+event = "Trade Matter"
+description = "Opportunity or threat to commerce"
+adventure_hook = "Negotiate, protect shipment, open new market"
+domain_effect = "Gain or lose trade route income"
+
+[[domain_events.table]]
+roll = "91-95"
+event = "Unrest"
+description = "Population grows restless"
+adventure_hook = "Address grievances, find agitators"
+domain_effect = "Loyalty decreases until resolved"
+
+[[domain_events.table]]
+roll = "96-100"
+event = "Magical Event"
+description = "Source fluctuation, magical anomaly, or realm spell"
+adventure_hook = "Investigate magical disturbance"
+domain_effect = "Source levels may change, opportunities arise"

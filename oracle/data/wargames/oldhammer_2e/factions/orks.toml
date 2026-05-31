@@ -1,0 +1,873 @@
+# Warhammer 40,000 2nd Edition - Orks
+# Da Green Tide - WAAAGH!
+
+name = "Orks"
+codex = "Codex: Orks (1994)"
+description = "Green-skinned fungal warriors who live for war and believe the color red makes things go faster"
+playstyle = "Overwhelming numbers, close combat focus, unreliable but devastating shooting"
+strengths = ["Massive numbers", "Strong in close combat", "Mob Rule", "Cheap units", "Hilarious randomness"]
+weaknesses = ["Poor Ballistic Skill", "Unreliable equipment", "Low Leadership in small groups"]
+
+[faction_rules]
+name = "Mob Rule"
+description = "Ork units use their number of models for Leadership tests instead of their actual Leadership"
+
+# =============================================================================
+# HQ UNITS
+# =============================================================================
+
+[[units]]
+name = "Warboss"
+type = "infantry"
+category = "HQ"
+points = 60
+models = "1"
+tactical_role = "commander"
+threat_level = "very_high"
+preferred_targets = ["anything_krumpy"]
+weaknesses = ["massed_fire", "power_weapons"]
+special_rules = ["Independent Character", "WAAAGH!", "Furious Charge", "Mob Rule"]
+keywords = ["Infantry", "Character", "Ork", "Warboss"]
+
+[units.stats]
+M = 4
+WS = 5
+BS = 2
+S = 5
+T = 5
+W = 3
+I = 4
+A = 4
+Ld = 9
+Sv = "4+"
+
+[[units.weapons]]
+name = "Power Klaw"
+range = "Melee"
+strength = "x2"
+ap = "-"
+damage = "1"
+type = "Melee"
+abilities = ["Ignores Armor Saves", "Strikes Last"]
+
+[[units.weapons]]
+name = "Slugga"
+range = "12\""
+strength = "4"
+ap = "6"
+damage = "1"
+type = "Pistol"
+shots = "1"
+
+[[units.weapons]]
+name = "Stikkbombs"
+range = "6\""
+strength = "3"
+ap = "-"
+damage = "1"
+type = "Assault 1"
+abilities = ["Blast"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Big Mek"
+type = "infantry"
+category = "HQ"
+points = 45
+models = "1"
+tactical_role = "support"
+threat_level = "medium"
+preferred_targets = ["vehicles"]
+weaknesses = ["focused_fire"]
+special_rules = ["Independent Character", "Mek", "Kustom Force Field"]
+keywords = ["Infantry", "Character", "Ork", "Mek"]
+
+[units.stats]
+M = 4
+WS = 4
+BS = 2
+S = 4
+T = 4
+W = 2
+I = 3
+A = 2
+Ld = 8
+Sv = "4+"
+
+[[units.weapons]]
+name = "Kustom Mega-Blasta"
+range = "24\""
+strength = "8"
+ap = "2"
+damage = "1"
+type = "Assault 1"
+abilities = ["Gets Hot!"]
+
+[[units.weapons]]
+name = "Power Klaw"
+range = "Melee"
+strength = "x2"
+ap = "-"
+damage = "1"
+type = "Melee"
+abilities = ["Ignores Armor Saves", "Strikes Last"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Weirdboy"
+type = "infantry"
+category = "HQ"
+points = 50
+models = "1"
+tactical_role = "psyker"
+threat_level = "medium"
+preferred_targets = ["anything_nearby"]
+weaknesses = ["perils_of_the_warp", "isolation"]
+special_rules = ["Psyker (Level 1)", "Warp 'Eadache", "WAAAGH! Energy"]
+keywords = ["Infantry", "Character", "Ork", "Psyker"]
+
+[units.stats]
+M = 4
+WS = 4
+BS = 2
+S = 4
+T = 4
+W = 2
+I = 3
+A = 2
+Ld = 7
+Sv = "6+"
+
+[[units.weapons]]
+name = "Weirdboy Staff"
+range = "Melee"
+strength = "User"
+ap = "-"
+damage = "1"
+type = "Melee"
+abilities = ["+2 Psychic Tests"]
+
+# =============================================================================
+# ELITES
+# =============================================================================
+
+[[units]]
+name = "Nobz Mob"
+type = "infantry"
+category = "Elites"
+points = 20
+models = "5-10"
+tactical_role = "elite_assault"
+threat_level = "high"
+preferred_targets = ["infantry", "characters"]
+weaknesses = ["massed_fire", "power_weapons"]
+special_rules = ["Mob Rule", "Furious Charge", "'Ere We Go!"]
+keywords = ["Infantry", "Nobz", "Ork"]
+
+[units.stats]
+M = 4
+WS = 4
+BS = 2
+S = 4
+T = 4
+W = 2
+I = 3
+A = 3
+Ld = 7
+Sv = "4+"
+
+[[units.weapons]]
+name = "Choppa"
+range = "Melee"
+strength = "User"
+ap = "-"
+damage = "1"
+type = "Melee"
+abilities = ["+1 S on Charge"]
+
+[[units.weapons]]
+name = "Slugga"
+range = "12\""
+strength = "4"
+ap = "6"
+damage = "1"
+type = "Pistol"
+shots = "1"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Meganobz"
+type = "infantry"
+category = "Elites"
+points = 40
+models = "3-10"
+tactical_role = "elite_assault"
+threat_level = "very_high"
+preferred_targets = ["vehicles", "monsters", "infantry"]
+weaknesses = ["massed_fire", "slow"]
+special_rules = ["Mob Rule", "Slow and Purposeful", "Mega Armor"]
+keywords = ["Infantry", "Mega Armor", "Nobz", "Ork"]
+
+[units.stats]
+M = 4
+WS = 4
+BS = 2
+S = 4
+T = 4
+W = 2
+I = 2
+A = 3
+Ld = 7
+Sv = "2+"
+
+[[units.weapons]]
+name = "Power Klaw"
+range = "Melee"
+strength = "x2"
+ap = "-"
+damage = "1"
+type = "Melee"
+abilities = ["Ignores Armor Saves", "Strikes Last"]
+
+[[units.weapons]]
+name = "Kombi-Shoota"
+range = "18\""
+strength = "4"
+ap = "6"
+damage = "1"
+type = "Assault 2"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Burna Boyz"
+type = "infantry"
+category = "Elites"
+points = 12
+models = "5-15"
+tactical_role = "assault"
+threat_level = "medium"
+preferred_targets = ["infantry", "cover"]
+weaknesses = ["ranged_attacks"]
+special_rules = ["Mob Rule", "Burnas"]
+keywords = ["Infantry", "Ork"]
+
+[units.stats]
+M = 4
+WS = 4
+BS = 2
+S = 3
+T = 4
+W = 1
+I = 2
+A = 2
+Ld = 7
+Sv = "6+"
+
+[[units.weapons]]
+name = "Burna"
+range = "Template"
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Assault 1"
+abilities = ["Template", "Power Weapon in melee"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Tankbustas"
+type = "infantry"
+category = "Elites"
+points = 15
+models = "5-15"
+tactical_role = "anti_tank"
+threat_level = "high"
+preferred_targets = ["vehicles"]
+weaknesses = ["infantry", "assault"]
+special_rules = ["Mob Rule", "Tank Hunters", "Glory Hogs"]
+keywords = ["Infantry", "Ork"]
+
+[units.stats]
+M = 4
+WS = 4
+BS = 2
+S = 3
+T = 4
+W = 1
+I = 2
+A = 2
+Ld = 7
+Sv = "6+"
+
+[[units.weapons]]
+name = "Rokkit Launcha"
+range = "24\""
+strength = "8"
+ap = "3"
+damage = "1"
+type = "Assault 1"
+
+[[units.weapons]]
+name = "Tankbusta Bombs"
+range = "Melee"
+strength = "8"
+ap = "1"
+damage = "D6"
+type = "Melee"
+abilities = ["Vehicle only", "2D6 Armor Penetration"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Kommandos"
+type = "infantry"
+category = "Elites"
+points = 10
+models = "5-15"
+tactical_role = "infiltrators"
+threat_level = "medium"
+preferred_targets = ["infantry", "artillery"]
+weaknesses = ["detection"]
+special_rules = ["Mob Rule", "Infiltrate", "Move Through Cover", "Stealth"]
+keywords = ["Infantry", "Ork", "Kommandos"]
+
+[units.stats]
+M = 4
+WS = 4
+BS = 2
+S = 3
+T = 4
+W = 1
+I = 2
+A = 2
+Ld = 7
+Sv = "6+"
+
+[[units.weapons]]
+name = "Slugga"
+range = "12\""
+strength = "4"
+ap = "6"
+damage = "1"
+type = "Pistol"
+shots = "1"
+
+[[units.weapons]]
+name = "Choppa"
+range = "Melee"
+strength = "User"
+ap = "-"
+damage = "1"
+type = "Melee"
+abilities = ["+1 S on Charge"]
+
+# =============================================================================
+# TROOPS
+# =============================================================================
+
+[[units]]
+name = "Boyz Mob"
+type = "infantry"
+category = "Troops"
+points = 6
+models = "10-30"
+tactical_role = "line_infantry"
+threat_level = "medium"
+preferred_targets = ["anything_to_krump"]
+weaknesses = ["templates", "morale_when_small"]
+special_rules = ["Mob Rule", "'Ere We Go!", "Furious Charge"]
+keywords = ["Infantry", "Ork", "Boyz"]
+
+[units.stats]
+M = 4
+WS = 4
+BS = 2
+S = 3
+T = 4
+W = 1
+I = 2
+A = 2
+Ld = 7
+Sv = "6+"
+
+[[units.weapons]]
+name = "Slugga"
+range = "12\""
+strength = "4"
+ap = "6"
+damage = "1"
+type = "Pistol"
+shots = "1"
+
+[[units.weapons]]
+name = "Choppa"
+range = "Melee"
+strength = "User"
+ap = "-"
+damage = "1"
+type = "Melee"
+abilities = ["+1 S on Charge"]
+
+[[units.weapons]]
+name = "Stikkbombs"
+range = "6\""
+strength = "3"
+ap = "-"
+damage = "1"
+type = "Assault 1"
+abilities = ["Blast"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Shoota Boyz"
+type = "infantry"
+category = "Troops"
+points = 6
+models = "10-30"
+tactical_role = "fire_support"
+threat_level = "medium"
+preferred_targets = ["infantry"]
+weaknesses = ["assault_specialists"]
+special_rules = ["Mob Rule", "'Ere We Go!", "Dakka Dakka Dakka"]
+keywords = ["Infantry", "Ork", "Boyz"]
+
+[units.stats]
+M = 4
+WS = 4
+BS = 2
+S = 3
+T = 4
+W = 1
+I = 2
+A = 2
+Ld = 7
+Sv = "6+"
+
+[[units.weapons]]
+name = "Shoota"
+range = "18\""
+strength = "4"
+ap = "6"
+damage = "1"
+type = "Assault 2"
+abilities = ["Dakka Dakka Dakka"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Gretchin"
+type = "infantry"
+category = "Troops"
+points = 3
+models = "10-30"
+tactical_role = "screening"
+threat_level = "very_low"
+preferred_targets = ["objectives"]
+weaknesses = ["everything"]
+special_rules = ["Runtherd", "Cowardly"]
+keywords = ["Infantry", "Gretchin", "Ork"]
+
+[units.stats]
+M = 4
+WS = 2
+BS = 3
+S = 2
+T = 2
+W = 1
+I = 2
+A = 1
+Ld = 5
+Sv = "-"
+
+[[units.weapons]]
+name = "Grot Blasta"
+range = "12\""
+strength = "3"
+ap = "-"
+damage = "1"
+type = "Pistol"
+shots = "1"
+
+# =============================================================================
+# FAST ATTACK
+# =============================================================================
+
+[[units]]
+name = "Warbikers"
+type = "bike"
+category = "Fast Attack"
+points = 25
+models = "3-12"
+tactical_role = "fast_assault"
+threat_level = "medium"
+preferred_targets = ["infantry"]
+weaknesses = ["heavy_weapons"]
+special_rules = ["Mob Rule", "Exhaust Cloud", "Turbo-boost"]
+keywords = ["Bike", "Ork"]
+
+[units.stats]
+M = 12
+WS = 4
+BS = 2
+S = 3
+T = 5
+W = 1
+I = 2
+A = 2
+Ld = 7
+Sv = "4+"
+
+[[units.weapons]]
+name = "Twin-linked Dakkagun"
+range = "18\""
+strength = "5"
+ap = "5"
+damage = "1"
+type = "Assault 2"
+abilities = ["Twin-linked"]
+
+[[units.weapons]]
+name = "Choppa"
+range = "Melee"
+strength = "User"
+ap = "-"
+damage = "1"
+type = "Melee"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Stormboyz"
+type = "infantry"
+category = "Fast Attack"
+points = 8
+models = "5-20"
+tactical_role = "assault"
+threat_level = "medium"
+preferred_targets = ["infantry", "artillery"]
+weaknesses = ["overwatch", "massed_fire"]
+special_rules = ["Mob Rule", "Rokkit Packs", "Deep Strike", "'Ere We Go!"]
+keywords = ["Infantry", "Jump Pack", "Ork"]
+
+[units.stats]
+M = 12
+WS = 4
+BS = 2
+S = 3
+T = 4
+W = 1
+I = 2
+A = 2
+Ld = 7
+Sv = "6+"
+
+[[units.weapons]]
+name = "Slugga"
+range = "12\""
+strength = "4"
+ap = "6"
+damage = "1"
+type = "Pistol"
+shots = "1"
+
+[[units.weapons]]
+name = "Choppa"
+range = "Melee"
+strength = "User"
+ap = "-"
+damage = "1"
+type = "Melee"
+abilities = ["+1 S on Charge"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Deffkoptas"
+type = "jetbike"
+category = "Fast Attack"
+points = 35
+models = "1-5"
+tactical_role = "fast_attack"
+threat_level = "medium"
+preferred_targets = ["vehicles", "infantry"]
+weaknesses = ["heavy_weapons"]
+special_rules = ["Scout", "Hit and Run"]
+keywords = ["Jetbike", "Ork"]
+
+[units.stats]
+M = 14
+WS = 4
+BS = 2
+S = 4
+T = 5
+W = 2
+I = 2
+A = 2
+Ld = 7
+Sv = "4+"
+
+[[units.weapons]]
+name = "Twin-linked Rokkit Launcha"
+range = "24\""
+strength = "8"
+ap = "3"
+damage = "1"
+type = "Assault 1"
+abilities = ["Twin-linked"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Warbuggies"
+type = "vehicle"
+category = "Fast Attack"
+points = 25
+models = "1-3"
+tactical_role = "fast_attack"
+threat_level = "low"
+preferred_targets = ["infantry", "light_vehicles"]
+weaknesses = ["any_shooting"]
+special_rules = ["Fast", "Open-topped"]
+keywords = ["Vehicle", "Ork"]
+
+[units.stats]
+M = 12
+WS = "-"
+BS = 2
+S = "-"
+T = "-"
+W = "-"
+I = "-"
+A = "-"
+Ld = "-"
+Sv = "-"
+
+[units.armor]
+front = 10
+side = 10
+rear = 10
+
+[[units.weapons]]
+name = "Twin-linked Big Shoota"
+range = "36\""
+strength = "5"
+ap = "5"
+damage = "1"
+type = "Assault 3"
+abilities = ["Twin-linked"]
+
+# =============================================================================
+# HEAVY SUPPORT
+# =============================================================================
+
+[[units]]
+name = "Lootas"
+type = "infantry"
+category = "Heavy Support"
+points = 15
+models = "5-15"
+tactical_role = "fire_support"
+threat_level = "medium"
+preferred_targets = ["vehicles", "monsters"]
+weaknesses = ["assault"]
+special_rules = ["Mob Rule", "Deffguns"]
+keywords = ["Infantry", "Ork"]
+
+[units.stats]
+M = 4
+WS = 4
+BS = 2
+S = 3
+T = 4
+W = 1
+I = 2
+A = 2
+Ld = 7
+Sv = "6+"
+
+[[units.weapons]]
+name = "Deffgun"
+range = "48\""
+strength = "7"
+ap = "4"
+damage = "1"
+type = "Heavy D3"
+abilities = ["Random shots each turn"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Flash Gitz"
+type = "infantry"
+category = "Heavy Support"
+points = 22
+models = "5-10"
+tactical_role = "heavy_firepower"
+threat_level = "high"
+preferred_targets = ["infantry", "monsters"]
+weaknesses = ["assault", "expensive"]
+special_rules = ["Mob Rule", "Snazzguns", "Gitfinder"]
+keywords = ["Infantry", "Nobz", "Ork"]
+
+[units.stats]
+M = 4
+WS = 4
+BS = 2
+S = 4
+T = 4
+W = 2
+I = 3
+A = 3
+Ld = 7
+Sv = "4+"
+
+[[units.weapons]]
+name = "Snazzgun"
+range = "24\""
+strength = "5"
+ap = "2"
+damage = "1"
+type = "Heavy 3"
+abilities = ["Kustom Upgrades"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Battlewagon"
+type = "vehicle"
+category = "Heavy Support"
+points = 90
+models = "1"
+tactical_role = "transport"
+threat_level = "high"
+preferred_targets = ["infantry"]
+weaknesses = ["melta", "assault"]
+special_rules = ["Transport (20)", "Open-topped", "Ramshackle"]
+keywords = ["Vehicle", "Tank", "Transport", "Ork"]
+
+[units.stats]
+M = 10
+WS = "-"
+BS = 2
+S = "-"
+T = "-"
+W = "-"
+I = "-"
+A = "-"
+Ld = "-"
+Sv = "-"
+
+[units.armor]
+front = 14
+side = 12
+rear = 10
+
+[[units.weapons]]
+name = "Big Shoota"
+range = "36\""
+strength = "5"
+ap = "5"
+damage = "1"
+type = "Assault 3"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Deff Dread"
+type = "vehicle"
+category = "Heavy Support"
+points = 85
+models = "1-3"
+tactical_role = "assault"
+threat_level = "high"
+preferred_targets = ["infantry", "vehicles"]
+weaknesses = ["melta", "power_fists"]
+special_rules = ["Walker", "Rampage"]
+keywords = ["Vehicle", "Walker", "Dreadnought", "Ork"]
+
+[units.stats]
+M = 6
+WS = 4
+BS = 2
+S = 10
+T = "-"
+W = "-"
+I = 2
+A = 3
+Ld = "-"
+Sv = "-"
+
+[units.armor]
+front = 12
+side = 12
+rear = 10
+
+[[units.weapons]]
+name = "Dread Klaw"
+range = "Melee"
+strength = "10"
+ap = "-"
+damage = "1"
+type = "Melee"
+abilities = ["Ignores Armor Saves"]
+
+[[units.weapons]]
+name = "Big Shoota"
+range = "36\""
+strength = "5"
+ap = "5"
+damage = "1"
+type = "Assault 3"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Killa Kans"
+type = "vehicle"
+category = "Heavy Support"
+points = 45
+models = "1-6"
+tactical_role = "assault"
+threat_level = "medium"
+preferred_targets = ["infantry"]
+weaknesses = ["melta", "power_fists"]
+special_rules = ["Walker", "Cowardly Grots"]
+keywords = ["Vehicle", "Walker", "Ork"]
+
+[units.stats]
+M = 6
+WS = 2
+BS = 3
+S = 5
+T = "-"
+W = "-"
+I = 2
+A = 2
+Ld = "-"
+Sv = "-"
+
+[units.armor]
+front = 11
+side = 11
+rear = 10
+
+[[units.weapons]]
+name = "Kan Klaw"
+range = "Melee"
+strength = "5"
+ap = "-"
+damage = "1"
+type = "Melee"
+
+[[units.weapons]]
+name = "Rokkit Launcha"
+range = "24\""
+strength = "8"
+ap = "3"
+damage = "1"
+type = "Assault 1"

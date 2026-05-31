@@ -1,0 +1,615 @@
+# Warhammer: The Old World - Magic Items
+# Common magic items available to all armies
+
+[system]
+name = "Warhammer: The Old World"
+category = "Magic Items"
+notes = "All factions have access to these items. Faction-specific items are in faction files"
+
+# =============================================================================
+# MAGIC WEAPONS
+# =============================================================================
+
+[[items]]
+name = "Giant Blade"
+type = "magic_weapon"
+category = "magic_weapons"
+points = 60
+description = "+3 Strength"
+restrictions = ["Characters only", "Replaces hand weapon"]
+
+[[items]]
+name = "Sword of Bloodshed"
+type = "magic_weapon"
+category = "magic_weapons"
+points = 60
+description = "+3 Attacks"
+restrictions = ["Characters only", "Replaces hand weapon"]
+
+[[items]]
+name = "Obsidian Blade"
+type = "magic_weapon"
+category = "magic_weapons"
+points = 50
+description = "Attacks with this weapon have Armor Piercing (6), ignoring all armor saves"
+restrictions = ["Characters only", "Replaces hand weapon"]
+
+[[items]]
+name = "Ogre Blade"
+type = "magic_weapon"
+category = "magic_weapons"
+points = 40
+description = "+2 Strength"
+restrictions = ["Characters only", "Replaces hand weapon"]
+
+[[items]]
+name = "Sword of Strife"
+type = "magic_weapon"
+category = "magic_weapons"
+points = 40
+description = "+2 Attacks"
+restrictions = ["Characters only", "Replaces hand weapon"]
+
+[[items]]
+name = "Sword of Battle"
+type = "magic_weapon"
+category = "magic_weapons"
+points = 25
+description = "+1 Attack"
+restrictions = ["Characters only", "Replaces hand weapon"]
+
+[[items]]
+name = "Berserker Sword"
+type = "magic_weapon"
+category = "magic_weapons"
+points = 25
+description = "Bearer has Frenzy that cannot be lost"
+restrictions = ["Characters only", "Replaces hand weapon"]
+
+[[items]]
+name = "Sword of Might"
+type = "magic_weapon"
+category = "magic_weapons"
+points = 20
+description = "+1 Strength"
+restrictions = ["Characters only", "Replaces hand weapon"]
+
+[[items]]
+name = "Gold Sigil Sword"
+type = "magic_weapon"
+category = "magic_weapons"
+points = 20
+description = "Bearer has Initiative 10"
+restrictions = ["Characters only", "Replaces hand weapon"]
+
+[[items]]
+name = "Sword of Swift Slaying"
+type = "magic_weapon"
+category = "magic_weapons"
+points = 15
+description = "Bearer has Always Strikes First"
+restrictions = ["Characters only", "Replaces hand weapon"]
+
+[[items]]
+name = "Tormentor Sword"
+type = "magic_weapon"
+category = "magic_weapons"
+points = 10
+description = "Enemy character or monster wounded by this weapon has Stupidity for rest of game"
+restrictions = ["Characters only", "Replaces hand weapon"]
+
+[[items]]
+name = "Warrior Bane"
+type = "magic_weapon"
+category = "magic_weapons"
+points = 5
+description = "Enemy wounded by this weapon loses 1 Attack (to minimum of 1) for rest of game"
+restrictions = ["Characters only", "Replaces hand weapon"]
+
+[[items]]
+name = "Shrieking Blade"
+type = "magic_weapon"
+category = "magic_weapons"
+points = 10
+description = "Bearer causes Fear"
+restrictions = ["Characters only", "Replaces hand weapon"]
+
+[[items]]
+name = "Biting Blade"
+type = "magic_weapon"
+category = "magic_weapons"
+points = 10
+description = "Armor Piercing (1)"
+restrictions = ["Characters only", "Replaces hand weapon"]
+
+[[items]]
+name = "Relic Sword"
+type = "magic_weapon"
+category = "magic_weapons"
+points = 10
+description = "Attacks always wound on 5+ regardless of Toughness"
+restrictions = ["Characters only", "Replaces hand weapon"]
+
+# =============================================================================
+# MAGIC ARMOR
+# =============================================================================
+
+[[items]]
+name = "Armor of Destiny"
+type = "magic_armor"
+category = "magic_armor"
+points = 50
+description = "Heavy armor (5+ save). The wearer has a 4+ ward save"
+restrictions = ["Characters only"]
+
+[[items]]
+name = "Trickster's Helm"
+type = "magic_armor"
+category = "magic_armor"
+points = 50
+description = "Enemies must re-roll successful to-wound rolls against the wearer"
+restrictions = ["Characters only", "Helmet"]
+
+[[items]]
+name = "Armor of Silvered Steel"
+type = "magic_armor"
+category = "magic_armor"
+points = 45
+description = "Armor save of 2+ that cannot be improved by any means"
+restrictions = ["Characters only"]
+
+[[items]]
+name = "Armor of Fortune"
+type = "magic_armor"
+category = "magic_armor"
+points = 35
+description = "Heavy armor (5+ save). The wearer has a 5+ ward save"
+restrictions = ["Characters only"]
+
+[[items]]
+name = "Helm of Discord"
+type = "magic_armor"
+category = "magic_armor"
+points = 30
+description = "At start of each Close Combat phase, randomly select one enemy character in base contact. That model must pass Ld test or cannot attack this turn"
+restrictions = ["Characters only", "Helmet"]
+
+[[items]]
+name = "Glittering Scales"
+type = "magic_armor"
+category = "magic_armor"
+points = 25
+description = "Light armor (6+ save). Attackers are -1 to hit the wearer in close combat"
+restrictions = ["Characters only"]
+
+[[items]]
+name = "Shield of Ptolos"
+type = "magic_armor"
+category = "magic_armor"
+points = 25
+description = "Shield. Wearer has 1+ armor save against shooting attacks"
+restrictions = ["Characters only"]
+
+[[items]]
+name = "Spellshield"
+type = "magic_armor"
+category = "magic_armor"
+points = 20
+description = "Shield. The bearer has Magic Resistance (1)"
+restrictions = ["Characters only"]
+
+[[items]]
+name = "Gambler's Armor"
+type = "magic_armor"
+category = "magic_armor"
+points = 15
+description = "Heavy armor (5+ save). The wearer has a 6+ ward save"
+restrictions = ["Characters only"]
+
+[[items]]
+name = "Enchanted Shield"
+type = "magic_armor"
+category = "magic_armor"
+points = 10
+description = "Shield that grants +2 to armor save instead of +1"
+restrictions = ["Characters only"]
+
+[[items]]
+name = "Dragonhelm"
+type = "magic_armor"
+category = "magic_armor"
+points = 10
+description = "+1 armor save. 2+ ward save against Flaming Attacks"
+restrictions = ["Characters only", "Helmet"]
+
+[[items]]
+name = "Charmed Shield"
+type = "magic_armor"
+category = "magic_armor"
+points = 5
+description = "One use only. First hit against bearer is discounted on a 2+"
+restrictions = ["Characters only"]
+
+# =============================================================================
+# TALISMANS
+# =============================================================================
+
+[[items]]
+name = "Talisman of Preservation"
+type = "talisman"
+category = "talismans"
+points = 45
+description = "4+ ward save"
+restrictions = ["Characters only"]
+
+[[items]]
+name = "Obsidian Lodestone"
+type = "talisman"
+category = "talismans"
+points = 45
+description = "Magic Resistance (3)"
+restrictions = ["Characters only"]
+
+[[items]]
+name = "Talisman of Protection"
+type = "talisman"
+category = "talismans"
+points = 30
+description = "5+ ward save"
+restrictions = ["Characters only"]
+
+[[items]]
+name = "Seed of Rebirth"
+type = "talisman"
+category = "talismans"
+points = 25
+description = "Regeneration (6+)"
+restrictions = ["Characters only"]
+
+[[items]]
+name = "Obsidian Amulet"
+type = "talisman"
+category = "talismans"
+points = 25
+description = "Magic Resistance (2)"
+restrictions = ["Characters only"]
+
+[[items]]
+name = "Dawnstone"
+type = "talisman"
+category = "talismans"
+points = 25
+description = "Re-roll failed armor saves"
+restrictions = ["Characters only"]
+
+[[items]]
+name = "Opal Amulet"
+type = "talisman"
+category = "talismans"
+points = 20
+description = "One use only. First wound suffered is ignored on a 2+"
+restrictions = ["Characters only"]
+
+[[items]]
+name = "Obsidian Trinket"
+type = "talisman"
+category = "talismans"
+points = 15
+description = "Magic Resistance (1)"
+restrictions = ["Characters only"]
+
+[[items]]
+name = "Talisman of Endurance"
+type = "talisman"
+category = "talismans"
+points = 15
+description = "6+ ward save"
+restrictions = ["Characters only"]
+
+[[items]]
+name = "Luckstone"
+type = "talisman"
+category = "talismans"
+points = 5
+description = "One use only. Re-roll a single failed armor save"
+restrictions = ["Characters only"]
+
+[[items]]
+name = "Pidgeon Plucker Pendant"
+type = "talisman"
+category = "talismans"
+points = 5
+description = "Flying enemies charging bearer lose Devastating Charge and Impact Hits"
+restrictions = ["Characters only"]
+
+# =============================================================================
+# ARCANE ITEMS
+# =============================================================================
+
+[[items]]
+name = "Book of Ashur"
+type = "arcane"
+category = "arcane"
+points = 70
+description = "Wizard adds +1 to all casting and dispel attempts"
+restrictions = ["Wizards only"]
+
+[[items]]
+name = "Feedback Scroll"
+type = "arcane"
+category = "arcane"
+points = 50
+description = "One use only. When enemy casts a spell, bearer may use scroll instead of dispelling. Roll D6 for each power die used: each 5+ causes a wound on the caster (no saves)"
+restrictions = ["Wizards only"]
+
+[[items]]
+name = "Scroll of Leeching"
+type = "arcane"
+category = "arcane"
+points = 50
+description = "One use only. When enemy casts a spell, bearer may use scroll to add D3 dispel dice to pool"
+restrictions = ["Wizards only"]
+
+[[items]]
+name = "Sivejir's Hex Scroll"
+type = "arcane"
+category = "arcane"
+points = 50
+description = "One use only. When enemy casts spell, bearer uses scroll to automatically dispel it. Enemy wizard rolls D6: on 1-3 randomly lose one spell"
+restrictions = ["Wizards only"]
+
+[[items]]
+name = "Power Scroll"
+type = "arcane"
+category = "arcane"
+points = 35
+description = "One use only. Bearer may declare use before casting. If spell is cast with Irresistible Force this turn, do not roll on Miscast table"
+restrictions = ["Wizards only"]
+
+[[items]]
+name = "Wand of Jet"
+type = "arcane"
+category = "arcane"
+points = 35
+description = "One use only. Bearer may add D6 power dice to casting attempt (after rolling to cast)"
+restrictions = ["Wizards only"]
+
+[[items]]
+name = "Dispel Scroll"
+type = "arcane"
+category = "arcane"
+points = 25
+description = "One use only. Automatically dispel one enemy spell when cast"
+restrictions = ["Wizards only"]
+
+[[items]]
+name = "Power Stone"
+type = "arcane"
+category = "arcane"
+points = 20
+description = "One use only. Add D3 power dice to a single casting attempt"
+restrictions = ["Wizards only"]
+
+[[items]]
+name = "Sceptre of Stability"
+type = "arcane"
+category = "arcane"
+points = 15
+description = "One use only. Bearer may re-roll a single failed dispel attempt"
+restrictions = ["Wizards only"]
+
+[[items]]
+name = "Channeling Staff"
+type = "arcane"
+category = "arcane"
+points = 15
+description = "Bearer channels power dice on 5+ instead of 6"
+restrictions = ["Wizards only"]
+
+[[items]]
+name = "Earthing Rod"
+type = "arcane"
+category = "arcane"
+points = 10
+description = "One use only. Re-roll result on the Miscast table"
+restrictions = ["Wizards only"]
+
+# =============================================================================
+# ENCHANTED ITEMS
+# =============================================================================
+
+[[items]]
+name = "Wizarding Hat"
+type = "enchanted"
+category = "enchanted"
+points = 50
+description = "Wearer becomes a Level 2 Wizard who uses a random Lore (D8). Must roll for spells. Has Stupidity"
+restrictions = ["Characters only", "Cannot be taken by Wizards"]
+
+[[items]]
+name = "Fozzrik's Folding Fortress"
+type = "enchanted"
+category = "enchanted"
+points = 50
+description = "One use only. After deployment, place a Watchtower within 12 inches of bearer. May garrison immediately"
+restrictions = ["Characters only"]
+
+[[items]]
+name = "Crown of Command"
+type = "enchanted"
+category = "enchanted"
+points = 35
+description = "The wearer has Stubborn"
+restrictions = ["Characters only"]
+
+[[items]]
+name = "Healing Potion"
+type = "enchanted"
+category = "enchanted"
+points = 35
+description = "One use only. Drinking at start of any phase heals D6 wounds"
+restrictions = ["Characters only"]
+
+[[items]]
+name = "Featherfoe Torc"
+type = "enchanted"
+category = "enchanted"
+points = 35
+description = "Flying enemies must re-roll successful to-hit rolls against bearer and their unit"
+restrictions = ["Characters only"]
+
+[[items]]
+name = "Ruby Ring of Ruin"
+type = "enchanted"
+category = "enchanted"
+points = 30
+description = "Bound Spell (power level 3). Casts Fireball (D6 S4 Flaming hits at 24 inches)"
+restrictions = ["Characters only"]
+
+[[items]]
+name = "Terrifying Mask of EEE!"
+type = "enchanted"
+category = "enchanted"
+points = 25
+description = "Bearer causes Terror"
+restrictions = ["Characters only"]
+
+[[items]]
+name = "Potion of Strength"
+type = "enchanted"
+category = "enchanted"
+points = 20
+description = "One use only. +3 Strength for one Close Combat phase"
+restrictions = ["Characters only"]
+
+[[items]]
+name = "Potion of Toughness"
+type = "enchanted"
+category = "enchanted"
+points = 20
+description = "One use only. +3 Toughness for one phase"
+restrictions = ["Characters only"]
+
+[[items]]
+name = "Other Trickster's Shard"
+type = "enchanted"
+category = "enchanted"
+points = 15
+description = "Enemies in base contact with bearer must re-roll successful ward saves"
+restrictions = ["Characters only"]
+
+[[items]]
+name = "Ironcurse Icon"
+type = "enchanted"
+category = "enchanted"
+points = 5
+description = "Bearer and unit have 6+ ward save against war machine attacks"
+restrictions = ["Characters only"]
+
+[[items]]
+name = "Potion of Foolhardiness"
+type = "enchanted"
+category = "enchanted"
+points = 5
+description = "One use only. Bearer has Immunity (Psychology) and Devastating Charge (+1A) for one turn"
+restrictions = ["Characters only"]
+
+[[items]]
+name = "Potion of Speed"
+type = "enchanted"
+category = "enchanted"
+points = 5
+description = "One use only. +3 Initiative for one Close Combat phase"
+restrictions = ["Characters only"]
+
+# =============================================================================
+# MAGIC STANDARDS
+# =============================================================================
+
+[[items]]
+name = "Rampager's Standard"
+type = "banner"
+category = "magic_banners"
+points = 55
+description = "Unit re-rolls failed charge distances"
+restrictions = ["Unit standard bearer only"]
+
+[[items]]
+name = "Wailing Banner"
+type = "banner"
+category = "magic_banners"
+points = 50
+description = "Unit causes Terror"
+restrictions = ["Unit standard bearer only"]
+
+[[items]]
+name = "Ranger's Standard"
+type = "banner"
+category = "magic_banners"
+points = 50
+description = "Unit has Strider (ignore difficult terrain penalties)"
+restrictions = ["Unit standard bearer only"]
+
+[[items]]
+name = "Razor Standard"
+type = "banner"
+category = "magic_banners"
+points = 45
+description = "Unit has Armor Piercing (1)"
+restrictions = ["Unit standard bearer only"]
+
+[[items]]
+name = "War Banner"
+type = "banner"
+category = "magic_banners"
+points = 35
+description = "Unit adds +1 to combat resolution"
+restrictions = ["Unit standard bearer only"]
+
+[[items]]
+name = "Banner of Swiftness"
+type = "banner"
+category = "magic_banners"
+points = 30
+description = "Unit has +1 Movement"
+restrictions = ["Unit standard bearer only"]
+
+[[items]]
+name = "Lichbone Pennant"
+type = "banner"
+category = "magic_banners"
+points = 25
+description = "Unit has Magic Resistance (1)"
+restrictions = ["Unit standard bearer only"]
+
+[[items]]
+name = "Standard of Discipline"
+type = "banner"
+category = "magic_banners"
+points = 25
+description = "Unit has +1 Leadership. Cannot use General's Inspiring Presence"
+restrictions = ["Unit standard bearer only"]
+
+[[items]]
+name = "Banner of Eternal Flame"
+type = "banner"
+category = "magic_banners"
+points = 10
+description = "Unit has Flaming Attacks"
+restrictions = ["Unit standard bearer only"]
+
+[[items]]
+name = "Gleaming Pennant"
+type = "banner"
+category = "magic_banners"
+points = 5
+description = "One use only. Unit may re-roll a single failed Leadership test"
+restrictions = ["Unit standard bearer only"]
+
+[[items]]
+name = "Scarecrow Banner"
+type = "banner"
+category = "magic_banners"
+points = 5
+description = "Flying enemies are -1 Leadership when within 6 inches of unit"
+restrictions = ["Unit standard bearer only"]

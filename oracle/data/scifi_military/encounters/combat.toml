@@ -1,0 +1,72 @@
+# Sci-Fi Military Combat Encounters
+# Infantry engagements, vehicle actions, and special operations
+
+[encounters]
+entries = [
+  # Infantry Combat
+  { text = "Ambush in urban ruins, enemy fire from multiple concealed positions", weight = 1 },
+  { text = "Trench assault, going over the top into withering defensive fire", weight = 1 },
+  { text = "Building clearance, room-by-room fighting in hab-block", weight = 1 },
+  { text = "Counter-ambush, turning the tables on attackers", weight = 1 },
+  { text = "Defensive stand, holding position against overwhelming numbers", weight = 1 },
+  { text = "Fighting withdrawal, breaking contact while under fire", weight = 1 },
+  { text = "Night raid, attacking enemy position under cover of darkness", weight = 1 },
+  { text = "Patrol clash, encountering enemy scouts in no-man's-land", weight = 1 },
+  { text = "Bunker assault, breaching fortified position", weight = 1 },
+  { text = "Sniper duel, hunting the enemy marksman", weight = 1 },
+
+  # Vehicle Combat
+  { text = "Tank engagement, armored vehicles trading fire at range", weight = 1 },
+  { text = "Convoy ambush, supply vehicles under attack", weight = 1 },
+  { text = "Walker assault, towering war machines striding through defenses", weight = 1 },
+  { text = "Anti-armor action, infantry hunting enemy vehicles", weight = 1 },
+  { text = "Artillery duel, counter-battery fire between gun positions", weight = 1 },
+  { text = "Air support mission, calling in strikes on enemy positions", weight = 1 },
+  { text = "Air defense, protecting ground forces from enemy aircraft", weight = 1 },
+  { text = "Dropship assault, fighting during landing under fire", weight = 1 },
+  { text = "Gunship run, close air support strafing enemy lines", weight = 1 },
+  { text = "Armored breakthrough, punching through enemy defensive line", weight = 1 },
+
+  # Boarding Actions
+  { text = "Ship boarding, breaching hull and fighting through corridors", weight = 1 },
+  { text = "Repelling boarders, defending ship from enemy assault", weight = 1 },
+  { text = "Torpedo tube insertion, assault via boarding torpedo", weight = 1 },
+  { text = "Teleport strike, materializing behind enemy lines", weight = 1 },
+  { text = "Bridge capture, fighting to take command of enemy vessel", weight = 1 },
+  { text = "Engineering sabotage, fighting to reactor to cripple ship", weight = 1 },
+  { text = "Hangar bay assault, securing fighter launch capabilities", weight = 1 },
+  { text = "Armory seizure, capturing enemy weapons stores", weight = 1 },
+  { text = "Rescue operation, extracting prisoners from enemy ship", weight = 1 },
+  { text = "Scuttle prevention, fighting to stop enemy from destroying vessel", weight = 1 },
+
+  # Special Operations
+  { text = "Assassination mission, eliminating high-value target", weight = 1 },
+  { text = "Sabotage operation, destroying critical enemy infrastructure", weight = 1 },
+  { text = "Hostage rescue, extracting captives from enemy facility", weight = 1 },
+  { text = "Intelligence raid, capturing data and personnel", weight = 1 },
+  { text = "Insertion combat, fighting from the moment boots hit ground", weight = 1 },
+  { text = "Extraction under fire, fighting to reach evac point", weight = 1 },
+  { text = "Beacon placement, marking target for orbital strike", weight = 1 },
+  { text = "Decapitation strike, hitting enemy command structure", weight = 1 },
+  { text = "False flag operation, fighting while appearing to be enemy", weight = 1 },
+  { text = "Diversionary assault, creating chaos to cover main operation", weight = 1 },
+
+  # Bug Hunts
+  { text = "Hive infiltration, pushing into xenos breeding grounds", weight = 1 },
+  { text = "Nest clearing, exterminating xenos den", weight = 1 },
+  { text = "Queen hunt, tracking and eliminating brood mother", weight = 1 },
+  { text = "Spore containment, fighting to prevent xenos spread", weight = 1 },
+  { text = "Survivor extraction, rescuing civilians from infested zone", weight = 1 },
+  { text = "Perimeter defense, holding line against swarming xenos", weight = 1 },
+  { text = "Tunnel fighting, close quarters in xenos burrow system", weight = 1 },
+  { text = "Egg destruction, eliminating xenos future generations", weight = 1 },
+  { text = "Warrior caste engagement, fighting elite xenos soldiers", weight = 1 },
+  { text = "Bioform elimination, destroying specialized xenos creature", weight = 1 },
+
+  # Defensive Actions
+  { text = "Last stand, surrounded with no hope of relief", weight = 1 },
+  { text = "Siege defense, holding fortification against assault", weight = 1 },
+  { text = "Rearguard action, covering main force retreat", weight = 1 },
+  { text = "Bridge defense, holding chokepoint against attack", weight = 1 },
+  { text = "Perimeter breach response, counterattacking enemy penetration", weight = 1 }
+]

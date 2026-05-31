@@ -1,0 +1,489 @@
+# Combat Situations - Tactical Contexts and Environmental Factors
+# Over 150 entries for dynamic combat situation generation
+# Use weight to adjust frequency (higher = more common)
+
+[tactical_advantages]
+entries = [
+  # Positional Advantages (weight 2 - common)
+  { text = "Higher ground - clear line of fire", weight = 2 },
+  { text = "Flanking position - caught off-guard", weight = 2 },
+  { text = "Cover provides protection while allowing attack", weight = 2 },
+  { text = "The enemy's back is exposed", weight = 2 },
+  { text = "Concealment allows for careful aim", weight = 2 },
+  { text = "Chokepoint forces enemies into kill zone", weight = 2 },
+  { text = "Bottleneck negates their numerical advantage", weight = 2 },
+  { text = "Elevated position with clear sightlines", weight = 2 },
+
+  # Surprise and Initiative (weight 1)
+  { text = "Surprise - they didn't see it coming", weight = 1 },
+  { text = "First strike advantage - they're still reacting", weight = 1 },
+  { text = "The ambush springs perfectly", weight = 1 },
+  { text = "Caught while distracted - easy targets", weight = 1 },
+  { text = "They're mid-transition - vulnerable", weight = 1 },
+  { text = "Weapons still sheathed - precious seconds wasted", weight = 1 },
+  { text = "The attack came from an unexpected angle", weight = 1 },
+  { text = "Initiative seized before they could organize", weight = 1 },
+
+  # Numerical and Force Advantages
+  { text = "Numerical superiority - overwhelming", weight = 1 },
+  { text = "Fresh reinforcements arrive", weight = 1 },
+  { text = "The enemy is divided and isolated", weight = 1 },
+  { text = "Superior numbers allow rotation of fighters", weight = 1 },
+  { text = "Reserves ready to exploit any opening", weight = 1 },
+  { text = "Enough strength to hold and flank simultaneously", weight = 1 },
+  { text = "The enemy can't cover all approaches", weight = 1 },
+  { text = "Surrounding them from multiple angles", weight = 1 },
+
+  # Equipment and Preparation
+  { text = "Better equipment - outmatched", weight = 1 },
+  { text = "Prepared specifically for this fight", weight = 1 },
+  { text = "The right tools for the job", weight = 1 },
+  { text = "Armor gives confidence to press forward", weight = 1 },
+  { text = "Reach advantage - they can't close safely", weight = 1 },
+  { text = "Shield wall holds against their assault", weight = 1 },
+  { text = "Specialized gear counters their strengths", weight = 1 },
+  { text = "Supplies are plentiful - no need to rush", weight = 1 },
+
+  # Knowledge and Terrain
+  { text = "Fighting on home turf - every advantage", weight = 1 },
+  { text = "The terrain is mapped and memorized", weight = 1 },
+  { text = "Traps and hazards known to friendlies only", weight = 1 },
+  { text = "Escape routes secured in advance", weight = 1 },
+  { text = "Intel on enemy disposition proves accurate", weight = 1 },
+  { text = "The enemy's weakness is known and exploited", weight = 1 },
+  { text = "Fighting in conditions trained for", weight = 1 },
+  { text = "The plan is holding together", weight = 1 },
+
+  # Enemy Weakness
+  { text = "Enemy is tired/wounded - pressing advantage", weight = 1 },
+  { text = "Their morale is already cracking", weight = 1 },
+  { text = "Leadership eliminated - they're disorganized", weight = 1 },
+  { text = "Their formation has gaps to exploit", weight = 1 },
+  { text = "Supplies cut off - they're weakening", weight = 1 },
+  { text = "Internal division works in our favor", weight = 1 },
+  { text = "They're fighting against type - uncomfortable", weight = 1 },
+  { text = "Forced to defend what cannot be defended", weight = 1 },
+]
+
+[tactical_disadvantages]
+entries = [
+  # Numerical Disadvantages (weight 2 - common)
+  { text = "Outnumbered - fighting for survival", weight = 2 },
+  { text = "Surrounded with no clear path out", weight = 2 },
+  { text = "Overwhelmed by the enemy's numbers", weight = 2 },
+  { text = "Too many threats to track", weight = 2 },
+  { text = "Every direction holds danger", weight = 2 },
+  { text = "No reserves - everyone is committed", weight = 2 },
+
+  # Positional Disadvantages (weight 1)
+  { text = "Caught in the open - no cover", weight = 1 },
+  { text = "Low ground - vulnerable to everything above", weight = 1 },
+  { text = "Backed into a corner - nowhere to go", weight = 1 },
+  { text = "The terrain funnels into a death trap", weight = 1 },
+  { text = "Exposed flanks invite attack", weight = 1 },
+  { text = "Position is indefensible", weight = 1 },
+  { text = "The angle is all wrong", weight = 1 },
+  { text = "No room to maneuver", weight = 1 },
+
+  # Surprise and Initiative Lost
+  { text = "Ambushed - scrambling to respond", weight = 1 },
+  { text = "Caught completely off-guard", weight = 1 },
+  { text = "The trap closes before awareness dawns", weight = 1 },
+  { text = "No time to prepare - they struck first", weight = 1 },
+  { text = "Still recovering from the initial shock", weight = 1 },
+  { text = "The initiative belongs entirely to them", weight = 1 },
+  { text = "Playing catch-up from the start", weight = 1 },
+  { text = "Every response is reactive, not proactive", weight = 1 },
+
+  # Resource Depletion
+  { text = "Low on ammunition/resources", weight = 1 },
+  { text = "Exhausted - strength failing", weight = 1 },
+  { text = "Running on fumes - nothing left to give", weight = 1 },
+  { text = "Medical supplies exhausted", weight = 1 },
+  { text = "Weapons damaged or depleted", weight = 1 },
+  { text = "Food and water long since gone", weight = 1 },
+  { text = "Reinforcements are not coming", weight = 1 },
+  { text = "Burning through resources faster than sustainable", weight = 1 },
+
+  # Sensory and Information
+  { text = "Fighting blind - can't see the enemy", weight = 1 },
+  { text = "No intel on what we're facing", weight = 1 },
+  { text = "Communications severed - isolated", weight = 1 },
+  { text = "The enemy knows our position", weight = 1 },
+  { text = "Noise discipline compromised", weight = 1 },
+  { text = "Light betrays our location", weight = 1 },
+  { text = "Can't tell friend from foe in the chaos", weight = 1 },
+  { text = "Every assumption has proven wrong", weight = 1 },
+
+  # Morale and Cohesion
+  { text = "Fear is spreading through the ranks", weight = 1 },
+  { text = "Leadership is dead or incapacitated", weight = 1 },
+  { text = "Unit cohesion is fragmenting", weight = 1 },
+  { text = "Trust between fighters is eroding", weight = 1 },
+  { text = "Some are already considering surrender", weight = 1 },
+  { text = "The cause feels lost - why keep fighting?", weight = 1 },
+  { text = "Desperation replaces discipline", weight = 1 },
+  { text = "Every fighter for themselves mentality", weight = 1 },
+
+  # Equipment and Preparation Failures
+  { text = "Outmatched in equipment and training", weight = 1 },
+  { text = "Wrong tools for this fight", weight = 1 },
+  { text = "Armor is failing against their weapons", weight = 1 },
+  { text = "Brought a knife to a sword fight", weight = 1 },
+  { text = "Completely unprepared for this enemy", weight = 1 },
+  { text = "The plan didn't survive first contact", weight = 1 },
+  { text = "Critical equipment malfunctioned", weight = 1 },
+  { text = "Nothing is working as intended", weight = 1 },
+]
+
+[battle_momentum]
+entries = [
+  # Favorable Shifts (weight 2)
+  { text = "The tide is turning in your favor", weight = 2 },
+  { text = "Momentum builds with each small victory", weight = 2 },
+  { text = "The enemy is giving ground", weight = 2 },
+  { text = "Confidence spreads through the ranks", weight = 2 },
+
+  # Unfavorable Shifts (weight 2)
+  { text = "Momentum shifting to the enemy", weight = 2 },
+  { text = "The tide turns against you", weight = 2 },
+  { text = "Ground lost with each exchange", weight = 2 },
+  { text = "The situation deteriorates rapidly", weight = 2 },
+
+  # Stalemates (weight 1)
+  { text = "Stalemate - neither side gaining ground", weight = 1 },
+  { text = "A grinding war of attrition develops", weight = 1 },
+  { text = "Both sides dig in - no one advances", weight = 1 },
+  { text = "Exhaustion breeds equilibrium", weight = 1 },
+  { text = "The battle becomes a test of endurance", weight = 1 },
+  { text = "Neither can break the other's line", weight = 1 },
+
+  # Breaking Points
+  { text = "The enemy is breaking", weight = 1 },
+  { text = "Your forces are faltering", weight = 1 },
+  { text = "The center cannot hold", weight = 1 },
+  { text = "One more push might end this", weight = 1 },
+  { text = "The line buckles but doesn't break", weight = 1 },
+  { text = "Cracks appear in their formation", weight = 1 },
+  { text = "The breaking point approaches", weight = 1 },
+  { text = "Discipline fails on both sides", weight = 1 },
+
+  # Dramatic Reversals
+  { text = "Sudden reversal - everything changes", weight = 1 },
+  { text = "What seemed certain victory becomes rout", weight = 1 },
+  { text = "An unexpected development shifts everything", weight = 1 },
+  { text = "The underdog finds a second wind", weight = 1 },
+  { text = "Desperation breeds a miracle", weight = 1 },
+  { text = "The impossible becomes possible", weight = 1 },
+  { text = "Fortune favors the bold - or the lucky", weight = 1 },
+  { text = "A single act turns the entire battle", weight = 1 },
+
+  # Gradual Developments
+  { text = "The advantage slowly but surely builds", weight = 1 },
+  { text = "Attrition takes its toll", weight = 1 },
+  { text = "Each exchange chips away at their strength", weight = 1 },
+  { text = "The battle becomes a slow suffocation", weight = 1 },
+  { text = "Victory emerges from a thousand small wins", weight = 1 },
+  { text = "Death by a thousand cuts for one side", weight = 1 },
+]
+
+[environmental_combat]
+entries = [
+  # Fire and Heat (weight 1)
+  { text = "Fire spreads to the battlefield", weight = 1 },
+  { text = "Flames block escape routes", weight = 1 },
+  { text = "Smoke chokes and blinds", weight = 1 },
+  { text = "The heat becomes unbearable", weight = 1 },
+  { text = "Something flammable catches - danger escalates", weight = 1 },
+  { text = "The fire forces everyone into a shrinking space", weight = 1 },
+  { text = "Burning debris falls from above", weight = 1 },
+  { text = "The air itself seems to burn", weight = 1 },
+
+  # Structural Hazards
+  { text = "Structure begins to collapse", weight = 1 },
+  { text = "The floor gives way beneath combatants", weight = 1 },
+  { text = "Walls crack and threaten to fall", weight = 1 },
+  { text = "The ceiling sags dangerously", weight = 1 },
+  { text = "Support beams splinter from impacts", weight = 1 },
+  { text = "The building groans ominously", weight = 1 },
+  { text = "Debris rains down with each tremor", weight = 1 },
+  { text = "The ground itself is no longer trustworthy", weight = 1 },
+
+  # Light and Darkness
+  { text = "Darkness gives advantage to the prepared", weight = 1 },
+  { text = "A light source is destroyed - sudden blackness", weight = 1 },
+  { text = "Blinding light creates disorientation", weight = 1 },
+  { text = "Shadows conceal movement", weight = 1 },
+  { text = "The sun sets - combat conditions change", weight = 1 },
+  { text = "Dawn breaks - concealment lost", weight = 1 },
+  { text = "Flickering light makes perception unreliable", weight = 1 },
+  { text = "A sudden flash blinds everyone momentarily", weight = 1 },
+
+  # Weather Effects
+  { text = "Weather intensifies - visibility drops", weight = 1 },
+  { text = "Rain makes footing treacherous", weight = 1 },
+  { text = "Wind disrupts aimed attacks", weight = 1 },
+  { text = "Snow blindness affects all combatants", weight = 1 },
+  { text = "Fog rolls in, obscuring everything", weight = 1 },
+  { text = "Lightning threatens from above", weight = 1 },
+  { text = "The storm arrives at the worst moment", weight = 1 },
+  { text = "Ice forms on every surface", weight = 1 },
+
+  # Terrain Changes
+  { text = "Terrain becomes treacherous", weight = 1 },
+  { text = "Water begins to flood the area", weight = 1 },
+  { text = "The ground turns to mud, slowing movement", weight = 1 },
+  { text = "A chasm opens between combatants", weight = 1 },
+  { text = "The bridge begins to fail", weight = 1 },
+  { text = "Unstable ground shifts underfoot", weight = 1 },
+  { text = "Natural obstacles appear from nowhere", weight = 1 },
+  { text = "The terrain favors neither side now", weight = 1 },
+
+  # Third Parties
+  { text = "Third party enters the fight", weight = 1 },
+  { text = "Civilians wander into the combat zone", weight = 1 },
+  { text = "A predator is drawn by the noise and blood", weight = 1 },
+  { text = "Authorities arrive - everyone's an enemy", weight = 1 },
+  { text = "Reinforcements arrive for... someone", weight = 1 },
+  { text = "A territorial creature takes offense to all", weight = 1 },
+  { text = "Neutral parties demand the fighting stop", weight = 1 },
+  { text = "The situation becomes a three-way battle", weight = 1 },
+]
+
+[combat_terrain]
+entries = [
+  # Urban/Built Environment
+  { text = "Narrow alleyway limits movement options", weight = 1 },
+  { text = "Rooftops provide overwatch positions", weight = 1 },
+  { text = "Doorways create fatal funnels", weight = 1 },
+  { text = "Windows become sniper nests", weight = 1 },
+  { text = "Stairs give advantage to the defender above", weight = 1 },
+  { text = "Rubble provides cover but slows movement", weight = 1 },
+  { text = "The marketplace offers chaos and concealment", weight = 1 },
+  { text = "Barricades channel the approach", weight = 1 },
+
+  # Natural Terrain
+  { text = "Dense forest provides cover but blocks sightlines", weight = 1 },
+  { text = "Open field offers no protection", weight = 1 },
+  { text = "Rocky outcropping creates natural fortification", weight = 1 },
+  { text = "River crossing becomes a killing ground", weight = 1 },
+  { text = "Swampland slows everyone", weight = 1 },
+  { text = "Mountain pass creates chokepoint", weight = 1 },
+  { text = "Cave system limits numbers that can engage", weight = 1 },
+  { text = "Beach offers no cover but good footing", weight = 1 },
+
+  # Hazardous Terrain
+  { text = "Toxic atmosphere requires caution", weight = 1 },
+  { text = "Unstable ground threatens collapse", weight = 1 },
+  { text = "Extreme cold affects performance", weight = 1 },
+  { text = "Searing heat drains stamina", weight = 1 },
+  { text = "Quicksand borders the fighting area", weight = 1 },
+  { text = "Volcanic activity creates additional danger", weight = 1 },
+  { text = "Radiation levels climb the longer you stay", weight = 1 },
+  { text = "The very air burns the lungs", weight = 1 },
+
+  # Tactical Structures
+  { text = "Fortifications favor the defender", weight = 1 },
+  { text = "Trench system creates labyrinthine fighting", weight = 1 },
+  { text = "Walls provide height advantage", weight = 1 },
+  { text = "Bridge becomes contested territory", weight = 1 },
+  { text = "Tower offers commanding view", weight = 1 },
+  { text = "Underground tunnels hide movement", weight = 1 },
+  { text = "Warehouse creates close-quarters environment", weight = 1 },
+  { text = "Ship deck limits mobility for all", weight = 1 },
+]
+
+[combat_timing]
+entries = [
+  # Time Pressure
+  { text = "Dawn approaches - concealment fades with darkness", weight = 1 },
+  { text = "Nightfall will change everything", weight = 1 },
+  { text = "Reinforcements arrive in minutes - hold the line", weight = 1 },
+  { text = "The window of opportunity is closing", weight = 1 },
+  { text = "Every second counts now", weight = 1 },
+  { text = "The tide turns in hours - time is the enemy", weight = 1 },
+  { text = "If this isn't finished soon, it won't matter", weight = 1 },
+  { text = "Racing against an invisible clock", weight = 1 },
+
+  # Pacing and Rhythm
+  { text = "A lull in the fighting offers brief respite", weight = 1 },
+  { text = "The battle has been raging for hours", weight = 1 },
+  { text = "This is the moment everything hinges on", weight = 1 },
+  { text = "The fight escalates to a new intensity", weight = 1 },
+  { text = "Exhaustion sets in - mistakes multiply", weight = 1 },
+  { text = "Second wind arrives from somewhere deep", weight = 1 },
+  { text = "The initial fury burns down to steady combat", weight = 1 },
+  { text = "What was quick becomes grinding", weight = 1 },
+
+  # Critical Moments
+  { text = "Everything depends on the next few seconds", weight = 1 },
+  { text = "The decisive moment arrives", weight = 1 },
+  { text = "Now or never - no second chances", weight = 1 },
+  { text = "This is where legends are made or unmade", weight = 1 },
+  { text = "The battle reaches its climax", weight = 1 },
+  { text = "A turning point that will be remembered", weight = 1 },
+  { text = "History pivots on this instant", weight = 1 },
+  { text = "The moment of truth arrives at last", weight = 1 },
+]
+
+[combat_complications]
+entries = [
+  # Friendly Fire and Coordination
+  { text = "Allies are too close - risk of friendly fire", weight = 1 },
+  { text = "Coordination breaks down in the chaos", weight = 1 },
+  { text = "Someone fires into a friendly position", weight = 1 },
+  { text = "Orders are misheard or contradicted", weight = 1 },
+  { text = "Two allies reach for the same resource", weight = 1 },
+  { text = "The formation becomes hopelessly tangled", weight = 1 },
+  { text = "Communication fails at the worst moment", weight = 1 },
+  { text = "Signals are misread - wrong action taken", weight = 1 },
+
+  # Equipment Issues
+  { text = "Weapon jams at a critical moment", weight = 1 },
+  { text = "Ammunition runs dangerously low", weight = 1 },
+  { text = "Armor fails when needed most", weight = 1 },
+  { text = "The vital tool breaks", weight = 1 },
+  { text = "Equipment is damaged in the fighting", weight = 1 },
+  { text = "Something essential was left behind", weight = 1 },
+  { text = "The backup plan relies on gear that's gone", weight = 1 },
+  { text = "Improvisation required - proper tools unavailable", weight = 1 },
+
+  # Physical Limitations
+  { text = "Wounds from earlier begin to tell", weight = 1 },
+  { text = "Exhaustion clouds judgment", weight = 1 },
+  { text = "Pain becomes impossible to ignore", weight = 1 },
+  { text = "Blood loss weakens every action", weight = 1 },
+  { text = "The body simply won't cooperate", weight = 1 },
+  { text = "Old injuries flare up", weight = 1 },
+  { text = "Muscle cramps at the wrong time", weight = 1 },
+  { text = "Vision blurs from strain or injury", weight = 1 },
+
+  # Moral Dilemmas
+  { text = "Continuing means certain death for some", weight = 1 },
+  { text = "The enemy uses hostages or shields", weight = 1 },
+  { text = "Victory requires an unconscionable act", weight = 1 },
+  { text = "A former ally fights on the other side", weight = 1 },
+  { text = "The cause itself is called into question", weight = 1 },
+  { text = "Survival conflicts with honor", weight = 1 },
+  { text = "The innocent will suffer regardless of outcome", weight = 1 },
+  { text = "Orders conflict with conscience", weight = 1 },
+
+  # Intelligence Failures
+  { text = "The enemy is not what was expected", weight = 1 },
+  { text = "Intel was catastrophically wrong", weight = 1 },
+  { text = "Hidden enemies reveal themselves", weight = 1 },
+  { text = "The trap was missed entirely", weight = 1 },
+  { text = "Reinforcements that shouldn't exist arrive", weight = 1 },
+  { text = "The objective has moved or changed", weight = 1 },
+  { text = "Maps prove useless", weight = 1 },
+  { text = "Nothing is where it should be", weight = 1 },
+]
+
+[combat_opportunities]
+entries = [
+  # Enemy Mistakes
+  { text = "The enemy overextends, leaving an opening", weight = 1 },
+  { text = "Their formation develops a fatal gap", weight = 1 },
+  { text = "A mistake reveals their weak point", weight = 1 },
+  { text = "Miscommunication creates a vulnerability", weight = 1 },
+  { text = "Their overconfidence becomes an exploitable flaw", weight = 1 },
+  { text = "Friendly fire disrupts their coordination", weight = 1 },
+  { text = "Leadership makes a visible error", weight = 1 },
+  { text = "They commit to a course that cannot succeed", weight = 1 },
+
+  # Environmental Opportunities
+  { text = "The terrain shifts to favor attack", weight = 1 },
+  { text = "A clear path to the objective opens", weight = 1 },
+  { text = "Cover appears where none was before", weight = 1 },
+  { text = "The environment can be used as a weapon", weight = 1 },
+  { text = "A collapse creates a new route", weight = 1 },
+  { text = "Natural forces align with the strategy", weight = 1 },
+  { text = "The hazard becomes an asset", weight = 1 },
+  { text = "Chaos creates opportunity for the prepared", weight = 1 },
+
+  # Resource Windfalls
+  { text = "Enemy supplies fall into friendly hands", weight = 1 },
+  { text = "Abandoned equipment becomes available", weight = 1 },
+  { text = "A cache of resources is discovered", weight = 1 },
+  { text = "Reinforcements arrive unexpectedly", weight = 1 },
+  { text = "A valuable asset changes sides", weight = 1 },
+  { text = "Critical intel falls into lap", weight = 1 },
+  { text = "The wounded prove less serious than feared", weight = 1 },
+  { text = "What was lost is found", weight = 1 },
+
+  # Psychological Opportunities
+  { text = "Enemy morale cracks visibly", weight = 1 },
+  { text = "A symbol of their cause is destroyed", weight = 1 },
+  { text = "Their leadership falters publicly", weight = 1 },
+  { text = "Fear spreads through their ranks", weight = 1 },
+  { text = "A rallying cry unifies friendly forces", weight = 1 },
+  { text = "Desperation turns to fury - strength from anger", weight = 1 },
+  { text = "The sight of victory inspires greater effort", weight = 1 },
+  { text = "A hero emerges when one was needed", weight = 1 },
+]
+
+[combat_escalation]
+entries = [
+  # Intensity Increases
+  { text = "The fight becomes personal", weight = 1 },
+  { text = "Quarter is neither asked nor given", weight = 1 },
+  { text = "The rules of engagement dissolve", weight = 1 },
+  { text = "Desperation leads to extreme measures", weight = 1 },
+  { text = "What was a skirmish becomes a battle", weight = 1 },
+  { text = "Reserves commit - no one held back", weight = 1 },
+  { text = "The fighting spills beyond original bounds", weight = 1 },
+  { text = "Collateral damage becomes inevitable", weight = 1 },
+
+  # New Threats
+  { text = "Heavier weapons are brought to bear", weight = 1 },
+  { text = "Specialists enter the fight", weight = 1 },
+  { text = "The enemy reveals hidden capabilities", weight = 1 },
+  { text = "Tactics shift to something more brutal", weight = 1 },
+  { text = "Chemical or biological agents threaten", weight = 1 },
+  { text = "Explosives change the calculus entirely", weight = 1 },
+  { text = "Something inhuman joins the enemy", weight = 1 },
+  { text = "The nature of the threat transforms", weight = 1 },
+
+  # Stakes Rise
+  { text = "What started small now threatens everything", weight = 1 },
+  { text = "Civilian populations are endangered", weight = 1 },
+  { text = "Strategic assets come under threat", weight = 1 },
+  { text = "The chain of command takes direct interest", weight = 1 },
+  { text = "This battle will determine the war", weight = 1 },
+  { text = "There's no going back from what happens next", weight = 1 },
+  { text = "The point of no return has been crossed", weight = 1 },
+  { text = "Everything rides on the outcome now", weight = 1 },
+]
+
+[combat_deescalation]
+entries = [
+  # Negotiation and Surrender
+  { text = "White flag appears - someone seeks terms", weight = 1 },
+  { text = "A voice calls for parley", weight = 1 },
+  { text = "Weapons are lowered, tentatively", weight = 1 },
+  { text = "Both sides seem to want this over", weight = 1 },
+  { text = "The cost of continuing outweighs victory", weight = 1 },
+  { text = "Honor satisfied, violence can end", weight = 1 },
+  { text = "A face-saving exit is offered", weight = 1 },
+  { text = "Neither side wants to be the last to die here", weight = 1 },
+
+  # Mutual Exhaustion
+  { text = "Everyone is too tired to keep fighting", weight = 1 },
+  { text = "The battle winds down from exhaustion", weight = 1 },
+  { text = "Ammunition spent, weapons blunted", weight = 1 },
+  { text = "By unspoken agreement, the killing pauses", weight = 1 },
+  { text = "The fighters stop to breathe - and don't resume", weight = 1 },
+  { text = "Survival trumps victory for all involved", weight = 1 },
+  { text = "The will to fight simply... fades", weight = 1 },
+  { text = "Combat devolves into mutual wariness", weight = 1 },
+
+  # External Intervention
+  { text = "Authority arrives to separate combatants", weight = 1 },
+  { text = "A greater threat forces cooperation", weight = 1 },
+  { text = "Someone with influence demands peace", weight = 1 },
+  { text = "The battlefield is no longer viable for either side", weight = 1 },
+  { text = "External events make the fight pointless", weight = 1 },
+  { text = "The cause of the fight is resolved by others", weight = 1 },
+  { text = "Natural disaster forces all to seek shelter", weight = 1 },
+  { text = "The larger picture changes everything", weight = 1 },
+]

@@ -1,0 +1,132 @@
+# Grimdark Future - Core Rules Reference
+# One Page Rules - Free wargame system
+
+[[rules]]
+name = "Quality Test"
+description = "Roll D6 equal to or above the unit's Quality value to succeed. Used for hitting in shooting and melee."
+page = "Core Rules p.2"
+keywords = ["shooting", "melee", "quality"]
+examples = [
+    "Quality 3+ needs 3, 4, 5, or 6 to hit",
+    "Quality 5+ needs 5 or 6 to hit",
+]
+
+[[rules]]
+name = "Defense Test"
+description = "Roll D6 equal to or above the unit's Defense value to block a wound. AP modifiers reduce Defense."
+page = "Core Rules p.2"
+keywords = ["defense", "armor", "saving"]
+examples = [
+    "Defense 4+ with AP-1 becomes Defense 5+",
+    "Defense 6+ with any AP becomes Defense 7+ (auto-fail)",
+]
+
+[[rules]]
+name = "Tough"
+description = "Models with Tough(X) can take X wounds before being removed. Track wounds separately per model."
+page = "Core Rules p.3"
+keywords = ["tough", "wounds", "damage"]
+examples = [
+    "Tough(3) model takes 2 damage, has 1 wound remaining",
+    "Tough(6) vehicle can absorb 6 wounds total",
+]
+
+[[rules]]
+name = "Fearless"
+description = "This unit never has to take morale tests and automatically passes any leadership checks."
+page = "Special Rules p.1"
+keywords = ["morale", "leadership", "fearless"]
+examples = [
+    "Fearless unit takes 50% casualties but does not flee",
+]
+
+[[rules]]
+name = "Furious"
+description = "This unit gets +1 attack in melee when charging."
+page = "Special Rules p.1"
+keywords = ["melee", "charge", "bonus"]
+examples = [
+    "Model with 2 melee attacks makes 3 when charging",
+]
+
+[[rules]]
+name = "Rending"
+description = "Unmodified rolls of 6 to hit deal automatic wounds with no Defense save allowed."
+page = "Special Rules p.2"
+keywords = ["rending", "critical", "hit"]
+examples = [
+    "Roll 6 to hit - target takes wound, no Defense roll",
+]
+
+[[rules]]
+name = "Scout"
+description = "After deployment, this unit may make a free move of up to 12\" before the first turn begins."
+page = "Special Rules p.2"
+keywords = ["deployment", "scout", "advance"]
+examples = [
+    "Scout unit deploys, then moves 12\" forward before game starts",
+]
+
+[[rules]]
+name = "Stealth"
+description = "Enemies shooting at this unit suffer -1 to hit."
+page = "Special Rules p.2"
+keywords = ["stealth", "cover", "shooting"]
+examples = [
+    "Quality 3+ shooter becomes Quality 4+ when targeting Stealth unit",
+]
+
+[[rules]]
+name = "Hero"
+description = "This model may join and lead a friendly unit. The unit gains the Hero's special rules while attached."
+page = "Special Rules p.1"
+keywords = ["hero", "character", "leader"]
+examples = [
+    "Captain with Fearless joins unit - entire unit becomes Fearless",
+]
+
+[[rules]]
+name = "Inspiring"
+description = "Friendly units within 12\" may re-roll failed morale tests."
+page = "Special Rules p.1"
+keywords = ["morale", "leadership", "inspiring"]
+examples = [
+    "Unit fails morale, is within 12\" of Captain - re-rolls the test",
+]
+
+[[rules]]
+name = "Relentless"
+description = "This unit can shoot Heavy weapons after moving without penalty."
+page = "Special Rules p.2"
+keywords = ["shooting", "heavy", "movement"]
+examples = [
+    "Devastator squad moves 6\" and fires Heavy weapons normally",
+]
+
+[[rules]]
+name = "Transport"
+description = "This model can carry up to X models of Infantry units. Embarked units may deploy within 6\" when disembarking."
+page = "Vehicle Rules p.1"
+keywords = ["transport", "vehicle", "embark"]
+examples = [
+    "Transport(10) can carry up to 10 infantry models",
+    "Transport(20) for large transports like Battlewagons",
+]
+
+[[rules]]
+name = "Impact"
+description = "After charging, this unit deals D6 automatic hits at listed Strength before melee begins."
+page = "Special Rules p.2"
+keywords = ["charge", "impact", "melee"]
+examples = [
+    "Deff Rolla impacts for D6 S8 AP-2 D2 hits when charging",
+]
+
+[[rules]]
+name = "Ambush"
+description = "This unit may be held in reserve and deploy anywhere on the battlefield more than 9\" from enemies during any movement phase."
+page = "Special Rules p.2"
+keywords = ["deployment", "reserve", "ambush"]
+examples = [
+    "Kommandos deploy from ambush behind enemy lines Turn 2",
+]

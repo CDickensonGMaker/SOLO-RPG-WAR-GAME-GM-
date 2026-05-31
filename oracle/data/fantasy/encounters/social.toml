@@ -1,0 +1,72 @@
+# Fantasy Social Encounters
+# Interactions, negotiations, and roleplaying opportunities
+
+[social]
+entries = [
+  # Travelers & Strangers
+  { text = "a merchant caravan offers to share camp and news", weight = 2 },
+  { text = "a wandering bard seeks company and shares rumors", weight = 2 },
+  { text = "a pilgrim group traveling to a distant shrine", weight = 1 },
+  { text = "a noble's entourage demands the road be cleared", weight = 1 },
+  { text = "a messenger with urgent news rides past", weight = 1 },
+  { text = "refugees fleeing disaster beg for aid", weight = 1 },
+  { text = "a group of adventurers returning from a quest", weight = 1 },
+  { text = "a hermit emerges from the wilderness with a warning", weight = 1 },
+  { text = "a traveling circus or carnival is setting up", weight = 1 },
+  { text = "a knight errant seeking worthy challenges", weight = 1 },
+
+  # Authority Figures
+  { text = "a patrol demands to inspect papers and cargo", weight = 2 },
+  { text = "a tax collector assesses what is owed", weight = 1 },
+  { text = "a local lord summons the party to explain their presence", weight = 1 },
+  { text = "inquisitors question the party about heresy", weight = 1 },
+  { text = "a guild master offers membership with strings attached", weight = 1 },
+  { text = "a magistrate seeks witnesses for an upcoming trial", weight = 1 },
+  { text = "a general recruits for an impending campaign", weight = 1 },
+
+  # Help Seekers
+  { text = "a farmer's livestock has gone missing", weight = 2 },
+  { text = "a parent begs help finding their missing child", weight = 1 },
+  { text = "a merchant needs escort through dangerous territory", weight = 2 },
+  { text = "a scholar seeks protection while investigating ruins", weight = 1 },
+  { text = "an elderly person needs help reaching the next town", weight = 1 },
+  { text = "a wounded traveler collapses before the party", weight = 1 },
+  { text = "villagers plead for someone to deal with a monster", weight = 1 },
+  { text = "a prisoner offers information in exchange for freedom", weight = 1 },
+
+  # Negotiations
+  { text = "a merchant haggles aggressively over prices", weight = 2 },
+  { text = "two factions each want the party's support", weight = 1 },
+  { text = "a monster offers to bargain rather than fight", weight = 1 },
+  { text = "rival claimants to a title seek arbitration", weight = 1 },
+  { text = "hostage negotiations require delicate handling", weight = 1 },
+  { text = "a dragon offers a deal for passage through its territory", weight = 1 },
+  { text = "a crime lord offers employment with moral implications", weight = 1 },
+  { text = "peace talks between old enemies hang in the balance", weight = 1 },
+
+  # Information Gathering
+  { text = "the tavern is full of gossip and rumors", weight = 2 },
+  { text = "an old sage knows legends relevant to the quest", weight = 1 },
+  { text = "a spy offers to sell secrets", weight = 1 },
+  { text = "locals know something but fear to speak openly", weight = 1 },
+  { text = "a drunk soldier spills military secrets", weight = 1 },
+  { text = "a child witnessed something adults would not believe", weight = 1 },
+  { text = "a dying person has final words to share", weight = 1 },
+
+  # Romance & Intrigue
+  { text = "a noble's heir shows romantic interest in a party member", weight = 1 },
+  { text = "someone requests help with a love letter or message", weight = 1 },
+  { text = "a jilted lover seeks revenge through the party", weight = 1 },
+  { text = "a wedding is interrupted by objections", weight = 1 },
+  { text = "a secret affair threatens political stability", weight = 1 },
+  { text = "a matchmaker proposes an advantageous alliance", weight = 1 },
+
+  # Deception & Treachery
+  { text = "a con artist attempts to swindle the party", weight = 1 },
+  { text = "someone poses as an ally but reports to enemies", weight = 1 },
+  { text = "a fake distress call lures the party into danger", weight = 1 },
+  { text = "planted evidence frames the party for a crime", weight = 1 },
+  { text = "a doppelganger has replaced someone important", weight = 1 },
+  { text = "a trusted ally has been compromised or replaced", weight = 1 },
+  { text = "an obvious trap that the party must spring anyway", weight = 1 },
+]

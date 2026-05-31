@@ -1,0 +1,746 @@
+# Highborn Elves - Age of Fantasy
+# Ancient and noble elven warriors with powerful magic
+# One Page Rules - Free Wargaming System
+
+[faction]
+name = "Highborn Elves"
+description = "Ancient and noble elven warriors wielding powerful magic and superior craftsmanship"
+playstyle = "Elite, mobile, magical"
+difficulty = "intermediate"
+strengths = [
+    "High quality troops (3+ common)",
+    "Excellent archers",
+    "Powerful magic",
+    "Fast and mobile",
+    "Elite cavalry and monsters"
+]
+weaknesses = [
+    "Expensive units",
+    "Low model count",
+    "Fragile when caught",
+    "Dependent on careful positioning"
+]
+tactics = """
+Highborn Elves win through precision and mobility. Your troops are elite but expensive,
+so every model counts. Use superior range and magic to weaken enemies before engaging.
+Cavalry and Dragon Princes deliver devastating charges. Phoenix Guard and Swordmasters
+anchor the line. Always Strike First gives you the edge in combat. Avoid getting bogged
+down in attrition - you cannot afford to trade equally.
+"""
+
+# =============================================================================
+# HQ UNITS
+# =============================================================================
+
+[[units]]
+name = "High Prince"
+type = "infantry"
+category = "hq"
+points = 100
+models = "1"
+base_size = "25mm"
+tactical_role = "combat_commander"
+threat_level = "very_high"
+priority_target = true
+preferred_targets = ["infantry", "characters"]
+avoid_targets = ["monsters"]
+weaknesses = ["assassination", "focus_fire"]
+synergies = ["Boosts nearby units", "Combat monster"]
+special_rules = ["Hero", "Fearless", "Tough(3)"]
+keywords = ["Infantry", "Character", "Elf"]
+notes = "Combat lord. Attach to elite units for maximum effect. Can ride various mounts."
+
+[units.stats]
+quality = "3+"
+defense = "4+"
+tough = 3
+movement = "6\""
+
+[[units.weapons]]
+name = "Great Weapon"
+range = "Melee"
+shots = "4"
+ap = "2"
+special = ["Deadly(3)"]
+
+[[units.upgrades]]
+name = "Shield"
+points = 5
+effect = "Defense becomes 3+"
+
+[[units.upgrades]]
+name = "Elven Steed"
+points = 20
+effect = "Becomes Cavalry, movement 10\", +1 Tough"
+
+[[units.upgrades]]
+name = "Griffon"
+points = 100
+effect = "Becomes Monster, Flying, Tough(6), gains Griffon attacks"
+
+[[units.upgrades]]
+name = "Dragon"
+points = 200
+effect = "Becomes Monster, Flying, Tough(9), gains Dragon attacks and breath"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Archmage"
+type = "infantry"
+category = "hq"
+points = 120
+models = "1"
+base_size = "25mm"
+tactical_role = "magical_support"
+threat_level = "high"
+priority_target = true
+preferred_targets = ["support_role"]
+avoid_targets = ["melee_combat"]
+weaknesses = ["assassination", "anti_magic"]
+synergies = ["Devastating spells", "Army-wide buffs"]
+special_rules = ["Hero", "Wizard(3)"]
+keywords = ["Infantry", "Character", "Elf", "Wizard"]
+notes = "Wizard(3) means 3 spell dice. Most powerful caster. Keep protected."
+
+[units.stats]
+quality = "3+"
+defense = "5+"
+tough = 3
+movement = "6\""
+
+[[units.weapons]]
+name = "Staff"
+range = "Melee"
+shots = "1"
+ap = "0"
+
+[[units.spells]]
+name = "Arcane Bolt"
+level = 1
+description = "Target enemy unit within 18\" takes D6 hits with AP(2)"
+
+[[units.spells]]
+name = "Shield of Saphery"
+level = 1
+description = "Friendly unit within 12\" gains +1 Defense until next turn"
+
+[[units.spells]]
+name = "Flames of the Phoenix"
+level = 2
+description = "Target enemy unit within 24\" takes 2D6 hits with AP(1), Deadly(2)"
+
+[[units.spells]]
+name = "Drain Magic"
+level = 2
+description = "Enemy wizard within 24\" cannot cast spells until your next turn"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Noble"
+type = "infantry"
+category = "hq"
+points = 50
+models = "1"
+base_size = "25mm"
+tactical_role = "junior_commander"
+threat_level = "medium"
+priority_target = false
+preferred_targets = ["infantry"]
+avoid_targets = ["monsters"]
+weaknesses = ["isolation"]
+synergies = ["Budget leader", "Unit champion"]
+special_rules = ["Hero", "Tough(2)"]
+keywords = ["Infantry", "Character", "Elf"]
+notes = "Budget hero. Good for leading secondary units."
+
+[units.stats]
+quality = "3+"
+defense = "4+"
+tough = 2
+movement = "6\""
+
+[[units.weapons]]
+name = "Spear"
+range = "Melee"
+shots = "2"
+ap = "0"
+special = ["Phalanx"]
+
+[[units.weapons]]
+name = "Bow"
+range = "24\""
+shots = "1"
+ap = "0"
+
+[[units.upgrades]]
+name = "Battle Standard"
+points = 25
+effect = "Friendly units within 12\" re-roll failed morale"
+
+# =============================================================================
+# TROOPS
+# =============================================================================
+
+[[units]]
+name = "Spearmen"
+type = "infantry"
+category = "troops"
+points = 100
+models = "10"
+base_size = "25mm"
+tactical_role = "line_infantry"
+threat_level = "medium"
+priority_target = false
+preferred_targets = ["enemy_charges"]
+avoid_targets = ["heavy_cavalry"]
+weaknesses = ["ranged_attacks", "monsters"]
+synergies = ["Phalanx defense", "Ranked combat"]
+special_rules = ["Phalanx"]
+keywords = ["Infantry", "Elf"]
+notes = "Defensive line troops. Phalanx makes charges against them difficult. Hold the line."
+
+[units.stats]
+quality = "3+"
+defense = "5+"
+tough = 1
+movement = "6\""
+
+[[units.weapons]]
+name = "Spear"
+range = "Melee"
+shots = "1"
+ap = "0"
+special = ["Phalanx"]
+
+[[units.upgrades]]
+name = "Shields"
+points = 10
+effect = "Defense becomes 4+"
+
+[[units.upgrades]]
+name = "20 Spearmen"
+points = 100
+effect = "Add 10 more models"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Archers"
+type = "infantry"
+category = "troops"
+points = 95
+models = "10"
+base_size = "25mm"
+tactical_role = "ranged_support"
+threat_level = "medium"
+priority_target = true
+preferred_targets = ["light_infantry", "cavalry"]
+avoid_targets = ["heavy_armor", "melee"]
+weaknesses = ["close_combat", "charges"]
+synergies = ["Volley fire", "Skirmish screens"]
+special_rules = []
+keywords = ["Infantry", "Elf"]
+notes = "Elven archery is legendary. Quality 3+ makes them deadly accurate."
+
+[units.stats]
+quality = "3+"
+defense = "6+"
+tough = 1
+movement = "6\""
+
+[[units.weapons]]
+name = "Elven Bow"
+range = "30\""
+shots = "1"
+ap = "0"
+
+[[units.weapons]]
+name = "Knife"
+range = "Melee"
+shots = "1"
+ap = "0"
+
+[[units.upgrades]]
+name = "Light Armor"
+points = 10
+effect = "Defense becomes 5+"
+
+[[units.upgrades]]
+name = "20 Archers"
+points = 95
+effect = "Add 10 more models"
+
+# =============================================================================
+# ELITES
+# =============================================================================
+
+[[units]]
+name = "Swordmasters"
+type = "infantry"
+category = "elite"
+points = 145
+models = "10"
+base_size = "25mm"
+tactical_role = "elite_melee"
+threat_level = "very_high"
+priority_target = true
+preferred_targets = ["infantry", "monsters"]
+avoid_targets = ["massed_shooting"]
+weaknesses = ["archery", "low_armor"]
+synergies = ["Always Strike First", "Monster slayers"]
+special_rules = ["Always Strike First"]
+keywords = ["Infantry", "Elf", "Swordmaster"]
+notes = "Always Strike First means they hit before enemies in combat. Great weapons devastate."
+
+[units.stats]
+quality = "3+"
+defense = "5+"
+tough = 1
+movement = "6\""
+
+[[units.weapons]]
+name = "Great Sword"
+range = "Melee"
+shots = "2"
+ap = "2"
+special = ["Deadly(3)"]
+
+[[units.upgrades]]
+name = "20 Swordmasters"
+points = 145
+effect = "Add 10 more models"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Phoenix Guard"
+type = "infantry"
+category = "elite"
+points = 155
+models = "10"
+base_size = "25mm"
+tactical_role = "elite_anvil"
+threat_level = "high"
+priority_target = false
+preferred_targets = ["holding_ground"]
+avoid_targets = ["nothing"]
+weaknesses = ["overwhelming_numbers"]
+synergies = ["Immovable line", "Objective holding"]
+special_rules = ["Fearless", "Regeneration"]
+keywords = ["Infantry", "Elf", "Phoenix Guard"]
+notes = "Fearless and Regeneration makes them incredibly durable. Hold any position."
+
+[units.stats]
+quality = "3+"
+defense = "4+"
+tough = 1
+movement = "6\""
+
+[[units.weapons]]
+name = "Halberd"
+range = "Melee"
+shots = "1"
+ap = "1"
+
+[[units.upgrades]]
+name = "20 Phoenix Guard"
+points = 155
+effect = "Add 10 more models"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "White Lions"
+type = "infantry"
+category = "elite"
+points = 130
+models = "10"
+base_size = "25mm"
+tactical_role = "elite_assault"
+threat_level = "high"
+priority_target = true
+preferred_targets = ["infantry", "monsters"]
+avoid_targets = ["massed_archery"]
+weaknesses = ["shooting"]
+synergies = ["Bodyguard for characters", "Monster hunters"]
+special_rules = ["Fearless", "Strider"]
+keywords = ["Infantry", "Elf", "White Lion"]
+notes = "Strider through terrain. Great axes devastate. Bodyguard duty."
+
+[units.stats]
+quality = "3+"
+defense = "5+"
+tough = 1
+movement = "6\""
+
+[[units.weapons]]
+name = "Great Axe"
+range = "Melee"
+shots = "1"
+ap = "2"
+special = ["Deadly(3)"]
+
+[[units.upgrades]]
+name = "20 White Lions"
+points = 130
+effect = "Add 10 more models"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Shadow Warriors"
+type = "infantry"
+category = "elite"
+points = 85
+models = "5"
+base_size = "25mm"
+tactical_role = "scouts"
+threat_level = "medium"
+priority_target = false
+preferred_targets = ["war_machines", "characters"]
+avoid_targets = ["heavy_infantry"]
+weaknesses = ["close_combat"]
+synergies = ["Scout deployment", "Harassment"]
+special_rules = ["Scout", "Stealth", "Ambush"]
+keywords = ["Infantry", "Elf", "Shadow Warrior"]
+notes = "All deployment tricks. Scout forward or Ambush behind. Harass and disrupt."
+
+[units.stats]
+quality = "3+"
+defense = "5+"
+tough = 1
+movement = "7\""
+
+[[units.weapons]]
+name = "Shadow Bow"
+range = "24\""
+shots = "1"
+ap = "1"
+
+[[units.weapons]]
+name = "Blade"
+range = "Melee"
+shots = "1"
+ap = "0"
+
+# =============================================================================
+# FAST ATTACK
+# =============================================================================
+
+[[units]]
+name = "Silver Helms"
+type = "cavalry"
+category = "fast_attack"
+points = 135
+models = "5"
+base_size = "25x50mm"
+tactical_role = "shock_cavalry"
+threat_level = "high"
+priority_target = true
+preferred_targets = ["flanks", "infantry"]
+avoid_targets = ["spearmen", "pikes"]
+weaknesses = ["anti_cavalry", "phalanx"]
+synergies = ["Flank charges", "Combined assaults"]
+special_rules = ["Fast", "Impact(1)"]
+keywords = ["Cavalry", "Elf"]
+notes = "Basic elven cavalry. Fast and Impact(1) for charges. Lance on charge."
+
+[units.stats]
+quality = "3+"
+defense = "4+"
+tough = 1
+movement = "10\""
+
+[[units.weapons]]
+name = "Lance"
+range = "Melee"
+shots = "1"
+ap = "1"
+special = ["Lance"]
+
+[[units.weapons]]
+name = "Sword"
+range = "Melee"
+shots = "1"
+ap = "0"
+
+[[units.upgrades]]
+name = "10 Silver Helms"
+points = 135
+effect = "Add 5 more models"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Dragon Princes"
+type = "cavalry"
+category = "fast_attack"
+points = 185
+models = "5"
+base_size = "25x50mm"
+tactical_role = "elite_cavalry"
+threat_level = "very_high"
+priority_target = true
+preferred_targets = ["anything"]
+avoid_targets = ["spearmen", "pikes"]
+weaknesses = ["massed_pikes", "focus_fire"]
+synergies = ["Devastating charges", "Character escort"]
+special_rules = ["Fast", "Impact(1)", "Fearless"]
+keywords = ["Cavalry", "Elf", "Dragon Prince"]
+notes = "Elite cavalry. Fearless means they never flee. 3+ Defense is exceptional."
+
+[units.stats]
+quality = "3+"
+defense = "3+"
+tough = 1
+movement = "10\""
+
+[[units.weapons]]
+name = "Dragon Lance"
+range = "Melee"
+shots = "2"
+ap = "2"
+special = ["Lance", "Deadly(3)"]
+
+[[units.upgrades]]
+name = "10 Dragon Princes"
+points = 185
+effect = "Add 5 more models"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Ellyrian Reavers"
+type = "cavalry"
+category = "fast_attack"
+points = 95
+models = "5"
+base_size = "25x50mm"
+tactical_role = "light_cavalry"
+threat_level = "medium"
+priority_target = false
+preferred_targets = ["war_machines", "isolated_units"]
+avoid_targets = ["heavy_infantry"]
+weaknesses = ["close_combat"]
+synergies = ["Harassment", "Redirection"]
+special_rules = ["Fast", "Scout"]
+keywords = ["Cavalry", "Elf"]
+notes = "Light cavalry. Scout forward for early pressure. Harass and redirect."
+
+[units.stats]
+quality = "3+"
+defense = "5+"
+tough = 1
+movement = "10\""
+
+[[units.weapons]]
+name = "Bow"
+range = "24\""
+shots = "1"
+ap = "0"
+
+[[units.weapons]]
+name = "Spear"
+range = "Melee"
+shots = "1"
+ap = "0"
+
+# =============================================================================
+# MONSTERS
+# =============================================================================
+
+[[units]]
+name = "Phoenix"
+type = "monster"
+category = "monster"
+points = 200
+models = "1"
+base_size = "50mm"
+tactical_role = "flying_monster"
+threat_level = "very_high"
+priority_target = true
+preferred_targets = ["infantry", "war_machines"]
+avoid_targets = ["massed_shooting"]
+weaknesses = ["focus_fire"]
+synergies = ["Attrition warfare", "Rebirth"]
+special_rules = ["Flying", "Tough(6)", "Regeneration", "Fear"]
+keywords = ["Monster", "Elf", "Phoenix"]
+notes = "Flying regenerating monster. Attrition it cannot keep pace with. Very durable."
+
+[units.stats]
+quality = "4+"
+defense = "4+"
+tough = 6
+movement = "12\""
+
+[[units.weapons]]
+name = "Flaming Talons"
+range = "Melee"
+shots = "4"
+ap = "1"
+special = ["Deadly(3)"]
+
+[[units.weapons]]
+name = "Phoenix Fire"
+range = "12\""
+shots = "D6"
+ap = "1"
+special = ["Reliable"]
+
+[[units.upgrades]]
+name = "Frost Phoenix"
+points = 0
+effect = "Enemies in contact get -1 to hit"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Great Eagle"
+type = "monster"
+category = "monster"
+points = 50
+models = "1"
+base_size = "50mm"
+tactical_role = "chaff_hunter"
+threat_level = "medium"
+priority_target = false
+preferred_targets = ["war_machines", "small_units"]
+avoid_targets = ["large_units"]
+weaknesses = ["focus_fire"]
+synergies = ["War machine hunting", "Redirecting"]
+special_rules = ["Flying", "Tough(3)"]
+keywords = ["Monster", "Elf", "Eagle"]
+notes = "Cheap flying monster. War machine hunter. Redirect charges."
+
+[units.stats]
+quality = "4+"
+defense = "5+"
+tough = 3
+movement = "14\""
+
+[[units.weapons]]
+name = "Talons"
+range = "Melee"
+shots = "2"
+ap = "0"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Dragon"
+type = "monster"
+category = "monster"
+points = 300
+models = "1"
+base_size = "100mm"
+tactical_role = "apex_monster"
+threat_level = "extreme"
+priority_target = true
+preferred_targets = ["everything"]
+avoid_targets = ["nothing"]
+weaknesses = ["focus_fire", "expensive"]
+synergies = ["Army centerpiece", "Terror"]
+special_rules = ["Flying", "Tough(12)", "Fear", "Regeneration"]
+keywords = ["Monster", "Elf", "Dragon"]
+notes = "Apex predator. Breath weapon and melee devastate. Expensive but terrifying."
+
+[units.stats]
+quality = "3+"
+defense = "3+"
+tough = 12
+movement = "12\""
+
+[[units.weapons]]
+name = "Dragon Breath"
+range = "18\""
+shots = "2D6"
+ap = "2"
+special = ["Reliable"]
+
+[[units.weapons]]
+name = "Dragon Claws"
+range = "Melee"
+shots = "6"
+ap = "3"
+special = ["Deadly(3)"]
+
+# =============================================================================
+# WAR MACHINES
+# =============================================================================
+
+[[units]]
+name = "Eagle Claw Bolt Thrower"
+type = "war_machine"
+category = "war_machine"
+points = 75
+models = "1"
+base_size = "chariot"
+tactical_role = "artillery"
+threat_level = "medium"
+priority_target = true
+preferred_targets = ["monsters", "cavalry"]
+avoid_targets = ["close_combat"]
+weaknesses = ["charges"]
+synergies = ["Long range support", "Monster sniping"]
+special_rules = ["Tough(4)"]
+keywords = ["War Machine", "Elf"]
+notes = "Bolt thrower. Good against monsters and cavalry. Protect from charges."
+
+[units.stats]
+quality = "3+"
+defense = "5+"
+tough = 4
+movement = "0\""
+
+[[units.weapons]]
+name = "Bolt"
+range = "48\""
+shots = "1"
+ap = "4"
+special = ["Deadly(6)"]
+
+[[units.weapons]]
+name = "Volley"
+range = "48\""
+shots = "6"
+ap = "0"
+
+# =============================================================================
+# EXAMPLE ARMY LISTS
+# =============================================================================
+
+[army_lists.starter_1000]
+name = "Ulthuan's Pride - 1000 points"
+description = "Balanced combined arms"
+points = 995
+units = [
+    { name = "High Prince", count = 1, points = 100 },
+    { name = "Noble", count = 1, points = 75, upgrades = ["Battle Standard"] },
+    { name = "Spearmen", count = 1, points = 110, upgrades = ["20 models", "Shields"] },
+    { name = "Archers", count = 1, points = 95 },
+    { name = "Swordmasters", count = 1, points = 145 },
+    { name = "Silver Helms", count = 1, points = 135 },
+    { name = "Phoenix", count = 1, points = 200 },
+    { name = "Eagle Claw Bolt Thrower", count = 1, points = 75 }
+]
+tactics = "Spearmen and Swordmasters hold center with Prince. Archers and Bolt Thrower provide fire support. Silver Helms flank. Phoenix disrupts enemy."
+
+[army_lists.competitive_2000]
+name = "Dragon Host - 2000 points"
+description = "Monster-heavy elite force"
+points = 2000
+units = [
+    { name = "High Prince on Dragon", count = 1, points = 300 },
+    { name = "Archmage", count = 1, points = 120 },
+    { name = "Spearmen", count = 2, points = 220, upgrades = ["20 models", "Shields"] },
+    { name = "Archers", count = 2, points = 190 },
+    { name = "Swordmasters", count = 1, points = 145 },
+    { name = "Phoenix Guard", count = 1, points = 155 },
+    { name = "Dragon Princes", count = 1, points = 185 },
+    { name = "Phoenix", count = 1, points = 200 },
+    { name = "Great Eagle", count = 2, points = 100 },
+    { name = "Eagle Claw Bolt Thrower", count = 2, points = 150 }
+]
+tactics = "Prince on Dragon dominates. Phoenix Guard anchors center. Swordmasters counter-charge. Dragon Princes flank. Eagles redirect and hunt war machines. Magic and shooting soften targets."

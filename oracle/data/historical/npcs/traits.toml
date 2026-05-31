@@ -1,0 +1,123 @@
+# Historical NPC Traits
+# 100+ character traits for realistic historical personalities
+
+[traits]
+entries = [
+  # Positive Leadership Traits
+  { text = "Stoic under pressure", weight = 2 },
+  { text = "Natural leader", weight = 2 },
+  { text = "Inspires loyalty", weight = 2 },
+  { text = "Decisive in crisis", weight = 2 },
+  { text = "Calm under fire", weight = 2 },
+  { text = "Tactically brilliant", weight = 1 },
+  { text = "Charismatic", weight = 2 },
+  { text = "Fair-minded", weight = 2 },
+  { text = "Leads by example", weight = 2 },
+  { text = "Respected by subordinates", weight = 2 },
+
+  # Positive Social Traits
+  { text = "Diplomatic", weight = 2 },
+  { text = "Eloquent speaker", weight = 1 },
+  { text = "Good listener", weight = 2 },
+  { text = "Trustworthy", weight = 2 },
+  { text = "Honest to a fault", weight = 2 },
+  { text = "Keeps confidences", weight = 2 },
+  { text = "Charming", weight = 2 },
+  { text = "Puts others at ease", weight = 2 },
+  { text = "Patient", weight = 2 },
+  { text = "Empathetic", weight = 2 },
+
+  # Positive Professional Traits
+  { text = "Meticulous attention to detail", weight = 2 },
+  { text = "Highly skilled craftsman", weight = 2 },
+  { text = "Quick learner", weight = 2 },
+  { text = "Expert navigator", weight = 1 },
+  { text = "Gifted surgeon", weight = 1 },
+  { text = "Master strategist", weight = 1 },
+  { text = "Resourceful", weight = 2 },
+  { text = "Adaptable", weight = 2 },
+  { text = "Tireless worker", weight = 2 },
+  { text = "Encyclopedic knowledge", weight = 1 },
+
+  # Positive Moral Traits
+  { text = "Principled", weight = 2 },
+  { text = "Devoutly religious", weight = 2 },
+  { text = "Protective of the weak", weight = 2 },
+  { text = "Merciful", weight = 2 },
+  { text = "Generous", weight = 2 },
+  { text = "Humble despite achievements", weight = 1 },
+  { text = "Loyal to the death", weight = 2 },
+  { text = "Self-sacrificing", weight = 1 },
+  { text = "Maintains honor in adversity", weight = 1 },
+  { text = "Refuses to compromise morals", weight = 1 },
+
+  # Neutral/Complex Traits
+  { text = "Haunted by past actions", weight = 2 },
+  { text = "War-weary", weight = 2 },
+  { text = "Cynical from experience", weight = 2 },
+  { text = "Pragmatic above ideals", weight = 2 },
+  { text = "Keeps emotions hidden", weight = 2 },
+  { text = "Rarely speaks of the past", weight = 2 },
+  { text = "Superstitious", weight = 2 },
+  { text = "Fatalistic", weight = 2 },
+  { text = "Old-fashioned values", weight = 2 },
+  { text = "Suspicious of outsiders", weight = 2 },
+  { text = "Intensely private", weight = 2 },
+  { text = "Calculating", weight = 2 },
+  { text = "Ambitious", weight = 2 },
+  { text = "Perfectionist", weight = 2 },
+  { text = "Obsessive about one thing", weight = 2 },
+  { text = "Traditionalist", weight = 2 },
+  { text = "Risk-taker", weight = 2 },
+  { text = "Pessimistic", weight = 2 },
+  { text = "World-weary", weight = 2 },
+  { text = "Mysterious past", weight = 1 },
+
+  # Negative Professional Traits
+  { text = "Overconfident in abilities", weight = 2 },
+  { text = "Inflexible in tactics", weight = 2 },
+  { text = "Slow to adapt", weight = 2 },
+  { text = "Dismissive of new ideas", weight = 2 },
+  { text = "Poor communicator", weight = 2 },
+  { text = "Micromanages subordinates", weight = 2 },
+  { text = "Takes credit for others' work", weight = 2 },
+  { text = "Blames others for failures", weight = 2 },
+  { text = "Procrastinator", weight = 2 },
+  { text = "Cuts corners", weight = 2 },
+
+  # Negative Social Traits
+  { text = "Abrasive personality", weight = 2 },
+  { text = "Condescending", weight = 2 },
+  { text = "Quick tempered", weight = 2 },
+  { text = "Holds grudges", weight = 2 },
+  { text = "Manipulative", weight = 2 },
+  { text = "Gossips", weight = 2 },
+  { text = "Socially awkward", weight = 2 },
+  { text = "Cold and distant", weight = 2 },
+  { text = "Overbearing", weight = 2 },
+  { text = "Talks too much", weight = 2 },
+
+  # Negative Moral Traits
+  { text = "Greedy", weight = 2 },
+  { text = "Cowardly when tested", weight = 2 },
+  { text = "Self-serving", weight = 2 },
+  { text = "Cruel streak", weight = 2 },
+  { text = "Vindictive", weight = 2 },
+  { text = "Envious of others' success", weight = 2 },
+  { text = "Deceptive", weight = 2 },
+  { text = "Hypocritical", weight = 2 },
+  { text = "Morally flexible", weight = 2 },
+  { text = "Ruthless when necessary", weight = 2 },
+
+  # Physical/Behavioral Traits
+  { text = "Distinguished bearing", weight = 2 },
+  { text = "Battle-scarred", weight = 2 },
+  { text = "Walks with a limp", weight = 2 },
+  { text = "Missing an eye or limb", weight = 1 },
+  { text = "Prematurely aged by hardship", weight = 2 },
+  { text = "Imposing physical presence", weight = 2 },
+  { text = "Unassuming appearance", weight = 2 },
+  { text = "Drinks heavily", weight = 2 },
+  { text = "Chain smoker", weight = 2 },
+  { text = "Nervous habits", weight = 2 }
+]

@@ -1,0 +1,59 @@
+# Historical Naval and Maritime Locations
+# 40+ sea and port locations
+
+[locations]
+entries = [
+  # Ships and Vessels
+  { text = "Below decks on a warship, cramped quarters lit by swinging lanterns", weight = 2 },
+  { text = "Captain's cabin, charts spread across the table", weight = 1 },
+  { text = "Gun deck where cannon are run out and ready", weight = 2 },
+  { text = "Ship's hold, cargo secured against the roll of the sea", weight = 2 },
+  { text = "Crow's nest high above the deck, the lookout's lonely post", weight = 2 },
+  { text = "Weather deck in a storm, lines screaming and waves crashing over", weight = 1 },
+  { text = "Sick bay where the surgeon does his grim work", weight = 2 },
+  { text = "Galley where the ship's cook battles smoke and motion", weight = 2 },
+  { text = "Brig where troublemakers are confined in darkness", weight = 2 },
+  { text = "Forecastle where off-duty sailors spin yarns and smoke", weight = 2 },
+  { text = "Magazine deep in the ship, powder carefully guarded", weight = 1 },
+  { text = "Quarterdeck where officers command and navigate", weight = 2 },
+
+  # Port Facilities
+  { text = "Busy wharf where ships are loaded and unloaded", weight = 2 },
+  { text = "Customs shed where cargo is inspected and duties paid", weight = 2 },
+  { text = "Shipyard where vessels are built and repaired", weight = 2 },
+  { text = "Ropewalk, the long building where cordage is made", weight = 2 },
+  { text = "Chandler's shop selling everything a ship needs", weight = 2 },
+  { text = "Sail loft where canvas is cut and sewn", weight = 2 },
+  { text = "Tavern near the docks, filled with sailors on shore leave", weight = 2 },
+  { text = "Press gang's hunting ground in waterfront alleys", weight = 1 },
+  { text = "Harbor master's office overlooking the anchorage", weight = 1 },
+  { text = "Warehouse district, goods from across the world under one roof", weight = 2 },
+  { text = "Dry dock where a ship's hull is exposed for repair", weight = 1 },
+  { text = "Pilot's station where local guides board incoming ships", weight = 2 },
+
+  # At Sea
+  { text = "Open ocean, nothing but water in every direction", weight = 2 },
+  { text = "Shipping lane where merchantmen cross paths", weight = 2 },
+  { text = "Fog bank reducing visibility to nothing", weight = 2 },
+  { text = "Becalmed waters, sails hanging limp", weight = 2 },
+  { text = "Rough seas that test ship and crew alike", weight = 2 },
+  { text = "Waters known for pirates and privateers", weight = 1 },
+  { text = "Naval blockade, warships patrolling the approaches", weight = 1 },
+  { text = "Convoy formation, merchantmen protected by escorts", weight = 2 },
+
+  # Coastal Features
+  { text = "Natural harbor offering shelter from storms", weight = 2 },
+  { text = "Treacherous reef marked on charts as a graveyard of ships", weight = 1 },
+  { text = "Narrow strait where currents run swift and dangerous", weight = 2 },
+  { text = "Headland that must be rounded to reach port", weight = 2 },
+  { text = "Islands forming a maze of channels and anchorages", weight = 2 },
+  { text = "Sandbar that shifts with every storm", weight = 2 },
+  { text = "River mouth where fresh water meets salt", weight = 2 },
+  { text = "Cove suitable for careening ships", weight = 2 },
+
+  # Maritime Incidents
+  { text = "Wreck site where a ship met its end on the rocks", weight = 1 },
+  { text = "Floating debris from a ship lost at sea", weight = 1 },
+  { text = "Prize being escorted into port by its captors", weight = 1 },
+  { text = "Lifeboat adrift with survivors", weight = 1 }
+]

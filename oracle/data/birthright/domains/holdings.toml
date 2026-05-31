@@ -1,0 +1,751 @@
+# =============================================================================
+# BIRTHRIGHT HOLDINGS REFERENCE
+# Complete reference for all holding types in the Birthright campaign setting
+# For use with the Birthright Solo RPG Oracle
+# =============================================================================
+
+[metadata]
+title = "Holdings Reference"
+version = "1.0.0"
+system = "Birthright"
+description = """
+Holdings represent a regent's tangible power base within provinces. Each
+holding type represents a different form of influence and control. Holdings
+generate income (gold and regency), enable special actions, and compete
+with rival holdings for dominance within their province.
+"""
+
+# =============================================================================
+# GENERAL HOLDING RULES
+# =============================================================================
+
+[holding_rules]
+maximum_level = """
+The total of all holding levels in a province cannot exceed the province
+level. A province (3) can have at most 3 levels of holdings total.
+Example: Law (2) + Temple (1) = 3, filling the province.
+"""
+
+source_exception = """
+Source holdings work differently. The MAXIMUM source potential in a province
+equals (Province Level - Total Other Holdings). As civilization grows,
+magic potential shrinks. A province (5) with Law (2), Temple (2), Guild (1)
+has no source potential remaining.
+"""
+
+fractional_holdings = """
+Holdings can exist at level 0, representing minimal presence. Level 0
+holdings generate no income but can be increased via Rule actions.
+"""
+
+contested_holdings = """
+Multiple regents can have holdings of the same type in the same province.
+The total of same-type holdings cannot exceed province level. Higher
+holdings dominate - the regent with the highest level collects full
+benefits while others collect reduced amounts.
+"""
+
+holding_transfer = """
+Holdings can be transferred via Grant action. The recipient must have
+bloodline to control a holding (or use a lieutenant as proxy). Non-blooded
+individuals cannot truly own holdings.
+"""
+
+# =============================================================================
+# LAW HOLDINGS
+# =============================================================================
+
+[holdings.law]
+name = "Law Holdings"
+controller = "Landed Regent (Noble)"
+symbol = "Crossed swords over scales"
+description = """
+Law holdings represent military power, legal authority, taxation rights,
+and political control within a province. They are the foundation of secular
+power and are typically held by the province ruler, though vassals and
+rivals may hold competing law holdings.
+
+Law holdings enable conscription, tax collection, law enforcement, and
+the projection of military power. High law holdings can block the creation
+of other holdings and interfere with rival regents' actions.
+"""
+
+[holdings.law.abilities]
+military_levies = """
+Law holdings provide military manpower for the Muster action. Each level
+of Law holding grants access to recruit proportional troops:
+- Level 1-2: Levies and basic infantry
+- Level 3-4: Professional soldiers, archers
+- Level 5+: Elite units, cavalry
+Maximum units mustered = Law holding level per province
+"""
+
+taxation_enforcement = """
+Law holdings ensure tax collection. Without Law holdings, taxation is
+reduced. Dominant Law holder receives taxation bonus:
+- Majority Law: +10% taxation
+- Sole Law: +25% taxation
+Rival Law holdings reduce your taxation proportionally
+"""
+
+blocking_power = """
+The dominant Law holder can attempt to block:
+- Creation of new holdings (any type)
+- Rule actions by rivals
+- Certain espionage actions
+Blocking check: DC 10 + rival's bloodline modifier
+"""
+
+law_enforcement = """
+High Law holdings maintain order and can:
+- Capture criminals and spies
+- Enforce decrees
+- Suppress rebellions
+- Maintain loyalty
+"""
+
+[holdings.law.income]
+gold = """
+Base: 0.5 GB per holding level
+Modifiers:
+- +0.1 GB if sole Law holder
+- -0.1 GB per rival Law holding level
+- Province loyalty affects collection
+"""
+
+regency = """
+Law generates regency based on dominance:
+- Province Level x (Your Law Level / Total Law Levels)
+- Minimum 0 RP if you have any Law presence
+- Dominant Law holder gains full province RP
+- Rival Law holders split remaining
+Example: Province (4) with your Law (2) vs rival Law (1)
+You gain: 4 x (2/3) = 2.67 rounded to 3 RP
+Rival gains: 4 x (1/3) = 1.33 rounded to 1 RP
+"""
+
+[holdings.law.conflicts]
+internal = """
+Multiple Law holdings within a province create tension:
+- Highest Law holder is "dominant"
+- Others may Contest to gain dominance
+- Split provinces are inherently unstable
+"""
+external = """
+Law holdings may conflict with:
+- Guild holdings (regulation vs free trade)
+- Temple holdings (secular vs religious law)
+Law holder can tax or restrict other holdings
+"""
+
+[holdings.law.creation]
+requirements = [
+    "Must be blooded or use a blooded lieutenant",
+    "Province must have room (total holdings < province level)",
+    "Province ruler must permit OR you must overcome their opposition"
+]
+dc = "10 + province level"
+modifiers = [
+    "+2 if you are the province ruler",
+    "+4 if there are no existing Law holdings",
+    "-4 if existing Law holder opposes (can block)",
+    "-2 per level of hostile Law holdings"
+]
+
+[holdings.law.examples]
+level_0 = "Small sheriff's post, village constable"
+level_1 = "Minor noble's court, local militia headquarters"
+level_2 = "Baron's seat, significant garrison"
+level_3 = "Count's domain, professional standing force"
+level_4 = "Major duchy presence, military district"
+level_5 = "Royal authority, provincial capital, legions"
+level_6_plus = "Imperial presence, legendary fortress"
+
+# =============================================================================
+# TEMPLE HOLDINGS
+# =============================================================================
+
+[holdings.temple]
+name = "Temple Holdings"
+controller = "Priest (Divine Spellcaster)"
+symbol = "Deity's holy symbol"
+description = """
+Temple holdings represent religious influence, spiritual authority, and
+divine power within a province. They include temples, shrines, monasteries,
+and religious communities. Temple holdings provide divine magic, influence
+believers, and collect tithes.
+
+Temple holdings are essential for divine realm spells, Investiture
+ceremonies, and maintaining the spiritual health of the population.
+Multiple faiths may compete for worshippers in the same province.
+"""
+
+[holdings.temple.abilities]
+divine_magic = """
+Temple holdings enable divine realm spells:
+- Minimum temple level required varies by spell
+- Higher temples cast more powerful magic
+- Holy days provide casting bonuses
+- Sacred sites enhance certain spells
+"""
+
+spiritual_influence = """
+Temple holdings affect population loyalty and behavior:
+- Can improve or decrease province loyalty
+- Influence moral/ethical decisions
+- Provide counsel to secular rulers
+- Mediate disputes
+"""
+
+investiture_ceremonies = """
+Major temple holdings (3+) can perform Investiture:
+- Transfer bloodline power
+- Recognize new regents
+- Perform coronations
+- Sanctify marriages
+"""
+
+blessings_and_curses = """
+Priests with temple holdings can:
+- Bless troops before battle
+- Curse enemies (divine realm magic)
+- Heal plague and disease
+- Protect against undead
+"""
+
+[holdings.temple.income]
+gold = """
+Base: 0.5 GB per holding level
+Modifiers:
+- Tithes from worshippers
+- +0.25 GB on holy days
+- Donations from wealthy patrons
+- -0.1 GB if rival temple is dominant
+"""
+
+regency = """
+Temple regency based on faithful population:
+- (Province Level) x (Temple Level / Province Level)
+- Represents the regent's influence over believers
+- Multiple temples of SAME faith pool regency to highest priest
+- Different faiths compete; dominant faith gains more
+Example: Province (4), Temple (2)
+Regency: 4 x (2/4) = 2 RP
+If rival temple exists at (1), you might gain less
+"""
+
+[holdings.temple.conflicts]
+internal = """
+Same-faith temples: Usually cooperate, hierarchy determines authority
+Different-faith temples: Direct competition for worshippers
+- Can Contest each other for converts
+- Holy wars possible between incompatible faiths
+"""
+external = """
+Temple holdings may conflict with:
+- Source holdings (arcane vs divine philosophy)
+- Law holdings (if secular ruler opposes faith)
+- Guild holdings (if faith opposes commerce)
+"""
+
+[holdings.temple.religions]
+note = """
+Cerilia has multiple faiths. Some coexist, others conflict:
+- Haelyn: God of nobility, war, justice (humans)
+- Nesirie: Goddess of sea, mourning (humans)
+- Cuiraecen: God of storms, battle (humans)
+- Avani: Goddess of sun, reason, magic (Khinasi)
+- Erik: God of nature, hunt (Rjurik)
+- Sera: Goddess of fortune, wealth (Brecht)
+- Belinik: God of strife, terror (evil humans, Vos)
+- Kriesha: Goddess of cold, winter (evil humans, Vos)
+- Ruornil: God of moon, magic (elves, some humans)
+- Various elven and dwarven faiths
+"""
+
+[holdings.temple.creation]
+requirements = [
+    "Must be a blooded priest or use blooded priest lieutenant",
+    "Province must have room",
+    "Population must be receptive to the faith"
+]
+dc = "10 + province level"
+modifiers = [
+    "+4 if population already follows your faith",
+    "+2 if no temples exist in province",
+    "-2 per level of hostile temple (different faith)",
+    "-4 if dominant faith is hostile to yours"
+]
+
+[holdings.temple.examples]
+level_0 = "Roadside shrine, traveling priest"
+level_1 = "Village church, small monastery"
+level_2 = "Town temple, regional pilgrimage site"
+level_3 = "Cathedral, major monastery, bishop's seat"
+level_4 = "Archdiocese center, famous holy site"
+level_5 = "Grand cathedral, seat of High Priest"
+level_6_plus = "Theocratic capital, site of miracles"
+
+# =============================================================================
+# GUILD HOLDINGS
+# =============================================================================
+
+[holdings.guild]
+name = "Guild Holdings"
+controller = "Guilder (Merchant, Craftsman)"
+symbol = "Coins or tools"
+description = """
+Guild holdings represent economic power: trade networks, craft guilds,
+merchant houses, banks, and manufacturing. Guild holdings generate the
+most gold income but less regency than other holding types.
+
+Guild holdings are essential for trade routes, economic warfare, and
+financing other operations. Guild regents often become the financiers
+of wars and political schemes.
+"""
+
+[holdings.guild.abilities]
+trade_routes = """
+Guild holdings enable trade routes:
+- Must have guild at both endpoints
+- Generate 1 GB per turn per level of LOWER guild
+- Routes can span multiple provinces
+- Sea routes possible with port guilds
+"""
+
+economic_power = """
+High guild holdings provide economic leverage:
+- Can loan money to other regents
+- Can embargo rivals (reduce their income)
+- Control key resources and goods
+- Hire mercenaries quickly
+"""
+
+information_network = """
+Merchant networks provide intelligence:
+- Bonus to Espionage actions
+- Early warning of troop movements
+- Knowledge of market conditions
+- Rumors and news from distant lands
+"""
+
+bribery_and_corruption = """
+Wealthy guilds can:
+- Bribe officials (+2 to various checks)
+- Fund agitators and rebels
+- Corrupt law enforcement
+- Buy influence in other holdings
+"""
+
+[holdings.guild.income]
+gold = """
+Base: 1 GB per holding level (HIGHEST of all holdings)
+Trade Route Income: 1 GB per level of lower guild at each end
+Modifiers:
+- +0.5 GB if only guild in province
+- +0.25 GB per trade route passing through
+- -0.25 GB per rival guild level
+- -0.5 GB if Law holder is hostile
+"""
+
+regency = """
+Guild regency is lower than other holdings:
+- 0.5 RP per holding level
+- Guilders often have lower bloodlines anyway
+- Represents influence over non-noble classes
+Example: Guild (4) generates 2 RP
+"""
+
+[holdings.guild.conflicts]
+internal = """
+Multiple guilds in one province compete fiercely:
+- Price wars reduce everyone's income
+- Dominant guild can squeeze out competition
+- Guilds may form cartels (combine holdings temporarily)
+"""
+external = """
+Guild holdings may conflict with:
+- Law holdings (if heavily taxed or regulated)
+- Temple holdings (if faith opposes commerce)
+- Source holdings (rarely - different spheres)
+"""
+
+[holdings.guild.trade_goods]
+categories = [
+    "Raw materials: Timber, ore, grain, livestock",
+    "Manufactured goods: Weapons, armor, cloth, tools",
+    "Luxury goods: Silk, spices, gems, art",
+    "Special goods: Magical components, rare resources"
+]
+notes = """
+Trade route value may increase for:
+- Unique goods only found in one location
+- Wartime demand for weapons/supplies
+- Seasonal variations (harvest, winter)
+"""
+
+[holdings.guild.creation]
+requirements = [
+    "Must be blooded or use blooded lieutenant",
+    "Province must have economic activity",
+    "Trade connections must be possible"
+]
+dc = "10 + province level"
+modifiers = [
+    "+2 if province is on trade route",
+    "+2 if port or crossroads province",
+    "-2 per level of existing guild (competition)",
+    "+2 if Law holder is allied or indifferent"
+]
+
+[holdings.guild.examples]
+level_0 = "Small shop, traveling merchant"
+level_1 = "Market stall, craft workshop"
+level_2 = "Merchant house, guild chapter"
+level_3 = "Trade company headquarters, banking house"
+level_4 = "Major trading company, mint"
+level_5 = "Trade empire regional center"
+level_6_plus = "Legendary trading house, financial center"
+
+# =============================================================================
+# SOURCE HOLDINGS
+# =============================================================================
+
+[holdings.source]
+name = "Source Holdings"
+controller = "Wizard (Arcane Spellcaster)"
+symbol = "Star or mystical glyph"
+description = """
+Source holdings represent attunement to the magical energy of the land
+itself. Unlike other holdings, source potential DECREASES as provinces
+develop. Wilderness contains more magic than civilization.
+
+Source holdings are essential for arcane realm spells and ley lines.
+Wizards with source holdings can cast powerful magic affecting entire
+provinces or domains.
+"""
+
+[holdings.source.abilities]
+realm_magic = """
+Source holdings enable arcane realm spells:
+- Minimum source level required varies by spell
+- Higher sources cast more powerful magic
+- Ley lines can extend reach
+- Some spells require specific sources
+"""
+
+ley_lines = """
+Wizards can create ley lines between sources they control:
+- Transport magical energy across distances
+- Cast spells at locations connected by ley lines
+- Ley lines are invisible to non-mages
+- Creating ley lines costs RP and time
+"""
+
+magical_detection = """
+Source holders can detect:
+- Other magical workings in their territory
+- Presence of magical creatures
+- Disturbances in the magical field
+- Other wizards' activities
+"""
+
+research_bonus = """
+Higher source holdings provide:
+- +1 to spell research per 2 source levels
+- Access to rare magical knowledge
+- Understanding of local magical phenomena
+"""
+
+[holdings.source.income]
+gold = """
+Base: 0 GB
+Sources do not generate gold directly. Wizards must:
+- Use other holdings for income
+- Accept patronage from secular rulers
+- Sell magical services
+- Create magic items for sale
+"""
+
+regency = """
+Source holdings generate regency based on magical potential:
+- Equal to source holding level
+- Represents attunement to land's power
+- Not affected by province loyalty
+- Multiple sources add together
+Example: Source (3) generates 3 RP
+"""
+
+[holdings.source.potential]
+calculation = """
+Maximum source potential = Province Level - (Total Other Holdings)
+
+Example calculations:
+- Province (4), no holdings: Source potential = 4
+- Province (4), Law (2): Source potential = 4 - 2 = 2
+- Province (4), Law (2), Temple (2): Source potential = 4 - 4 = 0
+- Province (7), Law (3), Temple (2), Guild (1): Potential = 7 - 6 = 1
+
+As provinces develop, magic fades. Ancient forests have high source
+potential; bustling cities have none.
+"""
+wilderness_bonus = """
+Province level 0 (wilderness) can still have sources:
+- Maximum source = 7 (regardless of province level 0)
+- The wildest places hold the most magic
+- Elven lands preserve source potential
+"""
+
+[holdings.source.conflicts]
+internal = """
+Multiple wizards with sources in same province:
+- Compete for magical potential
+- May Contest each other's sources
+- Can cooperate to share power (rare)
+"""
+external = """
+Source holdings conflict with CIVILIZATION:
+- Every level of other holdings reduces max source
+- Province growth destroys source potential
+- Wizards may oppose development to preserve magic
+- Conflict with Law/Guild holders common
+"""
+
+[holdings.source.ley_lines]
+creation = """
+To create a ley line:
+- Cost: 1 RP per province crossed
+- Time: 1 domain action
+- Must control sources at both ends
+- Route cannot cross hostile territory without permission
+"""
+uses = [
+    "Cast realm spells at distant sources",
+    "Transfer RP between sources",
+    "Detect disturbances along the line",
+    "Travel magically (with proper spells)"
+]
+vulnerabilities = [
+    "Can be severed if source is destroyed",
+    "Enemy wizards can tap into ley lines",
+    "Powerful magic can disrupt lines"
+]
+
+[holdings.source.creation]
+requirements = [
+    "Must be a blooded wizard or use blooded wizard lieutenant",
+    "Province must have source potential (see calculation)",
+    "Must attune to the magical nature of the land"
+]
+dc = "10 + province level"
+modifiers = [
+    "+4 if province is wilderness (level 0-1)",
+    "+2 if elven or fey territory",
+    "-2 per level of existing holdings (harder to find magic)",
+    "-4 in heavily civilized provinces (level 5+)"
+]
+
+[holdings.source.examples]
+level_0 = "Recognized magical site, minor attunement"
+level_1 = "Small grove, standing stones"
+level_2 = "Magical spring, ancient circle"
+level_3 = "Enchanted forest grove, wizard's sanctum"
+level_4 = "Major magical site, powerful ley nexus"
+level_5 = "Legendary magical location"
+level_6_plus = "Mythical sites of world-shaping power"
+
+# =============================================================================
+# SPECIAL HOLDINGS
+# =============================================================================
+
+[holdings.special]
+description = """
+Some holdings don't fit standard categories or have unique properties.
+These are relatively rare but important.
+"""
+
+[holdings.special.provincial]
+name = "Provincial Holdings"
+description = """
+The province itself is controlled by a regent (typically whoever holds
+the most Law). Provincial control provides:
+- Taxation base from population
+- Right to grant or deny holding creation
+- Military levies from peasant population
+- Regency from ruling the populace
+"""
+income = """
+Gold: (Province Level / 2) GB base taxation
+Regency: Province Level (if uncontested ruler)
+"""
+
+[holdings.special.fortifications]
+name = "Fortifications"
+description = """
+While not holdings per se, fortifications are permanent improvements:
+- Provide defensive bonuses
+- Can be sieged and destroyed
+- Require maintenance
+- May house permanent garrison
+See: Fortify action for details
+"""
+
+[holdings.special.naval]
+name = "Naval Assets"
+description = """
+Coastal provinces may have naval facilities:
+- Shipyards (create naval units)
+- Ports (enable sea trade routes)
+- Naval bases (maintain fleets)
+These often associate with Guild holdings but may be separate
+"""
+
+# =============================================================================
+# HOLDING INTERACTIONS
+# =============================================================================
+
+[holding_interactions]
+cooperation = """
+Allied holdings can support each other:
+- Law + Temple: Religious authority supports secular rule
+- Guild + Law: Economic development with order
+- Temple + Guild: Wealthy faithful communities
+Cooperation bonuses: +1 to +2 on various actions
+"""
+
+conflict = """
+Hostile holdings actively harm each other:
+- Contest actions more frequent
+- Espionage and sabotage common
+- May escalate to warfare
+"""
+
+neutral = """
+Holdings can coexist without active cooperation:
+- Normal income and regency
+- No bonuses or penalties
+- May shift to ally or enemy
+"""
+
+[holding_interactions.synergies]
+law_temple = """
+Law holders who share faith with temple:
++1 to Decree actions (religious backing)
++1 to military morale
+Temple gains protection from Law
+"""
+
+law_guild = """
+Law holders who protect guilds:
++10% taxation income
+Guild gains +0.1 GB per Law level
+Guilds may pay "taxes" willingly
+"""
+
+guild_temple = """
+Temple and Guild cooperation:
+Temple gains donations from wealthy merchants
+Guild gains religious sanction for trade
+Both benefit from stable, prosperous populace
+"""
+
+[holding_interactions.conflicts_detailed]
+law_vs_guild = """
+Heavy regulation or taxation:
+Guild income reduced 10-25%
+Guild may fund rebellion
+Law holder faces economic pressure
+"""
+
+law_vs_temple = """
+Secular vs religious authority:
+Temple may excommunicate ruler
+Law may seize temple assets
+Population torn in loyalty
+"""
+
+source_vs_civilization = """
+Wizard opposes development:
+May use magic to hinder Rule actions
+Agitate against logging, mining
+Ally with elves or fey creatures
+Civilization destroys magic
+"""
+
+# =============================================================================
+# INCOME SUMMARY TABLE
+# =============================================================================
+
+[income_summary]
+description = "Quick reference for holding income"
+
+[income_summary.gold_per_level]
+law = 0.5
+temple = 0.5
+guild = 1.0
+source = 0.0
+province = 0.5  # per province level, for ruler
+
+[income_summary.regency_formulas]
+law = "Province Level x (Your Law / Total Law) - competition based"
+temple = "Province Level x (Temple Level / Province Level)"
+guild = "0.5 x Guild Level"
+source = "Source Level (direct)"
+province = "Province Level (for uncontested ruler)"
+
+# =============================================================================
+# ORACLE GUIDANCE
+# =============================================================================
+
+[oracle_guidance]
+holding_creation = """
+When creating holdings, consider:
+- WHY is this holding being established?
+- WHO benefits and who opposes?
+- WHAT physical form does it take?
+- WHERE specifically is it located in the province?
+"""
+
+holding_conflict = """
+When holdings conflict, consider:
+- What is the nature of the competition?
+- Are there third parties affected?
+- Could this escalate to violence?
+- Is compromise possible?
+"""
+
+income_collection = """
+When collecting income, consider:
+- Are there disruptions (war, plague, weather)?
+- Is collection efficient or corrupt?
+- Are subjects cooperative or resentful?
+- Are there unexpected windfalls or losses?
+"""
+
+regency_flow = """
+When regency accumulates, consider:
+- Is the regent's authority challenged?
+- Do the people respect or fear the regent?
+- Are there spiritual or magical disruptions?
+- Does bloodline strength fluctuate?
+"""
+
+[oracle_prompts]
+holding_status = [
+    "Is this holding thriving or struggling?",
+    "Are there internal problems (corruption, dissent)?",
+    "Do external forces threaten the holding?",
+    "Are there opportunities for growth?"
+]
+competition = [
+    "Is a rival holding making moves?",
+    "Are there neutral parties to sway?",
+    "Could alliance be more profitable than conflict?",
+    "What would victory or defeat look like?"
+]
+development = [
+    "Is the population receptive to expansion?",
+    "Are resources available for growth?",
+    "Do circumstances favor or hinder development?",
+    "What obstacles must be overcome?"
+]

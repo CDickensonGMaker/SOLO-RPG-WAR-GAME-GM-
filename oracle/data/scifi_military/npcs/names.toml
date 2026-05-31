@@ -1,0 +1,133 @@
+# Sci-Fi Military Names
+# Mix of cultures, ranks, and naming conventions from various military sci-fi sources
+
+[names]
+entries = [
+  # Imperial/Gothic Names
+  { text = "Commissar Viktor Hark", weight = 1 },
+  { text = "Lord General Cassius Vorn", weight = 1 },
+  { text = "Sergeant Major Helena Steelhand", weight = 1 },
+  { text = "Tech-Adept Xerxes-Omicron-7", weight = 1 },
+  { text = "Captain Mordecai Blackwood", weight = 1 },
+  { text = "Colonel Anastasia Volkov", weight = 1 },
+  { text = "Private First Class Rico Vasquez", weight = 1 },
+  { text = "Admiral Hadrian Castus", weight = 1 },
+  { text = "Lieutenant Yuki Tanaka", weight = 1 },
+  { text = "Sergeant Brick Holloway", weight = 1 },
+  { text = "Corporal Chen Wei-Lin", weight = 1 },
+  { text = "Major Decimus Aurelius", weight = 1 },
+  { text = "Warrant Officer Kira Okonkwo", weight = 1 },
+  { text = "General Marcus Antonius Drake", weight = 1 },
+  { text = "Private Santiago Reyes", weight = 1 },
+  { text = "Commander Freya Stormborn", weight = 1 },
+  { text = "Staff Sergeant Dmitri Volstok", weight = 1 },
+  { text = "Chaplain Ezekiel Stone", weight = 1 },
+  { text = "Medicae Primus Sophia Laurent", weight = 1 },
+  { text = "Fleet Master Zhou Feng", weight = 1 },
+
+  # Tech-Religious Names
+  { text = "Magos Helix Ferrox", weight = 1 },
+  { text = "Enginseer Cog-Theta-9", weight = 1 },
+  { text = "Tech-Priest Dominus Vex", weight = 1 },
+  { text = "Lexmechanic Null-Seven", weight = 1 },
+  { text = "Artisan Primus Castellan", weight = 1 },
+
+  # Standard Military Names
+  { text = "Gunnery Sergeant Apone", weight = 1 },
+  { text = "Lieutenant Ellen Ripley", weight = 1 },
+  { text = "Corporal Dwayne Hicks", weight = 1 },
+  { text = "Private William Hudson", weight = 1 },
+  { text = "Sergeant Major Johnny Rico", weight = 1 },
+  { text = "Captain Carmen Ibanez", weight = 1 },
+  { text = "Lieutenant Jean Rasczak", weight = 1 },
+  { text = "Colonel Carl Jenkins", weight = 1 },
+  { text = "Private Ace Levy", weight = 1 },
+  { text = "Corporal Sugar Watkins", weight = 1 },
+  { text = "Major Jack O'Neill", weight = 1 },
+  { text = "Captain Samantha Carter", weight = 1 },
+  { text = "Master Sergeant Walter Harriman", weight = 1 },
+  { text = "Colonel Cameron Mitchell", weight = 1 },
+  { text = "General George Hammond", weight = 1 },
+
+  # Diverse Cultural Names
+  { text = "Lieutenant Commander Kwame Asante", weight = 1 },
+  { text = "Sergeant First Class Priya Sharma", weight = 1 },
+  { text = "Petty Officer Hiroshi Nakamura", weight = 1 },
+  { text = "Corporal Bjorn Eriksson", weight = 1 },
+  { text = "Private Oluwaseun Adeyemi", weight = 1 },
+  { text = "Captain Maria Esperanza Santos", weight = 1 },
+  { text = "Major Rashid Al-Farsi", weight = 1 },
+  { text = "Lieutenant Ingrid Holmberg", weight = 1 },
+  { text = "Sergeant Mikhail Petrov", weight = 1 },
+  { text = "Specialist Anika Janssen", weight = 1 },
+  { text = "Lance Corporal Tomasz Kowalski", weight = 1 },
+  { text = "Commander Fatima Benzema", weight = 1 },
+  { text = "Captain Aleksei Voronov", weight = 1 },
+  { text = "Private First Class Kenji Hayashi", weight = 1 },
+  { text = "Sergeant Major Ibrahim Diallo", weight = 1 },
+  { text = "Lieutenant Chiara Romano", weight = 1 },
+  { text = "Corporal Nguyen Van Minh", weight = 1 },
+  { text = "Captain Yusuf Karim", weight = 1 },
+  { text = "Private Aoife Murphy", weight = 1 },
+  { text = "Major Hans Gruber", weight = 1 },
+
+  # Callsigns and Nicknames
+  { text = "Sergeant 'Ironside' Jackson", weight = 1 },
+  { text = "Corporal 'Ghost' Williams", weight = 1 },
+  { text = "Private 'Preacher' Morrison", weight = 1 },
+  { text = "Lieutenant 'Havoc' Chen", weight = 1 },
+  { text = "Specialist 'Sparks' Kowalski", weight = 1 },
+  { text = "Sergeant 'Doc' Holloway", weight = 1 },
+  { text = "Private 'Lucky' Santiago", weight = 1 },
+  { text = "Corporal 'Frost' Anderson", weight = 1 },
+  { text = "Captain 'Viper' Reyes", weight = 1 },
+  { text = "Lieutenant 'Wraith' Nakamura", weight = 1 },
+
+  # Noble/Imperial Officers
+  { text = "Lord Captain Tiberius Crane", weight = 1 },
+  { text = "Lady Commander Seraphina Vex", weight = 1 },
+  { text = "Baron-Colonel Wilhelm von Stahl", weight = 1 },
+  { text = "Count-Admiral Lucian Drakov", weight = 1 },
+  { text = "Duchess-General Cassandra Morn", weight = 1 },
+  { text = "Viscount-Captain Aldric Thorne", weight = 1 },
+  { text = "Lord Marshal Octavian Rex", weight = 1 },
+  { text = "Lady Inquisitor Corvina Shade", weight = 1 },
+
+  # Clone/Batch Designations
+  { text = "Trooper CT-7567 'Rex'", weight = 1 },
+  { text = "Soldier Unit Alpha-Seven", weight = 1 },
+  { text = "Combat Model Nine-Echo", weight = 1 },
+  { text = "Designation: Gamma-Four-Four", weight = 1 },
+  { text = "Serial: Lambda-Twelve", weight = 1 },
+
+  # Alien Allied Names
+  { text = "Teal'c of Chulak", weight = 1 },
+  { text = "War-Chief Grethok", weight = 1 },
+  { text = "Combat-Seer Valyx", weight = 1 },
+  { text = "Blade-Master Krix'aal", weight = 1 },
+  { text = "Alliance Commander Zorath", weight = 1 },
+
+  # Special Forces/Elite
+  { text = "Operative Cipher", weight = 1 },
+  { text = "Agent Obsidian", weight = 1 },
+  { text = "Assassin Null", weight = 1 },
+  { text = "Infiltrator Shade", weight = 1 },
+  { text = "Executioner Grimm", weight = 1 },
+
+  # Additional Names
+  { text = "Sergeant Zoe Washburne", weight = 1 },
+  { text = "Private Jayne Cobb", weight = 1 },
+  { text = "Lieutenant Malcolm Reynolds", weight = 1 },
+  { text = "Commander Sarah Kerrigan", weight = 1 },
+  { text = "Admiral James Raynor", weight = 1 },
+  { text = "Sergeant Marcus Fenix", weight = 1 },
+  { text = "Private Dominic Santiago", weight = 1 },
+  { text = "Colonel Damon Baird", weight = 1 },
+  { text = "Lieutenant Augustus Cole", weight = 1 },
+  { text = "Captain Anya Stroud", weight = 1 },
+  { text = "Field Marshal Catherine Halsey", weight = 1 },
+  { text = "Master Chief Petty Officer Mendez", weight = 1 },
+  { text = "Gunnery Sergeant Edward Buck", weight = 1 },
+  { text = "Corporal Taylor Miles", weight = 1 },
+  { text = "Private Michael Crespo", weight = 1 }
+]

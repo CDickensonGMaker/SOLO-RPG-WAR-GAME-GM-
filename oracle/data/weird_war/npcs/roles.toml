@@ -1,0 +1,92 @@
+# NPC Roles - Weird War Setting
+# Military, civilian, and supernatural roles for WWI/WWII era characters
+
+[roles]
+entries = [
+  # Combat Military
+  { text = "Infantry rifleman, the backbone of any army", weight = 1 },
+  { text = "Machine gunner, guardian of the trench line", weight = 1 },
+  { text = "Sniper, patient hunter of men", weight = 1 },
+  { text = "Flamethrower operator, wielder of terrible fire", weight = 1 },
+  { text = "Tank commander, master of armored warfare", weight = 1 },
+  { text = "Combat engineer, builder and destroyer", weight = 1 },
+  { text = "Tunnel rat, hunter in the dark below", weight = 1 },
+  { text = "Trench raider, specialist in night assault", weight = 1 },
+  { text = "Mortar crew member, bringer of indirect death", weight = 1 },
+  { text = "Anti-tank gunner, slayer of iron beasts", weight = 1 },
+  { text = "Paratrooper, angel of death from above", weight = 1 },
+  { text = "Commando, elite striker behind enemy lines", weight = 1 },
+  { text = "Cavalry scout, last of a dying breed", weight = 1 },
+  { text = "Artillery observer, eyes for the guns", weight = 1 },
+  { text = "Bomber crew member, harbinger from the sky", weight = 1 },
+
+  # Support Military
+  { text = "Field medic, healer amid the carnage", weight = 1 },
+  { text = "Combat nurse, angel of the field hospital", weight = 1 },
+  { text = "Stretcher bearer, brave carrier of the wounded", weight = 1 },
+  { text = "Radio operator, voice across the chaos", weight = 1 },
+  { text = "Field chaplain, shepherd of souls in hell", weight = 1 },
+  { text = "Quartermaster, keeper of precious supplies", weight = 1 },
+  { text = "Military police officer, enforcer of discipline", weight = 1 },
+  { text = "Courier, runner through fire and death", weight = 1 },
+  { text = "Signals officer, keeper of communications", weight = 1 },
+  { text = "Combat photographer, witness to history", weight = 1 },
+  { text = "War correspondent, chronicler of the conflict", weight = 1 },
+  { text = "Mechanic, keeper of machines", weight = 1 },
+  { text = "Cook, provider of meager comfort", weight = 1 },
+  { text = "Dog handler, partner to loyal beasts", weight = 1 },
+  { text = "Interpreter, bridge between languages", weight = 1 },
+
+  # Officers and Command
+  { text = "Company commander, leader of men", weight = 1 },
+  { text = "Regimental colonel, master of tactics", weight = 1 },
+  { text = "Staff officer, architect of strategy", weight = 1 },
+  { text = "Intelligence officer, gatherer of secrets", weight = 1 },
+  { text = "Political commissar, enforcer of ideology", weight = 1 },
+
+  # Resistance and Partisans
+  { text = "Resistance cell leader, shadow commander", weight = 1 },
+  { text = "Partisan saboteur, wrecker of enemy infrastructure", weight = 1 },
+  { text = "Underground courier, carrier of forbidden messages", weight = 1 },
+  { text = "Safe house keeper, protector of the hunted", weight = 1 },
+  { text = "Resistance radio operator, voice of the underground", weight = 1 },
+  { text = "Forger, creator of false papers and identities", weight = 1 },
+  { text = "Smuggler, mover of people and contraband", weight = 1 },
+
+  # Civilians
+  { text = "Village elder, keeper of old knowledge", weight = 1 },
+  { text = "Local priest, guardian of the faithful", weight = 1 },
+  { text = "Farmer, witness to war's passage", weight = 1 },
+  { text = "Refugee, survivor seeking safety", weight = 1 },
+  { text = "Factory worker, builder of war's tools", weight = 1 },
+  { text = "Black marketeer, profiteer of scarcity", weight = 1 },
+  { text = "Collaborator, traitor for survival", weight = 1 },
+  { text = "Local doctor, healer for all sides", weight = 1 },
+  { text = "Schoolteacher, keeper of normalcy", weight = 1 },
+  { text = "Innkeeper, reluctant host to soldiers", weight = 1 },
+  { text = "Gravedigger, caretaker of the endless dead", weight = 1 },
+
+  # Occult Specialists
+  { text = "Military occult advisor, consultant on the unnatural", weight = 1 },
+  { text = "Exorcist, banisher of unholy spirits", weight = 1 },
+  { text = "Thaumaturgic researcher, scientist of the impossible", weight = 1 },
+  { text = "Relic hunter, seeker of sacred artifacts", weight = 1 },
+  { text = "Combat medium, channeler on the battlefield", weight = 1 },
+  { text = "Witch hunter, enemy of dark practitioners", weight = 1 },
+  { text = "Hermetic scholar, keeper of ancient wisdom", weight = 1 },
+  { text = "Blessed soldier, marked by divine purpose", weight = 1 },
+  { text = "Cursed veteran, bearer of supernatural affliction", weight = 1 },
+  { text = "Monster slayer, specialist against unholy foes", weight = 1 },
+
+  # Enemy Occult
+  { text = "Enemy necromancer, raiser of the dead", weight = 1 },
+  { text = "Cult leader, priest of forbidden gods", weight = 1 },
+  { text = "Dark scientist, creator of abominations", weight = 1 },
+  { text = "Blood mage, wielder of vital essence", weight = 1 },
+  { text = "Possessed officer, puppet of dark forces", weight = 1 },
+  { text = "Flesh-crafter, shaper of living weapons", weight = 1 },
+  { text = "Summoner, caller of entities from beyond", weight = 1 },
+  { text = "Soul harvester, collector of spiritual essence", weight = 1 },
+  { text = "Corruption priest, spreader of unholy taint", weight = 1 },
+  { text = "Demonologist, bargainer with infernal powers", weight = 1 },
+]

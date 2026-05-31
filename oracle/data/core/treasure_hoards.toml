@@ -1,0 +1,480 @@
+# Treasure Hoard Tables
+# System-agnostic larger treasure discoveries
+# Use weights to adjust probability (higher = more common)
+
+[small_cache]
+entries = [
+  # Hidden Savings (weight 2-3)
+  { text = "A hidden lockbox containing personal savings", weight = 3 },
+  { text = "Coins tucked into a wall cavity", weight = 2 },
+  { text = "A jar of currency buried beneath a loose floorboard", weight = 2 },
+  { text = "An envelope of cash hidden in a book", weight = 2 },
+  { text = "A money belt stuffed with emergency funds", weight = 2 },
+
+  # Emergency Supplies (weight 2-3)
+  { text = "An emergency stash of supplies and currency", weight = 3 },
+  { text = "A go-bag ready for quick escape", weight = 2 },
+  { text = "Survival supplies cached for hard times", weight = 2 },
+  { text = "Medical supplies hidden for emergencies", weight = 2 },
+  { text = "Ammunition and basic weapons, carefully oiled", weight = 2 },
+
+  # Hastily Hidden (weight 1-2)
+  { text = "Valuables buried hastily, the owner never returned", weight = 2 },
+  { text = "A strongbox hidden during a raid, forgotten after", weight = 1 },
+  { text = "Jewelry wrapped in cloth, shoved into a hollow tree", weight = 1 },
+  { text = "Trade goods sealed in a waterproof container in the well", weight = 1 },
+  { text = "A purse dropped in flight and never recovered", weight = 1 },
+
+  # Smuggler's Drops (weight 1-2)
+  { text = "A smuggler's drop, contents intact", weight = 2 },
+  { text = "Contraband cached beneath a false rock", weight = 1 },
+  { text = "A drop point that was never picked up", weight = 1 },
+  { text = "Goods hidden in a purpose-built compartment", weight = 1 },
+  { text = "A package waiting at a dead drop, recipient deceased", weight = 1 },
+
+  # Personal Hoards (weight 1-2)
+  { text = "A miser's hidden stash, accumulated over years", weight = 2 },
+  { text = "Skimmed profits hidden from partners", weight = 1 },
+  { text = "Tax evasion funds, carefully documented", weight = 1 },
+  { text = "A servant's accumulated tips, saved for decades", weight = 1 },
+  { text = "Protection money set aside instead of paid", weight = 1 },
+
+  # Criminal Stashes (weight 1-2)
+  { text = "A thief's personal take from various jobs", weight = 2 },
+  { text = "Proceeds from a single successful crime", weight = 1 },
+  { text = "Blackmail payments cached and counted", weight = 1 },
+  { text = "Gambling winnings hidden from creditors", weight = 1 },
+  { text = "Bribe money that was never delivered", weight = 1 },
+
+  # Found Objects (weight 1-2)
+  { text = "A collection of valuable items found over time", weight = 1 },
+  { text = "Battlefield pickings gathered after the fighting", weight = 1 },
+  { text = "Items pulled from the dead by one who didn't want to share", weight = 1 },
+  { text = "Salvage from a wreck, hidden until the law forgot", weight = 1 },
+
+  # Dowries and Inheritances (weight 1-2)
+  { text = "A dowry hidden by someone who didn't want to marry", weight = 1 },
+  { text = "An inheritance hidden from greedy relatives", weight = 1 },
+  { text = "Funds set aside for a child who never claimed them", weight = 1 },
+  { text = "Bride price hidden by someone who ran away instead", weight = 1 },
+]
+
+[medium_hoard]
+entries = [
+  # Collections (weight 1-2)
+  { text = "A collector's private display of rare items", weight = 2 },
+  { text = "An obsessive's accumulation of a single type of object", weight = 1 },
+  { text = "Curios gathered from travels across many lands", weight = 1 },
+  { text = "Trophies from a lifetime of hunting", weight = 1 },
+  { text = "Art pieces acquired by someone with more money than taste", weight = 1 },
+  { text = "A scholar's collection of rare manuscripts", weight = 1 },
+  { text = "Antiquities gathered by someone who knew their value", weight = 1 },
+
+  # Armories (weight 1-2)
+  { text = "An armory of quality weapons maintained for years", weight = 2 },
+  { text = "A weapons cache for a resistance that never came", weight = 1 },
+  { text = "Family arms passed down through generations", weight = 1 },
+  { text = "Confiscated weapons stockpiled by authorities", weight = 1 },
+  { text = "An assassin's toolkit, comprehensive and deadly", weight = 1 },
+  { text = "Tournament prizes accumulated by a champion", weight = 1 },
+
+  # Business Wealth (weight 1-2)
+  { text = "A merchant's strongbox filled with the week's takings", weight = 2 },
+  { text = "Trade goods stored for the right market conditions", weight = 2 },
+  { text = "An accountant's records and the funds they represent", weight = 1 },
+  { text = "Inventory held back from a failing business", weight = 1 },
+  { text = "A money lender's reserve, carefully counted", weight = 1 },
+  { text = "Partnership funds, access disputed after a falling out", weight = 1 },
+
+  # War and Conflict (weight 1-2)
+  { text = "War spoils gathered over many campaigns", weight = 2 },
+  { text = "A veteran's accumulation of battlefield prizes", weight = 1 },
+  { text = "Funds from ransomed prisoners", weight = 1 },
+  { text = "Confiscated property from the defeated", weight = 1 },
+  { text = "A mercenary company's war chest", weight = 1 },
+  { text = "Plunder hidden before the retreat", weight = 1 },
+
+  # Family Wealth (weight 1-2)
+  { text = "Family valuables hidden for generations", weight = 2 },
+  { text = "An estate's portable wealth, ready for evacuation", weight = 1 },
+  { text = "Heirlooms accumulated across many lifetimes", weight = 1 },
+  { text = "A noble family's emergency reserves", weight = 1 },
+  { text = "The contents of a family vault, recently emptied", weight = 1 },
+  { text = "Wedding gifts from a ceremony that never happened", weight = 1 },
+
+  # Institutional Wealth (weight 1-2)
+  { text = "Temple offerings accumulated over a festival season", weight = 2 },
+  { text = "Guild treasury, bypassing official accounting", weight = 1 },
+  { text = "University endowment hidden during political upheaval", weight = 1 },
+  { text = "Charity donations redirected before distribution", weight = 1 },
+  { text = "A monastery's accumulated tithes, never spent", weight = 1 },
+  { text = "Fraternal organization's emergency fund", weight = 1 },
+
+  # Criminal Enterprise (weight 1-2)
+  { text = "A crime lord's operating funds", weight = 2 },
+  { text = "Proceeds from organized theft, not yet laundered", weight = 1 },
+  { text = "Drug trade profits cached between shipments", weight = 1 },
+  { text = "Gambling house reserves, hidden from the taxman", weight = 1 },
+  { text = "Fencing operation inventory, ready for buyers", weight = 1 },
+  { text = "Protection racket collections, before distribution to the boss", weight = 1 },
+
+  # Buried and Forgotten (weight 1-2)
+  { text = "A buried cache from a conflict now forgotten", weight = 1 },
+  { text = "Treasure from a disaster's aftermath, never reclaimed", weight = 1 },
+  { text = "Wealth hidden before an execution, never revealed", weight = 1 },
+  { text = "The contents of a bank vault after the bank burned down", weight = 1 },
+  { text = "Property hidden during purges, owners all dead", weight = 1 },
+
+  # Professional Accumulation (weight 1-2)
+  { text = "A physician's lifetime of fees, saved for retirement", weight = 1 },
+  { text = "An artist's unsold masterworks, now valuable", weight = 1 },
+  { text = "A craftmaster's finest creations, made for no buyer", weight = 1 },
+  { text = "A spy's retirement fund, identity never revealed", weight = 1 },
+  { text = "An executioner's considerable savings, no heir named", weight = 1 },
+]
+
+[major_treasure]
+entries = [
+  # Accumulated Wealth (weight 1)
+  { text = "A vault of accumulated wealth spanning generations", weight = 1 },
+  { text = "A dragon's hoard, if not a dragon then someone with similar appetites", weight = 1 },
+  { text = "The treasury of a fallen dynasty", weight = 1 },
+  { text = "Accumulated taxes never sent to the crown", weight = 1 },
+  { text = "A miser's life work, touched by no one living", weight = 1 },
+
+  # Ancient Treasures (weight 1)
+  { text = "Ancient treasure untouched for centuries", weight = 1 },
+  { text = "A sealed tomb's funeral goods, grave robbers never found it", weight = 1 },
+  { text = "Temple treasury from a faith now extinct", weight = 1 },
+  { text = "A civilization's final vault, sealed before the end", weight = 1 },
+  { text = "Treasure cached before a natural disaster, buried deeper by it", weight = 1 },
+  { text = "The wealth of a lost colony, settlers long dead", weight = 1 },
+
+  # War Spoils (weight 1)
+  { text = "A warlord's war chest, never spent", weight = 1 },
+  { text = "The ransom of a king, paid but recipient died before collecting", weight = 1 },
+  { text = "Tribute from a hundred conquered cities", weight = 1 },
+  { text = "A general's share of legendary plunder", weight = 1 },
+  { text = "Funds for an army that was never raised", weight = 1 },
+
+  # Legendary Items (weight 1)
+  { text = "A legendary item long thought lost or mythical", weight = 1 },
+  { text = "An artifact that proves a legend was true", weight = 1 },
+  { text = "The weapon of a legendary hero", weight = 1 },
+  { text = "An item mentioned in ancient texts, now found", weight = 1 },
+  { text = "Something that shouldn't exist, but does", weight = 1 },
+
+  # Royal and Imperial (weight 1)
+  { text = "Crown jewels hidden during revolution", weight = 1 },
+  { text = "A national treasure removed before invasion", weight = 1 },
+  { text = "The portable wealth of a deposed monarch", weight = 1 },
+  { text = "Imperial regalia from a fallen empire", weight = 1 },
+  { text = "State gifts accumulated over centuries of diplomacy", weight = 1 },
+
+  # Religious Treasures (weight 1)
+  { text = "Sacred relics accumulated by a major faith", weight = 1 },
+  { text = "Offerings to a god, gathered since time began", weight = 1 },
+  { text = "The wealth of a religious order dissolved by decree", weight = 1 },
+  { text = "Pilgrimage donations spanning a thousand years", weight = 1 },
+  { text = "Temple gold hidden from conquering iconoclasts", weight = 1 },
+
+  # Pirate and Adventure (weight 1)
+  { text = "A pirate captain's lifetime of plunder", weight = 1 },
+  { text = "Sunken treasure raised from the deep", weight = 1 },
+  { text = "The legendary cache a famous outlaw never revealed", weight = 1 },
+  { text = "Treasure from a fleet lost in a storm, gathered in one place", weight = 1 },
+  { text = "An explorer's discoveries from lands unmapped", weight = 1 },
+
+  # Magical or Mysterious (weight 1)
+  { text = "A wizard's accumulated experiments and materials", weight = 1 },
+  { text = "Items that seem to have no origin in known history", weight = 1 },
+  { text = "Treasure from a place that no longer exists", weight = 1 },
+  { text = "Objects that defy natural explanation", weight = 1 },
+  { text = "A collection gathered by something not quite human", weight = 1 },
+
+  # Corporate and Institutional (weight 1)
+  { text = "A trading company's emergency reserves, company dissolved", weight = 1 },
+  { text = "University treasures hidden during war, never recovered", weight = 1 },
+  { text = "Bank reserves from an institution erased from history", weight = 1 },
+  { text = "Guild wealth accumulated over centuries", weight = 1 },
+  { text = "The portable assets of an organization that no longer exists", weight = 1 },
+]
+
+[legendary_treasure]
+entries = [
+  # Mythic Scale (weight 1)
+  { text = "Wealth beyond counting, the stuff of legends made real", weight = 1 },
+  { text = "A treasure that nations would go to war to possess", weight = 1 },
+  { text = "The accumulated wealth of an age, gathered in one place", weight = 1 },
+  { text = "Something that changes the balance of power by its mere existence", weight = 1 },
+  { text = "Treasure that fulfills an ancient prophecy by being found", weight = 1 },
+
+  # World-Changing Artifacts (weight 1)
+  { text = "An artifact that could reshape civilization", weight = 1 },
+  { text = "A weapon that ended the last great war", weight = 1 },
+  { text = "Technology from an age more advanced than our own", weight = 1 },
+  { text = "The key to powers that should not be awakened", weight = 1 },
+  { text = "Something the gods themselves hid from mortals", weight = 1 },
+
+  # Lost Civilizations (weight 1)
+  { text = "The complete treasury of a civilization lost to time", weight = 1 },
+  { text = "Everything salvaged before a continent sank", weight = 1 },
+  { text = "The preserved wealth of a species that no longer exists", weight = 1 },
+  { text = "Treasure brought from another world entirely", weight = 1 },
+  { text = "The accumulated knowledge and wealth of a golden age", weight = 1 },
+
+  # Divine and Cosmic (weight 1)
+  { text = "Objects touched by divine power", weight = 1 },
+  { text = "The mortal remains of something worshipped as a god", weight = 1 },
+  { text = "Gifts given to mortals by beings from beyond", weight = 1 },
+  { text = "The physical manifestation of an abstract concept", weight = 1 },
+  { text = "Something that shouldn't exist in a sane universe", weight = 1 },
+]
+
+[complications_treasure]
+entries = [
+  # Guardian and Protection (weight 2-3)
+  { text = "The treasure is guarded by something still vigilant", weight = 3 },
+  { text = "Automated defenses activate when the vault opens", weight = 2 },
+  { text = "The guardian is not hostile, but must be convinced", weight = 2 },
+  { text = "Something guards this not for the treasure, but for what the treasure contains", weight = 1 },
+  { text = "The guardian is the last of its kind, killing it ends something forever", weight = 1 },
+
+  # Alarms and Alerts (weight 2-3)
+  { text = "Taking it triggers an alarm that summons others", weight = 3 },
+  { text = "Removing items breaks a seal that was holding something back", weight = 2 },
+  { text = "The treasure's absence will be noticed within hours", weight = 2 },
+  { text = "An alert goes to interested parties the moment the vault opens", weight = 2 },
+  { text = "Something awakens when the treasure moves", weight = 1 },
+
+  # Physical Challenges (weight 2-3)
+  { text = "The treasure is too heavy to carry easily", weight = 3 },
+  { text = "The treasure is too large to remove through the entrance", weight = 2 },
+  { text = "The treasure is fragile and will be destroyed by rough handling", weight = 2 },
+  { text = "Environmental conditions (cold, wet, hot) are damaging the treasure", weight = 2 },
+  { text = "The treasure must remain in specific conditions or it degrades", weight = 1 },
+
+  # Competition (weight 2-3)
+  { text = "Others are already here for the same treasure", weight = 3 },
+  { text = "A rival group is one step behind you", weight = 2 },
+  { text = "The current owners are arriving to check on their property", weight = 2 },
+  { text = "Someone with a better claim is on their way", weight = 2 },
+  { text = "Multiple factions converge, none willing to share", weight = 1 },
+
+  # Traps and Hazards (weight 2-3)
+  { text = "The treasure is booby-trapped to harm thieves", weight = 3 },
+  { text = "Removing items triggers a collapse", weight = 2 },
+  { text = "The chamber floods, burns, or fills with gas when disturbed", weight = 2 },
+  { text = "The trap targets whatever is most valuable to the thief", weight = 1 },
+  { text = "The entire area is rigged to destroy everything if breached", weight = 1 },
+
+  # Curses and Consequences (weight 1-2)
+  { text = "A curse protects the treasure, already taking effect", weight = 2 },
+  { text = "The treasure corrupts those who possess it", weight = 1 },
+  { text = "Previous thieves' fates are visible as warnings", weight = 1 },
+  { text = "Taking this will cost something you haven't considered", weight = 1 },
+  { text = "The curse is subtle and won't be noticed until too late", weight = 1 },
+
+  # Attention and Notoriety (weight 2-3)
+  { text = "Taking it will be noticed by those who matter", weight = 3 },
+  { text = "The treasure is famous enough that selling it will be difficult", weight = 2 },
+  { text = "Possessing this makes you a target for powerful interests", weight = 2 },
+  { text = "The treasure's disappearance will start a war", weight = 1 },
+  { text = "Whoever holds this becomes part of a much larger story", weight = 1 },
+
+  # Moral Complications (weight 1-2)
+  { text = "The treasure belongs to those who need it more than you", weight = 2 },
+  { text = "Taking this will doom others who depended on it", weight = 1 },
+  { text = "The treasure was meant for a worthy purpose you're subverting", weight = 1 },
+  { text = "Someone sacrificed everything to keep this hidden for a reason", weight = 1 },
+  { text = "The treasure's origin makes profit from it morally impossible", weight = 1 },
+
+  # Practical Problems (weight 1-2)
+  { text = "The treasure includes items that cannot be moved together", weight = 2 },
+  { text = "Some items require special handling or containment", weight = 1 },
+  { text = "The treasure includes living things that must be cared for", weight = 1 },
+  { text = "Parts of the treasure are worthless without other parts", weight = 1 },
+  { text = "The treasure requires expertise to properly value and sell", weight = 1 },
+
+  # Time Pressure (weight 1-2)
+  { text = "You have limited time before the window closes", weight = 2 },
+  { text = "The treasure is degrading and must be moved now or never", weight = 1 },
+  { text = "Someone is on their way who cannot find you here", weight = 1 },
+  { text = "External events will make escape impossible soon", weight = 1 },
+  { text = "The treasure only exists during specific conditions", weight = 1 },
+]
+
+[treasure_locations]
+entries = [
+  # Hidden Spaces (weight 2-3)
+  { text = "Behind a false wall in an otherwise mundane building", weight = 3 },
+  { text = "Beneath the floor of a structure long abandoned", weight = 2 },
+  { text = "In a chamber only accessible through a hidden passage", weight = 2 },
+  { text = "Walled up in what appears to be solid construction", weight = 2 },
+  { text = "In a space that doesn't appear on any plans", weight = 1 },
+
+  # Underground (weight 2-3)
+  { text = "In caverns beneath a known location", weight = 3 },
+  { text = "At the bottom of a shaft dug for another purpose", weight = 2 },
+  { text = "In catacombs or burial chambers", weight = 2 },
+  { text = "In a basement level no one remembers exists", weight = 2 },
+  { text = "In tunnels connecting to a larger underground network", weight = 1 },
+
+  # Water (weight 1-2)
+  { text = "Submerged in a body of water", weight = 2 },
+  { text = "On an island accessible only at low tide", weight = 1 },
+  { text = "In a cave system partially flooded", weight = 1 },
+  { text = "In the hull of a sunken vessel", weight = 1 },
+  { text = "At the bottom of a well or cistern", weight = 1 },
+
+  # Elevated (weight 1-2)
+  { text = "In a tower room with the stairs destroyed", weight = 2 },
+  { text = "On a ledge accessible only by climbing", weight = 1 },
+  { text = "In the rafters of a large structure", weight = 1 },
+  { text = "In a mountain cave requiring ascent", weight = 1 },
+  { text = "Suspended in a space where the floor has collapsed", weight = 1 },
+
+  # Institutional (weight 1-2)
+  { text = "In the vault of a still-functioning institution", weight = 2 },
+  { text = "In the evidence room of an authority", weight = 1 },
+  { text = "In the archives of an organization", weight = 1 },
+  { text = "In a museum or collection, displayed or stored", weight = 1 },
+  { text = "In a religious institution's inner sanctum", weight = 1 },
+
+  # Private Property (weight 1-2)
+  { text = "In the home of someone wealthy and security-conscious", weight = 2 },
+  { text = "In a private collection, heavily guarded", weight = 1 },
+  { text = "On an estate with extensive grounds to cover", weight = 1 },
+  { text = "In a secure facility disguised as something mundane", weight = 1 },
+  { text = "Distributed across multiple properties owned by one entity", weight = 1 },
+
+  # Dangerous Locations (weight 1-2)
+  { text = "In territory controlled by hostile forces", weight = 2 },
+  { text = "In a location with environmental hazards", weight = 1 },
+  { text = "In ruins that are structurally unstable", weight = 1 },
+  { text = "In an area with wildlife that kills intruders", weight = 1 },
+  { text = "In a zone contaminated by war or disaster", weight = 1 },
+
+  # In Plain Sight (weight 1)
+  { text = "Disguised as something mundane in a public space", weight = 1 },
+  { text = "Hidden in the busiest place possible, overlooked", weight = 1 },
+  { text = "In a location everyone knows but no one checks", weight = 1 },
+  { text = "Protected by being obviously there but seemingly worthless", weight = 1 },
+]
+
+[treasure_containers]
+entries = [
+  # Standard Security (weight 2-3)
+  { text = "In a locked chest of sturdy construction", weight = 3 },
+  { text = "In a safe requiring combination or key", weight = 2 },
+  { text = "In a vault with a heavy door", weight = 2 },
+  { text = "In a strongbox bolted to the structure", weight = 2 },
+  { text = "In a lockbox with multiple mechanisms", weight = 2 },
+
+  # Concealed Containers (weight 1-2)
+  { text = "In a container disguised as furniture", weight = 2 },
+  { text = "In a compartment built into the structure", weight = 2 },
+  { text = "In a container that appears to be something else entirely", weight = 1 },
+  { text = "In multiple small containers distributed throughout", weight = 1 },
+  { text = "In a container that blends with its surroundings", weight = 1 },
+
+  # Ceremonial or Unusual (weight 1-2)
+  { text = "In a sarcophagus or burial container", weight = 2 },
+  { text = "In a reliquary or sacred vessel", weight = 1 },
+  { text = "In an urn or container meant for remains", weight = 1 },
+  { text = "In a container of unusual material", weight = 1 },
+  { text = "In a container of ancient or unknown origin", weight = 1 },
+
+  # Improvised (weight 1-2)
+  { text = "In containers repurposed from other uses", weight = 2 },
+  { text = "Buried in whatever was available at the time", weight = 1 },
+  { text = "Wrapped in materials rather than contained", weight = 1 },
+  { text = "Simply piled in a space without organization", weight = 1 },
+  { text = "Scattered throughout a larger container's contents", weight = 1 },
+
+  # Protected (weight 1)
+  { text = "In a container trapped to harm unauthorized openers", weight = 1 },
+  { text = "In a container rigged to destroy contents if forced", weight = 1 },
+  { text = "In a container that requires specific knowledge to open", weight = 1 },
+  { text = "In a container that can only be opened by certain people", weight = 1 },
+  { text = "In a container protected by more than physical locks", weight = 1 },
+]
+
+[treasure_origins]
+entries = [
+  # Personal Accumulation (weight 2-3)
+  { text = "Accumulated by someone now deceased, location known only to them", weight = 3 },
+  { text = "Saved by someone expecting to return, but they never did", weight = 2 },
+  { text = "Hidden by someone who died before revealing the location", weight = 2 },
+  { text = "Gathered by someone whose heirs don't know it exists", weight = 2 },
+
+  # Institutional (weight 1-2)
+  { text = "Hidden when an organization fled or dissolved", weight = 2 },
+  { text = "Lost when records were destroyed", weight = 1 },
+  { text = "Forgotten when leadership changed suddenly", weight = 1 },
+  { text = "Deliberately hidden from a successor regime", weight = 1 },
+  { text = "Left when everyone who knew died together", weight = 1 },
+
+  # Conflict (weight 1-2)
+  { text = "Buried before a battle that went poorly", weight = 2 },
+  { text = "Hidden during an occupation that outlasted the hiders", weight = 1 },
+  { text = "Plundered and cached, raider died before retrieval", weight = 1 },
+  { text = "Tribute never delivered due to intervening war", weight = 1 },
+  { text = "Ransom paid but captor died before spending it", weight = 1 },
+
+  # Disaster (weight 1-2)
+  { text = "Sealed in a building that collapsed, contents preserved", weight = 2 },
+  { text = "Sunk with a vessel, location recently discovered", weight = 1 },
+  { text = "Buried by natural disaster, only now exposed", weight = 1 },
+  { text = "Abandoned when evacuation became permanent", weight = 1 },
+  { text = "Protected by the disaster that hid it", weight = 1 },
+
+  # Criminal (weight 1-2)
+  { text = "Stolen and hidden, thief captured before retrieval", weight = 2 },
+  { text = "Hidden between crimes, criminal died", weight = 1 },
+  { text = "Proceeds from a famous heist, never spent", weight = 1 },
+  { text = "Smuggled goods never delivered to buyer", weight = 1 },
+  { text = "Bribe money hidden by corrupt official, caught before use", weight = 1 },
+
+  # Deliberate Concealment (weight 1-2)
+  { text = "Hidden to protect it from unworthy hands", weight = 2 },
+  { text = "Sealed away because it was too dangerous", weight = 1 },
+  { text = "Entombed with someone important as offering", weight = 1 },
+  { text = "Hidden awaiting conditions that never came", weight = 1 },
+  { text = "Concealed to prevent a prophecy, now fulfilled by finding it", weight = 1 },
+]
+
+[treasure_conditions]
+entries = [
+  # Excellent Condition (weight 1-2)
+  { text = "Pristine, as if placed here yesterday", weight = 2 },
+  { text = "Carefully preserved by its hiding place", weight = 2 },
+  { text = "Protected by the conditions of storage", weight = 1 },
+  { text = "Maintained by some mechanism still functioning", weight = 1 },
+
+  # Good Condition (weight 2-3)
+  { text = "Well-preserved, only minor wear", weight = 3 },
+  { text = "Aged but intact, quality materials endured", weight = 2 },
+  { text = "Some cosmetic damage but value unaffected", weight = 2 },
+  { text = "Requires cleaning but otherwise sound", weight = 2 },
+
+  # Degraded (weight 1-2)
+  { text = "Showing significant wear from time and conditions", weight = 2 },
+  { text = "Partially damaged by environmental factors", weight = 2 },
+  { text = "Some items intact, others ruined", weight = 1 },
+  { text = "Valuable materials have degraded or corroded", weight = 1 },
+  { text = "Organic components have decayed entirely", weight = 1 },
+
+  # Compromised (weight 1-2)
+  { text = "Previous visitors took the best items", weight = 2 },
+  { text = "Animals or vermin have damaged contents", weight = 1 },
+  { text = "Water damage has affected much of the treasure", weight = 1 },
+  { text = "Looters have been through but missed something", weight = 1 },
+  { text = "The protection that preserved it is failing", weight = 1 },
+
+  # Strange Conditions (weight 1)
+  { text = "Preserved by something unnatural", weight = 1 },
+  { text = "Time seems to have passed differently here", weight = 1 },
+  { text = "The treasure has changed in unexpected ways", weight = 1 },
+  { text = "Something about the treasure isn't right", weight = 1 },
+]

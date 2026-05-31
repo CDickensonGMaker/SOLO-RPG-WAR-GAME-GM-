@@ -1,0 +1,2504 @@
+# Anuirean Regents - Comprehensive NPC Database for Birthright Solo Oracle
+# Major and minor regents of the Anuirean region of Cerilia
+# For use with domain-level play, political intrigue, and adventure generation
+
+# =============================================================================
+# LANDED REGENTS - MAJOR POWERS
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# AVANIL - The Imperial Heartland
+# -----------------------------------------------------------------------------
+
+[[regents]]
+name = "Darien Avan"
+title = "Prince of Avanil"
+domain = "Avanil"
+domain_type = "landed"
+regent_type = "noble"
+bloodline_derivation = "anduiras"
+bloodline_strength = "great"
+blood_abilities = ["Divine Aura", "Battlewise", "Courage", "Detect Lie"]
+
+[regents.personality]
+traits = ["ambitious", "charismatic", "calculating", "patient", "proud"]
+goals = ["Claim the Iron Throne", "Unite Anuire under Avan banner", "Destroy Boeruine", "Restore the Empire's glory"]
+fears = ["Assassination by rivals", "His bloodline proving insufficient", "Being seen as illegitimate", "Boeruine succeeding first"]
+secrets = ["Has secretly negotiated with the Gorgon's agents", "Keeps a network of assassins he publicly denounces", "Doubts whether he truly wants the burden of empire"]
+values = ["Imperial legacy", "Bloodline purity", "Noble honor", "Strategic patience"]
+
+[regents.disposition]
+default = "neutral"
+to_player_factors = [
+    { condition = "Player is landed regent in Anuire", modifier = -1, reason = "Potential rival to the throne" },
+    { condition = "Player opposes Boeruine", modifier = 2, reason = "Enemy of my enemy" },
+    { condition = "Player has strong Anduiras bloodline", modifier = -1, reason = "Threat to claim" },
+    { condition = "Player supports Avan claim", modifier = 3, reason = "Loyal supporter" },
+    { condition = "Player is temple regent of Haelyn", modifier = 1, reason = "Potential legitimizer" },
+    { condition = "Player is guild regent", modifier = 0, reason = "Useful but common" },
+    { condition = "Player has no bloodline", modifier = 1, reason = "Cannot threaten claim" }
+]
+
+[regents.relationships]
+allies = ["Brosengae (vassal)", "Taeghas (allied)", "Western Imperial Temple"]
+rivals = ["Archduke Boeruine", "Baron Tael of Ghoere", "Diemed"]
+enemies = ["The Gorgon", "The Spider"]
+vassals = ["Brosengae"]
+liege = "none"
+
+[regents.military]
+army_strength = "very_strong"
+elite_units = ["Avan Imperial Guard", "Knights of the Celestial Blade", "Avanil Pikemen"]
+navy_strength = "moderate"
+doctrine = "elite"
+aggression = "patient"
+preferred_tactics = ["diplomatic isolation", "economic pressure", "surgical strikes", "coalition building"]
+
+[regents.resources]
+wealth = "very_high"
+regency_income = "very_high"
+trade_importance = "high"
+special_resources = ["Imperial Treasury remnants", "Ancient Anuirean artifacts", "Extensive spy network"]
+
+[regents.oracle_hooks]
+adventure_seeds = [
+    "Avan needs a diplomatic mission to a hostile court - discretion required",
+    "Avan's spy network has gone silent in enemy territory",
+    "A pretender claims to be Avan's legitimate heir from a secret marriage",
+    "Avan seeks an ancient artifact that could legitimize his claim",
+    "Someone is assassinating Avan's agents - find the killer",
+    "Avan wants to secretly negotiate with a surprising party",
+    "An old enemy of House Avan returns seeking revenge"
+]
+intrigue_questions = [
+    "Is Avan planning a move against a neighbor this season?",
+    "Does Avan know about the player's recent actions?",
+    "Will Avan honor a treaty if circumstances change?",
+    "Has Avan discovered a rival's weakness?",
+    "Is Avan's patience finally running out?",
+    "Does Avan have a spy in a particular court?"
+]
+domain_events = [
+    "Avan hosts a grand tournament to display might",
+    "Avan announces a new claim or grievance",
+    "Avan's court receives foreign dignitaries",
+    "Avan moves troops to the border - show of force or prelude to war?"
+]
+
+# -----------------------------------------------------------------------------
+# BOERUINE - The Archduchy
+# -----------------------------------------------------------------------------
+
+[[regents]]
+name = "Aeric Boeruine"
+title = "Archduke of Boeruine"
+domain = "Boeruine"
+domain_type = "landed"
+regent_type = "noble"
+bloodline_derivation = "anduiras"
+bloodline_strength = "great"
+blood_abilities = ["Battlewise", "Divine Aura", "Detect Lie", "Major Resistance"]
+
+[regents.personality]
+traits = ["martial", "honorable", "stubborn", "direct", "traditional"]
+goals = ["Claim the Iron Throne through strength", "Prove Boeruine worthiness through deeds", "Defend western Anuire", "Crush Avanil's pretensions"]
+fears = ["Being outmaneuvered by Avan's scheming", "His heirs proving weak", "The Rjurik overwhelming western defenses"]
+secrets = ["Secretly respects Avan's cunning", "Has visions he believes are from Haelyn", "Knows the location of a lost Roele artifact"]
+values = ["Military honor", "Strength through action", "Noble tradition", "Direct confrontation"]
+
+[regents.disposition]
+default = "neutral"
+to_player_factors = [
+    { condition = "Player demonstrates martial prowess", modifier = 2, reason = "Respects strength" },
+    { condition = "Player supports Avan claim", modifier = -3, reason = "Supporting the enemy" },
+    { condition = "Player opposes Avan", modifier = 2, reason = "Useful ally" },
+    { condition = "Player is landed regent in west", modifier = 1, reason = "Potential vassal or ally" },
+    { condition = "Player shows cowardice", modifier = -2, reason = "Contempt for weakness" },
+    { condition = "Player uses underhanded tactics", modifier = -1, reason = "Dishonorable methods" }
+]
+
+[regents.relationships]
+allies = ["Talinie (allied)", "Impregnable Heart of Haelyn"]
+rivals = ["Prince Avan", "Baron Tael of Ghoere"]
+enemies = ["The Gorgon", "Rjurik raiders"]
+vassals = []
+liege = "none"
+
+[regents.military]
+army_strength = "very_strong"
+elite_units = ["Boeruine Warders", "Knights of the Iron Will", "Archducal Heavy Cavalry"]
+navy_strength = "weak"
+doctrine = "shock"
+aggression = "aggressive"
+preferred_tactics = ["overwhelming force", "frontal assault", "siege warfare", "holding actions"]
+
+[regents.resources]
+wealth = "high"
+regency_income = "very_high"
+trade_importance = "moderate"
+special_resources = ["Iron mines", "War horses", "Ancient fortresses"]
+
+[regents.oracle_hooks]
+adventure_seeds = [
+    "Boeruine needs warriors for a dangerous expedition into the Gorgon's Crown",
+    "A border dispute with the Rjurik requires a diplomatic warrior",
+    "Boeruine's legendary ancestral sword has been stolen",
+    "Prove your worth in Boeruine's famous tournament",
+    "Boeruine suspects treachery among his vassal knights",
+    "Escort a vital supply convoy through dangerous territory"
+]
+intrigue_questions = [
+    "Is Boeruine massing troops for war?",
+    "Has Boeruine made a secret alliance?",
+    "Does Boeruine consider the player worthy of respect?",
+    "Will Boeruine intervene in a neighboring conflict?",
+    "Is Boeruine's heir ready to take power?"
+]
+domain_events = [
+    "Boeruine announces a grand campaign",
+    "Boeruine holds war councils with allied lords",
+    "Border skirmishes with Rjurik raiders intensify",
+    "Boeruine knights win glory in a distant battle"
+]
+
+# -----------------------------------------------------------------------------
+# GHOERE - The Iron State
+# -----------------------------------------------------------------------------
+
+[[regents]]
+name = "Gavin Tael"
+title = "Baron of Ghoere"
+domain = "Ghoere"
+domain_type = "landed"
+regent_type = "noble"
+bloodline_derivation = "anduiras"
+bloodline_strength = "major"
+blood_abilities = ["Battlewise", "Iron Will", "Courage"]
+
+[regents.personality]
+traits = ["ruthless", "brilliant", "cold", "ambitious", "methodical"]
+goals = ["Expand Ghoere at any cost", "Dominate eastern Anuire", "Acquire more bloodline power", "Eventually claim the Iron Throne"]
+fears = ["United opposition", "His bloodline's relative weakness", "Assassination", "His own generals turning on him"]
+secrets = ["Has made pacts with dark powers", "Murdered his own brother for the throne", "Seeks the blood of stronger scions"]
+values = ["Power above all", "Efficiency", "Results over methods", "Absolute control"]
+
+[regents.disposition]
+default = "hostile"
+to_player_factors = [
+    { condition = "Player is weak neighbor", modifier = -2, reason = "Easy conquest" },
+    { condition = "Player offers useful alliance", modifier = 1, reason = "Temporary usefulness" },
+    { condition = "Player has strong bloodline", modifier = -2, reason = "Covet their blood" },
+    { condition = "Player serves Ghoere's interests", modifier = 2, reason = "Useful tool" },
+    { condition = "Player opposes Ghoere expansion", modifier = -3, reason = "Obstacle to remove" },
+    { condition = "Player demonstrates ruthless competence", modifier = 1, reason = "Potential asset" }
+]
+
+[regents.relationships]
+allies = ["Siele Ghoried (guild arm)", "Impregnable Heart of Haelyn (local)"]
+rivals = ["Mhoried", "Elinie", "Roesone"]
+enemies = ["Everyone eventually"]
+vassals = []
+liege = "none"
+
+[regents.military]
+army_strength = "very_strong"
+elite_units = ["Iron Guard", "Ghorien Kriegsmaschine", "Tael's Chosen"]
+navy_strength = "none"
+doctrine = "combined_arms"
+aggression = "very_aggressive"
+preferred_tactics = ["blitzkrieg conquest", "scorched earth", "terror tactics", "mercenary auxiliaries"]
+
+[regents.resources]
+wealth = "high"
+regency_income = "high"
+trade_importance = "moderate"
+special_resources = ["Iron production", "Extensive fortifications", "Veteran soldiers"]
+
+[regents.oracle_hooks]
+adventure_seeds = [
+    "Ghoere is hiring mercenaries - work for the devil you know?",
+    "Someone inside Ghoere wants to defect - extract them",
+    "Ghoere has kidnapped someone important - rescue mission",
+    "Infiltrate Ghoere to learn their invasion plans",
+    "Tael seeks an artifact of power - race to find it first",
+    "A Ghoere atrocity must be documented for political leverage"
+]
+intrigue_questions = [
+    "What is Ghoere's next target for expansion?",
+    "Has Tael discovered a way to steal bloodline power?",
+    "Is there any way to make peace with Ghoere?",
+    "Who in Tael's inner circle might be turned?",
+    "What dark powers has Tael bargained with?"
+]
+domain_events = [
+    "Ghoere annexes another province",
+    "Ghoere's armies mass on the border",
+    "Tael executes 'traitors' publicly",
+    "Ghoere offers surprisingly generous terms - what's the catch?"
+]
+
+# -----------------------------------------------------------------------------
+# MHORIED - Defender of the Realm
+# -----------------------------------------------------------------------------
+
+[[regents]]
+name = "Daeric Mhoried"
+title = "Mhor of Mhoried"
+domain = "Mhoried"
+domain_type = "landed"
+regent_type = "noble"
+bloodline_derivation = "anduiras"
+bloodline_strength = "great"
+blood_abilities = ["Divine Aura", "Heightened Ability", "Courage", "Detect Lie"]
+
+[regents.personality]
+traits = ["dutiful", "weary", "honorable", "stubborn", "selfless"]
+goals = ["Hold the line against the Gorgon", "Protect his people", "Find worthy allies", "Preserve Mhoried's independence"]
+fears = ["The Gorgon breaking through", "Abandonment by other Anuireans", "His bloodline ending", "Ghoere striking while he fights the Gorgon"]
+secrets = ["Knows the Gorgon is probing for weakness", "Has been approached by the Gorgon's agents", "His health is failing"]
+values = ["Duty", "Sacrifice", "Honor", "Protection of the innocent"]
+
+[regents.disposition]
+default = "friendly"
+to_player_factors = [
+    { condition = "Player fights against the Gorgon", modifier = 3, reason = "Allies in the true war" },
+    { condition = "Player aids Mhoried's defense", modifier = 2, reason = "Desperately needed help" },
+    { condition = "Player ignores Shadow World threat", modifier = -1, reason = "Blind to true danger" },
+    { condition = "Player serves Ghoere", modifier = -3, reason = "Servant of vultures" },
+    { condition = "Player has no interest in eastern affairs", modifier = 0, reason = "Understandable detachment" }
+]
+
+[regents.relationships]
+allies = ["Elinie", "Eastern Temple of Nesirie", "Cariele (tentative)"]
+rivals = ["Ghoere"]
+enemies = ["The Gorgon", "Markazor"]
+vassals = []
+liege = "none"
+
+[regents.military]
+army_strength = "strong"
+elite_units = ["Mhoried Rangers", "Knights of the Vigilant", "Border Wardens"]
+navy_strength = "none"
+doctrine = "defensive"
+aggression = "defensive"
+preferred_tactics = ["guerrilla warfare", "fortified defense", "scorched earth retreat", "ranger harassment"]
+
+[regents.resources]
+wealth = "moderate"
+regency_income = "moderate"
+trade_importance = "low"
+special_resources = ["Veteran soldiers", "Fortified passes", "Knowledge of the Gorgon"]
+
+[regents.oracle_hooks]
+adventure_seeds = [
+    "The Gorgon's forces probe a weak point - help defend",
+    "Scout the Gorgon's Crown for intelligence",
+    "Rescue Mhoried soldiers captured by the Gorgon",
+    "An ancient weapon against awnshegh is rumored in Mhoried",
+    "Negotiate aid from reluctant Anuirean powers",
+    "Hunt monsters spawned by the Gorgon's corruption"
+]
+intrigue_questions = [
+    "Is the Gorgon planning a major offensive?",
+    "Can Mhoried hold without more support?",
+    "Has the Gorgon corrupted anyone in Mhoried?",
+    "Will Ghoere attack while Mhoried is distracted?",
+    "Does the Mhor have a succession plan?"
+]
+domain_events = [
+    "Border skirmish with Gorgon's forces",
+    "Mhoried calls for aid against the Shadow",
+    "Refugees flee from the eastern provinces",
+    "A hero rises from the Mhoried defenders"
+]
+
+# -----------------------------------------------------------------------------
+# ROESONE - The Young Duchy
+# -----------------------------------------------------------------------------
+
+[[regents]]
+name = "Marlae Roesone"
+title = "Duchess of Roesone"
+domain = "Roesone"
+domain_type = "landed"
+regent_type = "noble"
+bloodline_derivation = "anduiras"
+bloodline_strength = "major"
+blood_abilities = ["Divine Aura", "Courage", "Detect Lie"]
+
+[regents.personality]
+traits = ["young", "determined", "resourceful", "proud", "inexperienced"]
+goals = ["Prove herself worthy of her title", "Defend Roesone from all threats", "Find trustworthy allies", "Avenge her father's murder"]
+fears = ["Being seen as weak", "Ghoere's expansion", "Betrayal by advisors", "Diemed's claims"]
+secrets = ["Knows who ordered her father's death", "Has a secret romance", "Doubts her own abilities more than she shows"]
+values = ["Justice", "Independence", "Proving worth through deeds", "Loyalty to those who earn it"]
+
+[regents.disposition]
+default = "cautious"
+to_player_factors = [
+    { condition = "Player helps defend Roesone", modifier = 3, reason = "Desperately needed ally" },
+    { condition = "Player is older male noble", modifier = -1, reason = "Wary of condescension" },
+    { condition = "Player treats her as equal", modifier = 2, reason = "Respect earned" },
+    { condition = "Player serves Diemed or Ghoere", modifier = -3, reason = "Obvious enemy" },
+    { condition = "Player offers genuine friendship", modifier = 2, reason = "Rare and valued" }
+]
+
+[regents.relationships]
+allies = ["Medoere (tentative)", "Ilien (economic)"]
+rivals = ["Diemed", "Ghoere"]
+enemies = ["Those who killed her father"]
+vassals = []
+liege = "none"
+
+[regents.military]
+army_strength = "moderate"
+elite_units = ["Roesone Whiteguard", "Duchess's Own"]
+navy_strength = "weak"
+doctrine = "balanced"
+aggression = "defensive"
+preferred_tactics = ["fortress defense", "diplomatic maneuvering", "guerrilla if invaded"]
+
+[regents.resources]
+wealth = "moderate"
+regency_income = "moderate"
+trade_importance = "moderate"
+special_resources = ["Strategic location", "Loyal populace", "Natural defenses"]
+
+[regents.oracle_hooks]
+adventure_seeds = [
+    "Investigate the conspiracy that killed Duke Roesone",
+    "Serve as champion in a matter of honor",
+    "Negotiate a crucial alliance for Roesone",
+    "Deal with a threat the Duchess cannot openly acknowledge",
+    "Train Roesone's troops for the coming storm",
+    "Find evidence of enemy plotting against Roesone"
+]
+intrigue_questions = [
+    "Will Diemed make a move against Roesone?",
+    "Is Marlae ready for the challenges she faces?",
+    "Who can the Duchess truly trust?",
+    "What happened to Duke Roesone really?",
+    "Is Ghoere eyeing Roesone as a target?"
+]
+domain_events = [
+    "The Duchess comes of age ceremony",
+    "Roesone seeks marriage alliance",
+    "Border tensions with Diemed escalate",
+    "The Duchess proves herself in crisis"
+]
+
+# -----------------------------------------------------------------------------
+# DIEMED - Ancient Pride
+# -----------------------------------------------------------------------------
+
+[[regents]]
+name = "Heirl Diem"
+title = "Duke of Diemed"
+domain = "Diemed"
+domain_type = "landed"
+regent_type = "noble"
+bloodline_derivation = "anduiras"
+bloodline_strength = "major"
+blood_abilities = ["Divine Aura", "Detect Lie", "Heightened Ability"]
+
+[regents.personality]
+traits = ["proud", "traditional", "bitter", "schemer", "obsessed with past glory"]
+goals = ["Restore Diemed's ancient territories", "Reclaim Medoere and Roesone", "Prove Diemed's blood superior", "Humiliate upstart neighbors"]
+fears = ["Diemed fading into irrelevance", "His bloodline weakening", "Other houses surpassing his"]
+secrets = ["Has forged documents supporting his claims", "Secretly envies younger regents", "Family madness runs in his line"]
+values = ["Ancient rights", "Blood purity", "Noble tradition", "Family honor"]
+
+[regents.disposition]
+default = "unfriendly"
+to_player_factors = [
+    { condition = "Player supports Diemed's claims", modifier = 3, reason = "Recognizes rightful order" },
+    { condition = "Player is noble of ancient house", modifier = 1, reason = "Proper breeding" },
+    { condition = "Player allied with Roesone or Medoere", modifier = -3, reason = "Supporting usurpers" },
+    { condition = "Player is commoner-born regent", modifier = -2, reason = "Jumped-up peasant" },
+    { condition = "Player has stronger bloodline", modifier = -1, reason = "Jealousy masked as disdain" }
+]
+
+[regents.relationships]
+allies = ["Western Imperial Temple (local)", "Ghoere (opportunistic)"]
+rivals = ["Roesone", "Medoere", "Ilien"]
+enemies = ["Those who 'stole' his rightful lands"]
+vassals = []
+liege = "none"
+
+[regents.military]
+army_strength = "moderate"
+elite_units = ["Diemed Lancers", "Ducal Guard"]
+navy_strength = "weak"
+doctrine = "traditional"
+aggression = "opportunistic"
+preferred_tactics = ["formal warfare", "siege", "raiding border provinces"]
+
+[regents.resources]
+wealth = "moderate"
+regency_income = "moderate"
+trade_importance = "low"
+special_resources = ["Ancient fortresses", "Historical claims", "Noble connections"]
+
+[regents.oracle_hooks]
+adventure_seeds = [
+    "Find proof of Diemed's ancient claims",
+    "Prevent a war between Diemed and its neighbors",
+    "Deal with a Diemed border raid diplomatically",
+    "Uncover Diemed's plot against Roesone",
+    "Navigate Diemed court politics",
+    "Retrieve an heirloom stolen from Diemed"
+]
+intrigue_questions = [
+    "Is Diemed planning to attack Roesone?",
+    "Has Diemed allied with Ghoere?",
+    "How far will Heirl go to restore his lands?",
+    "Is there a moderate faction in Diemed?",
+    "What ancient claim will Diemed press next?"
+]
+domain_events = [
+    "Diemed announces ancient grievance",
+    "Border clash with Roesone or Medoere",
+    "Diemed hosts traditional tournament",
+    "Diemed seeks allies for 'restoration'"
+]
+
+# -----------------------------------------------------------------------------
+# MEDOERE - The Theocracy
+# -----------------------------------------------------------------------------
+
+[[regents]]
+name = "Suris Enlien"
+title = "Archpriest of Ruornil"
+domain = "Medoere"
+domain_type = "landed"
+regent_type = "temple"
+bloodline_derivation = "vorynn"
+bloodline_strength = "major"
+blood_abilities = ["Touch of Decay", "Divine Aura", "Mebhaighl Sense"]
+
+[regents.personality]
+traits = ["mystical", "secretive", "wise", "patient", "otherworldly"]
+goals = ["Protect Medoere's independence", "Spread Ruornil's mysteries", "Guard against magical threats", "Preserve arcane knowledge"]
+fears = ["Diemed reconquest", "Destruction of magical sites", "Corruption of the land's mebhaighl"]
+secrets = ["Communes with spirits regularly", "Knows locations of hidden artifacts", "Has foreseen dark times coming"]
+values = ["Magical mysteries", "Knowledge", "Independence", "Spiritual connection to the land"]
+
+[regents.disposition]
+default = "neutral"
+to_player_factors = [
+    { condition = "Player is wizard or has Vorynn blood", modifier = 2, reason = "Kindred of the Silver Prince" },
+    { condition = "Player serves Diemed", modifier = -3, reason = "Agent of oppression" },
+    { condition = "Player protects magical sites", modifier = 2, reason = "Guardian of mysteries" },
+    { condition = "Player destroys sources", modifier = -3, reason = "Destroyer of sacred power" },
+    { condition = "Player seeks mystical knowledge", modifier = 1, reason = "Seeker of truth" }
+]
+
+[regents.relationships]
+allies = ["Roesone (mutual defense)", "Ilien (economic)"]
+rivals = ["Diemed", "Western Imperial Temple"]
+enemies = ["The Spider", "Those who corrupt magic"]
+vassals = []
+liege = "none"
+
+[regents.military]
+army_strength = "weak"
+elite_units = ["Temple Guard of Ruornil", "Moon Mages"]
+navy_strength = "none"
+doctrine = "magical_support"
+aggression = "passive"
+preferred_tactics = ["magical warfare", "defensive fortification", "guerrilla resistance"]
+
+[regents.resources]
+wealth = "low"
+regency_income = "moderate"
+trade_importance = "low"
+special_resources = ["Magical sources", "Mystical knowledge", "Divine connection"]
+
+[regents.oracle_hooks]
+adventure_seeds = [
+    "Investigate magical disturbances in Medoere",
+    "Recover a stolen artifact of Ruornil",
+    "Negotiate protection for Medoere",
+    "Study an ancient magical site",
+    "Counter the Spider's magical corruption",
+    "Attend a mystical ceremony for enlightenment"
+]
+intrigue_questions = [
+    "What has Suris foreseen?",
+    "Is Medoere's magic strong enough to resist invasion?",
+    "What secrets does the temple guard?",
+    "Will Medoere ally with Roesone formally?",
+    "What mystical threat is stirring?"
+]
+domain_events = [
+    "Magical phenomenon occurs in Medoere",
+    "Pilgrims arrive for sacred ceremony",
+    "The temple makes a cryptic pronouncement",
+    "Diemed rattles sabers at the border"
+]
+
+# -----------------------------------------------------------------------------
+# ENDIER - The Free City
+# -----------------------------------------------------------------------------
+
+[[regents]]
+name = "Guilder Kalien"
+title = "Guilder of Endier"
+domain = "Endier"
+domain_type = "landed"
+regent_type = "guild"
+bloodline_derivation = "brenna"
+bloodline_strength = "major"
+blood_abilities = ["Detect Lie", "Heightened Ability (Intelligence)", "Persuasion"]
+
+[regents.personality]
+traits = ["pragmatic", "neutral", "wealthy", "clever", "diplomatic"]
+goals = ["Maintain Endier's independence", "Profit from all sides", "Keep the great powers balanced", "Expand trade influence"]
+fears = ["Any power becoming too dominant", "Direct military conflict", "Trade disruption", "Being forced to choose sides"]
+secrets = ["Knows everyone's financial secrets", "Has escape routes planned", "Plays all sides more than anyone knows"]
+values = ["Profit", "Neutrality", "Information as currency", "Survival through indispensability"]
+
+[regents.disposition]
+default = "friendly"
+to_player_factors = [
+    { condition = "Player offers profitable arrangement", modifier = 2, reason = "Business is business" },
+    { condition = "Player threatens trade", modifier = -3, reason = "Threat to livelihood" },
+    { condition = "Player maintains neutrality", modifier = 1, reason = "Kindred spirit" },
+    { condition = "Player demands Endier take sides", modifier = -2, reason = "Dangerous demand" },
+    { condition = "Player needs financing", modifier = 1, reason = "Opportunity for profit" }
+]
+
+[regents.relationships]
+allies = ["Everyone commercially", "No one politically"]
+rivals = ["Competing guilds"]
+enemies = ["Those who threaten free trade"]
+vassals = []
+liege = "none"
+
+[regents.military]
+army_strength = "weak"
+elite_units = ["Endier City Watch", "Mercenary retainers"]
+navy_strength = "none"
+doctrine = "mercenary"
+aggression = "passive"
+preferred_tactics = ["hire mercenaries", "bribe enemies", "play powers against each other"]
+
+[regents.resources]
+wealth = "very_high"
+regency_income = "moderate"
+trade_importance = "very_high"
+special_resources = ["Trade crossroads", "Banking services", "Information network", "Mercenary contacts"]
+
+[regents.oracle_hooks]
+adventure_seeds = [
+    "Kalien needs discreet agents for a sensitive matter",
+    "Protect a vital trade caravan",
+    "Investigate threats to Endier's neutrality",
+    "Negotiate a trade dispute with distant powers",
+    "Uncover who is disrupting Endier's commerce",
+    "Kalien offers financing for a risky venture - what's the catch?"
+]
+intrigue_questions = [
+    "What intelligence has Kalien gathered?",
+    "Is Endier's neutrality sustainable?",
+    "What price would make Kalien choose sides?",
+    "Who owes Kalien dangerous debts?",
+    "What trade secrets does Kalien hold?"
+]
+domain_events = [
+    "Major trade fair in Endier",
+    "Diplomatic summit hosted in neutral Endier",
+    "Trade disruption affects all parties",
+    "Kalien mediates between great powers"
+]
+
+# -----------------------------------------------------------------------------
+# ILIEN - The Free City
+# -----------------------------------------------------------------------------
+
+[[regents]]
+name = "Rogr Aglondier"
+title = "Count of Ilien"
+domain = "Ilien"
+domain_type = "landed"
+regent_type = "noble"
+bloodline_derivation = "anduiras"
+bloodline_strength = "minor"
+blood_abilities = ["Divine Aura"]
+
+[regents.personality]
+traits = ["cautious", "mercantile", "diplomatic", "nervous", "shrewd"]
+goals = ["Preserve Ilien's independence", "Profit from sea trade", "Avoid entanglement in great power conflicts", "Strengthen defenses"]
+fears = ["Diemed absorption", "Ghoere expansion", "Naval blockade", "Being dragged into war"]
+secrets = ["Has contingency deals with multiple powers", "Maintains secret contacts with pirates", "Knows Diemed's weakness"]
+values = ["Trade", "Independence", "Pragmatic diplomacy", "Survival"]
+
+[regents.disposition]
+default = "neutral"
+to_player_factors = [
+    { condition = "Player protects trade routes", modifier = 2, reason = "Vital interest served" },
+    { condition = "Player has naval power", modifier = 1, reason = "Useful ally" },
+    { condition = "Player serves Diemed", modifier = -2, reason = "Traditional threat" },
+    { condition = "Player offers trade agreements", modifier = 2, reason = "Business opportunity" }
+]
+
+[regents.relationships]
+allies = ["Roesone (trade)", "Medoere (mutual interest)", "Endier (commercial)"]
+rivals = ["Diemed"]
+enemies = ["Pirates (officially)"]
+vassals = []
+liege = "none"
+
+[regents.military]
+army_strength = "weak"
+elite_units = ["Ilien Marines", "City Guard"]
+navy_strength = "moderate"
+doctrine = "defensive"
+aggression = "passive"
+preferred_tactics = ["naval defense", "mercenary hiring", "diplomatic avoidance"]
+
+[regents.resources]
+wealth = "high"
+regency_income = "moderate"
+trade_importance = "high"
+special_resources = ["Port facilities", "Naval tradition", "Trade connections"]
+
+[regents.oracle_hooks]
+adventure_seeds = [
+    "Deal with pirates threatening Ilien shipping",
+    "Negotiate naval cooperation agreements",
+    "Investigate smuggling through Ilien",
+    "Protect Ilien from Diemed pressure",
+    "Establish new trade routes for Ilien"
+]
+intrigue_questions = [
+    "Will Ilien's neutrality hold?",
+    "Is Diemed planning to absorb Ilien?",
+    "What secrets pass through Ilien's port?",
+    "Does Ilien have hidden military strength?"
+]
+domain_events = [
+    "Trade fleet arrives from distant lands",
+    "Pirate activity increases",
+    "Diplomatic pressure from Diemed",
+    "New trade agreement announced"
+]
+
+# -----------------------------------------------------------------------------
+# TALINIE - The Northern Realm
+# -----------------------------------------------------------------------------
+
+[[regents]]
+name = "Thuriene Donalls"
+title = "Thane of Talinie"
+domain = "Talinie"
+domain_type = "landed"
+regent_type = "noble"
+bloodline_derivation = "anduiras"
+bloodline_strength = "major"
+blood_abilities = ["Divine Aura", "Heightened Ability (Wisdom)", "Courage"]
+
+[regents.personality]
+traits = ["pious", "traditional", "stern", "honorable", "conservative"]
+goals = ["Defend Talinie from northern threats", "Maintain Haelynite orthodoxy", "Support Boeruine's claim", "Preserve ancient traditions"]
+fears = ["Rjurik invasion", "Religious corruption", "Southern entanglements", "Change"]
+secrets = ["Has doubts about Boeruine's fitness", "Knows of ancient Rjurik treaties", "Guards a holy relic"]
+values = ["Faith", "Tradition", "Military readiness", "Northern solidarity"]
+
+[regents.disposition]
+default = "neutral"
+to_player_factors = [
+    { condition = "Player is devout Haelynite", modifier = 2, reason = "Faithful soul" },
+    { condition = "Player opposes Boeruine", modifier = -2, reason = "Opposing rightful claimant" },
+    { condition = "Player helps defend against Rjurik", modifier = 2, reason = "Ally against northern threat" },
+    { condition = "Player follows foreign religion", modifier = -1, reason = "Suspicious faith" }
+]
+
+[regents.relationships]
+allies = ["Boeruine", "Impregnable Heart of Haelyn"]
+rivals = ["Rjurik raiders"]
+enemies = ["Rjurik kingdom (formally at peace)"]
+vassals = []
+liege = "none"
+
+[regents.military]
+army_strength = "moderate"
+elite_units = ["Talinie Wardens", "Temple Knights"]
+navy_strength = "weak"
+doctrine = "defensive"
+aggression = "defensive"
+preferred_tactics = ["fortified defense", "winter warfare", "guerrilla tactics"]
+
+[regents.resources]
+wealth = "moderate"
+regency_income = "moderate"
+trade_importance = "low"
+special_resources = ["Timber", "Furs", "Cold-weather troops"]
+
+[regents.oracle_hooks]
+adventure_seeds = [
+    "Investigate Rjurik raider activity",
+    "Negotiate with Rjurik jarls",
+    "Recover holy relic from the north",
+    "Defend against winter invasion",
+    "Mediate between Talinie and Rjurik"
+]
+intrigue_questions = [
+    "Are the Rjurik planning a major raid?",
+    "Will Talinie remain loyal to Boeruine?",
+    "What holy site does Talinie protect?",
+    "Is there hope for lasting peace with the Rjurik?"
+]
+domain_events = [
+    "Rjurik raid on northern provinces",
+    "Holy day celebrations",
+    "Talinie musters troops for defense",
+    "Trade negotiations with Rjurik"
+]
+
+# -----------------------------------------------------------------------------
+# ALAMIE - The Contested March
+# -----------------------------------------------------------------------------
+
+[[regents]]
+name = "Caelan Alam"
+title = "Duke of Alamie"
+domain = "Alamie"
+domain_type = "landed"
+regent_type = "noble"
+bloodline_derivation = "anduiras"
+bloodline_strength = "minor"
+blood_abilities = ["Courage"]
+
+[regents.personality]
+traits = ["besieged", "determined", "frustrated", "hopeful", "stubborn"]
+goals = ["Survive between powerful neighbors", "Reclaim lost territories from Tuornen", "Find powerful allies", "Restore Alamie to former glory"]
+fears = ["Being absorbed by Boeruine or Tuornen", "Complete isolation", "His line ending"]
+secrets = ["Has considered vassalage to survive", "Knows the Sword Mage's true motives", "Desperate enough to consider dark allies"]
+values = ["Independence", "Survival", "Family honor", "Never surrendering"]
+
+[regents.disposition]
+default = "friendly"
+to_player_factors = [
+    { condition = "Player offers alliance or aid", modifier = 3, reason = "Desperately needed" },
+    { condition = "Player serves Tuornen", modifier = -3, reason = "Enemy's agent" },
+    { condition = "Player serves Boeruine", modifier = -1, reason = "Potential overlord" },
+    { condition = "Player is independent", modifier = 1, reason = "Possible ally" }
+]
+
+[regents.relationships]
+allies = ["The Sword Mage (uneasy)", "Anyone who'll help"]
+rivals = ["Tuornen"]
+enemies = ["Tuornen (active conflict)"]
+vassals = []
+liege = "none"
+
+[regents.military]
+army_strength = "weak"
+elite_units = ["Alamie Guard"]
+navy_strength = "none"
+doctrine = "desperate"
+aggression = "defensive"
+preferred_tactics = ["fortress defense", "guerrilla warfare", "magical support"]
+
+[regents.resources]
+wealth = "low"
+regency_income = "low"
+trade_importance = "low"
+special_resources = ["The Sword Mage's support", "Determination"]
+
+[regents.oracle_hooks]
+adventure_seeds = [
+    "Help defend Alamie from Tuornen aggression",
+    "Negotiate peace between Alamie and Tuornen",
+    "Retrieve lost Alamie territories through cunning",
+    "Investigate the Sword Mage's true agenda",
+    "Find new allies for desperate Alamie"
+]
+intrigue_questions = [
+    "Will Alamie survive as independent?",
+    "What does the Sword Mage really want?",
+    "Can peace be made with Tuornen?",
+    "Will Boeruine absorb Alamie?"
+]
+domain_events = [
+    "Tuornen makes demands",
+    "Alamie seeks new allies",
+    "Border skirmish with Tuornen",
+    "The Sword Mage intervenes"
+]
+
+# -----------------------------------------------------------------------------
+# TUORNEN - The Rival March
+# -----------------------------------------------------------------------------
+
+[[regents]]
+name = "Laera Tuor"
+title = "Duchess of Tuornen"
+domain = "Tuornen"
+domain_type = "landed"
+regent_type = "noble"
+bloodline_derivation = "anduiras"
+bloodline_strength = "major"
+blood_abilities = ["Divine Aura", "Detect Lie", "Courage"]
+
+[regents.personality]
+traits = ["ambitious", "competent", "aggressive", "confident", "proud"]
+goals = ["Complete the conquest of Alamie", "Prove Tuornen's dominance", "Gain recognition as major power", "Secure her dynasty"]
+fears = ["Boeruine intervention", "Coalition against her", "Alamie's magical defenses", "Being seen as mere aggressor"]
+secrets = ["Has made overtures to Boeruine", "Plans extend beyond Alamie", "Respects Alamie's resistance"]
+values = ["Strength", "Decisive action", "Glory", "Territorial expansion"]
+
+[regents.disposition]
+default = "neutral"
+to_player_factors = [
+    { condition = "Player supports Tuornen expansion", modifier = 2, reason = "Useful ally" },
+    { condition = "Player aids Alamie", modifier = -3, reason = "Interfering enemy" },
+    { condition = "Player offers vassalage", modifier = 3, reason = "Expanding power" },
+    { condition = "Player is powerful neutral", modifier = 1, reason = "Worth cultivating" }
+]
+
+[regents.relationships]
+allies = ["Boeruine (tentative understanding)"]
+rivals = ["Alamie"]
+enemies = ["Alamie (active conflict)"]
+vassals = []
+liege = "none"
+
+[regents.military]
+army_strength = "moderate"
+elite_units = ["Tuornen Regulars", "Duchess's Champions"]
+navy_strength = "none"
+doctrine = "aggressive"
+aggression = "aggressive"
+preferred_tactics = ["offensive warfare", "siege", "combined arms"]
+
+[regents.resources]
+wealth = "moderate"
+regency_income = "moderate"
+trade_importance = "low"
+special_resources = ["Growing military", "Territorial ambition"]
+
+[regents.oracle_hooks]
+adventure_seeds = [
+    "Scout Alamie's defenses for Tuornen",
+    "Negotiate between Tuornen and other powers",
+    "Prevent the Alamie-Tuornen war from escalating",
+    "Serve as mercenary for Tuornen's campaigns",
+    "Investigate what Tuornen plans after Alamie"
+]
+intrigue_questions = [
+    "When will Tuornen strike next?",
+    "Will Boeruine support Tuornen's expansion?",
+    "What are Tuornen's limits?",
+    "Is there any stopping Laera's ambition?"
+]
+domain_events = [
+    "Tuornen launches offensive",
+    "Tuornen demands Alamie surrender",
+    "Diplomatic mission to great powers",
+    "Victory celebration in Tuornen"
+]
+
+# -----------------------------------------------------------------------------
+# CARIELE - The Northern Shield
+# -----------------------------------------------------------------------------
+
+[[regents]]
+name = "Mheallie Bireon"
+title = "Countess of Cariele"
+domain = "Cariele"
+domain_type = "landed"
+regent_type = "noble"
+bloodline_derivation = "anduiras"
+bloodline_strength = "minor"
+blood_abilities = ["Detect Lie"]
+
+[regents.personality]
+traits = ["shrewd", "independent", "practical", "cautious", "capable"]
+goals = ["Maintain Cariele's independence", "Profit from northern trade", "Avoid great power conflicts", "Build wealth and defenses"]
+fears = ["Absorption by larger powers", "Rjurik aggression", "Being forced to choose sides"]
+secrets = ["Trades with Rjurik more than admitted", "Has escape plans prepared", "Knows valuable trade secrets"]
+values = ["Independence", "Practical prosperity", "Neutrality", "Self-reliance"]
+
+[regents.disposition]
+default = "neutral"
+to_player_factors = [
+    { condition = "Player offers trade opportunities", modifier = 2, reason = "Profitable contact" },
+    { condition = "Player threatens Cariele", modifier = -3, reason = "Direct threat" },
+    { condition = "Player respects independence", modifier = 1, reason = "Kindred spirit" },
+    { condition = "Player demands allegiance", modifier = -2, reason = "Overreaching" }
+]
+
+[regents.relationships]
+allies = ["Northern trading partners"]
+rivals = ["Thurazor goblins"]
+enemies = ["Thurazor"]
+vassals = []
+liege = "none"
+
+[regents.military]
+army_strength = "moderate"
+elite_units = ["Cariele Rangers", "Border Guard"]
+navy_strength = "none"
+doctrine = "defensive"
+aggression = "defensive"
+preferred_tactics = ["guerrilla warfare", "fortified towns", "scorched earth"]
+
+[regents.resources]
+wealth = "moderate"
+regency_income = "moderate"
+trade_importance = "moderate"
+special_resources = ["Northern trade routes", "Mining", "Timber"]
+
+[regents.oracle_hooks]
+adventure_seeds = [
+    "Protect Cariele trade caravans",
+    "Investigate Thurazor goblin activity",
+    "Negotiate trade agreements with Rjurik",
+    "Scout the Five Peaks for threats",
+    "Help fortify against goblin raids"
+]
+intrigue_questions = [
+    "What are the Thurazor goblins planning?",
+    "Will Cariele ally with anyone?",
+    "What trade secrets does Mheallie know?",
+    "Can Cariele defend against a major attack?"
+]
+domain_events = [
+    "Goblin raid from Thurazor",
+    "Trade caravan arrives from north",
+    "Cariele closes borders",
+    "New mine discovered"
+]
+
+# -----------------------------------------------------------------------------
+# ELINIE - The Faithful State
+# -----------------------------------------------------------------------------
+
+[[regents]]
+name = "Selena Liene"
+title = "Countess of Elinie"
+domain = "Elinie"
+domain_type = "landed"
+regent_type = "noble"
+bloodline_derivation = "anduiras"
+bloodline_strength = "minor"
+blood_abilities = ["Divine Aura", "Courage"]
+
+[regents.personality]
+traits = ["pious", "determined", "practical", "weary", "faithful"]
+goals = ["Defend Elinie from Ghoere", "Maintain faith despite hardship", "Support Mhoried against the Gorgon", "Survive"]
+fears = ["Ghoere conquest", "Faith failing", "Being abandoned by allies"]
+secrets = ["Has considered submitting to Ghoere", "Knows Ghoere's weakness", "Faith stronger than it appears"]
+values = ["Faith", "Duty", "Survival", "Alliance with the righteous"]
+
+[regents.disposition]
+default = "friendly"
+to_player_factors = [
+    { condition = "Player opposes Ghoere", modifier = 3, reason = "Ally against oppressor" },
+    { condition = "Player serves Ghoere", modifier = -3, reason = "Servant of enemy" },
+    { condition = "Player aids defense", modifier = 2, reason = "Desperately needed" },
+    { condition = "Player is faithful Haelynite", modifier = 1, reason = "Fellow believer" }
+]
+
+[regents.relationships]
+allies = ["Mhoried", "Eastern Temple of Nesirie"]
+rivals = ["Ghoere"]
+enemies = ["Ghoere"]
+vassals = []
+liege = "none"
+
+[regents.military]
+army_strength = "weak"
+elite_units = ["Elinie Faithful", "Temple Militia"]
+navy_strength = "none"
+doctrine = "defensive"
+aggression = "defensive"
+preferred_tactics = ["desperate defense", "guerrilla warfare", "divine intervention"]
+
+[regents.resources]
+wealth = "low"
+regency_income = "low"
+trade_importance = "low"
+special_resources = ["Faithful populace", "Strategic passes"]
+
+[regents.oracle_hooks]
+adventure_seeds = [
+    "Help defend Elinie from Ghoere",
+    "Sabotage Ghoere's invasion plans",
+    "Secure alliance for Elinie",
+    "Recover holy artifact to inspire defense",
+    "Evacuate civilians from Ghoere's path"
+]
+intrigue_questions = [
+    "When will Ghoere attack Elinie?",
+    "Can Elinie hold?",
+    "Will anyone come to Elinie's aid?",
+    "What would make Selena surrender?"
+]
+domain_events = [
+    "Ghoere threatens invasion",
+    "Elinie calls for aid",
+    "Refugee crisis from border provinces",
+    "Miracle reported in Elinie"
+]
+
+# =============================================================================
+# TEMPLE REGENTS
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# HAELYN'S AEGIS - Orthodox Church
+# -----------------------------------------------------------------------------
+
+[[regents]]
+name = "Rhobher Nichaleir"
+title = "Patriarch of Haelyn's Aegis"
+domain = "Haelyn's Aegis"
+domain_type = "temple"
+regent_type = "temple"
+bloodline_derivation = "anduiras"
+bloodline_strength = "major"
+blood_abilities = ["Divine Aura", "Detect Lie", "Courage"]
+
+[regents.personality]
+traits = ["orthodox", "political", "ambitious", "sophisticated", "calculating"]
+goals = ["Spread orthodox Haelynite faith", "Become the dominant church", "Crown the next emperor", "Accumulate temporal power"]
+fears = ["Schism in the church", "Rival temples gaining ground", "Being marginalized politically"]
+secrets = ["Uses church funds for political purposes", "Has compromised on doctrine for power", "Knows where the true regalia is hidden"]
+values = ["Orthodox doctrine", "Church power", "Political influence", "Haelynite supremacy"]
+
+[regents.disposition]
+default = "neutral"
+to_player_factors = [
+    { condition = "Player is devout Haelynite", modifier = 2, reason = "Faithful soul" },
+    { condition = "Player supports church authority", modifier = 2, reason = "Proper respect" },
+    { condition = "Player follows other faith", modifier = -2, reason = "Heretic or heathen" },
+    { condition = "Player threatens church holdings", modifier = -3, reason = "Enemy of the faith" },
+    { condition = "Player has strong bloodline", modifier = 1, reason = "Potential emperor to crown" }
+]
+
+[regents.relationships]
+allies = ["Various Haelynite nobles", "Prince Avan (politically)"]
+rivals = ["Impregnable Heart of Haelyn", "Western Imperial Temple"]
+enemies = ["Temples of other faiths in core regions"]
+vassals = []
+liege = "none"
+
+[regents.military]
+army_strength = "moderate"
+elite_units = ["Knights of the Celestial Order", "Temple Guard"]
+navy_strength = "none"
+doctrine = "blessed"
+aggression = "balanced"
+preferred_tactics = ["crusade", "political pressure", "economic leverage"]
+
+[regents.resources]
+wealth = "high"
+regency_income = "high"
+trade_importance = "moderate"
+special_resources = ["Religious authority", "Educated clergy", "Political connections", "Holy relics"]
+
+[regents.oracle_hooks]
+adventure_seeds = [
+    "Investigate heresy in a distant province",
+    "Recover a stolen holy relic",
+    "Escort a bishop through dangerous territory",
+    "Mediate between feuding Haelynite sects",
+    "Prove (or disprove) a claimed miracle",
+    "Infiltrate a rival temple"
+]
+intrigue_questions = [
+    "Who does the Aegis support for emperor?",
+    "Is there corruption within the church?",
+    "What holy relic has been discovered?",
+    "Will the Aegis call a crusade?",
+    "What schism threatens the church?"
+]
+domain_events = [
+    "Church council convenes",
+    "New saint canonized",
+    "Heresy discovered and condemned",
+    "Aegis expands into new territory"
+]
+
+# -----------------------------------------------------------------------------
+# IMPREGNABLE HEART OF HAELYN - Militant Branch
+# -----------------------------------------------------------------------------
+
+[[regents]]
+name = "Sir Aeric Diem"
+title = "High Prefect of the Impregnable Heart"
+domain = "Impregnable Heart of Haelyn"
+domain_type = "temple"
+regent_type = "temple"
+bloodline_derivation = "anduiras"
+bloodline_strength = "major"
+blood_abilities = ["Battlewise", "Divine Aura", "Courage"]
+
+[regents.personality]
+traits = ["militant", "zealous", "honorable", "uncompromising", "martial"]
+goals = ["Expand militant Haelynite faith", "Crush enemies of the faith", "Prove faith through battle", "Support Boeruine's claim"]
+fears = ["Faith becoming soft", "Losing martial traditions", "Haelyn's displeasure"]
+secrets = ["Has killed in anger, not justice", "Doubts some church doctrine", "Knows location of holy weapon"]
+values = ["Holy warfare", "Martial honor", "Uncompromising faith", "Strength through battle"]
+
+[regents.disposition]
+default = "neutral"
+to_player_factors = [
+    { condition = "Player shows martial prowess", modifier = 2, reason = "Warrior respect" },
+    { condition = "Player fights enemies of faith", modifier = 3, reason = "Holy warrior" },
+    { condition = "Player shows cowardice", modifier = -2, reason = "Unworthy" },
+    { condition = "Player follows dark powers", modifier = -3, reason = "Enemy of all good" },
+    { condition = "Player supports Boeruine", modifier = 1, reason = "Proper allegiance" }
+]
+
+[regents.relationships]
+allies = ["Boeruine", "Talinie", "Militant Haelynite nobles"]
+rivals = ["Haelyn's Aegis", "Soft Haelynite churches"]
+enemies = ["Awnshegh", "Enemies of the faith"]
+vassals = []
+liege = "none"
+
+[regents.military]
+army_strength = "strong"
+elite_units = ["Knights of the Iron Heart", "Temple Warriors", "Crusader Companies"]
+navy_strength = "none"
+doctrine = "crusade"
+aggression = "aggressive"
+preferred_tactics = ["holy war", "frontal assault", "siege breaking", "no quarter"]
+
+[regents.resources]
+wealth = "moderate"
+regency_income = "moderate"
+trade_importance = "low"
+special_resources = ["Fanatical warriors", "Holy weapons", "Crusading zeal"]
+
+[regents.oracle_hooks]
+adventure_seeds = [
+    "Join a crusade against awnshegh",
+    "Train with the temple warriors",
+    "Recover a holy weapon for the order",
+    "Prove your faith through trial by combat",
+    "Lead temple knights against enemies",
+    "Investigate heresy with extreme prejudice"
+]
+intrigue_questions = [
+    "Is the Heart planning a crusade?",
+    "Will the Heart break with the Aegis?",
+    "What holy weapon does the Heart seek?",
+    "How far will the Heart go in its zeal?"
+]
+domain_events = [
+    "Crusade declared",
+    "New knights inducted",
+    "Victory against enemies of faith",
+    "Tension with moderate Haelynites"
+]
+
+# -----------------------------------------------------------------------------
+# WESTERN IMPERIAL TEMPLE - Avanil's Church
+# -----------------------------------------------------------------------------
+
+[[regents]]
+name = "Lehoene Aglondier"
+title = "High Priest of the Western Imperial Temple"
+domain = "Western Imperial Temple"
+domain_type = "temple"
+regent_type = "temple"
+bloodline_derivation = "anduiras"
+bloodline_strength = "minor"
+blood_abilities = ["Divine Aura"]
+
+[regents.personality]
+traits = ["political", "cultured", "sophisticated", "ambitious", "subtle"]
+goals = ["Support Avan's claim to legitimize the temple", "Become the imperial church", "Expand influence in central Anuire", "Outmaneuver rival temples"]
+fears = ["Avan failing", "Being seen as merely political", "Boeruine victory"]
+secrets = ["Would switch allegiance if Avan fails", "Has secular ambitions", "Controls more wealth than known"]
+values = ["Political power", "Cultured faith", "Imperial restoration", "Sophisticated theology"]
+
+[regents.disposition]
+default = "neutral"
+to_player_factors = [
+    { condition = "Player supports Avan", modifier = 2, reason = "Ally of our patron" },
+    { condition = "Player opposes Boeruine", modifier = 1, reason = "Shares our enemy" },
+    { condition = "Player is cultured noble", modifier = 1, reason = "Proper breeding" },
+    { condition = "Player supports Boeruine", modifier = -2, reason = "Enemy allegiance" }
+]
+
+[regents.relationships]
+allies = ["Prince Avan", "Avanil nobility"]
+rivals = ["Haelyn's Aegis", "Impregnable Heart"]
+enemies = ["Boeruine-aligned temples"]
+vassals = []
+liege = "none"
+
+[regents.military]
+army_strength = "weak"
+elite_units = ["Temple Guard"]
+navy_strength = "none"
+doctrine = "political"
+aggression = "passive"
+preferred_tactics = ["political manipulation", "economic pressure", "soft power"]
+
+[regents.resources]
+wealth = "high"
+regency_income = "moderate"
+trade_importance = "low"
+special_resources = ["Avan patronage", "Political connections", "Cultured clergy"]
+
+[regents.oracle_hooks]
+adventure_seeds = [
+    "Diplomatic mission for the temple",
+    "Gather intelligence on rival churches",
+    "Protect temple assets in hostile territory",
+    "Investigate a theological dispute",
+    "Secure an alliance with a noble house"
+]
+intrigue_questions = [
+    "How deep is the temple's alliance with Avan?",
+    "What would happen if Avan fails?",
+    "What secrets does the temple guard?",
+    "Is there genuine faith here or just politics?"
+]
+domain_events = [
+    "Temple hosts diplomatic gathering",
+    "New theological position announced",
+    "Alliance with noble house declared",
+    "Clash with rival temple"
+]
+
+# -----------------------------------------------------------------------------
+# EASTERN TEMPLE OF NESIRIE - Goddess of the Sea
+# -----------------------------------------------------------------------------
+
+[[regents]]
+name = "Maire Cwllmie"
+title = "High Priestess of the Eastern Temple"
+domain = "Eastern Temple of Nesirie"
+domain_type = "temple"
+regent_type = "temple"
+bloodline_derivation = "masela"
+bloodline_strength = "major"
+blood_abilities = ["Sea Song", "Divine Aura", "Elemental Control (Water)"]
+
+[regents.personality]
+traits = ["compassionate", "mystical", "protective", "patient", "wise"]
+goals = ["Protect eastern communities", "Spread Nesirie's peace", "Aid those threatened by evil", "Preserve coastal traditions"]
+fears = ["Ghoere's expansion", "Nesirie's worship fading", "The faithful suffering"]
+secrets = ["Receives visions from Nesirie", "Knows of underwater sanctuaries", "Has hidden refugees from Ghoere"]
+values = ["Compassion", "Protection of the weak", "Maritime traditions", "Peaceful solutions"]
+
+[regents.disposition]
+default = "friendly"
+to_player_factors = [
+    { condition = "Player protects innocents", modifier = 2, reason = "Nesirie's work" },
+    { condition = "Player is Masela-blooded", modifier = 2, reason = "Kin of the sea" },
+    { condition = "Player fights Ghoere", modifier = 2, reason = "Opposing evil" },
+    { condition = "Player harms innocents", modifier = -3, reason = "Against all we stand for" },
+    { condition = "Player serves destructive powers", modifier = -2, reason = "Agent of harm" }
+]
+
+[regents.relationships]
+allies = ["Mhoried", "Elinie", "Coastal communities"]
+rivals = ["Haelynite temples (minor)"]
+enemies = ["Ghoere"]
+vassals = []
+liege = "none"
+
+[regents.military]
+army_strength = "weak"
+elite_units = ["Sea Wardens", "Temple Healers"]
+navy_strength = "moderate"
+doctrine = "defensive"
+aggression = "passive"
+preferred_tactics = ["sanctuary provision", "naval defense", "healing support"]
+
+[regents.resources]
+wealth = "moderate"
+regency_income = "moderate"
+trade_importance = "moderate"
+special_resources = ["Naval contacts", "Healing magic", "Coastal loyalty"]
+
+[regents.oracle_hooks]
+adventure_seeds = [
+    "Protect refugees fleeing Ghoere",
+    "Investigate disturbance in coastal waters",
+    "Escort pilgrims to holy site",
+    "Recover artifact from sunken temple",
+    "Negotiate between feuding fishing villages"
+]
+intrigue_questions = [
+    "What vision has Nesirie sent?",
+    "Can the temple stand against Ghoere?",
+    "What secrets lie beneath the waves?",
+    "Will the faithful flee or fight?"
+]
+domain_events = [
+    "Miraculous catch of fish",
+    "Storm threatens coast - prayers needed",
+    "Refugees arrive seeking sanctuary",
+    "Festival of the sea goddess"
+]
+
+# -----------------------------------------------------------------------------
+# OAKEN GROVE OF ERIK - Druidic Faith
+# -----------------------------------------------------------------------------
+
+[[regents]]
+name = "Gaelin Thuried"
+title = "Archdruid of the Oaken Grove"
+domain = "Oaken Grove of Erik"
+domain_type = "temple"
+regent_type = "temple"
+bloodline_derivation = "reynir"
+bloodline_strength = "major"
+blood_abilities = ["Animal Affinity", "Forest Walk", "Heightened Ability (Wisdom)"]
+
+[regents.personality]
+traits = ["naturalist", "patient", "wise", "isolated", "protective"]
+goals = ["Protect the wild places", "Spread Erik's teachings", "Maintain balance with civilization", "Preserve ancient traditions"]
+fears = ["Urban expansion destroying wilderness", "The land being corrupted", "Erik's worship fading"]
+secrets = ["Can speak with ancient spirits", "Knows locations of sacred groves", "Has powers beyond normal druids"]
+values = ["Nature", "Balance", "Ancient ways", "Living in harmony with the land"]
+
+[regents.disposition]
+default = "neutral"
+to_player_factors = [
+    { condition = "Player respects nature", modifier = 2, reason = "Friend of the land" },
+    { condition = "Player is Reynir-blooded", modifier = 2, reason = "Child of the wild" },
+    { condition = "Player destroys wilderness", modifier = -3, reason = "Destroyer of sacred places" },
+    { condition = "Player seeks druidic knowledge", modifier = 1, reason = "Seeker of old ways" }
+]
+
+[regents.relationships]
+allies = ["Rural communities", "Rangers", "Elves"]
+rivals = ["Expanding cities", "Mining interests"]
+enemies = ["Those who corrupt the land"]
+vassals = []
+liege = "none"
+
+[regents.military]
+army_strength = "weak"
+elite_units = ["Druids", "Forest Wardens", "Animal companions"]
+navy_strength = "none"
+doctrine = "guerrilla"
+aggression = "defensive"
+preferred_tactics = ["guerrilla warfare", "animal allies", "forest terrain", "nature magic"]
+
+[regents.resources]
+wealth = "low"
+regency_income = "moderate"
+trade_importance = "low"
+special_resources = ["Sacred groves", "Nature magic", "Animal allies", "Forest knowledge"]
+
+[regents.oracle_hooks]
+adventure_seeds = [
+    "Investigate corruption spreading through the forest",
+    "Protect a sacred grove from developers",
+    "Seek wisdom from ancient nature spirits",
+    "Hunt a creature twisted by dark magic",
+    "Find a lost druidic artifact"
+]
+intrigue_questions = [
+    "What ancient evil is stirring?",
+    "Will the druids intervene in mortal affairs?",
+    "What sacred site is threatened?",
+    "Do the druids know of hidden places?"
+]
+domain_events = [
+    "Seasonal ritual at sacred grove",
+    "Nature spirits grow restless",
+    "Forest fire threatens - natural or set?",
+    "Ancient tree awakens"
+]
+
+# -----------------------------------------------------------------------------
+# LIFE AND PROTECTION OF AVANALAE - Goddess of the Sun
+# -----------------------------------------------------------------------------
+
+[[regents]]
+name = "Temias Coumain"
+title = "High Priest of Avanalae"
+domain = "Life and Protection of Avanalae"
+domain_type = "temple"
+regent_type = "temple"
+bloodline_derivation = "anduiras"
+bloodline_strength = "minor"
+blood_abilities = ["Light of Reason", "Divine Aura"]
+
+[regents.personality]
+traits = ["gentle", "scholarly", "idealistic", "patient", "hopeful"]
+goals = ["Spread Avanalae's light", "Support learning and reason", "Heal the sick", "Bring hope to the suffering"]
+fears = ["Darkness overwhelming the light", "Reason failing", "The suffering of innocents"]
+secrets = ["Guards ancient knowledge", "Has prophetic dreams", "Knows of a great evil returning"]
+values = ["Light", "Reason", "Healing", "Hope"]
+
+[regents.disposition]
+default = "friendly"
+to_player_factors = [
+    { condition = "Player values knowledge", modifier = 2, reason = "Seeker of truth" },
+    { condition = "Player helps the suffering", modifier = 2, reason = "Agent of mercy" },
+    { condition = "Player spreads fear or darkness", modifier = -2, reason = "Agent of shadow" },
+    { condition = "Player destroys knowledge", modifier = -2, reason = "Enemy of reason" }
+]
+
+[regents.relationships]
+allies = ["Haelynite temples", "Scholars", "Healers"]
+rivals = []
+enemies = ["Followers of Kriesha", "Shadow powers"]
+vassals = []
+liege = "none"
+
+[regents.military]
+army_strength = "very_weak"
+elite_units = ["Temple Healers", "Light Guard"]
+navy_strength = "none"
+doctrine = "support"
+aggression = "passive"
+preferred_tactics = ["healing support", "morale boosting", "light magic"]
+
+[regents.resources]
+wealth = "low"
+regency_income = "low"
+trade_importance = "low"
+special_resources = ["Healing magic", "Libraries", "Hopeful congregation"]
+
+[regents.oracle_hooks]
+adventure_seeds = [
+    "Recover lost texts from dangerous location",
+    "Escort healers to plague-struck region",
+    "Investigate darkness spreading",
+    "Protect temple from shadow cult",
+    "Find cure for mysterious illness"
+]
+intrigue_questions = [
+    "What ancient knowledge does the temple guard?",
+    "What darkness has Temias foreseen?",
+    "Can the light hold against rising shadow?",
+    "What healing miracle is possible?"
+]
+domain_events = [
+    "Festival of Light",
+    "Ancient text discovered",
+    "Plague arrives - temple responds",
+    "Eclipse causes panic"
+]
+
+# =============================================================================
+# GUILD REGENTS
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# EL-HADID TRADING COMPANY - Khinasi Merchants
+# -----------------------------------------------------------------------------
+
+[[regents]]
+name = "el-Hadid"
+title = "Prince of the el-Hadid Trading Company"
+domain = "el-Hadid Trading Company"
+domain_type = "guild"
+regent_type = "guild"
+bloodline_derivation = "basaia"
+bloodline_strength = "major"
+blood_abilities = ["Detect Lie", "Persuasion", "Heightened Ability (Charisma)"]
+
+[regents.personality]
+traits = ["cunning", "cultured", "patient", "ambitious", "refined"]
+goals = ["Dominate Anuire-Khinasi trade", "Expand influence into Anuirean courts", "Acquire rare goods and secrets", "Build trading empire"]
+fears = ["Trade routes being cut", "Anuirean xenophobia", "Competition from Anuirean guilds"]
+secrets = ["Has spies in every major court", "Controls illegal smuggling operations", "Knows everyone's vices"]
+values = ["Profit through cunning", "Cultural sophistication", "Information as power", "Long-term planning"]
+
+[regents.disposition]
+default = "neutral"
+to_player_factors = [
+    { condition = "Player offers trade opportunities", modifier = 2, reason = "Profitable relationship" },
+    { condition = "Player has rare goods or information", modifier = 2, reason = "Valuable commodities" },
+    { condition = "Player is xenophobic", modifier = -2, reason = "Closed minded" },
+    { condition = "Player disrupts trade", modifier = -3, reason = "Threat to business" },
+    { condition = "Player appreciates culture", modifier = 1, reason = "Refined soul" }
+]
+
+[regents.relationships]
+allies = ["Other Khinasi traders", "Endier (commercially)"]
+rivals = ["Anuirean guilds", "Pirates"]
+enemies = ["Protectionists"]
+vassals = []
+liege = "none"
+
+[regents.military]
+army_strength = "weak"
+elite_units = ["Caravan Guards", "Khinasi Mercenaries"]
+navy_strength = "moderate"
+doctrine = "mercantile"
+aggression = "passive"
+preferred_tactics = ["hire mercenaries", "bribery", "economic leverage"]
+
+[regents.resources]
+wealth = "very_high"
+regency_income = "high"
+trade_importance = "very_high"
+special_resources = ["Khinasi connections", "Exotic goods", "Intelligence network", "Trade fleet"]
+
+[regents.oracle_hooks]
+adventure_seeds = [
+    "Protect valuable cargo across dangerous territory",
+    "Negotiate trade rights in hostile court",
+    "Investigate who is attacking el-Hadid caravans",
+    "Retrieve stolen goods of immense value",
+    "Establish new trade route through dangerous lands",
+    "el-Hadid needs discrete agents for sensitive matter"
+]
+intrigue_questions = [
+    "What secrets has el-Hadid gathered?",
+    "What rare goods are available?",
+    "Is el-Hadid involved in smuggling?",
+    "What does el-Hadid really want in Anuire?"
+]
+domain_events = [
+    "Trade caravan arrives with exotic goods",
+    "el-Hadid hosts lavish party",
+    "Trade dispute escalates",
+    "New trade agreement announced"
+]
+
+# -----------------------------------------------------------------------------
+# SIELE GHORIED - Ghoere's Trade Arm
+# -----------------------------------------------------------------------------
+
+[[regents]]
+name = "Bannier Andien"
+title = "Guildmaster of Siele Ghoried"
+domain = "Siele Ghoried"
+domain_type = "guild"
+regent_type = "guild"
+bloodline_derivation = "brenna"
+bloodline_strength = "minor"
+blood_abilities = ["Detect Lie"]
+
+[regents.personality]
+traits = ["ruthless", "efficient", "servile to power", "ambitious", "cunning"]
+goals = ["Serve Ghoere's economic needs", "Crush competing guilds", "Profit from Ghoere's expansion", "Survive Tael's demands"]
+fears = ["Tael's displeasure", "Guild independence being revoked", "Economic competition"]
+secrets = ["Skims profits from Tael", "Has emergency escape plans", "Knows of Tael's weaknesses"]
+values = ["Profit", "Survival", "Serving the strong", "Crushing competition"]
+
+[regents.disposition]
+default = "unfriendly"
+to_player_factors = [
+    { condition = "Player serves Ghoere", modifier = 2, reason = "Ally of patron" },
+    { condition = "Player opposes Ghoere", modifier = -3, reason = "Enemy" },
+    { condition = "Player offers profitable deal", modifier = 1, reason = "Business opportunity" },
+    { condition = "Player is competitor", modifier = -2, reason = "Threat to business" }
+]
+
+[regents.relationships]
+allies = ["Ghoere (patron)"]
+rivals = ["All neighboring guilds"]
+enemies = ["Mhoried guilds", "Anyone Tael opposes"]
+vassals = []
+liege = "Baron Tael of Ghoere"
+
+[regents.military]
+army_strength = "moderate"
+elite_units = ["Guild Enforcers", "Trade Militia"]
+navy_strength = "none"
+doctrine = "economic"
+aggression = "opportunistic"
+preferred_tactics = ["economic warfare", "sabotage", "espionage"]
+
+[regents.resources]
+wealth = "high"
+regency_income = "moderate"
+trade_importance = "high"
+special_resources = ["Ghoere's backing", "Ruthless agents", "Monopoly positions"]
+
+[regents.oracle_hooks]
+adventure_seeds = [
+    "Infiltrate Siele Ghoried operations",
+    "Protect business from Ghoried sabotage",
+    "Turn Ghoried agent against masters",
+    "Discover Ghoried's economic plans",
+    "Escape Ghoried after bad deal"
+]
+intrigue_questions = [
+    "What is Ghoried planning?",
+    "Is Bannier truly loyal to Tael?",
+    "Where are Ghoried's weak points?",
+    "What would turn Bannier against Ghoere?"
+]
+domain_events = [
+    "Ghoried moves into new market",
+    "Competitor driven out of business",
+    "Ghoried prices undercut everyone",
+    "Tensions with independent merchants"
+]
+
+# -----------------------------------------------------------------------------
+# HIGHLAND/OVERLAND TRADERS - Independent Merchant Guild
+# -----------------------------------------------------------------------------
+
+[[regents]]
+name = "Orthien Tane"
+title = "Guildmaster of the Highland Traders"
+domain = "Highland/Overland Traders"
+domain_type = "guild"
+regent_type = "guild"
+bloodline_derivation = "brenna"
+bloodline_strength = "minor"
+blood_abilities = ["Heightened Ability (Intelligence)"]
+
+[regents.personality]
+traits = ["practical", "honest", "independent", "capable", "straightforward"]
+goals = ["Maintain profitable trade routes", "Stay independent of great powers", "Provide honest trade", "Survive in dangerous times"]
+fears = ["Great powers absorbing guild", "Trade routes being cut", "Economic collapse"]
+secrets = ["Has connections to smugglers", "Knows of hidden routes", "Maintains secret caches"]
+values = ["Honest trade", "Independence", "Practical profit", "Mutual benefit"]
+
+[regents.disposition]
+default = "friendly"
+to_player_factors = [
+    { condition = "Player offers fair deal", modifier = 2, reason = "Honest partner" },
+    { condition = "Player protects trade routes", modifier = 2, reason = "Valuable service" },
+    { condition = "Player threatens trade", modifier = -2, reason = "Bad for business" },
+    { condition = "Player is trustworthy", modifier = 1, reason = "Reliable partner" }
+]
+
+[regents.relationships]
+allies = ["Independent traders", "Rural communities"]
+rivals = ["Larger guild organizations"]
+enemies = ["Bandits", "Trade disruptors"]
+vassals = []
+liege = "none"
+
+[regents.military]
+army_strength = "weak"
+elite_units = ["Caravan Guards"]
+navy_strength = "none"
+doctrine = "defensive"
+aggression = "passive"
+preferred_tactics = ["armed escorts", "hidden routes", "bribery"]
+
+[regents.resources]
+wealth = "moderate"
+regency_income = "moderate"
+trade_importance = "moderate"
+special_resources = ["Trade networks", "Practical knowledge", "Loyal workers"]
+
+[regents.oracle_hooks]
+adventure_seeds = [
+    "Guard caravan through dangerous territory",
+    "Investigate bandit activity on trade routes",
+    "Establish new trading relationship",
+    "Recover stolen trade goods",
+    "Negotiate passage through hostile territory"
+]
+intrigue_questions = [
+    "Is the guild being pressured by larger powers?",
+    "What secret routes do they know?",
+    "Can they be trusted with sensitive cargo?",
+    "What threats face the trade routes?"
+]
+domain_events = [
+    "New trade route opened",
+    "Bandit activity increases",
+    "Trade fair brings prosperity",
+    "Competition from larger guilds"
+]
+
+# -----------------------------------------------------------------------------
+# PORT OF CALL EXCHANGE - Shipping Guild
+# -----------------------------------------------------------------------------
+
+[[regents]]
+name = "Daenal Bannier"
+title = "Harbormaster General"
+domain = "Port of Call Exchange"
+domain_type = "guild"
+regent_type = "guild"
+bloodline_derivation = "masela"
+bloodline_strength = "minor"
+blood_abilities = ["Sea Song"]
+
+[regents.personality]
+traits = ["maritime", "practical", "weathered", "knowledgeable", "reliable"]
+goals = ["Control coastal shipping", "Maintain port facilities", "Profit from sea trade", "Keep shipping lanes safe"]
+fears = ["Pirates disrupting trade", "Naval conflicts", "Loss of port access"]
+secrets = ["Has arrangements with pirates", "Knows of smuggling operations", "Controls port corruption"]
+values = ["Maritime commerce", "Practical solutions", "Sea traditions", "Reliable service"]
+
+[regents.disposition]
+default = "neutral"
+to_player_factors = [
+    { condition = "Player needs shipping", modifier = 2, reason = "Business opportunity" },
+    { condition = "Player fights pirates", modifier = 1, reason = "Useful service" },
+    { condition = "Player is pirate", modifier = -2, reason = "Bad for business" },
+    { condition = "Player threatens ports", modifier = -3, reason = "Direct threat" }
+]
+
+[regents.relationships]
+allies = ["Coastal traders", "Naval powers"]
+rivals = ["Competing shippers"]
+enemies = ["Pirates (officially)"]
+vassals = []
+liege = "none"
+
+[regents.military]
+army_strength = "very_weak"
+elite_units = ["Port Guards"]
+navy_strength = "moderate"
+doctrine = "maritime"
+aggression = "passive"
+preferred_tactics = ["naval escort", "port defense", "paying off threats"]
+
+[regents.resources]
+wealth = "moderate"
+regency_income = "moderate"
+trade_importance = "high"
+special_resources = ["Port facilities", "Shipping fleet", "Maritime knowledge"]
+
+[regents.oracle_hooks]
+adventure_seeds = [
+    "Deal with pirate threat to shipping",
+    "Investigate smuggling through ports",
+    "Negotiate port access in hostile territory",
+    "Rescue shipwreck survivors",
+    "Escort valuable cargo by sea"
+]
+intrigue_questions = [
+    "Is the Exchange involved with pirates?",
+    "What smuggling goes through the ports?",
+    "Can secure shipping be arranged?",
+    "What secrets pass through the docks?"
+]
+domain_events = [
+    "Pirate activity increases",
+    "Major cargo arrives",
+    "Storm damages port",
+    "New shipping route established"
+]
+
+# =============================================================================
+# WIZARD REGENTS
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# THE SWORD MAGE - Alamie's Wizard
+# -----------------------------------------------------------------------------
+
+[[regents]]
+name = "Aelwyn"
+title = "The Sword Mage"
+domain = "Sources of Alamie"
+domain_type = "source"
+regent_type = "wizard"
+bloodline_derivation = "vorynn"
+bloodline_strength = "great"
+blood_abilities = ["Mebhaighl Sense", "Heightened Ability (Intelligence)", "Touch of Decay"]
+
+[regents.personality]
+traits = ["mysterious", "ambitious", "patient", "secretive", "pragmatic"]
+goals = ["Control all sources in the region", "Increase magical power", "Maintain independence", "Perhaps rule outright someday"]
+fears = ["Other wizards challenging sources", "Being forced to serve another", "The Spider's machinations"]
+secrets = ["Has ambitions beyond supporting Alamie", "Knows of hidden sources", "Has made questionable bargains"]
+values = ["Magical power", "Independence", "Knowledge", "Long-term planning"]
+
+[regents.disposition]
+default = "neutral"
+to_player_factors = [
+    { condition = "Player is wizard", modifier = -1, reason = "Potential rival" },
+    { condition = "Player threatens sources", modifier = -3, reason = "Direct threat" },
+    { condition = "Player opposes the Spider", modifier = 2, reason = "Enemy of rival" },
+    { condition = "Player offers magical knowledge", modifier = 2, reason = "Valuable exchange" },
+    { condition = "Player serves Tuornen", modifier = -2, reason = "Alamie's enemy" }
+]
+
+[regents.relationships]
+allies = ["Alamie (client)"]
+rivals = ["The Spider", "Other source regents"]
+enemies = ["The Spider"]
+vassals = []
+liege = "none"
+
+[regents.military]
+army_strength = "none"
+elite_units = ["Magical constructs", "Summoned beings"]
+navy_strength = "none"
+doctrine = "magical"
+aggression = "defensive"
+preferred_tactics = ["realm magic", "scrying", "magical support", "ley line manipulation"]
+
+[regents.resources]
+wealth = "moderate"
+regency_income = "moderate"
+trade_importance = "none"
+special_resources = ["Magical sources", "Arcane knowledge", "Ley lines"]
+
+[regents.oracle_hooks]
+adventure_seeds = [
+    "Assist with magical research",
+    "Investigate source corruption",
+    "Retrieve magical component",
+    "Counter enemy wizard's spell",
+    "Explore ancient magical site"
+]
+intrigue_questions = [
+    "What are the Sword Mage's true goals?",
+    "Is Alamie just a stepping stone?",
+    "What magical threats does she know of?",
+    "Would she betray Alamie for power?"
+]
+domain_events = [
+    "Magical phenomenon in region",
+    "Spell affects entire domain",
+    "Source contested by rival",
+    "Ancient magic awakens"
+]
+
+# -----------------------------------------------------------------------------
+# THE SPIDER - Awnshegh Wizard
+# -----------------------------------------------------------------------------
+
+[[regents]]
+name = "The Spider"
+title = "Lord of the Spiderfell"
+domain = "The Spiderfell"
+domain_type = "source"
+regent_type = "awnshegh"
+bloodline_derivation = "azrai"
+bloodline_strength = "true"
+blood_abilities = ["Blood History", "Invulnerability", "Poison Touch", "Animal Affinity (Spiders)", "Fear"]
+
+[regents.personality]
+traits = ["patient", "cunning", "inhuman", "malevolent", "ancient"]
+goals = ["Spread the Spiderfell's corruption", "Acquire more sources", "Corrupt blooded scions", "Revenge on ancient enemies"]
+fears = ["Coordinated opposition", "The Gorgon's power", "Loss of sources"]
+secrets = ["Was once human", "Knows ancient secrets", "Has corrupted agents everywhere"]
+values = ["Power through corruption", "Patience measured in centuries", "Spreading shadow"]
+
+[regents.disposition]
+default = "hostile"
+to_player_factors = [
+    { condition = "Player has Azrai blood", modifier = 1, reason = "Potential servant or vessel" },
+    { condition = "Player has strong bloodline", modifier = -1, reason = "Threat or prize" },
+    { condition = "Player is wizard", modifier = -2, reason = "Competitor for sources" },
+    { condition = "Player threatens Spiderfell", modifier = -3, reason = "Must be destroyed" },
+    { condition = "Player could be corrupted", modifier = 2, reason = "Potential asset" }
+]
+
+[regents.relationships]
+allies = ["None truly"]
+rivals = ["All source regents", "The Gorgon"]
+enemies = ["All living blooded scions"]
+vassals = ["Corrupted servants"]
+liege = "none"
+
+[regents.military]
+army_strength = "moderate"
+elite_units = ["Giant Spiders", "Corrupted Servants", "Undead"]
+navy_strength = "none"
+doctrine = "monster"
+aggression = "opportunistic"
+preferred_tactics = ["corruption", "monsters", "realm magic", "poisoning the land"]
+
+[regents.resources]
+wealth = "moderate"
+regency_income = "high"
+trade_importance = "none"
+special_resources = ["Ancient sources", "Monster armies", "Corruption magic", "Spider network"]
+
+[regents.oracle_hooks]
+adventure_seeds = [
+    "Investigate Spider corruption spreading",
+    "Rescue someone from Spider's web",
+    "Destroy Spider's corrupted source",
+    "Counter Spider's realm spell",
+    "Hunt monsters spawned by Spider"
+]
+intrigue_questions = [
+    "What is the Spider planning?",
+    "Who has the Spider corrupted?",
+    "Can the Spider be destroyed?",
+    "What ancient secret does the Spider know?"
+]
+domain_events = [
+    "Spiderfell expands into new territory",
+    "Monster sightings increase",
+    "Corruption spreads to neighboring lands",
+    "Ancient evil awakens"
+]
+
+# -----------------------------------------------------------------------------
+# HERMEDHIE - Court Wizard of Avanil
+# -----------------------------------------------------------------------------
+
+[[regents]]
+name = "Hermedhie"
+title = "Royal Wizard of Avanil"
+domain = "Sources of Avanil"
+domain_type = "source"
+regent_type = "wizard"
+bloodline_derivation = "vorynn"
+bloodline_strength = "major"
+blood_abilities = ["Mebhaighl Sense", "Heightened Ability (Intelligence)"]
+
+[regents.personality]
+traits = ["loyal", "scholarly", "cautious", "competent", "reserved"]
+goals = ["Serve Prince Avan faithfully", "Protect Avanil's sources", "Increase magical knowledge", "Counter enemy wizards"]
+fears = ["Failing Prince Avan", "Stronger wizards", "Magical corruption"]
+secrets = ["Has concerns about Avan's methods", "Knows of hidden sources", "Has independent research"]
+values = ["Loyalty", "Knowledge", "Service", "Magical integrity"]
+
+[regents.disposition]
+default = "neutral"
+to_player_factors = [
+    { condition = "Player serves Avan", modifier = 2, reason = "Ally of liege" },
+    { condition = "Player opposes Avan", modifier = -2, reason = "Enemy of liege" },
+    { condition = "Player is wizard seeking knowledge", modifier = 1, reason = "Fellow scholar" },
+    { condition = "Player threatens sources", modifier = -3, reason = "Direct threat" }
+]
+
+[regents.relationships]
+allies = ["Prince Avan"]
+rivals = ["Other source regents"]
+enemies = ["Boeruine's wizards", "The Spider"]
+vassals = []
+liege = "Prince Avan"
+
+[regents.military]
+army_strength = "none"
+elite_units = ["Magical guardians"]
+navy_strength = "none"
+doctrine = "support"
+aggression = "defensive"
+preferred_tactics = ["realm magic support", "scrying", "magical defense"]
+
+[regents.resources]
+wealth = "moderate"
+regency_income = "moderate"
+trade_importance = "none"
+special_resources = ["Avanil's sources", "Royal patronage", "Magical libraries"]
+
+[regents.oracle_hooks]
+adventure_seeds = [
+    "Assist with magical research for Avan",
+    "Retrieve magical component",
+    "Counter enemy wizard's magic",
+    "Investigate magical threat to Avanil"
+]
+intrigue_questions = [
+    "What magical threats has Hermedhie detected?",
+    "Is Hermedhie entirely loyal to Avan?",
+    "What magical research is underway?",
+    "Could Hermedhie be persuaded to act independently?"
+]
+domain_events = [
+    "Magical research breakthrough",
+    "Source conflict with rival",
+    "Realm magic cast for Avan",
+    "Magical threat detected"
+]
+
+# =============================================================================
+# AWNSHEGH - THE GORGON
+# =============================================================================
+
+[[regents]]
+name = "The Gorgon"
+title = "Prince of Kal-Saitharak"
+domain = "The Gorgon's Crown"
+domain_type = "landed"
+regent_type = "awnshegh"
+bloodline_derivation = "azrai"
+bloodline_strength = "true"
+blood_abilities = ["Bloodform (Stone)", "Divine Aura", "Invulnerability", "Major Resistance", "Fear", "Battlewise"]
+
+[regents.personality]
+traits = ["patient", "cruel", "strategic", "ancient", "contemptuous"]
+goals = ["Destroy Mhoried", "Conquer all Anuire", "Become a god", "Corrupt all bloodlines"]
+fears = ["Nothing mortal", "Coordinated opposition", "His own nature"]
+secrets = ["Was once Anuirean prince Raesene", "Knows all ancient secrets", "Can be hurt by specific means"]
+values = ["Power absolute", "Eternal patience", "Destruction of the weak"]
+
+[regents.disposition]
+default = "hostile"
+to_player_factors = [
+    { condition = "Player has Azrai blood", modifier = 1, reason = "Potential servant" },
+    { condition = "Player is powerful scion", modifier = -2, reason = "Threat to consume" },
+    { condition = "Player serves against Mhoried", modifier = 2, reason = "Useful tool" },
+    { condition = "Player defends Mhoried", modifier = -3, reason = "Must be crushed" }
+]
+
+[regents.relationships]
+allies = ["None - only servants"]
+rivals = ["Other awnshegh"]
+enemies = ["All Anuirean kingdoms", "Mhoried especially"]
+vassals = ["Markazor", "Various monster tribes"]
+liege = "none"
+
+[regents.military]
+army_strength = "overwhelming"
+elite_units = ["Stone Guard", "Awnshegh Legions", "Monster Hordes", "Corrupted Knights"]
+navy_strength = "none"
+doctrine = "overwhelming"
+aggression = "patient"
+preferred_tactics = ["overwhelming force", "corruption", "terror", "long siege"]
+
+[regents.resources]
+wealth = "very_high"
+regency_income = "very_high"
+trade_importance = "none"
+special_resources = ["Infinite patience", "Monster armies", "Ancient knowledge", "True bloodline power"]
+
+[regents.oracle_hooks]
+adventure_seeds = [
+    "Defend against Gorgon's probing attack",
+    "Scout the Gorgon's Crown for intelligence",
+    "Rescue prisoners from the Gorgon",
+    "Find weapon against the Gorgon",
+    "Seek the Gorgon's ancient weakness"
+]
+intrigue_questions = [
+    "When will the Gorgon strike?",
+    "What is the Gorgon's true plan?",
+    "Can the Gorgon be destroyed?",
+    "Who has the Gorgon corrupted?"
+]
+domain_events = [
+    "Gorgon's forces probe the border",
+    "Corruption spreads from the Crown",
+    "Monster activity increases",
+    "The Gorgon makes demands"
+]
+
+# =============================================================================
+# MINOR REGENTS - Brief Profiles
+# =============================================================================
+
+# Temple Minor Regents
+[[minor_regents]]
+name = "Thuriene Swordhawk"
+title = "High Priest of Cuiraecen"
+domain_type = "temple"
+location = "Northern Anuire"
+bloodline = "anduiras_minor"
+disposition = "martial"
+notes = "Aggressive warrior-priest, seeks battle against awnshegh"
+
+[[minor_regents]]
+name = "Braedon Torien"
+title = "Patriarch of the Northern Reformed Church"
+domain_type = "temple"
+location = "Taeghas"
+bloodline = "anduiras_minor"
+disposition = "reformist"
+notes = "Seeks to reform Haelynite practices, politically moderate"
+
+[[minor_regents]]
+name = "Medhlorie Haensen"
+title = "Priestess of Sera"
+domain_type = "temple"
+location = "Various trading centers"
+bloodline = "brenna_minor"
+disposition = "mercantile"
+notes = "Goddess of fortune and commerce, temple aids traders"
+
+[[minor_regents]]
+name = "Blaede the Elder"
+title = "High Priest of Belinik"
+domain_type = "temple"
+location = "Markazor and borderlands"
+bloodline = "azrai_minor"
+disposition = "hostile"
+notes = "Evil war god's priest, allies with humanoid tribes"
+
+[[minor_regents]]
+name = "Ulrika the Cold"
+title = "High Priestess of Kriesha"
+domain_type = "temple"
+location = "Northern wastes"
+bloodline = "azrai_minor"
+disposition = "hostile"
+notes = "Ice Queen's servant, brings winter and death"
+
+# Guild Minor Regents
+[[minor_regents]]
+name = "Moergen Hiriele"
+title = "Guildmaster of the Heartlands Outfitters"
+domain_type = "guild"
+location = "Central Anuire"
+bloodline = "brenna_tainted"
+disposition = "neutral"
+notes = "Supplies adventurers and mercenaries, knows useful contacts"
+
+[[minor_regents]]
+name = "Caine the Trader"
+title = "Master of the Southern Cartel"
+domain_type = "guild"
+location = "Southern Anuire"
+bloodline = "none"
+disposition = "opportunistic"
+notes = "Ambitious merchant, suspected of smuggling"
+
+[[minor_regents]]
+name = "Shandara of the Three Coins"
+title = "Banker"
+domain_type = "guild"
+location = "Endier"
+bloodline = "brenna_minor"
+disposition = "neutral"
+notes = "Money-lender and banker, discrete and well-connected"
+
+[[minor_regents]]
+name = "Borric Blackhand"
+title = "Guild Boss"
+domain_type = "guild"
+location = "Port cities"
+bloodline = "none"
+disposition = "criminal"
+notes = "Criminal guild master, controls docks and smuggling"
+
+[[minor_regents]]
+name = "Dalien Archoer"
+title = "Guildmaster of the Arcane Supplies Guild"
+domain_type = "guild"
+location = "Magic-friendly cities"
+bloodline = "vorynn_tainted"
+disposition = "scholarly"
+notes = "Supplies magical components, connected to wizards"
+
+# Wizard Minor Regents
+[[minor_regents]]
+name = "Rogr Teline"
+title = "The Grey Sage"
+domain_type = "source"
+location = "Taeghas"
+bloodline = "vorynn_minor"
+disposition = "reclusive"
+notes = "Ancient wizard, sells magical services, neutral in politics"
+
+[[minor_regents]]
+name = "Caelwyn the Blue"
+title = "Court Mage of Boeruine"
+domain_type = "source"
+location = "Boeruine"
+bloodline = "vorynn_major"
+disposition = "loyal"
+notes = "Serves Archduke Boeruine, military-minded wizard"
+
+[[minor_regents]]
+name = "Aelies the Enchantress"
+title = "Independent Wizard"
+domain_type = "source"
+location = "Southern Anuire"
+bloodline = "vorynn_minor"
+disposition = "mercenary"
+notes = "Sells magical services to highest bidder"
+
+[[minor_regents]]
+name = "The Wizard of the Silver Towers"
+title = "Unknown"
+domain_type = "source"
+location = "Remote tower"
+bloodline = "vorynn_major"
+disposition = "mysterious"
+notes = "Mysterious figure, rarely interacts, guards powerful sources"
+
+[[minor_regents]]
+name = "Torren the Diviner"
+title = "Court Oracle"
+domain_type = "source"
+location = "Avanil"
+bloodline = "vorynn_minor"
+disposition = "helpful"
+notes = "Specializes in divination, advises nobles on futures"
+
+# Noble Minor Regents
+[[minor_regents]]
+name = "Baron Noered Tuorel"
+title = "Baron of a border province"
+domain_type = "landed"
+location = "Ghoere border"
+bloodline = "anduiras_minor"
+disposition = "defensive"
+notes = "Constantly threatened by Ghoere, desperate for allies"
+
+[[minor_regents]]
+name = "Count Aedric Borselen"
+title = "Count of coastal holding"
+domain_type = "landed"
+location = "Coastal Anuire"
+bloodline = "masela_tainted"
+disposition = "mercantile"
+notes = "More interested in trade than politics, rich but weak"
+
+[[minor_regents]]
+name = "Baroness Elaine Braeme"
+title = "Baroness of Braeme"
+domain_type = "landed"
+location = "Central Anuire"
+bloodline = "anduiras_minor"
+disposition = "neutral"
+notes = "Maintains careful neutrality between great powers"
+
+[[minor_regents]]
+name = "Lord Gaelin Thuried"
+title = "Lord of highland province"
+domain_type = "landed"
+location = "Near Mhoried"
+bloodline = "reynir_tainted"
+disposition = "friendly"
+notes = "Supports Mhoried against the Gorgon, needs help"
+
+[[minor_regents]]
+name = "Lady Seriene Roele"
+title = "Last of the Roele Line"
+domain_type = "landed"
+location = "In hiding"
+bloodline = "anduiras_great"
+disposition = "hidden"
+notes = "True Roele heir, hidden identity, could unite Anuire"
+
+[[minor_regents]]
+name = "Duke Alaric Dosiere"
+title = "Duke of minor domain"
+domain_type = "landed"
+location = "Southern Anuire"
+bloodline = "anduiras_minor"
+disposition = "ambitious"
+notes = "Ambitious but lacks resources, seeks powerful allies"
+
+[[minor_regents]]
+name = "Baron Moergan Bhalie"
+title = "Baron of Bhalie"
+domain_type = "landed"
+location = "Western Anuire"
+bloodline = "anduiras_tainted"
+disposition = "loyal"
+notes = "Loyal supporter of Boeruine, provides troops"
+
+[[minor_regents]]
+name = "Countess Irin Vélan"
+title = "Countess of Vélan"
+domain_type = "landed"
+location = "Near Avanil"
+bloodline = "anduiras_minor"
+disposition = "loyal"
+notes = "Loyal supporter of Avan, key political ally"
+
+# Awnshegh and Monster Regents
+[[minor_regents]]
+name = "The Vampire"
+title = "Lord of the Night"
+domain_type = "shadow"
+location = "Unknown"
+bloodline = "azrai_great"
+disposition = "hostile"
+notes = "Ancient vampire, rules from hidden fortress"
+
+[[minor_regents]]
+name = "The Chimaera"
+title = "Beast of Coeranys"
+domain_type = "monster"
+location = "Coeranys"
+bloodline = "azrai_major"
+disposition = "hostile"
+notes = "Monstrous awnshegh, terrorizes southeastern Anuire"
+
+[[minor_regents]]
+name = "Rhoubhe Manslayer"
+title = "The Elf"
+domain_type = "source"
+location = "Tuarhievel"
+bloodline = "azrai_great"
+disposition = "hostile_to_humans"
+notes = "Ancient elf who hates humans, extremely dangerous"
+
+[[minor_regents]]
+name = "The Swordhawk"
+title = "Bandit Lord"
+domain_type = "bandit"
+location = "Borderlands"
+bloodline = "anduiras_tainted"
+disposition = "hostile"
+notes = "Noble turned bandit, claims righteous cause"
+
+# Humanoid Leaders
+[[minor_regents]]
+name = "Grukh Blood-Eye"
+title = "Goblin King of Thurazor"
+domain_type = "humanoid"
+location = "Five Peaks"
+bloodline = "azrai_minor"
+disposition = "hostile"
+notes = "Leads goblin kingdom, raids Cariele regularly"
+
+[[minor_regents]]
+name = "Kroggh the Bonecrusher"
+title = "Orog Chieftain"
+domain_type = "humanoid"
+location = "Markazor"
+bloodline = "azrai_minor"
+disposition = "hostile"
+notes = "Serves the Gorgon, leads orog war bands"
+
+[[minor_regents]]
+name = "The Gnoll Queen"
+title = "Leader of the Gnoll Tribes"
+domain_type = "humanoid"
+location = "Borderlands"
+bloodline = "azrai_tainted"
+disposition = "hostile"
+notes = "United gnoll tribes, increasing raids"
+
+# =============================================================================
+# ORACLE INTEGRATION TABLES
+# =============================================================================
+
+[oracle_integration]
+# For random regent generation and encounters
+
+[oracle_integration.regent_type_weights]
+# When randomly determining what type of regent is involved
+landed_noble = 40
+temple = 25
+guild = 20
+wizard = 10
+awnshegh = 5
+
+[oracle_integration.disposition_modifiers]
+# Base modifiers based on player character type
+player_is_landed = { landed = -1, temple = 0, guild = 0, wizard = 0 }
+player_is_temple = { landed = 0, temple = 1, guild = -1, wizard = 0 }
+player_is_guild = { landed = 0, temple = -1, guild = -1, wizard = 0 }
+player_is_wizard = { landed = -1, temple = -1, guild = 0, wizard = -1 }
+
+[oracle_integration.random_regent_needs]
+# What might a regent need from the player?
+needs = [
+    { text = "Diplomatic mission to hostile court", weight = 3 },
+    { text = "Military support against enemy", weight = 3 },
+    { text = "Investigation of internal threat", weight = 2 },
+    { text = "Recovery of important item", weight = 2 },
+    { text = "Escort of important person", weight = 2 },
+    { text = "Assassination (deniable)", weight = 1 },
+    { text = "Sabotage of enemy operation", weight = 1 },
+    { text = "Spy mission into enemy territory", weight = 2 },
+    { text = "Negotiation of alliance", weight = 2 },
+    { text = "Protection during crisis", weight = 2 },
+    { text = "Finding lost heir or claimant", weight = 1 },
+    { text = "Magical research assistance", weight = 1 },
+    { text = "Economic assistance", weight = 2 },
+    { text = "Religious mission", weight = 1 },
+    { text = "Monster hunting", weight = 2 }
+]
+
+[oracle_integration.regent_reactions]
+# Quick reaction table for encounters
+reactions = [
+    { text = "Hostile - immediate opposition", range = [1, 3] },
+    { text = "Unfriendly - refuses aid, may obstruct", range = [4, 6] },
+    { text = "Neutral - pure self-interest", range = [7, 10] },
+    { text = "Friendly - willing to help if cost is reasonable", range = [11, 14] },
+    { text = "Helpful - actively aids, may become ally", range = [15, 17] },
+    { text = "Allied - treats player as trusted friend", range = [18, 20] }
+]
+
+[oracle_integration.domain_action_timing]
+# When might a regent take major action?
+timing = [
+    { text = "Immediately - crisis demands response", weight = 1 },
+    { text = "This season - plans already in motion", weight = 2 },
+    { text = "Next season - preparing carefully", weight = 3 },
+    { text = "Within the year - long-term planning", weight = 3 },
+    { text = "Eventually - patient strategist", weight = 2 },
+    { text = "Never - satisfied with status quo", weight = 1 }
+]
+
+# =============================================================================
+# RELATIONSHIP MATRIX
+# =============================================================================
+
+[relationships]
+# Key relationships between major powers
+# Format: [regent1, regent2, relationship_type, intensity]
+# relationship_type: allied, friendly, neutral, unfriendly, hostile, war
+# intensity: 1-5 (1 = minor, 5 = existential)
+
+major_relationships = [
+    ["Darien Avan", "Aeric Boeruine", "hostile", 5],
+    ["Darien Avan", "Gavin Tael", "unfriendly", 3],
+    ["Aeric Boeruine", "Thuriene Donalls", "allied", 4],
+    ["Gavin Tael", "Daeric Mhoried", "hostile", 4],
+    ["Gavin Tael", "Selena Liene", "hostile", 4],
+    ["Gavin Tael", "Marlae Roesone", "unfriendly", 3],
+    ["Daeric Mhoried", "The Gorgon", "war", 5],
+    ["Daeric Mhoried", "Selena Liene", "allied", 3],
+    ["Marlae Roesone", "Heirl Diem", "hostile", 3],
+    ["Heirl Diem", "Suris Enlien", "hostile", 3],
+    ["Caelan Alam", "Laera Tuor", "war", 4],
+    ["Aelwyn", "The Spider", "hostile", 4],
+    ["The Gorgon", "Everyone", "hostile", 5],
+    ["The Spider", "Most_wizards", "hostile", 3],
+    ["Guilder Kalien", "Everyone", "neutral", 1],
+    ["el-Hadid", "Most_traders", "friendly", 2]
+]
+
+# =============================================================================
+# PLOT HOOKS AND CAMPAIGN STARTERS
+# =============================================================================
+
+# =============================================================================
+# CAMPAIGN HOOKS
+# =============================================================================
+
+[[campaign_hooks]]
+title = "The Succession Crisis"
+description = "Both Avan and Boeruine press their claims. War looms. Where does the player stand?"
+involved_regents = ["Darien Avan", "Aeric Boeruine", "Major temple regents"]
+stakes = "The fate of Anuire"
+player_role = "Kingmaker, spy, warrior, diplomat"
+
+[[campaign_hooks]]
+title = "The Gorgon Rises"
+description = "The Gorgon begins a major offensive. Mhoried cannot hold alone."
+involved_regents = ["The Gorgon", "Daeric Mhoried", "Selena Liene"]
+stakes = "Eastern Anuire's survival"
+player_role = "Defender, alliance builder, hero"
+
+[[campaign_hooks]]
+title = "The Iron Baron's Ambition"
+description = "Tael of Ghoere begins conquering neighbors. Who will stop him?"
+involved_regents = ["Gavin Tael", "Mhoried", "Elinie", "Roesone"]
+stakes = "Freedom of eastern realms"
+player_role = "Resistance leader, saboteur, diplomat"
+
+[[campaign_hooks]]
+title = "The Spider's Web"
+description = "The Spider's corruption spreads. Sources are claimed. Wizards disappear."
+involved_regents = ["The Spider", "Aelwyn", "Various wizards"]
+stakes = "Magical balance of region"
+player_role = "Wizard, hunter, investigator"
+
+[[campaign_hooks]]
+title = "The Lost Heir"
+description = "Rumors of a true Roele heir surface. Is it true? Who will find them first?"
+involved_regents = ["Lady Seriene Roele", "Major claimants", "Temple regents"]
+stakes = "Legitimate succession"
+player_role = "Protector, investigator, schemer"
+
+[[campaign_hooks]]
+title = "Holy War"
+description = "The Impregnable Heart calls a crusade. Against whom? At what cost?"
+involved_regents = ["Sir Aeric Diem", "Various temples", "Awnshegh targets"]
+stakes = "Religious direction of Anuire"
+player_role = "Crusader, peacemaker, heretic"
+
+[[campaign_hooks]]
+title = "Trade War"
+description = "The great guilds clash. Economics becomes warfare. Who profits?"
+involved_regents = ["Guilder Kalien", "el-Hadid", "Siele Ghoried"]
+stakes = "Economic control of region"
+player_role = "Merchant, saboteur, mediator"

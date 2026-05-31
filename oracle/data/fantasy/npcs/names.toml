@@ -1,0 +1,73 @@
+# Fantasy NPC Names
+# Names organized by cultural/racial inspiration for diverse fantasy settings
+
+[names]
+
+# Human Names - Common/Medieval
+human_common = [
+  "Aldric", "Brom", "Cedric", "Derwin", "Edmund", "Fabian", "Garrett", "Harald",
+  "Ivan", "Jasper", "Kendrick", "Lothar", "Magnus", "Norbert", "Osric", "Percival",
+  "Quintus", "Roland", "Sigmund", "Theron", "Ulric", "Victor", "Wilhelm", "Xavier",
+  "Yorick", "Zacharias", "Adelaide", "Brunhild", "Cordelia", "Dagmar", "Eleanor",
+  "Freya", "Gwendolyn", "Helena", "Isolde", "Juliana", "Katarina", "Lydia", "Margery",
+  "Natalia", "Octavia", "Priscilla", "Quinn", "Rosalind", "Sylvia", "Tatiana",
+  "Ursula", "Vivienne", "Winifred", "Xenia", "Yvonne", "Zelda"
+]
+
+# Human Names - Norse Inspired
+human_norse = [
+  "Bjorn", "Erik", "Gunnar", "Halfdan", "Ivar", "Jarl", "Knut", "Leif",
+  "Olaf", "Ragnar", "Sven", "Thorvald", "Ulf", "Vidar", "Astrid", "Brynhild",
+  "Dagny", "Eira", "Frida", "Gudrun", "Helga", "Ingrid", "Sigrid", "Thyra"
+]
+
+# Human Names - Eastern Inspired
+human_eastern = [
+  "Aleksei", "Boris", "Dmitri", "Fyodor", "Grigori", "Igor", "Kazimir", "Mikhail",
+  "Nikolai", "Pavel", "Sergei", "Vasili", "Yuri", "Zoran", "Anastasia", "Darya",
+  "Ekaterina", "Galina", "Irina", "Ludmila", "Nadia", "Olga", "Svetlana", "Tatyana"
+]
+
+# Elven Names
+elven = [
+  "Aelindor", "Baelorin", "Caeleth", "Daelothien", "Elowen", "Faelorn", "Galadhrim",
+  "Haelindis", "Ilmarian", "Jaeleth", "Kaeloris", "Liriel", "Maelindor", "Naelori",
+  "Oreleth", "Phaelorn", "Quelindis", "Raelorien", "Saelindra", "Thaelorn",
+  "Uelorien", "Vaelindis", "Waelorin", "Xaeleth", "Yaelindor", "Zaelori",
+  "Aelindra", "Baelowen", "Caelistra", "Daelora", "Elowindra", "Faelorien",
+  "Galadwen", "Haelinor", "Ilmariel", "Jaelowen", "Kaelindra", "Lorindel"
+]
+
+# Dwarven Names
+dwarven = [
+  "Balin", "Borin", "Dain", "Durin", "Farin", "Gimli", "Gloim", "Gromin",
+  "Kili", "Nori", "Oin", "Thorin", "Thrain", "Thror", "Bombur", "Bofur",
+  "Dwalin", "Fundin", "Gloin", "Groin", "Nain", "Bifur", "Dolgrim", "Morgrim",
+  "Rurik", "Snorri", "Ulfgar", "Brokkr", "Hrothgar", "Skaldi", "Disa", "Dis",
+  "Hilda", "Ketil", "Sigrun", "Thyra", "Brunhilda", "Gerdra", "Helgra", "Ingra"
+]
+
+# Halfling/Gnome Names
+halfling = [
+  "Bilbo", "Frodo", "Samwise", "Merry", "Pippin", "Hamfast", "Holman", "Tolman",
+  "Bungo", "Drogo", "Falco", "Largo", "Polo", "Porto", "Fosco", "Ponto",
+  "Belladonna", "Camellia", "Daisy", "Esmeralda", "Lobelia", "Marigold", "Peony",
+  "Primrose", "Rosie", "Tansy", "Amaranth", "Eglantine", "Asphodel", "Pansy",
+  "Finnegan", "Merric", "Osborn", "Wendell", "Corrin", "Garret", "Lidda", "Verna"
+]
+
+# Orcish/Goblin Names
+orcish = [
+  "Azog", "Bolg", "Gorbag", "Grishnakh", "Lugdush", "Muzgash", "Shagrat", "Ugluk",
+  "Gorgoth", "Krusk", "Thokk", "Urzul", "Vorg", "Yagak", "Zulgat", "Morgash",
+  "Skullcrusher", "Bonegnawer", "Bloodfist", "Ironjaw", "Grimtusk", "Blacktooth",
+  "Rageclaw", "Doomhowl", "Gorefang", "Rotgut", "Snagtooth", "Wartface"
+]
+
+# Mysterious/Exotic Names
+exotic = [
+  "Azarael", "Balthazar", "Cassiopeia", "Draven", "Ezekiel", "Faustus", "Gideon",
+  "Hadrian", "Iskandar", "Jezebel", "Kasimir", "Lazarus", "Malachar", "Nephthys",
+  "Orpheus", "Pandora", "Quisara", "Ravenna", "Sethras", "Thanatos", "Ulyssia",
+  "Vesper", "Wulfric", "Xerxes", "Ysolde", "Zarathos", "Mordecai", "Seraphina"
+]

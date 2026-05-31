@@ -1,0 +1,594 @@
+# The Web of Shadows Campaign
+# Theme: Espionage, intrigue, and the Shadow World
+# Scope: Spy network management and covert operations
+
+[campaign]
+id = "web_of_shadows"
+name = "The Web of Shadows"
+tagline = "In the game of shadows, trust is the deadliest poison."
+theme = "espionage"
+difficulty = "hard"
+recommended_bloodline = ["Brenna", "Vorynn", "Azrai"]
+starting_season = "winter"
+starting_year = 550
+
+[campaign.description]
+short = "Unravel the Spider's web of intrigue before Anuire falls from within."
+long = """
+The Spider. No regent is more feared, none more mysterious. From the shadows of
+Lluabraight, this ancient awnshegh has manipulated the politics of Anuire for
+centuries. Assassinations, blackmail, stolen secrets - all threads in a web that
+spans the continent.
+
+Now something has changed. The Spider's agents move with new purpose, and lords
+who seemed secure discover their deepest secrets exposed. Something is being
+prepared, some grand design nearing completion.
+
+You have been drawn into this shadow war - whether as a spymaster yourself,
+a target who survived an assassination, or an agent who learned too much. The
+only way out is through. Find the Spider. Expose the web. Or become another
+fly caught in silk.
+"""
+
+[campaign.pillars]
+primary = "Information is the ultimate weapon"
+secondary = "Every ally may be a traitor, every enemy may be turned"
+tone = "noir intrigue with supernatural horror undertones"
+stakes = "The integrity of all Anuirean institutions"
+
+[campaign.special_mechanics]
+spy_network = true
+shadow_world_access = true
+double_agents = true
+information_tracking = true
+
+# ============================================================================
+# ACT STRUCTURE
+# ============================================================================
+
+[acts.act_1]
+name = "First Thread"
+description = "Discover you are entangled in the Spider's web"
+turn_range = [1, 10]
+objectives = [
+    "Survive the initial contact with the Spider's agents",
+    "Establish your own intelligence network",
+    "Identify at least one Spider operative"
+]
+completion_trigger = "first_operative_identified"
+
+[acts.act_1.starting_state]
+spider_attention = 20
+network_strength = 10
+informants = 0
+cover_integrity = 100
+
+[acts.act_2]
+name = "Strands of Silk"
+description = "Trace the web back to its weaver"
+turn_range = [11, 25]
+objectives = [
+    "Map the Spider's network in your region",
+    "Turn or eliminate key Spider operatives",
+    "Discover the Spider's current objective"
+]
+completion_trigger = "spider_plan_discovered"
+prerequisites = ["act_1_complete"]
+
+[acts.act_2.state_changes]
+spider_attention = 40
+random_event_frequency = "paranoia"
+assassination_attempts = "enabled"
+
+[acts.act_3]
+name = "The Heart of the Web"
+description = "Confront the Spider and end the shadow war"
+turn_range = [26, 36]
+objectives = [
+    "Locate the Spider's true lair",
+    "Assemble forces capable of assaulting Lluabraight",
+    "Destroy or expose the Spider's power base"
+]
+completion_trigger = "spider_confronted"
+prerequisites = ["act_2_complete"]
+
+[acts.act_3.state_changes]
+spider_attention = 80
+endgame = true
+
+# ============================================================================
+# KEY NPCS
+# ============================================================================
+
+[npcs.the_spider]
+name = "The Spider"
+title = "Shadow of Lluabraight"
+role = "primary_antagonist"
+bloodline = { derivation = "Azrai", strength = "true", score = 75 }
+disposition_base = -100
+
+[npcs.the_spider.personality]
+traits = ["patient", "paranoid", "manipulative", "ancient"]
+approach = "indirect_control"
+weakness = "compulsion to gloat, to be proven superior"
+quote = "Every secret you keep, I already know. Every ally you trust, I have already bought."
+
+[npcs.the_spider.goals]
+primary = "Control Anuire through puppets and blackmail"
+secondary = "Prevent any stable power structure from emerging"
+hidden = "Seeks to ascend to true godhood through accumulated blood power"
+
+[npcs.the_spider.resources]
+military_strength = "minimal_direct"
+gold_reserves = "tribute_network"
+spy_network = "continental"
+blackmail_files = "comprehensive"
+
+[npcs.raven]
+name = "The Raven"
+title = "Unknown"
+role = "spider_lieutenant"
+bloodline = { derivation = "Brenna", strength = "major", score = 28 }
+disposition_base = -50  # Secretly conflicted
+
+[npcs.raven.personality]
+traits = ["professional", "cold", "efficient", "haunted"]
+approach = "assassination"
+weakness = "remembers being human"
+quote = "Nothing personal. Just business."
+
+[npcs.raven.goals]
+primary = "Serve the Spider faithfully"
+secondary = "Accumulate enough power to escape servitude"
+hidden = "Seeks redemption, might be turned with right approach"
+
+[npcs.the_merchant]
+name = "Guildmaster Orthien Tane"
+title = "Guildmaster of the Spider River Traders"
+role = "information_broker"
+bloodline = { derivation = "Brenna", strength = "minor", score = 18 }
+disposition_base = 0  # Sells to highest bidder
+
+[npcs.the_merchant.personality]
+traits = ["mercenary", "gregarious", "well-connected"]
+approach = "profit"
+weakness = "greed"
+quote = "Information has a price. Pay it, and we'll talk."
+
+[npcs.the_merchant.goals]
+primary = "Profit from the chaos"
+secondary = "Maintain neutrality between factions"
+hidden = "Secretly terrified of the Spider, cooperates under duress"
+
+[npcs.the_watcher]
+name = "Lore Master Aeric Dosiere"
+title = "Keeper of the College Archives"
+role = "ally"
+bloodline = { derivation = "Vorynn", strength = "major", score = 30 }
+disposition_base = 15
+
+[npcs.the_watcher.personality]
+traits = ["scholarly", "paranoid", "thorough"]
+approach = "documentation"
+weakness = "trusts knowledge over instinct"
+quote = "The Spider leaves traces. Everything leaves traces."
+
+[npcs.the_watcher.goals]
+primary = "Document and expose the Spider's history"
+secondary = "Protect the College from infiltration"
+hidden = "Has discovered something about the Spider's true nature"
+
+[npcs.shadow_guide]
+name = "Kira Vos"
+title = "Shadow Walker"
+role = "dangerous_ally"
+bloodline = { derivation = "Azrai", strength = "minor", score = 20, tainted = true }
+disposition_base = -10  # Wary
+
+[npcs.shadow_guide.personality]
+traits = ["cryptic", "otherworldly", "pragmatic"]
+approach = "shadow_world_navigation"
+weakness = "losing touch with the material world"
+quote = "The Shadow teaches patience. I have learned well."
+
+[npcs.shadow_guide.goals]
+primary = "Maintain balance between worlds"
+secondary = "Prevent the Spider from gaining Shadow World dominion"
+hidden = "Is slowly becoming a creature of the Shadow World"
+
+# ============================================================================
+# CAMPAIGN EVENTS
+# ============================================================================
+
+[events.assassination_warning]
+id = "assassination_warning"
+name = "The Warning"
+act = 1
+turn = 1
+type = "story"
+mandatory = true
+
+[events.assassination_warning.description]
+text = """
+You wake to find a dead crow on your pillow, its throat slit with surgical precision.
+Around its leg, a message: "YOU HAVE BEEN NOTICED. THE SPIDER SENDS REGARDS."
+
+Your guards swear no one entered. Your wards were not breached. Yet someone - or
+something - was close enough to touch you while you slept. The message is clear:
+the Spider could have killed you. It chose not to. Why?
+"""
+
+[[events.assassination_warning.choices]]
+id = "go_public"
+text = "Go public with the threat, rallying support"
+effects = { visibility = 30, allies_alerted = true, spider_attention = 10 }
+consequences = "Others know you are targeted - protection or exploitation?"
+oracle_prompt = "Do potential allies rally to your cause, or do they distance themselves?"
+
+[[events.assassination_warning.choices]]
+id = "investigate_quietly"
+text = "Investigate in secret, trusting no one"
+effects = { intel = 15, paranoia = 10 }
+consequences = "You maintain operational security but work alone"
+oracle_prompt = "Do you find any trace of how the intruder entered?"
+
+[[events.assassination_warning.choices]]
+id = "set_trap"
+text = "Set a trap using yourself as bait"
+effects = { risk = "high", potential_capture = true }
+consequences = "Dangerous but might catch an operative"
+oracle_prompt = "Does another Spider agent take the bait?"
+
+[[events.assassination_warning.choices]]
+id = "flee_location"
+text = "Immediately relocate to a more secure position"
+effects = { survival = 20, reputation = -10 }
+consequences = "You survive but appear weak"
+oracle_prompt = "Does the Spider's agent follow you to your new location?"
+
+[events.first_informant]
+id = "first_informant"
+name = "The Defector"
+act = 1
+turn_range = [3, 6]
+type = "conditional"
+trigger = "intel >= 10"
+
+[events.first_informant.description]
+text = """
+A hooded figure requests a secret meeting. They claim to have worked for the Spider
+for years, and now seek protection in exchange for information. They say they can
+identify three other Spider agents in the region.
+
+The question is: are they truly a defector, or a plant to spread disinformation?
+"""
+
+[[events.first_informant.choices]]
+id = "accept_defector"
+text = "Accept and debrief the defector"
+effects = { informants = 1, potential_intel = 30, risk = "moderate" }
+consequences = "Gain information, but is it reliable?"
+oracle_prompt = "Is the defector genuine or a Spider plant?"
+
+[[events.first_informant.choices]]
+id = "test_defector"
+text = "Accept but feed them false information first"
+effects = { counter_intel = 20, time_spent = true }
+consequences = "Test their loyalty before trusting"
+oracle_prompt = "Does the defector prove reliable under testing?"
+
+[[events.first_informant.choices]]
+id = "reject_defector"
+text = "Refuse contact - too risky"
+effects = { paranoia = 5, missed_opportunity = true }
+consequences = "Safe but potentially missing valuable intelligence"
+oracle_prompt = "Does the defector approach someone else?"
+
+[[events.first_informant.choices]]
+id = "capture_defector"
+text = "Capture and interrogate them"
+effects = { intel_coerced = 20, reputation = -15 }
+consequences = "Forceful approach may yield truth"
+oracle_prompt = "What does intense interrogation reveal?"
+
+[events.shadow_crossing]
+id = "shadow_crossing"
+name = "The Shadow Road"
+act = 2
+turn_range = [12, 16]
+type = "story"
+mandatory = true
+
+[events.shadow_crossing.description]
+text = """
+Your investigation has led to an impossible truth: the Spider uses the Shadow World
+to move unseen across Anuire. The dark reflection of our world, where distances
+compress and time flows strangely, serves as the Spider's highway.
+
+To follow, you must enter the Shadow yourself. The Shadow Walker Kira Vos can guide
+you - but the Shadow World is no place for mortals, and its denizens do not
+welcome trespassers.
+"""
+
+[[events.shadow_crossing.choices]]
+id = "enter_shadow"
+text = "Enter the Shadow World with Kira as guide"
+effects = { shadow_access = true, sanity_risk = 15, intel = 30 }
+consequences = "Gain access to the Spider's secret paths"
+oracle_prompt = "What horrors do you encounter in the Shadow World?"
+
+[[events.shadow_crossing.choices]]
+id = "send_agent"
+text = "Send a trusted agent while you remain in the material world"
+effects = { agent_risk = "extreme", intel = 20 }
+consequences = "Keep your hands clean but risk a valuable operative"
+oracle_prompt = "Does your agent survive the Shadow crossing?"
+
+[[events.shadow_crossing.choices]]
+id = "research_alternative"
+text = "Research other ways to track the Spider's movements"
+effects = { time_spent = true, magical_research = true }
+consequences = "Slower but safer approach"
+oracle_prompt = "Do you find an alternative method to track Shadow paths?"
+
+[[events.shadow_crossing.choices]]
+id = "trap_shadow_exit"
+text = "Stake out known Shadow World exit points"
+effects = { surveillance = 25, patience_required = true }
+consequences = "Watch and wait for the Spider's agents"
+oracle_prompt = "Do you catch anyone emerging from the Shadow?"
+
+[events.double_agent_revealed]
+id = "double_agent_revealed"
+name = "The Betrayer"
+act = 2
+turn_range = [18, 22]
+type = "conditional"
+trigger = "network_strength >= 30"
+
+[events.double_agent_revealed.description]
+text = """
+Catastrophe. One of your most trusted operatives has been feeding information to the
+Spider all along. Operations have been compromised. Informants have disappeared.
+Your entire network may be corrupted.
+
+The double agent has fled, but left behind clues - perhaps intentionally. This could
+be a trap, or an invitation to follow.
+"""
+
+[[events.double_agent_revealed.choices]]
+id = "pursue_traitor"
+text = "Pursue the traitor immediately"
+effects = { vengeance = true, risk = "high", network_damage = -20 }
+consequences = "Hunt them down before they do more damage"
+oracle_prompt = "Can you catch the traitor before they reach the Spider?"
+
+[[events.double_agent_revealed.choices]]
+id = "purge_network"
+text = "Focus on purging remaining compromised elements"
+effects = { network_strength = -30, security = 40 }
+consequences = "Cripple your own network to ensure loyalty"
+oracle_prompt = "How much of your network was compromised?"
+
+[[events.double_agent_revealed.choices]]
+id = "feed_disinformation"
+text = "Use the compromised channel to feed false information"
+effects = { counter_intel = 30, cunning = 20 }
+consequences = "Turn the Spider's weapon against them"
+oracle_prompt = "Does the Spider believe your disinformation?"
+
+[[events.double_agent_revealed.choices]]
+id = "go_dark"
+text = "Shut down all operations and go dark"
+effects = { network_strength = -50, survival = 30 }
+consequences = "Disappear completely to regroup"
+oracle_prompt = "Does the Spider find you while you're dark?"
+
+[events.spider_lair_located]
+id = "spider_lair_located"
+name = "The Heart of Darkness"
+act = 3
+turn_range = [27, 32]
+type = "story"
+mandatory = true
+
+[events.spider_lair_located.description]
+text = """
+At last, you have found it. Deep in the twisted forests of Lluabraight, where the
+Shadow World bleeds into reality, lies the Spider's true lair. Not the obvious
+fortress that decoys search, but a hidden sanctum woven between worlds.
+
+The way is trapped, guarded by things that were once human, and protected by
+centuries of paranoid preparation. But the alternative is to live forever in
+the Spider's shadow.
+"""
+
+[[events.spider_lair_located.choices]]
+id = "covert_infiltration"
+text = "Infiltrate with a small team using stealth"
+effects = { stealth_mission = true, team_risk = "extreme" }
+consequences = "Surgical strike at the heart"
+oracle_prompt = "Can you penetrate the Spider's inner defenses undetected?"
+
+[[events.spider_lair_located.choices]]
+id = "military_assault"
+text = "Gather forces for a direct military assault"
+effects = { military_commitment = "significant", surprise_lost = true }
+consequences = "Overwhelming force against ancient defenses"
+oracle_prompt = "Do your forces break through, or does the Spider escape?"
+
+[[events.spider_lair_located.choices]]
+id = "magical_assault"
+text = "Assault through the Shadow World to bypass physical defenses"
+effects = { shadow_risk = "extreme", magical_support_required = true }
+consequences = "Attack from an unexpected direction"
+oracle_prompt = "Can you navigate the Shadow paths to the Spider's sanctum?"
+
+[[events.spider_lair_located.choices]]
+id = "draw_spider_out"
+text = "Create a situation that forces the Spider to leave the lair"
+effects = { elaborate_plan = true, patience = true }
+consequences = "Face the Spider on your terms"
+oracle_prompt = "What bait would tempt the Spider from their lair?"
+
+[events.spider_confrontation]
+id = "spider_confrontation"
+name = "Caught in the Web"
+act = 3
+turn = 36
+type = "story"
+mandatory = true
+
+[events.spider_confrontation.description]
+text = """
+You stand before the Spider at last. The creature is worse than any description -
+a twisted humanoid form with too many limbs, eyes that see everything, and a voice
+that echoes with the screams of those it has consumed over centuries.
+
+"How amusing," it says, each word dripping with contempt. "The fly thinks itself
+the spider. You have done well, little mortal. Better than most. But you could
+never have reached me unless I allowed it."
+
+The Spider gestures, and darkness closes around you. "Now. Shall we discuss terms?"
+"""
+
+[[events.spider_confrontation.choices]]
+id = "fight_spider"
+text = "Attack with everything you have"
+effects = { combat = true, risk = "legendary" }
+consequences = "Face an awnshegh in direct combat"
+oracle_prompt = "Do your preparations give you any chance against the Spider?"
+
+[[events.spider_confrontation.choices]]
+id = "reveal_trap"
+text = "Spring your own trap"
+effects = { counter_trap = true }
+prerequisites = ["elaborate_trap_prepared"]
+consequences = "Use the Spider's arrogance against it"
+oracle_prompt = "Does your trap catch the Spider by surprise?"
+
+[[events.spider_confrontation.choices]]
+id = "expose_spider"
+text = "Activate your network to expose the Spider to all Anuire simultaneously"
+effects = { exposure = true, network_activation = "all" }
+prerequisites = ["network_strength >= 50"]
+consequences = "Destroy the Spider's power through revelation"
+oracle_prompt = "Does your network succeed in mass exposure?"
+
+[[events.spider_confrontation.choices]]
+id = "negotiate_terms"
+text = "Hear the Spider's terms"
+effects = { negotiation = true, corruption_risk = true }
+consequences = "Perhaps there is a deal to be made"
+oracle_prompt = "What does the Spider offer, and what does it want?"
+
+[[events.spider_confrontation.choices]]
+id = "shadow_escape"
+text = "Flee through the Shadow World"
+effects = { survival = true, spider_pursuit = true }
+prerequisites = ["shadow_access"]
+consequences = "Escape to fight another day"
+oracle_prompt = "Can you escape through the Shadow before the Spider catches you?"
+
+# ============================================================================
+# VICTORY AND FAILURE CONDITIONS
+# ============================================================================
+
+[victory_conditions]
+primary = { type = "spider_destroyed", requirement = "The Spider is killed or permanently banished" }
+alternative_1 = { type = "spider_exposed", requirement = "The Spider's network completely revealed, power broken" }
+alternative_2 = { type = "spider_contained", requirement = "The Spider forced into retreat, shadow network dismantled" }
+
+[failure_conditions]
+death = { trigger = "player_killed", description = "You are killed by Spider agents" }
+corruption = { trigger = "player_joins_spider", description = "You become the Spider's servant" }
+exposure = { trigger = "player_secrets_exposed", description = "Your own secrets destroy you" }
+madness = { trigger = "shadow_madness", description = "The Shadow World claims your sanity" }
+
+# ============================================================================
+# SPY NETWORK MECHANICS
+# ============================================================================
+
+[spy_network]
+enabled = true
+max_informants = 10
+max_operatives = 5
+max_safe_houses = 3
+
+[spy_network.operative_types]
+informant = { cost = 5, intel_per_turn = 2, risk = "low" }
+agent = { cost = 15, intel_per_turn = 5, missions = true, risk = "moderate" }
+assassin = { cost = 30, intel_per_turn = 0, elimination = true, risk = "high" }
+
+[spy_network.operations]
+surveillance = { cost = 2, duration = 3, intel_gain = 10 }
+infiltration = { cost = 5, duration = 1, risk = "high", intel_gain = 25 }
+sabotage = { cost = 8, duration = 1, risk = "extreme", effect = "target_disrupted" }
+assassination = { cost = 15, duration = 1, risk = "extreme", effect = "target_eliminated" }
+counter_intelligence = { cost = 3, duration = "ongoing", effect = "network_protected" }
+
+[spy_network.spider_response]
+attention_threshold_1 = { level = 30, response = "increased_surveillance" }
+attention_threshold_2 = { level = 50, response = "active_hunt" }
+attention_threshold_3 = { level = 70, response = "assassination_priority" }
+attention_threshold_4 = { level = 90, response = "full_network_mobilization" }
+
+# ============================================================================
+# SHADOW WORLD MECHANICS
+# ============================================================================
+
+[shadow_world]
+enabled = true
+sanity_tracking = true
+passage_cost = 5  # Per crossing
+
+[shadow_world.benefits]
+rapid_travel = true
+hidden_movement = true
+spider_tracking = true
+
+[shadow_world.dangers]
+lost_in_shadow = { chance = 10, effect = "delayed_return" }
+shadow_creature = { chance = 15, effect = "combat_encounter" }
+corruption = { chance = 5, effect = "bloodline_taint" }
+madness = { chance = 5, effect = "sanity_loss" }
+
+# ============================================================================
+# CAMPAIGN VARIABLES AND TRACKING
+# ============================================================================
+
+[tracking]
+variables = [
+    "spider_attention",      # How focused the Spider is on you
+    "network_strength",      # Your spy network's power
+    "informants",            # Number of informants
+    "cover_integrity",       # How well your activities are hidden
+    "intel",                 # Accumulated intelligence
+    "shadow_corruption",     # Shadow World taint
+    "raven_disposition",     # Potential double agent
+]
+
+[tracking.thresholds]
+spider_hunt = { variable = "spider_attention", above = 60, event = "spider_sends_hunters" }
+network_discovered = { variable = "cover_integrity", below = 30, event = "network_exposed" }
+raven_turns = { variable = "raven_disposition", above = 30, event = "raven_offers_alliance" }
+
+# ============================================================================
+# CAMPAIGN REWARDS
+# ============================================================================
+
+[rewards]
+spider_destroyed = { title = "Spider's Bane", spy_network = "continental", bloodline_boost = 5 }
+spider_exposed = { title = "Light in Darkness", political_influence = 40, allies = "many" }
+spider_contained = { title = "Shadow Walker", shadow_world_mastery = true, spy_network = "regional" }
+
+# ============================================================================
+# INTEGRATION HOOKS
+# ============================================================================
+
+[integration]
+oracle_table = "birthright/politics/espionage"
+domain_action_mods = { espionage = 3, intrigue = 2, create_spy_network = 2 }
+bloodline_focus = ["Brenna", "Vorynn", "Azrai"]
+connects_to = ["iron_throne", "chosen_bloodline"]
+requires_espionage_mode = true

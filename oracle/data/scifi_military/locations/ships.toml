@@ -1,0 +1,72 @@
+# Sci-Fi Military Ship and Station Locations
+# Starships, space stations, and void installations
+
+[locations]
+entries = [
+  # Capital Ship Areas
+  { text = "The bridge, a cathedral of cogitators and command thrones overlooking the void", weight = 1 },
+  { text = "Primary weapons battery, massive macro-cannons requiring crews of hundreds", weight = 1 },
+  { text = "The ship's chapel, incense-heavy and filled with devotional servitors", weight = 1 },
+  { text = "Engineering deck, a hellscape of plasma conduits and screaming machinery", weight = 1 },
+  { text = "Officer's quarters, opulent compared to crew berths but still cramped", weight = 1 },
+  { text = "Enlisted crew deck, thousands of hammocks strung in vast chambers", weight = 1 },
+  { text = "The brig, cells designed for void exposure execution", weight = 1 },
+  { text = "Ammunition magazine, carefully maintained with religious devotion", weight = 1 },
+  { text = "Flight deck, chaos of launching fighters and returning dropships", weight = 1 },
+  { text = "Medical bay, overwhelmed with casualties from the last engagement", weight = 1 },
+
+  # Support Areas
+  { text = "Mess hall, serving reconstituted protein to thousands at a time", weight = 1 },
+  { text = "Armory, racks of weapons under guard and sacred blessing", weight = 1 },
+  { text = "Training deck, servitors running combat drills endlessly", weight = 1 },
+  { text = "Cryo-storage, thousands of soldiers in frozen suspension", weight = 1 },
+  { text = "Vehicle bay, rows of tanks and walkers secured for void travel", weight = 1 },
+  { text = "Communications center, signals officers monitoring void traffic", weight = 1 },
+  { text = "Navigator's sanctum, shielded and strange with warp-sight equipment", weight = 1 },
+  { text = "Astropathic choir chamber, psykers bound in protective circles", weight = 1 },
+  { text = "Machine spirit core, where tech-priests commune with the ship's AI", weight = 1 },
+  { text = "Reactor chamber, lethal radiation and plasma heart of the vessel", weight = 1 },
+
+  # Damage and Danger
+  { text = "Hull breach section, sealed but atmosphere thin and cold", weight = 1 },
+  { text = "Battle-damaged corridor, bulkheads buckled and lights flickering", weight = 1 },
+  { text = "Contaminated section, chemical spill requiring protective gear", weight = 1 },
+  { text = "Fire suppression zone, foam-filled and visibility near zero", weight = 1 },
+  { text = "Decompression area, emergency bulkheads the only thing preventing void", weight = 1 },
+  { text = "Rad-flooded compartment, lethal to enter without protection", weight = 1 },
+  { text = "Sabotaged section, booby-trapped by infiltrators", weight = 1 },
+  { text = "Xenos-infested cargo hold, something got aboard", weight = 1 },
+  { text = "Haunted observation deck, crew report seeing the dead", weight = 1 },
+  { text = "Quarantined medical wing, plague outbreak contained for now", weight = 1 },
+
+  # Stations and Installations
+  { text = "Orbital defense platform, bristling with weapons pointed at the void", weight = 1 },
+  { text = "Refueling station, promethium tanks large as small moons", weight = 1 },
+  { text = "Customs checkpoint, inspectors examining every ship for contraband", weight = 1 },
+  { text = "Naval drydock, skeleton ships being built or repaired", weight = 1 },
+  { text = "Listening post, arrays pointed at enemy space", weight = 1 },
+  { text = "Prison hulk, decommissioned ship now holding the condemned", weight = 1 },
+  { text = "Hospital ship, overwhelmed with wounded from the front", weight = 1 },
+  { text = "Supply depot, warehouse station feeding the war machine", weight = 1 },
+  { text = "Command station, sector headquarters coordinating fleet movements", weight = 1 },
+  { text = "Research station, classified experiments conducted in isolation", weight = 1 },
+
+  # Transit Points
+  { text = "Warp translation point, reality thin and strange", weight = 1 },
+  { text = "Jump gate hub, ships queuing for faster-than-light transit", weight = 1 },
+  { text = "Asteroid dock, station carved into space rock", weight = 1 },
+  { text = "Gas giant skimmer station, harvesting fuel from atmosphere", weight = 1 },
+  { text = "Lagrange point assembly, ships gathering for convoy", weight = 1 },
+
+  # Specialized
+  { text = "Torpedo loading bay, munitions the size of shuttles", weight = 1 },
+  { text = "Launch tube, fighters stacked and ready for deployment", weight = 1 },
+  { text = "Boarding torpedo bay, assault craft for ship-to-ship combat", weight = 1 },
+  { text = "Shield generator room, technology humming with protective power", weight = 1 },
+  { text = "Gellar field generator, the only thing keeping the warp at bay", weight = 1 },
+  { text = "Teleportarium, rarely used matter transmission chamber", weight = 1 },
+  { text = "Viewing gallery, massive windows showing the void", weight = 1 },
+  { text = "Captain's cabin, surprisingly spartan for the commander", weight = 1 },
+  { text = "Admiral's strategium, hololithic displays of the entire warzone", weight = 1 },
+  { text = "Recycling deck, where the dead become ration material", weight = 1 }
+]

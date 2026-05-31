@@ -1,0 +1,1323 @@
+# ============================================================================
+# POLITICAL INTRIGUE EVENTS - Birthright Solo Oracle
+# ============================================================================
+# A massive table of political complications, crises, and dramatic events
+# that drive Cerilian politics. Use these to generate endless drama.
+# ============================================================================
+
+[meta]
+title = "Political Intrigue Events"
+description = "Random and triggered political events for solo regent play"
+version = "1.0.0"
+author = "Birthright Oracle System"
+
+# ============================================================================
+# SUCCESSION CRISES
+# ============================================================================
+# When the question of who rules becomes contested
+
+[[succession_crises]]
+name = "Unexpected Death"
+description = "Regent dies suddenly without clear succession plan"
+trigger = "Random event, assassination, accident, or illness"
+immediate_effects = [
+    "Power vacuum created",
+    "Multiple claimants emerge",
+    "Domain actions suspended until resolved"
+]
+claimant_generation = [
+    "Eldest child (if any)",
+    "Younger siblings",
+    "Distant relatives with bloodline",
+    "Powerful nobles with weak claims",
+    "Temple-backed candidates",
+    "Foreign claimants through marriage"
+]
+resolution_paths = [
+    "Clear succession accepted",
+    "Council of nobles decides",
+    "Civil war between claimants",
+    "Foreign intervention",
+    "Temple arbitration",
+    "Marriage unites claims"
+]
+oracle_questions = [
+    "How sudden was the death?",
+    "Were there signs of foul play?",
+    "Who benefits most from the death?",
+    "Is the bloodline passed to anyone?",
+    "Do any claimants have foreign backing?"
+]
+
+[[succession_crises]]
+name = "Disputed Heir"
+description = "Legitimacy of designated heir questioned"
+trigger = "Rumors, new evidence, or rival claims"
+immediate_effects = [
+    "Heir's position weakened",
+    "Alternative candidates emerge",
+    "Investigation or trial possible"
+]
+dispute_reasons = [
+    "Illegitimacy claimed (bastard accusations)",
+    "Wrong bloodline (switched at birth, adoption hidden)",
+    "Previous marriage invalidated",
+    "Better claim by another exists",
+    "Heir declared unfit (mental, physical, moral)",
+    "Heir renounced claim (forced or voluntary)"
+]
+oracle_questions = [
+    "Is the accusation true?",
+    "Who benefits from the dispute?",
+    "What evidence exists?",
+    "Will the heir fight for position?",
+    "Can the dispute be resolved peacefully?"
+]
+
+[[succession_crises]]
+name = "Regency Conflict"
+description = "Control over minor heir becomes contested"
+trigger = "Young heir with regent/protector needed"
+immediate_effects = [
+    "Power behind throne contested",
+    "Young heir used as pawn",
+    "Factions form around different regents"
+]
+regent_candidates = [
+    "Queen mother/dowager",
+    "Powerful uncle",
+    "Council of nobles",
+    "Temple authority",
+    "Foreign ally (through treaty)",
+    "Ambitious chancellor"
+]
+oracle_questions = [
+    "Who controls the young heir?",
+    "Is the regent loyal or ambitious?",
+    "Will the heir survive to majority?",
+    "Do factions plan coup at majority?",
+    "Is the heir being educated or manipulated?"
+]
+
+[[succession_crises]]
+name = "Abdication Crisis"
+description = "Regent abdicates or is forced to step down"
+trigger = "Defeat, scandal, religious conversion, or exhaustion"
+immediate_effects = [
+    "Sudden transfer of power",
+    "May not follow normal succession",
+    "Bloodline transfer considerations"
+]
+abdication_reasons = [
+    "Military defeat and disgrace",
+    "Scandal too great to survive",
+    "Religious calling (joins temple)",
+    "Physical or mental decline",
+    "Forced by nobles or foreign power",
+    "Voluntary retirement"
+]
+oracle_questions = [
+    "Is the abdication voluntary?",
+    "Who gains from this?",
+    "Does the former regent retain any power?",
+    "Is there a designated successor?",
+    "Will the former regent stay in the domain?"
+]
+
+[[succession_crises]]
+name = "Bloodline Extinction"
+description = "Ruling bloodline has no heirs"
+trigger = "Last member of bloodline dies without heirs"
+immediate_effects = [
+    "Domain loses bloodline benefits",
+    "Major power vacuum",
+    "Multiple factions claim legitimacy"
+]
+resolution_paths = [
+    "Bloodline passes through investiture to new regent",
+    "Unrelated dynasty takes over (no bloodline)",
+    "Foreign blooded regent claims domain",
+    "Temple assumes control",
+    "Domain fragments"
+]
+oracle_questions = [
+    "Are there any hidden heirs?",
+    "Does anyone have a claim through ancient marriage?",
+    "Will a foreign power seize the opportunity?",
+    "Can the bloodline be recreated through bloodtheft?",
+    "What happens to the domain's regency?"
+]
+
+# ============================================================================
+# PRETENDERS AND IMPOSTORS
+# ============================================================================
+# False or disputed claimants to power
+
+[[pretenders]]
+name = "Lost Heir Returns"
+description = "Someone claims to be long-lost legitimate heir"
+trigger = "Random appearance or manufactured claim"
+immediate_effects = [
+    "Current succession challenged",
+    "Investigation launched",
+    "Factions form around pretender"
+]
+authenticity_factors = [
+    "Physical resemblance to family",
+    "Knowledge of family secrets",
+    "Bloodline abilities manifested",
+    "Witnesses to survival",
+    "Documentation (real or forged)"
+]
+oracle_questions = [
+    "Is the pretender genuine?",
+    "Who is backing the pretender?",
+    "What evidence supports the claim?",
+    "How does the current ruler respond?",
+    "Do the people want to believe?"
+]
+
+[[pretenders]]
+name = "Bastard Revealed"
+description = "Illegitimate child of regent claims recognition"
+trigger = "Deathbed confession, blackmail, or genuine claim"
+immediate_effects = [
+    "Succession complicated",
+    "Legitimate heirs threatened",
+    "Scandal potential"
+]
+bastard_status_options = [
+    "Acknowledged but not legitimized",
+    "Legitimized with inheritance rights",
+    "Denied and disinherited",
+    "Eliminated quietly",
+    "Given lesser position (church, military)"
+]
+oracle_questions = [
+    "Is the bastard claim genuine?",
+    "Does the bastard have bloodline?",
+    "How do legitimate heirs react?",
+    "Was the affair known or secret?",
+    "What does the bastard actually want?"
+]
+
+[[pretenders]]
+name = "False Regent"
+description = "Impostor has replaced or is impersonating the regent"
+trigger = "Magical deception, body double, or conspiracy"
+immediate_effects = [
+    "True regent imprisoned, dead, or exiled",
+    "Impostor ruling domain",
+    "Eventually discovered or not"
+]
+impostor_methods = [
+    "Magical disguise (polymorph, illusion)",
+    "Identical twin or doppelganger",
+    "Gradual replacement after isolation",
+    "Conspiracy with court to hide the switch"
+]
+oracle_questions = [
+    "How long has the impostor ruled?",
+    "What happened to the real regent?",
+    "Who knows the truth?",
+    "Does anyone suspect?",
+    "What are the impostor's goals?"
+]
+
+[[pretenders]]
+name = "Prophecy Fulfillment"
+description = "Someone claims to be prophesied ruler or savior"
+trigger = "Interpretation of ancient prophecy or divine sign"
+immediate_effects = [
+    "Religious movement forms",
+    "Current authority challenged spiritually",
+    "Potential religious war"
+]
+oracle_questions = [
+    "Is the prophecy genuine?",
+    "Does the claimant actually fit the prophecy?",
+    "Which temples support or oppose?",
+    "Do the people believe?",
+    "Is this a genuine belief or manipulation?"
+]
+
+# ============================================================================
+# NOBLE FEUDS
+# ============================================================================
+# Conflicts between powerful families
+
+[[noble_feuds]]
+name = "Blood Feud"
+description = "Two noble houses locked in generations-old vendetta"
+trigger = "Ancient wrong, inheritance dispute, or honor violation"
+immediate_effects = [
+    "Violence between families",
+    "Court divided",
+    "Regent forced to take sides or mediate"
+]
+feud_origins = [
+    "Murder of family member",
+    "Land stolen generations ago",
+    "Broken betrothal or marriage alliance",
+    "Betrayal during war",
+    "Insult to family honor",
+    "Competition for same position or prize"
+]
+escalation_events = [
+    "Assassination of family member",
+    "Raid on family lands",
+    "Duel kills important person",
+    "Marriage to family enemy",
+    "Public humiliation",
+    "Economic warfare"
+]
+oracle_questions = [
+    "What started the feud originally?",
+    "Does anyone remember the real cause?",
+    "Are there moderates on either side?",
+    "What would it take to end the feud?",
+    "Who benefits from the feud continuing?"
+]
+
+[[noble_feuds]]
+name = "Inheritance Dispute"
+description = "Noble families contest ownership of lands or titles"
+trigger = "Death, unclear will, or competing claims"
+immediate_effects = [
+    "Legal battle in regent's court",
+    "Potential violence if not resolved",
+    "Both families seeking allies"
+]
+dispute_subjects = [
+    "Province or holding",
+    "Noble title and status",
+    "Family treasures or heirlooms",
+    "Bloodline connection to greater house",
+    "Trade rights or monopolies",
+    "Marriage contract obligations"
+]
+oracle_questions = [
+    "Which claim is legally stronger?",
+    "Which claimant has more power?",
+    "Is there a compromise possible?",
+    "Will the dispute turn violent?",
+    "How does this affect the regent's domain?"
+]
+
+[[noble_feuds]]
+name = "Honor Duel"
+description = "Noble demands satisfaction for perceived insult"
+trigger = "Public insult, accusation, or offense"
+immediate_effects = [
+    "Duel challenged",
+    "Court intrigue to prevent or ensure outcome",
+    "Death may cause further feuding"
+]
+duel_causes = [
+    "Accusation of cowardice",
+    "Insult to spouse or family",
+    "Cheating or dishonesty claimed",
+    "Romantic rivalry",
+    "Political accusation",
+    "Personal vendetta"
+]
+oracle_questions = [
+    "Is the insult genuine or manufactured?",
+    "Can the duel be prevented?",
+    "Is the duel fairly fought?",
+    "What are the consequences of either outcome?",
+    "Does the duel actually resolve the conflict?"
+]
+
+[[noble_feuds]]
+name = "Faction War"
+description = "Noble houses split into opposing political camps"
+trigger = "Policy dispute, succession question, or external pressure"
+immediate_effects = [
+    "Court divided into hostile camps",
+    "Governance paralyzed",
+    "Risk of civil war"
+]
+faction_divisions = [
+    "Traditional vs. reformist",
+    "Pro-war vs. pro-peace",
+    "Religious factions",
+    "Foreign policy alignment",
+    "Economic interests",
+    "Generational divide"
+]
+oracle_questions = [
+    "What is the core dispute?",
+    "Can the regent remain above the factions?",
+    "Which faction is stronger?",
+    "Is compromise possible?",
+    "Will this lead to civil war?"
+]
+
+# ============================================================================
+# RELIGIOUS SCHISMS
+# ============================================================================
+# When faith becomes a source of conflict
+
+[[religious_schisms]]
+name = "Heresy Movement"
+description = "Breakaway religious movement challenges orthodox temple"
+trigger = "Charismatic leader, corruption scandal, or theological dispute"
+immediate_effects = [
+    "Temple authority challenged",
+    "Population divided",
+    "Possible persecution or tolerance choice"
+]
+heresy_types = [
+    "Different interpretation of doctrine",
+    "New prophet or revelation claimed",
+    "Return to original/pure practices",
+    "Syncretism with another faith",
+    "Rejection of temple hierarchy",
+    "New god or aspect worship"
+]
+oracle_questions = [
+    "What do the heretics actually believe?",
+    "Is there truth to their claims?",
+    "How does the orthodox temple respond?",
+    "Does the secular authority support orthodoxy?",
+    "Will this spread to other domains?"
+]
+
+[[religious_schisms]]
+name = "Temple Power Struggle"
+description = "Contest for control of major temple holding"
+trigger = "Death of high priest, corruption accusation, or rival claim"
+immediate_effects = [
+    "Temple divided",
+    "Religious services disrupted",
+    "Secular rulers may intervene"
+]
+power_struggle_causes = [
+    "Succession dispute for high priest",
+    "Corruption purge vs. old guard",
+    "Theological faction gaining power",
+    "Foreign temple interference",
+    "Secular ruler backing different candidate"
+]
+oracle_questions = [
+    "Who are the main contenders?",
+    "What is the theological cover for the power struggle?",
+    "Do the common faithful care?",
+    "Will secular rulers intervene?",
+    "What does this mean for temple holdings?"
+]
+
+[[religious_schisms]]
+name = "Divine Disapproval"
+description = "Signs suggest god is displeased with temple or ruler"
+trigger = "Natural disaster, failed prayers, or prophetic warning"
+immediate_effects = [
+    "Crisis of faith",
+    "Blame assigned",
+    "Demands for change"
+]
+signs_of_disapproval = [
+    "Natural disaster strikes faithful area",
+    "Healings and blessings fail",
+    "Temple livestock sicken",
+    "Prophets deliver warnings",
+    "Religious festivals disrupted",
+    "Holy sites desecrated by seeming divine will"
+]
+oracle_questions = [
+    "Is the divine disapproval genuine?",
+    "What specifically displeased the god?",
+    "Who is blamed for the offense?",
+    "What penance is demanded?",
+    "Does this strengthen or weaken faith?"
+]
+
+[[religious_schisms]]
+name = "Interfaith Conflict"
+description = "Temples of different gods come into violent conflict"
+trigger = "Territorial dispute, doctrinal clash, or historical enmity"
+immediate_effects = [
+    "Violence between faiths",
+    "Population divided by religion",
+    "Secular authority must choose sides or suppress both"
+]
+conflict_causes = [
+    "Competing claims to sacred site",
+    "Conversion efforts in each other's territory",
+    "One faith declared heretical by another",
+    "Historical grudge (crusades, persecutions)",
+    "Economic competition for tithes"
+]
+oracle_questions = [
+    "Can peaceful coexistence be restored?",
+    "Which faith has more martial power?",
+    "Do the common people support the conflict?",
+    "Will this become holy war?",
+    "Is there outside manipulation?"
+]
+
+# ============================================================================
+# TRADE WARS AND ECONOMIC CONFLICTS
+# ============================================================================
+# When commerce becomes a battlefield
+
+[[trade_wars]]
+name = "Merchant Guild War"
+description = "Competing guilds fight for economic dominance"
+trigger = "Market share conflict, broken agreements, or personal rivalry"
+immediate_effects = [
+    "Trade disrupted",
+    "Prices fluctuate wildly",
+    "Violence possible"
+]
+guild_tactics = [
+    "Price cutting wars",
+    "Bribery of officials",
+    "Sabotage of competitors",
+    "Exclusive dealing demands",
+    "Hiring away key personnel",
+    "Rumor campaigns",
+    "Physical intimidation"
+]
+oracle_questions = [
+    "Which guild is more powerful?",
+    "What is the specific flashpoint?",
+    "Does the regent favor one side?",
+    "Will this affect domain income?",
+    "Are there criminal connections?"
+]
+
+[[trade_wars]]
+name = "Trade Route Disputed"
+description = "Control of vital trade route contested"
+trigger = "New route discovered, old route blocked, or power shift"
+immediate_effects = [
+    "Multiple parties claim control",
+    "Trade delayed or rerouted",
+    "Military posturing"
+]
+route_disputes = [
+    "Mountain pass control",
+    "River navigation rights",
+    "Sea lane protection",
+    "Caravan stops and oases",
+    "Bridge or ferry monopoly"
+]
+oracle_questions = [
+    "Who currently controls the route?",
+    "What is the route's economic value?",
+    "Can alternative routes be used?",
+    "Will this lead to military action?",
+    "Are third parties affected?"
+]
+
+[[trade_wars]]
+name = "Embargo/Sanctions"
+description = "Economic warfare through trade restrictions"
+trigger = "Political dispute, war, or economic competition"
+immediate_effects = [
+    "Target domain loses trade income",
+    "Smuggling increases",
+    "Diplomatic tensions rise"
+]
+embargo_effects = [
+    "Shortage of imported goods",
+    "Export market lost",
+    "Prices increase",
+    "Black market flourishes",
+    "Dependent domains suffer"
+]
+oracle_questions = [
+    "Is the embargo effective?",
+    "Who suffers more from the embargo?",
+    "Do third parties respect the embargo?",
+    "How long can the target endure?",
+    "What would lift the embargo?"
+]
+
+[[trade_wars]]
+name = "Currency Crisis"
+description = "Economic instability threatens domain finances"
+trigger = "Debasement, counterfeiting, or loss of confidence"
+immediate_effects = [
+    "Trade disrupted",
+    "Prices unstable",
+    "Domain income reduced"
+]
+crisis_causes = [
+    "Coin debasement (reduced precious metal)",
+    "Counterfeiting epidemic",
+    "Trade balance collapse",
+    "War costs unsustainable",
+    "Foreign currency manipulation"
+]
+oracle_questions = [
+    "What caused the crisis?",
+    "Who benefits from the instability?",
+    "Can confidence be restored?",
+    "What are the long-term effects?",
+    "Is there foreign involvement?"
+]
+
+# ============================================================================
+# PROXY CONFLICTS
+# ============================================================================
+# Wars fought through allies and intermediaries
+
+[[proxy_conflicts]]
+name = "Client State Rebellion"
+description = "Vassal or allied state rebels against patron"
+trigger = "Patron weakness, new foreign backing, or internal change"
+immediate_effects = [
+    "Alliance system tested",
+    "Military options considered",
+    "Other clients watch carefully"
+]
+rebellion_causes = [
+    "Tribute demands too high",
+    "Patron failed protection obligation",
+    "New foreign power offers better terms",
+    "Nationalism and independence sentiment",
+    "New ruler with different policy"
+]
+oracle_questions = [
+    "Can the rebellion be suppressed?",
+    "Who is backing the rebels?",
+    "Will other clients rebel?",
+    "What is the minimum acceptable outcome?",
+    "Can the relationship be rebuilt?"
+]
+
+[[proxy_conflicts]]
+name = "Border Proxy War"
+description = "Small states fight while great powers back different sides"
+trigger = "Regional dispute exploited by larger powers"
+immediate_effects = [
+    "Local war with foreign funding",
+    "Risk of escalation",
+    "Refugee and economic spillover"
+]
+proxy_war_dynamics = [
+    "Arms supplies to favored side",
+    "Advisors and volunteers",
+    "Economic support",
+    "Diplomatic backing",
+    "Pressure on neutrals"
+]
+oracle_questions = [
+    "Which great powers are involved?",
+    "What are the actual local issues?",
+    "Can the war be contained?",
+    "What triggers escalation?",
+    "Who wins locally vs. who wins strategically?"
+]
+
+[[proxy_conflicts]]
+name = "Rival Regent Support"
+description = "Foreign power backs pretender or rival to your throne"
+trigger = "Foreign interest in weakening or controlling your domain"
+immediate_effects = [
+    "Internal opposition gains resources",
+    "External pressure increases",
+    "Potential civil war"
+]
+foreign_support_forms = [
+    "Money to opposition",
+    "Military advisors",
+    "Safe haven for rebels",
+    "Diplomatic recognition of rival",
+    "Economic pressure on loyalists"
+]
+oracle_questions = [
+    "Who is backing your rival?",
+    "What do they want?",
+    "Can you match their support?",
+    "Is there internal sympathy for the rival?",
+    "Can you negotiate with the foreign power?"
+]
+
+# ============================================================================
+# BLACKMAIL AND SECRETS
+# ============================================================================
+# The currency of shadows
+
+[[blackmail_opportunities]]
+name = "Compromising Discovery"
+description = "Learn damaging secret about important figure"
+trigger = "Espionage, accident, or confession"
+immediate_effects = [
+    "Leverage obtained",
+    "Decision: use, hold, or reveal",
+    "Target may suspect you know"
+]
+secret_types = [
+    "Adultery or illegitimate children",
+    "Financial crimes or corruption",
+    "Murder or past violence",
+    "Heresy or forbidden practices",
+    "Treason or foreign allegiance",
+    "Shameful cowardice or failure",
+    "Hidden bloodline status",
+    "Awnshegh connection"
+]
+oracle_questions = [
+    "How damaging is the secret really?",
+    "Who else knows?",
+    "What would the target do to keep it secret?",
+    "Is the information verified?",
+    "What are the risks of using it?"
+]
+
+[[blackmail_opportunities]]
+name = "Blackmailer Appears"
+description = "Someone attempts to blackmail you or your ally"
+trigger = "Past secret surfaces, or enemy operation"
+immediate_effects = [
+    "Demands received",
+    "Decision: pay, fight, or confess",
+    "Clock ticking"
+]
+blackmailer_types = [
+    "Professional information broker",
+    "Disgruntled former servant",
+    "Rival who discovered secret",
+    "Criminals who stumbled onto information",
+    "Foreign intelligence operation"
+]
+oracle_questions = [
+    "What do they actually know?",
+    "What are they demanding?",
+    "Can you identify the blackmailer?",
+    "Can the blackmail be stopped?",
+    "Is it better to preempt with confession?"
+]
+
+[[blackmail_opportunities]]
+name = "Secret Alliance Revealed"
+description = "Hidden diplomatic arrangement becomes public"
+trigger = "Leak, betrayal, or espionage"
+immediate_effects = [
+    "Diplomatic crisis",
+    "Other parties feel betrayed",
+    "Realignment possible"
+]
+oracle_questions = [
+    "How damaging is the revelation?",
+    "Who leaked and why?",
+    "Can the alliance survive exposure?",
+    "What do other powers think?",
+    "Does this force action before ready?"
+]
+
+# ============================================================================
+# SECRET SOCIETIES
+# ============================================================================
+# Hidden powers operating in the shadows
+
+[[secret_societies]]
+name = "Ancient Conspiracy"
+description = "Hidden organization with centuries-old agenda"
+trigger = "Discovery or interference with their plans"
+immediate_effects = [
+    "Powerful enemy made",
+    "Unclear scope of threat",
+    "Allies may be compromised"
+]
+conspiracy_types = [
+    "Bloodline preservation society",
+    "Remnants of fallen empire",
+    "Hidden temple of forbidden god",
+    "Merchant cabal controlling trade",
+    "Mage conspiracy protecting secrets",
+    "Awnshegh cult"
+]
+conspiracy_goals = [
+    "Restore ancient dynasty",
+    "Protect forbidden knowledge",
+    "Control regional politics",
+    "Prevent specific prophecy",
+    "Accumulate power secretly",
+    "Prepare for future threat"
+]
+oracle_questions = [
+    "How old is the conspiracy?",
+    "Who are the current leaders?",
+    "What resources do they control?",
+    "Who among your people serves them?",
+    "What do they actually want?"
+]
+
+[[secret_societies]]
+name = "Cult Emergence"
+description = "Hidden religious movement becomes active"
+trigger = "New leader, prophetic timing, or desperation"
+immediate_effects = [
+    "Converts appear",
+    "Orthodox temples alarmed",
+    "Potential violence"
+]
+cult_characteristics = [
+    "Charismatic leader",
+    "Promise of power/salvation",
+    "Secret rituals",
+    "Demand for loyalty over other bonds",
+    "Gradual revelation of true beliefs"
+]
+oracle_questions = [
+    "What does the cult actually worship?",
+    "Is there genuine supernatural power?",
+    "How many have joined secretly?",
+    "Are any important figures members?",
+    "Is the cult dangerous or benign?"
+]
+
+[[secret_societies]]
+name = "Shadow Council Discovered"
+description = "Learn of hidden power group influencing politics"
+trigger = "Investigation, defector, or accident"
+immediate_effects = [
+    "True power structure revealed",
+    "Official structures may be puppets",
+    "Danger if they know you know"
+]
+shadow_council_types = [
+    "Elder nobles with real power",
+    "Merchant princes controlling economy",
+    "Temple hierarchy with secular ambitions",
+    "Guild masters united",
+    "Foreign power's local agents",
+    "Blooded cabal"
+]
+oracle_questions = [
+    "Who sits on the shadow council?",
+    "What decisions do they actually make?",
+    "Are the official rulers aware?",
+    "Can you join, oppose, or ignore them?",
+    "What is their relationship to you?"
+]
+
+# ============================================================================
+# FORBIDDEN ROMANCES
+# ============================================================================
+# Love that threatens political order
+
+[[forbidden_romances]]
+name = "Cross-Class Love"
+description = "Noble loves commoner or otherwise inappropriate match"
+trigger = "Genuine emotion vs. social expectation"
+immediate_effects = [
+    "Scandal potential",
+    "Family opposition",
+    "Difficult choices ahead"
+]
+complications = [
+    "Expected political marriage threatened",
+    "Heir's legitimacy questioned if marriage happens",
+    "Lover may be used as leverage",
+    "Family may act against lover",
+    "Elopement possible"
+]
+oracle_questions = [
+    "Is the love genuine on both sides?",
+    "What would reconciliation require?",
+    "Will they choose love or duty?",
+    "Is someone manipulating the situation?",
+    "What are the long-term consequences?"
+]
+
+[[forbidden_romances]]
+name = "Political Enemy Romance"
+description = "Falls in love with member of rival/enemy family or domain"
+trigger = "Meeting in unexpected circumstances"
+immediate_effects = [
+    "Divided loyalties",
+    "Romeo and Juliet situation",
+    "Potential for peace or disaster"
+]
+oracle_questions = [
+    "Do both families know?",
+    "Could this end the feud?",
+    "Is either being used as a pawn?",
+    "What would happen if discovered?",
+    "Is marriage possible?"
+]
+
+[[forbidden_romances]]
+name = "Affair Discovered"
+description = "Secret romantic relationship becomes known"
+trigger = "Caught, confession, or exposure"
+immediate_effects = [
+    "Scandal breaks",
+    "Marriages threatened",
+    "Possible bastard complications"
+]
+affair_complications = [
+    "Children from the affair",
+    "Political alliance threatened",
+    "Violence from wronged party",
+    "Blackmail opportunity",
+    "Divorce proceedings"
+]
+oracle_questions = [
+    "How public is the discovery?",
+    "What does the wronged spouse do?",
+    "Are there children involved?",
+    "Can this be hushed up?",
+    "What are the political ramifications?"
+]
+
+[[forbidden_romances]]
+name = "Seduction Plot"
+description = "Romance is actually manipulation for political ends"
+trigger = "Espionage or political scheming"
+immediate_effects = [
+    "Target compromised",
+    "Secrets vulnerable",
+    "Potential for betrayal or turning"
+]
+plot_goals = [
+    "Extract information",
+    "Influence decisions",
+    "Create blackmail material",
+    "Position for assassination",
+    "Create succession complication"
+]
+oracle_questions = [
+    "Is the seduction purely mercenary?",
+    "Does genuine feeling develop?",
+    "Will the target discover the truth?",
+    "What information is being extracted?",
+    "Can the seducer be turned?"
+]
+
+# ============================================================================
+# BASTARD AND HIDDEN HEIR REVELATIONS
+# ============================================================================
+# When bloodlines become complicated
+
+[[bastard_revelations]]
+name = "Regent's Secret Child"
+description = "Unknown offspring of regent revealed"
+trigger = "Deathbed confession, blackmail, or child's emergence"
+immediate_effects = [
+    "Succession complicated",
+    "Legitimate heirs threatened",
+    "Bloodline questions"
+]
+revelation_methods = [
+    "Dying parent confesses",
+    "Child appears claiming heritage",
+    "Blackmailer provides proof",
+    "Records discovered",
+    "Resemblance too obvious to ignore"
+]
+oracle_questions = [
+    "Is the claim true?",
+    "Does the child have bloodline abilities?",
+    "What does the child want?",
+    "How do legitimate heirs respond?",
+    "Can the child be bought off or must be dealt with?"
+]
+
+[[bastard_revelations]]
+name = "Hidden Bloodline"
+description = "Previously unknown blood heritage revealed"
+trigger = "Blood ability manifestation or lineage research"
+immediate_effects = [
+    "New claims possible",
+    "New enemies or allies",
+    "Identity questions"
+]
+hidden_bloodline_types = [
+    "Commoner descended from noble line",
+    "Enemy bloodline in your own family",
+    "Awnshegh ancestry",
+    "Lost royal bloodline survivor",
+    "Cross-cultural bloodline"
+]
+oracle_questions = [
+    "How strong is the bloodline?",
+    "What abilities manifest?",
+    "Does this create claims or enemies?",
+    "Was the hiding deliberate?",
+    "How does this change identity?"
+]
+
+[[bastard_revelations]]
+name = "Switched at Birth"
+description = "True heritage of raised child revealed"
+trigger = "Deathbed confession, investigation, or magical revelation"
+immediate_effects = [
+    "Identity crisis",
+    "Succession questions",
+    "Family chaos"
+]
+switch_circumstances = [
+    "Protecting true heir from danger",
+    "Providing heir to childless noble",
+    "Hiding shameful parentage",
+    "Servant's ambition",
+    "Fae mischief (changeling)"
+]
+oracle_questions = [
+    "Who was really switched?",
+    "Where is the other child?",
+    "Can this be kept secret?",
+    "What happens to the impostor?",
+    "Does bloodline follow biology or upbringing?"
+]
+
+# ============================================================================
+# GENERAL POLITICAL COMPLICATIONS
+# ============================================================================
+# Miscellaneous events that complicate political life
+
+[[general_complications]]
+name = "Foreign Marriage Demand"
+description = "Powerful foreign ruler demands marriage alliance"
+trigger = "Diplomatic overture or ultimatum"
+immediate_effects = [
+    "Must respond to proposal",
+    "Refusal may have consequences",
+    "Acceptance changes politics"
+]
+oracle_questions = [
+    "What are the terms of the proposal?",
+    "What happens if refused?",
+    "Is this a genuine alliance offer or trap?",
+    "What do the prospective spouses think?",
+    "How do current allies view this?"
+]
+
+[[general_complications]]
+name = "Hostage Situation"
+description = "Important person held by foreign power"
+trigger = "War, failed negotiation, or kidnapping"
+immediate_effects = [
+    "Leverage against you",
+    "Rescue options considered",
+    "Negotiation required"
+]
+oracle_questions = [
+    "Who is held and by whom?",
+    "What are the demands?",
+    "Is rescue possible?",
+    "What is the hostage worth?",
+    "What happens if demands aren't met?"
+]
+
+[[general_complications]]
+name = "Regent Illness"
+description = "Regent becomes seriously ill or incapacitated"
+trigger = "Disease, poison, or aging"
+immediate_effects = [
+    "Succession questions arise",
+    "Regency may be needed",
+    "Vultures circle"
+]
+oracle_questions = [
+    "How serious is the illness?",
+    "Is it natural or foul play?",
+    "Who gains from incapacitation?",
+    "Can it be cured?",
+    "What happens to domain affairs?"
+]
+
+[[general_complications]]
+name = "Court Scandal"
+description = "Shocking revelation rocks the court"
+trigger = "Exposure, confession, or discovery"
+immediate_effects = [
+    "Reputations damaged",
+    "Alliances tested",
+    "Distraction from governance"
+]
+scandal_types = [
+    "Financial corruption exposed",
+    "Sexual impropriety revealed",
+    "Cowardice in battle disclosed",
+    "Secret alliance discovered",
+    "Murder or violence uncovered",
+    "Heresy accusations"
+]
+oracle_questions = [
+    "What is the scandal?",
+    "Who is affected?",
+    "Is it true?",
+    "Who benefits from the scandal?",
+    "Can reputations be salvaged?"
+]
+
+[[general_complications]]
+name = "Noble Defection"
+description = "Important noble switches allegiance to rival power"
+trigger = "Grievance, bribery, or ideology"
+immediate_effects = [
+    "Holdings may be lost",
+    "Intelligence compromised",
+    "Other nobles questioned"
+]
+oracle_questions = [
+    "Why did they defect?",
+    "What do they bring to the enemy?",
+    "Can they be brought back?",
+    "Who else might defect?",
+    "What is the response to treason?"
+]
+
+[[general_complications]]
+name = "Diplomatic Incident"
+description = "Event damages relations with foreign power"
+trigger = "Accident, insult, or provocation"
+immediate_effects = [
+    "Relations damaged",
+    "Apology or explanation demanded",
+    "Escalation possible"
+]
+incident_types = [
+    "Ambassador insulted",
+    "Border violation",
+    "Citizen harmed in your territory",
+    "Flag or symbol desecrated",
+    "Tariff or trade violation",
+    "Spy caught"
+]
+oracle_questions = [
+    "What exactly happened?",
+    "Was it deliberate or accidental?",
+    "What response is demanded?",
+    "Can it be smoothed over?",
+    "Is this pretext for something else?"
+]
+
+[[general_complications]]
+name = "Popular Unrest"
+description = "Common people grow restless or rebellious"
+trigger = "Taxes, war, famine, or injustice"
+immediate_effects = [
+    "Province loyalty drops",
+    "Violence possible",
+    "Demands for change"
+]
+unrest_causes = [
+    "Heavy taxation",
+    "Conscription for unpopular war",
+    "Food shortage",
+    "Religious persecution",
+    "Noble oppression",
+    "Foreign influence"
+]
+oracle_questions = [
+    "What do the people want?",
+    "Who leads the unrest?",
+    "Can demands be met?",
+    "Will this spread?",
+    "Is foreign power stirring trouble?"
+]
+
+[[general_complications]]
+name = "Mysterious Death"
+description = "Important person dies under suspicious circumstances"
+trigger = "Murder, accident, or natural death"
+immediate_effects = [
+    "Investigation demanded",
+    "Accusations fly",
+    "Succession or replacement needed"
+]
+death_circumstances = [
+    "Poison suspected",
+    "Fall or accident",
+    "Apparent suicide",
+    "Illness (too convenient)",
+    "Disappeared",
+    "Violence with no clear perpetrator"
+]
+oracle_questions = [
+    "Was it murder?",
+    "Who benefits from the death?",
+    "What evidence exists?",
+    "Will justice be found?",
+    "What are the political consequences?"
+]
+
+# ============================================================================
+# ORACLE TABLES - INTRIGUE EVENT GENERATION
+# ============================================================================
+# Roll to generate random intrigue events
+
+[oracle_tables]
+
+[[oracle_tables.event_category]]
+d10 = 1
+category = "Succession Crisis"
+subtable = "succession_crises"
+
+[[oracle_tables.event_category]]
+d10 = 2
+category = "Pretender/Impostor"
+subtable = "pretenders"
+
+[[oracle_tables.event_category]]
+d10 = 3
+category = "Noble Feud"
+subtable = "noble_feuds"
+
+[[oracle_tables.event_category]]
+d10 = 4
+category = "Religious Schism"
+subtable = "religious_schisms"
+
+[[oracle_tables.event_category]]
+d10 = 5
+category = "Trade War"
+subtable = "trade_wars"
+
+[[oracle_tables.event_category]]
+d10 = 6
+category = "Proxy Conflict"
+subtable = "proxy_conflicts"
+
+[[oracle_tables.event_category]]
+d10 = 7
+category = "Blackmail/Secrets"
+subtable = "blackmail_opportunities"
+
+[[oracle_tables.event_category]]
+d10 = 8
+category = "Secret Society"
+subtable = "secret_societies"
+
+[[oracle_tables.event_category]]
+d10 = 9
+category = "Forbidden Romance"
+subtable = "forbidden_romances"
+
+[[oracle_tables.event_category]]
+d10 = 10
+category = "General Complication"
+subtable = "general_complications"
+
+[[oracle_tables.event_severity]]
+d6 = 1
+severity = "Minor"
+description = "Annoying but manageable"
+domain_impact = "None to minimal"
+
+[[oracle_tables.event_severity]]
+d6 = 2
+severity = "Minor"
+description = "Requires attention"
+domain_impact = "Minor resource expenditure"
+
+[[oracle_tables.event_severity]]
+d6 = 3
+severity = "Moderate"
+description = "Significant distraction"
+domain_impact = "Domain action required"
+
+[[oracle_tables.event_severity]]
+d6 = 4
+severity = "Moderate"
+description = "Potentially dangerous"
+domain_impact = "Multiple domain turns affected"
+
+[[oracle_tables.event_severity]]
+d6 = 5
+severity = "Major"
+description = "Crisis level"
+domain_impact = "Significant GB/RP loss if mishandled"
+
+[[oracle_tables.event_severity]]
+d6 = 6
+severity = "Major"
+description = "Domain-threatening"
+domain_impact = "Could alter domain fundamentally"
+
+[[oracle_tables.event_timing]]
+d8 = 1
+timing = "Immediate"
+description = "Happening right now"
+
+[[oracle_tables.event_timing]]
+d8 = 2
+timing = "This turn"
+description = "Develops over current domain turn"
+
+[[oracle_tables.event_timing]]
+d8 = 3
+timing = "Next turn"
+description = "Coming soon, time to prepare"
+
+[[oracle_tables.event_timing]]
+d8 = 4
+timing = "Slow build"
+description = "Developing over several turns"
+
+[[oracle_tables.event_timing]]
+d8 = 5
+timing = "Triggered"
+description = "Waiting for specific condition"
+
+[[oracle_tables.event_timing]]
+d8 = 6
+timing = "Cyclical"
+description = "Recurring issue"
+
+[[oracle_tables.event_timing]]
+d8 = 7
+timing = "Discovery"
+description = "Has been happening, just learned"
+
+[[oracle_tables.event_timing]]
+d8 = 8
+timing = "Rumor"
+description = "May or may not actually happen"
+
+[[oracle_tables.involved_parties]]
+d12 = 1
+party = "Rival regent"
+
+[[oracle_tables.involved_parties]]
+d12 = 2
+party = "Allied regent"
+
+[[oracle_tables.involved_parties]]
+d12 = 3
+party = "Own noble family"
+
+[[oracle_tables.involved_parties]]
+d12 = 4
+party = "Temple"
+
+[[oracle_tables.involved_parties]]
+d12 = 5
+party = "Guild"
+
+[[oracle_tables.involved_parties]]
+d12 = 6
+party = "Foreign power"
+
+[[oracle_tables.involved_parties]]
+d12 = 7
+party = "Internal faction"
+
+[[oracle_tables.involved_parties]]
+d12 = 8
+party = "Common people"
+
+[[oracle_tables.involved_parties]]
+d12 = 9
+party = "Family member"
+
+[[oracle_tables.involved_parties]]
+d12 = 10
+party = "Trusted lieutenant"
+
+[[oracle_tables.involved_parties]]
+d12 = 11
+party = "Unknown party"
+
+[[oracle_tables.involved_parties]]
+d12 = 12
+party = "Multiple parties"

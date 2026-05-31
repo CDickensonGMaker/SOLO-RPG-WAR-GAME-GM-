@@ -1,0 +1,201 @@
+# Trench Crusade - Heretic Legion
+# The armies of Hell - demons, corrupted soldiers, and unholy war machines
+
+name = "Heretic Legion"
+allegiance = "Fallen"
+description = "The main fighting force of Hell on Earth. Corrupted soldiers fight alongside demons and witches, bringing damnation to the faithful. Straightforward but devastatingly effective."
+playstyle = "Honest and straightforward - few tricks but plays the game very well. Independent units requiring minimal synergies. Excellent for beginners."
+strengths = ["Strong independent units", "Artillery Witch support", "War Wolf assault beasts", "Beginner friendly"]
+weaknesses = ["Limited tricks", "Predictable", "Holy weapons"]
+
+[faction_rules]
+name = "Servants of Hell"
+description = "Heretic Legion units operate independently with minimal need for synergies. Each unit is effective on its own."
+
+# =============================================================================
+# CHARACTERS / LEADERS
+# =============================================================================
+
+[[units]]
+name = "Heretic Champion"
+type = "infantry"
+category = "HQ"
+points = 55
+models = "1"
+tactical_role = "commander"
+threat_level = "high"
+preferred_targets = ["infantry", "characters"]
+weaknesses = ["holy_weapons", "blessed_attacks"]
+special_rules = ["Leader", "Damned", "Unholy Vigor"]
+keywords = ["Infantry", "Character", "Human", "Fallen", "Corrupted"]
+
+[units.stats]
+Movement = 6
+Ranged = "4+"
+Melee = "3+"
+Defense = "4+"
+Wounds = 2
+
+[[units.weapons]]
+name = "Hellforged Pistol"
+range = "12\""
+strength = "+1"
+type = "Pistol"
+shots = "1"
+abilities = ["Unholy"]
+
+[[units.weapons]]
+name = "Cursed Blade"
+range = "Melee"
+strength = "+1"
+type = "Melee"
+abilities = ["Unholy", "Soul Drain"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Artillery Witch"
+type = "infantry"
+category = "HQ"
+points = 75
+models = "1"
+tactical_role = "artillery_support"
+threat_level = "extreme"
+preferred_targets = ["groups", "fortifications"]
+weaknesses = ["melee_assault", "snipers", "holy"]
+special_rules = ["Witch", "Damned", "Hellfire Barrage", "Spellcaster"]
+keywords = ["Infantry", "Character", "Human", "Fallen", "Witch"]
+
+[units.stats]
+Movement = 5
+Ranged = "2+"
+Melee = "5+"
+Defense = "5+"
+Wounds = 2
+
+[[units.weapons]]
+name = "Hellfire Barrage"
+range = "48\""
+strength = "+2"
+type = "Heavy"
+shots = "D3"
+abilities = ["Blast", "Indirect Fire", "Unholy"]
+
+[[units.weapons]]
+name = "Sacrificial Dagger"
+range = "Melee"
+strength = "-1"
+type = "Melee"
+abilities = ["Blood Ritual"]
+
+# =============================================================================
+# TROOPS
+# =============================================================================
+
+[[units]]
+name = "Heretic Legionnaire"
+type = "infantry"
+category = "Troops"
+points = 18
+models = "1"
+tactical_role = "line_infantry"
+threat_level = "medium"
+preferred_targets = ["infantry"]
+weaknesses = ["holy_weapons", "high_morale_enemies"]
+special_rules = ["Damned"]
+keywords = ["Infantry", "Human", "Fallen", "Corrupted"]
+
+[units.stats]
+Movement = 6
+Ranged = "4+"
+Melee = "4+"
+Defense = "5+"
+Wounds = 1
+
+[[units.weapons]]
+name = "Corrupted Rifle"
+range = "24\""
+strength = "Standard"
+type = "Rifle"
+shots = "1"
+
+[[units.weapons]]
+name = "Trench Knife"
+range = "Melee"
+strength = "Standard"
+type = "Melee"
+
+# =============================================================================
+# ELITES
+# =============================================================================
+
+[[units]]
+name = "War Wolf"
+type = "beast"
+category = "Elites"
+points = 35
+models = "1"
+tactical_role = "fast_assault"
+threat_level = "high"
+preferred_targets = ["infantry", "fleeing_units"]
+weaknesses = ["heavy_weapons", "massed_fire"]
+special_rules = ["Beast", "Fast", "Pack Hunter", "Terrifying"]
+keywords = ["Beast", "Daemon", "Fallen"]
+
+[units.stats]
+Movement = 10
+Ranged = "-"
+Melee = "3+"
+Defense = "5+"
+Wounds = 2
+
+[[units.weapons]]
+name = "Hellhound Fangs"
+range = "Melee"
+strength = "+1"
+type = "Melee"
+abilities = ["Rending"]
+
+[[units.weapons]]
+name = "Raking Claws"
+range = "Melee"
+strength = "Standard"
+type = "Melee"
+abilities = ["Extra Attack"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Possessed Soldier"
+type = "infantry"
+category = "Elites"
+points = 40
+models = "1"
+tactical_role = "heavy_assault"
+threat_level = "high"
+preferred_targets = ["infantry", "characters"]
+weaknesses = ["holy_weapons", "exorcism"]
+special_rules = ["Possessed", "Damned", "Unholy Strength", "Regeneration"]
+keywords = ["Infantry", "Daemon", "Fallen", "Possessed"]
+
+[units.stats]
+Movement = 6
+Ranged = "5+"
+Melee = "2+"
+Defense = "4+"
+Wounds = 2
+
+[[units.weapons]]
+name = "Mutated Limbs"
+range = "Melee"
+strength = "+2"
+type = "Melee"
+abilities = ["Unholy", "Multiple Attacks"]
+
+# =============================================================================
+# VARIANTS / SUB-FACTIONS
+# =============================================================================
+
+# Naval Raiding Party - Faster, SMG-focused
+# Trench Ghosts - Undead, sturdy
+# Knights of Avarice - Minimum 80-ducat units, gas weapons

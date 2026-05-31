@@ -1,0 +1,35 @@
+# Core encounter table - neutral tone
+# This serves as the fallback for all settings
+
+name = "Encounters"
+description = "Generic encounter table for any setting"
+
+[[entries]]
+text = "A traveler seeking directions"
+weight = 3
+tags = ["friendly", "social"]
+
+[[entries]]
+text = "A merchant with wares to trade"
+weight = 2
+tags = ["friendly", "commerce"]
+
+[[entries]]
+text = "A group of bandits demands tribute"
+weight = 2
+tags = ["hostile", "combat"]
+
+[[entries]]
+text = "Wild animals cross your path"
+weight = 2
+tags = ["neutral", "nature"]
+
+[[entries]]
+text = "An injured person calls for help"
+weight = 1
+tags = ["social", "moral_choice"]
+
+[[entries]]
+text = "Nothing of note"
+weight = 4
+tags = ["empty"]

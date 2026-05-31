@@ -1,0 +1,526 @@
+# =============================================================================
+# ANUIRE HISTORY - Chronicle of the Empire
+# =============================================================================
+# Historical events for oracle prompts and world-building
+# =============================================================================
+
+# =============================================================================
+# THE BATTLE OF DEISMAAR - The Beginning of Everything
+# =============================================================================
+
+[deismaar]
+name = "The Battle of Deismaar"
+date = "Year 0, Michaeline Reckoning"
+location = "Mount Deismaar, the Land's Edge"
+
+[deismaar.background]
+description = """The final battle between the forces of good and evil, where
+humans, elves, and dwarves stood against Azrai the Shadow and his minions.
+Every god walked the battlefield that day."""
+
+[deismaar.events]
+sequence = [
+    "Azrai's forces overwhelm the defensive lines",
+    "The gods manifest to face Azrai directly",
+    "Haelyn leads the charge against the Shadow",
+    "The gods sacrifice themselves to destroy Azrai",
+    "Divine essence explodes across the battlefield",
+    "Survivors absorb the gods' bloodlines",
+    "The first scions are created",
+    "Mount Deismaar becomes holy ground"
+]
+
+[deismaar.consequences]
+immediate = [
+    "All the old gods die",
+    "Bloodlines are created",
+    "Awnsheghlien rise from Azrai's champions",
+    "The land is forever changed"
+]
+long_term = [
+    "Divine right to rule established",
+    "Blood abilities manifest",
+    "The eternal struggle against the Shadow begins",
+    "New religions form around dead gods' portfolios"
+]
+
+[deismaar.oracle_prompts]
+discovery = [
+    "An artifact from the battle surfaces",
+    "A vision reveals forgotten details",
+    "An ancient survivor is discovered",
+    "A battlefield relic activates"
+]
+conflict = [
+    "Two factions claim the same Deismaar relic",
+    "An awnshegh seeks revenge for Azrai",
+    "A blood theft targets Deismaar survivors' descendants"
+]
+mystery = [
+    "Not all who died at Deismaar stayed dead",
+    "A god's essence was never absorbed",
+    "Someone survived who shouldn't have"
+]
+
+# =============================================================================
+# THE ANUIREAN EMPIRE - Rise and Fall
+# =============================================================================
+
+[empire]
+
+[empire.founding]
+name = "Founding of the Empire"
+date = "Year 1-100 MR"
+description = """Roele, Champion of Haelyn and greatest hero of Deismaar,
+united the Anuirean tribes and founded the Empire. His bloodline became
+the Imperial line."""
+
+key_events = [
+    { year = 1, event = "Roele crowned first Emperor" },
+    { year = 15, event = "Last elven territory absorbed peacefully" },
+    { year = 37, event = "Roele defeats the Gorgon for the first time" },
+    { year = 48, event = "Imperial law code established" },
+    { year = 73, event = "Great roads construction begins" },
+    { year = 100, event = "Roele dies, passes throne to successor" }
+]
+
+[empire.golden_age]
+name = "The Golden Age"
+date = "100-500 MR"
+description = """Five centuries of expansion, prosperity, and cultural
+flowering. The Empire reached its greatest extent, and Anuirean civilization
+spread across Cerilia."""
+
+key_events = [
+    { year = 150, event = "Conquest of the southern coasts complete" },
+    { year = 223, event = "Treaty with Rjurik jarls establishes northern border" },
+    { year = 315, event = "Great Library of Anuire founded" },
+    { year = 412, event = "Peak territorial expansion reached" },
+    { year = 489, event = "First signs of decay appear in outer provinces" }
+]
+
+[empire.decline]
+name = "The Decline"
+date = "500-973 MR"
+description = """Slow decay as the Imperial bloodline weakened, provinces
+grew restless, and external threats multiplied. The center could not hold."""
+
+key_events = [
+    { year = 512, event = "First major provincial rebellion" },
+    { year = 617, event = "Khinasi provinces declare independence" },
+    { year = 723, event = "Brecht cities form league against Imperial taxation" },
+    { year = 845, event = "Civil war between Imperial claimants" },
+    { year = 912, event = "Last strong Emperor dies without heir" },
+    { year = 973, event = "Michael Roele dies at the Battle of Mount Deismaar" }
+]
+
+[empire.fall]
+name = "The Fall of the Empire"
+date = "973 MR"
+description = """Emperor Michael Roele led the Imperial host against the
+Gorgon's invasion. Though victorious, Michael was slain, and the Iron Throne
+has sat empty ever since."""
+
+events_of_fall = [
+    "The Gorgon's armies pour through the mountain passes",
+    "Michael Roele calls the Imperial muster",
+    "The greatest host since Deismaar assembles",
+    "Battle is joined on the Plains of Sorrow",
+    "Michael confronts the Gorgon personally",
+    "The Emperor dies, but the Gorgon is forced to retreat",
+    "No clear heir exists",
+    "The great lords return home to secure their own domains",
+    "The Iron Throne remains empty"
+]
+
+# =============================================================================
+# THE SUCCESSION WARS - Recent History
+# =============================================================================
+
+[succession_wars]
+
+[succession_wars.overview]
+name = "The Wars of Succession"
+date = "973 MR - Present"
+description = """With no clear heir to Michael Roele, powerful lords have
+fought for the Iron Throne ever since. No single claimant has gathered
+enough support to win."""
+
+[succession_wars.claimants]
+
+[[succession_wars.claimants.house]]
+name = "House Avan"
+realm = "Avanil"
+claim = "Descent from the Roele line through marriage"
+strength = "Wealth, position, political influence"
+weakness = "No direct blood connection to Roele"
+current_head = "Prince Darien Avan"
+status = "Primary claimant, most widely recognized"
+
+[[succession_wars.claimants.house]]
+name = "House Boeruine"
+realm = "Boeruine"
+claim = "Ancient lineage predating the Empire"
+strength = "Military might, martial tradition"
+weakness = "Seen as potential tyrant"
+current_head = "Archduke Aeric Boeruine"
+status = "Military threat, respected and feared"
+
+[[succession_wars.claimants.house]]
+name = "House Diem"
+realm = "Diemed"
+claim = "Descent from Imperial chamberlains"
+strength = "Historical legitimacy, temple support"
+weakness = "Weakened realm, limited military"
+current_head = "Baron Diem"
+status = "Fading claimant, desperate"
+
+[[succession_wars.claimants.house]]
+name = "House Tael"
+realm = "Ghoere"
+claim = "Conquest and power"
+strength = "Aggressive military, rapid expansion"
+weakness = "No legitimate claim, many enemies"
+current_head = "Baron Gavin Tael"
+status = "Dangerous wildcard, potential conqueror"
+
+[succession_wars.major_conflicts]
+
+[[succession_wars.major_conflicts.war]]
+name = "The War of the Princes"
+date = "985-992 MR"
+combatants = ["Avanil", "Boeruine", "various allies"]
+outcome = "Stalemate, exhaustion on both sides"
+consequences = [
+    "Neither power could win outright",
+    "Middle realms strengthened by playing both sides",
+    "Current cold war status established"
+]
+
+[[succession_wars.major_conflicts.war]]
+name = "Ghoere's Eastern Expansion"
+date = "1000-1010 MR"
+combatants = ["Ghoere", "Mhoried", "various eastern realms"]
+outcome = "Ghoere gains territory, Mhoried weakened"
+consequences = [
+    "Ghoere becomes major power",
+    "Eastern realms seek alliances against Tael",
+    "Mhoried redirects forces from Gorgon front"
+]
+
+[[succession_wars.major_conflicts.war]]
+name = "The Spider Wars"
+date = "1015-1020 MR"
+combatants = ["Roesone", "Spiderfell", "various southern realms"]
+outcome = "Roesone established as independent realm"
+consequences = [
+    "Black Baron Roesone carves out domain",
+    "Spider's expansion checked temporarily",
+    "Southern political map redrawn"
+]
+
+[succession_wars.current_situation]
+date = "Present (approximately 1524 MR)"
+description = """Three major claimants watch each other warily. War seems
+inevitable but no one wants to strike first. Meanwhile, the Gorgon plots,
+the Spider spreads, and the realm bleeds."""
+
+tensions = [
+    "Avanil and Boeruine mobilize armies",
+    "Ghoere probes all its borders",
+    "Mhoried begs for reinforcements against the Gorgon",
+    "Small realms seek powerful patrons",
+    "The Chamberlain of the Iron Throne grows old"
+]
+
+# =============================================================================
+# IMPORTANT TREATIES
+# =============================================================================
+
+[treaties]
+
+[[treaties.agreement]]
+name = "The Pact of the Iron Throne"
+date = "974 MR"
+parties = ["All major Anuirean lords"]
+terms = """No one shall claim the Iron Throne without the consent of
+the assembled lords. The Chamberlain shall maintain the throne until
+a worthy successor is chosen."""
+status = "Technically in effect, largely ignored"
+significance = "Prevented immediate civil war, now a dead letter"
+
+[[treaties.agreement]]
+name = "The Alliance of the East"
+date = "1005 MR"
+parties = ["Mhoried", "Elinie", "various eastern realms"]
+terms = "Mutual defense against Ghoere expansion"
+status = "Active but strained"
+significance = "Main check on Ghoere's ambitions"
+
+[[treaties.agreement]]
+name = "The Southern Compact"
+date = "1018 MR"
+parties = ["Roesone", "Medoere", "Ilien"]
+terms = "Trade cooperation, mutual defense against the Spider"
+status = "Active"
+significance = "Stabilized the southern coast"
+
+[[treaties.agreement]]
+name = "The Rjurik Trade Accord"
+date = "1100 MR"
+parties = ["Talinie", "Rjurik jarls"]
+terms = "Trade rights, raiding restrictions"
+status = "Active, frequently tested"
+significance = "Enables northern trade"
+
+[[treaties.agreement]]
+name = "The Temple Peace"
+date = "1200 MR"
+parties = ["Major Haelynite temples"]
+terms = "Temples shall not war directly upon each other"
+status = "Active, sometimes violated"
+significance = "Prevents temple warfare from destabilizing realms"
+
+# =============================================================================
+# PROPHECIES AND OMENS
+# =============================================================================
+
+[prophecies]
+
+[[prophecies.prophecy]]
+name = "The Return of the Emperor"
+source = "Temple of Haelyn, ancient texts"
+text = """When the blood runs true and the throne calls out,
+One shall arise from the ashes of the past.
+Neither prince nor duke, neither lord nor thane,
+But one touched by all the gods at last."""
+interpretation = "A new Emperor will arise from unexpected origins"
+believers = ["Common folk", "Some temple factions", "Romantics"]
+skeptics = ["Most nobles", "Political realists"]
+oracle_use = "Justify unexpected heroes, mysterious strangers"
+
+[[prophecies.prophecy]]
+name = "The Shadow's Return"
+source = "Survivors of Deismaar, elven seers"
+text = """Azrai sleeps but does not die.
+When stars align and blood is shed,
+The Shadow wakes to claim the sky,
+And all who live shall join the dead."""
+interpretation = "Azrai or his essence will return"
+believers = ["Those who fight awnsheghlien", "Paranoid rulers"]
+skeptics = ["Rationalists", "Those who never faced the Shadow"]
+oracle_use = "Awnshegh threats, dark rituals, apocalyptic plots"
+
+[[prophecies.prophecy]]
+name = "The Last Battle"
+source = "Mhoried military tradition"
+text = """Three times shall the Gorgon march,
+Three times shall heroes stand.
+The first was fought at battle's start,
+The second held by Mhor's brave hand.
+The third shall see the final end,
+When stone and blood together blend."""
+interpretation = "A final confrontation with the Gorgon approaches"
+believers = ["Mhoried military", "Those who've faced the Gorgon"]
+skeptics = ["Distant realms", "The complacent"]
+oracle_use = "Gorgon-related adventures, heroic destiny"
+
+[[prophecies.prophecy]]
+name = "The Merchant's Vision"
+source = "Kalien of Endier, reportedly"
+text = """Gold shall flow where blood once ran,
+The coin shall conquer where the sword could not.
+No throne matters to the trading man,
+When all the world is bought and sold for naught."""
+interpretation = "Commerce will replace warfare, merchants will rule"
+believers = ["Guilders", "Practical merchants"]
+skeptics = ["Nobles", "Traditional warriors"]
+oracle_use = "Economic plots, merchant intrigue, changing times"
+
+[[prophecies.prophecy]]
+name = "The Elven Mourning"
+source = "Elven seers of the Erebannien"
+text = """We watched the humans come with fire,
+We watched them build their stone and steel.
+We watched their empire rise and fall,
+And soon we'll watch them fade for real.
+But in the ending, something grows,
+A seed we planted long ago.
+When all seems lost, remember this:
+The forest always reclaims what was."""
+interpretation = "Elves foresee human civilization's decline and nature's return"
+believers = ["Elves", "Druids of Erik"]
+skeptics = ["Most humans"]
+oracle_use = "Elven mysteries, natural forces, long-term plots"
+
+# =============================================================================
+# OMENS AND PORTENTS
+# =============================================================================
+
+[omens]
+
+[[omens.omen]]
+type = "celestial"
+sign = "Red moon rising"
+traditional_meaning = "War and bloodshed approach"
+oracle_use = "Military adventures, conflict escalation"
+
+[[omens.omen]]
+type = "celestial"
+sign = "Shooting stars toward the east"
+traditional_meaning = "The Gorgon stirs"
+oracle_use = "Gorgon-related threats, eastern troubles"
+
+[[omens.omen]]
+type = "celestial"
+sign = "Eclipse during a coronation"
+traditional_meaning = "The reign will be troubled"
+oracle_use = "Political complications, leadership challenges"
+
+[[omens.omen]]
+type = "natural"
+sign = "Ravens gathering in great numbers"
+traditional_meaning = "Death comes to the powerful"
+oracle_use = "Assassination plots, noble deaths"
+
+[[omens.omen]]
+type = "natural"
+sign = "Fish dying in the rivers"
+traditional_meaning = "Corruption spreads in the land"
+oracle_use = "Awnshegh influence, source corruption"
+
+[[omens.omen]]
+type = "natural"
+sign = "Early frost"
+traditional_meaning = "The north threatens"
+oracle_use = "Rjurik problems, harsh times ahead"
+
+[[omens.omen]]
+type = "mystical"
+sign = "Blood weeping from statues"
+traditional_meaning = "The bloodline calls out"
+oracle_use = "Bloodline events, inheritance disputes"
+
+[[omens.omen]]
+type = "mystical"
+sign = "Dreams of the Iron Throne"
+traditional_meaning = "The dreamer has a destiny"
+oracle_use = "Player character hooks, call to adventure"
+
+[[omens.omen]]
+type = "mystical"
+sign = "Animals fleeing a region"
+traditional_meaning = "An awnshegh awakens"
+oracle_use = "Monster encounters, awnshegh activity"
+
+# =============================================================================
+# HISTORICAL FIGURES FOR ORACLE PROMPTS
+# =============================================================================
+
+[historical_figures]
+
+[[historical_figures.figure]]
+name = "Roele"
+title = "First Emperor"
+era = "Founding"
+significance = "Founded the Empire, champion of Haelyn at Deismaar"
+legacy = "The standard against which all rulers are measured"
+oracle_use = "Imperial artifacts, ancient prophecies, what it means to rule"
+
+[[historical_figures.figure]]
+name = "Michael Roele"
+title = "Last Emperor"
+era = "Fall of the Empire"
+significance = "Died defeating the Gorgon, ending the imperial line"
+legacy = "The martyred hero, why the throne sits empty"
+oracle_use = "Imperial succession, lost artifacts, duty unto death"
+
+[[historical_figures.figure]]
+name = "Haelyn"
+title = "God of Nobility and War"
+era = "Before Deismaar"
+significance = "Chief god of the Anuireans, died at Deismaar"
+legacy = "Primary deity of Anuire, bloodline of rulers"
+oracle_use = "Temple politics, noble duties, righteous combat"
+
+[[historical_figures.figure]]
+name = "The Black Baron"
+title = "Daen Roesone"
+era = "Recent history"
+significance = "Carved Roesone from the Spider's territory"
+legacy = "That commoners can rise, but at what cost?"
+oracle_use = "Roesone politics, earned vs inherited power"
+
+[[historical_figures.figure]]
+name = "The Chamberlain"
+title = "Keeper of the Iron Throne"
+era = "Current"
+significance = "Maintains the capital, waits for a true Emperor"
+legacy = "Living symbol of the empty throne"
+oracle_use = "Imperial politics, legitimacy questions"
+
+# =============================================================================
+# TIMELINE SUMMARY
+# =============================================================================
+
+[timeline]
+events = [
+    { year = "0 MR", event = "Battle of Deismaar - Gods die, bloodlines created" },
+    { year = "1 MR", event = "Roele crowned first Emperor" },
+    { year = "37 MR", event = "First defeat of the Gorgon" },
+    { year = "100 MR", event = "Roele dies, succession established" },
+    { year = "500 MR", event = "Empire reaches peak extent" },
+    { year = "617 MR", event = "Khinasi independence" },
+    { year = "723 MR", event = "Brecht League formed" },
+    { year = "973 MR", event = "Michael Roele dies, Empire falls" },
+    { year = "974 MR", event = "Pact of the Iron Throne" },
+    { year = "985-992 MR", event = "War of the Princes" },
+    { year = "1000-1010 MR", event = "Ghoere's Eastern Expansion" },
+    { year = "1015-1020 MR", event = "Spider Wars, Roesone founded" },
+    { year = "Present (~1524 MR)", event = "Current campaign era" }
+]
+
+# =============================================================================
+# ORACLE RANDOM TABLES
+# =============================================================================
+
+[oracle_tables]
+
+[oracle_tables.historical_hook]
+description = "A connection to history drives the current situation"
+options = [
+    "An imperial artifact has been discovered",
+    "A descendant of a famous figure appears",
+    "An ancient treaty is invoked",
+    "A prophecy seems to be coming true",
+    "Records prove a disputed claim",
+    "A battlefield yields its secrets",
+    "A forgotten enemy awakens",
+    "History repeats itself"
+]
+
+[oracle_tables.political_complication]
+description = "A political factor complicates matters"
+options = [
+    "Avanil agents are involved",
+    "Boeruine sees an opportunity",
+    "Ghoere makes a move",
+    "The temples take sides",
+    "Guilds have their own agenda",
+    "A small realm is caught in the middle",
+    "Foreign powers intervene",
+    "The Chamberlain takes notice"
+]
+
+[oracle_tables.omen_meaning]
+description = "What does the omen truly portend?"
+options = [
+    "Exactly what tradition says",
+    "The opposite of expectations",
+    "A metaphor for something else",
+    "Multiple meanings, all true",
+    "A warning that can be avoided",
+    "A promise that must be earned",
+    "A test of interpretation",
+    "The omen is being manufactured"
+]

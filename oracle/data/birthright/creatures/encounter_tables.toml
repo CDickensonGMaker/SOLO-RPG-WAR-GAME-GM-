@@ -1,0 +1,1408 @@
+# =============================================================================
+# CERILIAN ENCOUNTER TABLES
+# =============================================================================
+# Random encounter tables specific to the Birthright setting, organized by
+# region and terrain type. These tables reflect the unique dangers of Cerilia.
+# =============================================================================
+
+[metadata]
+title = "Cerilian Encounter Tables"
+description = "Random encounters by region and terrain for Birthright"
+version = "1.0.0"
+setting = "Birthright"
+
+# =============================================================================
+# ENCOUNTER FREQUENCY
+# =============================================================================
+
+[encounter_frequency]
+description = "How often to check for random encounters"
+
+[encounter_frequency.by_terrain]
+settled_road = { check_interval = "8 hours", chance = 10 }
+wilderness_road = { check_interval = "4 hours", chance = 15 }
+light_forest = { check_interval = "4 hours", chance = 20 }
+dense_forest = { check_interval = "2 hours", chance = 25 }
+mountains = { check_interval = "4 hours", chance = 25 }
+swamp = { check_interval = "2 hours", chance = 30 }
+desert = { check_interval = "4 hours", chance = 20 }
+plains = { check_interval = "4 hours", chance = 15 }
+coast = { check_interval = "4 hours", chance = 20 }
+underground = { check_interval = "1 hour", chance = 25 }
+sea_voyage = { check_interval = "12 hours", chance = 20 }
+
+[encounter_frequency.modifiers]
+night = 10
+bad_weather = 5
+domain_at_war = 15
+awnsheghlien_territory = 20
+cursed_land = 25
+near_shadow_crossing = 15
+province_level_0 = 30
+province_level_1_2 = 20
+province_level_3_4 = 10
+province_level_5_plus = 5
+
+# =============================================================================
+# ANUIRE ENCOUNTER TABLES
+# =============================================================================
+
+[anuire]
+description = "The heartland of human civilization, but threats lurk in borderlands and ruins"
+
+[anuire.road_encounters]
+description = "Encounters on Anuirean roads and trade routes"
+
+[[anuire.road_encounters.table]]
+roll = [1, 5]
+encounter = "Merchant caravan"
+disposition = "neutral"
+notes = "1d4+1 wagons with guards, willing to trade news and goods"
+
+[[anuire.road_encounters.table]]
+roll = [6, 10]
+encounter = "Patrol"
+disposition = "neutral to friendly"
+notes = "2d6 soldiers from local domain, may ask questions"
+
+[[anuire.road_encounters.table]]
+roll = [11, 15]
+encounter = "Pilgrims"
+disposition = "friendly"
+notes = "2d8 pilgrims traveling to a shrine, might need protection"
+
+[[anuire.road_encounters.table]]
+roll = [16, 20]
+encounter = "Noble's entourage"
+disposition = "varies"
+notes = "A minor noble traveling with 1d6+2 guards, may be blooded"
+
+[[anuire.road_encounters.table]]
+roll = [21, 30]
+encounter = "Travelers"
+disposition = "neutral"
+notes = "1d6 commoners, farmers, or craftspeople"
+
+[[anuire.road_encounters.table]]
+roll = [31, 40]
+encounter = "Messenger"
+disposition = "hurried"
+notes = "Royal or guild messenger, may carry important news"
+
+[[anuire.road_encounters.table]]
+roll = [41, 50]
+encounter = "Adventurers"
+disposition = "wary"
+notes = "1d4+1 adventurers, may be rivals or potential allies"
+
+[[anuire.road_encounters.table]]
+roll = [51, 60]
+encounter = "Refugees"
+disposition = "desperate"
+notes = "2d6 refugees from war or disaster, seeking safety"
+
+[[anuire.road_encounters.table]]
+roll = [61, 70]
+encounter = "Bandits"
+disposition = "hostile"
+notes = "2d6 bandits, demand toll or attack travelers"
+
+[[anuire.road_encounters.table]]
+roll = [71, 75]
+encounter = "Deserters"
+disposition = "hostile/desperate"
+notes = "1d6+2 military deserters, may attack or beg for mercy"
+
+[[anuire.road_encounters.table]]
+roll = [76, 80]
+encounter = "Escaped prisoner"
+disposition = "desperate"
+notes = "A fugitive - criminal or political prisoner"
+
+[[anuire.road_encounters.table]]
+roll = [81, 85]
+encounter = "Guild agent"
+disposition = "calculating"
+notes = "A guild representative seeking business opportunities"
+
+[[anuire.road_encounters.table]]
+roll = [86, 90]
+encounter = "Wandering knight"
+disposition = "honorable"
+notes = "A knight errant seeking glory, may challenge or aid"
+
+[[anuire.road_encounters.table]]
+roll = [91, 95]
+encounter = "Spider's agent"
+disposition = "disguised"
+notes = "One of the Spider's spies, gathering information"
+
+[[anuire.road_encounters.table]]
+roll = [96, 98]
+encounter = "Blood creature"
+disposition = "hostile"
+notes = "A bloodhound or similar creature on the hunt"
+
+[[anuire.road_encounters.table]]
+roll = [99, 100]
+encounter = "Blooded individual"
+disposition = "varies"
+notes = "A blooded person traveling incognito - regent? heir?"
+
+# -----------------------------------------------------------------------------
+
+[anuire.wilderness_encounters]
+description = "Encounters in Anuirean wilderness - forests, hills, borderlands"
+
+[[anuire.wilderness_encounters.table]]
+roll = [1, 5]
+encounter = "Wolves"
+disposition = "hungry"
+notes = "1d6+2 wolves, more aggressive in winter"
+challenge_rating = "1/4 each"
+
+[[anuire.wilderness_encounters.table]]
+roll = [6, 10]
+encounter = "Wild boar"
+disposition = "aggressive if provoked"
+notes = "1d4 boars, dangerous if cornered"
+challenge_rating = "1/4 each"
+
+[[anuire.wilderness_encounters.table]]
+roll = [11, 15]
+encounter = "Deer herd"
+disposition = "skittish"
+notes = "2d6 deer, opportunity for hunting"
+challenge_rating = "0"
+
+[[anuire.wilderness_encounters.table]]
+roll = [16, 20]
+encounter = "Bear"
+disposition = "territorial"
+notes = "Black or brown bear, may have cubs"
+challenge_rating = "1-2"
+
+[[anuire.wilderness_encounters.table]]
+roll = [21, 25]
+encounter = "Hermit"
+disposition = "varies"
+notes = "A recluse - may be holy person, fugitive, or mad"
+
+[[anuire.wilderness_encounters.table]]
+roll = [26, 30]
+encounter = "Hunters"
+disposition = "friendly"
+notes = "1d4+1 local hunters, know the area well"
+
+[[anuire.wilderness_encounters.table]]
+roll = [31, 35]
+encounter = "Woodcutters"
+disposition = "wary"
+notes = "2d4 woodcutters, may have seen unusual activity"
+
+[[anuire.wilderness_encounters.table]]
+roll = [36, 40]
+encounter = "Smugglers"
+disposition = "evasive"
+notes = "1d6+2 smugglers moving contraband"
+
+[[anuire.wilderness_encounters.table]]
+roll = [41, 50]
+encounter = "Bandits"
+disposition = "hostile"
+notes = "2d6+2 bandits with hidden camp nearby"
+challenge_rating = "1/8-1/2 each"
+
+[[anuire.wilderness_encounters.table]]
+roll = [51, 55]
+encounter = "Gnolls"
+disposition = "hostile"
+notes = "1d6+2 gnoll raiders"
+challenge_rating = "1/2-2 each"
+
+[[anuire.wilderness_encounters.table]]
+roll = [56, 60]
+encounter = "Goblin scouts"
+disposition = "hostile"
+notes = "2d4 goblins scouting for larger tribe"
+challenge_rating = "1/4 each"
+
+[[anuire.wilderness_encounters.table]]
+roll = [61, 65]
+encounter = "Orog patrol"
+disposition = "hostile"
+notes = "1d4+2 orog warriors on a mission"
+challenge_rating = "2 each"
+
+[[anuire.wilderness_encounters.table]]
+roll = [66, 70]
+encounter = "Dire wolves"
+disposition = "hunting"
+notes = "1d4+1 dire wolves"
+challenge_rating = "1 each"
+
+[[anuire.wilderness_encounters.table]]
+roll = [71, 75]
+encounter = "Owlbear"
+disposition = "territorial"
+notes = "An owlbear defending its territory"
+challenge_rating = "3"
+
+[[anuire.wilderness_encounters.table]]
+roll = [76, 80]
+encounter = "Troll"
+disposition = "hungry"
+notes = "A troll hunting for food"
+challenge_rating = "5"
+
+[[anuire.wilderness_encounters.table]]
+roll = [81, 85]
+encounter = "Phantom knight"
+disposition = "hostile"
+notes = "An undead knight haunting the wilderness"
+challenge_rating = "5"
+
+[[anuire.wilderness_encounters.table]]
+roll = [86, 88]
+encounter = "Bloodhounds"
+disposition = "hunting"
+notes = "1d4+1 bloodhounds tracking someone"
+challenge_rating = "3 each"
+
+[[anuire.wilderness_encounters.table]]
+roll = [89, 92]
+encounter = "Will-o'-wisp"
+disposition = "luring"
+notes = "A will-o'-wisp leading travelers astray"
+challenge_rating = "2"
+
+[[anuire.wilderness_encounters.table]]
+roll = [93, 95]
+encounter = "Wight"
+disposition = "hostile"
+notes = "A wight from an ancient barrow"
+challenge_rating = "3"
+
+[[anuire.wilderness_encounters.table]]
+roll = [96, 97]
+encounter = "The Boar"
+disposition = "rampaging"
+notes = "The awnsheghlien known as the Boar"
+challenge_rating = "12"
+
+[[anuire.wilderness_encounters.table]]
+roll = [98, 99]
+encounter = "Shadow World crossing"
+disposition = "hazard"
+notes = "A thin point between worlds - shadow creatures may emerge"
+
+[[anuire.wilderness_encounters.table]]
+roll = [100, 100]
+encounter = "Gorgon's scouts"
+disposition = "hostile"
+notes = "An elite orog patrol serving the Gorgon"
+challenge_rating = "2-6 each"
+
+# -----------------------------------------------------------------------------
+
+[anuire.ruin_encounters]
+description = "Encounters in Anuirean ruins - old fortresses, abandoned towns, ancient sites"
+
+[[anuire.ruin_encounters.table]]
+roll = [1, 10]
+encounter = "Rats"
+disposition = "aggressive in swarms"
+notes = "3d6 giant rats or swarms of normal rats"
+challenge_rating = "1/8-1/4"
+
+[[anuire.ruin_encounters.table]]
+roll = [11, 20]
+encounter = "Vermin"
+disposition = "varies"
+notes = "Giant spiders, centipedes, or other vermin"
+challenge_rating = "1/4-1"
+
+[[anuire.ruin_encounters.table]]
+roll = [21, 30]
+encounter = "Squatters"
+disposition = "desperate"
+notes = "2d6 homeless people or bandits using ruin as shelter"
+
+[[anuire.ruin_encounters.table]]
+roll = [31, 40]
+encounter = "Treasure hunters"
+disposition = "competitive"
+notes = "1d4+2 adventurers seeking loot"
+
+[[anuire.ruin_encounters.table]]
+roll = [41, 50]
+encounter = "Undead"
+disposition = "hostile"
+notes = "2d6 skeletons or zombies"
+challenge_rating = "1/4 each"
+
+[[anuire.ruin_encounters.table]]
+roll = [51, 60]
+encounter = "Ghouls"
+disposition = "hungry"
+notes = "1d4+1 ghouls lurking in darkness"
+challenge_rating = "1 each"
+
+[[anuire.ruin_encounters.table]]
+roll = [61, 65]
+encounter = "Ghost"
+disposition = "varies"
+notes = "A ghost tied to the location, may have information"
+challenge_rating = "4"
+
+[[anuire.ruin_encounters.table]]
+roll = [66, 70]
+encounter = "Wraith"
+disposition = "hostile"
+notes = "A wraith guarding the ruins"
+challenge_rating = "5"
+
+[[anuire.ruin_encounters.table]]
+roll = [71, 75]
+encounter = "Bloodwight"
+disposition = "hostile"
+notes = "The undead remains of a blooded individual"
+challenge_rating = "6"
+
+[[anuire.ruin_encounters.table]]
+roll = [76, 80]
+encounter = "Mimic"
+disposition = "ambush predator"
+notes = "A mimic disguised as treasure or furniture"
+challenge_rating = "2"
+
+[[anuire.ruin_encounters.table]]
+roll = [81, 85]
+encounter = "Gargoyles"
+disposition = "predatory"
+notes = "1d4 gargoyles nesting in the ruins"
+challenge_rating = "2 each"
+
+[[anuire.ruin_encounters.table]]
+roll = [86, 90]
+encounter = "Cult activity"
+disposition = "secretive/hostile"
+notes = "2d6 cultists performing dark rituals"
+
+[[anuire.ruin_encounters.table]]
+roll = [91, 95]
+encounter = "Grave walker"
+disposition = "hostile"
+notes = "2d4 grave walkers"
+challenge_rating = "2 each"
+
+[[anuire.ruin_encounters.table]]
+roll = [96, 98]
+encounter = "Vampire spawn"
+disposition = "hostile"
+notes = "A vampire spawn serving a greater power"
+challenge_rating = "5"
+
+[[anuire.ruin_encounters.table]]
+roll = [99, 100]
+encounter = "Ancient guardian"
+disposition = "programmed"
+notes = "A golem or construct still defending the ruins"
+challenge_rating = "5-9"
+
+# =============================================================================
+# KHINASI ENCOUNTER TABLES
+# =============================================================================
+
+[khinasi]
+description = "The lands of sun and sand, where ancient magic and trade routes cross"
+
+[khinasi.desert_encounters]
+description = "Encounters in the Khinasi deserts"
+
+[[khinasi.desert_encounters.table]]
+roll = [1, 5]
+encounter = "Trade caravan"
+disposition = "neutral"
+notes = "1d6+2 wagons with guards, water for sale"
+
+[[khinasi.desert_encounters.table]]
+roll = [6, 10]
+encounter = "Nomad camp"
+disposition = "cautious"
+notes = "2d6 nomads who know the desert"
+
+[[khinasi.desert_encounters.table]]
+roll = [11, 15]
+encounter = "Pilgrims"
+disposition = "friendly"
+notes = "1d8+2 pilgrims to a desert shrine"
+
+[[khinasi.desert_encounters.table]]
+roll = [16, 20]
+encounter = "Oasis"
+disposition = "resource"
+notes = "An oasis - may be occupied or trapped"
+
+[[khinasi.desert_encounters.table]]
+roll = [21, 30]
+encounter = "Sandstorm"
+disposition = "hazard"
+notes = "A dangerous sandstorm approaching"
+
+[[khinasi.desert_encounters.table]]
+roll = [31, 40]
+encounter = "Vultures"
+disposition = "ominous"
+notes = "Circling vultures indicate something dead nearby"
+
+[[khinasi.desert_encounters.table]]
+roll = [41, 50]
+encounter = "Desert raiders"
+disposition = "hostile"
+notes = "2d6 bandits on fast horses or camels"
+
+[[khinasi.desert_encounters.table]]
+roll = [51, 55]
+encounter = "Scorpions"
+disposition = "aggressive"
+notes = "1d4+1 giant scorpions"
+challenge_rating = "3 each"
+
+[[khinasi.desert_encounters.table]]
+roll = [56, 60]
+encounter = "Sand serpent"
+disposition = "ambush predator"
+notes = "A large sand serpent bursting from the sand"
+challenge_rating = "3"
+
+[[khinasi.desert_encounters.table]]
+roll = [61, 65]
+encounter = "Jackalweres"
+disposition = "deceptive"
+notes = "1d4+2 jackalweres posing as travelers"
+challenge_rating = "1/2 each"
+
+[[khinasi.desert_encounters.table]]
+roll = [66, 70]
+encounter = "Gnolls"
+disposition = "hostile"
+notes = "2d6 gnolls hunting in the wastes"
+challenge_rating = "1/2-2 each"
+
+[[khinasi.desert_encounters.table]]
+roll = [71, 75]
+encounter = "Dust devil"
+disposition = "hazard"
+notes = "A small elemental dust storm"
+challenge_rating = "2"
+
+[[khinasi.desert_encounters.table]]
+roll = [76, 80]
+encounter = "Mummy"
+disposition = "hostile"
+notes = "An ancient mummy guarding a tomb"
+challenge_rating = "3-6"
+
+[[khinasi.desert_encounters.table]]
+roll = [81, 85]
+encounter = "Lamia"
+disposition = "cunning"
+notes = "A lamia seeking victims"
+challenge_rating = "4"
+
+[[khinasi.desert_encounters.table]]
+roll = [86, 88]
+encounter = "Blue dragon"
+disposition = "territorial"
+notes = "A blue dragon - young to adult"
+challenge_rating = "9-16"
+
+[[khinasi.desert_encounters.table]]
+roll = [89, 92]
+encounter = "Ruins"
+disposition = "location"
+notes = "Ancient ruins emerge from shifting sands"
+
+[[khinasi.desert_encounters.table]]
+roll = [93, 95]
+encounter = "The Manticore"
+disposition = "hunting"
+notes = "The awnsheghlien known as the Manticore"
+challenge_rating = "11"
+
+[[khinasi.desert_encounters.table]]
+roll = [96, 97]
+encounter = "Sphinx"
+disposition = "challenging"
+notes = "An agent or creature of the Sphinx"
+challenge_rating = "varies"
+
+[[khinasi.desert_encounters.table]]
+roll = [98, 99]
+encounter = "Djinni"
+disposition = "varies"
+notes = "A djinni - bound, free, or disguised"
+challenge_rating = "11"
+
+[[khinasi.desert_encounters.table]]
+roll = [100, 100]
+encounter = "The Magian's servants"
+disposition = "hostile"
+notes = "Undead servants of the Magian"
+challenge_rating = "varies"
+
+# =============================================================================
+# BRECHT ENCOUNTER TABLES
+# =============================================================================
+
+[brecht]
+description = "The trading lands of the north, where sea and commerce rule"
+
+[brecht.coastal_encounters]
+description = "Encounters along Brecht coasts and harbors"
+
+[[brecht.coastal_encounters.table]]
+roll = [1, 10]
+encounter = "Fishing boats"
+disposition = "friendly"
+notes = "Local fishers who know the waters"
+
+[[brecht.coastal_encounters.table]]
+roll = [11, 20]
+encounter = "Merchant ship"
+disposition = "neutral"
+notes = "A trading vessel willing to exchange goods or news"
+
+[[brecht.coastal_encounters.table]]
+roll = [21, 25]
+encounter = "Patrol ship"
+disposition = "official"
+notes = "Naval patrol checking for smugglers or pirates"
+
+[[brecht.coastal_encounters.table]]
+roll = [26, 35]
+encounter = "Smugglers"
+disposition = "evasive"
+notes = "1d6+2 smugglers moving contraband"
+
+[[brecht.coastal_encounters.table]]
+roll = [36, 45]
+encounter = "Pirates"
+disposition = "hostile"
+notes = "A pirate ship seeking prey"
+challenge_rating = "1/8-3 each"
+
+[[brecht.coastal_encounters.table]]
+roll = [46, 50]
+encounter = "Shipwreck"
+disposition = "location"
+notes = "A wrecked ship - salvage opportunity or trap"
+
+[[brecht.coastal_encounters.table]]
+roll = [51, 55]
+encounter = "Sea drakes"
+disposition = "territorial"
+notes = "1d4+1 sea drakes defending their territory"
+challenge_rating = "2 each"
+
+[[brecht.coastal_encounters.table]]
+roll = [56, 60]
+encounter = "Giant crabs"
+disposition = "aggressive"
+notes = "1d4+2 giant crabs on the beach"
+challenge_rating = "1/8-1 each"
+
+[[brecht.coastal_encounters.table]]
+roll = [61, 65]
+encounter = "Sahuagin"
+disposition = "hostile"
+notes = "A sahuagin raiding party"
+challenge_rating = "1/2-2 each"
+
+[[brecht.coastal_encounters.table]]
+roll = [66, 70]
+encounter = "Merrow"
+disposition = "hostile"
+notes = "1d4 merrow attacking from the water"
+challenge_rating = "2 each"
+
+[[brecht.coastal_encounters.table]]
+roll = [71, 75]
+encounter = "Ghost ship"
+disposition = "ominous"
+notes = "A spectral vessel sighted on the horizon"
+
+[[brecht.coastal_encounters.table]]
+roll = [76, 80]
+encounter = "Storm"
+disposition = "hazard"
+notes = "A dangerous storm approaching"
+
+[[brecht.coastal_encounters.table]]
+roll = [81, 85]
+encounter = "Water elemental"
+disposition = "varies"
+notes = "A water elemental disturbed by something"
+challenge_rating = "5"
+
+[[brecht.coastal_encounters.table]]
+roll = [86, 90]
+encounter = "Sea hag"
+disposition = "cunning"
+notes = "A sea hag seeking to bargain or harm"
+challenge_rating = "2"
+
+[[brecht.coastal_encounters.table]]
+roll = [91, 93]
+encounter = "The Siren"
+disposition = "luring"
+notes = "The awnsheghlien Siren or her minions"
+challenge_rating = "16"
+
+[[brecht.coastal_encounters.table]]
+roll = [94, 96]
+encounter = "The Hydra"
+disposition = "demanding"
+notes = "Signs of the Hydra - tribute demanded"
+challenge_rating = "22"
+
+[[brecht.coastal_encounters.table]]
+roll = [97, 99]
+encounter = "Sea serpent"
+disposition = "hostile"
+notes = "A great sea serpent"
+challenge_rating = "varies"
+
+[[brecht.coastal_encounters.table]]
+roll = [100, 100]
+encounter = "The Serpent"
+disposition = "catastrophic"
+notes = "The great awnsheghlien known as the Serpent"
+challenge_rating = "25"
+
+# =============================================================================
+# RJURIK ENCOUNTER TABLES
+# =============================================================================
+
+[rjurik]
+description = "The cold northern lands of druids and warriors"
+
+[rjurik.taiga_encounters]
+description = "Encounters in the Rjurik forests and highlands"
+
+[[rjurik.taiga_encounters.table]]
+roll = [1, 5]
+encounter = "Rjurik hunters"
+disposition = "wary but honorable"
+notes = "1d4+2 hunters who know the land"
+
+[[rjurik.taiga_encounters.table]]
+roll = [6, 10]
+encounter = "Druid circle"
+disposition = "protective"
+notes = "A druid and 1d6 acolytes tending the land"
+
+[[rjurik.taiga_encounters.table]]
+roll = [11, 15]
+encounter = "Traveling skalds"
+disposition = "friendly"
+notes = "1d4 skalds with news and tales"
+
+[[rjurik.taiga_encounters.table]]
+roll = [16, 20]
+encounter = "Elk herd"
+disposition = "skittish"
+notes = "2d6 elk, good hunting"
+
+[[rjurik.taiga_encounters.table]]
+roll = [21, 25]
+encounter = "Dire wolves"
+disposition = "hunting"
+notes = "1d4+2 dire wolves"
+challenge_rating = "1 each"
+
+[[rjurik.taiga_encounters.table]]
+roll = [26, 30]
+encounter = "Brown bear"
+disposition = "territorial"
+notes = "A large brown bear"
+challenge_rating = "1"
+
+[[rjurik.taiga_encounters.table]]
+roll = [31, 35]
+encounter = "Winter wolves"
+disposition = "intelligent hunters"
+notes = "1d4+1 winter wolves"
+challenge_rating = "3 each"
+
+[[rjurik.taiga_encounters.table]]
+roll = [36, 40]
+encounter = "Frost giant"
+disposition = "varies"
+notes = "A frost giant, possibly alone or with followers"
+challenge_rating = "8"
+
+[[rjurik.taiga_encounters.table]]
+roll = [41, 45]
+encounter = "Trolls"
+disposition = "hungry"
+notes = "1d4 trolls"
+challenge_rating = "5 each"
+
+[[rjurik.taiga_encounters.table]]
+roll = [46, 50]
+encounter = "Owlbear"
+disposition = "territorial"
+notes = "An owlbear defending territory"
+challenge_rating = "3"
+
+[[rjurik.taiga_encounters.table]]
+roll = [51, 55]
+encounter = "Fey crossing"
+disposition = "mystical"
+notes = "A thin point to the Feywild - elven influences"
+
+[[rjurik.taiga_encounters.table]]
+roll = [56, 60]
+encounter = "Treant"
+disposition = "protective"
+notes = "A treant guarding the forest"
+challenge_rating = "9"
+
+[[rjurik.taiga_encounters.table]]
+roll = [61, 65]
+encounter = "Werewolves"
+disposition = "predatory"
+notes = "1d4+1 werewolves"
+challenge_rating = "3 each"
+
+[[rjurik.taiga_encounters.table]]
+roll = [66, 70]
+encounter = "Orog raiders"
+disposition = "hostile"
+notes = "2d6 orog raiders from the east"
+challenge_rating = "2 each"
+
+[[rjurik.taiga_encounters.table]]
+roll = [71, 75]
+encounter = "Blizzard"
+disposition = "hazard"
+notes = "A dangerous blizzard approaching"
+
+[[rjurik.taiga_encounters.table]]
+roll = [76, 80]
+encounter = "White dragon"
+disposition = "territorial"
+notes = "A white dragon, young to adult"
+challenge_rating = "6-13"
+
+[[rjurik.taiga_encounters.table]]
+roll = [81, 85]
+encounter = "Winterwight"
+disposition = "mournful/hostile"
+notes = "A winterwight wandering the cold"
+challenge_rating = "7"
+
+[[rjurik.taiga_encounters.table]]
+roll = [86, 90]
+encounter = "Remorhaz"
+disposition = "predatory"
+notes = "A remorhaz hunting in the snow"
+challenge_rating = "11"
+
+[[rjurik.taiga_encounters.table]]
+roll = [91, 93]
+encounter = "The Hag"
+disposition = "bargaining"
+notes = "The awnsheghlien Hag or her servants"
+challenge_rating = "14"
+
+[[rjurik.taiga_encounters.table]]
+roll = [94, 96]
+encounter = "The Werewolf Lord"
+disposition = "hunting"
+notes = "The Werewolf Lord's pack"
+challenge_rating = "14"
+
+[[rjurik.taiga_encounters.table]]
+roll = [97, 99]
+encounter = "The Troll King"
+disposition = "demanding"
+notes = "Servants of the Troll King"
+challenge_rating = "15"
+
+[[rjurik.taiga_encounters.table]]
+roll = [100, 100]
+encounter = "Ancient druid"
+disposition = "mysterious"
+notes = "An incredibly ancient druid with powerful magic"
+
+# =============================================================================
+# VOSGAARD ENCOUNTER TABLES
+# =============================================================================
+
+[vosgaard]
+description = "The brutal eastern lands where might makes right"
+
+[vosgaard.steppe_encounters]
+description = "Encounters on the Vos steppes"
+
+[[vosgaard.steppe_encounters.table]]
+roll = [1, 10]
+encounter = "Vos war band"
+disposition = "aggressive"
+notes = "2d6+4 Vos warriors on horseback"
+
+[[vosgaard.steppe_encounters.table]]
+roll = [11, 15]
+encounter = "Vos shaman"
+disposition = "suspicious"
+notes = "A shaman with 1d4+1 guards"
+
+[[vosgaard.steppe_encounters.table]]
+roll = [16, 20]
+encounter = "Horse herd"
+disposition = "valuable"
+notes = "Wild horses - capture opportunity"
+
+[[vosgaard.steppe_encounters.table]]
+roll = [21, 30]
+encounter = "Gnoll pack"
+disposition = "hostile"
+notes = "2d6+2 gnolls hunting"
+challenge_rating = "1/2-2 each"
+
+[[vosgaard.steppe_encounters.table]]
+roll = [31, 40]
+encounter = "Orog warband"
+disposition = "hostile"
+notes = "2d6 orog warriors"
+challenge_rating = "2 each"
+
+[[vosgaard.steppe_encounters.table]]
+roll = [41, 45]
+encounter = "Dire wolves"
+disposition = "hunting"
+notes = "2d4 dire wolves"
+challenge_rating = "1 each"
+
+[[vosgaard.steppe_encounters.table]]
+roll = [46, 50]
+encounter = "Battle boars"
+disposition = "aggressive"
+notes = "1d4+1 battle boars, possibly ridden"
+challenge_rating = "2 each"
+
+[[vosgaard.steppe_encounters.table]]
+roll = [51, 55]
+encounter = "Worg pack"
+disposition = "intelligent hunters"
+notes = "2d4 worgs, possibly with goblin riders"
+challenge_rating = "1/2 each"
+
+[[vosgaard.steppe_encounters.table]]
+roll = [56, 60]
+encounter = "Hill giant"
+disposition = "territorial"
+notes = "A hill giant in its territory"
+challenge_rating = "5"
+
+[[vosgaard.steppe_encounters.table]]
+roll = [61, 65]
+encounter = "Chimera"
+disposition = "hunting"
+notes = "A chimera hunting for prey"
+challenge_rating = "6"
+
+[[vosgaard.steppe_encounters.table]]
+roll = [66, 70]
+encounter = "Manticore"
+disposition = "predatory"
+notes = "A manticore stalking travelers"
+challenge_rating = "3"
+
+[[vosgaard.steppe_encounters.table]]
+roll = [71, 75]
+encounter = "Undead warband"
+disposition = "hostile"
+notes = "2d6 skeletons or zombies of fallen warriors"
+challenge_rating = "1/4 each"
+
+[[vosgaard.steppe_encounters.table]]
+roll = [76, 80]
+encounter = "Nightmare beast"
+disposition = "hunting"
+notes = "A nightmare beast from the Shadow World"
+challenge_rating = "8"
+
+[[vosgaard.steppe_encounters.table]]
+roll = [81, 85]
+encounter = "Shadow crossing"
+disposition = "hazard"
+notes = "A dangerous crossing to the Shadow World"
+
+[[vosgaard.steppe_encounters.table]]
+roll = [86, 90]
+encounter = "Blood creatures"
+disposition = "hostile"
+notes = "Blood-touched creatures hunting"
+challenge_rating = "varies"
+
+[[vosgaard.steppe_encounters.table]]
+roll = [91, 93]
+encounter = "The Chimaera"
+disposition = "rampaging"
+notes = "The awnsheghlien Chimaera"
+challenge_rating = "17"
+
+[[vosgaard.steppe_encounters.table]]
+roll = [94, 96]
+encounter = "The Hag"
+disposition = "bargaining"
+notes = "The awnsheghlien Hag"
+challenge_rating = "14"
+
+[[vosgaard.steppe_encounters.table]]
+roll = [97, 99]
+encounter = "Vos warlord"
+disposition = "aggressive"
+notes = "A powerful Vos warlord with warband"
+
+[[vosgaard.steppe_encounters.table]]
+roll = [100, 100]
+encounter = "Gorgon's army"
+disposition = "catastrophic"
+notes = "Advance forces of the Gorgon's army"
+
+# =============================================================================
+# ELVEN LANDS ENCOUNTER TABLES
+# =============================================================================
+
+[elven_lands]
+description = "The ancient forests of the Sidhe"
+
+[elven_lands.forest_encounters]
+description = "Encounters in elven territories"
+
+[[elven_lands.forest_encounters.table]]
+roll = [1, 10]
+encounter = "Elven patrol"
+disposition = "suspicious"
+notes = "2d6 elven warriors watching for intruders"
+
+[[elven_lands.forest_encounters.table]]
+roll = [11, 20]
+encounter = "Forest spirits"
+disposition = "curious"
+notes = "Pixies, sprites, or other small fey"
+challenge_rating = "1/4 each"
+
+[[elven_lands.forest_encounters.table]]
+roll = [21, 25]
+encounter = "Unicorn"
+disposition = "wary"
+notes = "A unicorn appears to judge the party"
+challenge_rating = "5"
+
+[[elven_lands.forest_encounters.table]]
+roll = [26, 30]
+encounter = "Treant"
+disposition = "watchful"
+notes = "A treant observing intruders"
+challenge_rating = "9"
+
+[[elven_lands.forest_encounters.table]]
+roll = [31, 35]
+encounter = "Shadow hounds"
+disposition = "hunting"
+notes = "1d4+1 shadow hounds, possibly with elven rider"
+challenge_rating = "3 each"
+
+[[elven_lands.forest_encounters.table]]
+roll = [36, 40]
+encounter = "Moonlight dancers"
+disposition = "entrancing"
+notes = "1d4 moonlight dancers"
+challenge_rating = "4 each"
+
+[[elven_lands.forest_encounters.table]]
+roll = [41, 45]
+encounter = "Thorn guardians"
+disposition = "defensive"
+notes = "1d4 thorn guardians protecting a grove"
+challenge_rating = "5 each"
+
+[[elven_lands.forest_encounters.table]]
+roll = [46, 50]
+encounter = "Dryad"
+disposition = "protective"
+notes = "A dryad and her tree"
+challenge_rating = "1"
+
+[[elven_lands.forest_encounters.table]]
+roll = [51, 55]
+encounter = "Satyr"
+disposition = "mischievous"
+notes = "1d4 satyrs seeking entertainment"
+challenge_rating = "1/2 each"
+
+[[elven_lands.forest_encounters.table]]
+roll = [56, 60]
+encounter = "Green dragon"
+disposition = "cunning"
+notes = "A green dragon in its forest domain"
+challenge_rating = "8-15"
+
+[[elven_lands.forest_encounters.table]]
+roll = [61, 65]
+encounter = "Elven mooncat"
+disposition = "observing"
+notes = "1d4 mooncats, possibly with an elf"
+challenge_rating = "1 each"
+
+[[elven_lands.forest_encounters.table]]
+roll = [66, 70]
+encounter = "Will-o'-wisps"
+disposition = "luring"
+notes = "1d4+1 will-o'-wisps leading travelers astray"
+challenge_rating = "2 each"
+
+[[elven_lands.forest_encounters.table]]
+roll = [71, 75]
+encounter = "Awakened trees"
+disposition = "defensive"
+notes = "1d4+1 awakened trees blocking the path"
+challenge_rating = "2 each"
+
+[[elven_lands.forest_encounters.table]]
+roll = [76, 80]
+encounter = "Elven mage"
+disposition = "powerful"
+notes = "An elven wizard with guards"
+
+[[elven_lands.forest_encounters.table]]
+roll = [81, 85]
+encounter = "Fey crossing"
+disposition = "mystical"
+notes = "A thin point to the Feywild"
+
+[[elven_lands.forest_encounters.table]]
+roll = [86, 90]
+encounter = "The Spider's web"
+disposition = "trapped"
+notes = "Signs of the Spider's influence"
+
+[[elven_lands.forest_encounters.table]]
+roll = [91, 95]
+encounter = "Winterwight"
+disposition = "mournful"
+notes = "A winterwight mourning lost glory"
+challenge_rating = "7"
+
+[[elven_lands.forest_encounters.table]]
+roll = [96, 98]
+encounter = "Elven noble"
+disposition = "imperious"
+notes = "A blooded elven noble with retinue"
+
+[[elven_lands.forest_encounters.table]]
+roll = [99, 100]
+encounter = "Ancient power"
+disposition = "mysterious"
+notes = "Something ancient and powerful stirs"
+
+# =============================================================================
+# SEA VOYAGE ENCOUNTER TABLES
+# =============================================================================
+
+[sea_voyage]
+description = "Encounters during ocean travel"
+
+[[sea_voyage.encounters.table]]
+roll = [1, 10]
+encounter = "Merchant ship"
+disposition = "neutral"
+notes = "A trading vessel, opportunity for news or trade"
+
+[[sea_voyage.encounters.table]]
+roll = [11, 15]
+encounter = "Fishing fleet"
+disposition = "friendly"
+notes = "Local fishers who know the waters"
+
+[[sea_voyage.encounters.table]]
+roll = [16, 20]
+encounter = "Naval vessel"
+disposition = "official"
+notes = "A warship of a naval power"
+
+[[sea_voyage.encounters.table]]
+roll = [21, 30]
+encounter = "Storm"
+disposition = "hazard"
+notes = "A dangerous storm"
+
+[[sea_voyage.encounters.table]]
+roll = [31, 40]
+encounter = "Pirates"
+disposition = "hostile"
+notes = "A pirate vessel seeking prey"
+
+[[sea_voyage.encounters.table]]
+roll = [41, 45]
+encounter = "Derelict ship"
+disposition = "mysterious"
+notes = "An abandoned vessel drifting"
+
+[[sea_voyage.encounters.table]]
+roll = [46, 50]
+encounter = "Sea creatures"
+disposition = "varies"
+notes = "Dolphins, whales, or other sea life"
+
+[[sea_voyage.encounters.table]]
+roll = [51, 55]
+encounter = "Giant shark"
+disposition = "predatory"
+notes = "A giant shark following the ship"
+challenge_rating = "5"
+
+[[sea_voyage.encounters.table]]
+roll = [56, 60]
+encounter = "Sahuagin raiders"
+disposition = "hostile"
+notes = "A sahuagin war party"
+challenge_rating = "1/2-2 each"
+
+[[sea_voyage.encounters.table]]
+roll = [61, 65]
+encounter = "Merfolk"
+disposition = "varies"
+notes = "Merfolk, possibly friendly or hostile"
+challenge_rating = "1/8 each"
+
+[[sea_voyage.encounters.table]]
+roll = [66, 70]
+encounter = "Ghost ship"
+disposition = "ominous"
+notes = "A spectral vessel"
+
+[[sea_voyage.encounters.table]]
+roll = [71, 75]
+encounter = "Water elemental"
+disposition = "varies"
+notes = "A water elemental"
+challenge_rating = "5"
+
+[[sea_voyage.encounters.table]]
+roll = [76, 80]
+encounter = "Dragon turtle"
+disposition = "territorial"
+notes = "A dragon turtle demanding tribute"
+challenge_rating = "17"
+
+[[sea_voyage.encounters.table]]
+roll = [81, 85]
+encounter = "Kraken spawn"
+disposition = "hostile"
+notes = "A young kraken or kraken spawn"
+challenge_rating = "varies"
+
+[[sea_voyage.encounters.table]]
+roll = [86, 90]
+encounter = "The Hydra"
+disposition = "demanding"
+notes = "The Hydra or its servants"
+challenge_rating = "22"
+
+[[sea_voyage.encounters.table]]
+roll = [91, 95]
+encounter = "The Siren"
+disposition = "luring"
+notes = "The Siren's song heard on the wind"
+challenge_rating = "16"
+
+[[sea_voyage.encounters.table]]
+roll = [96, 98]
+encounter = "The Leviathan"
+disposition = "catastrophic"
+notes = "The awnsheghlien Leviathan"
+challenge_rating = "18"
+
+[[sea_voyage.encounters.table]]
+roll = [99, 100]
+encounter = "The Serpent"
+disposition = "catastrophic"
+notes = "The great Serpent rises"
+challenge_rating = "25"
+
+# =============================================================================
+# SHADOW WORLD ENCOUNTER TABLES
+# =============================================================================
+
+[shadow_world]
+description = "Encounters in the Shadow World or near crossings"
+
+[[shadow_world.encounters.table]]
+roll = [1, 10]
+encounter = "Shadow essence"
+disposition = "hazard"
+notes = "Raw shadow energy that corrupts"
+
+[[shadow_world.encounters.table]]
+roll = [11, 20]
+encounter = "Lost souls"
+disposition = "pitiful"
+notes = "2d6 spirits of those lost in shadow"
+
+[[shadow_world.encounters.table]]
+roll = [21, 30]
+encounter = "Shadow walkers"
+disposition = "hostile"
+notes = "1d4+2 shadow walkers"
+challenge_rating = "4 each"
+
+[[shadow_world.encounters.table]]
+roll = [31, 40]
+encounter = "Shadow wraiths"
+disposition = "hostile"
+notes = "1d4 shadow wraiths"
+challenge_rating = "5 each"
+
+[[shadow_world.encounters.table]]
+roll = [41, 50]
+encounter = "Nightmare beasts"
+disposition = "hunting"
+notes = "1d4 nightmare beasts"
+challenge_rating = "8 each"
+
+[[shadow_world.encounters.table]]
+roll = [51, 60]
+encounter = "Shadow reflection"
+disposition = "disturbing"
+notes = "The party sees their dark reflections"
+
+[[shadow_world.encounters.table]]
+roll = [61, 70]
+encounter = "Reality tear"
+disposition = "hazard"
+notes = "A tear in reality leading elsewhere"
+
+[[shadow_world.encounters.table]]
+roll = [71, 80]
+encounter = "Void stalkers"
+disposition = "hunting"
+notes = "1d4 void stalkers"
+challenge_rating = "9 each"
+
+[[shadow_world.encounters.table]]
+roll = [81, 90]
+encounter = "Shadow power"
+disposition = "varies"
+notes = "A powerful entity of the Shadow World"
+
+[[shadow_world.encounters.table]]
+roll = [91, 95]
+encounter = "Memory echo"
+disposition = "mysterious"
+notes = "Echoes of past events playing out"
+
+[[shadow_world.encounters.table]]
+roll = [96, 100]
+encounter = "The Cold Rider"
+disposition = "catastrophic"
+notes = "A legendary power of the Shadow World"
+challenge_rating = "20+"
+
+# =============================================================================
+# SPECIAL ENCOUNTER MODIFIERS
+# =============================================================================
+
+[special_modifiers]
+description = "Modifiers that can be applied to any encounter"
+
+[[special_modifiers.conditions]]
+name = "Bloodline Presence"
+effect = "If party includes blooded individuals, +10% chance of bloodhound/awnsheghlien interest"
+roll_modifier = 5
+
+[[special_modifiers.conditions]]
+name = "Near Awnsheghlien Territory"
+effect = "Increase chance of that awnsheghlien's servants appearing"
+roll_modifier = 15
+
+[[special_modifiers.conditions]]
+name = "Holy Day"
+effect = "Undead and evil creatures have disadvantage; celestial/good creature chance +10%"
+roll_modifier = 0
+
+[[special_modifiers.conditions]]
+name = "Eclipse"
+effect = "Shadow World crossings more likely; undead empowered"
+roll_modifier = 10
+
+[[special_modifiers.conditions]]
+name = "Full Moon"
+effect = "Lycanthropes active; fey creatures more likely"
+roll_modifier = 5
+
+[[special_modifiers.conditions]]
+name = "Domain at War"
+effect = "Military encounters more common; refugees and deserters appear"
+roll_modifier = 15
+
+[[special_modifiers.conditions]]
+name = "Plague/Famine"
+effect = "Desperate encounters more common; undead rising"
+roll_modifier = 10
+
+[[special_modifiers.conditions]]
+name = "Festival"
+effect = "Peaceful encounters more likely; bandits target celebrations"
+roll_modifier = -5
+
+# =============================================================================
+# ENCOUNTER REACTION TABLE
+# =============================================================================
+
+[reaction_table]
+description = "Determine NPC/creature initial reaction"
+
+[[reaction_table.results]]
+roll = [2, 2]
+reaction = "Hostile - Attacks immediately"
+modifier_friendly = 0
+modifier_diplomatic = 0
+
+[[reaction_table.results]]
+roll = [3, 5]
+reaction = "Unfriendly - Threatens, demands, may attack"
+modifier_friendly = 2
+modifier_diplomatic = 1
+
+[[reaction_table.results]]
+roll = [6, 8]
+reaction = "Neutral - Wary, will negotiate"
+modifier_friendly = 3
+modifier_diplomatic = 2
+
+[[reaction_table.results]]
+roll = [9, 11]
+reaction = "Friendly - Willing to help within reason"
+modifier_friendly = 4
+modifier_diplomatic = 3
+
+[[reaction_table.results]]
+roll = [12, 12]
+reaction = "Helpful - Goes out of way to assist"
+modifier_friendly = 5
+modifier_diplomatic = 4
+
+[reaction_table.modifiers]
+charisma_bonus = "Add CHA modifier"
+reputation = "Add or subtract based on party reputation"
+bloodline = "Blooded characters may get bonus or penalty depending on creature"
+previous_encounters = "Adjust based on prior interactions"
+gifts = "+1 to +3 for appropriate gifts"
+threats = "-1 to -4 for threats"

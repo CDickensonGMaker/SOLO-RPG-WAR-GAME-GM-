@@ -1,0 +1,75 @@
+# Building Locations - Weird War Setting
+# Structures in the war zone with potential supernatural significance
+
+[buildings]
+entries = [
+  # Religious Buildings
+  { text = "Bombed-out cathedral, stained glass shattered but altar intact", weight = 1 },
+  { text = "Village church, roof collapsed but walls standing", weight = 1 },
+  { text = "Monastery converted to field hospital, monks still praying", weight = 1 },
+  { text = "Cemetery chapel, surrounded by overturned graves", weight = 1 },
+  { text = "Roadside shrine, inexplicably untouched by the fighting", weight = 1 },
+  { text = "Desecrated church, symbols of the enemy's faith carved into stone", weight = 1 },
+  { text = "Underground crypt, accessed through bomb damage", weight = 1 },
+  { text = "Bell tower, perfect observation post with dark history", weight = 1 },
+  { text = "Confessional booth, still standing amid ruins", weight = 1 },
+  { text = "Convent, nuns caring for wounded from all sides", weight = 1 },
+
+  # Military Buildings
+  { text = "Field hospital, overwhelmed with casualties", weight = 1 },
+  { text = "Ammunition depot, volatile and heavily guarded", weight = 1 },
+  { text = "Command headquarters, commandeered manor house", weight = 1 },
+  { text = "Motor pool, vehicles in various states of repair", weight = 1 },
+  { text = "Communication center, wires trailing in all directions", weight = 1 },
+  { text = "Officer's quarters, luxurious compared to the trenches", weight = 1 },
+  { text = "Prison camp barracks, hollow-eyed occupants watching", weight = 1 },
+  { text = "Guard post checkpoint, papers scrutinized carefully", weight = 1 },
+  { text = "Supply warehouse, crates stacked to the ceiling", weight = 1 },
+  { text = "Training facility, mockups of enemy fortifications", weight = 1 },
+
+  # Civilian Buildings
+  { text = "Farmhouse, family still trying to live normally", weight = 1 },
+  { text = "Village inn, soldiers from both sides have drunk here", weight = 1 },
+  { text = "Schoolhouse, children's drawings still on the walls", weight = 1 },
+  { text = "Town hall, records scattered across the floor", weight = 1 },
+  { text = "Factory, machinery still turning out supplies", weight = 1 },
+  { text = "Mill, waterwheel turning despite the carnage nearby", weight = 1 },
+  { text = "Baker's shop, ovens cold for months", weight = 1 },
+  { text = "Blacksmith's forge, tools that could be weapons", weight = 1 },
+  { text = "Doctor's house, medicines desperately needed", weight = 1 },
+  { text = "Abandoned mansion, wealthy owners long fled", weight = 1 },
+
+  # Industrial and Infrastructure
+  { text = "Railway station, trains no longer running", weight = 1 },
+  { text = "Bridge control house, overlooking vital crossing", weight = 1 },
+  { text = "Power station, still providing electricity somehow", weight = 1 },
+  { text = "Water pumping station, controlling the region's supply", weight = 1 },
+  { text = "Coal mine entrance, darkness descending forever", weight = 1 },
+  { text = "Telegraph office, lines cut but equipment salvageable", weight = 1 },
+  { text = "Fuel depot, drums stacked and leaking", weight = 1 },
+  { text = "Warehouse by the docks, crates with strange markings", weight = 1 },
+  { text = "Lighthouse, beam still sweeping despite the war", weight = 1 },
+  { text = "Dam control building, holding back waters above the valley", weight = 1 },
+
+  # Supernatural Buildings
+  { text = "Old manor house where the mirrors show wrong reflections", weight = 1 },
+  { text = "Library with books that should not exist in this era", weight = 1 },
+  { text = "Laboratory where experiments continued after the staff died", weight = 1 },
+  { text = "Church where prayers are answered by the wrong deity", weight = 1 },
+  { text = "Asylum, patients speaking prophecies in ancient tongues", weight = 1 },
+  { text = "Castle ruin where something ancient sleeps below", weight = 1 },
+  { text = "Museum with artifacts that have begun to move", weight = 1 },
+  { text = "Opera house where music plays with no performers", weight = 1 },
+  { text = "Hospital where the dead walk the halls at night", weight = 1 },
+  { text = "University building with a sealed wing no one discusses", weight = 1 },
+  { text = "Hunting lodge with trophies of creatures that never existed", weight = 1 },
+  { text = "Observatory where they saw something in the stars", weight = 1 },
+  { text = "Morgue where bodies have gone missing, not stolen", weight = 1 },
+  { text = "Temple disguised as a barn, hidden for centuries", weight = 1 },
+  { text = "Archive containing records of previous supernatural wars", weight = 1 },
+  { text = "Cultist safehouse, ritual implements still warm", weight = 1 },
+  { text = "Sealed bunker containing failed occult experiments", weight = 1 },
+  { text = "Brothel where soldiers share more than their bodies", weight = 1 },
+  { text = "Wine cellar with bottles containing something other than wine", weight = 1 },
+  { text = "Slaughterhouse where the butcher still works, endlessly", weight = 1 },
+]

@@ -1,0 +1,324 @@
+# Warhammer: The Old World - Turn Sequence Reference
+# Classic rank-and-flank fantasy battles
+
+name = "Warhammer: The Old World Turn Sequence"
+description = "Complete turn breakdown for Old World/Classic Warhammer Fantasy"
+
+[turn_structure]
+description = "Players alternate turns. Each turn follows this sequence (I-GO-U-GO)."
+key_concept = "Movement is king - charges, fleeing, and maneuvering ranked units"
+
+[[phases]]
+name = "Start of Turn Phase"
+order = 1
+description = "Housekeeping and mandatory effects"
+
+[[phases.steps]]
+step = 1
+action = "Start of Turn Effects"
+details = "Resolve any abilities that trigger at start of turn"
+rules = [
+    "Magic items that activate",
+    "Spell effects that expire or trigger",
+    "Regeneration attempts for multi-wound models",
+]
+
+[[phases.steps]]
+step = 2
+action = "Rally Fleeing Units"
+details = "Attempt to rally any units that fled"
+rules = [
+    "Roll 2D6 vs Leadership",
+    "Must be 25%+ of starting unit size",
+    "Cannot rally if enemy within 8\"",
+    "Rallied units may not move this turn",
+]
+
+[[phases]]
+name = "Movement Phase"
+order = 2
+description = "March your forces across the battlefield"
+
+[[phases.steps]]
+step = 1
+action = "Declare Charges"
+details = "Announce all charges before any movement"
+rules = [
+    "Must be able to see target",
+    "Must be able to reach target (within charge range)",
+    "Declare ALL charges first",
+    "Opponent declares charge reactions",
+]
+
+[[phases.steps]]
+step = 2
+action = "Charge Reactions"
+details = "Defending units choose their response"
+rules = [
+    "HOLD: Stand and receive charge",
+    "STAND AND SHOOT: Fire at chargers, then hold",
+    "FLEE: Roll 2D6\" (3D6\" for M6+), run away",
+]
+
+[[phases.steps]]
+step = 3
+action = "Resolve Charges"
+details = "Move charging units into contact"
+rules = [
+    "Infantry charge: M + 2D6\"",
+    "Cavalry charge: M + 3D6\" (or 2D6\" if M6+)",
+    "If fail charge: move maximum roll toward target",
+    "Align to target's facing",
+]
+
+[[phases.steps]]
+step = 4
+action = "Compulsory Moves"
+details = "Move models that must move"
+rules = [
+    "Fleeing units continue fleeing (2D6\" or 3D6\")",
+    "Frenzied units must charge if able",
+    "Animosity, Stupidity tests",
+]
+
+[[phases.steps]]
+step = 5
+action = "Remaining Moves"
+details = "Move all other units"
+rules = [
+    "Standard move: M in inches",
+    "March move: 2x M (no shooting, enemies must be 8\"+ away)",
+    "Reform: Change formation, no other movement",
+    "Wheel: Pivot on corner",
+    "Difficult terrain: Half movement",
+]
+
+[[phases]]
+name = "Magic Phase"
+order = 3
+description = "Cast devastating spells"
+
+[[phases.steps]]
+step = 1
+action = "Generate Power Dice"
+details = "Roll 2D6 for the Winds of Magic"
+rules = [
+    "Casting player gets result as Power Dice",
+    "Opponent gets highest single die as Dispel Dice",
+    "+1 Power Die per Wizard level (caster)",
+    "+1 Dispel Die per Wizard level (opponent)",
+]
+
+[[phases.steps]]
+step = 2
+action = "Cast Spells"
+details = "Attempt to cast spells with Power Dice"
+rules = [
+    "Declare spell and target",
+    "Allocate Power Dice (roll to meet casting value)",
+    "Opponent may attempt to dispel",
+    "Irresistible Force on double 6",
+    "Miscast on double 1",
+]
+
+[[phases.steps]]
+step = 3
+action = "Dispel Attempts"
+details = "Opponent tries to stop spells"
+rules = [
+    "Allocate Dispel Dice after casting roll",
+    "Must beat casting roll total",
+    "Automatic dispel if beat by 3+",
+]
+
+[[phases.steps]]
+step = 4
+action = "Miscasts and Irresistible Force"
+details = "Resolve magical mishaps"
+rules = [
+    "Miscast: Roll on Miscast table",
+    "Irresistible Force: Cannot be dispelled, then roll Miscast",
+]
+
+[[phases]]
+name = "Shooting Phase"
+order = 4
+description = "Rain death upon the enemy"
+
+[[phases.steps]]
+step = 1
+action = "Nominate Shooting Unit"
+details = "Choose which unit fires"
+rules = [
+    "Cannot shoot if marched this turn",
+    "Cannot shoot if in close combat",
+    "Cannot shoot if fled or rallied this turn",
+]
+
+[[phases.steps]]
+step = 2
+action = "Choose Target"
+details = "Select enemy unit within range and LOS"
+rules = [
+    "Must have line of sight",
+    "Must be in range of weapon",
+    "Must shoot closest target (usually)",
+    "No shooting into combat",
+]
+
+[[phases.steps]]
+step = 3
+action = "Roll To Hit"
+details = "Compare BS to target modifiers"
+rules = [
+    "BS 1=6+, BS 2=5+, BS 3=4+, BS 4=3+, BS 5=2+",
+    "-1 long range (over half max)",
+    "-1 moving and shooting",
+    "-1 soft cover",
+    "-2 hard cover",
+    "-1 per rank after first (volley)",
+]
+
+[[phases.steps]]
+step = 4
+action = "Roll To Wound"
+details = "Compare Strength to Toughness"
+rules = [
+    "S >= T+2: 2+ to wound",
+    "S = T+1: 3+ to wound",
+    "S = T: 4+ to wound",
+    "S = T-1: 5+ to wound",
+    "S <= T-2: 6+ to wound",
+]
+
+[[phases.steps]]
+step = 5
+action = "Armor Saves"
+details = "Roll armor save modified by weapon Strength"
+rules = [
+    "Roll vs Save value",
+    "Strength modifies save (S4 = -1, S5 = -2, etc.)",
+    "Ward saves taken after failed armor save",
+    "Ward saves cannot be modified",
+]
+
+[[phases.steps]]
+step = 6
+action = "Remove Casualties"
+details = "Remove models from rear of unit"
+
+[[phases.steps]]
+step = 7
+action = "Panic Tests"
+details = "Test for units that took 25%+ casualties"
+rules = [
+    "Roll 2D6 vs Leadership",
+    "Fail = unit flees",
+]
+
+[[phases]]
+name = "Close Combat Phase"
+order = 5
+description = "Bloody melee in the ranks"
+
+[[phases.steps]]
+step = 1
+action = "Choose Combat"
+details = "Active player chooses order of combats"
+
+[[phases.steps]]
+step = 2
+action = "Fight in Initiative Order"
+details = "Models strike in order of Initiative"
+rules = [
+    "Highest Initiative fights first",
+    "Charging units may strike first (some weapons)",
+    "Great weapons always strike last",
+]
+
+[[phases.steps]]
+step = 3
+action = "Roll To Hit"
+details = "Compare WS to WS"
+rules = [
+    "WS >= defender x2: 3+ to hit",
+    "WS > defender: 3+ to hit",
+    "WS = defender: 4+ to hit",
+    "WS < defender: 5+ to hit",
+]
+
+[[phases.steps]]
+step = 4
+action = "Roll To Wound"
+details = "Same as shooting (S vs T)"
+
+[[phases.steps]]
+step = 5
+action = "Armor Saves"
+details = "Same as shooting, modified by weapon S"
+
+[[phases.steps]]
+step = 6
+action = "Calculate Combat Result"
+details = "Add up combat resolution"
+rules = [
+    "+1 per wound caused",
+    "+1 for charging",
+    "+1 per rank after first (max +3)",
+    "+1 for standard",
+    "+1 for battle standard within 12\"",
+    "+1 for outnumbering",
+    "+1 for flank attack",
+    "+2 for rear attack",
+    "+1 for high ground",
+]
+
+[[phases.steps]]
+step = 7
+action = "Break Test"
+details = "Loser tests or flees"
+rules = [
+    "Roll 2D6 vs Leadership",
+    "Modify by difference in combat resolution",
+    "Fail = unit breaks and flees",
+    "Steadfast: use unmodified Ld if more ranks",
+]
+
+[[phases.steps]]
+step = 8
+action = "Pursuit and Flee"
+details = "Winners may pursue"
+rules = [
+    "Fleeing unit rolls 2D6\" (or 3D6\" if M6+)",
+    "Pursuer rolls same, add M",
+    "If catch = destroyed",
+    "Restrain pursuit: Ld test to not pursue",
+]
+
+[[phases.steps]]
+step = 9
+action = "Reform"
+details = "Victorious units may reform"
+
+[special_rules_summary]
+Hatred = "Re-roll misses in first round of combat"
+Frenzy = "Must charge, +1 Attack, Immune to Psychology"
+Fear = "Causes fear; test Ld to charge, enemies need 6s if outnumbered"
+Terror = "Causes fear and terror; test or flee"
+Stubborn = "Always use unmodified Leadership for Break tests"
+Steadfast = "Use unmodified Ld if have more ranks"
+Regeneration = "4+ to ignore wound (not vs Flaming)"
+Ward_Save = "Secondary save that cannot be modified"
+Impact_Hits = "Automatic hits when charging"
+Killing_Blow = "6 to wound = instant death"
+Poisoned = "6 to hit auto-wounds"
+Flaming = "Negates Regeneration"
+
+[quick_reference]
+to_hit_shooting = "BS 1=6+, BS 2=5+, BS 3=4+, BS 4=3+, BS 5=2+"
+to_hit_melee = "WS equal=4+, WS higher=3+, WS double=3+"
+to_wound = "S>T+1=2+, S>T=3+, S=T=4+, S<T=5+, S<T-1=6+"
+armor_mod = "S4=-1, S5=-2, S6=-3, S7=-4, S8+ = no save"
+charge_range = "Infantry: M+2D6\", Cavalry: M+3D6\""
+flee_distance = "2D6\" (3D6\" if M6+)"
+panic_threshold = "25% casualties from shooting"

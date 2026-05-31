@@ -1,0 +1,868 @@
+# Warhammer 40,000 2nd Edition - Chaos Space Marines
+# The Traitor Legions - Slaves to Darkness
+
+name = "Chaos Space Marines"
+codex = "Codex: Chaos (1996)"
+description = "Once-noble Space Marines corrupted by the Ruinous Powers, now twisted champions of Chaos"
+playstyle = "Corrupted elite infantry with daemonic support and powerful characters"
+strengths = ["Marine stats", "Powerful characters", "Daemon support", "Marks of Chaos", "Veterans of the Long War"]
+weaknesses = ["Internal rivalry", "Expensive with upgrades", "No Chapter Tactics equivalent"]
+
+[faction_rules]
+name = "Marks of Chaos"
+description = "Chaos units can be dedicated to one of the four Chaos Gods, gaining unique abilities"
+
+# =============================================================================
+# HQ UNITS
+# =============================================================================
+
+[[units]]
+name = "Chaos Lord"
+type = "infantry"
+category = "HQ"
+points = 65
+models = "1"
+tactical_role = "commander"
+threat_level = "very_high"
+preferred_targets = ["characters", "elite_infantry"]
+weaknesses = ["massed_fire", "psykers"]
+special_rules = ["Independent Character", "Champion of Chaos", "Fearless"]
+keywords = ["Infantry", "Character", "Chaos", "Heretic Astartes"]
+
+[units.stats]
+M = 4
+WS = 6
+BS = 5
+S = 4
+T = 4
+W = 3
+I = 5
+A = 3
+Ld = 10
+Sv = "3+"
+
+[[units.weapons]]
+name = "Bolt Pistol"
+range = "12\""
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Pistol"
+shots = "1"
+
+[[units.weapons]]
+name = "Power Sword"
+range = "Melee"
+strength = "User"
+ap = "-"
+damage = "1"
+type = "Melee"
+abilities = ["Ignores Armor Saves"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Daemon Prince"
+type = "monster"
+category = "HQ"
+points = 175
+models = "1"
+tactical_role = "assault"
+threat_level = "extreme"
+preferred_targets = ["all_targets"]
+weaknesses = ["massed_fire", "force_weapons"]
+special_rules = ["Daemon", "Fearless", "Deep Strike", "Monstrous Creature"]
+keywords = ["Monster", "Character", "Daemon", "Chaos"]
+
+[units.stats]
+M = 8
+WS = 9
+BS = 5
+S = 7
+T = 6
+W = 4
+I = 8
+A = 5
+Ld = 10
+Sv = "4+"
+
+[[units.weapons]]
+name = "Malefic Talons"
+range = "Melee"
+strength = "User"
+ap = "-"
+damage = "1"
+type = "Melee"
+abilities = ["Ignores Armor Saves", "+1 Attack"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Chaos Sorcerer"
+type = "infantry"
+category = "HQ"
+points = 75
+models = "1"
+tactical_role = "psyker"
+threat_level = "high"
+preferred_targets = ["infantry", "psykers"]
+weaknesses = ["snipers", "nullification"]
+special_rules = ["Independent Character", "Psyker (Level 1-3)", "Mark of Tzeentch"]
+keywords = ["Infantry", "Character", "Psyker", "Chaos", "Heretic Astartes"]
+
+[units.stats]
+M = 4
+WS = 5
+BS = 4
+S = 4
+T = 4
+W = 2
+I = 4
+A = 2
+Ld = 10
+Sv = "3+"
+
+[[units.weapons]]
+name = "Bolt Pistol"
+range = "12\""
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Pistol"
+shots = "1"
+
+[[units.weapons]]
+name = "Force Sword"
+range = "Melee"
+strength = "User"
+ap = "-"
+damage = "1"
+type = "Melee"
+abilities = ["Ignores Armor Saves", "Instant Death on Psychic Test"]
+
+# =============================================================================
+# ELITES
+# =============================================================================
+
+[[units]]
+name = "Chosen"
+type = "infantry"
+category = "Elites"
+points = 23
+models = "5-10"
+tactical_role = "veteran_infantry"
+threat_level = "high"
+preferred_targets = ["infantry", "characters"]
+weaknesses = ["heavy_weapons"]
+special_rules = ["Infiltrate (optional)", "Veterans of the Long War"]
+keywords = ["Infantry", "Chosen", "Chaos", "Heretic Astartes"]
+
+[units.stats]
+M = 4
+WS = 5
+BS = 4
+S = 4
+T = 4
+W = 1
+I = 4
+A = 2
+Ld = 9
+Sv = "3+"
+
+[[units.weapons]]
+name = "Boltgun"
+range = "24\""
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Rapid Fire"
+shots = "1"
+
+[[units.weapons]]
+name = "Bolt Pistol"
+range = "12\""
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Pistol"
+shots = "1"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Khorne Berzerkers"
+type = "infantry"
+category = "Elites"
+points = 21
+models = "5-20"
+tactical_role = "assault"
+threat_level = "very_high"
+preferred_targets = ["infantry", "characters"]
+weaknesses = ["shooting"]
+special_rules = ["Fearless", "Furious Charge", "Mark of Khorne", "Blood for the Blood God"]
+keywords = ["Infantry", "Khorne", "Chaos", "Heretic Astartes"]
+
+[units.stats]
+M = 4
+WS = 5
+BS = 4
+S = 4
+T = 4
+W = 1
+I = 4
+A = 2
+Ld = 8
+Sv = "3+"
+
+[[units.weapons]]
+name = "Chainaxe"
+range = "Melee"
+strength = "+1"
+ap = "4"
+damage = "1"
+type = "Melee"
+
+[[units.weapons]]
+name = "Bolt Pistol"
+range = "12\""
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Pistol"
+shots = "1"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Plague Marines"
+type = "infantry"
+category = "Elites"
+points = 24
+models = "5-20"
+tactical_role = "durable_infantry"
+threat_level = "high"
+preferred_targets = ["infantry"]
+weaknesses = ["instant_death", "power_weapons"]
+special_rules = ["Feel No Pain", "Fearless", "Mark of Nurgle", "Blight Grenades"]
+keywords = ["Infantry", "Nurgle", "Chaos", "Heretic Astartes"]
+
+[units.stats]
+M = 4
+WS = 4
+BS = 4
+S = 4
+T = 5
+W = 1
+I = 3
+A = 1
+Ld = 8
+Sv = "3+"
+
+[[units.weapons]]
+name = "Boltgun"
+range = "24\""
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Rapid Fire"
+shots = "1"
+
+[[units.weapons]]
+name = "Plague Knife"
+range = "Melee"
+strength = "User"
+ap = "-"
+damage = "1"
+type = "Melee"
+abilities = ["Poison (4+)"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Noise Marines"
+type = "infantry"
+category = "Elites"
+points = 20
+models = "5-20"
+tactical_role = "fire_support"
+threat_level = "high"
+preferred_targets = ["infantry"]
+weaknesses = ["assault"]
+special_rules = ["Fearless", "Mark of Slaanesh", "Cacophony"]
+keywords = ["Infantry", "Slaanesh", "Chaos", "Heretic Astartes"]
+
+[units.stats]
+M = 4
+WS = 4
+BS = 4
+S = 4
+T = 4
+W = 1
+I = 5
+A = 1
+Ld = 8
+Sv = "3+"
+
+[[units.weapons]]
+name = "Sonic Blaster"
+range = "24\""
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Assault 2"
+abilities = ["Ignores Cover", "Salvo"]
+
+[[units.weapons]]
+name = "Bolt Pistol"
+range = "12\""
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Pistol"
+shots = "1"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Rubric Marines"
+type = "infantry"
+category = "Elites"
+points = 23
+models = "5-20"
+tactical_role = "durable_fire_support"
+threat_level = "high"
+preferred_targets = ["infantry"]
+weaknesses = ["high_ap_weapons"]
+special_rules = ["Fearless", "Mark of Tzeentch", "Slow and Purposeful", "All is Dust"]
+keywords = ["Infantry", "Tzeentch", "Chaos", "Heretic Astartes"]
+
+[units.stats]
+M = 4
+WS = 3
+BS = 4
+S = 4
+T = 4
+W = 1
+I = 2
+A = 1
+Ld = 8
+Sv = "3+/4++"
+
+[[units.weapons]]
+name = "Inferno Boltgun"
+range = "24\""
+strength = "4"
+ap = "3"
+damage = "1"
+type = "Rapid Fire"
+shots = "1"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Chaos Terminators"
+type = "infantry"
+category = "Elites"
+points = 65
+models = "3-10"
+tactical_role = "elite_assault"
+threat_level = "very_high"
+preferred_targets = ["all_targets"]
+weaknesses = ["massed_fire"]
+special_rules = ["Deep Strike", "Terminator Armor", "Veterans of the Long War"]
+keywords = ["Infantry", "Terminator", "Chaos", "Heretic Astartes"]
+
+[units.stats]
+M = 4
+WS = 4
+BS = 4
+S = 4
+T = 4
+W = 1
+I = 4
+A = 2
+Ld = 9
+Sv = "2+/5++"
+
+[[units.weapons]]
+name = "Combi-Bolter"
+range = "24\""
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Rapid Fire"
+shots = "2"
+
+[[units.weapons]]
+name = "Power Axe"
+range = "Melee"
+strength = "+1"
+ap = "-"
+damage = "1"
+type = "Melee"
+abilities = ["Ignores Armor Saves", "Unwieldy"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Possessed"
+type = "infantry"
+category = "Elites"
+points = 26
+models = "5-20"
+tactical_role = "assault"
+threat_level = "high"
+preferred_targets = ["infantry"]
+weaknesses = ["shooting", "force_weapons"]
+special_rules = ["Daemon", "Fearless", "Fleet", "Random Mutations"]
+keywords = ["Infantry", "Daemon", "Chaos", "Heretic Astartes"]
+
+[units.stats]
+M = 6
+WS = 5
+BS = 4
+S = 5
+T = 4
+W = 1
+I = 4
+A = 2
+Ld = 8
+Sv = "3+"
+
+[[units.weapons]]
+name = "Horrifying Mutations"
+range = "Melee"
+strength = "User"
+ap = "-"
+damage = "1"
+type = "Melee"
+abilities = ["Random AP", "Random abilities"]
+
+# =============================================================================
+# TROOPS
+# =============================================================================
+
+[[units]]
+name = "Chaos Space Marines"
+type = "infantry"
+category = "Troops"
+points = 15
+models = "5-20"
+tactical_role = "line_infantry"
+threat_level = "medium"
+preferred_targets = ["infantry"]
+weaknesses = ["heavy_weapons", "assault_specialists"]
+special_rules = ["Veterans of the Long War"]
+keywords = ["Infantry", "Chaos", "Heretic Astartes"]
+
+[units.stats]
+M = 4
+WS = 4
+BS = 4
+S = 4
+T = 4
+W = 1
+I = 4
+A = 1
+Ld = 8
+Sv = "3+"
+
+[[units.weapons]]
+name = "Boltgun"
+range = "24\""
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Rapid Fire"
+shots = "1"
+
+[[units.weapons]]
+name = "Bolt Pistol"
+range = "12\""
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Pistol"
+shots = "1"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Chaos Cultists"
+type = "infantry"
+category = "Troops"
+points = 4
+models = "10-35"
+tactical_role = "screening"
+threat_level = "low"
+preferred_targets = ["objectives"]
+weaknesses = ["everything"]
+special_rules = ["Cannon Fodder"]
+keywords = ["Infantry", "Cultist", "Chaos"]
+
+[units.stats]
+M = 4
+WS = 3
+BS = 3
+S = 3
+T = 3
+W = 1
+I = 3
+A = 1
+Ld = 6
+Sv = "6+"
+
+[[units.weapons]]
+name = "Autogun"
+range = "24\""
+strength = "3"
+ap = "-"
+damage = "1"
+type = "Rapid Fire"
+shots = "1"
+
+[[units.weapons]]
+name = "Autopistol"
+range = "12\""
+strength = "3"
+ap = "-"
+damage = "1"
+type = "Pistol"
+shots = "1"
+
+# =============================================================================
+# FAST ATTACK
+# =============================================================================
+
+[[units]]
+name = "Chaos Bikers"
+type = "bike"
+category = "Fast Attack"
+points = 30
+models = "3-8"
+tactical_role = "fast_attack"
+threat_level = "medium"
+preferred_targets = ["infantry", "light_vehicles"]
+weaknesses = ["heavy_weapons"]
+special_rules = ["Turbo-boost", "Relentless"]
+keywords = ["Bike", "Chaos", "Heretic Astartes"]
+
+[units.stats]
+M = 12
+WS = 4
+BS = 4
+S = 4
+T = 5
+W = 1
+I = 4
+A = 1
+Ld = 8
+Sv = "3+"
+
+[[units.weapons]]
+name = "Twin-linked Boltgun"
+range = "24\""
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Rapid Fire"
+shots = "2"
+abilities = ["Twin-linked"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Raptors"
+type = "infantry"
+category = "Fast Attack"
+points = 19
+models = "5-15"
+tactical_role = "assault"
+threat_level = "high"
+preferred_targets = ["infantry", "artillery"]
+weaknesses = ["overwatch", "massed_fire"]
+special_rules = ["Jump Pack", "Fear"]
+keywords = ["Infantry", "Jump Pack", "Chaos", "Heretic Astartes"]
+
+[units.stats]
+M = 12
+WS = 4
+BS = 4
+S = 4
+T = 4
+W = 1
+I = 4
+A = 1
+Ld = 8
+Sv = "3+"
+
+[[units.weapons]]
+name = "Bolt Pistol"
+range = "12\""
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Pistol"
+shots = "1"
+
+[[units.weapons]]
+name = "Chainsword"
+range = "Melee"
+strength = "User"
+ap = "-"
+damage = "1"
+type = "Melee"
+abilities = ["+1 Attack"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Warp Talons"
+type = "infantry"
+category = "Fast Attack"
+points = 30
+models = "5-10"
+tactical_role = "assault"
+threat_level = "very_high"
+preferred_targets = ["infantry", "characters"]
+weaknesses = ["overwatch"]
+special_rules = ["Jump Pack", "Deep Strike", "Daemon", "Blind"]
+keywords = ["Infantry", "Jump Pack", "Daemon", "Chaos", "Heretic Astartes"]
+
+[units.stats]
+M = 12
+WS = 5
+BS = 4
+S = 4
+T = 4
+W = 1
+I = 5
+A = 2
+Ld = 8
+Sv = "3+"
+
+[[units.weapons]]
+name = "Lightning Claws (pair)"
+range = "Melee"
+strength = "User"
+ap = "-"
+damage = "1"
+type = "Melee"
+abilities = ["Ignores Armor Saves", "Re-roll Wounds", "+1 Attack"]
+
+# =============================================================================
+# HEAVY SUPPORT
+# =============================================================================
+
+[[units]]
+name = "Havocs"
+type = "infantry"
+category = "Heavy Support"
+points = 18
+models = "5-10"
+tactical_role = "fire_support"
+threat_level = "high"
+preferred_targets = ["vehicles", "monsters"]
+weaknesses = ["assault"]
+special_rules = ["Veterans of the Long War"]
+keywords = ["Infantry", "Chaos", "Heretic Astartes"]
+
+[units.stats]
+M = 4
+WS = 4
+BS = 4
+S = 4
+T = 4
+W = 1
+I = 4
+A = 1
+Ld = 8
+Sv = "3+"
+
+[[units.weapons]]
+name = "Lascannon"
+range = "48\""
+strength = "9"
+ap = "2"
+damage = "1"
+type = "Heavy 1"
+
+[[units.weapons]]
+name = "Autocannon"
+range = "48\""
+strength = "7"
+ap = "4"
+damage = "1"
+type = "Heavy 2"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Obliterators"
+type = "infantry"
+category = "Heavy Support"
+points = 70
+models = "1-3"
+tactical_role = "heavy_fire_support"
+threat_level = "very_high"
+preferred_targets = ["all_targets"]
+weaknesses = ["massed_fire"]
+special_rules = ["Deep Strike", "Daemon", "Slow and Purposeful", "Fleshmetal Weapons"]
+keywords = ["Infantry", "Daemon", "Chaos", "Heretic Astartes"]
+
+[units.stats]
+M = 4
+WS = 4
+BS = 4
+S = 4
+T = 5
+W = 2
+I = 3
+A = 2
+Ld = 8
+Sv = "2+/5++"
+
+[[units.weapons]]
+name = "Fleshmetal Guns"
+range = "24\""
+strength = "6-9"
+ap = "1-4"
+damage = "1-D3"
+type = "Assault 2"
+abilities = ["Random profile each turn"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Chaos Land Raider"
+type = "vehicle"
+category = "Heavy Support"
+points = 250
+models = "1"
+tactical_role = "assault_transport"
+threat_level = "very_high"
+preferred_targets = ["all_targets"]
+weaknesses = ["melta", "power_fists"]
+special_rules = ["Tank", "Assault Vehicle", "Transport (12)"]
+keywords = ["Vehicle", "Tank", "Transport", "Chaos", "Heretic Astartes"]
+
+[units.stats]
+M = 10
+WS = "-"
+BS = 4
+S = "-"
+T = "-"
+W = "-"
+I = "-"
+A = "-"
+Ld = "-"
+Sv = "-"
+
+[units.armor]
+front = 14
+side = 14
+rear = 14
+
+[[units.weapons]]
+name = "Twin-linked Lascannon (x2)"
+range = "48\""
+strength = "9"
+ap = "2"
+damage = "1"
+type = "Heavy 1"
+abilities = ["Twin-linked"]
+
+[[units.weapons]]
+name = "Twin-linked Heavy Bolter"
+range = "36\""
+strength = "5"
+ap = "4"
+damage = "1"
+type = "Heavy 3"
+abilities = ["Twin-linked"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Defiler"
+type = "vehicle"
+category = "Heavy Support"
+points = 195
+models = "1"
+tactical_role = "assault_vehicle"
+threat_level = "very_high"
+preferred_targets = ["infantry", "vehicles"]
+weaknesses = ["melta", "lascannons"]
+special_rules = ["Walker", "Daemon", "Fleet", "It Will Not Die"]
+keywords = ["Vehicle", "Walker", "Daemon", "Chaos"]
+
+[units.stats]
+M = 8
+WS = 3
+BS = 3
+S = 10
+T = "-"
+W = "-"
+I = 3
+A = 3
+Ld = "-"
+Sv = "-"
+
+[units.armor]
+front = 12
+side = 12
+rear = 10
+
+[[units.weapons]]
+name = "Battle Cannon"
+range = "72\""
+strength = "8"
+ap = "3"
+damage = "D3"
+type = "Ordnance 1"
+abilities = ["Large Blast"]
+
+[[units.weapons]]
+name = "Power Scourge"
+range = "Melee"
+strength = "10"
+ap = "-"
+damage = "1"
+type = "Melee"
+abilities = ["Ignores Armor Saves"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Forgefiend"
+type = "monster"
+category = "Heavy Support"
+points = 175
+models = "1"
+tactical_role = "fire_support"
+threat_level = "high"
+preferred_targets = ["vehicles", "monsters"]
+weaknesses = ["assault", "melta"]
+special_rules = ["Daemon", "It Will Not Die"]
+keywords = ["Monster", "Daemon", "Chaos"]
+
+[units.stats]
+M = 6
+WS = 3
+BS = 3
+S = 6
+T = 6
+W = 3
+I = 3
+A = 2
+Ld = 8
+Sv = "3+"
+
+[[units.weapons]]
+name = "Ectoplasma Cannon (x2)"
+range = "24\""
+strength = "8"
+ap = "2"
+damage = "1"
+type = "Heavy 1"
+abilities = ["Blast", "Gets Hot!"]

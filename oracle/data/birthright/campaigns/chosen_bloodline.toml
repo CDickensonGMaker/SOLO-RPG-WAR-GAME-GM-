@@ -1,0 +1,747 @@
+# The Chosen Bloodline Campaign
+# Theme: Personal destiny, divine prophecy, ultimate ascension
+# Scope: Culminating campaign that can follow any other
+
+[campaign]
+id = "chosen_bloodline"
+name = "The Chosen Bloodline"
+tagline = "The blood of gods flows in your veins. What will you become?"
+theme = "personal_destiny"
+difficulty = "legendary"
+recommended_bloodline = ["Any True Bloodline"]
+starting_season = "varies"
+starting_year = "varies"
+prerequisite_campaigns = ["iron_throne", "gorgons_shadow", "web_of_shadows", "sources_of_power", "cerilian_alliance"]
+prerequisite_count = 2  # Must complete at least 2
+
+[campaign.description]
+short = "Fulfill your divine destiny and ascend to something beyond mortal."
+long = """
+The blood remembers. Through five centuries of mortal generations, the divine
+essence of the gods who died at Deismaar has flowed through their descendants,
+diminishing with each passing generation. But in rare individuals, the blood
+burns bright - True bloodlines that carry the full weight of divine legacy.
+
+You are such a one. The blood has chosen you for a purpose greater than any
+mortal throne or earthly power. Visions plague your sleep. The gods themselves
+speak in riddles and portents. The very land responds to your presence.
+
+This is not about ruling kingdoms or defeating enemies. This is about becoming
+what your blood has always meant you to become. The question is: what is that?
+Godhood itself? The restoration of the divine covenant? The transformation of
+all Cerilia? Or something no prophecy has foretold?
+
+Your destiny awaits. But destiny can be shaped.
+"""
+
+[campaign.pillars]
+primary = "Divine blood is not a gift - it is a responsibility and a choice"
+secondary = "Prophecy shows possibility, not certainty"
+tone = "mythic with personal stakes"
+stakes = "The nature of divinity itself in Cerilia"
+
+[campaign.special_mechanics]
+prophecy_system = true
+bloodline_evolution = true
+divine_intervention = true
+multiple_endings = true
+
+# ============================================================================
+# ACT STRUCTURE
+# ============================================================================
+
+[acts.act_1]
+name = "The Awakening"
+description = "The blood awakens to its full potential"
+turn_range = [1, 10]
+objectives = [
+    "Experience the first true divine vision",
+    "Discover the nature of your bloodline's potential",
+    "Make contact with others who share your destiny"
+]
+completion_trigger = "destiny_path_chosen"
+
+[acts.act_1.starting_state]
+bloodline_awakening = 0  # 0-100
+divine_attention = 10
+prophecy_fragments = 0
+other_chosen_met = 0
+
+[acts.act_2]
+name = "The Trials"
+description = "Face the challenges that forge divine vessels"
+turn_range = [11, 25]
+objectives = [
+    "Complete the Trial of Blood",
+    "Complete the Trial of Land",
+    "Complete the Trial of Spirit"
+]
+completion_trigger = "trials_complete"
+prerequisites = ["act_1_complete"]
+
+[acts.act_2.state_changes]
+divine_attention = 50
+cosmic_significance = "increasing"
+
+[acts.act_3]
+name = "The Ascension"
+description = "Become what you were destined to be"
+turn_range = [26, 36]
+objectives = [
+    "Assemble the components of transformation",
+    "Face your ultimate rival or shadow",
+    "Choose and complete your ascension"
+]
+completion_trigger = "ascension_achieved"
+prerequisites = ["act_2_complete"]
+
+[acts.act_3.state_changes]
+divine_attention = 100
+transformation_imminent = true
+
+# ============================================================================
+# THE PROPHECY
+# ============================================================================
+
+[prophecy]
+fragments_total = 7
+interpretation_flexible = true
+
+[prophecy.fragments]
+fragment_1 = { text = "When seven stars align above the Spire of Deismaar, the blood shall speak", location = "temple_archives" }
+fragment_2 = { text = "One shall rise who carries all lights - the warrior's fury, the trickster's guile, the seer's sight, the elder's wisdom", location = "elven_lore" }
+fragment_3 = { text = "The land itself shall choose, for the land remembers what mortals forget", location = "druidic_circles" }
+fragment_4 = { text = "At the site of god-death, god-birth may come", location = "deismaar_ruins" }
+fragment_5 = { text = "The shadow must be faced, for without darkness there is no light", location = "shadow_world" }
+fragment_6 = { text = "Blood calls to blood across the veil of death, and the dead gods shall witness", location = "ancient_tombs" }
+fragment_7 = { text = "The choice is not made for you, but by you, when all paths converge", location = "player_determines" }
+
+# ============================================================================
+# DESTINY PATHS
+# ============================================================================
+
+[paths.god_ascension]
+name = "Divine Ascension"
+description = "Become a new god, taking a place in the celestial hierarchy"
+requirements = ["bloodline_score >= 60", "divine_favor >= 80", "trial_complete = all"]
+ending_type = "transcendence"
+
+[paths.god_restoration]
+name = "Divine Restoration"
+description = "Restore a dead god by becoming their vessel"
+requirements = ["bloodline_derivation = specific", "divine_fragments >= 5", "willing_sacrifice = true"]
+ending_type = "rebirth"
+
+[paths.bloodline_reform]
+name = "Bloodline Reformation"
+description = "Reform how divine blood works in Cerilia"
+requirements = ["all_derivations_contacted", "deismaar_ritual", "consensus_achieved"]
+ending_type = "world_change"
+
+[paths.chosen_mortal]
+name = "Chosen Mortality"
+description = "Reject ascension, remain mortal but forever changed"
+requirements = ["trial_complete = all", "explicit_rejection = true"]
+ending_type = "legendary_mortal"
+
+[paths.dark_ascension]
+name = "Dark Apotheosis"
+description = "Embrace the shadow in your blood and become an awnshegh-god"
+requirements = ["azrai_blood_awakened", "shadow_trials_complete", "embrace_corruption"]
+ending_type = "dark_god"
+
+# ============================================================================
+# KEY NPCS
+# ============================================================================
+
+[npcs.the_herald]
+name = "The Herald"
+title = "Voice of the Divine"
+role = "guide"
+bloodline = { derivation = "All", strength = "fragment", score = "varies" }
+disposition_base = 30
+
+[npcs.the_herald.personality]
+traits = ["mysterious", "ancient", "neutral", "cryptic"]
+approach = "guidance"
+weakness = "cannot act directly, only advise"
+quote = "I am what remains when gods die - memory given form. I cannot choose for you."
+
+[npcs.the_herald.nature]
+true_nature = "Collective echo of all gods who died at Deismaar"
+purpose = "Guide potential ascendants without influencing their choice"
+limitation = "Cannot lie, but need not tell whole truth"
+
+[npcs.the_rival]
+name = "The Rival"
+title = "The Other Chosen"
+role = "rival"
+bloodline = { derivation = "Player's opposite", strength = "true", score = 55 }
+disposition_base = -40
+
+[npcs.the_rival.personality]
+traits = ["ambitious", "certain", "ruthless"]
+approach = "competition"
+weakness = "believes only one can ascend"
+quote = "There can be only one. The prophecy is clear. I am sorry you will not live to see the new age."
+
+[npcs.the_rival.goals]
+primary = "Achieve ascension before the player"
+secondary = "Eliminate competition"
+hidden = "Secretly fears they are not truly chosen"
+
+[npcs.the_shadow_self]
+name = "The Shadow"
+title = "Your Other Face"
+role = "inner_antagonist"
+bloodline = { derivation = "Player's", strength = "true", score = "Player's" }
+disposition_base = "varies"
+
+[npcs.the_shadow_self.personality]
+traits = ["everything_player_denies", "truth_speaker", "dangerous"]
+approach = "confrontation"
+weakness = "cannot exist without the player"
+quote = "I am what you fear to become. I am what you might become. I am you."
+
+[npcs.the_shadow_self.nature]
+true_nature = "Azrai-touched aspect of player's own bloodline"
+manifestation = "Physical during Trial of Spirit"
+resolution = "Must be integrated or destroyed"
+
+[npcs.the_dying_god]
+name = "The Vestige"
+title = "Fragment of the Divine"
+role = "power_source"
+bloodline = { derivation = "Pure Divine", strength = "true", score = 100 }
+disposition_base = 0  # Depends on player's derivation
+
+[npcs.the_dying_god.personality]
+traits = ["fading", "desperate", "powerful"]
+approach = "offer"
+weakness = "needs a vessel to survive"
+quote = "I have waited five centuries for one strong enough. Are you?"
+
+[npcs.the_dying_god.nature]
+true_nature = "A god-fragment that did not fully die at Deismaar"
+offer = "Become my vessel and inherit my power"
+cost = "Your identity may be subsumed"
+
+[npcs.the_gorgon_aspect]
+name = "The First and Oldest"
+title = "What You Might Become"
+role = "warning"
+bloodline = { derivation = "Azrai", strength = "true", score = 95 }
+disposition_base = -80
+
+[npcs.the_gorgon_aspect.personality]
+traits = ["patient", "philosophical", "monstrous"]
+approach = "temptation"
+weakness = "has forgotten what he lost"
+quote = "I too was chosen once. I chose power. Look upon me and choose wisely."
+
+# ============================================================================
+# CAMPAIGN EVENTS
+# ============================================================================
+
+[events.first_vision]
+id = "first_vision"
+name = "The Blood Speaks"
+act = 1
+turn = 1
+type = "story"
+mandatory = true
+
+[events.first_vision.description]
+text = """
+It begins with light.
+
+You are standing on a battlefield that spans the world. Around you, titans clash -
+beings of pure divinity, their very presence reshaping reality. You recognize them
+from temple murals: Anduiras with his shining sword, Basaia wreathed in fire,
+Reynir vast as the ancient forests, Masela flowing like all the seas, Brenna
+quick as thought, Vorynn burning with arcane light. And Azrai, beautiful and
+terrible, shadow given form.
+
+They are dying. You watch the gods die. And as they fall, their essence flows
+outward - into the land, into the survivors, into the blood.
+
+Into you.
+
+You wake screaming, but the vision does not fade. Your blood burns with awareness.
+Something inside you has awakened, and it will never sleep again.
+"""
+
+[[events.first_vision.choices]]
+id = "embrace_awakening"
+text = "Embrace the awakening and seek to understand it"
+effects = { bloodline_awakening = 20, divine_awareness = true }
+consequences = "Open yourself to the blood's power"
+oracle_prompt = "What truth does the awakened blood first reveal?"
+
+[[events.first_vision.choices]]
+id = "resist_awakening"
+text = "Try to suppress or control the awakening"
+effects = { bloodline_awakening = 10, control = 15 }
+consequences = "Attempt to master the power rather than be mastered"
+oracle_prompt = "Can you contain what has been unleashed?"
+
+[[events.first_vision.choices]]
+id = "seek_guidance"
+text = "Seek out those who understand bloodline awakening"
+effects = { allies = 15, knowledge = 20 }
+consequences = "Others have walked this path"
+oracle_prompt = "Do you find a mentor who understands?"
+
+[[events.first_vision.choices]]
+id = "investigate_history"
+text = "Research what this awakening means historically"
+effects = { prophecy_fragments = 1, knowledge = 15 }
+consequences = "The past holds answers"
+oracle_prompt = "What do ancient records reveal about bloodline awakening?"
+
+[events.herald_appears]
+id = "herald_appears"
+name = "The Voice of Memory"
+act = 1
+turn_range = [4, 7]
+type = "story"
+mandatory = true
+
+[events.herald_appears.description]
+text = """
+The Herald comes to you in the space between waking and sleeping. It has no fixed
+form - sometimes an old man, sometimes a child, sometimes a shape that hurts to
+perceive. Its voice is many voices, echoes of divine beings long dead.
+
+"Child of the blood, you have been noticed. The awakening you experience is not
+random - it is the first step on a path that may lead beyond mortality itself.
+But paths have branches, and choices have consequences. I am here to witness,
+and perhaps... to guide. If you will hear me."
+"""
+
+[[events.herald_appears.choices]]
+id = "accept_guidance"
+text = "Accept the Herald's guidance"
+effects = { herald_relationship = 30, prophecy_fragments = 1 }
+consequences = "Gain a cryptic but valuable ally"
+oracle_prompt = "What does the Herald first reveal about your destiny?"
+
+[[events.herald_appears.choices]]
+id = "demand_answers"
+text = "Demand clear answers about what is happening"
+effects = { herald_relationship = -10, knowledge = 15, frustration = 10 }
+consequences = "The Herald speaks only in riddles"
+oracle_prompt = "Does the Herald provide any direct answers?"
+
+[[events.herald_appears.choices]]
+id = "refuse_guidance"
+text = "Refuse supernatural guidance, trust your own judgment"
+effects = { independence = 20, risk = "increased" }
+consequences = "Walk the path alone"
+oracle_prompt = "Can you find your way without divine guidance?"
+
+[[events.herald_appears.choices]]
+id = "test_herald"
+text = "Test whether the Herald can be trusted"
+effects = { herald_relationship = 0, wisdom = 10 }
+consequences = "Verify before trusting"
+oracle_prompt = "Does the Herald prove trustworthy?"
+
+[events.trial_of_blood]
+id = "trial_of_blood"
+name = "The Trial of Blood"
+act = 2
+turn_range = [11, 15]
+type = "story"
+mandatory = true
+
+[events.trial_of_blood.description]
+text = """
+The first trial finds you. You are confronted by an awnshegh - not the greatest,
+but one whose bloodline derives from the same divine source as yours. They are
+your twisted reflection, what you might become if you embrace power without
+wisdom.
+
+But this is not merely a battle. The Trial of Blood asks: what is your blood
+FOR? The awnshegh believes blood is for domination. What do you believe?
+"""
+
+[[events.trial_of_blood.choices]]
+id = "destroy_awnshegh"
+text = "Destroy the awnshegh utterly"
+effects = { blood_trial = "domination", power = 20, mercy = -20 }
+consequences = "Prove your blood's superiority through destruction"
+oracle_prompt = "Do you defeat the awnshegh in direct combat?"
+
+[[events.trial_of_blood.choices]]
+id = "redeem_awnshegh"
+text = "Attempt to redeem the awnshegh's corrupted blood"
+effects = { blood_trial = "redemption", risk = "high", potential_ally = true }
+consequences = "Show that blood can be cleansed"
+oracle_prompt = "Can awnshegh corruption be reversed?"
+
+[[events.trial_of_blood.choices]]
+id = "absorb_bloodline"
+text = "Absorb the awnshegh's bloodline into your own"
+effects = { blood_trial = "consumption", power = 30, corruption_risk = 20 }
+consequences = "Take their power, but at what cost?"
+oracle_prompt = "Does absorbing awnshegh blood taint your own?"
+
+[[events.trial_of_blood.choices]]
+id = "reject_violence"
+text = "Refuse to fight, seeking another resolution"
+effects = { blood_trial = "transcendence", wisdom = 20, risk = "moderate" }
+consequences = "Rise above the cycle of blood violence"
+oracle_prompt = "Can the trial be passed without battle?"
+
+[events.trial_of_land]
+id = "trial_of_land"
+name = "The Trial of Land"
+act = 2
+turn_range = [16, 20]
+type = "story"
+mandatory = true
+
+[events.trial_of_land.description]
+text = """
+The land calls to you. A province that has known no regent for generations -
+abandoned after a plague, haunted by old sorrows - responds to your presence.
+The earth itself seems to reach for your blood, seeking connection.
+
+This is the Trial of Land: the bond between regent and realm that defines
+Birthright itself. But the land asks more than rule - it asks for union, for
+your essence to merge with soil and stone and growing things.
+"""
+
+[[events.trial_of_land.choices]]
+id = "full_investiture"
+text = "Accept full investiture with the land"
+effects = { land_trial = "union", domain_power = 40, mobility = -20 }
+consequences = "Become one with the land"
+oracle_prompt = "How does full union with the land change you?"
+
+[[events.trial_of_land.choices]]
+id = "healing_investiture"
+text = "Heal the land of its sorrows before bonding"
+effects = { land_trial = "healing", time_cost = true, domain_power = 30 }
+consequences = "Restore what was broken"
+oracle_prompt = "Can you heal a land scarred by tragedy?"
+
+[[events.trial_of_land.choices]]
+id = "limited_bond"
+text = "Maintain distance, bond but do not merge"
+effects = { land_trial = "distance", balance = 20, domain_power = 20 }
+consequences = "Rule without being ruled"
+oracle_prompt = "Can you bond with the land while maintaining your self?"
+
+[[events.trial_of_land.choices]]
+id = "reject_bond"
+text = "Reject the land's call entirely"
+effects = { land_trial = "rejection", independence = 30, domain_power = 0 }
+consequences = "Prove you need no land to be what you are"
+oracle_prompt = "Does rejecting the land's call pass the trial?"
+
+[events.trial_of_spirit]
+id = "trial_of_spirit"
+name = "The Trial of Spirit"
+act = 2
+turn_range = [21, 25]
+type = "story"
+mandatory = true
+
+[events.trial_of_spirit.description]
+text = """
+In a place between worlds - the shadow realm or perhaps somewhere stranger -
+you meet yourself. Not a reflection, but your Shadow: everything you deny,
+every path not taken, every dark possibility that lives in your blood.
+
+The Shadow speaks with your voice: "One of us must cease to be. I am what you
+could become. You are what I was. We cannot both continue. Choose."
+
+This is the Trial of Spirit: knowing yourself completely, and deciding who
+you will be.
+"""
+
+[[events.trial_of_spirit.choices]]
+id = "destroy_shadow"
+text = "Destroy the Shadow self utterly"
+effects = { spirit_trial = "domination", certainty = 30, nuance = -20 }
+consequences = "Reject all darkness within"
+oracle_prompt = "Can you truly destroy a part of yourself?"
+
+[[events.trial_of_spirit.choices]]
+id = "integrate_shadow"
+text = "Accept and integrate the Shadow"
+effects = { spirit_trial = "integration", wholeness = 30, balance = 20 }
+consequences = "Become complete, light and dark together"
+oracle_prompt = "Can you accept the darkness without being consumed?"
+
+[[events.trial_of_spirit.choices]]
+id = "transform_shadow"
+text = "Transform the Shadow into something new"
+effects = { spirit_trial = "transcendence", creativity = 30 }
+consequences = "Neither destroy nor accept - transform"
+oracle_prompt = "What does the transformed Shadow become?"
+
+[[events.trial_of_spirit.choices]]
+id = "yield_to_shadow"
+text = "Yield to the Shadow, accepting its truth"
+effects = { spirit_trial = "submission", dark_power = 40, corruption = 20 }
+consequences = "Embrace the darkness as your true self"
+oracle_prompt = "What happens when the Shadow wins?"
+
+[events.deismaar_return]
+id = "deismaar_return"
+name = "Return to the Beginning"
+act = 3
+turn = 30
+type = "story"
+mandatory = true
+
+[events.deismaar_return.description]
+text = """
+The trials complete, you stand where it all began: Deismaar, the Mount of Deeds,
+where gods died and bloodlines were born. The Straits of Aerele still bear the
+scars of divine conflict. The very stones resonate with echoes of that final
+battle.
+
+Here, if anywhere, transformation is possible. Here, if anywhere, you can become
+what your blood has always promised. But you are not alone. Your Rival has
+come as well, believing the same prophecy, pursuing the same destiny.
+
+And something else waits. The Vestige - a fragment of divine power that did not
+fully die at Deismaar - reaches out. It offers power beyond imagining.
+For a price.
+"""
+
+[[events.deismaar_return.choices]]
+id = "claim_vestige"
+text = "Accept the Vestige's offer of power"
+effects = { divine_power = 50, identity_risk = 30 }
+consequences = "Become a vessel for remnant divinity"
+oracle_prompt = "What is the cost of accepting divine possession?"
+
+[[events.deismaar_return.choices]]
+id = "reject_vestige"
+text = "Reject the Vestige, seeking power through your own blood"
+effects = { independence = 30, self_reliance = true }
+consequences = "Prove you need no borrowed divinity"
+oracle_prompt = "Can you achieve ascension without the Vestige?"
+
+[[events.deismaar_return.choices]]
+id = "confront_rival"
+text = "Confront and defeat your Rival before the ascension"
+effects = { rivalry_resolved = true, risk = "extreme" }
+consequences = "There can be only one"
+oracle_prompt = "How does the final confrontation with your Rival unfold?"
+
+[[events.deismaar_return.choices]]
+id = "unite_with_rival"
+text = "Propose alliance with your Rival"
+effects = { alliance_attempt = true, unusual = true }
+consequences = "Perhaps the prophecy can be shared"
+oracle_prompt = "Would your Rival accept alliance over competition?"
+
+[events.the_ascension]
+id = "the_ascension"
+name = "The Moment of Becoming"
+act = 3
+turn = 36
+type = "story"
+mandatory = true
+
+[events.the_ascension.description]
+text = """
+The moment is here. All paths converge. All choices made have led to this instant,
+standing in the heart of Deismaar as the stars align above and the blood within
+you reaches its ultimate potential.
+
+The Herald watches, forbidden to intervene. The Vestige reaches out with desperate
+need. Your Rival prepares their own ascension. And within you, the blood asks
+its final question:
+
+What will you become?
+"""
+
+[[events.the_ascension.choices]]
+id = "ascend_god"
+text = "Ascend to become a new god"
+effects = { ending = "divine_ascension", transcendence = true }
+prerequisites = ["bloodline_score >= 60", "trials_complete"]
+consequences = "Join the divine pantheon"
+oracle_prompt = "What domain do you claim as a new god?"
+
+[[events.the_ascension.choices]]
+id = "restore_dead_god"
+text = "Become vessel for a dead god's restoration"
+effects = { ending = "god_restoration", sacrifice = true }
+prerequisites = ["vestige_contacted", "willing"]
+consequences = "Restore what was lost"
+oracle_prompt = "Which god returns through you?"
+
+[[events.the_ascension.choices]]
+id = "reform_bloodlines"
+text = "Reshape how bloodlines work in Cerilia"
+effects = { ending = "world_change", power_redistribution = true }
+prerequisites = ["knowledge >= 70"]
+consequences = "Change the rules for everyone"
+oracle_prompt = "How do you reshape the nature of divine blood?"
+
+[[events.the_ascension.choices]]
+id = "remain_mortal"
+text = "Reject ascension, embrace mortal life"
+effects = { ending = "mortal_legend", wisdom = true }
+consequences = "The greatest power is choosing not to take power"
+oracle_prompt = "What do you do with the life you have chosen to keep?"
+
+[[events.the_ascension.choices]]
+id = "dark_apotheosis"
+text = "Embrace the darkness, become an awnshegh-god"
+effects = { ending = "dark_god", corruption = true, power = "immense" }
+prerequisites = ["shadow_yielded_to", "or", "azrai_blood"]
+consequences = "Become what the Gorgon should have been"
+oracle_prompt = "What terrible form does your dark godhood take?"
+
+# ============================================================================
+# ENDINGS
+# ============================================================================
+
+[endings.divine_ascension]
+name = "The New God"
+description = "You have become a deity, taking your place in the celestial order"
+epilogue = """
+Where mortal once stood, divinity now dwells. Your name joins those spoken in
+temples across Cerilia. Your domain shapes reality. Your blessing strengthens
+bloodlines. But you remember what it was to be mortal, and that memory
+shapes the kind of god you become.
+
+The other gods welcome you - or fear you. The awnsheghlien rage at another power
+risen against them. And somewhere, in a province that once knew you as regent,
+they tell stories of the one who ascended.
+
+You are no longer of Cerilia. But you are forever part of it.
+"""
+
+[endings.god_restoration]
+name = "The Vessel"
+description = "Through you, a dead god returns to Cerilia"
+epilogue = """
+You are not gone - but you are no longer alone. The god who died at Deismaar
+lives again, merged with your mortal essence into something new. You speak with
+two voices, see with doubled vision, remember both mortal life and divine death.
+
+The restoration sends shockwaves through reality. Temples that were shrines become
+holy ground again. Bloodlines that derived from this god feel the renewed
+connection. And the other powers - mortal and divine - must adjust to a
+changed celestial landscape.
+
+Two became one. One became eternal.
+"""
+
+[endings.world_change]
+name = "The Reformer"
+description = "You have changed the fundamental nature of bloodlines in Cerilia"
+epilogue = """
+Bloodlines no longer drain from generation to generation. Or perhaps they flow
+differently, choosing their vessels by worth rather than birth. Or perhaps the
+curse of Azrai is lifted from all who bear dark blood. Whatever change you
+wrought, Cerilia will never be the same.
+
+Some call you savior. Some call you tyrant. All call you the Reformer, the
+one who dared to change what the gods themselves created. Your blood has
+touched all blood. Your choice has reshaped every regent's future.
+
+Whether this is blessing or curse, only centuries will tell.
+"""
+
+[endings.mortal_legend]
+name = "The Legend"
+description = "You chose mortality, and became the greatest of mortals"
+epilogue = """
+You had the power to become a god. You chose instead to remain mortal - not
+from weakness, but from strength. The wisdom of that choice shapes everything
+that follows: your reign (if you reign), your family (if you have one),
+your legacy (which you certainly have).
+
+Bards sing of the one who could have ascended but chose to stay. Philosophers
+debate what you saw that made godhood less appealing than humanity. And those
+who face similar choices in ages to come will remember: the path of power
+is not the only path worth walking.
+
+You will die someday. But you will have lived.
+"""
+
+[endings.dark_god]
+name = "The Dark One"
+description = "You have become an awnshegh-god, terrible and eternal"
+epilogue = """
+The darkness you embraced embraces you in return. You are no longer mortal,
+no longer merely awnshegh - you are something new, something the world has
+never seen. The power of Azrai flows through you undiluted, and reality
+bends to your terrible will.
+
+The other awnsheghlien recognize you as one of them - and fear you as their
+superior. The forces of light see a new enemy risen, perhaps the greatest
+since the Gorgon himself. And somewhere in your eternal darkness, the
+mortal you once were still remembers what you sacrificed for this power.
+
+Was it worth it? You have eternity to decide.
+"""
+
+# ============================================================================
+# VICTORY AND FAILURE CONDITIONS
+# ============================================================================
+
+[victory_conditions]
+all_endings_are_victory = true
+description = "Every ending represents a valid resolution to the campaign"
+
+[failure_conditions]
+death = { trigger = "player_killed_before_ascension", description = "You die before reaching your destiny" }
+consumed = { trigger = "vestige_takes_over", description = "You are consumed by the power you sought" }
+madness = { trigger = "trials_failed_all", description = "You are broken by the trials" }
+rival_triumphs = { trigger = "rival_ascends_first", description = "Your rival achieves their destiny, leaving you behind" }
+
+# ============================================================================
+# CAMPAIGN VARIABLES AND TRACKING
+# ============================================================================
+
+[tracking]
+variables = [
+    "bloodline_awakening",    # 0-100, divine potential realized
+    "divine_attention",       # How aware cosmic forces are of you
+    "prophecy_fragments",     # Pieces of the prophecy discovered
+    "other_chosen_met",       # Rival and potential allies
+    "trials_complete",        # Blood, Land, Spirit
+    "herald_relationship",    # Bond with the guide
+    "vestige_relationship",   # Bond with remnant divinity
+    "shadow_integration",     # Relationship with shadow self
+    "rival_disposition",      # Relationship with rival
+]
+
+[tracking.thresholds]
+divine_awakening = { variable = "bloodline_awakening", above = 50, event = "bloodline_manifests" }
+prophecy_complete = { variable = "prophecy_fragments", equals = 7, event = "full_prophecy_known" }
+
+# ============================================================================
+# CAMPAIGN REWARDS
+# ============================================================================
+
+[rewards]
+divine_ascension = { title = "The Ascended", nature = "divine", eternal = true }
+god_restoration = { title = "The Vessel", nature = "merged", purpose = true }
+world_change = { title = "The Reformer", nature = "legendary", change = true }
+mortal_legend = { title = "The Legend", nature = "mortal", wisdom = true }
+dark_god = { title = "The Dark One", nature = "divine_dark", power = true }
+
+# ============================================================================
+# INTEGRATION HOOKS
+# ============================================================================
+
+[integration]
+oracle_table = "birthright/bloodlines/destiny"
+domain_action_mods = { bloodline = 3, realm_magic = 2, divine = 2 }
+bloodline_focus = ["All"]
+connects_to = ["All campaigns"]
+culminating_campaign = true
+imports_state_from = ["iron_throne", "gorgons_shadow", "web_of_shadows", "sources_of_power", "cerilian_alliance"]

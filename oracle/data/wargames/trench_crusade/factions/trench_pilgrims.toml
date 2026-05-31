@@ -1,0 +1,178 @@
+# Trench Crusade - Trench Pilgrims
+# Fanatical faithful who seek martyrdom in the name of God
+
+name = "Trench Pilgrims"
+allegiance = "Faithful"
+description = "Common folk transformed by holy visions, the Trench Pilgrims march into the meat grinder of war seeking glorious martyrdom. Their faith makes them nearly impossible to break."
+playstyle = "Melee-focused berserkers who can dish out incredible damage while taking a beating. Immune to fear and able to resurrect fallen warriors."
+strengths = ["Devastating melee", "Fear immunity", "Martyrdom resurrection", "High durability"]
+weaknesses = ["Limited ranged options", "Slow advance", "Reliant on reaching combat"]
+
+[faction_rules]
+name = "Martyrs of the Faith"
+description = "Trench Pilgrims are immune to Fear abilities. Slain Martyr Penitents may be resurrected on a successful roll."
+
+# =============================================================================
+# CHARACTERS / LEADERS
+# =============================================================================
+
+[[units]]
+name = "War Prophet"
+type = "infantry"
+category = "HQ"
+points = 65
+models = "1"
+tactical_role = "commander"
+threat_level = "high"
+preferred_targets = ["characters", "elite_infantry"]
+weaknesses = ["ranged_focus_fire", "anti-character_weapons"]
+special_rules = ["Leader", "Fearless", "Prophet's Vision", "Inspiring Presence"]
+keywords = ["Infantry", "Character", "Human", "Faithful", "Prophet"]
+
+[units.stats]
+Movement = 6
+Ranged = "5+"
+Melee = "3+"
+Defense = "5+"
+Wounds = 2
+
+[[units.weapons]]
+name = "Holy Symbol"
+range = "Melee"
+strength = "Standard"
+type = "Melee"
+abilities = ["Holy", "Righteous Fury"]
+
+[[units.weapons]]
+name = "Burning Brand"
+range = "8\""
+strength = "Standard"
+type = "Flamethrower"
+abilities = ["Auto-hit", "Fire"]
+
+# =============================================================================
+# TROOPS
+# =============================================================================
+
+[[units]]
+name = "Martyr Penitent"
+type = "infantry"
+category = "Troops"
+points = 20
+models = "1"
+tactical_role = "melee_assault"
+threat_level = "medium"
+preferred_targets = ["infantry", "light_targets"]
+weaknesses = ["ranged_fire", "kiting"]
+special_rules = ["Fearless", "Martyrdom", "Resurrection"]
+keywords = ["Infantry", "Human", "Faithful", "Martyr"]
+
+[units.stats]
+Movement = 6
+Ranged = "6+"
+Melee = "4+"
+Defense = "6+"
+Wounds = 1
+
+[[units.weapons]]
+name = "Improvised Weapon"
+range = "Melee"
+strength = "Standard"
+type = "Melee"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Flagellant"
+type = "infantry"
+category = "Troops"
+points = 25
+models = "1"
+tactical_role = "melee_berserker"
+threat_level = "medium"
+preferred_targets = ["infantry", "characters"]
+weaknesses = ["ranged_fire", "armor"]
+special_rules = ["Fearless", "Frenzy", "Self-Flagellation"]
+keywords = ["Infantry", "Human", "Faithful", "Fanatic"]
+
+[units.stats]
+Movement = 6
+Ranged = "-"
+Melee = "3+"
+Defense = "6+"
+Wounds = 1
+
+[[units.weapons]]
+name = "Flail"
+range = "Melee"
+strength = "+1"
+type = "Melee"
+abilities = ["Reach"]
+
+# =============================================================================
+# ELITES
+# =============================================================================
+
+[[units]]
+name = "Anti-Tank Pilgrim"
+type = "infantry"
+category = "Elites"
+points = 45
+models = "1"
+tactical_role = "heavy_assault"
+threat_level = "very_high"
+preferred_targets = ["armored_targets", "vehicles", "monsters"]
+weaknesses = ["ranged_fire", "swarms"]
+special_rules = ["Fearless", "Tank Hunter", "Holy Zeal"]
+keywords = ["Infantry", "Human", "Faithful", "Heavy"]
+
+[units.stats]
+Movement = 5
+Ranged = "5+"
+Melee = "3+"
+Defense = "5+"
+Wounds = 2
+
+[[units.weapons]]
+name = "Anti-Tank Hammer"
+range = "Melee"
+strength = "+3"
+type = "Melee"
+abilities = ["Armor Piercing", "Anti-Vehicle", "Two-Handed"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Iron Capirote Bearer"
+type = "infantry"
+category = "Elites"
+points = 35
+models = "1"
+tactical_role = "tank"
+threat_level = "medium"
+preferred_targets = ["infantry"]
+weaknesses = ["high_ap_weapons", "surrounded"]
+special_rules = ["Fearless", "Iron Will", "Armored Faith"]
+keywords = ["Infantry", "Human", "Faithful", "Armored"]
+
+[units.stats]
+Movement = 5
+Ranged = "5+"
+Melee = "4+"
+Defense = "3+"
+Wounds = 2
+
+[[units.weapons]]
+name = "Blessed Mace"
+range = "Melee"
+strength = "+1"
+type = "Melee"
+abilities = ["Holy"]
+
+# =============================================================================
+# VARIANTS / SUB-FACTIONS
+# =============================================================================
+
+# Procession of the Sacred Affliction - Leprosy-touched tanks
+# Cavalcade of the Tenth Plague - Blessing-heavy support
+# War Pilgrimage of Saint Methodius - Mobile shrine focused

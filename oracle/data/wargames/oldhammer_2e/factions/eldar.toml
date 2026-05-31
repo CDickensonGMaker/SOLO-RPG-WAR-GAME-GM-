@@ -1,0 +1,880 @@
+# Warhammer 40,000 2nd Edition - Eldar
+# The Aeldari - Ancient Masters of War
+
+name = "Eldar"
+codex = "Codex: Eldar (1994)"
+description = "Ancient, psychically gifted aliens fighting to preserve their dying race through tactical excellence"
+playstyle = "Specialist units with extreme mobility and devastating alpha strikes"
+strengths = ["High Initiative", "Excellent mobility", "Powerful psykers", "Specialist Aspect Warriors"]
+weaknesses = ["Fragile units", "Expensive points costs", "Relies on synergy"]
+
+[faction_rules]
+name = "Path of the Warrior"
+description = "Eldar follow Paths of specialization, making each Aspect Warrior supreme in their chosen role"
+
+# =============================================================================
+# HQ UNITS
+# =============================================================================
+
+[[units]]
+name = "Farseer"
+type = "infantry"
+category = "HQ"
+points = 75
+models = "1"
+tactical_role = "psyker"
+threat_level = "high"
+preferred_targets = ["infantry", "psykers"]
+weaknesses = ["snipers", "nullification"]
+special_rules = ["Independent Character", "Psyker (Level 3)", "Runes of Warding", "Runes of Witnessing"]
+keywords = ["Infantry", "Character", "Eldar", "Psyker"]
+
+[units.stats]
+M = 5
+WS = 5
+BS = 5
+S = 3
+T = 3
+W = 3
+I = 5
+A = 1
+Ld = 10
+Sv = "4+"
+
+[[units.weapons]]
+name = "Shuriken Pistol"
+range = "12\""
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Pistol"
+abilities = ["Bladestorm"]
+
+[[units.weapons]]
+name = "Witchblade"
+range = "Melee"
+strength = "Wounds on 2+"
+ap = "-"
+damage = "1"
+type = "Melee"
+abilities = ["Always wounds on 2+", "Ignores Armor"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Autarch"
+type = "infantry"
+category = "HQ"
+points = 70
+models = "1"
+tactical_role = "commander"
+threat_level = "high"
+preferred_targets = ["all_targets"]
+weaknesses = ["massed_fire"]
+special_rules = ["Independent Character", "Path of Command", "+1 Reserve Rolls"]
+keywords = ["Infantry", "Character", "Eldar", "Autarch"]
+
+[units.stats]
+M = 5
+WS = 6
+BS = 6
+S = 3
+T = 3
+W = 3
+I = 6
+A = 3
+Ld = 10
+Sv = "3+"
+
+[[units.weapons]]
+name = "Power Sword"
+range = "Melee"
+strength = "User"
+ap = "-"
+damage = "1"
+type = "Melee"
+abilities = ["Ignores Armor Saves"]
+
+[[units.weapons]]
+name = "Shuriken Pistol"
+range = "12\""
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Pistol"
+abilities = ["Bladestorm"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Avatar of Khaine"
+type = "monster"
+category = "HQ"
+points = 200
+models = "1"
+tactical_role = "assault"
+threat_level = "very_high"
+preferred_targets = ["everything"]
+weaknesses = ["massed_fire"]
+special_rules = ["Fearless", "Daemon", "Inspiring", "Immune to Melta/Flame"]
+keywords = ["Monster", "Daemon", "Eldar", "Avatar"]
+
+[units.stats]
+M = 6
+WS = 10
+BS = 5
+S = 6
+T = 6
+W = 4
+I = 6
+A = 4
+Ld = 10
+Sv = "3+"
+
+[[units.weapons]]
+name = "Wailing Doom"
+range = "12\" / Melee"
+strength = "8"
+ap = "1"
+damage = "D3"
+type = "Assault 1 / Melee"
+abilities = ["Ranged or Melee", "Ignores Armor"]
+
+# =============================================================================
+# ELITES
+# =============================================================================
+
+[[units]]
+name = "Howling Banshees"
+type = "infantry"
+category = "Elites"
+points = 18
+models = "5-10"
+tactical_role = "assault"
+threat_level = "high"
+preferred_targets = ["infantry"]
+weaknesses = ["shooting"]
+special_rules = ["Fleet", "Acrobatic", "Banshee Mask", "Power Weapons"]
+keywords = ["Infantry", "Aspect Warrior", "Eldar"]
+
+[units.stats]
+M = 5
+WS = 4
+BS = 4
+S = 3
+T = 3
+W = 1
+I = 5
+A = 2
+Ld = 9
+Sv = "4+"
+
+[[units.weapons]]
+name = "Power Sword"
+range = "Melee"
+strength = "User"
+ap = "-"
+damage = "1"
+type = "Melee"
+abilities = ["Ignores Armor Saves"]
+
+[[units.weapons]]
+name = "Shuriken Pistol"
+range = "12\""
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Pistol"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Striking Scorpions"
+type = "infantry"
+category = "Elites"
+points = 17
+models = "5-10"
+tactical_role = "assault"
+threat_level = "high"
+preferred_targets = ["infantry", "characters"]
+weaknesses = ["massed_fire"]
+special_rules = ["Fleet", "Infiltrate", "Move Through Cover", "Stealth"]
+keywords = ["Infantry", "Aspect Warrior", "Eldar"]
+
+[units.stats]
+M = 5
+WS = 4
+BS = 4
+S = 3
+T = 3
+W = 1
+I = 5
+A = 1
+Ld = 9
+Sv = "3+"
+
+[[units.weapons]]
+name = "Scorpion Chainsword"
+range = "Melee"
+strength = "+1"
+ap = "-"
+damage = "1"
+type = "Melee"
+
+[[units.weapons]]
+name = "Shuriken Pistol"
+range = "12\""
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Pistol"
+
+[[units.weapons]]
+name = "Mandiblasters"
+range = "Melee"
+strength = "3"
+ap = "-"
+damage = "1"
+type = "Melee"
+abilities = ["Auto-hit at Initiative 10"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Fire Dragons"
+type = "infantry"
+category = "Elites"
+points = 22
+models = "5-10"
+tactical_role = "anti_tank"
+threat_level = "very_high"
+preferred_targets = ["vehicles", "monsters"]
+weaknesses = ["any_combat"]
+special_rules = ["Fleet", "Tank Hunters"]
+keywords = ["Infantry", "Aspect Warrior", "Eldar"]
+
+[units.stats]
+M = 5
+WS = 4
+BS = 4
+S = 3
+T = 3
+W = 1
+I = 5
+A = 1
+Ld = 9
+Sv = "4+"
+
+[[units.weapons]]
+name = "Fusion Gun"
+range = "12\""
+strength = "8"
+ap = "1"
+damage = "D6"
+type = "Assault 1"
+abilities = ["Melta"]
+
+[[units.weapons]]
+name = "Melta Bombs"
+range = "Melee"
+strength = "8"
+ap = "1"
+damage = "D6"
+type = "Melee"
+abilities = ["Melta", "Vehicle only"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Wraithguard"
+type = "infantry"
+category = "Elites"
+points = 35
+models = "3-10"
+tactical_role = "heavy_infantry"
+threat_level = "very_high"
+preferred_targets = ["all_targets"]
+weaknesses = ["psychic_null", "slow"]
+special_rules = ["Fearless", "Wraithsight"]
+keywords = ["Infantry", "Wraith Construct", "Eldar"]
+
+[units.stats]
+M = 4
+WS = 4
+BS = 4
+S = 5
+T = 6
+W = 1
+I = 4
+A = 1
+Ld = 10
+Sv = "3+"
+
+[[units.weapons]]
+name = "Wraithcannon"
+range = "12\""
+strength = "10"
+ap = "1"
+damage = "D6"
+type = "Assault 1"
+abilities = ["Distort", "Instant Death"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Harlequins"
+type = "infantry"
+category = "Elites"
+points = 18
+models = "5-12"
+tactical_role = "assault"
+threat_level = "high"
+preferred_targets = ["infantry", "characters"]
+weaknesses = ["massed_fire"]
+special_rules = ["Fleet", "Flip Belts", "Hit and Run", "Holo-suits"]
+keywords = ["Infantry", "Harlequin", "Eldar"]
+
+[units.stats]
+M = 8
+WS = 5
+BS = 4
+S = 3
+T = 3
+W = 1
+I = 6
+A = 2
+Ld = 9
+Sv = "5++"
+
+[[units.weapons]]
+name = "Harlequin's Kiss"
+range = "Melee"
+strength = "User"
+ap = "-"
+damage = "1"
+type = "Melee"
+abilities = ["Instant Death on wound roll of 6"]
+
+[[units.weapons]]
+name = "Shuriken Pistol"
+range = "12\""
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Pistol"
+
+# =============================================================================
+# TROOPS
+# =============================================================================
+
+[[units]]
+name = "Guardian Squad"
+type = "infantry"
+category = "Troops"
+points = 8
+models = "10-20"
+tactical_role = "line_infantry"
+threat_level = "low"
+preferred_targets = ["infantry"]
+weaknesses = ["assault", "heavy_weapons"]
+special_rules = ["Fleet"]
+keywords = ["Infantry", "Guardian", "Eldar"]
+
+[units.stats]
+M = 5
+WS = 3
+BS = 3
+S = 3
+T = 3
+W = 1
+I = 4
+A = 1
+Ld = 8
+Sv = "5+"
+
+[[units.weapons]]
+name = "Shuriken Catapult"
+range = "12\""
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Assault 2"
+abilities = ["Bladestorm"]
+
+[[units.weapons]]
+name = "Plasma Grenades"
+range = "8\""
+strength = "4"
+ap = "4"
+damage = "1"
+type = "Assault 1"
+abilities = ["Blast", "Assault Grenades"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Dire Avengers"
+type = "infantry"
+category = "Troops"
+points = 13
+models = "5-10"
+tactical_role = "line_infantry"
+threat_level = "medium"
+preferred_targets = ["infantry"]
+weaknesses = ["assault"]
+special_rules = ["Fleet", "Counter-Attack", "Bladestorm"]
+keywords = ["Infantry", "Aspect Warrior", "Eldar"]
+
+[units.stats]
+M = 5
+WS = 4
+BS = 4
+S = 3
+T = 3
+W = 1
+I = 5
+A = 1
+Ld = 9
+Sv = "4+"
+
+[[units.weapons]]
+name = "Avenger Shuriken Catapult"
+range = "18\""
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Assault 2"
+abilities = ["Bladestorm"]
+
+[[units.weapons]]
+name = "Plasma Grenades"
+range = "8\""
+strength = "4"
+ap = "4"
+damage = "1"
+type = "Assault 1"
+abilities = ["Blast"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Rangers"
+type = "infantry"
+category = "Troops"
+points = 19
+models = "5-10"
+tactical_role = "sniper"
+threat_level = "medium"
+preferred_targets = ["characters", "heavy_weapons"]
+weaknesses = ["assault"]
+special_rules = ["Infiltrate", "Move Through Cover", "Stealth"]
+keywords = ["Infantry", "Ranger", "Eldar"]
+
+[units.stats]
+M = 5
+WS = 3
+BS = 4
+S = 3
+T = 3
+W = 1
+I = 4
+A = 1
+Ld = 8
+Sv = "5+"
+
+[[units.weapons]]
+name = "Ranger Long Rifle"
+range = "36\""
+strength = "X"
+ap = "6"
+damage = "1"
+type = "Heavy 1"
+abilities = ["Sniper", "Pinning", "AP3 on 6 to wound"]
+
+# =============================================================================
+# FAST ATTACK
+# =============================================================================
+
+[[units]]
+name = "Warp Spiders"
+type = "infantry"
+category = "Fast Attack"
+points = 22
+models = "5-10"
+tactical_role = "harassment"
+threat_level = "high"
+preferred_targets = ["infantry", "light_vehicles"]
+weaknesses = ["heavy_weapons"]
+special_rules = ["Fleet", "Deep Strike", "Warp Jump Generator"]
+keywords = ["Infantry", "Aspect Warrior", "Eldar"]
+
+[units.stats]
+M = 7
+WS = 4
+BS = 4
+S = 3
+T = 3
+W = 1
+I = 5
+A = 1
+Ld = 9
+Sv = "3+"
+
+[[units.weapons]]
+name = "Death Spinner"
+range = "12\""
+strength = "6"
+ap = "-"
+damage = "1"
+type = "Assault 2"
+abilities = ["Monofilament"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Swooping Hawks"
+type = "infantry"
+category = "Fast Attack"
+points = 21
+models = "5-10"
+tactical_role = "harassment"
+threat_level = "medium"
+preferred_targets = ["infantry", "light_vehicles"]
+weaknesses = ["anti_air"]
+special_rules = ["Fleet", "Deep Strike", "Skyleap"]
+keywords = ["Infantry", "Aspect Warrior", "Jump Pack", "Eldar"]
+
+[units.stats]
+M = 12
+WS = 4
+BS = 4
+S = 3
+T = 3
+W = 1
+I = 5
+A = 1
+Ld = 9
+Sv = "4+"
+
+[[units.weapons]]
+name = "Lasblaster"
+range = "24\""
+strength = "3"
+ap = "5"
+damage = "1"
+type = "Assault 3"
+
+[[units.weapons]]
+name = "Haywire Grenades"
+range = "8\" / Melee"
+strength = "-"
+ap = "-"
+damage = "-"
+type = "Assault 1 / Melee"
+abilities = ["Glancing on 2-5", "Penetrating on 6"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Shining Spears"
+type = "jetbike"
+category = "Fast Attack"
+points = 30
+models = "3-9"
+tactical_role = "assault"
+threat_level = "high"
+preferred_targets = ["infantry", "light_vehicles"]
+weaknesses = ["massed_fire"]
+special_rules = ["Skilled Rider", "Outflank"]
+keywords = ["Jetbike", "Aspect Warrior", "Eldar"]
+
+[units.stats]
+M = 16
+WS = 4
+BS = 4
+S = 3
+T = 4
+W = 1
+I = 5
+A = 1
+Ld = 9
+Sv = "3+"
+
+[[units.weapons]]
+name = "Twin-linked Shuriken Catapult"
+range = "12\""
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Assault 2"
+abilities = ["Twin-linked"]
+
+[[units.weapons]]
+name = "Laser Lance"
+range = "Melee"
+strength = "6"
+ap = "3"
+damage = "1"
+type = "Melee"
+abilities = ["+3 S on Charge"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Vyper"
+type = "vehicle"
+category = "Fast Attack"
+points = 40
+models = "1-3"
+tactical_role = "fast_attack"
+threat_level = "medium"
+preferred_targets = ["infantry", "light_vehicles"]
+weaknesses = ["any_shooting"]
+special_rules = ["Skimmer", "Fast"]
+keywords = ["Vehicle", "Skimmer", "Eldar"]
+
+[units.stats]
+M = 16
+WS = "-"
+BS = 3
+S = "-"
+T = "-"
+W = "-"
+I = "-"
+A = "-"
+Ld = "-"
+Sv = "-"
+
+[units.armor]
+front = 10
+side = 10
+rear = 10
+
+[[units.weapons]]
+name = "Scatter Laser"
+range = "36\""
+strength = "6"
+ap = "6"
+damage = "1"
+type = "Heavy 4"
+
+# =============================================================================
+# HEAVY SUPPORT
+# =============================================================================
+
+[[units]]
+name = "Dark Reapers"
+type = "infantry"
+category = "Heavy Support"
+points = 35
+models = "3-5"
+tactical_role = "fire_support"
+threat_level = "very_high"
+preferred_targets = ["infantry", "monsters"]
+weaknesses = ["assault"]
+special_rules = ["Slow and Purposeful", "Inescapable Accuracy"]
+keywords = ["Infantry", "Aspect Warrior", "Eldar"]
+
+[units.stats]
+M = 5
+WS = 4
+BS = 5
+S = 3
+T = 3
+W = 1
+I = 5
+A = 1
+Ld = 9
+Sv = "3+"
+
+[[units.weapons]]
+name = "Reaper Launcher"
+range = "48\""
+strength = "5"
+ap = "3"
+damage = "1"
+type = "Heavy 2"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Falcon"
+type = "vehicle"
+category = "Heavy Support"
+points = 130
+models = "1"
+tactical_role = "transport"
+threat_level = "high"
+preferred_targets = ["vehicles", "infantry"]
+weaknesses = ["melta"]
+special_rules = ["Skimmer", "Fast", "Transport (6)"]
+keywords = ["Vehicle", "Skimmer", "Tank", "Transport", "Eldar"]
+
+[units.stats]
+M = 16
+WS = "-"
+BS = 3
+S = "-"
+T = "-"
+W = "-"
+I = "-"
+A = "-"
+Ld = "-"
+Sv = "-"
+
+[units.armor]
+front = 12
+side = 12
+rear = 10
+
+[[units.weapons]]
+name = "Pulse Laser"
+range = "48\""
+strength = "8"
+ap = "2"
+damage = "1"
+type = "Heavy 2"
+
+[[units.weapons]]
+name = "Scatter Laser"
+range = "36\""
+strength = "6"
+ap = "6"
+damage = "1"
+type = "Heavy 4"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Fire Prism"
+type = "vehicle"
+category = "Heavy Support"
+points = 150
+models = "1"
+tactical_role = "fire_support"
+threat_level = "very_high"
+preferred_targets = ["all_targets"]
+weaknesses = ["melta", "assault"]
+special_rules = ["Skimmer", "Fast", "Prism Cannon"]
+keywords = ["Vehicle", "Skimmer", "Tank", "Eldar"]
+
+[units.stats]
+M = 16
+WS = "-"
+BS = 3
+S = "-"
+T = "-"
+W = "-"
+I = "-"
+A = "-"
+Ld = "-"
+Sv = "-"
+
+[units.armor]
+front = 12
+side = 12
+rear = 10
+
+[[units.weapons]]
+name = "Prism Cannon (Focused)"
+range = "60\""
+strength = "9"
+ap = "2"
+damage = "D3"
+type = "Heavy 1"
+abilities = ["Lance"]
+
+[[units.weapons]]
+name = "Prism Cannon (Dispersed)"
+range = "60\""
+strength = "5"
+ap = "4"
+damage = "1"
+type = "Heavy 1"
+abilities = ["Large Blast"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Wraithlord"
+type = "monster"
+category = "Heavy Support"
+points = 90
+models = "1"
+tactical_role = "heavy_assault"
+threat_level = "very_high"
+preferred_targets = ["vehicles", "monsters", "infantry"]
+weaknesses = ["massed_fire", "wraithsight"]
+special_rules = ["Fearless", "Wraithsight", "Monstrous Creature"]
+keywords = ["Monster", "Wraith Construct", "Eldar"]
+
+[units.stats]
+M = 6
+WS = 4
+BS = 4
+S = 10
+T = 8
+W = 3
+I = 4
+A = 3
+Ld = 10
+Sv = "3+"
+
+[[units.weapons]]
+name = "Bright Lance"
+range = "36\""
+strength = "8"
+ap = "2"
+damage = "1"
+type = "Heavy 1"
+abilities = ["Lance"]
+
+[[units.weapons]]
+name = "Ghostglaive"
+range = "Melee"
+strength = "x2"
+ap = "-"
+damage = "D6"
+type = "Melee"
+abilities = ["Ignores Armor"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "War Walker Squadron"
+type = "vehicle"
+category = "Heavy Support"
+points = 30
+models = "1-3"
+tactical_role = "fire_support"
+threat_level = "medium"
+preferred_targets = ["infantry", "light_vehicles"]
+weaknesses = ["any_shooting"]
+special_rules = ["Walker", "Scout", "Battle Focus"]
+keywords = ["Vehicle", "Walker", "Eldar"]
+
+[units.stats]
+M = 8
+WS = 3
+BS = 3
+S = 5
+T = "-"
+W = "-"
+I = 3
+A = 2
+Ld = "-"
+Sv = "-"
+
+[units.armor]
+front = 10
+side = 10
+rear = 10
+
+[[units.weapons]]
+name = "Scatter Laser (x2)"
+range = "36\""
+strength = "6"
+ap = "6"
+damage = "1"
+type = "Heavy 4"
+abilities = ["Twin weapons"]

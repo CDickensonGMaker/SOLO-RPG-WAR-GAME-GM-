@@ -1,0 +1,510 @@
+# =============================================================================
+# ANUIRE GEOGRAPHY - The Heartland of the Old Empire
+# =============================================================================
+# Geographic data for travel, trade, and adventure in Anuire
+# =============================================================================
+
+# =============================================================================
+# REGIONAL DESCRIPTIONS
+# =============================================================================
+
+[regions]
+
+[regions.heartlands]
+name = "The Imperial Heartlands"
+realms = ["Avanil", "Boeruine", "Alamie", "Tuornen"]
+description = """The central plains of Anuire, once the beating heart of the Empire.
+Rich farmland fed the Imperial armies, and the great roads still connect the
+ancient cities. Now divided among competing powers, each claiming the empty
+Iron Throne."""
+climate = "temperate"
+terrain_dominant = "plains"
+dangers = ["bandits", "political_intrigue", "mercenary_bands"]
+opportunities = ["trade", "political_maneuvering", "ancient_ruins"]
+
+[regions.southern_coast]
+name = "The Southern Coast"
+realms = ["Diemed", "Medoere", "Roesone", "Ilien"]
+description = """The warm southern shores of Anuire, facing the Straits of Aerele.
+Trade flows through the ports here, and the Spider's influence creeps from the
+Spiderfell. Pirates and merchants vie for control of the sea lanes."""
+climate = "mediterranean"
+terrain_dominant = "coastal_plains"
+dangers = ["pirates", "spider_minions", "sea_monsters"]
+opportunities = ["naval_trade", "temple_politics", "monster_hunting"]
+
+[regions.western_reaches]
+name = "The Western Reaches"
+realms = ["Taeghas", "Brosengae", "Rheulgard"]
+description = """Wild forests and untamed lands mark the western frontier.
+The Erebannien forest holds ancient elven secrets, and the land itself
+pulses with magical potential. Fewer settlements, more wilderness."""
+climate = "temperate_wet"
+terrain_dominant = "forest"
+dangers = ["wild_beasts", "fey_creatures", "lost_explorers"]
+opportunities = ["source_magic", "elven_contact", "frontier_settlement"]
+
+[regions.northern_marches]
+name = "The Northern Marches"
+realms = ["Talinie", "Thurazor", "Cariele"]
+description = """Cold winds blow from the north, bringing Rjurik traders and
+occasional raiders. The land grows harsher here, and the people are hardy.
+Trade with the northern realms brings prosperity to those who can survive."""
+climate = "cold_temperate"
+terrain_dominant = "hills"
+dangers = ["rjurik_raiders", "harsh_winters", "goblin_tribes"]
+opportunities = ["northern_trade", "mercenary_work", "mining"]
+
+[regions.gorgon_front]
+name = "The Gorgon's Front"
+realms = ["Mhoried", "Markazor", "Kiergard"]
+description = """The eternal battlefield against the Gorgon. Generation after
+generation of defenders have held the line here. The land is scarred by
+centuries of warfare, and the threat of invasion is ever-present."""
+climate = "continental"
+terrain_dominant = "hills_mountains"
+dangers = ["gorgon_forces", "undead", "corrupted_land", "awnshegh_agents"]
+opportunities = ["military_glory", "ancient_battlefields", "heroic_quests"]
+
+# =============================================================================
+# TRAVEL ROUTES AND TIMES
+# =============================================================================
+
+[travel]
+
+# Travel time in days, assuming normal conditions
+# Modifiers: mounted = 0.6x, forced_march = 0.75x, caravan = 1.5x, army = 2x
+
+[[travel.routes]]
+from = "Anuire City"
+to = "Endier"
+days = 3
+road_quality = "imperial"
+description = "The Old Imperial Road, still maintained. Heaviest traffic in Anuire."
+dangers = ["bandits_low", "merchant_rivalry"]
+landmarks = ["Milestone Stones", "Imperial Waystation"]
+
+[[travel.routes]]
+from = "Anuire City"
+to = "Boeruine"
+days = 5
+road_quality = "imperial"
+description = "Northern Imperial Road, patrolled by Boeruine forces."
+dangers = ["bandits_moderate", "military_checkpoints"]
+landmarks = ["Border Fortress", "Ancient Bridge"]
+
+[[travel.routes]]
+from = "Endier"
+to = "Bhalaene"
+days = 4
+road_quality = "good"
+description = "Trade route to Ghoere. Merchants travel in armed convoys."
+dangers = ["ghoere_patrols", "extortion", "bandits_moderate"]
+landmarks = ["Merchant Camp", "Border Toll"]
+
+[[travel.routes]]
+from = "Endier"
+to = "Shieldhaven"
+days = 6
+road_quality = "good"
+description = "Road to the Mhor's realm. Increasingly military traffic."
+dangers = ["gorgon_scouts", "refugees", "military_convoys"]
+landmarks = ["War Memorial", "Refugee Camp"]
+
+[[travel.routes]]
+from = "Anuire City"
+to = "Aerele"
+days = 4
+road_quality = "imperial"
+description = "Southern Imperial Road to Diemed."
+dangers = ["political_agents", "bandits_low"]
+landmarks = ["Imperial Tomb", "Southern Gate"]
+
+[[travel.routes]]
+from = "Aerele"
+to = "Caercas"
+days = 3
+road_quality = "good"
+description = "Coastal road through contested territory."
+dangers = ["spider_agents", "raiders", "pirates"]
+landmarks = ["Coastal Watch", "Ruined Tower"]
+
+[[travel.routes]]
+from = "Shieldhaven"
+to = "Torien's Watch"
+days = 4
+road_quality = "military"
+description = "The War Road to the Gorgon's border. Heavy military presence."
+dangers = ["gorgon_raids", "undead", "deserters"]
+landmarks = ["Fallen Heroes Memorial", "Forward Camp"]
+
+[[travel.routes]]
+from = "Boeruine"
+to = "Seasedge"
+days = 3
+road_quality = "good"
+description = "Road to Boeruine's naval port."
+dangers = ["bandits_low", "press_gangs"]
+landmarks = ["Coastal Cliffs", "Naval Signal Tower"]
+
+[[travel.routes]]
+from = "Endier"
+to = "Greensward"
+days = 8
+road_quality = "variable"
+description = "Long northern trade route. Passes through several realms."
+dangers = ["bandits_moderate", "political_complications", "weather"]
+landmarks = ["Multiple Border Crossings", "Trade Posts"]
+
+[[travel.routes]]
+from = "Caercas"
+to = "Abbatuor"
+days = 2
+road_quality = "poor"
+description = "Frontier road into the wilds. Spider presence."
+dangers = ["spider_creatures", "bandits_high", "lost_travelers"]
+landmarks = ["Last Outpost", "Warning Signs"]
+
+# Sea Routes
+[[travel.routes]]
+from = "Avanil (port)"
+to = "Aerele"
+days = 2
+road_quality = "sea"
+description = "Coastal shipping route. Faster than overland."
+dangers = ["pirates", "storms", "sea_monsters"]
+landmarks = ["Lighthouse Chain", "Shipping Lanes"]
+
+[[travel.routes]]
+from = "Seasedge"
+to = "Greensward"
+days = 4
+road_quality = "sea"
+description = "Northern sea route. Avoids land borders."
+dangers = ["rjurik_raiders", "storms", "sea_monsters"]
+landmarks = ["Northern Currents", "Whale Grounds"]
+
+[[travel.routes]]
+from = "Aerele"
+to = "Caercas"
+days = 1
+road_quality = "sea"
+description = "Short coastal hop. Busy with fishing boats."
+dangers = ["pirates_low", "storms"]
+landmarks = ["Fishing Grounds", "Coastal Villages"]
+
+# =============================================================================
+# TRADE ROUTES
+# =============================================================================
+
+[trade]
+
+[[trade.routes]]
+name = "The Imperial Way"
+endpoints = ["Anuire City", "Endier", "Boeruine"]
+goods_flow = ["luxury_goods", "weapons", "textiles", "grain"]
+controllers = ["Endier Guilds", "Siele Ghoried"]
+value = "high"
+description = "The main artery of Anuirean commerce. Who controls the Imperial Way controls the economy."
+
+[[trade.routes]]
+name = "The Maesil Run"
+endpoints = ["Shieldhaven", "Endier", "Mhoried provinces"]
+goods_flow = ["weapons", "armor", "supplies", "refugees"]
+controllers = ["Mheillie Bireon", "Endier Guilds"]
+value = "moderate"
+description = "Supplies the eternal war against the Gorgon. Always busy, always profitable."
+
+[[trade.routes]]
+name = "The Southern Circuit"
+endpoints = ["Aerele", "Caercas", "Braeme", "Ilien"]
+goods_flow = ["fish", "salt", "textiles", "temple_goods"]
+controllers = ["Various local guilds", "Temple networks"]
+value = "moderate"
+description = "Coastal trade among the southern realms. Pirates are a constant threat."
+
+[[trade.routes]]
+name = "The Northern Chain"
+endpoints = ["Greensward", "Cariele", "Rjurik lands"]
+goods_flow = ["furs", "amber", "timber", "iron"]
+controllers = ["Northern Exchange", "Rjurik traders"]
+value = "high"
+description = "Trade with the Rjurik brings exotic northern goods south."
+
+[[trade.routes]]
+name = "The Straits Trade"
+endpoints = ["Anuirean ports", "Khinasi lands"]
+goods_flow = ["spices", "silk", "knowledge", "Anuirean goods"]
+controllers = ["Various", "Khinasi merchants"]
+value = "very_high"
+description = "The most valuable trade route, connecting Anuire to the Khinasi east."
+
+# =============================================================================
+# DANGEROUS AREAS
+# =============================================================================
+
+[danger_zones]
+
+[[danger_zones.area]]
+name = "The Spiderfell"
+type = "awnshegh_domain"
+threat_level = "extreme"
+description = """The nightmare forest ruled by the Spider, an awnshegh of
+terrifying power. Giant spiders infest every shadow, and the Spider's agents
+lurk everywhere. No one enters voluntarily."""
+creatures = ["giant_spiders", "spider_swarms", "web_golems", "spider_cultists"]
+adventure_hooks = [
+    "Rescue a captive from the Spider's web",
+    "Recover an artifact lost in the forest",
+    "Destroy a spider breeding ground",
+    "Infiltrate the Spider's spy network"
+]
+
+[[danger_zones.area]]
+name = "The Gorgon's Crown"
+type = "awnshegh_domain"
+threat_level = "extreme"
+description = """The mountain fortress of the Gorgon, greatest of the awnsheghlien.
+His armies of goblins, orogs, and worse threaten all Anuire. The land itself
+has been corrupted by his presence."""
+creatures = ["goblins", "orogs", "undead", "corrupted_beasts", "stone_guardians"]
+adventure_hooks = [
+    "Scout the Gorgon's defenses",
+    "Rescue prisoners from the slave pits",
+    "Destroy a supply caravan",
+    "Find the Gorgon's weakness"
+]
+
+[[danger_zones.area]]
+name = "The Erebannien"
+type = "ancient_forest"
+threat_level = "high"
+description = """Ancient elven forest, now wild and dangerous. The elves have
+retreated deep within, and fey creatures roam the paths. Time moves strangely
+here, and many who enter are never seen again."""
+creatures = ["fey_creatures", "wild_elves", "forest_spirits", "ancient_beasts"]
+adventure_hooks = [
+    "Seek audience with the elven court",
+    "Recover a lost artifact",
+    "Rescue someone lost to the fey",
+    "Learn ancient magic"
+]
+
+[[danger_zones.area]]
+name = "The Five Peaks"
+type = "monster_territory"
+threat_level = "high"
+description = """Mountain range infested with giants, dragons, and worse.
+Rich in minerals but nearly impossible to mine. Ancient dwarven ruins
+hide untold treasures."""
+creatures = ["giants", "dragons", "wyverns", "trolls"]
+adventure_hooks = [
+    "Slay a marauding dragon",
+    "Explore dwarven ruins",
+    "Establish a mining outpost",
+    "Recover giant-held prisoners"
+]
+
+[[danger_zones.area]]
+name = "The Chimaeron"
+type = "awnshegh_domain"
+threat_level = "very_high"
+description = """Realm of the Chimera, a beast-headed awnshegh who rules
+through terror. The population lives in constant fear, and monsters roam
+freely. The land is lawless and brutal."""
+creatures = ["chimera_spawn", "beast_men", "corrupted_animals", "bandits"]
+adventure_hooks = [
+    "Assassinate the Chimera",
+    "Rescue refugees",
+    "Establish resistance contact",
+    "Map safe passages"
+]
+
+[[danger_zones.area]]
+name = "Anuire City Undercity"
+type = "urban_dungeon"
+threat_level = "moderate"
+description = """Beneath the ancient capital lies a vast network of catacombs,
+old sewers, and forgotten chambers. Thieves, cultists, and darker things
+make their homes in the depths."""
+creatures = ["thieves", "cultists", "undead", "oozes", "vermin"]
+adventure_hooks = [
+    "Track a thieves' guild",
+    "Explore imperial catacombs",
+    "Destroy a cult cell",
+    "Recover lost imperial treasures"
+]
+
+# =============================================================================
+# BORDER REGIONS
+# =============================================================================
+
+[borders]
+
+[[borders.region]]
+name = "The Mhoried-Gorgon Border"
+realms = ["Mhoried", "Gorgon's Crown"]
+type = "active_warzone"
+description = """Perpetual conflict zone. Fortifications line both sides,
+and raids are constant. Heroes can make their name here, or die forgotten."""
+current_status = "tense_standoff"
+recent_events = [
+    "Major raid repelled last season",
+    "New fortification under construction",
+    "Refugees flooding south"
+]
+
+[[borders.region]]
+name = "The Roesone-Spiderfell Border"
+realms = ["Roesone", "Spiderfell"]
+type = "contested"
+description = """The Spider's influence seeps into Roesone's frontier provinces.
+Baroness Roesone fights a shadow war against infiltration and corruption."""
+current_status = "cold_war"
+recent_events = [
+    "Spider cultists discovered in Abbatuor",
+    "Increased spider creature sightings",
+    "Trade route attacks"
+]
+
+[[borders.region]]
+name = "The Avanil-Boeruine Frontier"
+realms = ["Avanil", "Boeruine"]
+type = "political_tension"
+description = """Two great powers stare across a tense border. Both claim the
+Iron Throne, and war seems inevitable. Spies and agents work constantly."""
+current_status = "armed_peace"
+recent_events = [
+    "Diplomatic incident last month",
+    "Military exercises near border",
+    "Trade disputes escalating"
+]
+
+[[borders.region]]
+name = "The Ghoere Expansion Zone"
+realms = ["Ghoere", "Mhoried", "Roesone", "Elinie"]
+type = "aggressive_expansion"
+description = """Baron Tael pushes outward on all fronts. His neighbors watch
+nervously as his armies grow. Conquest is only a matter of time."""
+current_status = "imminent_conflict"
+recent_events = [
+    "Troops massing on borders",
+    "Ultimatums delivered",
+    "Refugees fleeing potential targets"
+]
+
+[[borders.region]]
+name = "The Northern Trade Border"
+realms = ["Talinie", "Rjurik Highlands"]
+type = "trade_frontier"
+description = """Where Anuirean civilization meets Rjurik tradition. Trade
+flows, but so do occasional raids. Cultural clash is constant."""
+current_status = "profitable_tension"
+recent_events = [
+    "Major trade fair upcoming",
+    "Rjurik clan dispute affecting trade",
+    "Pirate activity in northern waters"
+]
+
+# =============================================================================
+# WATERWAYS
+# =============================================================================
+
+[waterways]
+
+[[waterways.river]]
+name = "The Maesil River"
+source = "Five Peaks"
+mouth = "Mhoried coast"
+length = "major"
+navigable = true
+description = "The great river of eastern Anuire. Trade flows along its length."
+settlements_along = ["Maesil", "Shieldhaven", "various towns"]
+dangers = ["river_pirates", "monsters", "rapids"]
+
+[[waterways.river]]
+name = "The Tuor River"
+source = "Boeruine hills"
+mouth = "Avanil coast"
+length = "major"
+navigable = true
+description = "Western Anuire's main waterway. Connects interior to sea."
+settlements_along = ["Anuire City", "Boeruine towns"]
+dangers = ["bandits", "political_complications"]
+
+[[waterways.strait]]
+name = "The Straits of Aerele"
+connects = ["Anuirean Sea", "Khinasi Waters"]
+width = "narrow"
+description = "The gateway between Anuire and Khinasi lands. Vital for trade."
+dangers = ["pirates", "naval_conflicts", "sea_monsters"]
+controlled_by = "Contested"
+
+[[waterways.sea]]
+name = "The Anuirean Sea"
+borders = ["Southern Anuire", "Khinasi coast", "Vos coast"]
+description = "The inland sea that defines Anuirean naval power."
+dangers = ["pirates", "storms", "sea_monsters", "naval_warfare"]
+major_ports = ["Aerele", "Caercas", "Ilien", "Khinasi ports"]
+
+# =============================================================================
+# WEATHER AND SEASONS
+# =============================================================================
+
+[weather]
+
+[weather.seasons]
+spring = { travel_modifier = 0.9, description = "Rains make roads muddy, but life returns" }
+summer = { travel_modifier = 1.0, description = "Best travel season, warmest and driest" }
+autumn = { travel_modifier = 0.85, description = "Harvests and early storms" }
+winter = { travel_modifier = 0.6, description = "Snow in north, rain in south, travel difficult" }
+
+[weather.regional_effects]
+northern_marches = { winter_severity = "harsh", summer_bonus = 0.0 }
+heartlands = { winter_severity = "moderate", summer_bonus = 0.1 }
+southern_coast = { winter_severity = "mild", summer_bonus = 0.0 }
+mountains = { winter_severity = "severe", summer_bonus = -0.1 }
+
+# =============================================================================
+# LANDMARKS AND WAYPOINTS
+# =============================================================================
+
+[landmarks]
+
+[[landmarks.site]]
+name = "The Iron Throne"
+location = "Anuire City"
+type = "political"
+description = """The empty throne of the Anuirean Empire. Whoever sits here
+rules all Anuire - in theory. Many have tried, all have failed."""
+significance = "The ultimate prize in Anuirean politics"
+
+[[landmarks.site]]
+name = "Mount Deismaar"
+location = "Coastal, visible from many provinces"
+type = "religious"
+description = """Site of the battle where the old gods died and the bloodlines
+were created. Holy ground to all Anuireans."""
+significance = "Most sacred site in Cerilia"
+
+[[landmarks.site]]
+name = "The Stonecrown Mountains"
+location = "Northern Anuire"
+type = "geographic"
+description = "Great mountain range marking Anuire's northern boundary."
+significance = "Natural barrier, rich in minerals and dangers"
+
+[[landmarks.site]]
+name = "The Erebannien"
+location = "Western Anuire"
+type = "mystical"
+description = "Ancient elven forest, one of the last in Anuire."
+significance = "Source of magic, elven contact, and mystery"
+
+[[landmarks.site]]
+name = "Imperial Waystations"
+location = "Along major roads"
+type = "infrastructure"
+description = """Crumbling remnants of the Empire's road system. Some still
+function as inns, others are ruins."""
+significance = "Safe havens and adventure sites along roads"

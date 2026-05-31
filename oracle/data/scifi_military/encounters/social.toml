@@ -1,0 +1,65 @@
+# Sci-Fi Military Social Encounters
+# Political intrigue, command decisions, and interpersonal conflicts
+
+[encounters]
+entries = [
+  # Command Politics
+  { text = "Orders come down that will result in unnecessary casualties", weight = 1 },
+  { text = "Two officers give contradictory orders, each claiming authority", weight = 1 },
+  { text = "Commissar arrives to investigate morale problems in the unit", weight = 1 },
+  { text = "Request for reinforcements denied without explanation", weight = 1 },
+  { text = "Soldier witnessed command committing war crime, seeks advice", weight = 1 },
+  { text = "Noble officer demands preferential treatment endangering mission", weight = 1 },
+  { text = "Intelligence officer demands asset extraction that compromises mission", weight = 1 },
+  { text = "Political officer orders execution of soldier for minor infraction", weight = 1 },
+  { text = "Rival unit claims credit for your victories", weight = 1 },
+  { text = "Inquisitor takes interest in unit member for unknown reasons", weight = 1 },
+
+  # Unit Dynamics
+  { text = "Veteran soldier refuses to follow orders from inexperienced officer", weight = 1 },
+  { text = "Fight breaks out between soldiers over scarce resources", weight = 1 },
+  { text = "Soldier confesses they cannot continue, breaking point reached", weight = 1 },
+  { text = "Romance between soldiers threatens unit cohesion", weight = 1 },
+  { text = "Soldier suspects another of cowardice during last engagement", weight = 1 },
+  { text = "New replacement arrives with dangerous overconfidence", weight = 1 },
+  { text = "Long-serving soldier nearing retirement takes unnecessary risks", weight = 1 },
+  { text = "Unit disagrees on tactical approach, tensions rising", weight = 1 },
+  { text = "Soldier's addiction to combat stims becoming obvious", weight = 1 },
+  { text = "Religious divide within unit causing friction", weight = 1 },
+
+  # Civilian Interactions
+  { text = "Local civilians request protection from both armies", weight = 1 },
+  { text = "Refugee column blocks critical supply route", weight = 1 },
+  { text = "Village elder offers information in exchange for medicine", weight = 1 },
+  { text = "Children discovered living in combat zone, alone", weight = 1 },
+  { text = "Local resistance fighter wants to coordinate efforts", weight = 1 },
+  { text = "Collaborator identified among civilian population", weight = 1 },
+  { text = "Civilians accuse soldiers of crimes during previous engagement", weight = 1 },
+  { text = "Religious leader demands soldiers respect local holy site in combat zone", weight = 1 },
+  { text = "Local government official offers bribe for favorable treatment", weight = 1 },
+  { text = "Press correspondent wants to embed with unit, command has concerns", weight = 1 },
+
+  # Enemy Relations
+  { text = "Enemy officer requests temporary ceasefire to collect dead", weight = 1 },
+  { text = "Captured enemy soldier offers information for humane treatment", weight = 1 },
+  { text = "Enemy defector arrives with valuable intelligence", weight = 1 },
+  { text = "Former comrade now serves the enemy, seeks meeting", weight = 1 },
+  { text = "Enemy broadcast names unit members, threatens families", weight = 1 },
+  { text = "Prisoner claims to have information about missing soldiers", weight = 1 },
+  { text = "Enemy medical personnel treating wounded of both sides", weight = 1 },
+  { text = "Enemy commander known to unit personally from before the war", weight = 1 },
+  { text = "Enemy soldiers surrender but cannot be secured without compromising mission", weight = 1 },
+  { text = "Intercepted communication reveals enemy plans but veracity uncertain", weight = 1 },
+
+  # Crisis Decisions
+  { text = "Medical supplies enough for either wounded soldiers or sick civilians", weight = 1 },
+  { text = "Tactical position can only be held by sacrificing part of the unit", weight = 1 },
+  { text = "Evidence discovered that could end careers of senior officers", weight = 1 },
+  { text = "Soldier discovers family member among enemy dead", weight = 1 },
+  { text = "Mission objective conflicts with soldier's deeply held beliefs", weight = 1 },
+  { text = "Saving wounded soldier will compromise time-critical mission", weight = 1 },
+  { text = "Intelligence asset's extraction will expose civilian informants", weight = 1 },
+  { text = "Superior officer's breakdown must be concealed from command", weight = 1 },
+  { text = "Evidence suggests friendly fire caused recent casualties", weight = 1 },
+  { text = "Soldier wants to desert to find missing family, requests help", weight = 1 }
+]

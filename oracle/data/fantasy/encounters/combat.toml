@@ -1,0 +1,86 @@
+# Fantasy Combat Encounters
+# Armed conflict situations and battle scenarios
+
+[combat]
+entries = [
+  # Ambushes
+  { text = "bandits spring from cover on both sides of the road", weight = 2 },
+  { text = "goblins drop from trees onto the party", weight = 1 },
+  { text = "archers open fire from a hidden position", weight = 1 },
+  { text = "assassins strike from the shadows during rest", weight = 1 },
+  { text = "pirates board the ship under cover of fog", weight = 1 },
+  { text = "cultists emerge from hidden passages to surround you", weight = 1 },
+  { text = "wolves circle the camp as night falls", weight = 1 },
+  { text = "an invisible stalker attacks without warning", weight = 1 },
+
+  # Defensive Situations
+  { text = "a village needs defending against an orc raid", weight = 1 },
+  { text = "hold the bridge while refugees escape", weight = 1 },
+  { text = "protect the caravan from highway robbers", weight = 1 },
+  { text = "guard the ritual while the wizard completes the spell", weight = 1 },
+  { text = "defend a wounded ally while they recover", weight = 1 },
+  { text = "hold the chokepoint against waves of undead", weight = 1 },
+  { text = "protect the innocent while assassins hunt them", weight = 1 },
+
+  # Assault Situations
+  { text = "storm the bandit fortress to rescue hostages", weight = 1 },
+  { text = "breach the cultist sanctum before the ritual completes", weight = 1 },
+  { text = "infiltrate and clear an enemy camp", weight = 1 },
+  { text = "fight through guards to reach the throne room", weight = 1 },
+  { text = "assault the necromancer's tower level by level", weight = 1 },
+  { text = "break through enemy lines to deliver crucial intelligence", weight = 1 },
+  { text = "storm the ship before it sets sail", weight = 1 },
+
+  # Duels & Single Combat
+  { text = "a knight challenges the party's champion to single combat", weight = 1 },
+  { text = "an assassin targets only one party member", weight = 1 },
+  { text = "honor demands one-on-one resolution of the dispute", weight = 1 },
+  { text = "a doppelganger impersonating an ally attacks", weight = 1 },
+  { text = "the enemy leader offers trial by combat", weight = 1 },
+  { text = "a rival adventurer seeks to prove their superiority", weight = 1 },
+
+  # Arena & Gladiatorial
+  { text = "forced to fight in the arena for the crowd's amusement", weight = 1 },
+  { text = "tournament combat with strict rules", weight = 1 },
+  { text = "pit fights where anything goes", weight = 1 },
+  { text = "ritual combat to determine worthiness", weight = 1 },
+  { text = "fighting to earn an audience with the lord", weight = 1 },
+  { text = "monster baiting - survive waves of released beasts", weight = 1 },
+
+  # Military Encounters
+  { text = "caught between two armies on a battlefield", weight = 1 },
+  { text = "deserters desperate to silence witnesses", weight = 1 },
+  { text = "a patrol demands you fight or submit to arrest", weight = 1 },
+  { text = "mercenaries hired to eliminate you", weight = 1 },
+  { text = "soldiers mistake you for enemy spies", weight = 1 },
+  { text = "siege warfare - the walls are breached", weight = 1 },
+  { text = "a war party of enemy raiders on the march", weight = 1 },
+
+  # Supernatural Combat
+  { text = "demons materialize to drag a soul to hell", weight = 1 },
+  { text = "undead rise from a battlefield as you cross it", weight = 1 },
+  { text = "a summoning goes wrong and the creature turns hostile", weight = 1 },
+  { text = "elementals rage out of control", weight = 1 },
+  { text = "spirits of the vengeful dead manifest at midnight", weight = 1 },
+  { text = "a curse animates statues to attack intruders", weight = 1 },
+  { text = "fey creatures enforce their territory violently", weight = 1 },
+
+  # Monstrous Opponents
+  { text = "a troll blocks the only path forward", weight = 1 },
+  { text = "a giant demands tribute or battle", weight = 1 },
+  { text = "a hydra emerges from the swamp waters", weight = 1 },
+  { text = "gargoyles animate as you approach the castle", weight = 1 },
+  { text = "a manticore swoops down from above", weight = 1 },
+  { text = "a chimera guards the mountain pass", weight = 1 },
+  { text = "a basilisk lurks in the ruins", weight = 1 },
+
+  # Environmental Complications
+  { text = "fight on a collapsing bridge over a chasm", weight = 1 },
+  { text = "battle in waist-deep water against aquatic foes", weight = 1 },
+  { text = "combat on the deck of a storm-tossed ship", weight = 1 },
+  { text = "fight while the building burns around you", weight = 1 },
+  { text = "battle on a frozen lake that might crack", weight = 1 },
+  { text = "combat in magical darkness", weight = 1 },
+  { text = "fight while poison gas fills the room", weight = 1 },
+  { text = "battle during an earthquake", weight = 1 },
+]

@@ -1,0 +1,744 @@
+# Dwarves - Age of Fantasy
+# Stubborn mountain warriors with superior craftsmanship
+# One Page Rules - Free Wargaming System
+
+[faction]
+name = "Dwarves"
+description = "Stubborn mountain warriors renowned for superior craftsmanship and unbreakable resolve"
+playstyle = "Defensive, durable, artillery-focused"
+difficulty = "beginner"
+strengths = [
+    "Excellent armor (Defense 4+ baseline)",
+    "Superior artillery and war machines",
+    "Fearless and Stubborn troops",
+    "Rune magic for flexibility",
+    "Very durable infantry"
+]
+weaknesses = [
+    "Slow movement (4\" baseline)",
+    "Limited cavalry options",
+    "Poor magic offense",
+    "Expensive units"
+]
+tactics = """
+Dwarves win through firepower and attrition. Your troops are slow but incredibly durable.
+Set up strong gunlines with overlapping fields of fire. Use war machines to devastate enemies
+as they approach. Ironbreakers and Hammerers anchor the line while Thunderers and artillery
+thin the enemy. Accept that you cannot maneuver - make them come to you and punish them for it.
+Rune magic provides flexibility for various situations.
+"""
+
+# =============================================================================
+# HQ UNITS
+# =============================================================================
+
+[[units]]
+name = "Dwarf Lord"
+type = "infantry"
+category = "hq"
+points = 100
+models = "1"
+base_size = "25mm"
+tactical_role = "combat_commander"
+threat_level = "very_high"
+priority_target = true
+preferred_targets = ["infantry", "monsters"]
+avoid_targets = ["nothing"]
+weaknesses = ["isolation", "magic"]
+synergies = ["Inspiration to nearby units", "Combat anchor"]
+special_rules = ["Hero", "Fearless", "Tough(4)", "Slow"]
+keywords = ["Infantry", "Character", "Dwarf"]
+notes = "Tough(4) and excellent armor makes him nearly unkillable. Lead from the front."
+
+[units.stats]
+quality = "3+"
+defense = "3+"
+tough = 4
+movement = "4\""
+
+[[units.weapons]]
+name = "Great Hammer"
+range = "Melee"
+shots = "5"
+ap = "3"
+special = ["Deadly(3)"]
+
+[[units.upgrades]]
+name = "Shieldbearers"
+points = 30
+effect = "+2 Tough, carried by retinue"
+
+[[units.upgrades]]
+name = "Oath Stone"
+points = 15
+effect = "Unit becomes immovable, +1 to hit, cannot move"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Runesmith"
+type = "infantry"
+category = "hq"
+points = 65
+models = "1"
+base_size = "25mm"
+tactical_role = "magic_defense"
+threat_level = "medium"
+priority_target = true
+preferred_targets = ["support"]
+avoid_targets = ["melee_monsters"]
+weaknesses = ["assassination"]
+synergies = ["Dispel enemy magic", "Rune buffs"]
+special_rules = ["Hero", "Tough(2)", "Slow", "Rune Magic"]
+keywords = ["Infantry", "Character", "Dwarf", "Runesmith"]
+notes = "Rune Magic provides +1 to dispel. Essential anti-magic. Buffs runes on units."
+
+[units.stats]
+quality = "3+"
+defense = "4+"
+tough = 2
+movement = "4\""
+
+[[units.weapons]]
+name = "Rune Hammer"
+range = "Melee"
+shots = "2"
+ap = "1"
+
+[[units.abilities]]
+name = "Rune of Stone"
+description = "One friendly unit within 6\" gains +1 Defense until next turn"
+
+[[units.abilities]]
+name = "Rune of Spell Breaking"
+description = "+1 to dispel attempts"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Thane"
+type = "infantry"
+category = "hq"
+points = 55
+models = "1"
+base_size = "25mm"
+tactical_role = "junior_commander"
+threat_level = "medium"
+priority_target = false
+preferred_targets = ["infantry"]
+avoid_targets = ["monsters"]
+weaknesses = ["isolation"]
+synergies = ["Unit champion", "Battle Standard bearer"]
+special_rules = ["Hero", "Fearless", "Tough(2)", "Slow"]
+keywords = ["Infantry", "Character", "Dwarf"]
+notes = "Budget hero. Good for leading secondary units or bearing the Battle Standard."
+
+[units.stats]
+quality = "3+"
+defense = "4+"
+tough = 2
+movement = "4\""
+
+[[units.weapons]]
+name = "Axe"
+range = "Melee"
+shots = "3"
+ap = "1"
+
+[[units.upgrades]]
+name = "Battle Standard"
+points = 25
+effect = "Friendly units within 12\" re-roll morale"
+
+[[units.upgrades]]
+name = "Great Weapon"
+points = 5
+weapon = { name = "Great Weapon", range = "Melee", shots = "3", ap = "2", special = ["Deadly(3)"] }
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Dragon Slayer"
+type = "infantry"
+category = "hq"
+points = 75
+models = "1"
+base_size = "25mm"
+tactical_role = "monster_hunter"
+threat_level = "high"
+priority_target = true
+preferred_targets = ["monsters"]
+avoid_targets = ["massed_infantry"]
+weaknesses = ["numbers", "shooting"]
+synergies = ["Monster assassination", "Fearless charge"]
+special_rules = ["Hero", "Fearless", "Tough(3)", "Slayer", "Slow"]
+keywords = ["Infantry", "Character", "Dwarf", "Slayer"]
+notes = "Slayer: +1 to hit and wound vs Tough(3+) models. Monster assassin."
+
+[units.stats]
+quality = "3+"
+defense = "5+"
+tough = 3
+movement = "4\""
+
+[[units.weapons]]
+name = "Giant Slayer Axes"
+range = "Melee"
+shots = "5"
+ap = "2"
+special = ["Deadly(3)"]
+
+# =============================================================================
+# TROOPS
+# =============================================================================
+
+[[units]]
+name = "Dwarf Warriors"
+type = "infantry"
+category = "troops"
+points = 95
+models = "10"
+base_size = "25mm"
+tactical_role = "line_infantry"
+threat_level = "medium"
+priority_target = false
+preferred_targets = ["holding_line"]
+avoid_targets = ["fast_flankers"]
+weaknesses = ["being_flanked", "magic"]
+synergies = ["Shieldwall", "Stubborn defense"]
+special_rules = ["Fearless", "Slow"]
+keywords = ["Infantry", "Dwarf"]
+notes = "Solid line troops. Defense 4+ with shields. Fearless holds the line."
+
+[units.stats]
+quality = "4+"
+defense = "4+"
+tough = 1
+movement = "4\""
+
+[[units.weapons]]
+name = "Axe"
+range = "Melee"
+shots = "1"
+ap = "0"
+
+[[units.upgrades]]
+name = "Great Weapons"
+points = 10
+effect = "Defense becomes 5+, gain Great Weapon attacks"
+weapon = { name = "Great Weapon", range = "Melee", shots = "1", ap = "2" }
+
+[[units.upgrades]]
+name = "20 Warriors"
+points = 95
+effect = "Add 10 more models"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Quarrellers"
+type = "infantry"
+category = "troops"
+points = 100
+models = "10"
+base_size = "25mm"
+tactical_role = "ranged_support"
+threat_level = "medium"
+priority_target = true
+preferred_targets = ["armored_targets"]
+avoid_targets = ["close_combat"]
+weaknesses = ["melee", "fast_units"]
+synergies = ["Crossbow volleys", "Defensive fire"]
+special_rules = ["Fearless", "Slow"]
+keywords = ["Infantry", "Dwarf"]
+notes = "Armored crossbowmen. AP(1) effective against armor. Fearless holds position."
+
+[units.stats]
+quality = "4+"
+defense = "4+"
+tough = 1
+movement = "4\""
+
+[[units.weapons]]
+name = "Crossbow"
+range = "24\""
+shots = "1"
+ap = "1"
+
+[[units.weapons]]
+name = "Axe"
+range = "Melee"
+shots = "1"
+ap = "0"
+
+[[units.upgrades]]
+name = "Great Weapons"
+points = 10
+effect = "Gain Great Weapon for melee"
+weapon = { name = "Great Weapon", range = "Melee", shots = "1", ap = "2" }
+
+[[units.upgrades]]
+name = "20 Quarrellers"
+points = 100
+effect = "Add 10 more models"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Thunderers"
+type = "infantry"
+category = "troops"
+points = 110
+models = "10"
+base_size = "25mm"
+tactical_role = "armor_piercing_ranged"
+threat_level = "high"
+priority_target = true
+preferred_targets = ["heavily_armored"]
+avoid_targets = ["close_combat"]
+weaknesses = ["melee", "fast_units"]
+synergies = ["AP(2) devastation", "Knight killing"]
+special_rules = ["Fearless", "Slow"]
+keywords = ["Infantry", "Dwarf"]
+notes = "AP(2) handguns shred armor. Short range but devastating."
+
+[units.stats]
+quality = "4+"
+defense = "4+"
+tough = 1
+movement = "4\""
+
+[[units.weapons]]
+name = "Dwarf Handgun"
+range = "24\""
+shots = "1"
+ap = "2"
+
+[[units.weapons]]
+name = "Axe"
+range = "Melee"
+shots = "1"
+ap = "0"
+
+[[units.upgrades]]
+name = "20 Thunderers"
+points = 110
+effect = "Add 10 more models"
+
+# =============================================================================
+# ELITES
+# =============================================================================
+
+[[units]]
+name = "Ironbreakers"
+type = "infantry"
+category = "elite"
+points = 150
+models = "10"
+base_size = "25mm"
+tactical_role = "elite_anvil"
+threat_level = "medium"
+priority_target = false
+preferred_targets = ["holding_ground"]
+avoid_targets = ["nothing"]
+weaknesses = ["overwhelming_numbers"]
+synergies = ["Immovable line", "Objective holding"]
+special_rules = ["Fearless", "Slow", "Phalanx"]
+keywords = ["Infantry", "Dwarf", "Elite"]
+notes = "Defense 3+ makes them nearly immune to basic attacks. Ultimate anvil unit."
+
+[units.stats]
+quality = "3+"
+defense = "3+"
+tough = 1
+movement = "4\""
+
+[[units.weapons]]
+name = "Axe and Shield"
+range = "Melee"
+shots = "1"
+ap = "0"
+
+[[units.upgrades]]
+name = "20 Ironbreakers"
+points = 150
+effect = "Add 10 more models"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Hammerers"
+type = "infantry"
+category = "elite"
+points = 155
+models = "10"
+base_size = "25mm"
+tactical_role = "elite_assault"
+threat_level = "very_high"
+priority_target = true
+preferred_targets = ["elite_infantry", "monsters"]
+avoid_targets = ["massed_shooting"]
+weaknesses = ["ranged_attacks"]
+synergies = ["King's bodyguard", "Monster killing"]
+special_rules = ["Fearless", "Slow", "Stubborn"]
+keywords = ["Infantry", "Dwarf", "Elite"]
+notes = "Elite hammerers. Great weapons devastate. Stubborn holds the line."
+
+[units.stats]
+quality = "3+"
+defense = "4+"
+tough = 1
+movement = "4\""
+
+[[units.weapons]]
+name = "Great Hammer"
+range = "Melee"
+shots = "2"
+ap = "2"
+special = ["Deadly(3)"]
+
+[[units.upgrades]]
+name = "20 Hammerers"
+points = 155
+effect = "Add 10 more models"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Slayers"
+type = "infantry"
+category = "elite"
+points = 100
+models = "10"
+base_size = "25mm"
+tactical_role = "berserker_assault"
+threat_level = "high"
+priority_target = true
+preferred_targets = ["monsters", "heavy_infantry"]
+avoid_targets = ["nothing"]
+weaknesses = ["no_armor"]
+synergies = ["Monster hunting", "Suicidal charges"]
+special_rules = ["Fearless", "Slayer", "Furious"]
+keywords = ["Infantry", "Dwarf", "Slayer"]
+notes = "Slayer: +1 to hit and wound vs Tough(3+). No armor but deadly. Death seekers."
+
+[units.stats]
+quality = "4+"
+defense = "6+"
+tough = 1
+movement = "4\""
+
+[[units.weapons]]
+name = "Slayer Axes"
+range = "Melee"
+shots = "2"
+ap = "1"
+
+[[units.upgrades]]
+name = "Giant Slayers"
+points = 25
+effect = "Attacks gain Deadly(3)"
+
+[[units.upgrades]]
+name = "20 Slayers"
+points = 100
+effect = "Add 10 more models"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Irondrakes"
+type = "infantry"
+category = "elite"
+points = 170
+models = "10"
+base_size = "25mm"
+tactical_role = "elite_firepower"
+threat_level = "very_high"
+priority_target = true
+preferred_targets = ["infantry", "cavalry"]
+avoid_targets = ["fast_melee"]
+weaknesses = ["close_combat"]
+synergies = ["Devastating volleys", "Close range devastation"]
+special_rules = ["Fearless", "Slow"]
+keywords = ["Infantry", "Dwarf", "Elite"]
+notes = "Drakefire pistols devastate at close range. AP(2) and multiple shots."
+
+[units.stats]
+quality = "3+"
+defense = "3+"
+tough = 1
+movement = "4\""
+
+[[units.weapons]]
+name = "Drakefire Pistol"
+range = "12\""
+shots = "2"
+ap = "2"
+special = ["Reliable"]
+
+[[units.weapons]]
+name = "Axe"
+range = "Melee"
+shots = "1"
+ap = "0"
+
+[[units.upgrades]]
+name = "Trollhammer Torpedo"
+points = 15
+models_affected = 1
+weapon = { name = "Trollhammer", range = "18\"", shots = "1", ap = "4", special = ["Deadly(6)"] }
+
+# =============================================================================
+# FAST ATTACK
+# =============================================================================
+
+[[units]]
+name = "Gyrocopter"
+type = "vehicle"
+category = "fast_attack"
+points = 75
+models = "1"
+base_size = "flight"
+tactical_role = "mobile_harasser"
+threat_level = "medium"
+priority_target = false
+preferred_targets = ["war_machines", "light_troops"]
+avoid_targets = ["massed_shooting"]
+weaknesses = ["anti_air", "focus_fire"]
+synergies = ["War machine hunting", "Harassment"]
+special_rules = ["Flying", "Tough(4)"]
+keywords = ["Vehicle", "Dwarf", "Flying"]
+notes = "Flying war machine. Steam gun or bombs for different roles. Mobile support."
+
+[units.stats]
+quality = "4+"
+defense = "4+"
+tough = 4
+movement = "14\""
+
+[[units.weapons]]
+name = "Steam Gun"
+range = "12\""
+shots = "D6"
+ap = "1"
+special = ["Reliable"]
+
+[[units.upgrades]]
+name = "Brimstone Gun"
+points = 10
+weapon = { name = "Brimstone Gun", range = "18\"", shots = "3", ap = "2" }
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Gyrobomber"
+type = "vehicle"
+category = "fast_attack"
+points = 110
+models = "1"
+base_size = "flight"
+tactical_role = "bomber"
+threat_level = "high"
+priority_target = true
+preferred_targets = ["infantry_blocks"]
+avoid_targets = ["anti_air"]
+weaknesses = ["anti_air", "focus_fire"]
+synergies = ["Infantry deletion", "Bombing runs"]
+special_rules = ["Flying", "Tough(5)"]
+keywords = ["Vehicle", "Dwarf", "Flying"]
+notes = "Bomber. Clattergun and bombs devastate infantry blocks."
+
+[units.stats]
+quality = "4+"
+defense = "4+"
+tough = 5
+movement = "12\""
+
+[[units.weapons]]
+name = "Clattergun"
+range = "18\""
+shots = "4"
+ap = "1"
+
+[[units.weapons]]
+name = "Grudgebuster Bombs"
+range = "N/A"
+shots = "D6"
+ap = "2"
+special = ["Blast(3)", "Bomb"]
+notes = "Drop on unit flown over"
+
+# =============================================================================
+# HEAVY SUPPORT
+# =============================================================================
+
+[[units]]
+name = "Cannon"
+type = "war_machine"
+category = "heavy_support"
+points = 100
+models = "1"
+base_size = "chariot"
+tactical_role = "artillery"
+threat_level = "very_high"
+priority_target = true
+preferred_targets = ["monsters", "cavalry", "war_machines"]
+avoid_targets = ["close_combat"]
+weaknesses = ["charges"]
+synergies = ["Monster sniping", "Long range support"]
+special_rules = ["Tough(4)", "Slow"]
+keywords = ["War Machine", "Dwarf"]
+notes = "Superior dwarf craftsmanship. Reliable and powerful."
+
+[units.stats]
+quality = "4+"
+defense = "5+"
+tough = 4
+movement = "0\""
+
+[[units.weapons]]
+name = "Cannon"
+range = "48\""
+shots = "1"
+ap = "5"
+special = ["Deadly(9)"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Organ Gun"
+type = "war_machine"
+category = "heavy_support"
+points = 120
+models = "1"
+base_size = "chariot"
+tactical_role = "mass_firepower"
+threat_level = "extreme"
+priority_target = true
+preferred_targets = ["infantry", "cavalry"]
+avoid_targets = ["monsters"]
+weaknesses = ["charges", "range"]
+synergies = ["Infantry deletion", "Defensive fire"]
+special_rules = ["Tough(4)", "Slow"]
+keywords = ["War Machine", "Dwarf"]
+notes = "Multiple barrels. 4D6 shots devastate approaching infantry."
+
+[units.stats]
+quality = "4+"
+defense = "5+"
+tough = 4
+movement = "0\""
+
+[[units.weapons]]
+name = "Organ Barrels"
+range = "24\""
+shots = "4D6"
+ap = "1"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Grudge Thrower"
+type = "war_machine"
+category = "heavy_support"
+points = 80
+models = "1"
+base_size = "chariot"
+tactical_role = "stone_thrower"
+threat_level = "high"
+priority_target = true
+preferred_targets = ["infantry_blocks"]
+avoid_targets = ["single_models"]
+weaknesses = ["charges"]
+synergies = ["Indirect fire", "Block elimination"]
+special_rules = ["Tough(4)", "Slow", "Indirect"]
+keywords = ["War Machine", "Dwarf"]
+notes = "Stone thrower. Blast(6) devastates infantry blocks. Rune options available."
+
+[units.stats]
+quality = "4+"
+defense = "5+"
+tough = 4
+movement = "0\""
+
+[[units.weapons]]
+name = "Grudge Stone"
+range = "48\""
+shots = "1"
+ap = "2"
+special = ["Blast(6)", "Deadly(3)", "Indirect"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Flame Cannon"
+type = "war_machine"
+category = "heavy_support"
+points = 90
+models = "1"
+base_size = "chariot"
+tactical_role = "anti_horde"
+threat_level = "high"
+priority_target = true
+preferred_targets = ["hordes", "regenerating"]
+avoid_targets = ["small_elite_units"]
+weaknesses = ["charges", "short_range"]
+synergies = ["Horde elimination", "Regeneration denial"]
+special_rules = ["Tough(4)", "Slow"]
+keywords = ["War Machine", "Dwarf"]
+notes = "Flame template weapon. Devastating against massed infantry. No Regeneration allowed."
+
+[units.stats]
+quality = "4+"
+defense = "5+"
+tough = 4
+movement = "0\""
+
+[[units.weapons]]
+name = "Flame Cannon"
+range = "18\""
+shots = "2D6"
+ap = "1"
+special = ["Reliable", "Flaming"]
+notes = "Flaming: No Regeneration saves allowed"
+
+# =============================================================================
+# EXAMPLE ARMY LISTS
+# =============================================================================
+
+[army_lists.starter_1000]
+name = "Karak Hold - 1000 points"
+description = "Defensive gunline"
+points = 1000
+units = [
+    { name = "Dwarf Lord", count = 1, points = 100 },
+    { name = "Runesmith", count = 1, points = 65 },
+    { name = "Dwarf Warriors", count = 2, points = 190, upgrades = ["20 models"] },
+    { name = "Thunderers", count = 1, points = 110 },
+    { name = "Ironbreakers", count = 1, points = 150 },
+    { name = "Cannon", count = 1, points = 100 },
+    { name = "Organ Gun", count = 1, points = 120 },
+    { name = "Grudge Thrower", count = 1, points = 80 }
+]
+tactics = "Set up defensive line. Warriors and Ironbreakers hold center with Lord. Thunderers provide close fire support. Artillery dominates the approach. Runesmith dispels enemy magic."
+
+[army_lists.competitive_2000]
+name = "Throng of Karak - 2000 points"
+description = "Comprehensive dwarf force"
+points = 2000
+units = [
+    { name = "Dwarf Lord", count = 1, points = 130, upgrades = ["Shieldbearers"] },
+    { name = "Runesmith", count = 1, points = 65 },
+    { name = "Thane", count = 1, points = 80, upgrades = ["Battle Standard"] },
+    { name = "Dragon Slayer", count = 1, points = 75 },
+    { name = "Dwarf Warriors", count = 2, points = 190 },
+    { name = "Quarrellers", count = 1, points = 200, upgrades = ["20 models"] },
+    { name = "Thunderers", count = 1, points = 220, upgrades = ["20 models"] },
+    { name = "Ironbreakers", count = 1, points = 300, upgrades = ["20 models"] },
+    { name = "Hammerers", count = 1, points = 155 },
+    { name = "Gyrocopter", count = 2, points = 150 },
+    { name = "Cannon", count = 2, points = 200 },
+    { name = "Organ Gun", count = 1, points = 120 }
+]
+tactics = "Ironbreakers and Lord anchor center. Hammerers counter-punch. Warriors protect flanks. Gyrocopters harass war machines. Massive ranged output from Quarrellers, Thunderers, and war machines devastates approach. Dragon Slayer hunts monsters."

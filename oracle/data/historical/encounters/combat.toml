@@ -1,0 +1,74 @@
+# Historical Combat Encounters
+# 50+ grounded military and violent confrontations
+
+[encounters]
+entries = [
+  # Small Unit Actions
+  { text = "A patrol spots enemy scouts and both sides scramble for advantage", weight = 2 },
+  { text = "Sentries challenge an approaching group that may be friend or foe", weight = 2 },
+  { text = "An ambush is sprung from concealed positions along the road", weight = 2 },
+  { text = "A foraging party is caught in the open by enemy cavalry", weight = 2 },
+  { text = "House-to-house fighting in a contested village", weight = 2 },
+  { text = "A desperate rearguard action to cover a retreating column", weight = 1 },
+  { text = "A dawn raid on an enemy encampment", weight = 2 },
+  { text = "Crossing a fire-swept bridge under enemy observation", weight = 1 },
+  { text = "Clearing a fortified position one room at a time", weight = 2 },
+  { text = "A meeting engagement where both sides stumble into each other", weight = 2 },
+
+  # Siege and Fortification
+  { text = "Defenders on the walls face an assault with scaling ladders", weight = 1 },
+  { text = "Sappers work to undermine fortifications while defenders try to stop them", weight = 1 },
+  { text = "A sortie from a besieged position aims to spike enemy guns", weight = 1 },
+  { text = "Artillery bombardment forces defenders into cover", weight = 2 },
+  { text = "A breach in the walls must be defended at all costs", weight = 1 },
+  { text = "Siege lines tighten as supplies within dwindle", weight = 2 },
+  { text = "Night attack on siege works to buy time for the garrison", weight = 1 },
+  { text = "Relief force approaches but must break through enemy positions", weight = 1 },
+
+  # Naval Combat
+  { text = "Ships close for a broadside exchange at pistol range", weight = 1 },
+  { text = "Boarding action, grappling hooks thrown and cutlasses drawn", weight = 1 },
+  { text = "Running fight as a faster ship attempts to escape pursuit", weight = 2 },
+  { text = "Fireships drift toward anchored vessels in the night", weight = 1 },
+  { text = "Shore batteries engage ships attempting to force a passage", weight = 1 },
+  { text = "Small boat cutting-out expedition targets a ship at anchor", weight = 1 },
+  { text = "Naval vessels bombard positions ashore", weight = 2 },
+  { text = "Submarine or torpedo attack on a convoy", weight = 1 },
+
+  # Personal Combat
+  { text = "A duel of honor with pistols or swords at dawn", weight = 1 },
+  { text = "A brawl erupts in a tavern between rival factions", weight = 2 },
+  { text = "An assassination attempt in a crowded street", weight = 1 },
+  { text = "Confrontation with armed bandits on a lonely road", weight = 2 },
+  { text = "A mutiny aboard ship, officers against crew", weight = 1 },
+  { text = "Escape from captivity requires overcoming guards", weight = 2 },
+  { text = "A riot breaks out and violence engulfs the street", weight = 1 },
+  { text = "Confronting a deserter who refuses to surrender", weight = 2 },
+
+  # Cavalry Actions
+  { text = "A cavalry charge crashes into an infantry square", weight = 1 },
+  { text = "Mounted pursuit of a retreating enemy", weight = 2 },
+  { text = "Skirmish between opposing cavalry screens", weight = 2 },
+  { text = "Dragoons dismount to fight as infantry in rough terrain", weight = 2 },
+  { text = "A saber charge scatters artillery crews", weight = 1 },
+
+  # Artillery Encounters
+  { text = "Gun crew struggles to keep firing while under attack", weight = 2 },
+  { text = "Counter-battery fire seeks to silence enemy guns", weight = 2 },
+  { text = "Desperate defense of artillery position as infantry closes", weight = 2 },
+  { text = "Guns unlimber and prepare to fire as enemy approaches", weight = 2 },
+
+  # Modern Warfare
+  { text = "Machine gun position must be silenced before advance", weight = 1 },
+  { text = "Sniper pins down a unit, source unknown", weight = 2 },
+  { text = "Gas attack forces desperate scramble for protection", weight = 1 },
+  { text = "Tank or armored vehicle leads the assault", weight = 1 },
+  { text = "Air attack strafes positions from above", weight = 1 },
+  { text = "Paratroopers drop into contested territory", weight = 1 },
+
+  # Resistance and Guerrilla
+  { text = "Partisans ambush a supply convoy", weight = 2 },
+  { text = "Resistance cell attacks collaborators in the night", weight = 1 },
+  { text = "Sabotage mission to destroy a key target", weight = 1 },
+  { text = "Evading a sweep operation by occupation forces", weight = 2 }
+]

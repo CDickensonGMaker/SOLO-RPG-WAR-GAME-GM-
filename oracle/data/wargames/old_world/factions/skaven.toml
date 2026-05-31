@@ -1,0 +1,787 @@
+# Warhammer: The Old World - Skaven
+# The Under-Empire of the ratmen, yes-yes!
+
+[faction]
+name = "Skaven"
+description = "The Skaven are a race of chaos-tainted ratmen dwelling in a vast Under-Empire beneath the world. They combine overwhelming numbers with deadly warpstone technology and treacherous schemes"
+playstyle = "Horde army with unreliable but devastating technology. Cheap troops with powerful special units"
+strengths = ["Overwhelming numbers", "Devastating weapons", "Cheap units", "Assassins and weapon teams", "Magic"]
+weaknesses = ["Cowardly", "Unreliable technology", "Low Leadership", "Units flee easily"]
+lore_notes = "The Skaven worship the Great Horned Rat, a chaos god of pestilence and decay. They are divided into Great Clans that constantly scheme against each other"
+
+# =============================================================================
+# LORDS
+# =============================================================================
+
+[[units]]
+name = "Warlord"
+type = "character"
+category = "Lords"
+points = 90
+models = "1"
+tactical_role = "combat_commander"
+threat_level = "high"
+preferred_targets = ["enemy_characters"]
+weaknesses = ["elite_infantry"]
+special_rules = ["Scurry Away!", "Verminous Valour"]
+keywords = ["Character", "Infantry", "Skaven", "Lord"]
+equipment = ["Hand weapon", "Light armor"]
+options = ["May take Rat Ogre Bonebreaker (+65 pts)", "May take War-litter (+35 pts)", "May take magic items up to 100 points"]
+
+[units.stats]
+M = 5
+WS = 6
+BS = 4
+S = 4
+T = 4
+W = 3
+I = 7
+A = 4
+Ld = 7
+Sv = "6+"
+
+[[units]]
+name = "Grey Seer"
+type = "character"
+category = "Lords"
+points = 240
+models = "1"
+tactical_role = "magic"
+threat_level = "extreme"
+preferred_targets = ["enemy_units"]
+weaknesses = ["miscasts", "assassins"]
+special_rules = ["Level 4 Wizard", "Warpstone Tokens"]
+keywords = ["Character", "Infantry", "Skaven", "Lord", "Wizard"]
+equipment = ["Hand weapon"]
+options = ["May take Screaming Bell (+200 pts)", "May take magic items up to 100 points"]
+
+[units.stats]
+M = 5
+WS = 3
+BS = 3
+S = 3
+T = 4
+W = 3
+I = 5
+A = 1
+Ld = 7
+Sv = "-"
+
+[[units]]
+name = "Vermin Lord"
+type = "character"
+category = "Lords"
+points = 500
+models = "1"
+tactical_role = "greater_daemon"
+threat_level = "extreme"
+preferred_targets = ["anything"]
+weaknesses = ["massed_attacks", "magic"]
+special_rules = ["Daemon", "Terror", "Level 4 Wizard", "Doom Glaive"]
+keywords = ["Character", "Monster", "Daemon", "Skaven", "Lord", "Wizard"]
+equipment = ["Doom Glaive"]
+
+[units.stats]
+M = 8
+WS = 8
+BS = 4
+S = 6
+T = 6
+W = 6
+I = 10
+A = 5
+Ld = 10
+Sv = "5+"
+
+# =============================================================================
+# HEROES
+# =============================================================================
+
+[[units]]
+name = "Chieftain"
+type = "character"
+category = "Heroes"
+points = 45
+models = "1"
+tactical_role = "support_commander"
+threat_level = "medium"
+preferred_targets = ["enemy_champions"]
+weaknesses = ["powerful_characters"]
+special_rules = ["Scurry Away!"]
+keywords = ["Character", "Infantry", "Skaven", "Hero"]
+equipment = ["Hand weapon", "Light armor"]
+options = ["May carry Battle Standard (+25 pts)", "May take magic items up to 50 points"]
+
+[units.stats]
+M = 5
+WS = 5
+BS = 4
+S = 4
+T = 4
+W = 2
+I = 6
+A = 3
+Ld = 6
+Sv = "6+"
+
+[[units]]
+name = "Warlock Engineer"
+type = "character"
+category = "Heroes"
+points = 45
+models = "1"
+tactical_role = "war_machine_support"
+threat_level = "medium"
+preferred_targets = ["enemy_units"]
+weaknesses = ["close_combat"]
+special_rules = ["Level 1 Wizard", "May upgrade to Level 2 (+35 pts)", "Warplock Pistol"]
+keywords = ["Character", "Infantry", "Skaven", "Hero", "Wizard", "Clan Skryre"]
+equipment = ["Hand weapon", "Warplock pistol"]
+options = ["May take Warp-energy Condenser", "May take magic items up to 50 points"]
+
+[units.stats]
+M = 5
+WS = 3
+BS = 3
+S = 3
+T = 3
+W = 2
+I = 4
+A = 1
+Ld = 6
+Sv = "-"
+
+[[units]]
+name = "Plague Priest"
+type = "character"
+category = "Heroes"
+points = 100
+models = "1"
+tactical_role = "support_combat"
+threat_level = "high"
+preferred_targets = ["anything"]
+weaknesses = ["shooting"]
+special_rules = ["Level 1 Wizard", "May upgrade to Level 2 (+35 pts)", "Plague Monk", "Frenzy"]
+keywords = ["Character", "Infantry", "Skaven", "Hero", "Wizard", "Clan Pestilens"]
+equipment = ["Plague censer"]
+options = ["May take Plague Furnace (+150 pts)", "May take magic items up to 50 points"]
+
+[units.stats]
+M = 5
+WS = 4
+BS = 3
+S = 4
+T = 4
+W = 2
+I = 5
+A = 2
+Ld = 6
+Sv = "-"
+
+[[units]]
+name = "Assassin"
+type = "character"
+category = "Heroes"
+points = 135
+models = "1"
+tactical_role = "character_hunter"
+threat_level = "very_high"
+preferred_targets = ["characters", "wizards"]
+weaknesses = ["detection"]
+special_rules = ["Hidden", "Always Strikes First", "Poisoned Attacks", "Skaven Assassin"]
+keywords = ["Character", "Infantry", "Skaven", "Hero", "Clan Eshin"]
+equipment = ["Weeping Blade", "Throwing stars"]
+
+[units.stats]
+M = 6
+WS = 6
+BS = 6
+S = 4
+T = 4
+W = 2
+I = 8
+A = 3
+Ld = 7
+Sv = "-"
+
+# =============================================================================
+# CORE UNITS
+# =============================================================================
+
+[[units]]
+name = "Clanrats"
+type = "infantry"
+category = "Core"
+points = 4
+models = "20-50"
+tactical_role = "line_infantry"
+threat_level = "low"
+preferred_targets = ["nothing"]
+weaknesses = ["everything"]
+special_rules = ["Strength in Numbers"]
+keywords = ["Infantry", "Skaven", "Core"]
+equipment = ["Hand weapon", "Light armor", "Shield"]
+options = ["May swap for spears (+0.5 pt/model)", "May add musician (+5 pts)", "May add standard bearer (+10 pts)", "May attach weapon team"]
+
+[units.stats]
+M = 5
+WS = 3
+BS = 3
+S = 3
+T = 3
+W = 1
+I = 4
+A = 1
+Ld = 5
+Sv = "5+"
+
+[[units]]
+name = "Stormvermin"
+type = "infantry"
+category = "Core"
+points = 7
+models = "20-40"
+tactical_role = "elite_infantry"
+threat_level = "medium"
+preferred_targets = ["infantry"]
+weaknesses = ["cavalry", "monsters"]
+special_rules = ["Strength in Numbers"]
+keywords = ["Infantry", "Skaven", "Core", "Stormvermin"]
+equipment = ["Halberd", "Heavy armor", "Shield"]
+options = ["May add musician (+5 pts)", "May add standard bearer (+10 pts)", "May take magic standard up to 50 pts", "May attach weapon team"]
+
+[units.stats]
+M = 5
+WS = 4
+BS = 3
+S = 3
+T = 3
+W = 1
+I = 5
+A = 1
+Ld = 6
+Sv = "4+"
+
+[[units]]
+name = "Skavenslaves"
+type = "infantry"
+category = "Core"
+points = 2
+models = "20-100"
+tactical_role = "tarpit"
+threat_level = "very_low"
+preferred_targets = ["nothing"]
+weaknesses = ["everything"]
+special_rules = ["Expendable", "Cornered Rats"]
+keywords = ["Infantry", "Skaven", "Core", "Slave"]
+equipment = ["Improvised weapons"]
+options = ["May take spears (+0.5 pt/model)", "May take shields (+0.5 pt/model)", "May take slings (+0.5 pt/model)"]
+
+[units.stats]
+M = 5
+WS = 2
+BS = 2
+S = 3
+T = 3
+W = 1
+I = 4
+A = 1
+Ld = 2
+Sv = "-"
+
+[[units]]
+name = "Night Runners"
+type = "infantry"
+category = "Core"
+points = 7
+models = "10-30"
+tactical_role = "skirmishers"
+threat_level = "low"
+preferred_targets = ["war_machines", "skirmishers"]
+weaknesses = ["combat"]
+special_rules = ["Skirmishers", "Scouts", "Slinking Advance"]
+keywords = ["Infantry", "Skaven", "Core", "Clan Eshin"]
+equipment = ["Two hand weapons", "Throwing stars"]
+
+[units.stats]
+M = 6
+WS = 3
+BS = 3
+S = 3
+T = 3
+W = 1
+I = 5
+A = 1
+Ld = 6
+Sv = "-"
+
+[[units]]
+name = "Giant Rats"
+type = "warbeast"
+category = "Core"
+points = 3
+models = "5-30"
+tactical_role = "flankers"
+threat_level = "low"
+preferred_targets = ["flanks"]
+weaknesses = ["shooting", "combat"]
+special_rules = ["Pack Masters"]
+keywords = ["War Beast", "Skaven", "Core"]
+equipment = ["Teeth"]
+
+[units.stats]
+M = 6
+WS = 2
+BS = 0
+S = 3
+T = 3
+W = 1
+I = 4
+A = 1
+Ld = 3
+Sv = "-"
+
+# =============================================================================
+# SPECIAL UNITS
+# =============================================================================
+
+[[units]]
+name = "Plague Monks"
+type = "infantry"
+category = "Special"
+points = 7
+models = "20-40"
+tactical_role = "berserkers"
+threat_level = "high"
+preferred_targets = ["infantry"]
+weaknesses = ["shooting"]
+special_rules = ["Frenzy", "Strength in Numbers"]
+keywords = ["Infantry", "Skaven", "Special", "Clan Pestilens"]
+equipment = ["Two hand weapons"]
+options = ["May add musician (+5 pts)", "May add standard bearer (+10 pts)", "May take magic standard up to 50 pts"]
+
+[units.stats]
+M = 5
+WS = 3
+BS = 3
+S = 3
+T = 3
+W = 1
+I = 4
+A = 1
+Ld = 5
+Sv = "-"
+
+[[units]]
+name = "Plague Censer Bearers"
+type = "infantry"
+category = "Special"
+points = 16
+models = "5-20"
+tactical_role = "shock_infantry"
+threat_level = "high"
+preferred_targets = ["anything"]
+weaknesses = ["shooting"]
+special_rules = ["Frenzy", "Plague Censer (Flail with Fumes)"]
+keywords = ["Infantry", "Skaven", "Special", "Clan Pestilens"]
+equipment = ["Plague censer"]
+
+[units.stats]
+M = 5
+WS = 3
+BS = 3
+S = 3
+T = 4
+W = 1
+I = 4
+A = 1
+Ld = 5
+Sv = "-"
+
+[[units]]
+name = "Gutter Runners"
+type = "infantry"
+category = "Special"
+points = 12
+models = "5-20"
+tactical_role = "assassins"
+threat_level = "high"
+preferred_targets = ["war_machines", "characters", "isolated_units"]
+weaknesses = ["combat_blocks"]
+special_rules = ["Skirmishers", "Scouts", "Infiltrate", "Poisoned Attacks"]
+keywords = ["Infantry", "Skaven", "Special", "Clan Eshin"]
+equipment = ["Two hand weapons", "Throwing stars"]
+options = ["May take slings (+1 pt/model)"]
+
+[units.stats]
+M = 6
+WS = 4
+BS = 4
+S = 3
+T = 3
+W = 1
+I = 5
+A = 1
+Ld = 7
+Sv = "-"
+
+[[units]]
+name = "Rat Ogres"
+type = "monstrous_infantry"
+category = "Special"
+points = 40
+models = "2-6"
+tactical_role = "monster"
+threat_level = "high"
+preferred_targets = ["infantry"]
+weaknesses = ["war_machines", "high_strength"]
+special_rules = ["Frenzy", "Fear"]
+keywords = ["Monstrous Infantry", "Skaven", "Special", "Clan Moulder"]
+equipment = ["Claws"]
+
+[units.stats]
+M = 6
+WS = 4
+BS = 0
+S = 5
+T = 4
+W = 3
+I = 4
+A = 3
+Ld = 5
+Sv = "-"
+
+[[units]]
+name = "Warplock Jezzails"
+type = "infantry"
+category = "Special"
+points = 20
+models = "3-9 teams"
+tactical_role = "snipers"
+threat_level = "very_high"
+preferred_targets = ["characters", "monsters"]
+weaknesses = ["close_combat", "fast_cavalry"]
+special_rules = ["Move or Fire", "Pavise (5+ save in shooting)"]
+keywords = ["Infantry", "Skaven", "Special", "Clan Skryre"]
+equipment = ["Warplock jezzail", "Pavise"]
+
+[units.stats]
+M = 5
+WS = 3
+BS = 4
+S = 3
+T = 3
+W = 2
+I = 4
+A = 1
+Ld = 5
+Sv = "5+"
+
+[[units.weapons]]
+name = "Warplock Jezzail"
+range = "36\""
+strength = "6"
+ap = "3"
+damage = "1"
+abilities = ["Armor Piercing (3)", "Move or Fire", "Sniper"]
+
+[[units]]
+name = "Ratling Gun"
+type = "warmachine"
+category = "Special"
+points = 55
+models = "1 weapon team"
+tactical_role = "anti_infantry"
+threat_level = "very_high"
+preferred_targets = ["ranked_infantry"]
+weaknesses = ["misfire", "close_combat"]
+special_rules = ["Move or Fire"]
+keywords = ["War Machine", "Skaven", "Special", "Clan Skryre", "Weapon Team"]
+equipment = ["Ratling Gun"]
+
+[units.stats]
+M = 5
+WS = 3
+BS = 3
+S = 3
+T = 3
+W = 2
+I = 4
+A = 2
+Ld = 5
+Sv = "-"
+
+[[units.weapons]]
+name = "Ratling Gun"
+range = "18\""
+strength = "4"
+ap = "1"
+damage = "1"
+abilities = ["2D6 shots", "Misfire on doubles", "Armor Piercing (1)"]
+
+[[units]]
+name = "Warpfire Thrower"
+type = "warmachine"
+category = "Special"
+points = 70
+models = "1 weapon team"
+tactical_role = "anti_infantry"
+threat_level = "high"
+preferred_targets = ["ranked_infantry", "regenerating"]
+weaknesses = ["misfire", "range"]
+special_rules = ["Move or Fire"]
+keywords = ["War Machine", "Skaven", "Special", "Clan Skryre", "Weapon Team"]
+equipment = ["Warpfire Thrower"]
+
+[units.stats]
+M = 5
+WS = 3
+BS = 3
+S = 3
+T = 3
+W = 2
+I = 4
+A = 2
+Ld = 5
+Sv = "-"
+
+[[units.weapons]]
+name = "Warpfire Thrower"
+range = "Template"
+strength = "5"
+ap = "2"
+damage = "1"
+abilities = ["Flaming Attacks", "No armor saves", "Misfire possible"]
+
+[[units]]
+name = "Poisoned Wind Mortar"
+type = "warmachine"
+category = "Special"
+points = 65
+models = "1 weapon team"
+tactical_role = "artillery"
+threat_level = "high"
+preferred_targets = ["ranked_infantry"]
+weaknesses = ["misfire"]
+special_rules = ["Indirect Fire"]
+keywords = ["War Machine", "Skaven", "Special", "Clan Skryre", "Weapon Team"]
+equipment = ["Poisoned Wind Mortar"]
+
+[units.stats]
+M = 5
+WS = 3
+BS = 3
+S = 3
+T = 3
+W = 2
+I = 4
+A = 2
+Ld = 5
+Sv = "-"
+
+[[units.weapons]]
+name = "Poisoned Wind Mortar"
+range = "6-24\""
+strength = "3"
+ap = "3"
+damage = "1"
+abilities = ["Small Blast (3\")", "Poisoned", "No armor saves"]
+
+# =============================================================================
+# RARE UNITS
+# =============================================================================
+
+[[units]]
+name = "Hell Pit Abomination"
+type = "monster"
+category = "Rare"
+points = 235
+models = "1"
+tactical_role = "monster"
+threat_level = "extreme"
+preferred_targets = ["anything"]
+weaknesses = ["fire", "high_strength"]
+special_rules = ["Terror", "Regeneration (4+)", "Random Attacks (2D6)", "Too Horrible to Die"]
+keywords = ["Monster", "Skaven", "Rare", "Clan Moulder"]
+equipment = ["Assorted limbs"]
+
+[units.stats]
+M = "3D6"
+WS = 4
+BS = 0
+S = 6
+T = 6
+W = 6
+I = 4
+A = "2D6"
+Ld = 8
+Sv = "4+"
+
+[[units]]
+name = "Doomwheel"
+type = "warmachine"
+category = "Rare"
+points = 150
+models = "1"
+tactical_role = "chaotic_assault"
+threat_level = "very_high"
+preferred_targets = ["anything_in_the_way"]
+weaknesses = ["unreliable"]
+special_rules = ["Random Movement (3D6)", "Impact Hits (D6+3)", "Warp Lightning"]
+keywords = ["War Machine", "Skaven", "Rare", "Clan Skryre"]
+equipment = ["Warp lightning"]
+
+[units.stats]
+M = "3D6"
+WS = 3
+BS = 3
+S = 5
+T = 6
+W = 5
+I = 4
+A = "-"
+Ld = 5
+Sv = "4+"
+
+[[units.weapons]]
+name = "Warp Lightning (shooting)"
+range = "24\""
+strength = "6"
+ap = "3"
+damage = "D3"
+abilities = ["D3 wounds", "ZZZap!"]
+
+[[units]]
+name = "Warp Lightning Cannon"
+type = "warmachine"
+category = "Rare"
+points = 90
+models = "1 cannon, 3 crew"
+tactical_role = "artillery"
+threat_level = "extreme"
+preferred_targets = ["monsters", "ranked_infantry"]
+weaknesses = ["misfire"]
+special_rules = ["Move or Fire"]
+keywords = ["War Machine", "Skaven", "Rare", "Clan Skryre"]
+equipment = ["Warp Lightning Cannon"]
+
+[units.stats]
+M = "-"
+WS = 3
+BS = 3
+S = 3
+T = 6
+W = 3
+I = 4
+A = "-"
+Ld = 5
+Sv = "-"
+
+[[units.weapons]]
+name = "Warp Lightning Cannon"
+range = "24-60\""
+strength = "2D6"
+ap = "2D6"
+damage = "variable"
+abilities = ["Roll 2D6 for S and 2D6 for wounds", "Multiple Wounds (2D6)"]
+
+[[units]]
+name = "Plagueclaw Catapult"
+type = "warmachine"
+category = "Rare"
+points = 100
+models = "1 catapult, 3 crew"
+tactical_role = "artillery"
+threat_level = "high"
+preferred_targets = ["ranked_infantry"]
+weaknesses = ["close_combat"]
+special_rules = ["Move or Fire"]
+keywords = ["War Machine", "Skaven", "Rare", "Clan Pestilens"]
+equipment = ["Plagueclaw"]
+
+[units.stats]
+M = "-"
+WS = 3
+BS = 3
+S = 3
+T = 6
+W = 3
+I = 4
+A = "-"
+Ld = 5
+Sv = "-"
+
+[[units.weapons]]
+name = "Plagueclaw"
+range = "12-48\""
+strength = "3"
+ap = "0"
+damage = "1"
+abilities = ["Large Blast (5\")", "No armor saves", "Poison"]
+
+# =============================================================================
+# FACTION SPECIAL RULES
+# =============================================================================
+
+[[faction_rules]]
+name = "Strength in Numbers"
+description = "Skaven units add their current rank bonus to their Leadership for Break tests (max +3)"
+
+[[faction_rules]]
+name = "Scurry Away!"
+description = "Skaven characters can choose to flee from a challenge without penalty. They move to rear rank but suffer no honour loss"
+
+[[faction_rules]]
+name = "Verminous Valour"
+description = "If a Skaven character in a unit would suffer an unsaved wound, they may allocate it to a rank-and-file model in the same unit on a 4+"
+
+[[faction_rules]]
+name = "Expendable"
+description = "Skavenslave units do not cause Panic in other Skaven units. Other Skaven units may shoot into combats involving Skavenslaves"
+
+[[faction_rules]]
+name = "Life is Cheap"
+description = "Warlords may order artillery to fire into combats involving Clanrats or Slaves. Roll to hit normally, then randomize hits between units"
+
+[[faction_rules]]
+name = "Warpstone Tokens"
+description = "Grey Seers may consume Warpstone tokens. Each token adds +1 to casting roll but on a roll of 1 the Seer suffers a wound"
+
+# =============================================================================
+# FACTION MAGIC ITEMS
+# =============================================================================
+
+[[faction_items]]
+name = "Fellblade"
+type = "magic_weapon"
+points = 100
+description = "+1 Attack. For each hit, roll to wound. For each wound, roll another hit. Repeat until no wounds. Bearer takes D3 wounds (no saves) at end of combat"
+restrictions = ["Skaven characters only"]
+
+[[faction_items]]
+name = "Warpforged Blade"
+type = "magic_weapon"
+points = 35
+description = "+1 Strength, Armor Piercing (2), Ignores ward saves"
+restrictions = ["Skaven characters only"]
+
+[[faction_items]]
+name = "Warpstone Armour"
+type = "magic_armor"
+points = 30
+description = "Medium armor (5+ save). +1 Toughness. Roll D6 each turn - on 1, bearer suffers wound (no saves)"
+restrictions = ["Skaven characters only"]
+
+[[faction_items]]
+name = "Storm Daemon"
+type = "arcane"
+points = 50
+description = "Bound spell (Power Level 4). Cast Warp Lightning at 3D6 strength"
+restrictions = ["Warlock Engineers only"]
+
+[[faction_items]]
+name = "Banner of the Under-Empire"
+type = "banner"
+points = 50
+description = "Unit causes Fear. Enemy units in base contact are -1 to hit"
+restrictions = ["Skaven standard bearer only"]

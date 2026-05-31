@@ -1,0 +1,138 @@
+# Motivations - Character motivations and driving forces
+# Setting-agnostic motivations applicable across all genres
+# Weight: higher = more common (1-3 typical range)
+
+[motivations]
+entries = [
+  # Revenge and Justice
+  { text = "Revenge against a specific person who wronged them", weight = 2 },
+  { text = "Revenge against an organization or group", weight = 1 },
+  { text = "Seeking justice for a crime against their family", weight = 2 },
+  { text = "Hunting those who betrayed their trust", weight = 2 },
+  { text = "Avenging a fallen comrade or mentor", weight = 2 },
+  { text = "Bringing a criminal or villain to justice", weight = 2 },
+  { text = "Clearing their name from false accusations", weight = 2 },
+  { text = "Exposing corruption or injustice", weight = 2 },
+  { text = "Making someone pay for past humiliation", weight = 1 },
+  { text = "Settling an old score once and for all", weight = 2 },
+
+  # Knowledge and Truth
+  { text = "Seeking forbidden or lost knowledge", weight = 2 },
+  { text = "Uncovering the truth about their origins", weight = 2 },
+  { text = "Solving an ancient mystery", weight = 2 },
+  { text = "Finding answers to an unsolved disappearance", weight = 2 },
+  { text = "Understanding a strange phenomenon", weight = 2 },
+  { text = "Completing the work of a deceased researcher", weight = 1 },
+  { text = "Proving or disproving a controversial theory", weight = 1 },
+  { text = "Learning the secrets of a rival or enemy", weight = 2 },
+  { text = "Discovering what happened at a specific event", weight = 2 },
+  { text = "Finding evidence of something believed to be myth", weight = 1 },
+
+  # Protection and Love
+  { text = "Protecting a loved one from danger", weight = 3 },
+  { text = "Keeping a child or family member safe", weight = 3 },
+  { text = "Shielding a community from threats", weight = 2 },
+  { text = "Guarding a secret to protect others", weight = 2 },
+  { text = "Saving someone who is ill or cursed", weight = 2 },
+  { text = "Reuniting with a separated family member", weight = 2 },
+  { text = "Finding a lost love", weight = 2 },
+  { text = "Earning the respect of someone they admire", weight = 2 },
+  { text = "Winning someone's heart", weight = 2 },
+  { text = "Rebuilding a broken relationship", weight = 2 },
+
+  # Power and Ambition
+  { text = "Gaining political power or influence", weight = 2 },
+  { text = "Accumulating wealth beyond measure", weight = 2 },
+  { text = "Becoming the best at their craft or profession", weight = 2 },
+  { text = "Achieving recognition and fame", weight = 2 },
+  { text = "Building an empire or organization", weight = 1 },
+  { text = "Claiming a position of leadership", weight = 2 },
+  { text = "Surpassing a rival or predecessor", weight = 2 },
+  { text = "Achieving immortality in some form", weight = 1 },
+  { text = "Leaving a lasting legacy", weight = 2 },
+  { text = "Gaining control over a specific resource or territory", weight = 2 },
+
+  # Survival and Freedom
+  { text = "Simply surviving in a hostile world", weight = 2 },
+  { text = "Escaping from captivity or slavery", weight = 2 },
+  { text = "Finding safety from persecution", weight = 2 },
+  { text = "Securing resources for survival", weight = 2 },
+  { text = "Breaking free from an oppressive system", weight = 2 },
+  { text = "Establishing independence from authority", weight = 2 },
+  { text = "Finding a new home after displacement", weight = 2 },
+  { text = "Overthrowing an oppressor", weight = 1 },
+  { text = "Living life on their own terms", weight = 2 },
+  { text = "Escaping the consequences of past actions", weight = 2 },
+
+  # Duty and Honor
+  { text = "Fulfilling a sacred oath or promise", weight = 2 },
+  { text = "Completing a mission given by a superior", weight = 2 },
+  { text = "Upholding the traditions of their order or family", weight = 2 },
+  { text = "Serving their people or nation", weight = 2 },
+  { text = "Repaying a debt of honor", weight = 2 },
+  { text = "Living up to the expectations of their role", weight = 2 },
+  { text = "Protecting the innocent as duty demands", weight = 2 },
+  { text = "Preserving ancient traditions or knowledge", weight = 2 },
+  { text = "Carrying out the last wishes of the dead", weight = 2 },
+  { text = "Maintaining family honor at all costs", weight = 2 },
+
+  # Redemption and Atonement
+  { text = "Atoning for past sins or mistakes", weight = 2 },
+  { text = "Making up for harm they caused", weight = 2 },
+  { text = "Proving they have changed", weight = 2 },
+  { text = "Earning forgiveness from someone they wronged", weight = 2 },
+  { text = "Breaking free from a dark past", weight = 2 },
+  { text = "Saving what they once tried to destroy", weight = 1 },
+  { text = "Undoing damage caused by their actions", weight = 2 },
+  { text = "Becoming worthy of love or respect again", weight = 2 },
+  { text = "Finding peace after terrible deeds", weight = 2 },
+  { text = "Helping others to make up for failing someone", weight = 2 },
+
+  # Faith and Belief
+  { text = "Serving their deity or spiritual cause", weight = 2 },
+  { text = "Spreading their faith or philosophy", weight = 2 },
+  { text = "Converting or saving souls", weight = 1 },
+  { text = "Completing a religious pilgrimage or quest", weight = 2 },
+  { text = "Building or restoring a sacred site", weight = 1 },
+  { text = "Fighting against religious persecution", weight = 2 },
+  { text = "Finding proof of divine existence", weight = 1 },
+  { text = "Following a prophecy or divine vision", weight = 1 },
+  { text = "Destroying enemies of their faith", weight = 1 },
+  { text = "Achieving spiritual enlightenment", weight = 2 },
+
+  # Adventure and Experience
+  { text = "Seeking thrills and excitement", weight = 2 },
+  { text = "Exploring the unknown", weight = 2 },
+  { text = "Testing their limits and abilities", weight = 2 },
+  { text = "Experiencing all life has to offer", weight = 2 },
+  { text = "Escaping a boring or mundane existence", weight = 2 },
+  { text = "Following in the footsteps of a hero", weight = 2 },
+  { text = "Creating stories worth telling", weight = 2 },
+  { text = "Seeing legendary places firsthand", weight = 2 },
+  { text = "Meeting interesting people", weight = 2 },
+  { text = "Living without regrets", weight = 2 },
+
+  # Belonging and Identity
+  { text = "Finding where they belong", weight = 2 },
+  { text = "Discovering their true identity", weight = 2 },
+  { text = "Gaining acceptance from a group", weight = 2 },
+  { text = "Proving their worth to others", weight = 2 },
+  { text = "Understanding their heritage", weight = 2 },
+  { text = "Connecting with others like themselves", weight = 2 },
+  { text = "Establishing their place in the world", weight = 2 },
+  { text = "Breaking free from others' expectations", weight = 2 },
+  { text = "Becoming who they were meant to be", weight = 2 },
+  { text = "Finding or creating family", weight = 2 },
+
+  # Healing and Recovery
+  { text = "Recovering from trauma or loss", weight = 2 },
+  { text = "Finding a cure for an illness or condition", weight = 2 },
+  { text = "Healing emotional wounds", weight = 2 },
+  { text = "Rebuilding after destruction or disaster", weight = 2 },
+  { text = "Moving on from grief", weight = 2 },
+  { text = "Restoring what was broken", weight = 2 },
+  { text = "Learning to trust again", weight = 2 },
+  { text = "Finding peace after conflict", weight = 2 },
+  { text = "Helping others heal", weight = 2 },
+  { text = "Creating stability after chaos", weight = 2 },
+]

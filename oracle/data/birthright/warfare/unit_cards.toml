@@ -1,0 +1,725 @@
+# Birthright Domain-Level Warfare - Unit Cards
+# Compatible with Oracle WargameAI system
+# Based on the Birthright campaign setting's domain-level warfare rules
+# Attack/Defense are number of d10s rolled; 5+ hits for attack, 6+ saves for defense
+
+# =============================================================================
+# STANDARD UNITS - Available to most realms
+# =============================================================================
+
+[[units]]
+name = "Infantry"
+type = "regular"
+attack = 2
+defense = 1
+morale = 4
+move = 1
+cost_gb = 2
+cost_rp = 0
+maintenance_gb = 1
+requirements = ["Province level 1+"]
+special = []
+description = "Basic foot soldiers forming the backbone of most armies. Armed with spears, swords, or axes and light armor."
+
+[[units]]
+name = "Archers"
+type = "regular"
+attack = 1
+defense = 1
+morale = 3
+move = 1
+cost_gb = 2
+cost_rp = 0
+maintenance_gb = 1
+requirements = ["Province level 1+"]
+special = ["Missile Fire: Can attack at range before melee", "Volley: +1 attack die when firing as a group of 3+ units"]
+description = "Bowmen providing ranged support. Effective against unarmored targets but vulnerable in close combat."
+
+[[units]]
+name = "Pikemen"
+type = "regular"
+attack = 2
+defense = 2
+morale = 4
+move = 1
+cost_gb = 3
+cost_rp = 0
+maintenance_gb = 1
+requirements = ["Province level 2+"]
+special = ["Pike Wall: +1 defense when defending against cavalry charges", "Set for Charge: Attacks first when charged by mounted units"]
+description = "Disciplined soldiers armed with long pikes. The bane of cavalry when properly formed."
+
+[[units]]
+name = "Cavalry"
+type = "regular"
+attack = 3
+defense = 2
+morale = 4
+move = 2
+cost_gb = 4
+cost_rp = 0
+maintenance_gb = 2
+requirements = ["Province level 2+"]
+special = ["Mounted: +1 movement in open terrain", "Charge: +1 attack die on first round of combat when charging"]
+description = "Mounted warriors providing speed and shock power. Essential for pursuit and flanking maneuvers."
+
+[[units]]
+name = "Irregulars"
+type = "militia"
+attack = 1
+defense = 0
+morale = 2
+move = 1
+cost_gb = 1
+cost_rp = 0
+maintenance_gb = 0
+requirements = ["Province level 0+"]
+special = ["Levy: No maintenance if disbanded within 1 domain turn", "Rabble: -1 morale when facing elite units"]
+description = "Peasant levies, armed mobs, or tribal warriors. Cheap but unreliable in prolonged combat."
+
+[[units]]
+name = "Scouts"
+type = "irregular"
+attack = 1
+defense = 1
+morale = 3
+move = 3
+cost_gb = 2
+cost_rp = 0
+maintenance_gb = 1
+requirements = ["Province level 1+"]
+special = ["Reconnaissance: Can detect enemy units before battle", "Ambush: +2 attack if attacking from concealment", "Skirmish: May withdraw before melee without morale check"]
+description = "Light troops specialized in reconnaissance, screening, and guerrilla tactics."
+
+# =============================================================================
+# ELITE UNITS - Require higher province levels or special requirements
+# =============================================================================
+
+[[units]]
+name = "Elite Infantry"
+type = "elite"
+attack = 4
+defense = 3
+morale = 5
+move = 1
+cost_gb = 4
+cost_rp = 1
+maintenance_gb = 2
+requirements = ["Province level 4+", "Training grounds or military tradition"]
+special = ["Veteran: Re-roll one failed morale check per battle", "Disciplined: Immune to fear from irregular units"]
+description = "Professional soldiers with superior training and equipment. The elite core of a regent's army."
+
+[[units]]
+name = "Elite Cavalry"
+type = "elite"
+attack = 5
+defense = 3
+morale = 5
+move = 2
+cost_gb = 6
+cost_rp = 1
+maintenance_gb = 3
+requirements = ["Province level 4+", "Horse breeding tradition"]
+special = ["Mounted: +1 movement in open terrain", "Devastating Charge: +2 attack on charge", "Veteran: Re-roll one failed morale check"]
+description = "The finest mounted warriors in the realm. Devastating on the charge and disciplined in pursuit."
+
+[[units]]
+name = "Royal Guard"
+type = "elite"
+attack = 5
+defense = 4
+morale = 6
+move = 1
+cost_gb = 6
+cost_rp = 2
+maintenance_gb = 3
+requirements = ["Province level 5+", "Regent must be blooded"]
+special = ["Bodyguard: +1 defense when protecting regent or commander", "Unbreakable Loyalty: Immune to desertion and treachery", "Disciplined: Immune to fear"]
+description = "The regent's personal guard, sworn to protect their lord unto death. Only the most skilled are chosen."
+
+# =============================================================================
+# CULTURAL KNIGHTS - Region-specific elite cavalry
+# =============================================================================
+
+[[units]]
+name = "Anuirean Knights"
+type = "elite"
+attack = 6
+defense = 4
+morale = 5
+move = 2
+cost_gb = 6
+cost_rp = 2
+maintenance_gb = 2
+requirements = ["Province level 4+", "Anuirean culture"]
+special = ["Devastating Charge: +2 attack on charge", "Noble Born: Cannot be recruited by unblooded regents", "Chivalric Code: Must accept challenges to single combat"]
+description = "The flower of Anuirean chivalry, heavily armored noble cavalry trained from youth in the arts of war."
+
+[[units]]
+name = "Khinasi Cavalry"
+type = "elite"
+attack = 5
+defense = 3
+morale = 5
+move = 3
+cost_gb = 5
+cost_rp = 1
+maintenance_gb = 2
+requirements = ["Province level 3+", "Khinasi culture"]
+special = ["Swift: +1 movement in desert or plains", "Hit and Run: May withdraw after attacking without penalty", "Horse Archer: Can make ranged attacks while mounted"]
+description = "Agile desert cavalry skilled in mobile warfare. Masters of the hit-and-run tactics of the southern lands."
+
+[[units]]
+name = "Brecht Marines"
+type = "elite"
+attack = 4
+defense = 3
+morale = 5
+move = 1
+cost_gb = 5
+cost_rp = 1
+maintenance_gb = 2
+requirements = ["Province level 3+", "Brecht culture", "Coastal province"]
+special = ["Amphibious: No penalty for naval landings", "Boarding Action: +2 attack in ship-to-ship combat", "Sea Legs: Immune to seasickness penalties"]
+description = "Brecht naval infantry, equally at home on ship decks or storming coastal fortifications."
+
+[[units]]
+name = "Rjurik Berserkers"
+type = "elite"
+attack = 6
+defense = 2
+morale = 5
+move = 1
+cost_gb = 4
+cost_rp = 1
+maintenance_gb = 2
+requirements = ["Province level 2+", "Rjurik culture", "Temple of Erik"]
+special = ["Berserk Rage: +2 attack but -1 defense when triggered", "Fearless: Immune to fear and terror", "Bloodthirst: Must pursue routing enemies"]
+description = "Wild warriors of the north who enter a battle fury. Terrifying in attack but reckless in their rage."
+
+[[units]]
+name = "Vos Raiders"
+type = "elite"
+attack = 5
+defense = 2
+morale = 4
+move = 2
+cost_gb = 4
+cost_rp = 1
+maintenance_gb = 1
+requirements = ["Province level 2+", "Vos culture"]
+special = ["Pillage: Gain 1 GB if victorious in enemy territory", "Ruthless: +1 attack vs demoralized units", "Winter Warriors: No penalty in cold or snow"]
+description = "Brutal Vos warriors hardened by the harsh northern wastes. Fight for plunder as much as loyalty."
+
+[[units]]
+name = "Basarji Ghulam"
+type = "elite"
+attack = 5
+defense = 4
+morale = 6
+move = 1
+cost_gb = 6
+cost_rp = 2
+maintenance_gb = 3
+requirements = ["Province level 4+", "Khinasi culture", "Temple holding"]
+special = ["Slave Soldier: Immune to desertion", "Fanatic: Re-roll failed morale checks", "Disciplined: Immune to fear"]
+description = "Elite slave-soldiers of the Khinasi, trained from childhood in the arts of war. Utterly loyal and fearless."
+
+# =============================================================================
+# SPECIALIST UNITS
+# =============================================================================
+
+[[units]]
+name = "Artillerists"
+type = "specialist"
+attack = 4
+defense = 0
+morale = 3
+move = 0
+cost_gb = 4
+cost_rp = 1
+maintenance_gb = 2
+requirements = ["Province level 4+", "Guild holding level 3+"]
+special = ["Siege Weapons: Can damage fortifications", "Bombard: Attacks before normal combat at range", "Immobile: Cannot move once deployed", "Vulnerable: Destroyed if engaged in melee"]
+description = "Crews manning siege engines, catapults, and rare gunpowder weapons. Devastating against static targets."
+
+[[units]]
+name = "War Machines"
+type = "specialist"
+attack = 5
+defense = 1
+morale = 3
+move = 0
+cost_gb = 6
+cost_rp = 2
+maintenance_gb = 3
+requirements = ["Province level 5+", "Guild holding level 4+"]
+special = ["Heavy Siege: Double damage vs fortifications", "Bombard: Attacks before normal combat at range", "Immobile: Cannot move once deployed", "Crew Required: Needs infantry unit to operate"]
+description = "Trebuchets, heavy catapults, and siege towers. The tools of castle breaking."
+
+[[units]]
+name = "Engineers"
+type = "specialist"
+attack = 1
+defense = 1
+morale = 3
+move = 1
+cost_gb = 3
+cost_rp = 1
+maintenance_gb = 1
+requirements = ["Province level 3+", "Guild holding level 2+"]
+special = ["Sapper: Can undermine fortifications", "Bridge Builder: Negates river crossing penalties", "Fortify: +1 defense for defending units in same area"]
+description = "Military engineers skilled in siegecraft, bridge-building, and field fortification."
+
+# =============================================================================
+# MERCENARY UNITS - Available for hire regardless of culture
+# =============================================================================
+
+[[units]]
+name = "Mercenary Infantry"
+type = "mercenary"
+attack = 3
+defense = 2
+morale = 3
+move = 1
+cost_gb = 3
+cost_rp = 0
+maintenance_gb = 2
+requirements = ["GB available", "Trade route or port"]
+special = ["Hire: Available immediately without muster time", "Mercenary: Deserts on failed payment", "Experienced: +1 attack vs irregular units"]
+description = "Professional soldiers for hire. Reliable as long as the gold flows, but expensive to maintain."
+
+[[units]]
+name = "Mercenary Cavalry"
+type = "mercenary"
+attack = 4
+defense = 2
+morale = 3
+move = 2
+cost_gb = 5
+cost_rp = 0
+maintenance_gb = 3
+requirements = ["GB available", "Trade route or port"]
+special = ["Hire: Available immediately", "Mercenary: Deserts on failed payment", "Mounted: +1 movement in open terrain", "Charge: +1 attack on charge"]
+description = "Mounted sellswords offering speed and shock for the right price."
+
+[[units]]
+name = "Mercenary Archers"
+type = "mercenary"
+attack = 2
+defense = 1
+morale = 3
+move = 1
+cost_gb = 3
+cost_rp = 0
+maintenance_gb = 2
+requirements = ["GB available", "Trade route or port"]
+special = ["Hire: Available immediately", "Mercenary: Deserts on failed payment", "Missile Fire: Can attack at range", "Marksmen: Re-roll one missed attack die when shooting"]
+description = "Professional bowmen and crossbowmen available for contract."
+
+[[units]]
+name = "Elite Mercenaries"
+type = "mercenary"
+attack = 5
+defense = 3
+morale = 4
+move = 1
+cost_gb = 6
+cost_rp = 0
+maintenance_gb = 4
+requirements = ["GB available", "Guild holding level 3+"]
+special = ["Hire: Available immediately", "Mercenary: Deserts on failed payment", "Veteran: Re-roll one failed morale check", "Disciplined: Immune to fear from irregular units"]
+description = "The finest sellswords gold can buy. Rival regular elite troops in skill and equipment."
+
+# =============================================================================
+# NAVAL UNITS
+# =============================================================================
+
+[[units]]
+name = "Warship"
+type = "naval"
+attack = 4
+defense = 3
+morale = 4
+move = 3
+cost_gb = 8
+cost_rp = 1
+maintenance_gb = 2
+requirements = ["Province level 3+", "Coastal province", "Shipyard"]
+special = ["Naval Only: Cannot operate on land", "Transport: Can carry 2 infantry units", "Ram: +2 attack on first contact", "Vulnerable to Fire: -1 defense vs fire attacks"]
+description = "Purpose-built warship with ram and fighting platforms. The backbone of naval power."
+
+[[units]]
+name = "Galley"
+type = "naval"
+attack = 3
+defense = 2
+morale = 3
+move = 4
+cost_gb = 5
+cost_rp = 0
+maintenance_gb = 1
+requirements = ["Province level 2+", "Coastal province"]
+special = ["Naval Only: Cannot operate on land", "Oar-Powered: No wind dependency", "Transport: Can carry 1 infantry unit", "Ram: +1 attack on first contact"]
+description = "Oar-powered warship, fast and maneuverable. Common in coastal warfare."
+
+[[units]]
+name = "Transport"
+type = "naval"
+attack = 1
+defense = 1
+morale = 2
+move = 3
+cost_gb = 3
+cost_rp = 0
+maintenance_gb = 1
+requirements = ["Province level 1+", "Coastal province"]
+special = ["Naval Only: Cannot operate on land", "Transport: Can carry 3 infantry units", "Merchant Vessel: Can generate trade income when not at war"]
+description = "Merchant ship pressed into military service. Essential for moving armies by sea."
+
+[[units]]
+name = "Longship"
+type = "naval"
+attack = 3
+defense = 1
+morale = 4
+move = 4
+cost_gb = 4
+cost_rp = 0
+maintenance_gb = 1
+requirements = ["Province level 1+", "Rjurik or Vos culture"]
+special = ["Naval Only: Cannot operate on land", "Amphibious: Can beach for land raids", "Transport: Can carry 1 infantry unit", "Shallow Draft: Can navigate rivers"]
+description = "The dreaded dragon ships of the north. Fast, agile, and able to strike anywhere along a coast or river."
+
+# =============================================================================
+# MONSTER UNITS - Require special circumstances to recruit
+# =============================================================================
+
+[[units]]
+name = "Ogres"
+type = "monster"
+attack = 5
+defense = 3
+morale = 4
+move = 1
+cost_gb = 4
+cost_rp = 1
+maintenance_gb = 2
+requirements = ["Ogre tribe alliance", "Mountain or forest province"]
+special = ["Monstrous: +1 attack vs regular infantry", "Fear: Enemy units -1 morale when engaged", "Mercenary: May demand extra payment or plunder"]
+description = "Massive humanoids serving as shock troops. Terrifying but difficult to control."
+
+[[units]]
+name = "Trolls"
+type = "monster"
+attack = 6
+defense = 4
+morale = 5
+move = 1
+cost_gb = 6
+cost_rp = 2
+maintenance_gb = 3
+requirements = ["Troll alliance or domination", "Swamp or mountain province"]
+special = ["Regeneration: Recovers from wounds unless killed by fire", "Monstrous: +1 attack vs infantry", "Fear: Enemy -1 morale", "Vulnerable to Fire: Cannot regenerate fire damage"]
+description = "Nightmarish regenerating creatures. Nearly unstoppable unless burned."
+
+[[units]]
+name = "Giants"
+type = "monster"
+attack = 8
+defense = 5
+morale = 5
+move = 2
+cost_gb = 10
+cost_rp = 3
+maintenance_gb = 4
+requirements = ["Giant alliance", "Mountain province level 3+"]
+special = ["Massive: Counts as 2 units for army size", "Boulder Throw: Ranged attack before melee", "Fear: Enemy -2 morale", "Siege Breaker: Double damage vs fortifications"]
+description = "Towering beings of immense strength. A single giant can turn the tide of battle."
+
+[[units]]
+name = "Gnolls"
+type = "monster"
+attack = 3
+defense = 2
+morale = 3
+move = 2
+cost_gb = 3
+cost_rp = 0
+maintenance_gb = 1
+requirements = ["Gnoll tribe alliance", "Forest or plains province"]
+special = ["Pack Tactics: +1 attack when multiple gnoll units engage same target", "Scavenger: Half maintenance if allowed to loot", "Fear: Enemy irregulars -1 morale"]
+description = "Hyena-headed humanoids organized into savage warbands. Cruel and efficient raiders."
+
+[[units]]
+name = "Goblins"
+type = "monster"
+attack = 1
+defense = 1
+morale = 2
+move = 2
+cost_gb = 1
+cost_rp = 0
+maintenance_gb = 0
+requirements = ["Goblin tribe alliance or domination"]
+special = ["Horde: Costs only 1 GB for 2 units", "Cowardly: -1 morale vs elite units", "Expendable: Does not count for army rout checks", "Tunnel Fighters: +1 attack and defense underground"]
+description = "Weak individually but numerous and vicious. Useful as arrow-catchers and tunnel fighters."
+
+[[units]]
+name = "Orogs"
+type = "monster"
+attack = 4
+defense = 3
+morale = 4
+move = 1
+cost_gb = 4
+cost_rp = 1
+maintenance_gb = 2
+requirements = ["Orog tribe alliance", "Mountain province", "Source of iron"]
+special = ["Disciplined: Immune to fear", "Night Fighters: No penalty in darkness", "Forge Masters: Can maintain own equipment"]
+description = "Disciplined orc-kin from the mountains. More organized and better equipped than common orcs."
+
+# =============================================================================
+# UNDEAD UNITS - Require necromantic power or bloodline
+# =============================================================================
+
+[[units]]
+name = "Skeletons"
+type = "undead"
+attack = 2
+defense = 2
+morale = 6
+move = 1
+cost_gb = 1
+cost_rp = 1
+maintenance_gb = 0
+requirements = ["Necromancer or Azrai bloodline", "Source of corpses"]
+special = ["Undead: Immune to morale effects", "Mindless: Must be commanded by necromancer", "Crumble: Destroyed if commanding wizard slain", "Tireless: No fatigue penalties"]
+description = "Animated bones serving their dark master. Fearless and tireless but fragile."
+
+[[units]]
+name = "Zombies"
+type = "undead"
+attack = 2
+defense = 3
+morale = 6
+move = 0
+cost_gb = 1
+cost_rp = 1
+maintenance_gb = 0
+requirements = ["Necromancer or Azrai bloodline", "Source of fresh corpses"]
+special = ["Undead: Immune to morale effects", "Mindless: Must be commanded", "Slow: Cannot charge", "Horrifying: Enemy irregulars -2 morale", "Resilient: Ignores first wound each battle"]
+description = "Shambling corpses driven by dark magic. Slow but surprisingly durable."
+
+[[units]]
+name = "Ghouls"
+type = "undead"
+attack = 4
+defense = 2
+morale = 5
+move = 2
+cost_gb = 3
+cost_rp = 2
+maintenance_gb = 1
+requirements = ["Necromancer or Azrai bloodline", "Graveyard or battlefield"]
+special = ["Undead: Immune to morale effects", "Paralytic Touch: Enemy unit -1 attack after combat", "Scavenger: Can raise fallen enemies as zombies", "Fear: Enemy -1 morale"]
+description = "Corpse-eating undead with paralyzing claws. Hunt in packs and feast on the fallen."
+
+[[units]]
+name = "Wights"
+type = "undead"
+attack = 5
+defense = 3
+morale = 6
+move = 1
+cost_gb = 5
+cost_rp = 3
+maintenance_gb = 2
+requirements = ["Powerful necromancer", "Ancient burial ground"]
+special = ["Undead: Immune to morale effects", "Level Drain: Enemy units cannot recover strength losses", "Fear: Enemy -1 morale", "Incorporeal: Half damage from non-magical attacks"]
+description = "Ancient undead warriors retaining their martial skill. Their touch drains the life from victims."
+
+[[units]]
+name = "The Lost"
+type = "undead"
+attack = 3
+defense = 2
+morale = 6
+move = 1
+cost_gb = 2
+cost_rp = 2
+maintenance_gb = 1
+requirements = ["The Gorgon's allegiance or control", "Shadow World access"]
+special = ["Undead: Immune to morale effects", "Shadow Born: +1 attack at night", "Life Drain: Recover strength by inflicting casualties", "Fear: Enemy -1 morale"]
+description = "The endless undead legions of the Gorgon, soldiers who fell at Deismaar and rise again."
+
+# =============================================================================
+# AWNSHEGHLIEN SPECIAL UNITS - Unique to specific abominations
+# =============================================================================
+
+[[units]]
+name = "Gorgon's Guard"
+type = "elite"
+attack = 6
+defense = 5
+morale = 6
+move = 1
+cost_gb = 8
+cost_rp = 3
+maintenance_gb = 4
+requirements = ["Gorgon's domain only"]
+special = ["Petrifying Gaze: Once per battle, paralyze one enemy unit", "Unbreakable: Never routs", "Fear: Enemy -2 morale", "Veteran: Re-roll failed attacks"]
+description = "The Gorgon's elite personal guard, touched by his petrifying power. Utterly devoted to their master."
+
+[[units]]
+name = "Spider's Brood"
+type = "monster"
+attack = 4
+defense = 2
+morale = 4
+move = 2
+cost_gb = 4
+cost_rp = 2
+maintenance_gb = 2
+requirements = ["The Spider's domain only"]
+special = ["Web: Can immobilize enemy units", "Wall Crawler: Ignores terrain penalties", "Poison: Wounded units take additional damage over time", "Ambush: +2 attack from concealment"]
+description = "Giant spiders bred and controlled by the Spider. Spin webs to trap prey."
+
+[[units]]
+name = "Manslayer Horde"
+type = "monster"
+attack = 5
+defense = 1
+morale = 3
+move = 2
+cost_gb = 3
+cost_rp = 1
+maintenance_gb = 1
+requirements = ["Manslayer's domain only"]
+special = ["Berserk: +2 attack, -2 defense in combat", "Bloodthirst: Must pursue fleeing enemies", "Terror: Enemy units -2 morale", "Expendable: Does not count for army rout"]
+description = "Gnoll warriors driven to frenzy by the Manslayer's presence. Fight with reckless abandon."
+
+# =============================================================================
+# REALM-SPECIFIC UNIQUE UNITS
+# =============================================================================
+
+[[units]]
+name = "Imperial Legionnaires"
+type = "elite"
+attack = 5
+defense = 4
+morale = 5
+move = 1
+cost_gb = 5
+cost_rp = 2
+maintenance_gb = 2
+requirements = ["Anuire united or major Anuirean power"]
+special = ["Shield Wall: +2 defense in defensive formation", "Disciplined: Immune to fear", "Legion Tactics: +1 attack when in formation with other legionnaires"]
+description = "Soldiers trained in the ancient Anuirean imperial tradition. Disciplined formation fighters."
+
+[[units]]
+name = "Temple Knights"
+type = "elite"
+attack = 5
+defense = 4
+morale = 6
+move = 2
+cost_gb = 6
+cost_rp = 3
+maintenance_gb = 2
+requirements = ["Temple holding level 4+", "Haelyn, Cuiraecen, or Avani worship"]
+special = ["Blessed: Re-roll one die per battle", "Holy Warrior: +2 attack vs undead and fiends", "Fearless: Immune to fear and terror", "Mounted: +1 movement in open terrain"]
+description = "Holy warriors dedicated to their deity. Combine martial prowess with divine blessing."
+
+[[units]]
+name = "Sidhe Warriors"
+type = "elite"
+attack = 5
+defense = 3
+morale = 5
+move = 2
+cost_gb = 7
+cost_rp = 4
+maintenance_gb = 2
+requirements = ["Sidhe alliance", "Source holding level 2+"]
+special = ["Fey: Immune to charm and illusion", "Glamour: Enemy ranged attacks -1", "Ancient Enemy: +2 attack vs awnsheghlien forces", "Ethereal Movement: Ignores difficult terrain"]
+description = "Elven warriors from the ancient Sidhe kingdoms. Grace and deadliness combined."
+
+[[units]]
+name = "Dwarven Defenders"
+type = "elite"
+attack = 4
+defense = 5
+morale = 6
+move = 1
+cost_gb = 6
+cost_rp = 2
+maintenance_gb = 2
+requirements = ["Dwarven alliance", "Mountain province"]
+special = ["Stubborn: Never fails morale checks due to casualties", "Stone Cunning: +2 defense in mountains or underground", "Ancient Grudge: +1 attack vs goblins and orogs", "Master Crafted: Armor cannot be bypassed"]
+description = "Dwarven warriors in masterwork armor. Immovable in defense of their holds."
+
+[[units]]
+name = "Halfling Scouts"
+type = "irregular"
+attack = 2
+defense = 1
+morale = 4
+move = 2
+cost_gb = 2
+cost_rp = 0
+maintenance_gb = 1
+requirements = ["Halfling community", "Province level 2+"]
+special = ["Sneaky: Can infiltrate enemy positions", "Marksman: Ranged attacks re-roll one miss", "Small Target: -1 to be hit by ranged attacks", "Brave: +1 morale when defending homeland"]
+description = "Halfling irregulars skilled in scouting and ambush. Small but surprisingly brave."
+
+# =============================================================================
+# DOCTRINE MAPPING - Connects Oracle WargameAI doctrines to Birthright
+# =============================================================================
+
+[doctrine_mapping]
+horde = { birthright_name = "Levy Tactics", description = "Mass conscript armies overwhelming enemies through numbers", typical_users = ["Gorgon", "Five Peaks", "Markazor", "Vosgaard realms"] }
+elite = { birthright_name = "Noble Cavalry", description = "Quality knightly forces relying on training and equipment", typical_users = ["Avanil", "Boeruine", "Ghoere", "Ilien"] }
+defensive = { birthright_name = "Castle Doctrine", description = "Holding fortified positions and wearing down attackers", typical_users = ["Cariele", "Tuornen", "Elinie", "Medoere"] }
+alpha_strike = { birthright_name = "Shock Assault", description = "Overwhelming first strike with elite forces", typical_users = ["Boeruine", "Rjurik jarls", "Chimaeron"] }
+guerrilla = { birthright_name = "Raider Tactics", description = "Hit and run, avoid pitched battle", typical_users = ["Rjurik", "Vos tribes", "Orog bands", "Spider's forces"] }
+
+# =============================================================================
+# THREAT KEYWORDS - Birthright-specific for WargameAI threat analysis
+# =============================================================================
+
+[threat_keywords]
+high = [
+    { keyword = "knights", reason = "Heavy cavalry formation" },
+    { keyword = "dragon", reason = "Devastating aerial threat" },
+    { keyword = "awnsheghlien", reason = "Abomination of terrible power" },
+    { keyword = "gorgon", reason = "The Iron Throne's master" },
+    { keyword = "undead horde", reason = "Endless enemy that feels no fear" },
+    { keyword = "bloodline power", reason = "Supernatural abilities in play" },
+    { keyword = "siege weapons", reason = "Fortification-breaking artillery" },
+    { keyword = "temple knights", reason = "Divinely empowered warriors" },
+    { keyword = "sidhe", reason = "Ancient elven magic and skill" },
+    { keyword = "trolls", reason = "Regenerating monstrosities" },
+    { keyword = "giants", reason = "Massive siege-breaking creatures" }
+]
+medium = [
+    { keyword = "cavalry", reason = "Mounted warriors threaten flanks" },
+    { keyword = "pikemen", reason = "Anti-cavalry formation" },
+    { keyword = "elite infantry", reason = "Veteran professional soldiers" },
+    { keyword = "mercenaries", reason = "Experienced sellswords" },
+    { keyword = "archers", reason = "Ranged attack capability" },
+    { keyword = "fortified", reason = "Entrenched defensive position" },
+    { keyword = "ogres", reason = "Monstrous shock troops" },
+    { keyword = "gnolls", reason = "Savage pack hunters" },
+    { keyword = "orogs", reason = "Disciplined orc warriors" }
+]
+low = [
+    { keyword = "irregulars", reason = "Poorly trained levies" },
+    { keyword = "militia", reason = "Part-time soldiers" },
+    { keyword = "peasant levy", reason = "Untrained conscripts" },
+    { keyword = "goblins", reason = "Weak and cowardly" },
+    { keyword = "skeletons", reason = "Fragile undead" },
+    { keyword = "retreating", reason = "Withdrawing forces" },
+    { keyword = "demoralized", reason = "Broken morale" },
+    { keyword = "scattered", reason = "Disorganized formation" }
+]

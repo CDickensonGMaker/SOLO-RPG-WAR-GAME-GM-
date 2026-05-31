@@ -1,0 +1,63 @@
+# Cyberpunk Netspace and Virtual Locations
+# The digital frontier beyond meatspace
+
+[locations]
+entries = [
+  # Corporate architecture
+  { text = "Corporate data fortress - gleaming walls of ICE, patrol programs visible", weight = 2 },
+  { text = "Executive subnet - gold-rendered private space, minimal traffic", weight = 1 },
+  { text = "Financial transaction hub - rivers of data, currency flowing constantly", weight = 2 },
+  { text = "R&D secure vault - multiple authentication layers, prototype data", weight = 1 },
+  { text = "HR database cluster - employee records, blackmail material", weight = 2 },
+  { text = "Marketing analytics node - consumer profiles, predictive algorithms", weight = 1 },
+  { text = "Corporate dead drop - hidden data cache for authorized runners", weight = 2 },
+  { text = "Board meeting virtual space - avatars of power, decisions rendered", weight = 1 },
+  { text = "Subsidiary network junction - smaller corps feeding the mothership", weight = 2 },
+  { text = "Legacy system archive - outdated but functional, weak security", weight = 2 },
+
+  # Underground net
+  { text = "Hacker collective forum - scrolling text, anonymous handles, job postings", weight = 2 },
+  { text = "Black market data bazaar - stolen information, prices floating", weight = 2 },
+  { text = "Pirate broadcast node - illegal streams, signal bouncing globally", weight = 1 },
+  { text = "Dark net relay - traffic anonymized, destinations unknown", weight = 2 },
+  { text = "Malware distribution point - viruses for sale, ICE breakers available", weight = 1 },
+  { text = "Resistance encrypted channel - freedom fighters coordinating", weight = 1 },
+  { text = "Underground casino - chips that represent real money, high stakes", weight = 2 },
+  { text = "Bootleg braindance library - stolen experiences, unregulated content", weight = 2 },
+  { text = "Dead netrunner's ghost site - abandoned architecture, data echoes", weight = 1 },
+  { text = "Anonymous tip drop - whistleblower submissions, encrypted", weight = 1 },
+
+  # Public net
+  { text = "Social media nexus - millions of avatars, trending manipulation", weight = 2 },
+  { text = "Public database access point - government records, limited access", weight = 2 },
+  { text = "Entertainment streaming hub - legal content, ad-saturated", weight = 2 },
+  { text = "Virtual shopping district - branded spaces, consumer tracking", weight = 2 },
+  { text = "News aggregation node - curated reality, corporate sponsors", weight = 2 },
+  { text = "Educational archive - free knowledge, monitored usage", weight = 1 },
+  { text = "Community message board - neighborhood news, local drama", weight = 2 },
+  { text = "Job posting aggregator - gig economy dystopia, worker desperation", weight = 2 },
+  { text = "Dating service cluster - algorithmic matching, premium features", weight = 1 },
+  { text = "Virtual tourism experience - see places you'll never afford", weight = 1 },
+
+  # Hostile net
+  { text = "ICE trap maze - defensive architecture designed to fry intruders", weight = 2 },
+  { text = "Rogue AI territory - unpredictable programs, alien logic", weight = 1 },
+  { text = "Malware infestation zone - corrupted data, dangerous to traverse", weight = 2 },
+  { text = "Corporate killzone - lethal countermeasures, flatline on failure", weight = 1 },
+  { text = "Net ghost hunting ground - predatory programs seeking victims", weight = 1 },
+  { text = "Collapsed architecture - crashed systems, unstable pathways", weight = 2 },
+  { text = "Quarantined sector - containment protocols, unknown threats", weight = 1 },
+  { text = "Counter-intrusion hotspot - aggressive trace programs active", weight = 2 },
+
+  # Special locations
+  { text = "AI core residence - ancient artificial intelligence, vast processing", weight = 1 },
+  { text = "Memory archive - stored human consciousness fragments", weight = 1 },
+  { text = "Virtual therapy space - psychological treatment environment", weight = 1 },
+  { text = "Simulation training ground - corporate skills testing", weight = 2 },
+  { text = "Digital graveyard - memorial sites for the flatlined", weight = 1 },
+  { text = "Abandoned old net sector - pre-crash architecture, dangerous and valuable", weight = 1 },
+  { text = "Net cult temple - digital religion, true believers", weight = 1 },
+  { text = "Virtual art gallery - priceless digital works, elite visitors", weight = 1 },
+  { text = "Experimental physics simulation - corp research, reality-bending code", weight = 1 },
+  { text = "Net runner memorial - legends honored, techniques archived", weight = 1 },
+]

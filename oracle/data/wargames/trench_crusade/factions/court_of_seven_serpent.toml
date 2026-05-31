@@ -1,0 +1,380 @@
+# Trench Crusade - Court of the Seven-Headed Serpent
+# Elite demons wielding Goetic magic and commanding Sin-aspects
+
+name = "Court of the Seven-Headed Serpent"
+allegiance = "Fallen"
+description = "The aristocracy of Hell itself. These greater demons command Goetic spells and bring the Seven Deadly Sins made manifest to the battlefield. Elite, expensive, and devastatingly powerful."
+playstyle = "Small elite warband with powerful Goetic spells. Each Sin variant offers unique abilities. Quality over quantity - every model is a significant threat."
+strengths = ["Powerful Goetic spells", "Elite stats across the board", "Sin-variant specializations", "Terrifying presence"]
+weaknesses = ["Very expensive", "Low model count", "Vulnerable to holy weapons", "Reliant on spellcasting"]
+
+[faction_rules]
+name = "Goetic Hierarchy"
+description = "Court units can cast Goetic Spells. Higher-ranked demons have access to more powerful magic. Sin variants gain unique abilities based on their aspect."
+
+# =============================================================================
+# CHARACTERS / LEADERS
+# =============================================================================
+
+[[units]]
+name = "Demon Prince"
+type = "monster"
+category = "HQ"
+points = 120
+models = "1"
+tactical_role = "supreme_commander"
+threat_level = "extreme"
+preferred_targets = ["characters", "elite_infantry", "monsters"]
+weaknesses = ["holy_weapons", "blessed_attacks", "exorcism"]
+special_rules = ["Leader", "Daemon", "Goetic Master", "Terror", "Flight"]
+keywords = ["Monster", "Character", "Daemon", "Fallen", "Prince"]
+
+[units.stats]
+Movement = 8
+Ranged = "3+"
+Melee = "2+"
+Defense = "3+"
+Wounds = 5
+
+[[units.weapons]]
+name = "Hellfire Bolt"
+range = "24\""
+strength = "+2"
+type = "Magic"
+shots = "2"
+abilities = ["Unholy", "Ignores Cover"]
+
+[[units.weapons]]
+name = "Princely Blade"
+range = "Melee"
+strength = "+3"
+type = "Melee"
+abilities = ["Unholy", "Soul Reaver", "Rending"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Cambion Sorcerer"
+type = "infantry"
+category = "HQ"
+points = 75
+models = "1"
+tactical_role = "spellcaster"
+threat_level = "very_high"
+preferred_targets = ["groups", "characters"]
+weaknesses = ["melee_assault", "snipers", "holy"]
+special_rules = ["Daemon", "Goetic Caster", "Spellcaster", "Half-Blood"]
+keywords = ["Infantry", "Character", "Daemon", "Fallen", "Sorcerer"]
+
+[units.stats]
+Movement = 6
+Ranged = "2+"
+Melee = "4+"
+Defense = "4+"
+Wounds = 2
+
+[[units.weapons]]
+name = "Goetic Blast"
+range = "18\""
+strength = "+1"
+type = "Magic"
+shots = "D3"
+abilities = ["Unholy", "Blast"]
+
+[[units.weapons]]
+name = "Ritual Dagger"
+range = "Melee"
+strength = "-1"
+type = "Melee"
+abilities = ["Blood Ritual", "Unholy"]
+
+# =============================================================================
+# TROOPS
+# =============================================================================
+
+[[units]]
+name = "Lesser Demon"
+type = "infantry"
+category = "Troops"
+points = 25
+models = "1"
+tactical_role = "elite_line"
+threat_level = "medium"
+preferred_targets = ["infantry"]
+weaknesses = ["holy_weapons", "blessed_attacks"]
+special_rules = ["Daemon", "Unholy", "Fear"]
+keywords = ["Infantry", "Daemon", "Fallen"]
+
+[units.stats]
+Movement = 6
+Ranged = "5+"
+Melee = "3+"
+Defense = "5+"
+Wounds = 1
+
+[[units.weapons]]
+name = "Hellforged Blade"
+range = "Melee"
+strength = "+1"
+type = "Melee"
+abilities = ["Unholy"]
+
+[[units.weapons]]
+name = "Brimstone Bolt"
+range = "12\""
+strength = "Standard"
+type = "Ranged"
+shots = "1"
+abilities = ["Unholy"]
+
+# =============================================================================
+# ELITES - THE SEVEN SINS
+# =============================================================================
+
+[[units]]
+name = "Sin of Wrath"
+type = "infantry"
+category = "Elites"
+points = 55
+models = "1"
+tactical_role = "berserker"
+threat_level = "very_high"
+preferred_targets = ["anything_nearby"]
+weaknesses = ["holy_weapons", "kiting", "ranged_focus"]
+special_rules = ["Daemon", "Sin", "Frenzy", "Rage", "Cannot Retreat"]
+keywords = ["Infantry", "Daemon", "Fallen", "Sin", "Wrath"]
+
+[units.stats]
+Movement = 7
+Ranged = "-"
+Melee = "2+"
+Defense = "4+"
+Wounds = 3
+
+[[units.weapons]]
+name = "Burning Fists"
+range = "Melee"
+strength = "+2"
+type = "Melee"
+abilities = ["Fire", "Multiple Attacks", "Unholy"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Sin of Pride"
+type = "infantry"
+category = "Elites"
+points = 60
+models = "1"
+tactical_role = "duelist"
+threat_level = "very_high"
+preferred_targets = ["characters", "elite_infantry"]
+weaknesses = ["swarms", "massed_fire"]
+special_rules = ["Daemon", "Sin", "Challenge", "Prideful Defense", "Untouchable"]
+keywords = ["Infantry", "Daemon", "Fallen", "Sin", "Pride"]
+
+[units.stats]
+Movement = 6
+Ranged = "3+"
+Melee = "2+"
+Defense = "3+"
+Wounds = 2
+
+[[units.weapons]]
+name = "Mirrored Blade"
+range = "Melee"
+strength = "+1"
+type = "Melee"
+abilities = ["Parry", "Riposte", "Unholy"]
+
+[[units.weapons]]
+name = "Contemptuous Gaze"
+range = "12\""
+strength = "Standard"
+type = "Magic"
+shots = "1"
+abilities = ["Ignores Armor", "Unholy"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Sin of Gluttony"
+type = "monster"
+category = "Elites"
+points = 65
+models = "1"
+tactical_role = "tank"
+threat_level = "high"
+preferred_targets = ["infantry", "wounded"]
+weaknesses = ["kiting", "anti-monster"]
+special_rules = ["Daemon", "Sin", "Feast", "Regeneration", "Large"]
+keywords = ["Monster", "Daemon", "Fallen", "Sin", "Gluttony"]
+
+[units.stats]
+Movement = 5
+Ranged = "-"
+Melee = "3+"
+Defense = "3+"
+Wounds = 5
+
+[[units.weapons]]
+name = "Devouring Maw"
+range = "Melee"
+strength = "+2"
+type = "Melee"
+abilities = ["Feast", "Healing", "Unholy"]
+
+[[units.weapons]]
+name = "Grasping Limbs"
+range = "Melee"
+strength = "Standard"
+type = "Melee"
+abilities = ["Grab", "Multiple Attacks"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Sin of Sloth"
+type = "infantry"
+category = "Elites"
+points = 50
+models = "1"
+tactical_role = "debuffer"
+threat_level = "medium"
+preferred_targets = ["fast_units", "aggressive_enemies"]
+weaknesses = ["ranged_attacks", "ignores_debuffs"]
+special_rules = ["Daemon", "Sin", "Lethargy Aura", "Time Slow"]
+keywords = ["Infantry", "Daemon", "Fallen", "Sin", "Sloth"]
+
+[units.stats]
+Movement = 4
+Ranged = "4+"
+Melee = "4+"
+Defense = "4+"
+Wounds = 3
+
+[[units.weapons]]
+name = "Torpid Touch"
+range = "Melee"
+strength = "Standard"
+type = "Melee"
+abilities = ["Slow", "Weaken", "Unholy"]
+
+[[units.weapons]]
+name = "Draining Gaze"
+range = "12\""
+strength = "-1"
+type = "Magic"
+shots = "1"
+abilities = ["Slow Aura", "Debuff"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Sin of Greed"
+type = "infantry"
+category = "Elites"
+points = 55
+models = "1"
+tactical_role = "objective_holder"
+threat_level = "high"
+preferred_targets = ["objective_carriers", "equipment"]
+weaknesses = ["holy_weapons", "overwhelming_force"]
+special_rules = ["Daemon", "Sin", "Hoarder", "Steal", "Mine!"]
+keywords = ["Infantry", "Daemon", "Fallen", "Sin", "Greed"]
+
+[units.stats]
+Movement = 6
+Ranged = "4+"
+Melee = "3+"
+Defense = "4+"
+Wounds = 2
+
+[[units.weapons]]
+name = "Golden Claws"
+range = "Melee"
+strength = "+1"
+type = "Melee"
+abilities = ["Steal Equipment", "Unholy"]
+
+[[units.weapons]]
+name = "Covetous Grasp"
+range = "8\""
+strength = "Standard"
+type = "Magic"
+shots = "1"
+abilities = ["Pull", "Objective Steal"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Sin of Envy"
+type = "infantry"
+category = "Elites"
+points = 50
+models = "1"
+tactical_role = "infiltrator"
+threat_level = "high"
+preferred_targets = ["characters", "isolated_units"]
+weaknesses = ["groups", "holy"]
+special_rules = ["Daemon", "Sin", "Shapeshifter", "Infiltrate", "Jealous Mimicry"]
+keywords = ["Infantry", "Daemon", "Fallen", "Sin", "Envy"]
+
+[units.stats]
+Movement = 7
+Ranged = "4+"
+Melee = "3+"
+Defense = "5+"
+Wounds = 2
+
+[[units.weapons]]
+name = "Copied Weapon"
+range = "Melee"
+strength = "+1"
+type = "Melee"
+abilities = ["Mimic", "Unholy"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Sin of Lust"
+type = "infantry"
+category = "Elites"
+points = 55
+models = "1"
+tactical_role = "manipulator"
+threat_level = "high"
+preferred_targets = ["characters", "low_willpower"]
+weaknesses = ["mindless", "constructs", "holy"]
+special_rules = ["Daemon", "Sin", "Allure", "Dominate", "Temptation"]
+keywords = ["Infantry", "Daemon", "Fallen", "Sin", "Lust"]
+
+[units.stats]
+Movement = 7
+Ranged = "3+"
+Melee = "3+"
+Defense = "5+"
+Wounds = 2
+
+[[units.weapons]]
+name = "Seductive Whisper"
+range = "12\""
+strength = "Special"
+type = "Magic"
+shots = "1"
+abilities = ["Mind Control", "Willpower Test"]
+
+[[units.weapons]]
+name = "Barbed Caress"
+range = "Melee"
+strength = "+1"
+type = "Melee"
+abilities = ["Poison", "Unholy"]
+
+# =============================================================================
+# VARIANTS / SUB-FACTIONS
+# =============================================================================
+
+# Pandemonium Court - All seven sins required
+# Goetic Circle - Spell-heavy casters
+# The Fallen Host - Demon swarm tactics

@@ -1,0 +1,788 @@
+# Downtime Activities and Events
+# Between-adventure activities, events, and complications
+# Setting-agnostic downtime elements for any genre
+# Weight: higher = more common (1-3 typical range)
+
+[activities]
+# Core downtime activities characters can pursue
+entries = [
+  # Training and Self-Improvement
+  { text = "Training - improve a combat skill", weight = 2 },
+  { text = "Training - improve a non-combat skill", weight = 2 },
+  { text = "Training - learn a new technique from a master", weight = 1 },
+  { text = "Training - physical conditioning and endurance", weight = 2 },
+  { text = "Training - mental discipline and focus", weight = 2 },
+  { text = "Training - weapons practice with a partner", weight = 2 },
+  { text = "Training - solo drills and repetition", weight = 2 },
+  { text = "Training - study tactics and strategy", weight = 1 },
+  { text = "Training - cross-train in an unfamiliar discipline", weight = 1 },
+  { text = "Training - overcome a specific weakness", weight = 2 },
+  { text = "Studying - language or dialect acquisition", weight = 1 },
+  { text = "Studying - local laws and customs", weight = 1 },
+  { text = "Studying - historical records and archives", weight = 1 },
+  { text = "Studying - professional literature and techniques", weight = 2 },
+  { text = "Meditation - seeking inner peace", weight = 2 },
+  { text = "Meditation - processing trauma or conflict", weight = 1 },
+
+  # Crafting and Creation
+  { text = "Crafting - create new equipment", weight = 1 },
+  { text = "Crafting - repair damaged gear", weight = 2 },
+  { text = "Crafting - improve or modify existing items", weight = 2 },
+  { text = "Crafting - work on a long-term project", weight = 1 },
+  { text = "Crafting - create items for sale or trade", weight = 2 },
+  { text = "Crafting - make something as a gift", weight = 1 },
+  { text = "Crafting - experiment with new materials or techniques", weight = 1 },
+  { text = "Crafting - restore an antique or heirloom", weight = 1 },
+  { text = "Brewing - create potions, medicines, or drinks", weight = 1 },
+  { text = "Cooking - prepare elaborate meals", weight = 2 },
+  { text = "Writing - document experiences and knowledge", weight = 1 },
+  { text = "Writing - compose letters or correspondence", weight = 2 },
+  { text = "Art - create paintings, sculptures, or crafts", weight = 1 },
+  { text = "Music - practice an instrument or compose", weight = 1 },
+
+  # Research and Information
+  { text = "Research - gather information on a specific topic", weight = 2 },
+  { text = "Research - investigate rumors and leads", weight = 2 },
+  { text = "Research - study enemy tactics and weaknesses", weight = 1 },
+  { text = "Research - learn about the local area", weight = 2 },
+  { text = "Research - consult experts and specialists", weight = 1 },
+  { text = "Research - decode or translate documents", weight = 1 },
+  { text = "Research - map unexplored areas", weight = 1 },
+  { text = "Research - compile intelligence on targets", weight = 1 },
+  { text = "Investigation - follow up on clues", weight = 2 },
+  { text = "Investigation - surveil a person or location", weight = 1 },
+  { text = "Investigation - interview witnesses and sources", weight = 2 },
+
+  # Social and Networking
+  { text = "Networking - build contacts in useful circles", weight = 1 },
+  { text = "Networking - maintain existing relationships", weight = 2 },
+  { text = "Networking - attend social gatherings", weight = 2 },
+  { text = "Networking - cultivate informants", weight = 1 },
+  { text = "Networking - gain introduction to important people", weight = 1 },
+  { text = "Networking - repair damaged relationships", weight = 1 },
+  { text = "Carousing - socialize and hear rumors", weight = 2 },
+  { text = "Carousing - drinking and gambling", weight = 2 },
+  { text = "Carousing - attend entertainment venues", weight = 2 },
+  { text = "Carousing - visit establishments of ill repute", weight = 1 },
+  { text = "Dating - pursue romantic interests", weight = 2 },
+  { text = "Dating - maintain a relationship", weight = 2 },
+  { text = "Mentoring - teach skills to others", weight = 1 },
+  { text = "Mentoring - advise less experienced individuals", weight = 1 },
+
+  # Recovery and Health
+  { text = "Recovery - heal wounds and injuries", weight = 3 },
+  { text = "Recovery - recuperate from illness", weight = 2 },
+  { text = "Recovery - rest and restore energy", weight = 3 },
+  { text = "Recovery - seek medical treatment", weight = 2 },
+  { text = "Recovery - rehabilitation from serious injury", weight = 1 },
+  { text = "Recovery - address mental health concerns", weight = 1 },
+  { text = "Recovery - break an addiction or bad habit", weight = 1 },
+  { text = "Self-care - spa, baths, or grooming", weight = 2 },
+  { text = "Self-care - exercise and healthy living", weight = 2 },
+  { text = "Therapy - work through psychological issues", weight = 1 },
+
+  # Work and Income
+  { text = "Working - earn money at regular employment", weight = 3 },
+  { text = "Working - take odd jobs for quick coin", weight = 2 },
+  { text = "Working - practice your profession", weight = 2 },
+  { text = "Working - serve as hired protection", weight = 2 },
+  { text = "Working - provide consulting services", weight = 1 },
+  { text = "Working - teach or tutor for pay", weight = 1 },
+  { text = "Working - perform or entertain", weight = 1 },
+  { text = "Working - manual labor", weight = 2 },
+  { text = "Working - skilled trade work", weight = 2 },
+  { text = "Hustling - run small cons or schemes", weight = 1 },
+  { text = "Hustling - gamble for profit", weight = 1 },
+  { text = "Business - manage investments or property", weight = 1 },
+  { text = "Business - establish a new venture", weight = 1 },
+  { text = "Business - negotiate contracts or deals", weight = 1 },
+
+  # Preparation and Planning
+  { text = "Scouting - reconnaissance of target areas", weight = 1 },
+  { text = "Scouting - map escape routes", weight = 1 },
+  { text = "Scouting - identify threats and obstacles", weight = 2 },
+  { text = "Planning - develop mission strategy", weight = 2 },
+  { text = "Planning - prepare contingencies", weight = 1 },
+  { text = "Planning - coordinate with allies", weight = 2 },
+  { text = "Shopping - acquire supplies and equipment", weight = 2 },
+  { text = "Shopping - sell goods and loot", weight = 2 },
+  { text = "Shopping - commission custom items", weight = 1 },
+  { text = "Shopping - search for rare items", weight = 1 },
+  { text = "Maintenance - care for weapons and armor", weight = 2 },
+  { text = "Maintenance - service vehicles or mounts", weight = 2 },
+  { text = "Maintenance - repair base or lodging", weight = 1 },
+  { text = "Preparation - stock travel supplies", weight = 2 },
+  { text = "Preparation - gather intelligence on next mission", weight = 2 },
+
+  # Faith and Spirituality
+  { text = "Religious observance - attend services", weight = 2 },
+  { text = "Religious observance - prayer and devotion", weight = 2 },
+  { text = "Religious observance - pilgrimage to holy site", weight = 1 },
+  { text = "Religious observance - study sacred texts", weight = 1 },
+  { text = "Religious observance - perform rituals", weight = 1 },
+  { text = "Religious observance - serve at temple or shrine", weight = 1 },
+  { text = "Spiritual practice - commune with nature", weight = 1 },
+  { text = "Spiritual practice - seek visions or guidance", weight = 1 },
+  { text = "Charitable work - help the less fortunate", weight = 2 },
+  { text = "Charitable work - volunteer services", weight = 2 },
+
+  # Personal Projects and Hobbies
+  { text = "Personal project - work on hobby or passion", weight = 2 },
+  { text = "Personal project - build or construct something", weight = 1 },
+  { text = "Personal project - garden or tend plants", weight = 1 },
+  { text = "Personal project - care for animals", weight = 2 },
+  { text = "Personal project - collect items of interest", weight = 1 },
+  { text = "Personal project - explore the local area", weight = 2 },
+  { text = "Personal project - document history or lore", weight = 1 },
+  { text = "Personal project - hunt or fish", weight = 2 },
+  { text = "Entertainment - read for pleasure", weight = 2 },
+  { text = "Entertainment - attend performances", weight = 2 },
+  { text = "Entertainment - play games or sports", weight = 2 },
+  { text = "Entertainment - explore new cuisine", weight = 2 },
+  { text = "Travel - visit family or friends", weight = 2 },
+  { text = "Travel - tourism and sightseeing", weight = 1 },
+
+  # Politics and Influence
+  { text = "Political maneuvering - build faction standing", weight = 1 },
+  { text = "Political maneuvering - undermine rivals", weight = 1 },
+  { text = "Political maneuvering - secure political favors", weight = 1 },
+  { text = "Political maneuvering - spread propaganda", weight = 1 },
+  { text = "Legal affairs - handle contracts and documents", weight = 1 },
+  { text = "Legal affairs - deal with authorities", weight = 2 },
+  { text = "Legal affairs - resolve disputes", weight = 1 },
+  { text = "Reputation management - spread good word", weight = 1 },
+  { text = "Reputation management - counter bad rumors", weight = 1 },
+
+  # Covert Activities
+  { text = "Covert - gather secrets through stealth", weight = 1 },
+  { text = "Covert - infiltrate an organization", weight = 1 },
+  { text = "Covert - plant evidence or information", weight = 1 },
+  { text = "Covert - sabotage enemy operations", weight = 1 },
+  { text = "Covert - smuggle goods or people", weight = 1 },
+  { text = "Covert - case a location for later action", weight = 1 },
+  { text = "Covert - establish or maintain cover identity", weight = 1 },
+  { text = "Crime - theft or burglary", weight = 1 },
+  { text = "Crime - fence stolen goods", weight = 1 },
+  { text = "Crime - run illegal operations", weight = 1 },
+]
+
+[downtime_events]
+# Random events that occur during downtime
+entries = [
+  # Social and Relationships
+  { text = "You make a useful new contact", weight = 2 },
+  { text = "An old friend reappears unexpectedly", weight = 2 },
+  { text = "An old enemy resurfaces", weight = 1 },
+  { text = "A former rival seeks reconciliation", weight = 1 },
+  { text = "Someone from your past recognizes you", weight = 2 },
+  { text = "You encounter an ex-lover", weight = 1 },
+  { text = "A family member contacts you", weight = 2 },
+  { text = "A stranger claims to know you", weight = 1 },
+  { text = "Someone mistakes you for someone else", weight = 2 },
+  { text = "An admirer begins following your exploits", weight = 1 },
+  { text = "You make an unexpected friend", weight = 2 },
+  { text = "Someone you helped returns to thank you", weight = 2 },
+  { text = "Someone you wronged confronts you", weight = 1 },
+  { text = "Romance or attraction develops", weight = 1 },
+  { text = "A friendship becomes strained", weight = 2 },
+  { text = "You receive an invitation to a social event", weight = 2 },
+  { text = "A mentor or teacher seeks you out", weight = 1 },
+  { text = "A student or admirer requests training", weight = 1 },
+
+  # Information and Rumors
+  { text = "You overhear valuable information", weight = 2 },
+  { text = "A rumor about you is circulating", weight = 2 },
+  { text = "You learn a secret about someone important", weight = 1 },
+  { text = "Someone shares concerning news", weight = 2 },
+  { text = "You discover a clue to an old mystery", weight = 1 },
+  { text = "Intelligence about your enemies reaches you", weight = 2 },
+  { text = "You learn of an upcoming event of interest", weight = 2 },
+  { text = "A source provides unexpected information", weight = 1 },
+  { text = "You catch wind of an opportunity", weight = 2 },
+  { text = "Word of your reputation spreads", weight = 2 },
+  { text = "You learn something disturbing about an ally", weight = 1 },
+  { text = "News arrives from a distant place", weight = 2 },
+  { text = "You uncover a local scandal", weight = 1 },
+
+  # Opportunities and Offers
+  { text = "An opportunity for profit appears", weight = 2 },
+  { text = "You're approached with a job offer", weight = 2 },
+  { text = "Someone offers to buy something you own", weight = 1 },
+  { text = "A business partnership is proposed", weight = 1 },
+  { text = "You discover an investment opportunity", weight = 1 },
+  { text = "Someone offers to teach you a skill", weight = 1 },
+  { text = "An organization invites you to join", weight = 1 },
+  { text = "You're offered a position or title", weight = 1 },
+  { text = "A patron offers sponsorship", weight = 1 },
+  { text = "Someone wants to hire your specific skills", weight = 2 },
+  { text = "You find an unclaimed resource", weight = 1 },
+  { text = "A competition or contest is announced", weight = 2 },
+  { text = "You learn of abandoned property or goods", weight = 1 },
+
+  # Requests for Help
+  { text = "Someone asks for your help with a problem", weight = 2 },
+  { text = "A friend needs assistance urgently", weight = 2 },
+  { text = "A stranger pleads for aid", weight = 2 },
+  { text = "An authority figure requests your services", weight = 1 },
+  { text = "A child or innocent needs protection", weight = 1 },
+  { text = "Someone asks you to deliver a message", weight = 2 },
+  { text = "You're asked to mediate a dispute", weight = 1 },
+  { text = "Someone requests you as a witness", weight = 1 },
+  { text = "A group seeks your expertise", weight = 1 },
+  { text = "Someone asks you to vouch for them", weight = 2 },
+  { text = "You're asked to investigate something", weight = 2 },
+  { text = "Someone needs an escort or guard", weight = 2 },
+
+  # Troubles and Problems
+  { text = "A rival makes trouble for you", weight = 2 },
+  { text = "Local events affect you directly", weight = 2 },
+  { text = "You get sick or injured", weight = 2 },
+  { text = "A valuable item is lost or stolen", weight = 1 },
+  { text = "Equipment breaks or malfunctions", weight = 2 },
+  { text = "You run into debt or financial trouble", weight = 1 },
+  { text = "Someone spreads lies about you", weight = 1 },
+  { text = "You're caught in a misunderstanding", weight = 2 },
+  { text = "Authorities take an interest in you", weight = 1 },
+  { text = "You make an accidental enemy", weight = 1 },
+  { text = "A deal or arrangement falls through", weight = 2 },
+  { text = "Weather or environment disrupts plans", weight = 2 },
+  { text = "A dependency becomes unavailable", weight = 1 },
+  { text = "You're blamed for something you didn't do", weight = 1 },
+  { text = "A service provider fails you", weight = 2 },
+
+  # Discoveries and Findings
+  { text = "You find something unexpected", weight = 2 },
+  { text = "You discover a hidden place", weight = 1 },
+  { text = "You stumble upon a scene of trouble", weight = 2 },
+  { text = "You witness something concerning", weight = 2 },
+  { text = "You find evidence of criminal activity", weight = 1 },
+  { text = "You discover a body or remains", weight = 1 },
+  { text = "You find lost or abandoned property", weight = 2 },
+  { text = "You uncover a secret passage or room", weight = 1 },
+  { text = "You notice something everyone else missed", weight = 2 },
+  { text = "You realize you've been followed", weight = 1 },
+  { text = "You discover you're being watched", weight = 1 },
+  { text = "You find a message meant for someone else", weight = 1 },
+
+  # Reputation Effects
+  { text = "Your reputation grows (good or bad)", weight = 2 },
+  { text = "Someone owes you a favor now", weight = 2 },
+  { text = "You owe someone a favor now", weight = 1 },
+  { text = "A group becomes friendly toward you", weight = 1 },
+  { text = "A group becomes hostile toward you", weight = 1 },
+  { text = "Your past catches up with you", weight = 1 },
+  { text = "You gain a new title or nickname", weight = 1 },
+  { text = "Someone challenges your reputation", weight = 1 },
+  { text = "You're recognized from a past deed", weight = 2 },
+  { text = "Your success inspires jealousy", weight = 1 },
+
+  # Local Events
+  { text = "A festival or celebration occurs", weight = 2 },
+  { text = "A crisis affects the community", weight = 1 },
+  { text = "Political changes shake things up", weight = 1 },
+  { text = "Economic shifts affect prices and availability", weight = 2 },
+  { text = "A notable figure visits the area", weight = 1 },
+  { text = "A death or tragedy affects the community", weight = 1 },
+  { text = "A birth or wedding brings celebration", weight = 2 },
+  { text = "Natural phenomena draws attention", weight = 1 },
+  { text = "Religious or cultural observance takes place", weight = 2 },
+  { text = "A trial or judgment is held publicly", weight = 1 },
+  { text = "New arrivals change the local dynamic", weight = 2 },
+  { text = "An old establishment closes", weight = 1 },
+  { text = "A new establishment opens", weight = 2 },
+]
+
+[downtime_complications]
+# Complications that arise during downtime activities
+entries = [
+  # Time and Resources
+  { text = "Activity takes longer than expected", weight = 3 },
+  { text = "Costs more than planned", weight = 3 },
+  { text = "Resources prove harder to find", weight = 2 },
+  { text = "Requires additional materials or supplies", weight = 2 },
+  { text = "Weather or conditions cause delays", weight = 2 },
+  { text = "A prerequisite wasn't met", weight = 2 },
+  { text = "The location is unavailable", weight = 2 },
+  { text = "Scheduling conflicts arise", weight = 2 },
+  { text = "Tools or equipment are inadequate", weight = 2 },
+  { text = "Help is needed but unavailable", weight = 2 },
+
+  # Attention and Consequences
+  { text = "Attracts unwanted attention", weight = 2 },
+  { text = "Makes you a target for someone", weight = 1 },
+  { text = "Authorities become interested", weight = 1 },
+  { text = "Competitors take notice", weight = 2 },
+  { text = "Creates unwanted obligations", weight = 2 },
+  { text = "Puts you in someone's debt", weight = 2 },
+  { text = "Creates a minor enemy", weight = 1 },
+  { text = "Strains an existing relationship", weight = 2 },
+  { text = "Damages your reputation slightly", weight = 1 },
+  { text = "Reveals information you wanted hidden", weight = 1 },
+
+  # Results and Outcomes
+  { text = "Results are not what you expected", weight = 2 },
+  { text = "Success is only partial", weight = 2 },
+  { text = "Quality is lower than hoped", weight = 2 },
+  { text = "Success comes with strings attached", weight = 2 },
+  { text = "Side effects or unintended consequences", weight = 2 },
+  { text = "Must make an uncomfortable compromise", weight = 2 },
+  { text = "Success requires moral flexibility", weight = 1 },
+  { text = "Creates a problem for later", weight = 2 },
+  { text = "Works but with noticeable flaws", weight = 2 },
+  { text = "Results are temporary, not permanent", weight = 1 },
+
+  # Interruptions
+  { text = "You're interrupted by urgent matters", weight = 2 },
+  { text = "An emergency pulls you away", weight = 1 },
+  { text = "Someone needs your help mid-activity", weight = 2 },
+  { text = "A crisis demands immediate attention", weight = 1 },
+  { text = "You're called away unexpectedly", weight = 2 },
+  { text = "Outside events force a change of plans", weight = 2 },
+  { text = "A deadline is moved up", weight = 2 },
+  { text = "Circumstances change mid-effort", weight = 2 },
+
+  # Personal Factors
+  { text = "You lose interest or motivation", weight = 2 },
+  { text = "Illness or injury interferes", weight = 2 },
+  { text = "Exhaustion sets in", weight = 2 },
+  { text = "Emotional distress affects performance", weight = 1 },
+  { text = "Distraction undermines focus", weight = 2 },
+  { text = "A personal matter demands attention", weight = 2 },
+  { text = "Self-doubt creeps in", weight = 1 },
+  { text = "Bad habits interfere with progress", weight = 1 },
+
+  # External Factors
+  { text = "A key person is unavailable", weight = 2 },
+  { text = "Required service is closed or ended", weight = 2 },
+  { text = "Travel is disrupted", weight = 2 },
+  { text = "Communication breaks down", weight = 2 },
+  { text = "Information proves inaccurate", weight = 2 },
+  { text = "A dependency proves unreliable", weight = 2 },
+  { text = "Market conditions change unfavorably", weight = 1 },
+  { text = "Local events create obstacles", weight = 2 },
+]
+
+[rumors_heard]
+# Rumors and gossip encountered during downtime
+entries = [
+  # Political and Power
+  { text = "Political intrigue is afoot", weight = 2 },
+  { text = "A powerful figure is making moves", weight = 2 },
+  { text = "Leadership changes are coming", weight = 1 },
+  { text = "An alliance is forming in secret", weight = 1 },
+  { text = "A betrayal is being planned", weight = 1 },
+  { text = "Power struggles are intensifying", weight = 2 },
+  { text = "A faction is gaining influence", weight = 2 },
+  { text = "A faction is losing influence", weight = 2 },
+  { text = "Someone is consolidating power", weight = 1 },
+  { text = "A coup or takeover is rumored", weight = 1 },
+
+  # Economic and Resources
+  { text = "Economic changes are coming", weight = 2 },
+  { text = "A shortage is developing", weight = 2 },
+  { text = "Prices will change soon", weight = 2 },
+  { text = "A treasure or cache has been found", weight = 1 },
+  { text = "A lucrative opportunity exists", weight = 2 },
+  { text = "Trade routes are being disrupted", weight = 1 },
+  { text = "New resources have been discovered", weight = 1 },
+  { text = "A business is failing or succeeding", weight = 2 },
+  { text = "Smugglers are operating nearby", weight = 1 },
+  { text = "Counterfeit goods are circulating", weight = 1 },
+
+  # Threats and Dangers
+  { text = "Strange occurrences reported nearby", weight = 2 },
+  { text = "A dangerous location has been found", weight = 2 },
+  { text = "Travelers are disappearing", weight = 1 },
+  { text = "A monster or threat has been sighted", weight = 2 },
+  { text = "Bandits or criminals are operating", weight = 2 },
+  { text = "A disease or plague is spreading", weight = 1 },
+  { text = "Natural disaster may be coming", weight = 1 },
+  { text = "Warning about a dangerous individual", weight = 2 },
+  { text = "A location should be avoided", weight = 2 },
+  { text = "Something evil stirs in the area", weight = 1 },
+
+  # Military and Conflict
+  { text = "Military activity is increasing", weight = 2 },
+  { text = "War may be coming", weight = 1 },
+  { text = "Forces are mobilizing somewhere", weight = 2 },
+  { text = "A conflict is brewing between groups", weight = 2 },
+  { text = "Weapons are being stockpiled", weight = 1 },
+  { text = "Mercenaries are being hired", weight = 2 },
+  { text = "A battle occurred recently", weight = 2 },
+  { text = "Refugees are fleeing from somewhere", weight = 2 },
+  { text = "A siege or blockade is happening", weight = 1 },
+  { text = "Peace negotiations are underway", weight = 1 },
+
+  # Personal and Local
+  { text = "Someone is looking for you", weight = 2 },
+  { text = "Information about your current adversaries", weight = 2 },
+  { text = "Secrets about local personalities", weight = 2 },
+  { text = "An opportunity others have missed", weight = 2 },
+  { text = "Someone matching your description was seen", weight = 1 },
+  { text = "Your enemies have been asking questions", weight = 1 },
+  { text = "An ally is in trouble", weight = 1 },
+  { text = "Someone is spreading rumors about you", weight = 2 },
+  { text = "A contact has new information for you", weight = 2 },
+  { text = "Someone from your past has been seen", weight = 1 },
+
+  # Mysteries and Secrets
+  { text = "A mystery has everyone puzzled", weight = 2 },
+  { text = "Strange lights seen in unusual places", weight = 1 },
+  { text = "Unexplained disappearances have occurred", weight = 1 },
+  { text = "A local legend may be true", weight = 1 },
+  { text = "A secret location has been discovered", weight = 1 },
+  { text = "Hidden passages or rooms exist", weight = 1 },
+  { text = "Someone is not who they claim to be", weight = 2 },
+  { text = "A conspiracy is being uncovered", weight = 1 },
+  { text = "Ancient ruins have been found", weight = 1 },
+  { text = "A prophecy may be coming true", weight = 1 },
+
+  # Social and Cultural
+  { text = "A scandal is unfolding", weight = 2 },
+  { text = "A marriage or alliance is being arranged", weight = 2 },
+  { text = "A birth or death affects succession", weight = 1 },
+  { text = "A celebration or festival approaches", weight = 2 },
+  { text = "Religious tensions are rising", weight = 1 },
+  { text = "Cultural conflicts are emerging", weight = 2 },
+  { text = "A famous person is traveling nearby", weight = 2 },
+  { text = "A trial or judgment will occur soon", weight = 2 },
+  { text = "A duel or challenge has been issued", weight = 1 },
+  { text = "A feud is intensifying", weight = 2 },
+]
+
+[training_results]
+# Outcomes of training during downtime
+entries = [
+  # Positive Outcomes
+  { text = "Breakthrough - rapid improvement beyond expectations", weight = 1 },
+  { text = "Excellent progress - ahead of schedule", weight = 2 },
+  { text = "Steady progress as expected", weight = 3 },
+  { text = "New insight changes your entire approach", weight = 1 },
+  { text = "Discovered a hidden talent or aptitude", weight = 1 },
+  { text = "Made a valuable training partner", weight = 2 },
+  { text = "Impressed a potential mentor", weight = 1 },
+  { text = "Overcame a previous limitation", weight = 2 },
+  { text = "Built muscle memory that will last", weight = 2 },
+  { text = "Developed a signature technique", weight = 1 },
+  { text = "Cross-training improved main skill unexpectedly", weight = 1 },
+  { text = "Achieved a personal best", weight = 2 },
+  { text = "Gained confidence in your abilities", weight = 2 },
+
+  # Neutral Outcomes
+  { text = "Plateau - no visible improvement yet", weight = 2 },
+  { text = "Progress is slower than hoped", weight = 2 },
+  { text = "Maintaining current level, not advancing", weight = 2 },
+  { text = "Theory improves but practical skill lags", weight = 2 },
+  { text = "Practical skill improves but theory lags", weight = 2 },
+  { text = "Inconsistent performance", weight = 2 },
+  { text = "Good days and bad days", weight = 2 },
+  { text = "Fundamentals strengthened, not flashy progress", weight = 2 },
+
+  # Setbacks
+  { text = "Minor injury causes temporary setback", weight = 2 },
+  { text = "Serious injury halts training", weight = 1 },
+  { text = "Burnout requires rest period", weight = 1 },
+  { text = "Illness interrupts training", weight = 2 },
+  { text = "Bad habits formed that need correction", weight = 1 },
+  { text = "Overtraining causes regression", weight = 1 },
+  { text = "Mental block develops", weight = 1 },
+  { text = "Equipment or resources become unavailable", weight = 2 },
+  { text = "Training partner or mentor becomes unavailable", weight = 1 },
+  { text = "External responsibilities interfere", weight = 2 },
+  { text = "Technique is flawed - must unlearn and relearn", weight = 1 },
+
+  # Social Outcomes
+  { text = "Made a rival who pushes you to improve", weight = 2 },
+  { text = "Earned respect of peers", weight = 2 },
+  { text = "Attracted attention of a master practitioner", weight = 1 },
+  { text = "Made an enemy through competition", weight = 1 },
+  { text = "Became part of a training group", weight = 2 },
+  { text = "Isolated yourself too much in training", weight = 1 },
+  { text = "Reputation as dedicated practitioner grows", weight = 2 },
+  { text = "Offered a teaching position", weight = 1 },
+]
+
+[crafting_results]
+# Outcomes of crafting during downtime
+entries = [
+  # Quality Outcomes
+  { text = "Masterwork - exceptional quality", weight = 1 },
+  { text = "Excellent quality - above expectations", weight = 2 },
+  { text = "Good quality - as intended", weight = 3 },
+  { text = "Acceptable quality - functional but plain", weight = 2 },
+  { text = "Flawed - works but with issues", weight = 2 },
+  { text = "Failed - must start over", weight = 1 },
+  { text = "Unexpected improvement during creation", weight = 1 },
+  { text = "Added unique feature not originally planned", weight = 1 },
+  { text = "Created prototype for future refinement", weight = 2 },
+
+  # Process Issues
+  { text = "Materials were insufficient", weight = 2 },
+  { text = "Materials were higher quality than expected", weight = 1 },
+  { text = "Tools broke during creation", weight = 1 },
+  { text = "Technique needs refinement", weight = 2 },
+  { text = "Design had unforeseen problems", weight = 2 },
+  { text = "Process revealed new techniques", weight = 1 },
+  { text = "Work was interrupted repeatedly", weight = 2 },
+  { text = "Found a more efficient method", weight = 1 },
+
+  # Time and Cost
+  { text = "Finished ahead of schedule", weight = 1 },
+  { text = "Took longer than expected", weight = 2 },
+  { text = "Under budget", weight = 1 },
+  { text = "Over budget", weight = 2 },
+  { text = "Rush job compromised quality", weight = 1 },
+  { text = "Extra time resulted in higher quality", weight = 2 },
+
+  # Opportunities
+  { text = "Others want to commission similar work", weight = 2 },
+  { text = "Learned new technique applicable elsewhere", weight = 2 },
+  { text = "Work attracted attention of guild or organization", weight = 1 },
+  { text = "Someone offers to buy it immediately", weight = 2 },
+  { text = "Work inspired ideas for future projects", weight = 2 },
+  { text = "Discovered rare or unusual properties in materials", weight = 1 },
+]
+
+[carousing_results]
+# Outcomes of carousing and social activities
+entries = [
+  # Good Outcomes
+  { text = "Made a valuable new contact", weight = 2 },
+  { text = "Heard useful rumors and gossip", weight = 2 },
+  { text = "Gained a new friend", weight = 2 },
+  { text = "Impressed someone important", weight = 1 },
+  { text = "Won money gambling", weight = 2 },
+  { text = "Found a romantic connection", weight = 1 },
+  { text = "Enjoyed yourself thoroughly", weight = 2 },
+  { text = "Built goodwill in the community", weight = 2 },
+  { text = "Received a gift or favor", weight = 1 },
+  { text = "Learned a secret", weight = 1 },
+  { text = "Got a lead on an opportunity", weight = 2 },
+  { text = "Established yourself as trustworthy", weight = 2 },
+
+  # Neutral Outcomes
+  { text = "Unremarkable night, nothing notable", weight = 3 },
+  { text = "Spent more money than intended", weight = 2 },
+  { text = "Met interesting but unhelpful people", weight = 2 },
+  { text = "Heard rumors but couldn't verify them", weight = 2 },
+  { text = "Made temporary acquaintances", weight = 2 },
+  { text = "Learned local customs and etiquette", weight = 2 },
+  { text = "Observed interesting social dynamics", weight = 2 },
+
+  # Bad Outcomes
+  { text = "Lost money gambling", weight = 2 },
+  { text = "Made a fool of yourself", weight = 1 },
+  { text = "Offended someone important", weight = 1 },
+  { text = "Got into a fight", weight = 1 },
+  { text = "Passed out and lost time", weight = 1 },
+  { text = "Made promises you don't remember", weight = 1 },
+  { text = "Woke up in an unfamiliar place", weight = 1 },
+  { text = "Got robbed or pickpocketed", weight = 1 },
+  { text = "Revealed something you shouldn't have", weight = 1 },
+  { text = "Made an enemy through misunderstanding", weight = 1 },
+  { text = "Developed a hangover that affects the next day", weight = 2 },
+  { text = "Caught in the middle of someone else's conflict", weight = 1 },
+  { text = "Witnessed something you'd rather not have seen", weight = 1 },
+
+  # Complicated Outcomes
+  { text = "Made a friend who has enemies", weight = 2 },
+  { text = "Learned a secret that puts you at risk", weight = 1 },
+  { text = "Someone took a romantic interest you don't share", weight = 1 },
+  { text = "Got involved in a scheme unintentionally", weight = 1 },
+  { text = "Made connections with unsavory types", weight = 2 },
+  { text = "Someone thinks you agreed to something", weight = 1 },
+  { text = "Your presence was noted by the wrong people", weight = 1 },
+]
+
+[research_results]
+# Outcomes of research activities
+entries = [
+  # Positive Outcomes
+  { text = "Found exactly what you were looking for", weight = 2 },
+  { text = "Discovered more than expected", weight = 1 },
+  { text = "Found partial information, enough to continue", weight = 3 },
+  { text = "Uncovered related information of value", weight = 2 },
+  { text = "Located an expert who can help further", weight = 2 },
+  { text = "Gained access to restricted sources", weight = 1 },
+  { text = "Cross-referenced multiple sources for certainty", weight = 2 },
+  { text = "Found primary sources and evidence", weight = 1 },
+  { text = "Discovered a shortcut or easier method", weight = 1 },
+
+  # Partial or Mixed Results
+  { text = "Found conflicting information", weight = 2 },
+  { text = "Information is incomplete", weight = 2 },
+  { text = "Sources disagree on key points", weight = 2 },
+  { text = "Information raises more questions", weight = 2 },
+  { text = "Found outdated or possibly inaccurate data", weight = 2 },
+  { text = "Research points to another location or source", weight = 2 },
+  { text = "Need specialized knowledge to interpret findings", weight = 2 },
+  { text = "Found general information, not specifics needed", weight = 2 },
+
+  # Negative Outcomes
+  { text = "Couldn't find what you were looking for", weight = 2 },
+  { text = "Sources are inaccessible", weight = 2 },
+  { text = "Information has been destroyed or lost", weight = 1 },
+  { text = "Someone is actively hiding this information", weight = 1 },
+  { text = "Research attracted unwanted attention", weight = 1 },
+  { text = "The subject is dangerous to inquire about", weight = 1 },
+  { text = "Your inquiries alerted interested parties", weight = 1 },
+  { text = "Dead end - this line of research won't work", weight = 2 },
+
+  # Discovery Outcomes
+  { text = "Stumbled onto unrelated but valuable information", weight = 2 },
+  { text = "Found evidence of something unexpected", weight = 1 },
+  { text = "Discovered a secret others don't know", weight = 1 },
+  { text = "Research revealed a larger pattern", weight = 1 },
+  { text = "Found a connection to your personal history", weight = 1 },
+  { text = "Uncovered a conspiracy or hidden truth", weight = 1 },
+  { text = "Discovered the information is being suppressed", weight = 1 },
+]
+
+[working_results]
+# Outcomes of working for income
+entries = [
+  # Income Results
+  { text = "Earned more than expected", weight = 2 },
+  { text = "Earned standard wages", weight = 3 },
+  { text = "Earned less than expected", weight = 2 },
+  { text = "Payment was delayed", weight = 2 },
+  { text = "Received a bonus or tip", weight = 1 },
+  { text = "Got stiffed on payment", weight = 1 },
+  { text = "Paid in goods instead of money", weight = 2 },
+  { text = "Earned future consideration or favor", weight = 1 },
+
+  # Work Experience
+  { text = "Work was easy and uneventful", weight = 2 },
+  { text = "Work was harder than expected", weight = 2 },
+  { text = "Learned new skills on the job", weight = 2 },
+  { text = "Made valuable contacts through work", weight = 2 },
+  { text = "Work led to offer of regular employment", weight = 1 },
+  { text = "Impressed employer with performance", weight = 2 },
+  { text = "Disappointed employer with performance", weight = 1 },
+  { text = "Work involved unexpected complications", weight = 2 },
+
+  # Opportunities
+  { text = "Learned about a better opportunity", weight = 2 },
+  { text = "Met someone who could be useful", weight = 2 },
+  { text = "Overheard valuable information", weight = 1 },
+  { text = "Gained access to useful resources", weight = 1 },
+  { text = "Work took you somewhere interesting", weight = 2 },
+  { text = "Saw or learned something you weren't meant to", weight = 1 },
+
+  # Problems
+  { text = "Got in trouble at work", weight = 1 },
+  { text = "Made an enemy through work", weight = 1 },
+  { text = "Work exposed you to danger", weight = 1 },
+  { text = "Physical strain from the work", weight = 2 },
+  { text = "Boring or demeaning work affected morale", weight = 2 },
+  { text = "Work conflicted with other obligations", weight = 2 },
+  { text = "Workplace politics created issues", weight = 2 },
+]
+
+[recovery_results]
+# Outcomes of rest and recovery activities
+entries = [
+  # Physical Recovery
+  { text = "Full recovery - healed completely", weight = 2 },
+  { text = "Good recovery - healing well", weight = 3 },
+  { text = "Slow recovery - taking longer than expected", weight = 2 },
+  { text = "Setback - condition worsened temporarily", weight = 1 },
+  { text = "Complications developed", weight = 1 },
+  { text = "Scar or lasting mark from injury", weight = 1 },
+  { text = "Minor lingering issue remains", weight = 2 },
+  { text = "Stronger than before - full recovery plus", weight = 1 },
+
+  # Mental and Emotional Recovery
+  { text = "Feel refreshed and energized", weight = 2 },
+  { text = "Rest helped but not completely", weight = 3 },
+  { text = "Still exhausted despite rest", weight = 2 },
+  { text = "Dreams or nightmares disturbed rest", weight = 2 },
+  { text = "Gained clarity and perspective", weight = 2 },
+  { text = "Processing led to emotional breakthrough", weight = 1 },
+  { text = "Restlessness made recovery difficult", weight = 2 },
+  { text = "Made peace with past events", weight = 1 },
+
+  # Recovery Circumstances
+  { text = "Recovery interrupted by events", weight = 2 },
+  { text = "Quality care sped recovery", weight = 2 },
+  { text = "Poor conditions slowed recovery", weight = 2 },
+  { text = "Formed bonds with caretakers", weight = 1 },
+  { text = "Enforced rest led to reflection", weight = 2 },
+  { text = "Boredom of recovery was challenging", weight = 2 },
+  { text = "Used recovery time productively", weight = 2 },
+  { text = "Recovery revealed need for lifestyle change", weight = 1 },
+]
+
+[shopping_results]
+# Outcomes of shopping and acquisition activities
+entries = [
+  # Finding Items
+  { text = "Found exactly what you needed at fair price", weight = 2 },
+  { text = "Found it but at higher price than expected", weight = 2 },
+  { text = "Found it at a bargain price", weight = 1 },
+  { text = "Found something better than what you sought", weight = 1 },
+  { text = "Found acceptable substitute", weight = 2 },
+  { text = "Couldn't find what you needed", weight = 2 },
+  { text = "Item is available but must be ordered", weight = 2 },
+  { text = "Item exists but seller won't sell to you", weight = 1 },
+
+  # Shopping Experience
+  { text = "Made contact with reliable merchant", weight = 2 },
+  { text = "Found a specialist in what you need", weight = 1 },
+  { text = "Got cheated or sold inferior goods", weight = 1 },
+  { text = "Learned about better sources", weight = 2 },
+  { text = "Negotiations went well", weight = 2 },
+  { text = "Negotiations offended seller", weight = 1 },
+  { text = "Market was crowded and difficult", weight = 2 },
+  { text = "Found unexpected additional items of use", weight = 2 },
+
+  # Complications
+  { text = "Item was stolen before delivery", weight = 1 },
+  { text = "Item was not as described", weight = 2 },
+  { text = "Purchase attracted attention", weight = 1 },
+  { text = "Seller wants something besides money", weight = 1 },
+  { text = "Item comes with unexpected obligations", weight = 1 },
+  { text = "Legal issues with the purchase", weight = 1 },
+  { text = "Item has hidden damage or flaw", weight = 2 },
+  { text = "Previous owner wants it back", weight = 1 },
+]
+
+[networking_results]
+# Outcomes of networking and relationship building
+entries = [
+  # Contact Quality
+  { text = "Made a highly valuable contact", weight = 1 },
+  { text = "Made a moderately useful contact", weight = 2 },
+  { text = "Made a minor contact", weight = 2 },
+  { text = "Strengthened existing relationship", weight = 2 },
+  { text = "Relationship became strained", weight = 1 },
+  { text = "Contact proved less useful than thought", weight = 2 },
+  { text = "Gained introduction to someone important", weight = 1 },
+  { text = "Failed to make meaningful connections", weight = 2 },
+
+  # Social Dynamics
+  { text = "Identified the real power players", weight = 2 },
+  { text = "Learned about social hierarchies", weight = 2 },
+  { text = "Discovered hidden alliances", weight = 1 },
+  { text = "Made a social faux pas", weight = 1 },
+  { text = "Navigated politics successfully", weight = 2 },
+  { text = "Got caught between factions", weight = 1 },
+  { text = "Built reputation in social circles", weight = 2 },
+  { text = "Became associated with a faction", weight = 2 },
+
+  # Information
+  { text = "Learned valuable gossip", weight = 2 },
+  { text = "Identified who knows what", weight = 2 },
+  { text = "Found someone who owes favors", weight = 1 },
+  { text = "Discovered who to avoid", weight = 2 },
+  { text = "Learned about upcoming opportunities", weight = 2 },
+  { text = "Found out who your enemies know", weight = 1 },
+
+  # Complications
+  { text = "Now owe someone a favor", weight = 2 },
+  { text = "Made unintended enemies", weight = 1 },
+  { text = "Promises were made you must keep", weight = 2 },
+  { text = "Association created obligations", weight = 2 },
+  { text = "Your networking was noticed by rivals", weight = 1 },
+  { text = "Someone is jealous of your connections", weight = 1 },
+]

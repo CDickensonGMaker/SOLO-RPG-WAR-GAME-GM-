@@ -1,0 +1,847 @@
+# Warhammer 40,000 2nd Edition - Squats
+# The Leagues of Votann (Classic Squats) - The Forgotten Abhuman Kin
+
+name = "Squats"
+codex = "White Dwarf Articles / 2nd Edition Squat Army List"
+description = "Short, sturdy abhumans from high-gravity mining worlds, masters of technology and grudge-keeping"
+playstyle = "Durable infantry with excellent vehicles, strong shooting, and engineering expertise"
+strengths = ["High Toughness", "Excellent technology", "Strong guild organization", "Hatred of Orks", "Superior engineering"]
+weaknesses = ["Slow movement", "Low numbers", "Short range preferences"]
+
+[faction_rules]
+name = "The Book of Grudges"
+description = "Squats never forget a slight. +1 to hit against enemies who have wronged the Hold"
+
+# =============================================================================
+# HQ UNITS
+# =============================================================================
+
+[[units]]
+name = "Squat Warlord"
+type = "infantry"
+category = "HQ"
+points = 70
+models = "1"
+tactical_role = "commander"
+threat_level = "high"
+preferred_targets = ["characters", "elite_infantry"]
+weaknesses = ["mobility_focused_enemies"]
+special_rules = ["Independent Character", "Stubborn", "Hatred (Orks)", "Iron Will"]
+keywords = ["Infantry", "Character", "Squat", "Warlord"]
+
+[units.stats]
+M = 3
+WS = 5
+BS = 5
+S = 4
+T = 5
+W = 3
+I = 3
+A = 3
+Ld = 10
+Sv = "4+"
+
+[[units.weapons]]
+name = "Power Axe"
+range = "Melee"
+strength = "+1"
+ap = "-"
+damage = "1"
+type = "Melee"
+abilities = ["Ignores Armor Saves", "Ancestral Weapon"]
+
+[[units.weapons]]
+name = "Bolt Pistol"
+range = "12\""
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Pistol"
+shots = "1"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Living Ancestor"
+type = "infantry"
+category = "HQ"
+points = 85
+models = "1"
+tactical_role = "psyker"
+threat_level = "high"
+preferred_targets = ["infantry", "psykers"]
+weaknesses = ["snipers", "nullification"]
+special_rules = ["Independent Character", "Psyker (Level 2)", "Ancestral Wisdom", "Slow"]
+keywords = ["Infantry", "Character", "Psyker", "Squat", "Living Ancestor"]
+
+[units.stats]
+M = 2
+WS = 3
+BS = 4
+S = 3
+T = 5
+W = 3
+I = 2
+A = 1
+Ld = 10
+Sv = "5+"
+
+[[units.weapons]]
+name = "Squat Bolt Pistol"
+range = "12\""
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Pistol"
+shots = "1"
+
+[[units.weapons]]
+name = "Force Staff"
+range = "Melee"
+strength = "+2"
+ap = "-"
+damage = "1"
+type = "Melee"
+abilities = ["Force Weapon"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Guild Master Engineer"
+type = "infantry"
+category = "HQ"
+points = 60
+models = "1"
+tactical_role = "support"
+threat_level = "medium"
+preferred_targets = ["vehicles"]
+weaknesses = ["assault"]
+special_rules = ["Independent Character", "Master Engineer", "Blessing of the Ancestors", "Repair"]
+keywords = ["Infantry", "Character", "Squat", "Engineer"]
+
+[units.stats]
+M = 3
+WS = 4
+BS = 5
+S = 4
+T = 5
+W = 2
+I = 3
+A = 2
+Ld = 9
+Sv = "4+"
+
+[[units.weapons]]
+name = "Plasma Pistol"
+range = "12\""
+strength = "7"
+ap = "2"
+damage = "1"
+type = "Pistol"
+abilities = ["Gets Hot!"]
+
+[[units.weapons]]
+name = "Servo-arm"
+range = "Melee"
+strength = "x2"
+ap = "-"
+damage = "1"
+type = "Melee"
+abilities = ["Unwieldy", "Repair"]
+
+# =============================================================================
+# ELITES
+# =============================================================================
+
+[[units]]
+name = "Hearthguard"
+type = "infantry"
+category = "Elites"
+points = 25
+models = "5-10"
+tactical_role = "elite_infantry"
+threat_level = "high"
+preferred_targets = ["infantry", "characters"]
+weaknesses = ["fast_assault"]
+special_rules = ["Stubborn", "Fearless", "Bodyguard"]
+keywords = ["Infantry", "Hearthguard", "Squat"]
+
+[units.stats]
+M = 3
+WS = 5
+BS = 4
+S = 4
+T = 5
+W = 1
+I = 3
+A = 2
+Ld = 9
+Sv = "4+"
+
+[[units.weapons]]
+name = "Power Axe"
+range = "Melee"
+strength = "+1"
+ap = "-"
+damage = "1"
+type = "Melee"
+abilities = ["Ignores Armor Saves"]
+
+[[units.weapons]]
+name = "Bolt Pistol"
+range = "12\""
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Pistol"
+shots = "1"
+
+[[units.weapons]]
+name = "Boarding Shield"
+range = "-"
+strength = "-"
+ap = "-"
+damage = "-"
+type = "Equipment"
+abilities = ["5+ Invulnerable Save", "+1 to Save in close combat"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Exo-Armor Warriors"
+type = "infantry"
+category = "Elites"
+points = 50
+models = "3-10"
+tactical_role = "elite_assault"
+threat_level = "very_high"
+preferred_targets = ["infantry", "vehicles"]
+weaknesses = ["massed_fire"]
+special_rules = ["Stubborn", "Deep Strike", "Slow and Purposeful", "Exo-Armor"]
+keywords = ["Infantry", "Exo-Armor", "Squat"]
+
+[units.stats]
+M = 3
+WS = 4
+BS = 4
+S = 4
+T = 5
+W = 2
+I = 2
+A = 2
+Ld = 9
+Sv = "2+"
+
+[[units.weapons]]
+name = "Storm Bolter"
+range = "24\""
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Assault 2"
+
+[[units.weapons]]
+name = "Power Fist"
+range = "Melee"
+strength = "x2"
+ap = "-"
+damage = "1"
+type = "Melee"
+abilities = ["Ignores Armor Saves", "Unwieldy"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Brotherhood of the Ancestor"
+type = "infantry"
+category = "Elites"
+points = 18
+models = "5-10"
+tactical_role = "zealot"
+threat_level = "medium"
+preferred_targets = ["heretics", "xenos"]
+weaknesses = ["focused_fire"]
+special_rules = ["Fearless", "Hatred (Chaos)", "Feel No Pain (6+)"]
+keywords = ["Infantry", "Brotherhood", "Squat"]
+
+[units.stats]
+M = 3
+WS = 4
+BS = 4
+S = 4
+T = 5
+W = 1
+I = 3
+A = 1
+Ld = 9
+Sv = "4+"
+
+[[units.weapons]]
+name = "Bolter"
+range = "24\""
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Rapid Fire"
+
+[[units.weapons]]
+name = "Chainsword"
+range = "Melee"
+strength = "User"
+ap = "-"
+damage = "1"
+type = "Melee"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Guild Bikers"
+type = "bike"
+category = "Elites"
+points = 40
+models = "3-9"
+tactical_role = "fast_attack"
+threat_level = "medium"
+preferred_targets = ["infantry", "light_vehicles"]
+weaknesses = ["heavy_weapons"]
+special_rules = ["Turbo-boost", "Guild Engineers"]
+keywords = ["Bike", "Squat"]
+
+[units.stats]
+M = 10
+WS = 4
+BS = 4
+S = 4
+T = 6
+W = 1
+I = 3
+A = 1
+Ld = 8
+Sv = "4+"
+
+[[units.weapons]]
+name = "Twin-linked Bolter"
+range = "24\""
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Rapid Fire"
+shots = "2"
+abilities = ["Twin-linked"]
+
+[[units.weapons]]
+name = "Power Axe"
+range = "Melee"
+strength = "+1"
+ap = "-"
+damage = "1"
+type = "Melee"
+abilities = ["Ignores Armor Saves"]
+
+# =============================================================================
+# TROOPS
+# =============================================================================
+
+[[units]]
+name = "Squat Warriors"
+type = "infantry"
+category = "Troops"
+points = 10
+models = "10-20"
+tactical_role = "line_infantry"
+threat_level = "medium"
+preferred_targets = ["infantry"]
+weaknesses = ["fast_assault"]
+special_rules = ["Stubborn", "Hatred (Orks)"]
+keywords = ["Infantry", "Squat", "Warriors"]
+
+[units.stats]
+M = 3
+WS = 4
+BS = 4
+S = 3
+T = 4
+W = 1
+I = 2
+A = 1
+Ld = 8
+Sv = "5+"
+
+[[units.weapons]]
+name = "Bolter"
+range = "24\""
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Rapid Fire"
+
+[[units.weapons]]
+name = "Bolt Pistol"
+range = "12\""
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Pistol"
+
+[[units.weapons]]
+name = "Frag Grenades"
+range = "8\""
+strength = "3"
+ap = "-"
+damage = "1"
+type = "Assault 1"
+abilities = ["Blast"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Squat Thunderers"
+type = "infantry"
+category = "Troops"
+points = 12
+models = "5-15"
+tactical_role = "fire_support"
+threat_level = "medium"
+preferred_targets = ["infantry", "light_vehicles"]
+weaknesses = ["assault"]
+special_rules = ["Stubborn", "Heavy Weapons"]
+keywords = ["Infantry", "Squat", "Thunderers"]
+
+[units.stats]
+M = 3
+WS = 4
+BS = 4
+S = 3
+T = 4
+W = 1
+I = 2
+A = 1
+Ld = 8
+Sv = "5+"
+
+[[units.weapons]]
+name = "Heavy Bolter"
+range = "36\""
+strength = "5"
+ap = "4"
+damage = "1"
+type = "Heavy 3"
+abilities = ["Sustained Fire 1"]
+
+[[units.weapons]]
+name = "Autocannon"
+range = "48\""
+strength = "7"
+ap = "4"
+damage = "1"
+type = "Heavy 2"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Squat Berserkers"
+type = "infantry"
+category = "Troops"
+points = 14
+models = "10-20"
+tactical_role = "assault"
+threat_level = "high"
+preferred_targets = ["orks", "close_combat"]
+weaknesses = ["shooting"]
+special_rules = ["Fearless", "Hatred (Orks)", "Furious Charge", "Berserker Rage"]
+keywords = ["Infantry", "Squat", "Berserker"]
+
+[units.stats]
+M = 4
+WS = 4
+BS = 3
+S = 4
+T = 4
+W = 1
+I = 3
+A = 2
+Ld = 9
+Sv = "5+"
+
+[[units.weapons]]
+name = "Two Hand Axes"
+range = "Melee"
+strength = "+1"
+ap = "-"
+damage = "1"
+type = "Melee"
+abilities = ["+1 Attack for pair"]
+
+[[units.weapons]]
+name = "Bolt Pistol"
+range = "12\""
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Pistol"
+
+# =============================================================================
+# FAST ATTACK
+# =============================================================================
+
+[[units]]
+name = "Squat Trikes"
+type = "vehicle"
+category = "Fast Attack"
+points = 30
+models = "1-5"
+tactical_role = "fast_attack"
+threat_level = "medium"
+preferred_targets = ["infantry"]
+weaknesses = ["heavy_weapons"]
+special_rules = ["Fast", "Open-topped"]
+keywords = ["Vehicle", "Squat"]
+
+[units.stats]
+M = 12
+WS = "-"
+BS = 4
+S = "-"
+T = "-"
+W = "-"
+I = "-"
+A = "-"
+Ld = "-"
+Sv = "-"
+
+[units.armor]
+front = 10
+side = 10
+rear = 10
+
+[[units.weapons]]
+name = "Heavy Bolter"
+range = "36\""
+strength = "5"
+ap = "4"
+damage = "1"
+type = "Heavy 3"
+abilities = ["Sustained Fire 1"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Gyrocopters"
+type = "vehicle"
+category = "Fast Attack"
+points = 55
+models = "1-3"
+tactical_role = "fast_attack"
+threat_level = "medium"
+preferred_targets = ["infantry", "light_vehicles"]
+weaknesses = ["anti_air"]
+special_rules = ["Skimmer", "Deep Strike", "Scout"]
+keywords = ["Vehicle", "Skimmer", "Squat"]
+
+[units.stats]
+M = 14
+WS = "-"
+BS = 4
+S = "-"
+T = "-"
+W = "-"
+I = "-"
+A = "-"
+Ld = "-"
+Sv = "-"
+
+[units.armor]
+front = 10
+side = 10
+rear = 10
+
+[[units.weapons]]
+name = "Twin-linked Autocannon"
+range = "48\""
+strength = "7"
+ap = "4"
+damage = "1"
+type = "Heavy 2"
+abilities = ["Twin-linked"]
+
+[[units.weapons]]
+name = "Bombs"
+range = "-"
+strength = "5"
+ap = "4"
+damage = "1"
+type = "Bomb"
+abilities = ["One use", "Large Blast"]
+
+# =============================================================================
+# HEAVY SUPPORT
+# =============================================================================
+
+[[units]]
+name = "Mole Mortar Battery"
+type = "artillery"
+category = "Heavy Support"
+points = 25
+models = "1-3"
+tactical_role = "artillery"
+threat_level = "medium"
+preferred_targets = ["infantry"]
+weaknesses = ["assault"]
+special_rules = ["Artillery", "Tunneling Shells"]
+keywords = ["Artillery", "Squat"]
+
+[units.stats]
+M = 3
+WS = 3
+BS = 4
+S = 3
+T = 4
+W = 2
+I = 2
+A = 1
+Ld = 8
+Sv = "5+"
+
+[[units.weapons]]
+name = "Mole Mortar"
+range = "48\""
+strength = "5"
+ap = "4"
+damage = "1"
+type = "Heavy 1"
+abilities = ["Barrage", "Tunneling - ignores cover"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Thudd Gun"
+type = "artillery"
+category = "Heavy Support"
+points = 40
+models = "1-3"
+tactical_role = "artillery"
+threat_level = "high"
+preferred_targets = ["infantry"]
+weaknesses = ["assault"]
+special_rules = ["Artillery", "Quad Launcher"]
+keywords = ["Artillery", "Squat"]
+
+[units.stats]
+M = 3
+WS = 3
+BS = 4
+S = 3
+T = 4
+W = 2
+I = 2
+A = 1
+Ld = 8
+Sv = "5+"
+
+[[units.weapons]]
+name = "Thudd Gun"
+range = "48\""
+strength = "5"
+ap = "5"
+damage = "1"
+type = "Heavy 4"
+abilities = ["Barrage", "Blast"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Land Raider (Squat Pattern)"
+type = "vehicle"
+category = "Heavy Support"
+points = 255
+models = "1"
+tactical_role = "assault_transport"
+threat_level = "very_high"
+preferred_targets = ["all_targets"]
+weaknesses = ["melta"]
+special_rules = ["Tank", "Assault Vehicle", "Transport (10)", "Power of the Machine Spirit"]
+keywords = ["Vehicle", "Tank", "Transport", "Squat"]
+
+[units.stats]
+M = 10
+WS = "-"
+BS = 4
+S = "-"
+T = "-"
+W = "-"
+I = "-"
+A = "-"
+Ld = "-"
+Sv = "-"
+
+[units.armor]
+front = 14
+side = 14
+rear = 14
+
+[[units.weapons]]
+name = "Twin-linked Lascannon (x2)"
+range = "48\""
+strength = "9"
+ap = "2"
+damage = "1"
+type = "Heavy 1"
+abilities = ["Twin-linked"]
+
+[[units.weapons]]
+name = "Twin-linked Heavy Bolter"
+range = "36\""
+strength = "5"
+ap = "4"
+damage = "1"
+type = "Heavy 3"
+abilities = ["Twin-linked", "Sustained Fire 1"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Colossus"
+type = "vehicle"
+category = "Heavy Support"
+points = 200
+models = "1"
+tactical_role = "superheavy_transport"
+threat_level = "very_high"
+preferred_targets = ["infantry", "vehicles"]
+weaknesses = ["melta", "assault"]
+special_rules = ["Superheavy", "Transport (30)", "Void Shields"]
+keywords = ["Vehicle", "Superheavy", "Transport", "Squat"]
+
+[units.stats]
+M = 8
+WS = "-"
+BS = 4
+S = "-"
+T = "-"
+W = "-"
+I = "-"
+A = "-"
+Ld = "-"
+Sv = "-"
+
+[units.armor]
+front = 14
+side = 13
+rear = 12
+
+[[units.weapons]]
+name = "Battlecannon"
+range = "72\""
+strength = "8"
+ap = "3"
+damage = "D3"
+type = "Ordnance 1"
+abilities = ["Large Blast"]
+
+[[units.weapons]]
+name = "Lascannon (x4)"
+range = "48\""
+strength = "9"
+ap = "2"
+damage = "1"
+type = "Heavy 1"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Cyclops War Engine"
+type = "vehicle"
+category = "Heavy Support"
+points = 180
+models = "1"
+tactical_role = "siege"
+threat_level = "extreme"
+preferred_targets = ["fortifications", "vehicles"]
+weaknesses = ["melta", "assault"]
+special_rules = ["Walker", "Superheavy", "Void Shields"]
+keywords = ["Vehicle", "Walker", "Superheavy", "Squat"]
+
+[units.stats]
+M = 6
+WS = 3
+BS = 4
+S = 10
+T = "-"
+W = "-"
+I = 2
+A = 3
+Ld = "-"
+Sv = "-"
+
+[units.armor]
+front = 14
+side = 13
+rear = 12
+
+[[units.weapons]]
+name = "Heat Cannon"
+range = "24\""
+strength = "9"
+ap = "1"
+damage = "D6"
+type = "Heavy 1"
+abilities = ["Melta"]
+
+[[units.weapons]]
+name = "Siege Hammer"
+range = "Melee"
+strength = "D"
+ap = "-"
+damage = "D6"
+type = "Melee"
+abilities = ["Destroyer", "Siege"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Iron Eagle Gyrocopter"
+type = "vehicle"
+category = "Heavy Support"
+points = 100
+models = "1"
+tactical_role = "gunship"
+threat_level = "high"
+preferred_targets = ["vehicles", "monsters"]
+weaknesses = ["anti_air"]
+special_rules = ["Skimmer", "Hover", "Strafing Run"]
+keywords = ["Vehicle", "Skimmer", "Squat"]
+
+[units.stats]
+M = 16
+WS = "-"
+BS = 4
+S = "-"
+T = "-"
+W = "-"
+I = "-"
+A = "-"
+Ld = "-"
+Sv = "-"
+
+[units.armor]
+front = 11
+side = 11
+rear = 10
+
+[[units.weapons]]
+name = "Twin-linked Lascannon"
+range = "48\""
+strength = "9"
+ap = "2"
+damage = "1"
+type = "Heavy 1"
+abilities = ["Twin-linked"]
+
+[[units.weapons]]
+name = "Missiles"
+range = "48\""
+strength = "8"
+ap = "3"
+damage = "1"
+type = "Heavy 2"
+abilities = ["One Shot"]

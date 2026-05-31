@@ -1,0 +1,87 @@
+# Terrain Features - Weird War Setting
+# Natural and artificial features of the supernatural battlefield
+
+[features]
+entries = [
+  # Battlefield Debris
+  { text = "Coils of rusted barbed wire, still claiming victims", weight = 1 },
+  { text = "Abandoned artillery piece, barrel pointed skyward", weight = 1 },
+  { text = "Destroyed tank, crew still visible inside", weight = 1 },
+  { text = "Crashed aircraft, tail section pointing at the sky", weight = 1 },
+  { text = "Supply crates, contents spilled and rotting", weight = 1 },
+  { text = "Sandbag wall, half-collapsed but providing cover", weight = 1 },
+  { text = "Duckboard path, leading into the mud", weight = 1 },
+  { text = "Gas alarm bell, silent and ominous", weight = 1 },
+  { text = "Unexploded shell, half-buried and deadly", weight = 1 },
+  { text = "Ammunition crates, stacked haphazardly", weight = 1 },
+
+  # Natural Features
+  { text = "Forest clearing, trees shattered by artillery", weight = 1 },
+  { text = "River ford, water running red on certain days", weight = 1 },
+  { text = "Hill crest, contested ground changing hands daily", weight = 1 },
+  { text = "Marshland, sucking down men and equipment", weight = 1 },
+  { text = "Rocky outcropping, natural fortification", weight = 1 },
+  { text = "Cave entrance, darkness waiting within", weight = 1 },
+  { text = "Dried riverbed, excellent concealed approach", weight = 1 },
+  { text = "Ancient oak tree, only survivor of the forest", weight = 1 },
+  { text = "Waterfall, sound masking all nearby noise", weight = 1 },
+  { text = "Cliff face, vertical obstacle dominating terrain", weight = 1 },
+
+  # Water Features
+  { text = "Flooded shell crater, depth unknown", weight = 1 },
+  { text = "Stagnant pond, oily film covering surface", weight = 1 },
+  { text = "Stream running through the trenches, contaminated", weight = 1 },
+  { text = "Well, water source worth fighting over", weight = 1 },
+  { text = "Drainage ditch, providing covered movement", weight = 1 },
+  { text = "Reservoir, controlling water for the region", weight = 1 },
+  { text = "Canal lock, strategic crossing point", weight = 1 },
+  { text = "Frozen lake, ice thick enough for vehicles", weight = 1 },
+  { text = "Hot spring, steam rising incongruously from battlefield", weight = 1 },
+  { text = "Flooded basement, hiding something below", weight = 1 },
+
+  # Roads and Paths
+  { text = "Muddy road, churned to impassibility", weight = 1 },
+  { text = "Cobblestone street, shells have torn gaps", weight = 1 },
+  { text = "Forest trail, barely visible to outsiders", weight = 1 },
+  { text = "Railway tracks, twisted and broken", weight = 1 },
+  { text = "Bridge, partially collapsed but still usable", weight = 1 },
+  { text = "Crossroads, bodies from multiple engagements", weight = 1 },
+  { text = "Sunken lane, providing natural trench", weight = 1 },
+  { text = "Mountain pass, chokepoint commanding the valley", weight = 1 },
+  { text = "Corduroy road, logs laid over mud", weight = 1 },
+  { text = "Underground tunnel, connecting two positions", weight = 1 },
+
+  # Bodies and Remains
+  { text = "Mass grave, barely covered with earth", weight = 1 },
+  { text = "Hanging tree, bodies left as warning", weight = 1 },
+  { text = "Ossuary pile, bones from centuries exposed", weight = 1 },
+  { text = "Corpse-choked crater, too dangerous to clear", weight = 1 },
+  { text = "Memorial cross, fresh flowers somehow appearing", weight = 1 },
+  { text = "Impromptu cemetery, crosses made from rifles", weight = 1 },
+  { text = "Charred remains of burned bodies", weight = 1 },
+  { text = "Body caught in barbed wire, preserved by cold", weight = 1 },
+  { text = "Scattered bones, species uncertain", weight = 1 },
+  { text = "Fresh battlefield dead, eyes still open", weight = 1 },
+
+  # Supernatural Features
+  { text = "Standing stones, arrangement older than history", weight = 1 },
+  { text = "Cursed ground where nothing grows, not even mud", weight = 1 },
+  { text = "Ley line intersection, power crackling in the air", weight = 1 },
+  { text = "Sacrificial altar, recently used", weight = 1 },
+  { text = "Binding circle scorched into earth", weight = 1 },
+  { text = "Portal stones, doorway to elsewhere", weight = 1 },
+  { text = "Corruption patch, reality rotting visibly", weight = 1 },
+  { text = "Meteor crater, metal within still warm", weight = 1 },
+  { text = "Eternal fire, burning without fuel", weight = 1 },
+  { text = "Frozen time pocket, snowflakes hanging motionless", weight = 1 },
+  { text = "Screaming stones, voices trapped within", weight = 1 },
+  { text = "Bleeding ground, red moisture seeping upward", weight = 1 },
+  { text = "Shadow pool, darkness deeper than physics allows", weight = 1 },
+  { text = "Whispering trees, voices of the dead in branches", weight = 1 },
+  { text = "Crystallized lightning, frozen mid-strike", weight = 1 },
+  { text = "Bone forest, remains arranged in patterns", weight = 1 },
+  { text = "Fog bank that moves against the wind", weight = 1 },
+  { text = "Grave that empties itself each night", weight = 1 },
+  { text = "Iron spikes driven into the earth, purpose unknown", weight = 1 },
+  { text = "Crater filled with liquid that isn't water", weight = 1 },
+]

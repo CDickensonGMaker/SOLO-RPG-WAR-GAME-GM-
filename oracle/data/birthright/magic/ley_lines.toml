@@ -1,0 +1,578 @@
+# =============================================================================
+# BIRTHRIGHT REALM MAGIC: LEY LINES
+# =============================================================================
+# Ley lines are magical conduits that connect source holdings, allowing
+# mebhaighl to flow between them and enabling wizards to project power
+# across great distances.
+# =============================================================================
+
+[metadata]
+version = "1.0"
+description = "Ley line mechanics, creation, networks, and warfare"
+setting = "Cerilia"
+
+# -----------------------------------------------------------------------------
+# LEY LINE FUNDAMENTALS
+# -----------------------------------------------------------------------------
+
+[fundamentals]
+description = """
+Ley lines are invisible threads of magical energy that connect source
+holdings across provinces. They exist naturally in some places, following
+ancient paths of power, but wizards can also forge new ley lines to
+connect their holdings.
+
+Through ley lines, a wizard can:
+- Cast realm spells at distant locations
+- Transport troops and individuals
+- Pool mebhaighl from multiple sources
+- Sense disturbances across their network
+"""
+
+visibility = """
+Ley lines are invisible to most creatures. They can be seen by:
+- True Seeing or similar magic
+- Blooded individuals with major or great bloodlines (faint shimmer)
+- During magical events (eclipses, mebhaighl surges)
+- When actively carrying a spell (brief glow)
+
+Wizards can always see their own ley lines.
+"""
+
+# -----------------------------------------------------------------------------
+# LEY LINE CONNECTION RULES
+# -----------------------------------------------------------------------------
+
+[connections]
+description = """
+Ley lines connect source holdings, creating a network through which
+magical power can flow. The rules governing these connections determine
+the network's capabilities.
+"""
+
+basic_rules = """
+- A ley line connects exactly two source holdings
+- Both endpoints must have at least source level 1
+- The line passes through all provinces between endpoints
+- Multiple ley lines can pass through the same province
+- Ley lines cannot cross ocean provinces (unless island-hopping)
+"""
+
+distance_limits = """
+Maximum ley line length = Caster's bloodline score in provinces
+
+This can be extended by:
+- Great bloodline: +3 provinces
+- Magical amplification: +1 per additional RP spent
+- Relay sources: Chain through intermediate sources (no limit)
+"""
+
+terrain_effects = """
+Some terrain affects ley line creation and maintenance:
+
+Terrain          | Effect on Ley Lines
+-----------------|---------------------------------------------
+Mountains        | +1 GB cost per mountain province crossed
+Ocean            | Cannot cross (except island to island)
+Desert           | Normal
+Forest           | -1 cost if endpoint is in forest
+Wasteland        | 50% chance of ley line instability
+Shadow-touched   | +50% effectiveness but corruption risk
+Elven lands      | Natural ley lines more common
+"""
+
+# -----------------------------------------------------------------------------
+# FORGING LEY LINES
+# -----------------------------------------------------------------------------
+
+[forging]
+description = """
+Creating a new ley line is a significant magical undertaking. The wizard
+literally forges a channel through which mebhaighl can flow.
+"""
+
+requirements = """
+To forge a ley line:
+1. Control source holdings at both endpoints
+2. Minimum source level 4 at the casting location
+3. Bloodline score sufficient to reach the destination
+4. Required Gold Bars and Regency Points
+5. One domain action per province crossed
+"""
+
+costs = """
+Base Cost:
+- 2 GB per province the ley line crosses
+- 1 RP per province crossed
+- 1 domain action per province (can be spread across turns)
+
+Additional Costs:
+- Mountain terrain: +1 GB per mountain province
+- Hostile provinces: +1 GB and +1 RP per hostile province
+- Contested sources: May require Contest action first
+"""
+
+time_requirements = """
+Ley lines are forged province by province:
+- One province can be connected per domain action
+- A 5-province ley line takes 5 domain actions minimum
+- Actions need not be consecutive but progress decays:
+  - 2+ turns gap: Lose 1 province of progress
+  - 4+ turns gap: Ley line attempt fails, restart required
+"""
+
+forging_process = """
+1. Declaration: Announce ley line forging (reveals both endpoints)
+2. Foundation: Establish anchor at origin source (1 action)
+3. Extension: Extend through each province (1 action each)
+4. Completion: Anchor at destination source (included in last extension)
+5. Stabilization: Ley line is fragile for 1 domain turn after completion
+"""
+
+oracle_prompts_forging = [
+    "Does the forging attract attention from other wizards?",
+    "Are there natural magical currents that ease or hinder the process?",
+    "Do the provinces crossed react to the ley line's passage?",
+    "Is there competition for the ley line route?",
+    "Does the completed ley line have any unusual properties?"
+]
+
+# -----------------------------------------------------------------------------
+# LEY LINE NETWORKS
+# -----------------------------------------------------------------------------
+
+[networks]
+description = """
+Multiple ley lines connecting multiple sources create a network. Networks
+provide significant advantages over isolated source holdings.
+"""
+
+network_benefits = """
+Connected Network Benefits:
+- Pool mebhaighl: Combine sources for powerful spells
+- Extended range: Cast spells anywhere in the network
+- Rapid response: Transport from any node to any other
+- Redundancy: Loss of one source doesn't isolate others
+- Sensing: Feel disturbances anywhere in network (+2 to detect intrusion)
+"""
+
+pooling_mebhaighl = """
+Sources in a connected network can pool their mebhaighl:
+- Total mebhaighl = Sum of all connected source levels
+- Pooling cost: -2 effective source level for the spell
+- Maximum pooling: Cannot exceed highest single source +3
+
+Example: Source 4, Source 5, and Source 3 connected
+- Total available: 12 mebhaighl
+- Pooled effective level: Highest (5) + 3 = 8 maximum
+- Can cast level 8 spells at -2 = effective level 6
+"""
+
+network_vulnerabilities = """
+Networks also have weaknesses:
+- Single point of failure at crucial nodes
+- Ley traps can cascade through connections
+- Network reveals your source locations
+- Maintaining extensive networks is expensive
+- Enemy wizards can trace network to find hidden sources
+"""
+
+network_topology = """
+Network Types:
+- Linear: Sources connected in a chain (simple but vulnerable)
+- Star: Central hub source connected to satellites (efficient but fragile center)
+- Mesh: Multiple connections between sources (robust but expensive)
+- Ring: Circular connection (good redundancy)
+
+Hybrid networks combining these forms are most effective.
+"""
+
+# -----------------------------------------------------------------------------
+# LEY LINE MAINTENANCE
+# -----------------------------------------------------------------------------
+
+[maintenance]
+description = """
+Ley lines require ongoing attention to remain stable and functional.
+Neglected lines weaken and eventually fade.
+"""
+
+maintenance_costs = """
+Annual Maintenance:
+- 1 GB per 3 ley lines (round up)
+- No RP cost for stable lines
+- Damaged or contested lines: +1 GB each
+
+Neglect Effects:
+- 1 year unmaintained: Ley line becomes unstable (-2 to spells through it)
+- 2 years unmaintained: Ley line weakens (50% spell failure chance)
+- 3 years unmaintained: Ley line fades (destroyed)
+"""
+
+strengthening = """
+Ley lines can be strengthened beyond normal:
+- Reinforced Line (5 GB, 2 RP): +2 to resist attacks, doubled capacity
+- Warded Line (3 GB, 3 RP): Ley Trap included in the line
+- Hidden Line (4 GB, 2 RP): -4 to enemy detection attempts
+- Ancient Binding (10 GB, 5 RP): Permanent, no maintenance needed
+
+Strengthening takes 1 domain action per enhancement.
+"""
+
+# -----------------------------------------------------------------------------
+# LEY LINE COMBAT
+# -----------------------------------------------------------------------------
+
+[combat]
+description = """
+Ley lines can be attacked, defended, and used as weapons. Control of
+ley lines is often crucial in magical warfare.
+"""
+
+attacking_ley_lines = """
+Methods to Attack Ley Lines:
+
+1. Raze (Spell):
+   - Spend double normal Raze cost
+   - Destroys one ley line segment (between two provinces)
+   - Does not affect sources directly
+
+2. Source Contest:
+   - If you take control of either endpoint source, you control the ley line
+   - The ley line can be rerouted, severed, or claimed
+
+3. Province Warfare:
+   - Conquering a province the ley line passes through doesn't sever it
+   - But you can attempt to disrupt it (domain action, 2 GB, bloodline check)
+   - Disruption: Ley line unstable for 1 domain turn
+
+4. Ley Disruption (Special Action):
+   - Must have source in or adjacent to target province
+   - Cost: 3 GB, 3 RP, bloodline check vs. creator's bloodline
+   - Success: Ley line severed at that point
+   - Failure: Your source takes 1d3 levels damage
+"""
+
+defending_ley_lines = """
+Methods to Defend Ley Lines:
+
+1. Ley Trap (Spell):
+   - Damages enemies trying to use or attack the line
+   - Multiple traps can be placed on one line
+   - Triggers are customizable (enemy use, attack, etc.)
+
+2. Warding (Spell):
+   - Protects the source endpoints
+   - Does not protect the line itself
+
+3. Military Presence:
+   - Troops in provinces the line crosses can respond to attacks
+   - Fortifications in key provinces protect access points
+
+4. Redundancy:
+   - Multiple paths between sources survive single-point attacks
+   - Ring or mesh networks are more resilient
+"""
+
+ley_line_interception = """
+Intercepting Enemy Ley Lines:
+
+If an enemy ley line passes through your province:
+- You cannot automatically see it (requires bloodline check or magic)
+- You cannot use it (it's keyed to the owner)
+- You can attempt to disrupt it (see attacking)
+- You can set up ambush for Transport attempts
+
+If you have a source in a province an enemy ley line passes through:
+- Automatic awareness of the line's existence
+- Can attempt to tap into it (contest, bloodline vs. bloodline)
+- Successful tap: Know when spells are cast through it
+- Critical tap: Can attempt to hijack spells (very difficult)
+"""
+
+# -----------------------------------------------------------------------------
+# LEY TRAPS
+# -----------------------------------------------------------------------------
+
+[ley_traps]
+description = """
+Ley traps are magical defenses placed on ley lines to damage or disrupt
+enemies who attempt to use or attack them.
+"""
+
+basic_ley_trap = """
+Standard Ley Trap (Ley Trap spell):
+- Triggers when enemy casts through the trapped line
+- Disrupts the spell (no effect)
+- Deals 2d6 damage to enemy wizard
+- Expended after triggering
+"""
+
+trap_variations = """
+Trap Type         | Cost     | Effect
+------------------|----------|--------------------------------------------
+Detection Trap    | 2 GB     | Alerts owner, doesn't disrupt
+Disruption Trap   | 3 GB     | Disrupts spell, no damage
+Damage Trap       | 3 GB     | 2d6 damage, doesn't disrupt
+Full Trap         | 5 GB     | Disrupts spell + 2d6 damage
+Backlash Trap     | 7 GB     | Returns spell to caster (random target)
+Cascade Trap      | 10 GB    | Triggers all traps on the line simultaneously
+"""
+
+trap_placement = """
+- One trap per source level on each ley line
+- Traps can be placed at any point along the line
+- Traps can be customized with trigger conditions:
+  - Any enemy use
+  - Specific spells only
+  - Specific wizard only
+  - Any use (including allies - be careful!)
+"""
+
+trap_detection = """
+Detecting Ley Traps:
+- Scry can detect traps (contested roll vs. trap setter)
+- Sending a test spell (cantrip level) may trigger detection traps safely
+- True Seeing reveals traps automatically
+- Experienced wizards can sense traps (bloodline check -4)
+"""
+
+oracle_prompts_traps = [
+    "Is the ley trap detected before triggering?",
+    "Does the trap function as intended?",
+    "Are there multiple traps that trigger?",
+    "Does the trap damage reveal the line's location to others?",
+    "Is there a way to safely disarm or bypass the trap?"
+]
+
+# -----------------------------------------------------------------------------
+# NATURAL LEY LINES
+# -----------------------------------------------------------------------------
+
+[natural_ley_lines]
+description = """
+Some ley lines exist naturally, formed by ancient magical events or the
+natural flow of mebhaighl through the land. These can be discovered and
+claimed by wizards.
+"""
+
+discovery = """
+Finding Natural Ley Lines:
+- Bloodline check in provinces with source potential 5+
+- Elven lands often have natural ley lines
+- Ancient magical sites frequently mark ley line intersections
+- Shadow World boundaries may have natural connections
+"""
+
+claiming_natural_lines = """
+To Claim a Natural Ley Line:
+1. Control a source at one endpoint (or claim one)
+2. Spend 1 GB and 1 RP to attune to the line
+3. Line is now yours unless contested
+
+Natural lines are often more stable than forged lines:
+- No maintenance cost
+- +2 to resist disruption
+- May have special properties (see table)
+"""
+
+natural_line_properties = """
+Roll 1d10 for Natural Ley Line Special Properties:
+1-3: Standard natural line (no special properties)
+4: Enhanced flow (+1 mebhaighl through this line)
+5: Hidden (+4 to detection difficulty)
+6: Anchored (cannot be Razed, only disrupted)
+7: Resonant (+1 effective source level for spells through it)
+8: Seasonal (double power during one season, dormant another)
+9: Elemental attunement (+2 to specific element spells)
+10: Ancient (+2 mebhaighl, hidden, cannot be Razed)
+"""
+
+famous_natural_lines = """
+Notable Natural Ley Lines in Cerilia:
+- The Erebannien Web: Ancient elven network in Tuarhievel
+- The Gorgon's Veins: Dark ley lines radiating from Kal-Saitharak
+- The Masetian Legacy: Lines connecting old Masetian magical sites
+- The Spiderfell Threads: Corrupted lines in the Spiderfell
+- The Sielwode Spiral: Elven defensive network
+"""
+
+# -----------------------------------------------------------------------------
+# LEY LINE NETWORK EFFECTS
+# -----------------------------------------------------------------------------
+
+[network_effects]
+description = """
+Large ley line networks create emergent effects beyond simple connectivity.
+"""
+
+scale_bonuses = """
+Network Size    | Bonus Effect
+----------------|--------------------------------------------
+3-5 sources     | +1 to all realm spell casting
+6-10 sources    | +2 to casting, sense intrusion automatically
+11-15 sources   | +3 to casting, +1 effective source level
+16-20 sources   | +4 to casting, can cast two spells per turn
+21+ sources     | +5 to casting, network gains sentience (rare)
+"""
+
+resonance_effects = """
+When ley lines intersect (pass through the same province without a source):
+- Intersection points can be sensed by blooded (faint buzz)
+- Spells cast through intersecting lines may interfere (5% chance)
+- Intersections can be developed into new sources (+1 potential)
+- Enemy wizards at intersections can attempt to tap both lines
+"""
+
+network_sentience = """
+Extremely large networks (21+ sources) or very old networks may develop
+a form of magical sentience:
+- The network has its own awareness (primitive but real)
+- Can warn wizard of intrusion before detection check
+- May resist attempts to damage it (+2 to all defenses)
+- May have opinions about how it's used (rarely problematic)
+- If wizard dies, network may seek new controller
+
+Oracle Prompts for Sentient Networks:
+- Does the network communicate with the wizard?
+- Does it have preferences or taboos?
+- Does it remember previous controllers?
+- Does it resist certain uses of its power?
+"""
+
+# -----------------------------------------------------------------------------
+# LEY LINE SPECIAL USES
+# -----------------------------------------------------------------------------
+
+[special_uses]
+description = """
+Beyond basic spell casting and transport, ley lines enable special
+magical techniques.
+"""
+
+[[special_uses.techniques]]
+name = "Ley Line Scrying"
+description = "Use ley lines to extend scrying range"
+requirements = "Scry spell, connected ley line network"
+effect = """
+Scry through ley lines to observe distant provinces:
+- Can scry any province containing your ley line
+- Can scry one province beyond each endpoint
+- Network provides +2 to resist counter-scrying
+"""
+cost = "Normal Scry cost"
+
+[[special_uses.techniques]]
+name = "Mebhaighl Surge"
+description = "Channel extra power through a ley line for one spell"
+requirements = "Source level 6+, connected ley line"
+effect = """
+Sacrifice 1 level from one source temporarily to add +3 to a single spell.
+The sacrificed level returns next domain turn.
+"""
+cost = "1 source level temporarily"
+
+[[special_uses.techniques]]
+name = "Network Defense"
+description = "Use the entire network to resist attack"
+requirements = "3+ connected sources, network threatened"
+effect = """
+When any source in your network is contested or attacked:
+- Pool defensive resources from all connected sources
+- Effective defense level = highest source + 1 per additional source
+- Requires full turn concentration (no other actions)
+"""
+cost = "Full domain turn"
+
+[[special_uses.techniques]]
+name = "Ley Line Message"
+description = "Send instant communication along ley lines"
+requirements = "Any source connected to recipient"
+effect = """
+Send a mental message to anyone at a connected source:
+- Message up to 25 words
+- Recipient knows sender's identity
+- No RP or GB cost
+- Cannot be intercepted (but existence can be detected)
+"""
+cost = "Free"
+
+[[special_uses.techniques]]
+name = "Emergency Transport"
+description = "Instant escape through ley lines"
+requirements = "Source connected to safe location"
+effect = """
+As a reaction when threatened, transport yourself to any connected source:
+- Immediate action, interrupts enemy actions
+- Can bring up to bloodline score in individuals
+- 25% chance of disorientation on arrival (stunned 1 turn)
+"""
+cost = "1 RP, no GB"
+
+# -----------------------------------------------------------------------------
+# ORACLE TABLES FOR LEY LINES
+# -----------------------------------------------------------------------------
+
+[oracle_tables.ley_line_discovery]
+description = "When searching for natural ley lines"
+entries = [
+    { roll = [1, 2], result = "Strong natural ley line found (no maintenance)" },
+    { roll = [3, 4], result = "Weak natural line found (standard maintenance)" },
+    { roll = [5, 6], result = "Faded ancient line (can be restored for double cost)" },
+    { roll = [7, 8], result = "No ley lines in this area" },
+    { roll = [9, 9], result = "Corrupted ley line (Shadow-touched)" },
+    { roll = [10, 10], result = "Ley line intersection point (special potential)" }
+]
+
+[oracle_tables.ley_line_complications]
+description = "Complications during ley line forging or use"
+entries = [
+    { roll = [1, 2], result = "Smooth progress - no complications" },
+    { roll = [3, 4], result = "Minor delay - extra domain action needed" },
+    { roll = [5, 6], result = "Magical interference - bloodline check to continue" },
+    { roll = [7, 8], result = "Territorial spirits disturbed - appease or fight" },
+    { roll = [9, 9], result = "Another wizard noticed - potential competition" },
+    { roll = [10, 10], result = "Ancient magic uncovered - opportunity or danger" }
+]
+
+[oracle_tables.ley_trap_trigger]
+description = "When a ley trap might trigger unexpectedly"
+entries = [
+    { roll = [1, 3], result = "Trap triggers as intended on enemy" },
+    { roll = [4, 5], result = "Trap triggers but enemy partially resists (-50% effect)" },
+    { roll = [6, 7], result = "Trap triggers on wrong target (random)" },
+    { roll = [8, 9], result = "Trap fails to trigger (still present)" },
+    { roll = [10, 10], result = "Trap misfires - damages the ley line itself" }
+]
+
+[oracle_tables.network_event]
+description = "Random events in large ley line networks"
+entries = [
+    { roll = [1, 2], result = "Mebhaighl surge - +2 collection this turn" },
+    { roll = [3, 4], result = "Strange resonance - visions from the network" },
+    { roll = [5, 6], result = "External probe - someone is examining your network" },
+    { roll = [7, 8], result = "Instability - one random line needs reinforcement" },
+    { roll = [9, 9], result = "Shadow touch - corruption risk on one line" },
+    { roll = [10, 10], result = "Network awareness - the network communicates" }
+]
+
+[oracle_tables.transport_complications]
+description = "Complications during ley line transport"
+entries = [
+    { roll = [1, 5], result = "Transport successful - no complications" },
+    { roll = [6, 7], result = "Minor delay - arrive 1d6 hours late" },
+    { roll = [8, 8], result = "Off-target - arrive in adjacent province" },
+    { roll = [9, 9], result = "Disorientation - all transported stunned 1 round" },
+    { roll = [10, 10], result = "Interception - enemy aware of transport (if trapped)" }
+]
+
+[oracle_tables.contested_ley_line]
+description = "Results when ley lines are contested or attacked"
+entries = [
+    { roll = [1, 2], result = "Defender holds - attack fails completely" },
+    { roll = [3, 4], result = "Stalemate - line unstable, neither controls" },
+    { roll = [5, 6], result = "Attacker gains foothold - can contest again at +2" },
+    { roll = [7, 8], result = "Partial success - line damaged but not severed" },
+    { roll = [9, 9], result = "Line severed - both sides lose access" },
+    { roll = [10, 10], result = "Catastrophic - magical backlash affects both wizards" }
+]

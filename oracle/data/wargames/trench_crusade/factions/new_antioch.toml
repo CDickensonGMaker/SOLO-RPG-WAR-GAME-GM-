@@ -1,0 +1,202 @@
+# Trench Crusade - Principality of New Antioch
+# Human soldiers of the faithful armed with industrial-age weaponry
+
+name = "Principality of New Antioch"
+allegiance = "Faithful"
+description = "The last Crusader state, New Antioch fields armies of mortal soldiers bolstered by faith and firepower. Though individually weak, their coordination and arsenal make them deadly."
+playstyle = "Combined arms with Fireteams - squishy but efficient. Squeeze every bit of value from your vast arsenal of weapons."
+strengths = ["Fireteam coordination", "Weapon variety", "Blood Bath at 3 markers", "Flexibility"]
+weaknesses = ["Fragile individual models", "Dependent on synergies", "Low base stats"]
+
+[faction_rules]
+name = "Fireteams"
+description = "Two units can activate together as a Fireteam. Blood Bath triggers at 3 markers instead of 6 when attacking together."
+
+# =============================================================================
+# CHARACTERS / LEADERS
+# =============================================================================
+
+[[units]]
+name = "Officer"
+type = "infantry"
+category = "HQ"
+points = 50
+models = "1"
+tactical_role = "commander"
+threat_level = "medium"
+preferred_targets = ["infantry", "characters"]
+weaknesses = ["snipers", "melee_specialists"]
+special_rules = ["Leader", "Command", "Fireteam Coordinator"]
+keywords = ["Infantry", "Character", "Human", "Faithful"]
+
+[units.stats]
+Movement = 6
+Ranged = "3+"
+Melee = "4+"
+Defense = "5+"
+Wounds = 1
+
+[[units.weapons]]
+name = "Service Pistol"
+range = "12\""
+strength = "Standard"
+type = "Pistol"
+shots = "1"
+
+[[units.weapons]]
+name = "Officer's Sword"
+range = "Melee"
+strength = "Standard"
+type = "Melee"
+
+# =============================================================================
+# TROOPS
+# =============================================================================
+
+[[units]]
+name = "Infantryman"
+type = "infantry"
+category = "Troops"
+points = 15
+models = "1"
+tactical_role = "line_infantry"
+threat_level = "low"
+preferred_targets = ["infantry"]
+weaknesses = ["heavy_weapons", "melee_specialists"]
+special_rules = ["Fireteam"]
+keywords = ["Infantry", "Human", "Faithful"]
+
+[units.stats]
+Movement = 6
+Ranged = "4+"
+Melee = "5+"
+Defense = "6+"
+Wounds = 1
+
+[[units.weapons]]
+name = "Rifle"
+range = "24\""
+strength = "Standard"
+type = "Rifle"
+shots = "1"
+
+[[units.weapons]]
+name = "Bayonet"
+range = "Melee"
+strength = "-1"
+type = "Melee"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Combat Engineer"
+type = "infantry"
+category = "Troops"
+points = 25
+models = "1"
+tactical_role = "support"
+threat_level = "medium"
+preferred_targets = ["fortifications", "vehicles"]
+weaknesses = ["ranged_attacks", "snipers"]
+special_rules = ["Fireteam", "Demolitions Expert"]
+keywords = ["Infantry", "Human", "Faithful", "Engineer"]
+
+[units.stats]
+Movement = 6
+Ranged = "4+"
+Melee = "4+"
+Defense = "5+"
+Wounds = 1
+
+[[units.weapons]]
+name = "Carbine"
+range = "18\""
+strength = "Standard"
+type = "Rifle"
+shots = "1"
+
+[[units.weapons]]
+name = "Entrenching Tool"
+range = "Melee"
+strength = "Standard"
+type = "Melee"
+abilities = ["Armor Piercing"]
+
+# =============================================================================
+# ELITES
+# =============================================================================
+
+[[units]]
+name = "Heavy Weapons Team"
+type = "infantry"
+category = "Elites"
+points = 45
+models = "2"
+tactical_role = "fire_support"
+threat_level = "high"
+preferred_targets = ["infantry", "groups"]
+weaknesses = ["flanking", "melee", "snipers"]
+special_rules = ["Heavy Weapon", "Crew Served", "Suppression"]
+keywords = ["Infantry", "Human", "Faithful", "Heavy Weapon"]
+
+[units.stats]
+Movement = 4
+Ranged = "3+"
+Melee = "5+"
+Defense = "5+"
+Wounds = 2
+
+[[units.weapons]]
+name = "Machine Gun"
+range = "36\""
+strength = "+1"
+type = "Heavy"
+shots = "3"
+abilities = ["Suppression", "Crew Served"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Mechanized Heavy Infantry"
+type = "infantry"
+category = "Elites"
+points = 40
+models = "1"
+tactical_role = "assault"
+threat_level = "high"
+preferred_targets = ["infantry", "fortifications"]
+weaknesses = ["anti-tank", "high_ap_weapons"]
+special_rules = ["Armor Plating", "Slow"]
+keywords = ["Infantry", "Human", "Faithful", "Armored"]
+
+[units.stats]
+Movement = 4
+Ranged = "4+"
+Melee = "3+"
+Defense = "3+"
+Wounds = 2
+
+[[units.weapons]]
+name = "Trench Gun"
+range = "12\""
+strength = "+1"
+type = "Shotgun"
+shots = "2"
+
+[[units.weapons]]
+name = "Power Maul"
+range = "Melee"
+strength = "+2"
+type = "Melee"
+abilities = ["Armor Piercing"]
+
+# =============================================================================
+# VARIANTS / SUB-FACTIONS
+# =============================================================================
+
+# Éire Rangers - Dodge-focused
+# Stoßtruppen - Flamethrowers and grenades
+# Kingdom of Alba - Melee specialists
+# Papal States - Elite mercenaries
+# Expeditionary Forces of Abyssinia - Versatile shooters
+# Red Brigade - Snowballing volunteers with war dogs

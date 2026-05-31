@@ -1,0 +1,30 @@
+# Cyberpunk NPC Dispositions
+# Initial attitudes and stances toward strangers
+
+[dispositions]
+entries = [
+  { text = "Hostile - sees you as a threat or competition to eliminate", weight = 1 },
+  { text = "Suspicious - assumes you're running an angle, watching for it", weight = 2 },
+  { text = "Wary - cautious and guarded, not giving anything away", weight = 3 },
+  { text = "Neutral - purely transactional, no feelings either way", weight = 3 },
+  { text = "Calculating - assessing your value and threat level", weight = 2 },
+  { text = "Professional - business-like courtesy, nothing personal", weight = 3 },
+  { text = "Indifferent - couldn't care less about you or your problems", weight = 2 },
+  { text = "Curious - interested in what you want and who you are", weight = 2 },
+  { text = "Amused - finds your presence entertaining somehow", weight = 1 },
+  { text = "Respectful - reputation precedes you, gets professional courtesy", weight = 2 },
+  { text = "Friendly - genuinely warm, possibly dangerously so", weight = 1 },
+  { text = "Desperate - needs something and hoping you can provide", weight = 2 },
+  { text = "Fearful - scared of you or what you represent", weight = 1 },
+  { text = "Contemptuous - looks down on you, barely hiding disdain", weight = 2 },
+  { text = "Opportunistic - sees potential profit in this interaction", weight = 2 },
+  { text = "Guarded optimism - hoping this could be legitimate", weight = 1 },
+  { text = "Weary resignation - too tired to care, just wants it over", weight = 2 },
+  { text = "Aggressive interest - pushes hard, wants to know everything", weight = 1 },
+  { text = "Nervous energy - something making them twitchy around you", weight = 2 },
+  { text = "Cold professionalism - efficient, emotionless, gets to the point", weight = 2 },
+  { text = "Sardonic - everything is a joke, including your business", weight = 1 },
+  { text = "Patronizing - treats you like a child or amateur", weight = 1 },
+  { text = "Predatory - sees you as prey, social or otherwise", weight = 1 },
+  { text = "Protective - concerned about something you might threaten", weight = 1 },
+]

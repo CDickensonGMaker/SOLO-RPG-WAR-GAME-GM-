@@ -1,0 +1,1152 @@
+# =============================================================================
+# AWNSHEGHLIEN - THE BLOOD ABOMINATIONS OF CERILIA
+# =============================================================================
+# Those who bear the tainted blood of Azrai, corrupted by their divine essence
+# into monstrous forms. They are the great terrors that plague the land.
+# =============================================================================
+
+[metadata]
+title = "Awnsheghlien of Cerilia"
+description = "The blood abominations - those corrupted by Azrai's tainted bloodline"
+version = "1.0.0"
+setting = "Birthright"
+
+# =============================================================================
+# THE GREAT AWNSHEGHLIEN
+# =============================================================================
+# The most powerful and infamous of the blood abominations. Each commands
+# territory, armies, or influence that threatens entire regions.
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# THE GORGON - The Black Prince, Most Powerful Awnsheghlien
+# -----------------------------------------------------------------------------
+[[awnsheghlien]]
+name = "The Gorgon"
+true_name = "Raesene the Black Prince"
+origin = "Half-brother to Roele and Haelyn, champion of Azrai at Deismaar. The divine blood transformed him into the most powerful awnsheghlien."
+current_age = "Nearly 1,500 years"
+bloodline_derivation = "azrai"
+bloodline_strength = "true"
+blood_abilities = [
+    "Battlewise (Great)",
+    "Blood History (Great)",
+    "Bloodform (Great)",
+    "Death Touch (Great)",
+    "Divine Aura (Great)",
+    "Fear (Great)",
+    "Invulnerability (Great)",
+    "Regeneration (Great)",
+    "Touch of Decay (Great)",
+    "Wither Touch (Great)",
+    "All Azrai abilities at maximum power"
+]
+physical_description = "A massive humanoid figure covered in iron-hard scales, with burning red eyes and a gaze that turns living creatures to stone. He stands over eight feet tall and radiates palpable malevolence."
+
+[awnsheghlien.domain]
+name = "Kal-Saitharak"
+other_names = ["The Crown of the Gorgon", "The Gorgon's Crown"]
+description = "A blighted mountainous realm of perpetual gloom, ruled absolutely by the Gorgon. The land itself seems to reflect his corruption - twisted trees, poisoned waters, and an ever-present miasma of dread."
+region = "Anuire (Northern)"
+provinces = 12
+holdings = "All law, most temples (to Azrai), significant source holdings"
+military_strength = "overwhelming"
+army_composition = [
+    "Orog legions - disciplined and fanatically loyal",
+    "Human thralls - broken slaves and willing servants",
+    "Undead formations - tireless soldiers of the damned",
+    "Stone guardians - victims of the Gorgon's gaze given unholy animation",
+    "Awnshegh lieutenants - lesser abominations bound to his service"
+]
+notable_locations = [
+    "Kal-Saitharak (Capital) - The fortress-city carved from a mountain",
+    "The Petrified Legion - A field of his enemies turned to stone",
+    "The Blood Pits - Where new abominations are created",
+    "The Iron Mines - Worked by endless slave labor"
+]
+
+[awnsheghlien.personality]
+intelligence = "genius"
+patience = "infinite"
+cruelty = "absolute"
+goals = [
+    "Conquer all of Cerilia",
+    "Exterminate all other bloodlines",
+    "Become a god in Azrai's place",
+    "Destroy the legacy of his half-brothers",
+    "Corrupt or absorb all divine bloodlines"
+]
+methods = [
+    "Patient military conquest",
+    "Corruption of nobles and regents",
+    "Terror campaigns to weaken enemies",
+    "Assassination of blooded heirs",
+    "Alliance with other awnsheghlien when expedient",
+    "Economic strangulation of neighboring realms",
+    "Infiltration through human agents"
+]
+weaknesses = [
+    "Overconfidence born of centuries of power",
+    "Cannot truly trust any lieutenant",
+    "Obsessive hatred of Roele's heirs",
+    "Impatience with failure among servants",
+    "Ancient pride that can be manipulated",
+    "The memory of his mortal family haunts him"
+]
+relationships = [
+    { name = "The Spider", status = "wary alliance", notes = "Respects her cunning but would destroy her if convenient" },
+    { name = "The Magian", status = "contemptuous tolerance", notes = "Useful but ultimately beneath him" },
+    { name = "Anuirean Regents", status = "enemies", notes = "All are obstacles to be crushed" },
+    { name = "The Iron Throne", status = "primary target", notes = "The symbol of what his brothers built must be destroyed" }
+]
+
+[awnsheghlien.as_enemy]
+threat_level = "catastrophic"
+challenge_rating = "30+"
+typical_actions = [
+    "Border raids by orog warbands to test defenses",
+    "Corruption of borderland nobles through agents",
+    "Assassination of blooded heirs by elite killers",
+    "Full military invasion with overwhelming force",
+    "Economic warfare through banditry and trade disruption",
+    "Placement of spies in enemy courts",
+    "Subversion of religious institutions",
+    "Terrorizing peasant populations to create refugees"
+]
+signs_of_attention = [
+    "Orog scouts spotted in remote provinces",
+    "Nobles begin acting strangely or cruelly",
+    "Livestock found drained of blood or turned to stone",
+    "Nightmares plague the regent and advisors",
+    "Trade caravans vanish without trace",
+    "Stone statues appear in wilderness areas",
+    "Local priests report dark omens",
+    "Refugees arrive with tales of border atrocities"
+]
+combat_tactics = [
+    "Never fights fair - brings overwhelming force",
+    "Uses gaze attack to petrify key enemies",
+    "Lieutenants engage first to assess enemy strength",
+    "Retreats if genuinely threatened (rare)",
+    "Pursues vendettas across generations"
+]
+legendary_actions = [
+    "Petrifying Gaze - Turn creatures to stone",
+    "Call Orog Warband - Summon loyal soldiers",
+    "Bloodline Drain - Absorb enemy bloodline power",
+    "Terrifying Presence - Force morale checks in armies"
+]
+
+[awnsheghlien.oracle_integration]
+random_event_trigger = [75, 80]
+plot_involvement_chance = 15
+adventure_seeds = [
+    "The Gorgon's lieutenant offers a dark bargain - power for service",
+    "An ancient weapon effective against the Gorgon is rumored discovered",
+    "Refugees flee the Gorgon's latest conquest, bringing tales of horror",
+    "A border noble secretly pledges fealty to Kal-Saitharak",
+    "The Gorgon demands tribute or faces invasion",
+    "A petrified hero is discovered - can they be restored?",
+    "The Gorgon's agents seek a specific bloodline heir",
+    "An orog defector offers intelligence on Gorgon's plans",
+    "The Gorgon challenges a regent to single combat",
+    "Ancient records reveal a weakness of the Gorgon"
+]
+domain_action_modifiers = [
+    { action = "Diplomacy", modifier = -4, reason = "Fear of association with the Gorgon's enemies" },
+    { action = "Create Army", modifier = 2, reason = "Threat motivates recruitment" },
+    { action = "Espionage", modifier = -2, reason = "His agents are everywhere" }
+]
+
+# -----------------------------------------------------------------------------
+# THE SPIDER - Weaver of Plots
+# -----------------------------------------------------------------------------
+[[awnsheghlien]]
+name = "The Spider"
+true_name = "Tal-Qazar (speculated)"
+origin = "Once a Khinasi wizard who delved too deeply into forbidden blood magic. The transformation was gradual, driven by her own choices rather than a single catastrophic event."
+current_age = "Over 800 years"
+bloodline_derivation = "azrai"
+bloodline_strength = "great"
+blood_abilities = [
+    "Blood History (Great)",
+    "Charm Aura (Great)",
+    "Detect Lie (Major)",
+    "Divine Aura (Major)",
+    "Fear (Major)",
+    "Poison Sense (Great)",
+    "Regeneration (Major)",
+    "Shadow Form (Major)",
+    "Spider Affinity (Unique) - Commands all arachnids",
+    "Web Walking (Unique) - Traverses her information network instantly"
+]
+physical_description = "Her form shifts based on need. In her lair, she appears as a massive spider-human hybrid. Among mortals, she can assume the guise of a beautiful woman, though her eyes always hold an alien quality. Eight limbs can emerge from her torso at will."
+
+[awnsheghlien.domain]
+name = "The Spiderfell"
+other_names = ["The Webwood", "The Spider's Demesne"]
+description = "A vast, web-shrouded forest where enormous spiders serve as guardians and messengers. The trees themselves seem to lean together, creating a perpetual twilight beneath their branches."
+region = "Anuire (Central)"
+provinces = 4
+holdings = "Source holdings throughout, extensive spy network across Cerilia"
+military_strength = "deceptive"
+army_composition = [
+    "Giant spider swarms - countless arachnid servants",
+    "Enthralled humans - willing and unwilling servants",
+    "Web golems - constructs of magical webbing",
+    "Poison cultists - human worshippers who serve her"
+]
+notable_locations = [
+    "The Heartweave - Her central lair, a web-city in the forest canopy",
+    "The Silk Tombs - Where victims are preserved indefinitely",
+    "Listening Posts - Nodes throughout Cerilia where her spiders gather intelligence"
+]
+
+[awnsheghlien.personality]
+intelligence = "genius"
+patience = "extraordinary"
+cruelty = "calculated"
+goals = [
+    "Know everything that happens in Cerilia",
+    "Manipulate events from the shadows",
+    "Accumulate favors and leverage over the powerful",
+    "Survive and grow stronger",
+    "Corrupt the pure bloodlines of Cerilia",
+    "Eventually challenge the Gorgon"
+]
+methods = [
+    "Espionage networks spanning the continent",
+    "Blackmail and leverage",
+    "Trading secrets for power",
+    "Patient manipulation over decades",
+    "Placing agents in positions of influence",
+    "Offering 'help' that creates dependency",
+    "Eliminating those who cannot be controlled"
+]
+weaknesses = [
+    "Overcomplicates simple problems",
+    "Underestimates direct action",
+    "Cannot resist gathering more information",
+    "Her web of plots sometimes conflicts",
+    "Fire - a primal fear",
+    "True isolation - needs her network"
+]
+relationships = [
+    { name = "The Gorgon", status = "wary respect", notes = "They cooperate but each plans the other's eventual destruction" },
+    { name = "Anuirean Courts", status = "deeply infiltrated", notes = "Her agents are everywhere" },
+    { name = "The Raven", status = "rivalry", notes = "Competing spy networks clash regularly" },
+    { name = "The Magian", status = "information trading", notes = "Exchanges secrets for magical knowledge" }
+]
+
+[awnsheghlien.as_enemy]
+threat_level = "extreme"
+challenge_rating = "24"
+typical_actions = [
+    "Gathering intelligence on the regent",
+    "Placing spies in the court",
+    "Blackmailing advisors and allies",
+    "Offering dark bargains for information",
+    "Eliminating those who threaten her network",
+    "Turning allies against each other",
+    "Poisoning key individuals",
+    "Kidnapping for interrogation or leverage"
+]
+signs_of_attention = [
+    "Spider populations increase dramatically",
+    "Servants report being followed",
+    "Private conversations become public knowledge",
+    "A mysterious woman appears at court",
+    "Allies become evasive or frightened",
+    "Documents go missing and reappear",
+    "Advisors receive anonymous threatening notes",
+    "Previously secret plans are anticipated by enemies"
+]
+combat_tactics = [
+    "Avoids direct combat whenever possible",
+    "Uses poison and ambush",
+    "Fights only in her lair where webs give advantage",
+    "Summons spider swarms to overwhelm",
+    "Always has an escape route planned"
+]
+
+[awnsheghlien.oracle_integration]
+random_event_trigger = [81, 85]
+plot_involvement_chance = 20
+adventure_seeds = [
+    "The Spider offers information in exchange for a 'small favor'",
+    "A court advisor is revealed as the Spider's agent",
+    "The Spider knows the location of something the regent seeks",
+    "Someone is spreading lies about the regent - the trail leads to the Spiderfell",
+    "The Spider requests a meeting to discuss 'mutual interests'",
+    "A rival is receiving intelligence from the Spider",
+    "The regent's secret is being used as leverage",
+    "An ally begs for help - they're caught in the Spider's web",
+    "The Spider wants a specific person delivered to her",
+    "A map to the Spider's true lair is discovered"
+]
+
+# -----------------------------------------------------------------------------
+# THE VAMPIRE - The Crimson Death
+# -----------------------------------------------------------------------------
+[[awnsheghlien]]
+name = "The Vampire"
+true_name = "Unknown - possibly never had one"
+origin = "One of Azrai's highest priests at Deismaar. The god's death blood combined with his own dark rituals created something beyond a mere vampire."
+current_age = "As old as the other Deismaar survivors"
+bloodline_derivation = "azrai"
+bloodline_strength = "great"
+blood_abilities = [
+    "Blood Drain (Great) - Enhanced vampiric feeding",
+    "Charm Aura (Great)",
+    "Death Touch (Great)",
+    "Divine Aura (Major)",
+    "Fear (Great)",
+    "Invulnerability (Major)",
+    "Regeneration (Great)",
+    "Shadow Form (Great)",
+    "Unreadable Thoughts (Major)",
+    "Create Spawn (Unique) - Creates lesser vampires"
+]
+physical_description = "Tall and gaunt, with alabaster skin and eyes like pools of blood. He can appear as a handsome noble or reveal his true nature - a skeletal horror with elongated fangs and clawed hands. His presence drains warmth from the air."
+
+[awnsheghlien.domain]
+name = "The Vampire's Hold"
+other_names = ["The Eternal Night"]
+description = "A perpetually overcast domain in the Khinasi highlands where the sun seems weaker. Ancient fortresses dot the landscape, each home to one of his spawn."
+region = "Khinasi"
+provinces = 6
+holdings = "Law holdings maintained through terror, some corrupted temple holdings"
+military_strength = "moderate conventional, extreme unconventional"
+army_composition = [
+    "Vampire spawn - lesser vampires bound to his will",
+    "Enthralled mortals - blood-bound servants",
+    "Undead legions - zombies and skeletons",
+    "Cult of the Eternal Night - mortal worshippers seeking immortality"
+]
+notable_locations = [
+    "The Obsidian Citadel - His primary fortress",
+    "The Blood Wells - Where victims are kept for feeding",
+    "The Spawning Crypts - Where new vampires are created"
+]
+
+[awnsheghlien.personality]
+intelligence = "highly intelligent"
+patience = "eternal"
+cruelty = "sadistic"
+goals = [
+    "Spread vampirism across Cerilia",
+    "Create a world of eternal night",
+    "Corrupt the bloodlines of the old gods",
+    "Feed on the most powerful blood",
+    "Outlast all other powers"
+]
+methods = [
+    "Creating vampire spawn in positions of power",
+    "Seduction and corruption",
+    "Terrorizing regions into submission",
+    "Blood-bonding key individuals",
+    "Patient infiltration over generations",
+    "Targeting bloodline heirs for conversion"
+]
+weaknesses = [
+    "Sunlight - significantly weakened",
+    "Running water - cannot cross",
+    "Holy symbols of non-Azrai gods",
+    "Must feed regularly on blood",
+    "Cannot enter dwellings uninvited",
+    "Obsessive counting compulsion",
+    "Arrogance regarding mortal 'cattle'"
+]
+
+[awnsheghlien.as_enemy]
+threat_level = "severe"
+challenge_rating = "21"
+typical_actions = [
+    "Draining victims throughout the domain",
+    "Creating vampire spawn among the nobility",
+    "Seducing and corrupting the innocent",
+    "Terrorizing communities into paying blood tribute",
+    "Targeting blooded individuals for feeding",
+    "Turning enemy agents to his service",
+    "Establishing cults that worship him"
+]
+signs_of_attention = [
+    "People found drained of blood",
+    "Pale nobles who shun daylight",
+    "Disappearances increasing at night",
+    "Livestock found dead and bloodless",
+    "Citizens report seeing figures flying at night",
+    "Mirrors crack or fog in the palace",
+    "The regent has disturbing dreams of seduction",
+    "A new religion promises eternal life"
+]
+combat_tactics = [
+    "Attacks at night, retreats before dawn",
+    "Uses spawn as front-line fighters",
+    "Targets the strongest enemies for conversion",
+    "Charms key opponents to fight allies",
+    "Regenerates from apparent death"
+]
+
+[awnsheghlien.oracle_integration]
+random_event_trigger = [86, 88]
+plot_involvement_chance = 12
+adventure_seeds = [
+    "A noble has been converted - can they be saved?",
+    "The Vampire offers immortality in exchange for service",
+    "Villages are being systematically drained",
+    "A vampire spawn seeks freedom from the master's control",
+    "The Vampire desires a specific bloodline heir",
+    "An ancient relic that wards against vampires is sought",
+    "The cult of eternal night is spreading",
+    "The Vampire requests a 'diplomatic' meeting",
+    "Someone claims to know how to permanently destroy him",
+    "The Vampire is hunting something - or someone"
+]
+
+# -----------------------------------------------------------------------------
+# THE SPHINX - The Riddlemaster
+# -----------------------------------------------------------------------------
+[[awnsheghlien]]
+name = "The Sphinx"
+true_name = "She has many names, none true"
+origin = "A Basarji scholar who sought forbidden knowledge about the gods. At Deismaar, she drank deeply of spilled divine blood, seeking to understand its secrets."
+current_age = "Ancient beyond counting"
+bloodline_derivation = "azrai"
+bloodline_strength = "great"
+blood_abilities = [
+    "Blood History (Great)",
+    "Bloodform (Great)",
+    "Detect Lie (Great)",
+    "Divine Aura (Major)",
+    "Enhanced Senses (Great)",
+    "Fear (Major)",
+    "Heightened Ability (Intelligence, Great)",
+    "Home Hearkening (Major)",
+    "Unreadable Thoughts (Great)",
+    "Riddle Magic (Unique) - Binds creatures through unanswered riddles"
+]
+physical_description = "A great winged lion with a woman's face of unearthly beauty and cruelty. Her eyes hold the weight of centuries of accumulated knowledge. Her voice is musical but carries an undertone that unsettles the soul."
+
+[awnsheghlien.domain]
+name = "The Riddle Lands"
+description = "A labyrinthine territory in the Khinasi wastes where reality itself seems uncertain. Those who enter without her permission wander in circles until they die or solve her riddles."
+region = "Khinasi"
+provinces = 3
+holdings = "Source holdings only - she cares nothing for mortal governance"
+military_strength = "minimal conventional"
+army_composition = [
+    "Those bound by failed riddles - enslaved seekers",
+    "Construct guardians - animated sphinx statues",
+    "Summoned creatures - beings called from other planes"
+]
+notable_locations = [
+    "The Library of Lost Truths - Contains forbidden knowledge",
+    "The Garden of Seekers - Where failed riddlers wander forever",
+    "The Throne of Questions - Where she holds audience"
+]
+
+[awnsheghlien.personality]
+intelligence = "beyond mortal measure"
+patience = "detached"
+cruelty = "philosophical"
+goals = [
+    "Accumulate all knowledge",
+    "Understand the nature of bloodlines",
+    "Solve the riddle of the gods' death",
+    "Find worthy intellectual companions",
+    "Preserve forbidden truths"
+]
+methods = [
+    "Trading riddles for knowledge",
+    "Collecting lore and artifacts",
+    "Testing seekers who approach",
+    "Observing events without interference",
+    "Occasionally intervening for inscrutable reasons"
+]
+weaknesses = [
+    "Obsessed with riddles and knowledge",
+    "Cannot resist a truly novel question",
+    "Bound by her own rules",
+    "Contempt for the 'simple-minded'",
+    "Isolation has made her strange"
+]
+
+[awnsheghlien.as_enemy]
+threat_level = "variable"
+challenge_rating = "20"
+typical_actions = [
+    "Posing riddles with deadly stakes",
+    "Seeking specific pieces of knowledge",
+    "Testing those who attract her attention",
+    "Claiming payment for answered questions",
+    "Punishing those who bore her"
+]
+signs_of_attention = [
+    "Strange riddles appear written in unexpected places",
+    "Scholars report dreams of a woman's voice asking questions",
+    "A messenger arrives bearing an invitation",
+    "Local mysteries begin solving themselves - or becoming more complex",
+    "Books rearrange themselves to reveal hidden messages"
+]
+
+[awnsheghlien.oracle_integration]
+random_event_trigger = [89, 90]
+plot_involvement_chance = 8
+adventure_seeds = [
+    "The Sphinx knows the answer to a vital question - for a price",
+    "Someone the regent needs is trapped in the Riddle Lands",
+    "The Sphinx issues a challenge - answer her riddle or face consequences",
+    "A book from her library has surfaced - she wants it back",
+    "The Sphinx offers an alliance against a common enemy",
+    "She claims to know the true history of the regent's bloodline",
+    "A seeker returns from her lands, changed",
+    "The Sphinx is seeking something specific - and the regent has it"
+]
+
+# -----------------------------------------------------------------------------
+# THE RAVEN - The Shapeshifter
+# -----------------------------------------------------------------------------
+[[awnsheghlien]]
+name = "The Raven"
+true_name = "Unknown - possibly forgotten even by himself"
+origin = "A spy and assassin who served Azrai, transformed by the god's blood into a creature of shifting forms and shadowed purpose."
+current_age = "Ancient"
+bloodline_derivation = "azrai"
+bloodline_strength = "great"
+blood_abilities = [
+    "Bloodform (Great) - Multiple forms",
+    "Blood History (Major)",
+    "Detect Lie (Major)",
+    "Fear (Major)",
+    "Shadow Form (Great)",
+    "Travel (Great)",
+    "Unreadable Thoughts (Great)",
+    "Animal Affinity - Ravens (Unique)",
+    "Perfect Mimicry (Unique) - Copies any humanoid perfectly"
+]
+physical_description = "His true form is uncertain - perhaps he has none. He most commonly appears as a tall, thin man in dark clothing, or as an enormous raven with knowing eyes. He can assume the form of anyone he has studied."
+
+[awnsheghlien.domain]
+name = "Unknown"
+description = "The Raven claims no fixed territory. He maintains safe houses and bases throughout Cerilia, but no domain bows to him openly."
+region = "All Cerilia"
+provinces = 0
+holdings = "Network of agents rather than formal holdings"
+military_strength = "none conventional"
+
+[awnsheghlien.personality]
+intelligence = "cunning"
+patience = "professional"
+cruelty = "pragmatic"
+goals = [
+    "Know secrets others wish hidden",
+    "Be indispensable to the powerful",
+    "Survive whatever comes",
+    "Accumulate leverage",
+    "Never be pinned down"
+]
+methods = [
+    "Infiltration through shapeshifting",
+    "Building networks of informants",
+    "Assassination when necessary",
+    "Trading secrets to all sides",
+    "Maintaining multiple identities"
+]
+weaknesses = [
+    "No true allies",
+    "Cannot hold territory",
+    "True ravens unsettle him",
+    "Silver weapons",
+    "Has made many enemies"
+]
+
+[awnsheghlien.as_enemy]
+threat_level = "severe"
+challenge_rating = "18"
+typical_actions = [
+    "Infiltrating the court in disguise",
+    "Gathering intelligence for sale",
+    "Assassinating key figures",
+    "Replacing important individuals",
+    "Spreading misinformation"
+]
+signs_of_attention = [
+    "Murders of ravens found near the palace",
+    "People report seeing the regent in places they never were",
+    "Trusted allies act out of character",
+    "Secrets leak from impossible sources",
+    "A shadowy figure is glimpsed that vanishes"
+]
+
+[awnsheghlien.oracle_integration]
+random_event_trigger = [91, 92]
+plot_involvement_chance = 15
+adventure_seeds = [
+    "The Raven has replaced someone close to the regent",
+    "He offers information about an enemy's plans",
+    "Someone has hired the Raven to assassinate the regent",
+    "The Raven needs help and is willing to pay",
+    "He claims to know the regent's true parentage",
+    "A body is found wearing the regent's face"
+]
+
+# -----------------------------------------------------------------------------
+# THE HYDRA - The Sea Terror
+# -----------------------------------------------------------------------------
+[[awnsheghlien]]
+name = "The Hydra"
+true_name = "None - may never have been human"
+origin = "Possibly a sea creature transformed by divine blood washing into the ocean, or a human so corrupted that humanity was entirely lost."
+current_age = "Unknown"
+bloodline_derivation = "azrai"
+bloodline_strength = "great"
+blood_abilities = [
+    "Bloodform (Great)",
+    "Fear (Great)",
+    "Invulnerability (Major)",
+    "Regeneration (Great) - Regrows heads",
+    "Water Breathing (Unique)",
+    "Storm Calling (Unique)",
+    "Multiple Attacks (Unique) - One per head"
+]
+physical_description = "A massive serpentine creature with multiple heads, each capable of independent thought and action. Its scales are blue-black, and its eyes glow with malevolent intelligence. It spans hundreds of feet from head to tail."
+
+[awnsheghlien.domain]
+name = "The Krakenstaur"
+description = "The waters around the Brecht coasts where the Hydra claims dominion. Ships pass through only with its sufferance."
+region = "Brecht (Coastal Waters)"
+provinces = 0
+holdings = "None conventional - dominates sea trade through terror"
+military_strength = "naval dominance in its territory"
+
+[awnsheghlien.personality]
+intelligence = "cunning but alien"
+patience = "limited"
+cruelty = "hungry"
+goals = [
+    "Feed on ships and coastal settlements",
+    "Expand its hunting grounds",
+    "Accumulate treasure in underwater lairs",
+    "Prevent naval threats to its dominion"
+]
+methods = [
+    "Destroying ships that don't pay tribute",
+    "Raiding coastal settlements",
+    "Summoning storms to drive prey to it",
+    "Demanding sacrifice"
+]
+weaknesses = [
+    "Cannot operate on land effectively",
+    "Fire damages heads that don't regrow as quickly",
+    "Greedy and can be distracted by treasure",
+    "The heads sometimes disagree"
+]
+
+[awnsheghlien.as_enemy]
+threat_level = "extreme"
+challenge_rating = "22"
+typical_actions = [
+    "Sinking ships in its waters",
+    "Demanding tribute from coastal realms",
+    "Destroying fishing fleets",
+    "Attacking port cities",
+    "Creating artificial storms"
+]
+signs_of_attention = [
+    "Ships vanishing in previously safe waters",
+    "Survivors speak of a many-headed monster",
+    "Unseasonal storms plague the coast",
+    "Sea creatures flee the area",
+    "A demand for tribute arrives"
+]
+
+[awnsheghlien.oracle_integration]
+random_event_trigger = [93, 94]
+plot_involvement_chance = 10
+adventure_seeds = [
+    "The Hydra demands increased tribute",
+    "A vital cargo must pass through its waters",
+    "Someone claims to know its lair location",
+    "The Hydra is attacking a allied port",
+    "A weapon that might slay it has been discovered",
+    "The Hydra wants something specific from the regent"
+]
+
+# -----------------------------------------------------------------------------
+# THE MAGIAN - The Deathless Sorcerer
+# -----------------------------------------------------------------------------
+[[awnsheghlien]]
+name = "The Magian"
+true_name = "el-Hadid (The Iron One)"
+origin = "A Khinasi archmage who served Azrai and has prolonged his life through necromancy and divine blood."
+current_age = "Over 1,500 years"
+bloodline_derivation = "azrai"
+bloodline_strength = "great"
+blood_abilities = [
+    "Blood History (Great)",
+    "Death Touch (Great)",
+    "Divine Aura (Major)",
+    "Fear (Major)",
+    "Heightened Ability (Intelligence, Great)",
+    "Regeneration (Major)",
+    "Unreadable Thoughts (Great)",
+    "Necromantic Mastery (Unique)"
+]
+physical_description = "Appears as an ancient but vital man wrapped in robes of dark silk. His eyes burn with inner fire, and his flesh has a preserved, waxy quality. He has 'died' multiple times and returned."
+
+[awnsheghlien.domain]
+name = "Khourane"
+description = "A realm in the Khinasi lands where the dead serve the living, and the boundary between life and death is thin."
+region = "Khinasi"
+provinces = 5
+holdings = "Temple holdings to death gods, source holdings, some law"
+military_strength = "significant - bolstered by undead"
+army_composition = [
+    "Undead legions of various types",
+    "Living fanatics who seek immortality",
+    "Bound demons and spirits",
+    "Necromancer apprentices"
+]
+
+[awnsheghlien.personality]
+intelligence = "genius archmage"
+patience = "eternal"
+cruelty = "clinical"
+goals = [
+    "True immortality beyond undeath",
+    "Mastery of all death magic",
+    "Understanding the gods' deaths at Deismaar",
+    "Expanding his magical knowledge",
+    "Creating a perfect undead kingdom"
+]
+methods = [
+    "Magical research and experimentation",
+    "Trading knowledge with other powers",
+    "Raising armies of the dead",
+    "Corrupting other mages to his path",
+    "Patient accumulation of power"
+]
+weaknesses = [
+    "Obsessed with magical research",
+    "Underestimates non-magical threats",
+    "His undeath has costs",
+    "Holy magic of Avani and Nesirie",
+    "Pride in his magical superiority"
+]
+
+[awnsheghlien.as_enemy]
+threat_level = "severe"
+challenge_rating = "23"
+typical_actions = [
+    "Raising undead in enemy territories",
+    "Seeking magical artifacts",
+    "Corrupting mages to his service",
+    "Trading with other awnsheghlien",
+    "Experimenting on captured subjects"
+]
+signs_of_attention = [
+    "Undead appearing in unprecedented numbers",
+    "Mages report disturbing dreams",
+    "Ancient tombs are broken open",
+    "A chill falls over source holdings",
+    "The dead do not rest peacefully"
+]
+
+[awnsheghlien.oracle_integration]
+random_event_trigger = [95, 95]
+plot_involvement_chance = 10
+adventure_seeds = [
+    "The Magian seeks an artifact in the regent's domain",
+    "He offers magical knowledge in exchange for corpses",
+    "Undead bearing his mark appear",
+    "A court mage has been corresponding with him",
+    "He wishes to negotiate - but why?",
+    "Someone claims to have been his apprentice and offers secrets"
+]
+
+# -----------------------------------------------------------------------------
+# THE SERPENT - The Drowned God
+# -----------------------------------------------------------------------------
+[[awnsheghlien]]
+name = "The Serpent"
+true_name = "Lost beneath the waves"
+origin = "A champion of Azrai who was cast into the sea at Deismaar. The divine blood and his hatred kept him alive as he transformed into a leviathan."
+current_age = "Since Deismaar"
+bloodline_derivation = "azrai"
+bloodline_strength = "great"
+blood_abilities = [
+    "Bloodform (Great)",
+    "Divine Aura (Major)",
+    "Fear (Great)",
+    "Invulnerability (Major)",
+    "Regeneration (Major)",
+    "Water Control (Unique)",
+    "Crushing Coils (Unique)",
+    "Swallow Whole (Unique)"
+]
+physical_description = "A sea serpent of impossible size, with scales like shields and eyes like lanterns in the deep. Its body can encircle entire islands."
+
+[awnsheghlien.domain]
+name = "The Deeps"
+description = "The Serpent claims the deepest waters of the Miere Rhuann and the Straits of Aerele. No ship passes its domain without risk."
+region = "Seas of Cerilia"
+provinces = 0
+holdings = "None"
+
+[awnsheghlien.personality]
+intelligence = "cunning but driven by hunger"
+patience = "predatory"
+cruelty = "elemental"
+goals = [
+    "Feed on ships and whales",
+    "Destroy surface dwellers who offend it",
+    "Guard its underwater lair",
+    "Accumulate treasure from sunken ships"
+]
+methods = [
+    "Destroying ships",
+    "Creating whirlpools",
+    "Attacking coastal settlements",
+    "Demanding sacrifice"
+]
+weaknesses = [
+    "Cannot leave deep water",
+    "Driven by hunger",
+    "Can be appeased with treasure",
+    "Certain ancient songs repel it"
+]
+
+[awnsheghlien.as_enemy]
+threat_level = "extreme"
+challenge_rating = "25"
+
+[awnsheghlien.oracle_integration]
+random_event_trigger = [96, 96]
+plot_involvement_chance = 5
+adventure_seeds = [
+    "A vital voyage must pass through its waters",
+    "It has swallowed something the regent needs",
+    "Sailors claim to have found a way to bind it",
+    "It is moving toward shallower waters - why?",
+    "An ancient shrine to it has been disturbed"
+]
+
+# -----------------------------------------------------------------------------
+# THE SIREN - The Enchantress
+# -----------------------------------------------------------------------------
+[[awnsheghlien]]
+name = "The Siren"
+true_name = "Liliene (Lily of the Waves)"
+origin = "A priestess of Azrai who used her beauty as a weapon. Deismaar's blood transformed her beauty into something supernatural and deadly."
+current_age = "Since Deismaar"
+bloodline_derivation = "azrai"
+bloodline_strength = "major"
+blood_abilities = [
+    "Charm Aura (Great)",
+    "Divine Aura (Major)",
+    "Enchanting Voice (Unique) - Irresistible song",
+    "Fear (Major)",
+    "Heightened Ability (Charisma, Great)",
+    "Regeneration (Major)",
+    "Water Breathing (Major)"
+]
+physical_description = "Appears as the most beautiful woman the viewer can imagine. Her voice is liquid music that bypasses the mind and seizes the heart. In her true form, she has scales like a fish and needle-sharp teeth."
+
+[awnsheghlien.domain]
+name = "The Singing Shores"
+description = "Coastal caves and a small island where sailors are lured to their doom. The shores are littered with the wrecks of ships and the bones of the enchanted."
+region = "Brecht Coast"
+provinces = 1
+
+[awnsheghlien.personality]
+goals = [
+    "Collect worshippers and lovers",
+    "Punish those who reject her",
+    "Acquire beautiful things",
+    "Feed on the life force of the enthralled"
+]
+methods = [
+    "Singing ships to wreck",
+    "Enchanting useful servants",
+    "Collecting tribute from fearful sailors",
+    "Seducing the powerful"
+]
+weaknesses = [
+    "Vanity - cannot bear rejection",
+    "Deafened creatures immune to her",
+    "True love resists her magic",
+    "Cannot stray far from water"
+]
+
+[awnsheghlien.as_enemy]
+threat_level = "moderate"
+challenge_rating = "16"
+
+[awnsheghlien.oracle_integration]
+random_event_trigger = [97, 97]
+plot_involvement_chance = 8
+adventure_seeds = [
+    "The Siren has enchanted someone important",
+    "She demands a suitor - or else",
+    "Her song is heard inland - she's growing stronger",
+    "A victim escaped and seeks revenge",
+    "She knows secrets learned from dying sailors"
+]
+
+# -----------------------------------------------------------------------------
+# THE CHIMAERA - The Hybrid Horror
+# -----------------------------------------------------------------------------
+[[awnsheghlien]]
+name = "The Chimaera"
+true_name = "Unknown"
+origin = "Three beings merged into one horror by the chaos of Deismaar - a warrior, a mage, and a beast."
+current_age = "Since Deismaar"
+bloodline_derivation = "azrai"
+bloodline_strength = "major"
+blood_abilities = [
+    "Bloodform (Major)",
+    "Fear (Major)",
+    "Fire Breath (Unique)",
+    "Flight (Major)",
+    "Regeneration (Major)",
+    "Multiple Minds (Unique) - Three intelligences"
+]
+physical_description = "A beast with the head of a lion, a second head of a goat growing from its back, and a tail that is a living serpent. Each head has its own personality and voice."
+
+[awnsheghlien.domain]
+name = "The Burning Peaks"
+description = "Volcanic mountains where the Chimaera lairs, hunting anything that enters."
+region = "Vosgaard"
+provinces = 2
+
+[awnsheghlien.personality]
+goals = [
+    "The Lion - dominance and territory",
+    "The Goat - destruction and chaos",
+    "The Serpent - cunning and survival"
+]
+weaknesses = [
+    "The three heads often disagree",
+    "Can be manipulated by addressing individual heads",
+    "Not particularly intelligent",
+    "Territorial but doesn't scheme"
+]
+
+[awnsheghlien.as_enemy]
+threat_level = "moderate"
+challenge_rating = "17"
+
+[awnsheghlien.oracle_integration]
+random_event_trigger = [98, 98]
+plot_involvement_chance = 5
+adventure_seeds = [
+    "The Chimaera has descended from its peaks",
+    "Something has disturbed its lair",
+    "Treasure hunters seek help reaching its hoard",
+    "One head wishes to bargain separately"
+]
+
+# =============================================================================
+# LESSER AWNSHEGHLIEN
+# =============================================================================
+# Regional terrors and emerging abominations. Less powerful than the great
+# awnsheghlien but still deadly threats.
+# =============================================================================
+
+[[lesser_awnsheghlien]]
+name = "The Boar"
+true_name = "Unknown"
+region = "Anuire"
+bloodline_strength = "major"
+description = "A massive, tusked humanoid covered in coarse hair, driven by rage and hunger."
+threat_level = "moderate"
+challenge_rating = "12"
+typical_actions = ["Rampaging through settlements", "Destroying crops", "Hunting blooded individuals"]
+adventure_seeds = [
+    "The Boar is heading toward a populated province",
+    "Someone is directing the Boar's rampages"
+]
+
+[[lesser_awnsheghlien]]
+name = "The Hag"
+true_name = "Grandmother Grissa"
+region = "Vosgaard"
+bloodline_strength = "major"
+description = "An ancient crone with command over curses and dark magic. Lives in a hut that walks on chicken legs."
+threat_level = "moderate"
+challenge_rating = "14"
+typical_actions = ["Cursing those who offend her", "Trading dark bargains", "Kidnapping children"]
+adventure_seeds = [
+    "The Hag has cursed an important person",
+    "She offers a cure for an incurable ailment"
+]
+
+[[lesser_awnsheghlien]]
+name = "The Leviathan"
+true_name = "Unknown"
+region = "Western Seas"
+bloodline_strength = "major"
+description = "A whale transformed into something monstrous, with tentacles and multiple eyes."
+threat_level = "severe"
+challenge_rating = "18"
+typical_actions = ["Destroying fishing fleets", "Attacking port cities", "Creating tsunamis"]
+
+[[lesser_awnsheghlien]]
+name = "The Manticore"
+true_name = "Rashid al-Monsur"
+region = "Khinasi"
+bloodline_strength = "minor"
+description = "Once a proud warrior, now a beast with a human face, lion's body, and tail of poisoned spikes."
+threat_level = "moderate"
+challenge_rating = "11"
+typical_actions = ["Hunting travelers", "Terrorizing caravans", "Demanding tribute"]
+
+[[lesser_awnsheghlien]]
+name = "The Troll King"
+true_name = "Unknown"
+region = "Rjurik"
+bloodline_strength = "major"
+description = "A troll grown to immense size and intelligence through bloodline power. Commands tribes of lesser trolls."
+threat_level = "severe"
+challenge_rating = "15"
+typical_actions = ["Leading troll raids", "Demanding territorial tribute", "Hunting blooded prey"]
+adventure_seeds = [
+    "The Troll King unites the tribes",
+    "He seeks a blooded bride"
+]
+
+[[lesser_awnsheghlien]]
+name = "The Wight"
+true_name = "Lord Brennan"
+region = "Anuire"
+bloodline_strength = "minor"
+description = "A fallen knight whose bitterness in death sustained his undead form with enhanced power."
+threat_level = "moderate"
+challenge_rating = "10"
+typical_actions = ["Haunting his former lands", "Creating lesser undead", "Seeking revenge on descendants of enemies"]
+
+[[lesser_awnsheghlien]]
+name = "The Basilisk"
+true_name = "Unknown"
+region = "Brecht"
+bloodline_strength = "minor"
+description = "A serpentine creature whose gaze petrifies, enhanced by divine blood."
+threat_level = "moderate"
+challenge_rating = "13"
+typical_actions = ["Hunting in wilderness", "Creating stone 'gardens'", "Avoiding organized opposition"]
+
+[[lesser_awnsheghlien]]
+name = "The Ghoul King"
+true_name = "Varrick the Defiler"
+region = "Anuire"
+bloodline_strength = "minor"
+description = "Lord of a kingdom of ghouls beneath an abandoned city, he retains intelligence and cunning."
+threat_level = "moderate"
+challenge_rating = "12"
+typical_actions = ["Expanding ghoul warrens", "Raiding graveyards", "Capturing living prey for transformation"]
+
+[[lesser_awnsheghlien]]
+name = "The Lamia"
+true_name = "Sultana Yasmine"
+region = "Khinasi"
+bloodline_strength = "minor"
+description = "Upper body of a beautiful woman, lower body of a great serpent. Skilled in enchantment and seduction."
+threat_level = "moderate"
+challenge_rating = "11"
+typical_actions = ["Enchanting travelers", "Building cults", "Consuming the life force of victims"]
+
+[[lesser_awnsheghlien]]
+name = "The Werewolf Lord"
+true_name = "Fenric Greymane"
+region = "Rjurik"
+bloodline_strength = "major"
+description = "A lycanthrope whose bloodline has elevated him above common werewolves. Commands packs across the north."
+threat_level = "moderate"
+challenge_rating = "14"
+typical_actions = ["Building werewolf armies", "Spreading lycanthropy to the blooded", "Hunting during full moons"]
+
+[[lesser_awnsheghlien]]
+name = "The Shadow"
+true_name = "Unknown - possibly never human"
+region = "Anuire"
+bloodline_strength = "minor"
+description = "A creature of living darkness that drains life and light. May be a manifestation of Azrai's shadow."
+threat_level = "moderate"
+challenge_rating = "13"
+typical_actions = ["Haunting specific locations", "Draining life force", "Creating lesser shadows"]
+
+# =============================================================================
+# EMERGING AWNSHEGHLIEN
+# =============================================================================
+# Those in the process of transformation, or newly emerged abominations.
+# =============================================================================
+
+[[emerging_awnsheghlien]]
+name = "The Bloated One"
+region = "Brecht"
+bloodline_derivation = "azrai"
+description = "A merchant whose greed has begun transforming him into something toad-like and insatiable."
+transformation_stage = "early"
+current_status = "Still passes as human with effort"
+potential_threat = "moderate"
+
+[[emerging_awnsheghlien]]
+name = "The Weeping Woman"
+region = "Anuire"
+bloodline_derivation = "azrai"
+description = "A noblewoman whose grief over her murdered children has awakened dark blood powers."
+transformation_stage = "middle"
+current_status = "Becoming increasingly inhuman"
+potential_threat = "moderate"
+
+[[emerging_awnsheghlien]]
+name = "The Ironhand"
+region = "Brecht"
+bloodline_derivation = "azrai"
+description = "A guildmaster whose ruthlessness is physically manifesting as metallic transformation."
+transformation_stage = "early"
+current_status = "Hides transformation with gloves"
+potential_threat = "moderate"
+
+[[emerging_awnsheghlien]]
+name = "The Child-Eater"
+region = "Vosgaard"
+bloodline_derivation = "azrai"
+description = "A starving peasant whose cannibalism activated dormant blood, driving further hunger."
+transformation_stage = "advanced"
+current_status = "Fully monstrous, hunted"
+potential_threat = "moderate"
+
+# =============================================================================
+# ORACLE CONFIGURATION
+# =============================================================================
+
+[oracle_config]
+description = "Configuration for awnsheghlien involvement in random events and adventures"
+
+[oracle_config.involvement_by_region]
+anuire = ["The Gorgon", "The Spider", "The Boar", "The Wight", "The Ghoul King"]
+khinasi = ["The Vampire", "The Sphinx", "The Magian", "The Manticore", "The Lamia"]
+brecht = ["The Hydra", "The Siren", "The Basilisk", "The Bloated One"]
+rjurik = ["The Chimaera", "The Hag", "The Troll King", "The Werewolf Lord"]
+vosgaard = ["The Chimaera", "The Hag", "The Child-Eater"]
+seas = ["The Serpent", "The Leviathan", "The Hydra"]
+
+[oracle_config.threat_escalation]
+minor_involvement = "Agents or minions cause problems"
+moderate_involvement = "The awnsheghlien takes direct interest"
+major_involvement = "The awnsheghlien acts personally"
+catastrophic = "Full attention of a great awnsheghlien"
+
+[oracle_config.alliance_possibilities]
+natural_allies = [
+    ["The Gorgon", "The Magian"],
+    ["The Spider", "The Raven"],
+    ["The Vampire", "The Magian"]
+]
+natural_enemies = [
+    ["The Gorgon", "The Serpent"],
+    ["The Spider", "The Raven"],
+    ["The Hydra", "The Serpent"]
+]

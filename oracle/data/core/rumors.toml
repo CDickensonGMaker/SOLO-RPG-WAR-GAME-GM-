@@ -1,0 +1,374 @@
+# Core Rumors and Information
+# Setting-agnostic rumors for taverns, markets, social gatherings
+# 150+ total entries across all categories
+
+# ==============================================================================
+# TRUE RUMORS - Accurate information (60+ entries)
+# ==============================================================================
+
+[true_rumors]
+entries = [
+  # Dangers
+  { text = "Something dangerous lurks in the old ruins", weight = 2 },
+  { text = "Travelers have been disappearing on the northern road", weight = 2 },
+  { text = "The abandoned mine isn't as abandoned as people think", weight = 1 },
+  { text = "Strange tracks have been found near the livestock pens", weight = 1 },
+  { text = "The old tower has lights in it at night again", weight = 1 },
+  { text = "Something killed three hunters last month in the deep woods", weight = 1 },
+  { text = "The water in the eastern well has made people sick", weight = 1 },
+  { text = "Bandits have established a camp in the hills", weight = 1 },
+  { text = "The bridge has become structurally unsound", weight = 1 },
+  { text = "A predator has moved into territory it never claimed before", weight = 1 },
+
+  # People and Power
+  { text = "The local leader is secretly ill", weight = 2 },
+  { text = "Strangers have been asking about you specifically", weight = 2 },
+  { text = "The merchant guild is planning to raise prices significantly", weight = 1 },
+  { text = "A powerful figure has fallen out of favor", weight = 1 },
+  { text = "The heir is not who everyone believes them to be", weight = 1 },
+  { text = "Someone in authority is taking bribes", weight = 1 },
+  { text = "A trusted advisor has been passing information to rivals", weight = 1 },
+  { text = "The religious leader has lost their faith", weight = 1 },
+  { text = "A prominent family is nearly bankrupt", weight = 1 },
+  { text = "The military commander is planning to retire", weight = 1 },
+
+  # Opportunities
+  { text = "A valuable shipment arrives tomorrow", weight = 2 },
+  { text = "The guard patrol changes at midnight", weight = 2 },
+  { text = "An old vault has been discovered during construction", weight = 1 },
+  { text = "A rare creature has been spotted in the marshes", weight = 1 },
+  { text = "The auction will include items from a noble's estate", weight = 1 },
+  { text = "Someone is paying well for a specific type of information", weight = 1 },
+  { text = "A long-lost heir is seeking to reclaim their inheritance", weight = 1 },
+  { text = "The festival will have a lucrative competition", weight = 1 },
+  { text = "A wealthy eccentric is hiring for dangerous work", weight = 1 },
+  { text = "The closed pass will be accessible for a brief period", weight = 1 },
+
+  # Events and Changes
+  { text = "War is coming whether leaders admit it or not", weight = 1 },
+  { text = "The treaty negotiations are going poorly", weight = 1 },
+  { text = "A plague has broken out in a neighboring region", weight = 1 },
+  { text = "The harvest will be poor this year", weight = 1 },
+  { text = "Refugees are expected to arrive within weeks", weight = 1 },
+  { text = "The currency is about to be devalued", weight = 1 },
+  { text = "A new faction is consolidating power quietly", weight = 1 },
+  { text = "The old alliances are breaking down", weight = 1 },
+  { text = "Laws are about to change significantly", weight = 1 },
+  { text = "A major institution is being investigated", weight = 1 },
+
+  # Secrets
+  { text = "There's a hidden passage beneath the old district", weight = 1 },
+  { text = "The official story about the fire was a cover-up", weight = 1 },
+  { text = "Someone has been smuggling through the temple", weight = 1 },
+  { text = "The death was not an accident as reported", weight = 1 },
+  { text = "A spy network operates out of the marketplace", weight = 1 },
+  { text = "The artifact in the museum is a well-made fake", weight = 1 },
+  { text = "There's a reason no one builds in that quarter", weight = 1 },
+  { text = "The benefactor's money comes from dark sources", weight = 1 },
+  { text = "Certain establishments pay protection to both sides", weight = 1 },
+  { text = "The founding story of this place is a lie", weight = 1 },
+
+  # Resources
+  { text = "The mine has deeper veins than anyone realized", weight = 1 },
+  { text = "The forest contains plants worth a fortune", weight = 1 },
+  { text = "Fresh water has been found in an unexpected place", weight = 1 },
+  { text = "The wreck still has valuable cargo aboard", weight = 1 },
+  { text = "Someone found ancient coins in their field", weight = 1 },
+  { text = "The quarry stone is prized by builders in the capital", weight = 1 },
+  { text = "Wild game is unusually plentiful this season", weight = 1 },
+  { text = "A new trade route is being considered", weight = 1 },
+  { text = "The fishing grounds have recovered after years of depletion", weight = 1 },
+  { text = "Rare components can be gathered from the battlefield", weight = 1 },
+]
+
+# ==============================================================================
+# FALSE RUMORS - Misinformation (40+ entries)
+# ==============================================================================
+
+[false_rumors]
+entries = [
+  # Deceptive Safety
+  { text = "The treasure is completely unguarded", weight = 2 },
+  { text = "The enemy has already retreated from the area", weight = 1 },
+  { text = "A safe path exists through the dangerous territory", weight = 1 },
+  { text = "The creature only comes out at night", weight = 1 },
+  { text = "The guards can be easily bribed", weight = 1 },
+  { text = "The warnings are just superstition", weight = 1 },
+  { text = "The passage has been cleared of hazards", weight = 1 },
+  { text = "The locals are friendly to outsiders", weight = 1 },
+  { text = "The disease is not contagious", weight = 1 },
+  { text = "The structure is completely stable", weight = 1 },
+
+  # Exaggerated Opportunities
+  { text = "The abandoned estate is full of unclaimed valuables", weight = 1 },
+  { text = "The bounty can be claimed without a fight", weight = 1 },
+  { text = "The merchant pays double the normal price", weight = 1 },
+  { text = "The cave is full of easy pickings", weight = 1 },
+  { text = "The job requires no special skills", weight = 1 },
+  { text = "The treasure map is absolutely genuine", weight = 1 },
+  { text = "The competition has minimal participants", weight = 1 },
+  { text = "The work is legal despite appearances", weight = 1 },
+  { text = "The goods fell off a wagon and are free for taking", weight = 1 },
+  { text = "The reward far exceeds the risk", weight = 1 },
+
+  # False Blame
+  { text = "The outsiders are responsible for the troubles", weight = 1 },
+  { text = "The rival faction caused the disaster", weight = 1 },
+  { text = "The minority group has been stealing", weight = 1 },
+  { text = "The new arrivals brought the sickness", weight = 1 },
+  { text = "The old ways were better in every regard", weight = 1 },
+  { text = "One specific person is behind all the problems", weight = 1 },
+  { text = "The neighboring region started the conflict", weight = 1 },
+  { text = "The youth have abandoned proper values", weight = 1 },
+  { text = "The merchants are price-fixing everything", weight = 1 },
+  { text = "The accident was actually sabotage", weight = 1 },
+
+  # Planted Misinformation
+  { text = "The leader supports the resistance secretly", weight = 1 },
+  { text = "The enemy is planning to surrender", weight = 1 },
+  { text = "Reinforcements will arrive within days", weight = 1 },
+  { text = "The alliance is stronger than ever", weight = 1 },
+  { text = "The item has no real power or value", weight = 1 },
+  { text = "The witness is completely trustworthy", weight = 1 },
+  { text = "The organization has been disbanded", weight = 1 },
+  { text = "The threat has been neutralized", weight = 1 },
+  { text = "The negotiations were successful", weight = 1 },
+  { text = "The investigation found nothing wrong", weight = 1 },
+]
+
+# ==============================================================================
+# MIXED RUMORS - Partial truths (35+ entries)
+# ==============================================================================
+
+[mixed_rumors]
+entries = [
+  # Outdated Information
+  { text = "The information is true, but outdated by weeks", weight = 2 },
+  { text = "The route was safe when the traveler used it", weight = 1 },
+  { text = "The prices were accurate before the shortage", weight = 1 },
+  { text = "The leader supported that position before they changed it", weight = 1 },
+  { text = "The resource was there but has since been claimed", weight = 1 },
+  { text = "The building was intact before the recent damage", weight = 1 },
+  { text = "The person was there but has since moved on", weight = 1 },
+  { text = "The opportunity existed but the window has closed", weight = 1 },
+  { text = "The danger was real but has since been addressed", weight = 1 },
+  { text = "The alliance held until very recently", weight = 1 },
+
+  # Partial Accuracy
+  { text = "The details are wrong, but the core is accurate", weight = 2 },
+  { text = "The location is correct but the timing is off", weight = 1 },
+  { text = "The person exists but their role is different", weight = 1 },
+  { text = "The threat is real but exaggerated", weight = 1 },
+  { text = "The reward exists but terms are different", weight = 1 },
+  { text = "The secret is true but the implications are misunderstood", weight = 1 },
+  { text = "The event happened but the cause is misattributed", weight = 1 },
+  { text = "The organization exists but their goals differ from rumors", weight = 1 },
+  { text = "The item is real but its powers are overstated", weight = 1 },
+  { text = "The conflict occurred but the outcome was different", weight = 1 },
+
+  # Context-Dependent
+  { text = "True for now, but about to change", weight = 2 },
+  { text = "Accurate for some, but not for outsiders", weight = 1 },
+  { text = "Valid in this region but not elsewhere", weight = 1 },
+  { text = "True in spirit but wrong in specifics", weight = 1 },
+  { text = "Correct about what, wrong about who", weight = 1 },
+  { text = "The law exists but is not enforced", weight = 1 },
+  { text = "The danger is real but only under certain conditions", weight = 1 },
+  { text = "The path works but requires specific knowledge", weight = 1 },
+  { text = "The method succeeds but not reliably", weight = 1 },
+  { text = "The contact is trustworthy but not available", weight = 1 },
+
+  # Deliberate Half-Truths
+  { text = "The easy part is true, the hard part omitted", weight = 1 },
+  { text = "The benefit is real, the cost is hidden", weight = 1 },
+  { text = "The entrance is where they say, the exit is not mentioned", weight = 1 },
+  { text = "The treasure exists, so do its guardians", weight = 1 },
+  { text = "The welcome is genuine, the motives are not", weight = 1 },
+  { text = "The job is as described, the employer is not", weight = 1 },
+  { text = "The medicine works, the side effects are severe", weight = 1 },
+  { text = "The story is true, the source has an agenda", weight = 1 },
+]
+
+# ==============================================================================
+# LOCAL GOSSIP - Community chatter (50+ entries)
+# ==============================================================================
+
+[local_gossip]
+entries = [
+  # Relationships
+  { text = "Two prominent figures are feuding over a slight", weight = 2 },
+  { text = "A scandalous affair has been discovered", weight = 1 },
+  { text = "The engagement has been called off mysteriously", weight = 1 },
+  { text = "Old rivals have suddenly reconciled", weight = 1 },
+  { text = "A marriage is in serious trouble", weight = 1 },
+  { text = "Someone is courting above their station", weight = 1 },
+  { text = "A family has disowned one of their own", weight = 1 },
+  { text = "Former friends now refuse to speak to each other", weight = 1 },
+  { text = "A secret child has been revealed", weight = 1 },
+  { text = "Someone is maintaining two households", weight = 1 },
+
+  # Arrivals and Departures
+  { text = "Someone important recently arrived in town", weight = 2 },
+  { text = "A family has left suddenly in the night", weight = 1 },
+  { text = "Travelers from a distant place are staying at the inn", weight = 1 },
+  { text = "A notorious figure has returned after years away", weight = 1 },
+  { text = "Someone claiming to be an exile has appeared", weight = 1 },
+  { text = "A religious figure is passing through on pilgrimage", weight = 1 },
+  { text = "A band of mercenaries has set up camp nearby", weight = 1 },
+  { text = "A healer with an unusual reputation has arrived", weight = 1 },
+  { text = "Someone left valuable property behind when they fled", weight = 1 },
+  { text = "Expected visitors have failed to arrive", weight = 1 },
+
+  # Strange Occurrences
+  { text = "Strange sounds have been heard at night", weight = 2 },
+  { text = "Lights were seen where no one should be", weight = 1 },
+  { text = "Animals have been behaving unusually", weight = 1 },
+  { text = "Someone claims to have seen something impossible", weight = 1 },
+  { text = "Dreams have been troubled throughout the community", weight = 1 },
+  { text = "A birth came with unusual omens", weight = 1 },
+  { text = "The weather has been unseasonable", weight = 1 },
+  { text = "Items have gone missing from locked spaces", weight = 1 },
+  { text = "A familiar landmark has changed somehow", weight = 1 },
+  { text = "Children have been playing in forbidden places", weight = 1 },
+
+  # Business and Economy
+  { text = "A business is struggling despite appearances", weight = 2 },
+  { text = "Someone has come into unexpected wealth", weight = 1 },
+  { text = "A shop has been selling adulterated goods", weight = 1 },
+  { text = "Workers are unhappy but afraid to speak", weight = 1 },
+  { text = "A new venture is being planned in secret", weight = 1 },
+  { text = "Debts are being called in aggressively", weight = 1 },
+  { text = "A competitor is using underhanded tactics", weight = 1 },
+  { text = "The guild is considering new membership restrictions", weight = 1 },
+  { text = "Someone is buying up properties for unknown purposes", weight = 1 },
+  { text = "A partnership has dissolved acrimoniously", weight = 1 },
+
+  # Crime and Conflict
+  { text = "Petty theft has increased recently", weight = 1 },
+  { text = "A fight broke out at the tavern last night", weight = 1 },
+  { text = "Someone was cheated in a deal and wants revenge", weight = 1 },
+  { text = "The watch is investigating something quietly", weight = 1 },
+  { text = "A known troublemaker has been acting suspiciously calm", weight = 1 },
+  { text = "Property was vandalized but no one is talking", weight = 1 },
+  { text = "Threats have been made against a local figure", weight = 1 },
+  { text = "Someone is spreading malicious stories about another", weight = 1 },
+  { text = "A trial is coming that will divide the community", weight = 1 },
+  { text = "Justice was not served and people are angry", weight = 1 },
+
+  # Health and Death
+  { text = "Someone has taken seriously ill", weight = 1 },
+  { text = "A death has been ruled accidental despite doubts", weight = 1 },
+  { text = "The healer has been busy with unusual cases", weight = 1 },
+  { text = "A baby is expected in a notable household", weight = 1 },
+  { text = "Someone is not as recovered as they claim", weight = 1 },
+  { text = "An elderly figure's health is failing", weight = 1 },
+  { text = "Strange maladies have affected several people", weight = 1 },
+  { text = "A miraculous recovery has people talking", weight = 1 },
+]
+
+# ==============================================================================
+# RUMOR SOURCES - Who is spreading information (25+ entries)
+# ==============================================================================
+
+[rumor_sources]
+entries = [
+  # Common Folk
+  { text = "A garrulous tavern keeper who hears everything", weight = 2 },
+  { text = "A gossiping servant from a great house", weight = 1 },
+  { text = "A traveling merchant passing through", weight = 1 },
+  { text = "A drunk patron who talks too freely", weight = 1 },
+  { text = "A bored guard making conversation", weight = 1 },
+  { text = "A washwoman who sees more than she should", weight = 1 },
+  { text = "A stable hand who tends visitors' mounts", weight = 1 },
+  { text = "A street vendor who watches the crowds", weight = 1 },
+  { text = "A courier between tavern deliveries", weight = 1 },
+  { text = "A regular who never leaves their corner", weight = 1 },
+
+  # Professionals
+  { text = "A barber who cuts hair and collects secrets", weight = 1 },
+  { text = "A healer who sees patients at their worst", weight = 1 },
+  { text = "A scribe who reads between the lines", weight = 1 },
+  { text = "A mortician who knows how people really die", weight = 1 },
+  { text = "A gambler who reads people for a living", weight = 1 },
+  { text = "A performer who travels between venues", weight = 1 },
+  { text = "A cook who feeds the powerful and listens", weight = 1 },
+  { text = "A moneylender who knows everyone's debts", weight = 1 },
+  { text = "A matchmaker who knows every family's secrets", weight = 1 },
+  { text = "A caravan driver with contacts everywhere", weight = 1 },
+
+  # Unusual Sources
+  { text = "A beggar who sees everything and is seen by no one", weight = 1 },
+  { text = "An elderly person who remembers the old stories", weight = 1 },
+  { text = "A child who repeats what adults say", weight = 1 },
+  { text = "A mysterious stranger who knows too much", weight = 1 },
+  { text = "A message board where notices appear anonymously", weight = 1 },
+  { text = "A coded section in the local broadsheet", weight = 1 },
+  { text = "Graffiti appearing on walls overnight", weight = 1 },
+  { text = "A fortune teller mixing prediction with observation", weight = 1 },
+]
+
+# ==============================================================================
+# RUMOR CONTEXTS - Where and how information spreads (20+ entries)
+# ==============================================================================
+
+[rumor_contexts]
+entries = [
+  # Locations
+  { text = "Whispered over drinks at a crowded tavern", weight = 2 },
+  { text = "Overheard at the market stalls", weight = 2 },
+  { text = "Discussed in hushed tones at a temple", weight = 1 },
+  { text = "Shared while waiting in a queue", weight = 1 },
+  { text = "Passed along the caravan campfire", weight = 1 },
+  { text = "Traded between workers on a break", weight = 1 },
+  { text = "Mentioned during a chance encounter on the road", weight = 1 },
+  { text = "Circulated at a social gathering", weight = 1 },
+  { text = "Posted on a community notice board", weight = 1 },
+  { text = "Spread through the servant quarters", weight = 1 },
+
+  # Circumstances
+  { text = "Told to gain trust and seem valuable", weight = 1 },
+  { text = "Shared as a warning to a friend", weight = 1 },
+  { text = "Leaked by someone with an agenda", weight = 1 },
+  { text = "Accidentally revealed while boasting", weight = 1 },
+  { text = "Offered in exchange for other information", weight = 1 },
+  { text = "Confessed under the influence of drink", weight = 1 },
+  { text = "Discovered in a discarded letter", weight = 1 },
+  { text = "Broadcast loudly by someone who should know better", weight = 1 },
+  { text = "Passed through multiple sources before reaching you", weight = 1 },
+  { text = "Deliberately planted for you to find", weight = 1 },
+]
+
+# ==============================================================================
+# REACTION TO INQUIRIES - How people respond to questions (20+ entries)
+# ==============================================================================
+
+[inquiry_reactions]
+entries = [
+  # Cooperative
+  { text = "Happy to share for a small consideration", weight = 2 },
+  { text = "Tells you everything they know freely", weight = 1 },
+  { text = "Points you to someone who knows more", weight = 1 },
+  { text = "Shares some information but protects sources", weight = 1 },
+  { text = "Answers questions after you buy a drink", weight = 1 },
+
+  # Suspicious
+  { text = "Refuses to speak to strangers about such things", weight = 2 },
+  { text = "Demands to know why you're asking", weight = 1 },
+  { text = "Gives evasive non-answers", weight = 1 },
+  { text = "Pretends not to know anything", weight = 1 },
+  { text = "Warns you to stop asking questions", weight = 1 },
+
+  # Dangerous
+  { text = "Reports your inquiries to interested parties", weight = 1 },
+  { text = "Lies deliberately to mislead you", weight = 1 },
+  { text = "Attempts to learn what you already know first", weight = 1 },
+  { text = "Offers information that will lead you into a trap", weight = 1 },
+  { text = "Becomes hostile when pressed", weight = 1 },
+
+  # Conditional
+  { text = "Will talk only if you help them first", weight = 1 },
+  { text = "Requires proof you can be trusted", weight = 1 },
+  { text = "Shares information only away from prying ears", weight = 1 },
+  { text = "Needs assurance you're not working for enemies", weight = 1 },
+  { text = "Trades information for information", weight = 1 },
+]

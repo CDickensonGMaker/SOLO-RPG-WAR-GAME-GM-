@@ -1,0 +1,219 @@
+# Age of Fantasy - Turn Sequence Reference
+# One Page Rules - FREE game system (onepagerules.com)
+
+name = "Age of Fantasy Turn Sequence"
+description = "Simple alternating activation fantasy wargame"
+
+[turn_structure]
+description = "Alternating activation - players take turns activating ONE unit at a time"
+key_concept = "You activate 1 unit, opponent activates 1 unit, repeat until all units have activated"
+
+[[phases]]
+name = "Round Structure"
+order = 1
+description = "Each round, players alternate activating units"
+
+[[phases.steps]]
+step = 1
+action = "Roll for Initiative"
+details = "Both players roll D6, highest goes first this round"
+
+[[phases.steps]]
+step = 2
+action = "First Player Activates a Unit"
+details = "Choose one unit that hasn't activated this round"
+
+[[phases.steps]]
+step = 3
+action = "Second Player Activates a Unit"
+details = "Choose one unit that hasn't activated this round"
+
+[[phases.steps]]
+step = 4
+action = "Continue Alternating"
+details = "Keep alternating until all units have activated"
+
+[[phases.steps]]
+step = 5
+action = "End Round"
+details = "All units are now ready to activate again next round"
+
+[[phases]]
+name = "Unit Activation"
+order = 2
+description = "When you activate a unit, it may Move and then either Hold, Advance, or Charge"
+
+[[phases.steps]]
+step = 1
+action = "Move"
+details = "Move up to your Movement value in inches"
+rules = [
+    "Standard infantry: 6\" move",
+    "Cavalry: 9\" move",
+    "Cannot move within 1\" of enemies (unless charging)",
+    "Difficult terrain: -2\" to movement",
+]
+
+[[phases.steps]]
+step = 2
+action = "Choose Action"
+details = "After moving, choose ONE of these actions"
+
+[[phases.actions]]
+name = "HOLD"
+description = "Stay put and shoot"
+rules = [
+    "Fire all weapons at full effect",
+    "Best for shooting units",
+]
+
+[[phases.actions]]
+name = "ADVANCE"
+description = "Move again, then shoot with penalty"
+rules = [
+    "Move up to 6\" again",
+    "Then fire with -1 to hit",
+    "Good for repositioning while keeping pressure",
+]
+
+[[phases.actions]]
+name = "CHARGE"
+description = "Rush into melee combat"
+rules = [
+    "Move up to 12\" toward an enemy",
+    "Must end in base contact",
+    "Then fight in melee immediately",
+    "Chargers get +1 attack (Furious rule optional)",
+]
+
+[[phases]]
+name = "Shooting"
+order = 3
+description = "Roll to hit, then roll to wound"
+
+[[phases.steps]]
+step = 1
+action = "Pick Target"
+details = "Choose enemy unit within range and line of sight"
+
+[[phases.steps]]
+step = 2
+action = "Roll To Hit"
+details = "Roll D6 for each shot, need QUALITY or better"
+rules = [
+    "Quality 3+ = hit on 3, 4, 5, 6",
+    "Quality 4+ = hit on 4, 5, 6",
+    "Quality 5+ = hit on 5, 6",
+    "Modifiers: -1 for soft cover, -1 for moving and shooting",
+]
+
+[[phases.steps]]
+step = 3
+action = "Roll Defense"
+details = "Opponent rolls D6 per hit, need DEFENSE or better to block"
+rules = [
+    "Defense 2+ = blocks on 2-6",
+    "Defense 4+ = blocks on 4-6",
+    "AP reduces Defense (AP(1) = -1 to Defense roll)",
+]
+
+[[phases.steps]]
+step = 4
+action = "Apply Wounds"
+details = "Each failed defense = 1 wound"
+rules = [
+    "Basic models have Tough(1) = 1 wound",
+    "Heroes may have Tough(3) = 3 wounds",
+    "Monsters can have Tough(6+)",
+    "Remove models when wounds = 0",
+]
+
+[[phases]]
+name = "Melee Combat"
+order = 4
+description = "Fight in close combat"
+
+[[phases.steps]]
+step = 1
+action = "Both Sides Fight"
+details = "Unlike shooting, BOTH units in combat fight"
+
+[[phases.steps]]
+step = 2
+action = "Roll Attacks"
+details = "Each model rolls its Attack dice"
+rules = [
+    "Roll D6 per attack",
+    "Need QUALITY or better to hit",
+    "Apply weapon AP",
+]
+
+[[phases.steps]]
+step = 3
+action = "Defender Rolls Defense"
+details = "Same as shooting defense"
+
+[[phases.steps]]
+step = 4
+action = "Loser Checks Morale"
+details = "Side that took more wounds tests morale"
+rules = [
+    "Roll 2D6",
+    "If roll > models remaining, unit routs",
+    "Routed units are removed",
+    "Fearless units ignore this",
+]
+
+[[phases]]
+name = "Magic Phase"
+order = 5
+description = "Wizards cast spells (if using magic)"
+
+[[phases.steps]]
+step = 1
+action = "Cast Spell"
+details = "Roll D6 vs spell's casting value"
+rules = [
+    "Roll D6 + wizard level",
+    "Meet or beat casting value",
+    "Spells have various effects",
+]
+
+[[phases.steps]]
+step = 2
+action = "Dispel"
+details = "Opponent may attempt to dispel"
+rules = [
+    "Roll D6 + wizard level (if any)",
+    "Must beat casting roll",
+]
+
+[quick_reference]
+quality = "Roll D6 >= Quality value to hit"
+defense = "Roll D6 >= Defense value to block wound"
+ap = "Armor Piercing reduces Defense (AP(2) = -2 Defense)"
+tough = "Number of wounds before model is removed"
+morale = "Roll 2D6 <= remaining models to stay"
+charge_bonus = "Furious models get +1 attack on charge"
+
+[special_rules_summary]
+Fearless = "Automatically pass morale tests"
+Furious = "+1 attack on charge"
+Regeneration = "On 5+ ignore wound"
+Stealth = "Enemies -1 to hit at range"
+Fast = "+2\" to movement"
+Slow = "-2\" to movement"
+Strider = "Ignore difficult terrain"
+Tough = "Number in parentheses = wounds"
+AP = "Number in parentheses = Defense penalty"
+Blast = "Number in parentheses = extra hits if first hits"
+Deadly = "Number in parentheses = wounds per hit"
+Flying = "May move over terrain and models freely"
+Ambush = "May deploy anywhere 9\" from enemies"
+Scout = "May deploy 12\" beyond deployment zone"
+Hero = "May issue orders to nearby units"
+Caster = "Level 1-3 wizard, adds to casting rolls"
+Impact = "Hits on charge before melee"
+Phalanx = "Enemies get -1 to hit in melee (front)"
+Poison = "Unmodified 6 to hit = auto-wound"
+Undead = "Fearless, heals D3 wounds on 4+ at round start"

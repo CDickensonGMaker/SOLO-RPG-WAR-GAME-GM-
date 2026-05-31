@@ -1,0 +1,1051 @@
+# Warhammer: The Old World - The Empire
+# The greatest nation of mankind, defended by faith, steel, and gunpowder
+
+[faction]
+name = "The Empire"
+description = "The greatest nation of mankind, defended by faith, steel, and gunpowder. The Empire combines disciplined state troops, powerful artillery, elite knightly orders, and battle wizards into a formidable combined arms force"
+playstyle = "Combined arms with artillery, cavalry, and infantry working in concert"
+strengths = ["Versatile army composition", "Excellent shooting and artillery", "Access to all Lores of Magic", "Powerful cavalry", "Steam tanks"]
+weaknesses = ["Average individual troop quality", "Requires combined arms tactics", "No single dominant unit type", "Relies on synergy between units"]
+lore_notes = "Founded by Sigmar Heldenhammer, the Empire is a confederation of provinces ruled by Elector Counts, united under the Emperor"
+
+# =============================================================================
+# LORDS
+# =============================================================================
+
+[[units]]
+name = "General of the Empire"
+type = "character"
+category = "Lords"
+points = 100
+models = "1"
+tactical_role = "commander"
+threat_level = "high"
+preferred_targets = ["enemy_characters", "weakened_units"]
+weaknesses = ["massed_attacks", "war_machines"]
+special_rules = ["Hold the Line!", "Inspiring Presence"]
+keywords = ["Character", "Infantry", "Empire", "Lord"]
+equipment = ["Hand weapon", "Full plate armor"]
+options = ["May take mount (Warhorse, Griffon, etc.)", "May take magic items up to 100 points", "May take additional weapons and armor"]
+
+[units.stats]
+M = 4
+WS = 6
+BS = 5
+S = 4
+T = 4
+W = 3
+I = 5
+A = 4
+Ld = 9
+Sv = "4+"
+
+[[units]]
+name = "Grand Master"
+type = "character"
+category = "Lords"
+points = 145
+models = "1"
+tactical_role = "combat_character"
+threat_level = "very_high"
+preferred_targets = ["enemy_cavalry", "characters"]
+weaknesses = ["mass_infantry", "war_machines"]
+special_rules = ["Inner Circle", "Devastating Charge (+1S)", "Knightly Orders"]
+keywords = ["Character", "Cavalry", "Empire", "Lord", "Knightly Order"]
+equipment = ["Lance", "Hand weapon", "Full plate armor", "Shield", "Barded Warhorse"]
+options = ["May take magic items up to 100 points"]
+
+[units.stats]
+M = 4
+WS = 6
+BS = 5
+S = 4
+T = 4
+W = 3
+I = 5
+A = 4
+Ld = 9
+Sv = "2+"
+
+[units.mount]
+name = "Barded Warhorse"
+M = 8
+WS = 3
+S = 3
+T = 3
+W = 1
+I = 3
+A = 1
+
+[[units]]
+name = "Arch Lector"
+type = "character"
+category = "Lords"
+points = 125
+models = "1"
+tactical_role = "support_character"
+threat_level = "high"
+preferred_targets = ["undead", "daemons"]
+weaknesses = ["ranged_attacks", "assassination"]
+special_rules = ["Righteous Fury", "Battle Prayers", "War Altar"]
+keywords = ["Character", "Infantry", "Empire", "Lord", "Sigmarite"]
+equipment = ["Great weapon or two hand weapons", "Heavy armor"]
+options = ["May mount War Altar of Sigmar (+150 pts)", "May take magic items up to 100 points"]
+
+[units.stats]
+M = 4
+WS = 5
+BS = 4
+S = 4
+T = 4
+W = 3
+I = 4
+A = 3
+Ld = 9
+Sv = "5+"
+
+[[units]]
+name = "Wizard Lord"
+type = "character"
+category = "Lords"
+points = 165
+models = "1"
+tactical_role = "magic"
+threat_level = "very_high"
+preferred_targets = ["enemy_units", "monsters"]
+weaknesses = ["assassins", "magic_resistance"]
+special_rules = ["Level 3 Wizard", "May upgrade to Level 4 (+35 pts)"]
+keywords = ["Character", "Infantry", "Empire", "Lord", "Wizard"]
+equipment = ["Hand weapon"]
+options = ["May choose any Lore of Magic", "May take mount", "May take arcane items up to 100 points"]
+
+[units.stats]
+M = 4
+WS = 3
+BS = 3
+S = 3
+T = 3
+W = 3
+I = 3
+A = 1
+Ld = 8
+Sv = "-"
+
+# =============================================================================
+# HEROES
+# =============================================================================
+
+[[units]]
+name = "Captain of the Empire"
+type = "character"
+category = "Heroes"
+points = 50
+models = "1"
+tactical_role = "support_commander"
+threat_level = "medium"
+preferred_targets = ["enemy_champions", "weakened_units"]
+weaknesses = ["powerful_characters", "monsters"]
+special_rules = ["Hold the Line!"]
+keywords = ["Character", "Infantry", "Empire", "Hero"]
+equipment = ["Hand weapon", "Light armor"]
+options = ["May take mount", "May take magic items up to 50 points", "May carry Battle Standard (+25 pts)"]
+
+[units.stats]
+M = 4
+WS = 5
+BS = 5
+S = 4
+T = 4
+W = 2
+I = 5
+A = 3
+Ld = 8
+Sv = "6+"
+
+[[units]]
+name = "Battle Wizard"
+type = "character"
+category = "Heroes"
+points = 65
+models = "1"
+tactical_role = "magic_support"
+threat_level = "medium"
+preferred_targets = ["enemy_units"]
+weaknesses = ["close_combat", "snipers"]
+special_rules = ["Level 1 Wizard", "May upgrade to Level 2 (+35 pts)"]
+keywords = ["Character", "Infantry", "Empire", "Hero", "Wizard"]
+equipment = ["Hand weapon"]
+options = ["May choose any Lore of Magic", "May take arcane items up to 50 points"]
+
+[units.stats]
+M = 4
+WS = 3
+BS = 3
+S = 3
+T = 3
+W = 2
+I = 3
+A = 1
+Ld = 7
+Sv = "-"
+
+[[units]]
+name = "Warrior Priest"
+type = "character"
+category = "Heroes"
+points = 65
+models = "1"
+tactical_role = "support_combat"
+threat_level = "medium"
+preferred_targets = ["undead", "daemons"]
+weaknesses = ["powerful_characters"]
+special_rules = ["Righteous Fury", "Battle Prayers", "Hatred"]
+keywords = ["Character", "Infantry", "Empire", "Hero", "Sigmarite"]
+equipment = ["Great weapon or two hand weapons", "Heavy armor"]
+options = ["May take magic items up to 50 points"]
+
+[units.stats]
+M = 4
+WS = 4
+BS = 3
+S = 4
+T = 4
+W = 2
+I = 4
+A = 2
+Ld = 8
+Sv = "5+"
+
+[[units]]
+name = "Master Engineer"
+type = "character"
+category = "Heroes"
+points = 65
+models = "1"
+tactical_role = "war_machine_support"
+threat_level = "low"
+preferred_targets = ["war_machines"]
+weaknesses = ["close_combat"]
+special_rules = ["Master of Ballistics", "Artillery Specialist"]
+keywords = ["Character", "Infantry", "Empire", "Hero", "Engineer"]
+equipment = ["Hand weapon", "Light armor", "Repeater pistol"]
+options = ["May take Hochland Long Rifle (+20 pts)"]
+
+[units.stats]
+M = 4
+WS = 3
+BS = 4
+S = 3
+T = 3
+W = 2
+I = 3
+A = 1
+Ld = 7
+Sv = "6+"
+
+[[units]]
+name = "Witch Hunter"
+type = "character"
+category = "Heroes"
+points = 50
+models = "1"
+tactical_role = "character_hunter"
+threat_level = "medium"
+preferred_targets = ["wizards", "undead", "daemons"]
+weaknesses = ["armored_targets"]
+special_rules = ["Magic Resistance (2)", "Grim Resolve", "Accusation"]
+keywords = ["Character", "Infantry", "Empire", "Hero"]
+equipment = ["Pistol", "Hand weapon", "Light armor"]
+options = ["May take brace of pistols (+6 pts)"]
+
+[units.stats]
+M = 4
+WS = 4
+BS = 4
+S = 4
+T = 3
+W = 2
+I = 4
+A = 2
+Ld = 8
+Sv = "6+"
+
+# =============================================================================
+# CORE UNITS
+# =============================================================================
+
+[[units]]
+name = "State Troops (Swordsmen)"
+type = "infantry"
+category = "Core"
+points = 6
+models = "10-40"
+tactical_role = "line_infantry"
+threat_level = "low"
+preferred_targets = ["light_infantry"]
+weaknesses = ["cavalry", "monsters", "heavy_infantry"]
+special_rules = ["Detachment"]
+keywords = ["Infantry", "Empire", "Core", "State Troops"]
+equipment = ["Sword", "Light armor", "Shield"]
+options = ["May add musician (+5 pts)", "May add standard bearer (+5 pts)", "May upgrade one model to Sergeant (+5 pts)"]
+
+[units.stats]
+M = 4
+WS = 3
+BS = 3
+S = 3
+T = 3
+W = 1
+I = 3
+A = 1
+Ld = 7
+Sv = "5+"
+
+[[units.weapons]]
+name = "Sword"
+range = "Melee"
+strength = "User"
+ap = "0"
+damage = "1"
+abilities = ["Parry (6+ ward in combat with shield)"]
+
+[[units]]
+name = "State Troops (Halberdiers)"
+type = "infantry"
+category = "Core"
+points = 6
+models = "10-40"
+tactical_role = "line_infantry"
+threat_level = "low"
+preferred_targets = ["armored_infantry"]
+weaknesses = ["cavalry", "shooting"]
+special_rules = ["Detachment", "Fight in Extra Ranks"]
+keywords = ["Infantry", "Empire", "Core", "State Troops"]
+equipment = ["Halberd", "Light armor"]
+options = ["May add musician (+5 pts)", "May add standard bearer (+5 pts)"]
+
+[units.stats]
+M = 4
+WS = 3
+BS = 3
+S = 3
+T = 3
+W = 1
+I = 3
+A = 1
+Ld = 7
+Sv = "6+"
+
+[[units.weapons]]
+name = "Halberd"
+range = "Melee"
+strength = "+1"
+ap = "0"
+damage = "1"
+abilities = ["Requires two hands", "Fight in Extra Ranks"]
+
+[[units]]
+name = "State Troops (Spearmen)"
+type = "infantry"
+category = "Core"
+points = 5
+models = "10-40"
+tactical_role = "defensive_infantry"
+threat_level = "low"
+preferred_targets = ["charging_cavalry"]
+weaknesses = ["shooting", "flanking"]
+special_rules = ["Detachment", "Fight in Extra Ranks (3 ranks, 4 if charged)"]
+keywords = ["Infantry", "Empire", "Core", "State Troops"]
+equipment = ["Spear", "Light armor", "Shield"]
+options = ["May add musician (+5 pts)", "May add standard bearer (+5 pts)"]
+
+[units.stats]
+M = 4
+WS = 3
+BS = 3
+S = 3
+T = 3
+W = 1
+I = 3
+A = 1
+Ld = 7
+Sv = "5+"
+
+[[units]]
+name = "Handgunners"
+type = "infantry"
+category = "Core"
+points = 8
+models = "10-30"
+tactical_role = "ranged_infantry"
+threat_level = "medium"
+preferred_targets = ["armored_targets", "monsters"]
+weaknesses = ["fast_cavalry", "flying_units", "close_combat"]
+special_rules = ["Detachment", "Move or Fire"]
+keywords = ["Infantry", "Empire", "Core", "Gunpowder"]
+equipment = ["Handgun", "Light armor"]
+options = ["May add musician (+5 pts)", "May upgrade one model to Marksman with Hochland Long Rifle (+20 pts)"]
+
+[units.stats]
+M = 4
+WS = 3
+BS = 3
+S = 3
+T = 3
+W = 1
+I = 3
+A = 1
+Ld = 7
+Sv = "6+"
+
+[[units.weapons]]
+name = "Handgun"
+range = "24\""
+strength = "4"
+ap = "1"
+damage = "1"
+abilities = ["Armor Piercing (1)", "Move or Fire"]
+
+[[units]]
+name = "Crossbowmen"
+type = "infantry"
+category = "Core"
+points = 8
+models = "10-30"
+tactical_role = "ranged_infantry"
+threat_level = "medium"
+preferred_targets = ["armored_infantry"]
+weaknesses = ["cavalry", "close_combat"]
+special_rules = ["Detachment", "Move or Fire"]
+keywords = ["Infantry", "Empire", "Core"]
+equipment = ["Crossbow", "Light armor"]
+options = ["May add musician (+5 pts)"]
+
+[units.stats]
+M = 4
+WS = 3
+BS = 3
+S = 3
+T = 3
+W = 1
+I = 3
+A = 1
+Ld = 7
+Sv = "6+"
+
+[[units.weapons]]
+name = "Crossbow"
+range = "30\""
+strength = "4"
+ap = "0"
+damage = "1"
+abilities = ["Move or Fire"]
+
+[[units]]
+name = "Free Company Militia"
+type = "infantry"
+category = "Core"
+points = 5
+models = "10-30"
+tactical_role = "skirmishers"
+threat_level = "low"
+preferred_targets = ["light_infantry", "war_machines"]
+weaknesses = ["heavy_infantry", "cavalry"]
+special_rules = ["Skirmishers"]
+keywords = ["Infantry", "Empire", "Core", "Skirmishers"]
+equipment = ["Two hand weapons", "Light armor"]
+
+[units.stats]
+M = 4
+WS = 3
+BS = 3
+S = 3
+T = 3
+W = 1
+I = 3
+A = 1
+Ld = 7
+Sv = "6+"
+
+[[units]]
+name = "Empire Knights"
+type = "cavalry"
+category = "Core"
+points = 22
+models = "5-12"
+tactical_role = "shock_cavalry"
+threat_level = "high"
+preferred_targets = ["infantry", "war_machines"]
+weaknesses = ["pikes", "massed_shooting"]
+special_rules = ["Devastating Charge (+1S)"]
+keywords = ["Cavalry", "Empire", "Core", "Knights"]
+equipment = ["Lance", "Hand weapon", "Full plate armor", "Shield", "Barded Warhorse"]
+options = ["May add musician (+5 pts)", "May add standard bearer (+10 pts)", "May upgrade to Inner Circle (+3 pts/model)"]
+
+[units.stats]
+M = 4
+WS = 4
+BS = 3
+S = 3
+T = 3
+W = 1
+I = 3
+A = 1
+Ld = 8
+Sv = "2+"
+
+[units.mount]
+name = "Barded Warhorse"
+M = 8
+WS = 3
+S = 3
+T = 3
+W = 1
+I = 3
+A = 1
+
+[[units.weapons]]
+name = "Lance"
+range = "Melee"
+strength = "+2 on charge"
+ap = "0"
+damage = "1"
+abilities = ["Devastating Charge (+1S)", "First round only"]
+
+# =============================================================================
+# SPECIAL UNITS
+# =============================================================================
+
+[[units]]
+name = "Greatswords"
+type = "infantry"
+category = "Special"
+points = 11
+models = "10-30"
+tactical_role = "elite_infantry"
+threat_level = "high"
+preferred_targets = ["elite_infantry", "monstrous_infantry"]
+weaknesses = ["shooting", "large_cavalry_units"]
+special_rules = ["Stubborn", "Bodyguard"]
+keywords = ["Infantry", "Empire", "Special", "Greatswords"]
+equipment = ["Great weapon", "Full plate armor"]
+options = ["May add musician (+5 pts)", "May add standard bearer (+10 pts)", "May take magic standard up to 50 pts"]
+
+[units.stats]
+M = 4
+WS = 4
+BS = 3
+S = 3
+T = 3
+W = 1
+I = 3
+A = 1
+Ld = 8
+Sv = "4+"
+
+[[units.weapons]]
+name = "Great Weapon"
+range = "Melee"
+strength = "+2"
+ap = "2"
+damage = "1"
+abilities = ["Requires two hands", "Always Strikes Last", "Armor Piercing (2)"]
+
+[[units]]
+name = "Reiksguard Knights"
+type = "cavalry"
+category = "Special"
+points = 27
+models = "5-12"
+tactical_role = "elite_shock_cavalry"
+threat_level = "very_high"
+preferred_targets = ["infantry", "characters", "war_machines"]
+weaknesses = ["pikes", "massed_shooting", "monsters"]
+special_rules = ["Stubborn", "Inner Circle", "Devastating Charge (+1S)"]
+keywords = ["Cavalry", "Empire", "Special", "Knights", "Reiksguard"]
+equipment = ["Lance", "Hand weapon", "Full plate armor", "Shield", "Barded Warhorse"]
+options = ["May add musician (+5 pts)", "May add standard bearer (+10 pts)", "May take magic standard up to 75 pts"]
+
+[units.stats]
+M = 4
+WS = 4
+BS = 3
+S = 3
+T = 3
+W = 1
+I = 3
+A = 1
+Ld = 8
+Sv = "2+"
+
+[units.mount]
+name = "Barded Warhorse"
+M = 8
+WS = 3
+S = 3
+T = 3
+W = 1
+I = 3
+A = 1
+
+[[units]]
+name = "Pistoliers"
+type = "cavalry"
+category = "Special"
+points = 18
+models = "5-10"
+tactical_role = "harasser"
+threat_level = "medium"
+preferred_targets = ["war_machines", "light_cavalry", "skirmishers"]
+weaknesses = ["heavy_cavalry", "shooting"]
+special_rules = ["Fast Cavalry", "Vanguard"]
+keywords = ["Cavalry", "Empire", "Special", "Gunpowder"]
+equipment = ["Brace of pistols", "Light armor", "Warhorse"]
+options = ["May upgrade one model to Outrider with repeater pistol (+10 pts)"]
+
+[units.stats]
+M = 4
+WS = 3
+BS = 3
+S = 3
+T = 3
+W = 1
+I = 3
+A = 1
+Ld = 7
+Sv = "6+"
+
+[units.mount]
+name = "Warhorse"
+M = 8
+WS = 3
+S = 3
+T = 3
+W = 1
+I = 3
+A = 1
+
+[[units.weapons]]
+name = "Brace of Pistols"
+range = "8\""
+strength = "4"
+ap = "1"
+damage = "1"
+abilities = ["Armor Piercing (1)", "Multiple Shots (2)", "Quick to Fire"]
+
+[[units]]
+name = "Outriders"
+type = "cavalry"
+category = "Special"
+points = 21
+models = "5-10"
+tactical_role = "mobile_firepower"
+threat_level = "high"
+preferred_targets = ["infantry", "cavalry"]
+weaknesses = ["fast_cavalry", "magic"]
+special_rules = ["Fast Cavalry", "Vanguard"]
+keywords = ["Cavalry", "Empire", "Special", "Gunpowder"]
+equipment = ["Repeater handgun", "Light armor", "Warhorse"]
+options = ["May upgrade one model to Sharpshooter with Hochland Long Rifle (+10 pts)"]
+
+[units.stats]
+M = 4
+WS = 3
+BS = 4
+S = 3
+T = 3
+W = 1
+I = 3
+A = 1
+Ld = 7
+Sv = "6+"
+
+[units.mount]
+name = "Warhorse"
+M = 8
+WS = 3
+S = 3
+T = 3
+W = 1
+I = 3
+A = 1
+
+[[units.weapons]]
+name = "Repeater Handgun"
+range = "24\""
+strength = "4"
+ap = "1"
+damage = "1"
+abilities = ["Armor Piercing (1)", "Multiple Shots (3)", "Move or Fire"]
+
+[[units]]
+name = "Great Cannon"
+type = "warmachine"
+category = "Special"
+points = 120
+models = "1 cannon, 3 crew"
+tactical_role = "artillery"
+threat_level = "very_high"
+preferred_targets = ["monsters", "cavalry", "characters"]
+weaknesses = ["fast_cavalry", "flyers", "misfire"]
+special_rules = ["Move or Fire"]
+keywords = ["War Machine", "Empire", "Special", "Gunpowder"]
+equipment = ["Hand weapons"]
+
+[units.stats]
+M = "-"
+WS = 3
+BS = 3
+S = 3
+T = 7
+W = 3
+I = 3
+A = "-"
+Ld = 7
+Sv = "-"
+
+[[units.weapons]]
+name = "Great Cannon"
+range = "48\""
+strength = "10"
+ap = "6"
+damage = "D6"
+abilities = ["Armor Piercing (6)", "Multiple Wounds (D6)", "Bounce through ranks"]
+
+[[units]]
+name = "Mortar"
+type = "warmachine"
+category = "Special"
+points = 100
+models = "1 mortar, 3 crew"
+tactical_role = "artillery"
+threat_level = "high"
+preferred_targets = ["ranked_infantry", "cavalry_blocks"]
+weaknesses = ["misfire", "fast_units"]
+special_rules = ["Move or Fire", "Indirect Fire"]
+keywords = ["War Machine", "Empire", "Special", "Gunpowder"]
+equipment = ["Hand weapons"]
+
+[units.stats]
+M = "-"
+WS = 3
+BS = 3
+S = 3
+T = 7
+W = 3
+I = 3
+A = "-"
+Ld = 7
+Sv = "-"
+
+[[units.weapons]]
+name = "Mortar"
+range = "12-48\""
+strength = "3"
+ap = "0"
+damage = "1"
+abilities = ["Large Blast (5\")", "Indirect Fire", "No cover saves"]
+
+[[units]]
+name = "Demigryph Knights"
+type = "monstrous_cavalry"
+category = "Special"
+points = 58
+models = "3-6"
+tactical_role = "monstrous_shock_cavalry"
+threat_level = "extreme"
+preferred_targets = ["monsters", "cavalry", "heavy_infantry"]
+weaknesses = ["massed_shooting", "war_machines"]
+special_rules = ["Fear", "Devastating Charge (+1S)", "Inner Circle"]
+keywords = ["Monstrous Cavalry", "Empire", "Special"]
+equipment = ["Halberd or lance", "Full plate armor", "Shield"]
+options = ["May swap halberds for lances", "May add musician (+10 pts)", "May add standard bearer (+10 pts)"]
+
+[units.stats]
+M = 4
+WS = 4
+BS = 3
+S = 4
+T = 4
+W = 1
+I = 3
+A = 1
+Ld = 8
+Sv = "2+"
+
+[units.mount]
+name = "Demigryph"
+M = 8
+WS = 4
+S = 5
+T = 4
+W = 3
+I = 3
+A = 3
+
+[[units]]
+name = "Flagellants"
+type = "infantry"
+category = "Special"
+points = 10
+models = "10-30"
+tactical_role = "tarpit"
+threat_level = "medium"
+preferred_targets = ["any"]
+weaknesses = ["shooting", "cavalry_charges"]
+special_rules = ["Unbreakable", "Frenzy", "The End is Nigh!"]
+keywords = ["Infantry", "Empire", "Special", "Flagellants"]
+equipment = ["Flails"]
+
+[units.stats]
+M = 4
+WS = 3
+BS = 2
+S = 3
+T = 3
+W = 1
+I = 3
+A = 1
+Ld = 10
+Sv = "-"
+
+# =============================================================================
+# RARE UNITS
+# =============================================================================
+
+[[units]]
+name = "Steam Tank"
+type = "warmachine"
+category = "Rare"
+points = 300
+models = "1"
+tactical_role = "anchor"
+threat_level = "extreme"
+preferred_targets = ["everything"]
+weaknesses = ["malfunction", "strength_10+"]
+special_rules = ["Unbreakable", "Steam Points", "Impact Hits (D6+1)", "Terror"]
+keywords = ["War Machine", "Empire", "Rare", "Unique"]
+equipment = ["Steam Cannon", "Steam Gun", "Crushing mass"]
+
+[units.stats]
+M = "variable"
+WS = "-"
+BS = 4
+S = 6
+T = 8
+W = 10
+I = "-"
+A = "-"
+Ld = "-"
+Sv = "1+"
+
+[[units.weapons]]
+name = "Steam Cannon"
+range = "30\""
+strength = "8"
+ap = "4"
+damage = "D3"
+abilities = ["Armor Piercing (4)", "Multiple Wounds (D3)"]
+
+[[units.weapons]]
+name = "Steam Gun"
+range = "Template"
+strength = "3"
+ap = "1"
+damage = "1"
+abilities = ["Flaming Attacks"]
+
+[[units]]
+name = "Helblaster Volley Gun"
+type = "warmachine"
+category = "Rare"
+points = 120
+models = "1 volley gun, 3 crew"
+tactical_role = "anti_infantry"
+threat_level = "very_high"
+preferred_targets = ["ranked_infantry", "monstrous_infantry"]
+weaknesses = ["misfire", "close_combat"]
+special_rules = ["Move or Fire"]
+keywords = ["War Machine", "Empire", "Rare", "Gunpowder"]
+equipment = ["Hand weapons"]
+
+[units.stats]
+M = "-"
+WS = 3
+BS = 3
+S = 3
+T = 7
+W = 3
+I = 3
+A = "-"
+Ld = 7
+Sv = "-"
+
+[[units.weapons]]
+name = "Volley Gun"
+range = "24\""
+strength = "5"
+ap = "2"
+damage = "1"
+abilities = ["Armor Piercing (2)", "Roll artillery dice for number of shots (up to 30)", "Misfire possible"]
+
+[[units]]
+name = "Helstorm Rocket Battery"
+type = "warmachine"
+category = "Rare"
+points = 120
+models = "1 battery, 3 crew"
+tactical_role = "anti_horde"
+threat_level = "high"
+preferred_targets = ["large_units", "ranked_infantry"]
+weaknesses = ["inaccurate", "misfire"]
+special_rules = ["Move or Fire", "Indirect Fire", "Unreliable"]
+keywords = ["War Machine", "Empire", "Rare", "Gunpowder"]
+equipment = ["Hand weapons"]
+
+[units.stats]
+M = "-"
+WS = 3
+BS = 3
+S = 3
+T = 7
+W = 3
+I = 3
+A = "-"
+Ld = 7
+Sv = "-"
+
+[[units.weapons]]
+name = "Helstorm Rockets"
+range = "12-48\""
+strength = "5"
+ap = "1"
+damage = "1"
+abilities = ["Large Blast (5\")", "Scatter D6+4\""]
+
+[[units]]
+name = "Luminark of Hysh"
+type = "warmachine"
+category = "Rare"
+points = 130
+models = "1"
+tactical_role = "magic_support"
+threat_level = "high"
+preferred_targets = ["wizards", "daemons"]
+weaknesses = ["war_machines", "fast_units"]
+special_rules = ["Aura of Protection (6++ ward 6\")", "Searing Beam"]
+keywords = ["War Machine", "Empire", "Rare", "Light Magic"]
+equipment = ["Searing Beam"]
+
+[units.stats]
+M = 6
+WS = "-"
+BS = 3
+S = "-"
+T = 6
+W = 5
+I = "-"
+A = "-"
+Ld = "-"
+Sv = "5+"
+
+[[units.weapons]]
+name = "Searing Beam"
+range = "36\""
+strength = "6"
+ap = "3"
+damage = "1"
+abilities = ["No armor save", "Roll to wound: 1-2 = 1 hit, 3-4 = D3 hits, 5-6 = D6 hits"]
+
+[[units]]
+name = "Celestial Hurricanum"
+type = "warmachine"
+category = "Rare"
+points = 130
+models = "1"
+tactical_role = "magic_support"
+threat_level = "high"
+preferred_targets = ["enemy_units"]
+weaknesses = ["war_machines", "fast_units"]
+special_rules = ["Locus of Azyr (+1 to hit within 6\")", "Portent of Battle"]
+keywords = ["War Machine", "Empire", "Rare", "Heavens Magic"]
+equipment = ["Storm of Shemtek"]
+
+[units.stats]
+M = 6
+WS = "-"
+BS = 3
+S = "-"
+T = 6
+W = 5
+I = "-"
+A = "-"
+Ld = "-"
+Sv = "5+"
+
+[[units.weapons]]
+name = "Storm of Shemtek"
+range = "24\""
+strength = "variable"
+ap = "0"
+damage = "variable"
+abilities = ["2D6 hits", "Strength = highest D6 result"]
+
+# =============================================================================
+# FACTION SPECIAL RULES
+# =============================================================================
+
+[[faction_rules]]
+name = "Hold the Line!"
+description = "Empire units within 6\" of a General or Captain may re-roll failed Psychology tests"
+
+[[faction_rules]]
+name = "Detachment"
+description = "State Troops may field Detachments - smaller supporting units that can counter-charge or stand and shoot when the parent unit is engaged"
+
+[[faction_rules]]
+name = "Knightly Orders"
+description = "Grand Masters and Empire Knights belong to Knightly Orders, each with unique characteristics and rules"
+
+[[faction_rules]]
+name = "State Troop Regiments"
+description = "Empire State Troops fight in disciplined regiments, gaining bonuses from ranks and combined formations"
+
+# =============================================================================
+# FACTION MAGIC ITEMS
+# =============================================================================
+
+[[faction_items]]
+name = "The Runefang"
+type = "magic_weapon"
+points = 85
+description = "Attacks always wound on 2+ regardless of Toughness. No armor saves allowed"
+restrictions = ["Empire characters only", "One per army per Runefang"]
+
+[[faction_items]]
+name = "Hammer of Sigmar"
+type = "magic_weapon"
+points = 40
+description = "+2 Strength. Attacks cause Multiple Wounds (2) against Forces of Destruction"
+restrictions = ["Sigmarite characters only"]
+
+[[faction_items]]
+name = "Van Horstmann's Speculum"
+type = "enchanted"
+points = 40
+description = "Bearer swaps WS, S, T, I, and A with one enemy character in base contact at start of combat"
+restrictions = ["Empire characters only"]
+
+[[faction_items]]
+name = "Icon of Magnus"
+type = "banner"
+points = 75
+description = "Unit is Immune to Psychology. Unit causes Fear"
+restrictions = ["Empire standard bearer only"]
+
+[[faction_items]]
+name = "Griffon Standard"
+type = "banner"
+points = 60
+description = "Unit adds +1 to Combat Resolution. Re-roll failed Break tests"
+restrictions = ["Empire standard bearer only"]

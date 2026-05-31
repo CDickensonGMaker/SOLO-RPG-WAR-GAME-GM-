@@ -1,0 +1,31 @@
+[project]
+name = "oracle"
+version = "0.1.0"
+description = "CLI-based Game Master emulator for solo tabletop RPGs and wargames"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "prompt_toolkit>=3.0",
+    "rich>=13.0",
+    "tomli>=2.0;python_version<'3.11'",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "black", "ruff"]
+gui = ["dearpygui>=1.9"]
+
+[project.scripts]
+oracle = "oracle.main:main"
+oracle-gui = "oracle.gui.oracle_launcher:main"
+birthright = "oracle.gui.launcher:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["oracle*"]
+
+[tool.setuptools.package-data]
+oracle = ["data/**/*.toml"]

@@ -1,0 +1,63 @@
+# Combat Encounters - Weird War Setting
+# Military combat encounters with supernatural elements
+
+[combat]
+entries = [
+  # Standard Military Combat
+  { text = "Enemy patrol, six soldiers moving through the ruins", weight = 1 },
+  { text = "Sniper has the area covered, precise and patient", weight = 1 },
+  { text = "Machine gun nest commanding the approach", weight = 1 },
+  { text = "Mortar barrage, shells walking toward your position", weight = 1 },
+  { text = "Enemy squad dug into defensive positions", weight = 1 },
+  { text = "Armored vehicle approaching, infantry in support", weight = 1 },
+  { text = "Artillery barrage beginning, incoming shells screaming", weight = 1 },
+  { text = "Gas attack, yellow-green cloud rolling across the ground", weight = 1 },
+  { text = "Trench raiders, bayonets fixed, approaching silently", weight = 1 },
+  { text = "Tank breaking through defensive line", weight = 1 },
+  { text = "Air attack, strafing run imminent", weight = 1 },
+  { text = "Counter-offensive, overwhelming numbers rushing forward", weight = 1 },
+  { text = "Flamethrower team advancing through the trenches", weight = 1 },
+  { text = "Enemy reinforcements arriving from unexpected direction", weight = 1 },
+  { text = "Sapper team detected planting explosives", weight = 1 },
+
+  # Ambushes and Traps
+  { text = "Walk into ambush, enemy fire from three sides", weight = 1 },
+  { text = "Booby trap triggered, explosion and chaos", weight = 1 },
+  { text = "Wire stretched at neck height, nearly invisible", weight = 1 },
+  { text = "False surrender, enemy opens fire when close", weight = 1 },
+  { text = "Mine field discovered when first soldier steps wrong", weight = 1 },
+  { text = "Concealed pit trap, spikes at bottom", weight = 1 },
+  { text = "Civilian used as bait, enemy waiting in ambush", weight = 1 },
+  { text = "Collapsing structure, intentionally weakened", weight = 1 },
+  { text = "Poisoned water source, effects delayed", weight = 1 },
+  { text = "Trapped corpse, rigged to explode when moved", weight = 1 },
+
+  # Supernatural Combat
+  { text = "Undead soldiers rise from the battlefield, attacking living", weight = 1 },
+  { text = "Possessed enemy soldiers, stronger and faster than normal", weight = 1 },
+  { text = "Shadow stalkers hunting through the trenches", weight = 1 },
+  { text = "Corrupted war hound, eyes glowing, jaws unhinged", weight = 1 },
+  { text = "Flesh golem constructed from battlefield dead", weight = 1 },
+  { text = "Enemy cultist channeling dark power as weapon", weight = 1 },
+  { text = "Ghost battalion, phantom soldiers attacking with real effect", weight = 1 },
+  { text = "Demon summoned by enemy ritual, loose on battlefield", weight = 1 },
+  { text = "Animated tank, crew long dead but machine still fighting", weight = 1 },
+  { text = "Bloodless soldiers, drained but still walking and fighting", weight = 1 },
+  { text = "Entity from beyond the veil, physical form unstable", weight = 1 },
+  { text = "Wendigo, once a soldier who ate forbidden flesh", weight = 1 },
+  { text = "Corpse swarm, dozens of bodies moving as one organism", weight = 1 },
+  { text = "Living gas cloud, sentient and hungry", weight = 1 },
+  { text = "Bone walker, skeletal construct bearing enemy symbols", weight = 1 },
+
+  # Mixed Combat
+  { text = "Enemy occult squad, human soldiers protecting a summoner", weight = 1 },
+  { text = "Possessed artillery crew, guns firing without loading", weight = 1 },
+  { text = "Enemy patrol led by something wearing an officer's skin", weight = 1 },
+  { text = "Undead rising in the midst of conventional firefight", weight = 1 },
+  { text = "Both sides converging on sacred artifact, three-way battle", weight = 1 },
+  { text = "Trap set by entity, enemy soldiers driven into your position", weight = 1 },
+  { text = "Suicide cultists, explosives strapped to bodies, chanting", weight = 1 },
+  { text = "Night creature attracted by the fighting's bloodshed", weight = 1 },
+  { text = "Enemy retreat reveals they were fleeing something worse", weight = 1 },
+  { text = "Ritual interrupted, half-summoned entity attacking everyone", weight = 1 },
+]

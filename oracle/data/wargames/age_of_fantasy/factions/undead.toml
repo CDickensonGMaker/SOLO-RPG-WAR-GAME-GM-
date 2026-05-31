@@ -1,0 +1,736 @@
+# Undead - Age of Fantasy
+# Legions of the dead led by powerful necromancers
+# One Page Rules - Free Wargaming System
+
+[faction]
+name = "Undead"
+description = "Legions of the risen dead led by powerful necromancers and vampire lords"
+playstyle = "Horde, attrition, fearless"
+difficulty = "intermediate"
+strengths = [
+    "Fearless troops ignore morale",
+    "Summon and regenerate units",
+    "Large numbers of cheap troops",
+    "Powerful characters",
+    "Monsters and heavy cavalry"
+]
+weaknesses = [
+    "Low quality troops",
+    "Crumble when general dies",
+    "Weak armor on hordes",
+    "Reliant on magic"
+]
+tactics = """
+Undead win through overwhelming numbers and attrition. Your troops are weak individually
+but fearless and renewable. Necromancers keep raising fallen troops while Vampire Lords
+dominate in combat. Screen with Skeletons and Zombies, deliver killing blows with Grave
+Guard and Blood Knights. Protect your general at all costs - if they die, your army
+crumbles. Magic is essential - Necromancy keeps your army refreshed.
+"""
+
+# =============================================================================
+# HQ UNITS
+# =============================================================================
+
+[[units]]
+name = "Vampire Lord"
+type = "infantry"
+category = "hq"
+points = 200
+models = "1"
+base_size = "25mm"
+tactical_role = "combat_lord"
+threat_level = "extreme"
+priority_target = true
+preferred_targets = ["everything"]
+avoid_targets = ["nothing"]
+weaknesses = ["focused_magic", "assassination"]
+synergies = ["Combat monster", "Magic support", "Regeneration"]
+special_rules = ["Hero", "Fearless", "Tough(4)", "Wizard(2)", "Regeneration"]
+keywords = ["Infantry", "Character", "Undead", "Vampire"]
+notes = "Combat and magic monster. Regeneration keeps him fighting. General of army."
+
+[units.stats]
+quality = "3+"
+defense = "4+"
+tough = 4
+movement = "6\""
+
+[[units.weapons]]
+name = "Cursed Blade"
+range = "Melee"
+shots = "6"
+ap = "2"
+special = ["Deadly(3)"]
+
+[[units.spells]]
+name = "Invocation of Nehek"
+level = 1
+description = "Friendly Undead unit within 18\" recovers D3 wounds or D3 slain models"
+
+[[units.spells]]
+name = "Vanhel's Danse Macabre"
+level = 1
+description = "Friendly Undead unit within 12\" may immediately move up to 6\" or charge"
+
+[[units.spells]]
+name = "Gaze of Nagash"
+level = 2
+description = "Target enemy unit within 24\" takes 2D6 hits with AP(2)"
+
+[[units.upgrades]]
+name = "Nightmare"
+points = 25
+effect = "Becomes Cavalry, movement 10\""
+
+[[units.upgrades]]
+name = "Hellsteed"
+points = 40
+effect = "Gains Flying, movement 10\""
+
+[[units.upgrades]]
+name = "Zombie Dragon"
+points = 180
+effect = "Becomes Monster, Flying, Tough(9), gains Dragon attacks"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Necromancer"
+type = "infantry"
+category = "hq"
+points = 75
+models = "1"
+base_size = "25mm"
+tactical_role = "magical_support"
+threat_level = "high"
+priority_target = true
+preferred_targets = ["support"]
+avoid_targets = ["combat"]
+weaknesses = ["assassination", "melee"]
+synergies = ["Raise troops", "Keep army fighting"]
+special_rules = ["Hero", "Wizard(2)"]
+keywords = ["Infantry", "Character", "Undead", "Wizard"]
+notes = "Essential for raising troops. Keep protected. Invocation heals army."
+
+[units.stats]
+quality = "4+"
+defense = "6+"
+tough = 2
+movement = "6\""
+
+[[units.weapons]]
+name = "Staff"
+range = "Melee"
+shots = "1"
+ap = "0"
+
+[[units.spells]]
+name = "Invocation of Nehek"
+level = 1
+description = "Friendly Undead unit within 18\" recovers D3 wounds or D3 slain models"
+
+[[units.spells]]
+name = "Raise Dead"
+level = 1
+description = "Summon a unit of D6+4 Skeleton Warriors within 12\""
+
+[[units.spells]]
+name = "Curse of Years"
+level = 2
+description = "Target enemy unit within 18\" takes hits equal to number of models"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Wight King"
+type = "infantry"
+category = "hq"
+points = 65
+models = "1"
+base_size = "25mm"
+tactical_role = "melee_commander"
+threat_level = "high"
+priority_target = true
+preferred_targets = ["infantry"]
+avoid_targets = ["monsters"]
+weaknesses = ["magic"]
+synergies = ["Grave Guard leader", "Combat anchor"]
+special_rules = ["Hero", "Fearless", "Tough(3)"]
+keywords = ["Infantry", "Character", "Undead", "Wight"]
+notes = "Tough melee hero. Lead Grave Guard for maximum effect."
+
+[units.stats]
+quality = "3+"
+defense = "3+"
+tough = 3
+movement = "5\""
+
+[[units.weapons]]
+name = "Tomb Blade"
+range = "Melee"
+shots = "4"
+ap = "2"
+special = ["Deadly(3)"]
+
+[[units.upgrades]]
+name = "Skeletal Steed"
+points = 15
+effect = "Becomes Cavalry, movement 10\""
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Banshee"
+type = "infantry"
+category = "hq"
+points = 50
+models = "1"
+base_size = "25mm"
+tactical_role = "harassment"
+threat_level = "medium"
+priority_target = true
+preferred_targets = ["low_morale_units"]
+avoid_targets = ["fearless_units"]
+weaknesses = ["anti_ethereal"]
+synergies = ["Fear", "Morale attacks"]
+special_rules = ["Hero", "Fearless", "Tough(2)", "Ethereal", "Flying"]
+keywords = ["Infantry", "Character", "Undead", "Spirit"]
+notes = "Ethereal: Ignores non-magical attacks. Ghostly Howl causes morale damage."
+
+[units.stats]
+quality = "4+"
+defense = "5+"
+tough = 2
+movement = "8\""
+
+[[units.weapons]]
+name = "Ghostly Touch"
+range = "Melee"
+shots = "2"
+ap = "0"
+
+[[units.abilities]]
+name = "Ghostly Howl"
+description = "Target enemy unit within 8\" takes morale test. If failed, takes D3 wounds."
+
+# =============================================================================
+# TROOPS
+# =============================================================================
+
+[[units]]
+name = "Skeleton Warriors"
+type = "infantry"
+category = "troops"
+points = 55
+models = "10"
+base_size = "25mm"
+tactical_role = "expendable_line"
+threat_level = "low"
+priority_target = false
+preferred_targets = ["objectives"]
+avoid_targets = ["elite_units"]
+weaknesses = ["everything"]
+synergies = ["Screening", "Tarpit", "Raisable"]
+special_rules = ["Fearless"]
+keywords = ["Infantry", "Undead", "Skeleton"]
+notes = "Expendable skeletons. Fearless and raisable. Screen and hold objectives."
+
+[units.stats]
+quality = "5+"
+defense = "5+"
+tough = 1
+movement = "5\""
+
+[[units.weapons]]
+name = "Spear"
+range = "Melee"
+shots = "1"
+ap = "0"
+special = ["Phalanx"]
+
+[[units.upgrades]]
+name = "Swords and Shields"
+points = 0
+effect = "Lose Phalanx, Defense 4+"
+weapon = { name = "Sword", range = "Melee", shots = "1", ap = "0" }
+
+[[units.upgrades]]
+name = "40 Skeletons"
+points = 165
+effect = "Add 30 more models"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Zombies"
+type = "infantry"
+category = "troops"
+points = 45
+models = "10"
+base_size = "25mm"
+tactical_role = "meat_shield"
+threat_level = "very_low"
+priority_target = false
+preferred_targets = ["nothing"]
+avoid_targets = ["everything"]
+weaknesses = ["everything"]
+synergies = ["Screening", "Tarpit", "Expendable"]
+special_rules = ["Fearless", "Slow"]
+keywords = ["Infantry", "Undead", "Zombie"]
+notes = "Cheapest unit. Slow and terrible. Use as screens and tarpits."
+
+[units.stats]
+quality = "6+"
+defense = "6+"
+tough = 1
+movement = "4\""
+
+[[units.weapons]]
+name = "Rotting Fists"
+range = "Melee"
+shots = "1"
+ap = "0"
+
+[[units.upgrades]]
+name = "40 Zombies"
+points = 135
+effect = "Add 30 more models"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Ghouls"
+type = "infantry"
+category = "troops"
+points = 65
+models = "10"
+base_size = "25mm"
+tactical_role = "fast_flanker"
+threat_level = "medium"
+priority_target = false
+preferred_targets = ["light_troops"]
+avoid_targets = ["heavy_armor"]
+weaknesses = ["armor"]
+synergies = ["Flanking", "Poison attacks"]
+special_rules = ["Fearless"]
+keywords = ["Infantry", "Undead", "Ghoul"]
+notes = "Faster and better than skeletons. Poison helps against armor."
+
+[units.stats]
+quality = "4+"
+defense = "6+"
+tough = 1
+movement = "6\""
+
+[[units.weapons]]
+name = "Claws and Teeth"
+range = "Melee"
+shots = "2"
+ap = "0"
+special = ["Poison(5+)"]
+
+[[units.upgrades]]
+name = "20 Ghouls"
+points = 65
+effect = "Add 10 more models"
+
+# =============================================================================
+# ELITES
+# =============================================================================
+
+[[units]]
+name = "Grave Guard"
+type = "infantry"
+category = "elite"
+points = 140
+models = "10"
+base_size = "25mm"
+tactical_role = "elite_infantry"
+threat_level = "high"
+priority_target = true
+preferred_targets = ["infantry"]
+avoid_targets = ["monsters"]
+weaknesses = ["ranged_attacks"]
+synergies = ["Wight King leader", "Combat punch"]
+special_rules = ["Fearless"]
+keywords = ["Infantry", "Undead", "Wight"]
+notes = "Elite undead infantry. Quality 3+ and good armor. Kill things."
+
+[units.stats]
+quality = "3+"
+defense = "4+"
+tough = 1
+movement = "5\""
+
+[[units.weapons]]
+name = "Tomb Blade"
+range = "Melee"
+shots = "1"
+ap = "1"
+
+[[units.upgrades]]
+name = "Great Weapons"
+points = 20
+weapon = { name = "Great Weapon", range = "Melee", shots = "1", ap = "2", special = ["Deadly(3)"] }
+
+[[units.upgrades]]
+name = "20 Grave Guard"
+points = 140
+effect = "Add 10 more models"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Black Knights"
+type = "cavalry"
+category = "elite"
+points = 145
+models = "5"
+base_size = "25x50mm"
+tactical_role = "elite_cavalry"
+threat_level = "very_high"
+priority_target = true
+preferred_targets = ["flanks", "war_machines"]
+avoid_targets = ["pikes"]
+weaknesses = ["phalanx"]
+synergies = ["Ethereal charge", "Flank strikes"]
+special_rules = ["Fearless", "Ethereal", "Impact(1)"]
+keywords = ["Cavalry", "Undead", "Wight"]
+notes = "Ethereal: Ignore non-magical attacks. Ghost cavalry devastates."
+
+[units.stats]
+quality = "3+"
+defense = "4+"
+tough = 1
+movement = "10\""
+
+[[units.weapons]]
+name = "Spectral Lance"
+range = "Melee"
+shots = "1"
+ap = "1"
+special = ["Lance"]
+
+[[units.upgrades]]
+name = "10 Black Knights"
+points = 145
+effect = "Add 5 more models"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Blood Knights"
+type = "cavalry"
+category = "elite"
+points = 230
+models = "5"
+base_size = "25x50mm"
+tactical_role = "shock_cavalry"
+threat_level = "extreme"
+priority_target = true
+preferred_targets = ["anything"]
+avoid_targets = ["massed_pikes"]
+weaknesses = ["pikes", "magic"]
+synergies = ["Devastating charges", "Vampire support"]
+special_rules = ["Fearless", "Tough(2)", "Impact(1)", "Frenzy"]
+keywords = ["Cavalry", "Undead", "Vampire"]
+notes = "Elite vampire cavalry. Frenzy +1 attack. Devastate anything they charge."
+
+[units.stats]
+quality = "3+"
+defense = "3+"
+tough = 2
+movement = "10\""
+
+[[units.weapons]]
+name = "Blood Lance"
+range = "Melee"
+shots = "2"
+ap = "2"
+special = ["Lance", "Deadly(3)"]
+
+[[units.upgrades]]
+name = "10 Blood Knights"
+points = 230
+effect = "Add 5 more models"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Spirit Host"
+type = "swarm"
+category = "elite"
+points = 80
+models = "3"
+base_size = "40mm"
+tactical_role = "ethereal_screen"
+threat_level = "medium"
+priority_target = false
+preferred_targets = ["war_machines"]
+avoid_targets = ["magical_weapons"]
+weaknesses = ["magic"]
+synergies = ["Tarpit", "Screen"]
+special_rules = ["Fearless", "Ethereal", "Flying", "Tough(3)"]
+keywords = ["Swarm", "Undead", "Spirit"]
+notes = "Ethereal swarms. Immune to non-magical attacks. Tarpit anything."
+
+[units.stats]
+quality = "5+"
+defense = "6+"
+tough = 3
+movement = "8\""
+
+[[units.weapons]]
+name = "Spectral Claws"
+range = "Melee"
+shots = "3"
+ap = "0"
+
+# =============================================================================
+# MONSTERS
+# =============================================================================
+
+[[units]]
+name = "Vargheists"
+type = "monster"
+category = "monster"
+points = 130
+models = "3"
+base_size = "40mm"
+tactical_role = "flying_assault"
+threat_level = "high"
+priority_target = true
+preferred_targets = ["war_machines", "light_troops"]
+avoid_targets = ["heavy_infantry"]
+weaknesses = ["focus_fire"]
+synergies = ["Fast assault", "Flanking"]
+special_rules = ["Fearless", "Flying", "Tough(3)", "Frenzy"]
+keywords = ["Monster", "Undead", "Vampire"]
+notes = "Flying vampire beasts. Frenzy +1 attack. Fast and deadly."
+
+[units.stats]
+quality = "4+"
+defense = "5+"
+tough = 3
+movement = "10\""
+
+[[units.weapons]]
+name = "Claws and Fangs"
+range = "Melee"
+shots = "3"
+ap = "1"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Crypt Horrors"
+type = "monster"
+category = "monster"
+points = 140
+models = "3"
+base_size = "40mm"
+tactical_role = "monstrous_infantry"
+threat_level = "high"
+priority_target = true
+preferred_targets = ["infantry"]
+avoid_targets = ["ranged_kiting"]
+weaknesses = ["shooting"]
+synergies = ["Regenerating assault", "Infantry crusher"]
+special_rules = ["Fearless", "Tough(3)", "Regeneration", "Poison(5+)"]
+keywords = ["Monster", "Undead", "Ghoul"]
+notes = "Monstrous ghouls. Regeneration keeps them fighting. Poison helps vs armor."
+
+[units.stats]
+quality = "4+"
+defense = "5+"
+tough = 3
+movement = "6\""
+
+[[units.weapons]]
+name = "Massive Claws"
+range = "Melee"
+shots = "3"
+ap = "0"
+special = ["Poison(5+)"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Terrorgheist"
+type = "monster"
+category = "monster"
+points = 200
+models = "1"
+base_size = "100mm"
+tactical_role = "flying_terror"
+threat_level = "extreme"
+priority_target = true
+preferred_targets = ["infantry", "cavalry"]
+avoid_targets = ["nothing"]
+weaknesses = ["focus_fire"]
+synergies = ["Terror scream", "Combat monster"]
+special_rules = ["Fearless", "Flying", "Tough(8)", "Terror", "Regeneration"]
+keywords = ["Monster", "Undead"]
+notes = "Flying monster. Death Shriek causes morale wounds. Regenerates."
+
+[units.stats]
+quality = "4+"
+defense = "4+"
+tough = 8
+movement = "12\""
+
+[[units.weapons]]
+name = "Fangs and Claws"
+range = "Melee"
+shots = "4"
+ap = "2"
+special = ["Deadly(3)"]
+
+[[units.abilities]]
+name = "Death Shriek"
+description = "Target enemy unit within 8\" takes 2D6 hits with AP(0). Causes morale test."
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Zombie Dragon"
+type = "monster"
+category = "monster"
+points = 280
+models = "1"
+base_size = "100mm"
+tactical_role = "apex_monster"
+threat_level = "extreme"
+priority_target = true
+preferred_targets = ["everything"]
+avoid_targets = ["nothing"]
+weaknesses = ["focus_fire", "expensive"]
+synergies = ["Lord mount", "Army centerpiece"]
+special_rules = ["Fearless", "Flying", "Tough(12)", "Terror", "Regeneration"]
+keywords = ["Monster", "Undead", "Dragon"]
+notes = "Undead dragon. Poison breath and devastating melee. Regenerates."
+
+[units.stats]
+quality = "3+"
+defense = "4+"
+tough = 12
+movement = "12\""
+
+[[units.weapons]]
+name = "Pestilent Breath"
+range = "12\""
+shots = "2D6"
+ap = "0"
+special = ["Poison(4+)"]
+
+[[units.weapons]]
+name = "Dragon Claws"
+range = "Melee"
+shots = "6"
+ap = "3"
+special = ["Deadly(3)"]
+
+# =============================================================================
+# WAR MACHINES
+# =============================================================================
+
+[[units]]
+name = "Corpse Cart"
+type = "vehicle"
+category = "support"
+points = 60
+models = "1"
+base_size = "chariot"
+tactical_role = "support"
+threat_level = "medium"
+priority_target = true
+preferred_targets = ["support"]
+avoid_targets = ["combat"]
+weaknesses = ["focus_fire"]
+synergies = ["Buff aura for undead", "Regeneration enhancement"]
+special_rules = ["Fearless", "Tough(5)", "Unholy Aura"]
+keywords = ["Vehicle", "Undead"]
+notes = "Unholy Aura: Friendly Undead within 6\" get +1 to Regeneration rolls."
+
+[units.stats]
+quality = "5+"
+defense = "5+"
+tough = 5
+movement = "5\""
+
+[[units.weapons]]
+name = "Zombie Crew"
+range = "Melee"
+shots = "2"
+ap = "0"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Black Coach"
+type = "vehicle"
+category = "heavy_support"
+points = 170
+models = "1"
+base_size = "chariot"
+tactical_role = "devastating_chariot"
+threat_level = "very_high"
+priority_target = true
+preferred_targets = ["infantry", "cavalry"]
+avoid_targets = ["monsters"]
+weaknesses = ["focus_fire"]
+synergies = ["Impact hits", "Terror"]
+special_rules = ["Fearless", "Tough(8)", "Ethereal", "Terror", "Impact(D6)"]
+keywords = ["Vehicle", "Undead", "Spirit"]
+notes = "Ethereal coach. Impact(D6) devastates charges. Immune to normal attacks."
+
+[units.stats]
+quality = "4+"
+defense = "4+"
+tough = 8
+movement = "10\""
+
+[[units.weapons]]
+name = "Spectral Scythes"
+range = "Melee"
+shots = "4"
+ap = "2"
+special = ["Deadly(3)"]
+
+# =============================================================================
+# EXAMPLE ARMY LISTS
+# =============================================================================
+
+[army_lists.starter_1000]
+name = "Legion of the Dead - 1000 points"
+description = "Classic undead horde"
+points = 1000
+units = [
+    { name = "Vampire Lord", count = 1, points = 200 },
+    { name = "Necromancer", count = 1, points = 75 },
+    { name = "Skeleton Warriors", count = 2, points = 220, upgrades = ["40 models each"] },
+    { name = "Zombies", count = 1, points = 180, upgrades = ["40 models"] },
+    { name = "Grave Guard", count = 1, points = 140 },
+    { name = "Spirit Host", count = 1, points = 80 },
+    { name = "Corpse Cart", count = 1, points = 60 }
+]
+tactics = "Skeletons and Zombies screen the advance. Necromancer raises fallen troops. Grave Guard delivers killing blow. Vampire Lord dominates combat. Spirit Hosts tarpit threats. Corpse Cart buffs regeneration."
+
+[army_lists.competitive_2000]
+name = "Court of Night - 2000 points"
+description = "Vampire-heavy elite force"
+points = 2000
+units = [
+    { name = "Vampire Lord on Dragon", count = 1, points = 380 },
+    { name = "Wight King", count = 1, points = 80, upgrades = ["Skeletal Steed"] },
+    { name = "Necromancer", count = 2, points = 150 },
+    { name = "Skeleton Warriors", count = 2, points = 220 },
+    { name = "Zombies", count = 1, points = 180, upgrades = ["40 models"] },
+    { name = "Grave Guard", count = 1, points = 280, upgrades = ["20 models", "Great Weapons"] },
+    { name = "Black Knights", count = 1, points = 145 },
+    { name = "Blood Knights", count = 1, points = 230 },
+    { name = "Vargheists", count = 1, points = 130 },
+    { name = "Terrorgheist", count = 1, points = 200 }
+]
+tactics = "Vampire on Dragon dominates the battlefield. Blood Knights deliver devastating charges. Black Knights flank ethereally. Grave Guard hold center. Hordes screen and tarpit. Necromancers keep army refreshed. Terrorgheist and Vargheists add aerial threat."

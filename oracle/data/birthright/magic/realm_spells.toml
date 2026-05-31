@@ -1,0 +1,1256 @@
+# =============================================================================
+# BIRTHRIGHT REALM MAGIC: REALM SPELLS
+# =============================================================================
+# Realm spells are powerful magics that affect entire provinces or domains.
+# They require holdings (Sources for wizards, Temples for priests) and
+# significant investments of Gold Bars (GB) and Regency Points (RP).
+# =============================================================================
+
+[metadata]
+version = "1.0"
+description = "Complete realm spell compendium for Birthright domain play"
+setting = "Cerilia"
+
+# -----------------------------------------------------------------------------
+# REALM MAGIC FUNDAMENTALS
+# -----------------------------------------------------------------------------
+
+[fundamentals]
+description = """
+Realm magic taps the mebhaighl - the magical essence that flows through the
+land of Cerilia. Only those with divine bloodlines can channel this power.
+Wizards draw from Sources, priests from Temples. Both require regency and gold.
+"""
+
+casting_requirements = """
+To cast a realm spell, a regent must:
+1. Control a holding of sufficient level (Source or Temple)
+2. Spend the required Gold Bars (GB)
+3. Spend the required Regency Points (RP)
+4. Use a domain action (usually a full action)
+5. Meet any alignment or bloodline requirements
+"""
+
+contested_magic = """
+Realm spells can be contested by:
+- Dispel Realm Magic (direct counter)
+- Protection from Realm Magic (preventive ward)
+- Ley Traps (for spells cast through ley lines)
+- Warding (blocks scrying and some intrusions)
+"""
+
+# =============================================================================
+# WIZARD REALM SPELLS
+# =============================================================================
+# These spells require Source holdings. Source level determines what spells
+# can be cast and their maximum power.
+# =============================================================================
+
+[[wizard_spells]]
+name = "Alchemy"
+source_requirement = 4
+gold_cost = "2 GB"
+regency_cost = "1 RP per GB created"
+casting_time = "1 domain action"
+duration = "Permanent"
+range = "Source holding"
+description = """
+The wizard transmutes base materials into gold using the magical essence of
+the land. This is one of the most sought-after realm spells, though its use
+can have unforeseen consequences.
+"""
+effect = """
+Create 1d6 GB worth of gold per source level invested in the casting.
+The wizard may choose to invest multiple sources in a single province
+if connected by ley lines.
+"""
+limitations = [
+    "Cannot create more GB than the wizard's bloodline score",
+    "Each use in the same province within a year reduces yield by 1 GB",
+    "Excessive use may attract thieves guilds or dragons"
+]
+oracle_prompts = [
+    "Does the transmutation attract unwanted attention? (Likely if 10+ GB created)",
+    "Is there a side effect to the created gold?",
+    "Do rival wizards sense the magical expenditure?",
+    "Does the gold carry a magical taint that will be noticed?"
+]
+contested_by = ["Dispel Realm Magic", "Thieves guild interference"]
+
+[[wizard_spells]]
+name = "Battle Spell"
+source_requirement = 3
+gold_cost = "1 GB per unit affected"
+regency_cost = "2 RP"
+casting_time = "War move (during battle)"
+duration = "One battle"
+range = "Province containing source or connected by ley line"
+description = """
+The wizard unleashes destructive magic upon enemy forces during battle.
+This can turn the tide of a conflict but marks the wizard as a military target.
+"""
+effect = """
+Choose one effect per casting:
+- Lightning Strike: Deal 1d6 hits to one enemy unit
+- Fireball: Deal 1d4 hits to up to 3 adjacent enemy units
+- Ice Storm: Reduce one enemy unit's movement to 0 for the battle
+- Magic Missiles: Automatically deal 2 hits to one enemy unit (no save)
+"""
+limitations = [
+    "Wizard must be present in the battle or have ley line connection",
+    "Can only cast once per war move unless source level 7+",
+    "Enemy wizards may counter with their own battle spells"
+]
+oracle_prompts = [
+    "Do enemy wizards attempt to counter the spell?",
+    "Does the battle spell cause collateral damage to the province?",
+    "Are there unintended casualties among civilians or allies?",
+    "Does using destructive magic affect your reputation?"
+]
+contested_by = ["Enemy Battle Spell", "Protection from Realm Magic", "Dispel Realm Magic"]
+
+[[wizard_spells]]
+name = "Deception"
+source_requirement = 3
+gold_cost = "1 GB per target concealed"
+regency_cost = "1 RP per target"
+casting_time = "1 domain action"
+duration = "1 domain turn or until dispelled"
+range = "Province containing source or connected by ley line"
+description = """
+The wizard weaves illusions to conceal military units, holdings, or other
+domain features from magical and mundane observation.
+"""
+effect = """
+Choose targets to conceal (each counts as one target):
+- One military unit
+- One holding (any type)
+- One fortification
+- One trade route
+- One ley line
+
+Concealed targets cannot be detected by Scry or espionage actions.
+Physical observation still works - troops must stay hidden.
+"""
+limitations = [
+    "Concealed units cannot attack without breaking the illusion",
+    "Moving concealed units requires a new casting",
+    "Maximum targets equal to source level used"
+]
+oracle_prompts = [
+    "Does the illusion hold under scrutiny?",
+    "Do concealed troops accidentally reveal themselves?",
+    "Does an enemy wizard attempt to pierce the deception?",
+    "Are there witnesses who might spread rumors?"
+]
+contested_by = ["Scry (contested roll)", "True Seeing", "Dispel Realm Magic"]
+
+[[wizard_spells]]
+name = "Death Plague"
+source_requirement = 8
+gold_cost = "10 GB"
+regency_cost = "5 RP"
+casting_time = "1 full domain turn"
+duration = "Until the plague runs its course (1d4 domain turns)"
+range = "Province containing source or connected by ley line"
+alignment_restriction = "Evil regents only"
+description = """
+The wizard unleashes a horrific magical plague upon a province, killing
+thousands and devastating the population. This is among the most reviled
+of realm spells - its use marks the caster as a monster.
+"""
+effect = """
+Target province suffers:
+- Province level reduced by 1d3 (minimum 1)
+- All holdings in province reduced by 1 level
+- Loyalty drops to Rebellious
+- Trade routes through province disrupted for 1 year
+
+The plague may spread to adjacent provinces (50% chance each turn).
+"""
+consequences = [
+    "Caster's domain loyalty drops one level in all provinces",
+    "Temple holdings of good faiths will Contest the caster",
+    "Other regents may declare war or form coalitions against caster",
+    "Bloodline corruption: roll on the corruption table",
+    "The land remembers: source potential in province drops by 1"
+]
+oracle_prompts = [
+    "Does the plague spread beyond the target province?",
+    "Do other regents learn who is responsible?",
+    "Does a good-aligned regent vow revenge?",
+    "Does the plague mutate into something unexpected?",
+    "Do the dead rise as undead?"
+]
+contested_by = ["Bless Land (healing)", "Protection from Realm Magic", "Dispel Realm Magic", "Divine intervention"]
+
+[[wizard_spells]]
+name = "Dispel Realm Magic"
+source_requirement = 1
+gold_cost = "Variable (see effect)"
+regency_cost = "Variable (see effect)"
+casting_time = "1 domain action (or reaction during another's casting)"
+duration = "Instantaneous"
+range = "Province containing source or connected by ley line"
+description = """
+The wizard unravels the magical threads of another realm spell, either
+preventing its casting or ending an ongoing effect.
+"""
+effect = """
+To dispel, spend equal or greater resources than the original spell:
+- Match or exceed the GB cost
+- Match or exceed the RP cost
+- Source level must equal or exceed the original caster's
+
+Success is automatic if resources match. If spending less, roll:
+Base 50% + 5% per RP above minimum + 5% per source level above minimum
+
+Can be used as a reaction to counter a spell being cast (costs double).
+"""
+limitations = [
+    "Must know a spell is being cast or is active to dispel it",
+    "Cannot dispel Investiture",
+    "Dispelling permanent effects requires triple cost"
+]
+oracle_prompts = [
+    "Is the dispel successful if resources are close?",
+    "Does the original caster sense the attempt?",
+    "Are there unexpected side effects from the magical backlash?",
+    "Does dispelling reveal hidden information about the original spell?"
+]
+contested_by = ["Another Dispel Realm Magic", "Ley Trap if cast through trapped line"]
+
+[[wizard_spells]]
+name = "Gold Creation"
+source_requirement = 5
+gold_cost = "0 GB (special)"
+regency_cost = "2 RP per GB created"
+casting_time = "1 domain action"
+duration = "Permanent"
+range = "Source holding"
+description = """
+A more refined version of Alchemy, this spell creates gold from pure
+magical essence rather than transmuting base materials. The gold is
+absolutely real and undetectable as magical.
+"""
+effect = """
+Create GB equal to half the source level used (rounded down).
+Unlike Alchemy, this gold is completely real and stable.
+No diminishing returns from repeated use.
+"""
+limitations = [
+    "Maximum creation per year: wizard's bloodline score in GB",
+    "Drains the source: reduce source level by 1 for 1 season",
+    "Very taxing: wizard cannot cast another realm spell this turn"
+]
+oracle_prompts = [
+    "Does the source drainage cause any local magical disturbances?",
+    "Do other wizards notice the mebhaighl fluctuation?",
+    "Is there competition for your source holdings after this display?",
+    "Does the gold creation succeed fully or partially?"
+]
+contested_by = ["Source contest", "Dispel Realm Magic during casting"]
+
+[[wizard_spells]]
+name = "Legion of Dead"
+source_requirement = 7
+gold_cost = "5 GB"
+regency_cost = "10 RP"
+casting_time = "1 full domain turn"
+duration = "Until destroyed or dispelled"
+range = "Province containing source or connected by ley line"
+type = "wizard"
+alignment_restriction = "Evil regents only"
+description = """
+The wizard raises the dead to serve as soldiers, creating units of
+skeletal warriors or zombie hordes. These tireless soldiers require
+no supply and feel no fear, but their presence horrifies the living.
+"""
+effect = """
+Create undead military units:
+- Source level 7: 1d4 Skeleton Infantry units
+- Source level 8: 2d4 Skeleton Infantry or 1d4 Zombie units
+- Source level 9: 3d4 mixed undead or 1d2 Skeleton Knights
+- Source level 10: 4d4 mixed undead or 1d4 elite undead units
+
+Undead units have: Morale N/A, No supply cost, Cannot heal normally
+"""
+consequences = [
+    "Province loyalty drops one level where undead are stationed",
+    "Temple holdings of good faiths may Contest the caster",
+    "Living troops refuse to serve alongside undead (morale penalty)",
+    "Undead may break free if wizard is killed or incapacitated"
+]
+oracle_prompts = [
+    "Do the undead include any notable individuals (former heroes, etc.)?",
+    "Does the creation attract the attention of the Cold Rider?",
+    "Do nearby temples rally opposition?",
+    "Are there complications in controlling the undead?",
+    "Do the undead retain any memories of their former lives?"
+]
+contested_by = ["Turn Undead (priests)", "Holy War", "Bless Land", "Dispel Realm Magic"]
+
+[[wizard_spells]]
+name = "Ley Trap"
+source_requirement = 4
+gold_cost = "3 GB"
+regency_cost = "1 RP"
+casting_time = "1 domain action"
+duration = "Until triggered or dispelled"
+range = "One ley line connected to your source"
+description = """
+The wizard sets a magical trap along a ley line, ready to strike at
+any enemy wizard who attempts to use that ley line for spell casting.
+"""
+effect = """
+When an enemy wizard casts a realm spell through the trapped ley line:
+- The spell is automatically disrupted (no effect)
+- The enemy wizard loses all GB and RP spent on the spell
+- The enemy wizard takes 2d6 damage (bloodline save for half)
+- The trap is expended
+
+Multiple traps can be placed on the same line (cumulative damage).
+"""
+limitations = [
+    "Only affects spells cast through the trapped ley line",
+    "Does not affect mundane travel or non-magical actions",
+    "Trap can be detected by Scry (contested roll)",
+    "Maximum traps on one line: your source level"
+]
+oracle_prompts = [
+    "Does the enemy wizard detect the trap before triggering it?",
+    "Is the trap triggered by an ally by mistake?",
+    "Does the triggered trap cause any secondary effects?",
+    "Does the trap reveal your involvement to the victim?"
+]
+contested_by = ["Scry (detection)", "Dispel Realm Magic", "Warding (blocks trap placement)"]
+
+[[wizard_spells]]
+name = "Raze"
+source_requirement = 5
+gold_cost = "3 GB"
+regency_cost = "3 RP"
+casting_time = "1 domain action"
+duration = "Instantaneous"
+range = "Province containing source or connected by ley line"
+description = """
+The wizard unleashes destructive magic to damage or destroy a province's
+infrastructure, holdings, or fortifications.
+"""
+effect = """
+Choose one target:
+- Reduce one holding by 1d3 levels
+- Reduce province level by 1
+- Destroy one level of fortification
+- Destroy a trade route
+- Destroy a ley line (costs double)
+
+Source level determines maximum damage:
+- Level 5-6: Maximum 2 levels of damage
+- Level 7-8: Maximum 4 levels of damage
+- Level 9-10: Maximum 6 levels or destroy fortification entirely
+"""
+consequences = [
+    "Province loyalty may drop if civilians are harmed",
+    "Other regents may view this as an act of war",
+    "Repeated razing may permanently reduce source potential"
+]
+oracle_prompts = [
+    "Is the destruction complete or partial?",
+    "Are there civilian casualties?",
+    "Does the holding's regent retaliate?",
+    "Does razing reveal hidden aspects of the target?",
+    "Do neutral parties condemn the action?"
+]
+contested_by = ["Warding", "Protection from Realm Magic", "Dispel Realm Magic", "Fortification bonuses"]
+
+[[wizard_spells]]
+name = "Scry"
+source_requirement = 2
+gold_cost = "1 GB"
+regency_cost = "1 RP"
+casting_time = "1 domain action"
+duration = "Instantaneous (information gained is permanent)"
+range = "Province containing source, connected by ley line, or within bloodline score provinces"
+description = """
+The wizard uses magical sight to gather information about distant places,
+people, or events. This is essential for espionage and strategic planning.
+"""
+effect = """
+Choose one of the following:
+- Learn the exact military strength in a province
+- Learn all holdings and their levels in a province
+- Observe a specific person's current location and activity
+- Learn if realm magic is active in a province (and identify spells)
+- Detect ley lines and their connections in a province
+- Learn a regent's treasury (GB) within 2 GB accuracy
+"""
+limitations = [
+    "Warding blocks Scry completely",
+    "Deception may provide false information",
+    "Scrying another wizard's source gives them a sense of being watched",
+    "Cannot scry across ocean provinces without source level 8+"
+]
+oracle_prompts = [
+    "Is the scrying detected by the target?",
+    "Is the information complete or partial?",
+    "Does scrying reveal something unexpected?",
+    "Is there a Warding or Deception in place?",
+    "Does the information prove accurate when acted upon?"
+]
+contested_by = ["Warding", "Deception", "Protection from Realm Magic"]
+
+[[wizard_spells]]
+name = "Subversion"
+source_requirement = 6
+gold_cost = "5 GB"
+regency_cost = "5 RP"
+casting_time = "1 domain action"
+duration = "Permanent until discovered"
+range = "Province containing source or connected by ley line"
+description = """
+The wizard weaves subtle magic to corrupt a rival's holding, causing it
+to secretly serve the wizard's interests while appearing to function normally.
+"""
+effect = """
+Target one holding in range:
+- The holding continues to generate income for its owner
+- You gain a duplicate income from the holding
+- You can use the holding as if it were yours for spell casting (sources only)
+- The true owner is unaware unless they specifically investigate
+
+Detection: Investigation action has 10% chance per GB spent, +5% per level
+of the investigator's highest holding in the province.
+"""
+limitations = [
+    "Cannot subvert a holding of higher level than your source",
+    "Only one subverted holding per province",
+    "Detection ruins the subversion and reveals your involvement",
+    "Cannot subvert temple holdings (protection of the gods)"
+]
+oracle_prompts = [
+    "Is the subversion successful?",
+    "Does the owner suspect something is wrong?",
+    "Does maintaining the subversion become complicated?",
+    "Are there loyal servants who notice discrepancies?",
+    "Does the subversion provide unexpected intelligence?"
+]
+contested_by = ["Espionage actions", "Scry (may detect)", "Dispel Realm Magic", "True Seeing"]
+
+[[wizard_spells]]
+name = "Summoning"
+source_requirement = 5
+gold_cost = "Variable (see effect)"
+regency_cost = "Variable (see effect)"
+casting_time = "1 domain action"
+duration = "1 domain turn or until destroyed"
+range = "Province containing source"
+description = """
+The wizard summons creatures from other planes or distant places to serve
+as military units. The type and power of creatures depends on the source
+level and resources invested.
+"""
+effect = """
+Source Level 5 (2 GB, 2 RP): 1 unit of minor creatures (giant insects, wolves)
+Source Level 6 (3 GB, 3 RP): 1 unit of moderate creatures (ogres, trolls)
+Source Level 7 (5 GB, 5 RP): 1 unit of major creatures (giants, elementals)
+Source Level 8 (8 GB, 8 RP): 1d2 units of major creatures or 1 powerful being
+Source Level 9 (12 GB, 10 RP): A powerful outsider or monster
+Source Level 10 (20 GB, 15 RP): A legendary creature (dragon, demon lord)
+
+Summoned creatures obey simple commands but may have their own agendas.
+"""
+limitations = [
+    "Summoned creatures may demand payment, service, or souls",
+    "Losing control is possible (bloodline check each turn for powerful beings)",
+    "Summoned creatures return when duration ends or are destroyed",
+    "Cannot summon the same powerful individual twice in a year"
+]
+oracle_prompts = [
+    "Does the summoned creature obey willingly?",
+    "Does the summoning attract attention from other planes?",
+    "Does the creature have a hidden agenda?",
+    "Are there complications during the summoning ritual?",
+    "Does the creature demand something in return for service?"
+]
+contested_by = ["Dispel Realm Magic", "Banishment (priests)", "Protection from Realm Magic"]
+
+[[wizard_spells]]
+name = "Transport"
+source_requirement = 4
+gold_cost = "1 GB per unit transported"
+regency_cost = "1 RP per 3 provinces"
+casting_time = "1 domain action"
+duration = "Instantaneous"
+range = "Connected by ley line network"
+description = """
+The wizard moves military units or individuals instantaneously along ley
+lines, enabling rapid redeployment or surprise attacks.
+"""
+effect = """
+Transport up to source level in units from one province to another,
+provided both provinces are connected by your ley line network.
+
+Speed: Instantaneous
+Surprise: Troops arriving via Transport gain +2 to initiative in first battle
+
+Can also transport:
+- Up to 100 individuals per unit capacity
+- Supplies and treasure (up to 5 GB per unit capacity)
+- Single powerful individuals (costs 1 GB, 1 RP each)
+"""
+limitations = [
+    "Both origin and destination must be in your ley line network",
+    "Cannot transport through Ley Traps (triggers them)",
+    "Warding blocks transport into a province",
+    "Cannot transport unwilling targets",
+    "Large creatures count as multiple units"
+]
+oracle_prompts = [
+    "Is the transport intercepted by a Ley Trap?",
+    "Do the transported troops arrive disoriented?",
+    "Does the enemy detect the transport in time to react?",
+    "Are there any complications with the magical transit?",
+    "Does the transport leave any traceable magical signature?"
+]
+contested_by = ["Ley Trap", "Warding", "Dispel Realm Magic (during transport)"]
+
+[[wizard_spells]]
+name = "Warding"
+source_requirement = 3
+gold_cost = "2 GB"
+regency_cost = "2 RP"
+casting_time = "1 domain action"
+duration = "1 domain turn per source level, or until dispelled"
+range = "Province containing source"
+description = """
+The wizard erects a magical barrier around a province that blocks scrying,
+magical intrusion, and some realm spells.
+"""
+effect = """
+The warded province gains the following protections:
+- Immune to Scry from outside the province
+- Transport cannot enter the province
+- Subversion attempts automatically fail
+- +50% resistance to Raze, Death Plague, and other hostile spells
+- Ley lines into the province are blocked for enemy use
+
+The wizard can designate exceptions (allies who can scry or transport).
+"""
+limitations = [
+    "Does not block physical intrusion",
+    "Does not block spells cast from sources within the province",
+    "Maintaining multiple wards reduces their duration",
+    "Powerful wizards (source 8+) can attempt to breach the ward"
+]
+oracle_prompts = [
+    "Does an enemy wizard attempt to breach the ward?",
+    "Does the ward have any gaps or weaknesses?",
+    "Is the ward detected by those outside?",
+    "Do allies properly receive their exceptions?",
+    "Does the ward interfere with any legitimate activities?"
+]
+contested_by = ["Dispel Realm Magic (contest of source levels)", "Overwhelming force (source 10 vs lower)"]
+
+[[wizard_spells]]
+name = "Realm Curse"
+source_requirement = 6
+gold_cost = "5 GB"
+regency_cost = "5 RP"
+casting_time = "1 domain action"
+duration = "Until lifted or dispelled"
+range = "Province containing source or connected by ley line"
+description = """
+The wizard lays a magical curse upon a province, holding, or regent,
+bringing misfortune and suffering.
+"""
+effect = """
+Choose one curse:
+- Province Curse: -1 to all domain actions in the province
+- Holding Curse: Target holding generates no income
+- Regent Curse: Target regent has -2 to all bloodline abilities
+- Trade Curse: All trade routes through province generate no income
+- Fertility Curse: Province cannot increase in level
+
+Curses persist until removed by Dispel Realm Magic, Bless Land, or Remove Curse.
+"""
+consequences = [
+    "Cursing is considered evil by most faiths",
+    "The cursed party knows magic is responsible (but not necessarily who)",
+    "Curses may backlash if the caster's bloodline is weaker than the target's"
+]
+oracle_prompts = [
+    "Does the curse take full effect or is it partially resisted?",
+    "Does the target discover who is responsible?",
+    "Are there unexpected side effects of the curse?",
+    "Does the curse spread beyond its intended target?",
+    "Do priests attempt to lift the curse?"
+]
+contested_by = ["Bless Land", "Remove Curse", "Dispel Realm Magic", "Protection from Realm Magic"]
+
+[[wizard_spells]]
+name = "Create Ley Line"
+source_requirement = 4
+gold_cost = "2 GB per province crossed"
+regency_cost = "1 RP per province crossed"
+casting_time = "1 domain action per province"
+duration = "Permanent"
+range = "From source to target source"
+description = """
+The wizard forges a mystical connection between two source holdings,
+creating a ley line that allows magical energy to flow between them.
+"""
+effect = """
+Creates a permanent ley line connecting two sources. Benefits:
+- Cast spells through either connected source
+- Transport units between connected provinces
+- Pool source levels for powerful spells (combined -2)
+- Share mebhaighl for collection bonuses
+
+The ley line can cross up to wizard's bloodline score in provinces.
+"""
+limitations = [
+    "Must have sources at both endpoints",
+    "Cannot cross provinces with source potential 0",
+    "Contested provinces may disrupt the line (20% chance)",
+    "Ley lines can be attacked and destroyed"
+]
+oracle_prompts = [
+    "Does the ley line creation succeed without complications?",
+    "Do other wizards notice the new ley line?",
+    "Does the ley line pass through contested territory?",
+    "Are there natural features that strengthen or weaken the line?",
+    "Does the ley line attract magical creatures?"
+]
+contested_by = ["Raze (can destroy ley lines)", "Province control (disruption)", "Warding (blocks entry)"]
+
+# =============================================================================
+# PRIEST REALM SPELLS
+# =============================================================================
+# These spells require Temple holdings. Temple level determines what spells
+# can be cast and their maximum power.
+# =============================================================================
+
+[[priest_spells]]
+name = "Bless Land"
+temple_requirement = 3
+gold_cost = "2 GB"
+regency_cost = "2 RP"
+casting_time = "1 domain action"
+duration = "1 domain turn per temple level"
+range = "Province containing temple"
+description = """
+The priest calls upon their deity to bless the land, bringing prosperity,
+health, and good fortune to a province.
+"""
+effect = """
+The blessed province gains:
+- +1 to province income
+- +1 province loyalty level (maximum: High)
+- Negates effects of one active curse
+- Reduces plague/famine duration by half
+- +10% to all domain action success in the province
+
+Higher temple levels increase duration and can bless multiple provinces.
+"""
+limitations = [
+    "Cannot bless provinces with hostile temples (contested)",
+    "Blessing unholy ground requires temple level 6+",
+    "Cannot stack multiple Bless Land on same province"
+]
+oracle_prompts = [
+    "Does the blessing take full effect?",
+    "Do the people attribute their fortune to the temple?",
+    "Does the blessing attract positive attention (pilgrims, donations)?",
+    "Is there competition from other faiths to bless the land?",
+    "Does the deity require anything in return?"
+]
+contested_by = ["Realm Curse", "Desecrate", "Competing temple blessing"]
+
+[[priest_spells]]
+name = "Bless Army"
+temple_requirement = 4
+gold_cost = "1 GB per unit"
+regency_cost = "2 RP"
+casting_time = "1 domain action (before battle)"
+duration = "One battle or one domain turn (whichever ends first)"
+range = "Province containing temple or adjacent"
+description = """
+The priest invokes divine favor upon military forces, strengthening their
+resolve and granting them protection in battle.
+"""
+effect = """
+Blessed units gain:
+- +1 to Morale
+- +1 to Defense
+- Advantage on first attack roll
+- Immune to fear effects (including undead fear)
+- Healing: restore 1 hit at battle's end if unit survived
+
+Can bless up to temple level in units with one casting.
+"""
+limitations = [
+    "Cannot bless troops fighting against the faith's interests",
+    "Cannot bless undead or summoned creatures",
+    "Army must be in range at time of blessing",
+    "Blessing fades immediately if troops commit atrocities"
+]
+oracle_prompts = [
+    "Do the soldiers feel the divine presence?",
+    "Does the blessing provide an unexpected benefit?",
+    "Do enemy troops notice the blessed army's divine favor?",
+    "Does the deity demand the troops follow a code of conduct?",
+    "Does the blessing attract divine attention (positive or negative)?"
+]
+contested_by = ["Enemy Bless Army (negates both)", "Curse", "Realm Curse"]
+
+[[priest_spells]]
+name = "Dispel Realm Magic"
+temple_requirement = 2
+gold_cost = "Variable (see effect)"
+regency_cost = "Variable (see effect)"
+casting_time = "1 domain action (or reaction during another's casting)"
+duration = "Instantaneous"
+range = "Province containing temple or adjacent"
+type = "priest"
+description = """
+The priest calls upon divine power to unravel realm magic, either
+preventing a spell being cast or ending an ongoing magical effect.
+"""
+effect = """
+To dispel, spend equal or greater resources than the original spell:
+- Match or exceed the GB cost
+- Match or exceed the RP cost
+- Temple level must equal or exceed the original caster's holding level
+
+Success is automatic if resources match. If spending less, roll:
+Base 50% + 5% per RP above minimum + 5% per temple level above minimum
+
+Divine dispelling is particularly effective against undead magic (+20%).
+"""
+limitations = [
+    "Cannot dispel divine magic of a more powerful deity",
+    "Cannot dispel Investiture",
+    "Dispelling wizard magic requires +50% resources"
+]
+oracle_prompts = [
+    "Is the dispel successful?",
+    "Does the deity approve of this use of power?",
+    "Are there divine politics involved (opposing deities)?",
+    "Does the original caster sense the divine intervention?"
+]
+contested_by = ["Another Dispel", "Ley Trap (if wizard spell through ley line)"]
+
+[[priest_spells]]
+name = "Holy War"
+temple_requirement = 6
+gold_cost = "5 GB"
+regency_cost = "10 RP"
+casting_time = "1 full domain turn"
+duration = "Until objective achieved or war ends"
+range = "All provinces where the faith has temples"
+alignment_restriction = "Must serve a deity who supports the cause"
+description = """
+The priest declares a holy war - a crusade against enemies of the faith.
+This powerful spell rallies the faithful and marks the conflict as divinely sanctioned.
+"""
+effect = """
+While Holy War is active:
+- All faithful provinces contribute +1 GB to the war effort
+- Volunteer units: 1 unit per temple level across the domain
+- Blessed armies gain +2 morale instead of +1
+- Enemy morale reduced by 1 when fighting holy warriors
+- Faithful who die in battle are guaranteed paradise
+
+The crusade continues until the stated objective is achieved or abandoned.
+"""
+consequences = [
+    "Other faiths may declare counter-crusades",
+    "Neutral parties may be forced to choose sides",
+    "Failure to achieve objective damages temple prestige",
+    "Atrocities committed by crusaders may anger the deity",
+    "Successful crusade greatly increases temple influence"
+]
+oracle_prompts = [
+    "Does the deity fully support this cause?",
+    "How many volunteers answer the call?",
+    "Do rival faiths organize opposition?",
+    "Are there complications with the stated objective?",
+    "Do crusader commanders stay true to the faith's principles?",
+    "Does the holy war achieve unexpected victories or setbacks?"
+]
+contested_by = ["Opposing Holy War", "Excommunication of leaders", "Divine intervention (rare)"]
+
+[[priest_spells]]
+name = "Honest Dealings"
+temple_requirement = 2
+gold_cost = "1 GB"
+regency_cost = "1 RP"
+casting_time = "1 domain action"
+duration = "One negotiation or domain turn"
+range = "Province containing temple"
+description = """
+The priest invokes divine witness over negotiations, making it impossible
+for participants to lie outright. Evasion is possible, but direct falsehood
+is immediately apparent.
+"""
+effect = """
+While Honest Dealings is active:
+- All participants in negotiations cannot lie directly
+- Attempted lies are immediately known to be false
+- Half-truths and evasions still work but feel suspicious
+- Written agreements are binding on pain of divine displeasure
+- Breaking a deal made under Honest Dealings incurs a curse
+
+Participants may refuse to participate, but this is noted.
+"""
+limitations = [
+    "Does not compel truth, only prevents lies",
+    "Participants can refuse to speak",
+    "Does not reveal hidden information",
+    "Affects willing participants only (cannot force enemies)"
+]
+oracle_prompts = [
+    "Do all parties agree to participate?",
+    "Does someone attempt to evade rather than lie?",
+    "Is important information revealed through forced honesty?",
+    "Does the divine witness intimidate any participants?",
+    "Are there attempts to exploit loopholes?"
+]
+contested_by = ["Refusal to participate", "Divine protection (opposing deity)"]
+
+[[priest_spells]]
+name = "Investiture"
+temple_requirement = 5
+gold_cost = "2 GB per point transferred"
+regency_cost = "5 RP"
+casting_time = "1 domain action"
+duration = "Permanent"
+range = "Participants must be in same province with temple"
+description = """
+The most sacred of realm spells, Investiture allows the transfer of
+bloodline strength, regency, or holdings from one regent to another.
+It is used for succession, vassalage, and creating new bloodlines.
+"""
+effect = """
+Investiture can accomplish:
+- Transfer bloodline points from one scion to another
+- Create a new bloodline in a non-blooded individual
+- Transfer regency from one regent to another
+- Transfer ownership of holdings
+- Designate an heir officially
+- Create a vassalage bond
+
+All transfers require willing participants or unusual circumstances.
+"""
+limitations = [
+    "Cannot be dispelled once complete",
+    "Unwilling targets resist automatically unless helpless",
+    "Creating a bloodline requires donor to sacrifice points permanently",
+    "Can only be performed by highest temple authority in the domain",
+    "Witnesses are required for most investitures"
+]
+special_cases = """
+Bloodtheft: If a blooded regent is slain in a specific ritual manner,
+their bloodline can be stolen. This requires temple level 7+ and is
+considered an abomination by most faiths.
+"""
+oracle_prompts = [
+    "Is the investiture witnessed and accepted?",
+    "Are there political complications?",
+    "Does the bloodline transfer completely?",
+    "Are there unexpected consequences?",
+    "Do witnesses or faiths dispute the legitimacy?",
+    "Does the invested party honor their obligations?"
+]
+contested_by = ["Cannot be contested once complete"]
+
+[[priest_spells]]
+name = "Legion of Dead"
+temple_requirement = 6
+gold_cost = "5 GB"
+regency_cost = "10 RP"
+casting_time = "1 full domain turn"
+duration = "Until destroyed or dispelled"
+range = "Province containing temple"
+type = "priest"
+alignment_restriction = "Evil faiths only (priests of Belinik, the Cold Rider, etc.)"
+description = """
+The priest channels dark divine power to raise the dead as soldiers.
+This version draws on unholy blessing rather than arcane magic,
+creating undead that are resistant to turning.
+"""
+effect = """
+Create undead military units:
+- Temple level 6: 1d4 Blessed Skeleton Infantry
+- Temple level 7: 2d4 Blessed Skeletons or 1d4 Blessed Zombies
+- Temple level 8: 3d4 mixed or 1d2 Blessed Skeleton Knights
+- Temple level 9+: 4d4 mixed or special undead creatures
+
+"Blessed" undead have advantage on saves against turning.
+"""
+consequences = [
+    "Province loyalty drops one level",
+    "Good-aligned temples may call Holy War",
+    "The raising site becomes unholy ground",
+    "Undead may attract other undead or evil creatures"
+]
+oracle_prompts = [
+    "Does the deity approve of this use of power?",
+    "Are the undead especially powerful or flawed?",
+    "Do the undead have any connection to their former lives?",
+    "Does the creation attract attention from the Cold Rider?",
+    "Are there good priests who attempt to intervene?"
+]
+contested_by = ["Turn Undead", "Holy War", "Bless Land (on unholy ground)"]
+
+[[priest_spells]]
+name = "Protection from Realm Magic"
+temple_requirement = 4
+gold_cost = "3 GB"
+regency_cost = "3 RP"
+casting_time = "1 domain action"
+duration = "1 domain turn per temple level"
+range = "Province containing temple"
+description = """
+The priest erects a divine barrier that shields a province from hostile
+realm magic. Unlike Warding, this protection is divinely empowered and
+particularly effective against evil magic.
+"""
+effect = """
+The protected province gains:
+- 75% resistance to all hostile realm spells
+- Complete immunity to Death Plague and Realm Curse
+- Summoned creatures cannot enter the province
+- Undead units have -2 to all rolls in the province
+- Scry attempts from evil casters fail automatically
+
+The protection is visible as a faint divine glow to those with bloodlines.
+"""
+limitations = [
+    "Does not affect magic cast from within the province",
+    "Provides no protection against physical attacks",
+    "Concentrated assault (3+ spells same turn) may overwhelm",
+    "Cannot protect multiple provinces simultaneously"
+]
+oracle_prompts = [
+    "Is the protection sufficient against the threat?",
+    "Does the visible glow attract attention?",
+    "Do evil forces attempt to overwhelm the protection?",
+    "Does the deity provide additional support?",
+    "Are there gaps in the protection that can be exploited?"
+]
+contested_by = ["Overwhelming magical assault", "Dispel Realm Magic (divine)", "Betrayal from within"]
+
+[[priest_spells]]
+name = "True Believer"
+temple_requirement = 3
+gold_cost = "2 GB"
+regency_cost = "2 RP per province level"
+casting_time = "1 domain action"
+duration = "Permanent (conversion)"
+range = "Province containing temple"
+description = """
+The priest conducts powerful revival and conversion ceremonies, spreading
+the faith among the population and potentially converting followers of
+other religions.
+"""
+effect = """
+Roll 1d6 + temple level - competing temple levels:
+- 0 or less: No effect, backlash possible
+- 1-3: Minor conversion (+1 to temple support)
+- 4-6: Moderate conversion (can attempt to increase temple level)
+- 7+: Major revival (automatic temple level increase, -1 to competing temple)
+
+Conversion is more effective in provinces without strong religious presence.
+"""
+consequences = [
+    "Competing faiths may retaliate with their own True Believer",
+    "Forced conversion breeds resentment (loyalty may drop)",
+    "Heretics may emerge from improperly converted populations",
+    "Success attracts pilgrims and donations"
+]
+oracle_prompts = [
+    "How receptive is the population to conversion?",
+    "Do competing faiths mount opposition?",
+    "Are there sincere converts or merely political converts?",
+    "Does the revival produce any miracles or signs?",
+    "Are there complications with the newly converted?"
+]
+contested_by = ["Competing True Believer", "Heresy actions", "Population resistance"]
+
+[[priest_spells]]
+name = "Consecrate"
+temple_requirement = 2
+gold_cost = "1 GB"
+regency_cost = "1 RP"
+casting_time = "1 domain action"
+duration = "Permanent until desecrated"
+range = "Province containing temple"
+description = """
+The priest blesses a site, making it holy ground dedicated to the deity.
+Holy ground provides various benefits and protections.
+"""
+effect = """
+Consecrated ground provides:
+- Undead have -2 to all rolls on holy ground
+- Summoned evil creatures cannot enter
+- Temple actions on holy ground have +2 bonus
+- Faithful who die on holy ground are blessed
+- Evil realm magic has -25% effectiveness
+
+One site per casting; multiple sites require multiple castings.
+"""
+limitations = [
+    "Only one deity's consecration per site",
+    "Maintaining many holy sites is expensive (1 GB/year each)",
+    "Desecration removes all benefits"
+]
+oracle_prompts = [
+    "Is the consecration opposed by other forces?",
+    "Does the holy ground manifest any miraculous properties?",
+    "Do pilgrims begin visiting the site?",
+    "Is there something at the site that complicates consecration?",
+    "Does the deity provide a sign of approval?"
+]
+contested_by = ["Desecrate", "Unholy presence", "Neglect"]
+
+[[priest_spells]]
+name = "Desecrate"
+temple_requirement = 3
+gold_cost = "2 GB"
+regency_cost = "2 RP"
+casting_time = "1 domain action"
+duration = "Permanent until consecrated"
+range = "Province containing temple"
+alignment_restriction = "Evil priests or those opposing a specific faith"
+description = """
+The priest corrupts a site, making it unholy ground. This can be used
+offensively against enemy temples or to create power bases for dark forces.
+"""
+effect = """
+Desecrated ground provides:
+- Undead have +2 to all rolls on unholy ground
+- Summoned evil creatures are enhanced
+- Good-aligned temple actions have -2 penalty
+- Legion of Dead cast here creates +1d4 extra units
+- Good realm magic has -25% effectiveness
+
+Can be used to remove an enemy's Consecration.
+"""
+consequences = [
+    "Good faiths will almost certainly retaliate",
+    "Province loyalty drops unless population is already corrupted",
+    "Unholy sites attract evil creatures",
+    "The land may become permanently tainted"
+]
+oracle_prompts = [
+    "Is the desecration successful against consecrated ground?",
+    "What dark forces are attracted to the unholy site?",
+    "Do good temples organize a response?",
+    "Does the desecration have unexpected side effects?",
+    "Does the corruption spread beyond the intended site?"
+]
+contested_by = ["Consecrate", "Bless Land", "Holy War"]
+
+[[priest_spells]]
+name = "Excommunication"
+temple_requirement = 5
+gold_cost = "3 GB"
+regency_cost = "5 RP"
+casting_time = "1 domain action"
+duration = "Until lifted"
+range = "Anywhere the faith has influence"
+description = """
+The priest formally expels an individual from the faith community.
+For blooded regents, this can have severe political and spiritual consequences.
+"""
+effect = """
+The excommunicated individual suffers:
+- Cannot receive temple healing or blessings
+- Cannot enter consecrated ground
+- Faithful will not serve them willingly
+- -2 to all domain actions in provinces where the faith is strong
+- Cannot use temple holdings of that faith
+- Their bloodline is considered cursed by the faithful
+
+Lifting excommunication requires penance (determined by temple).
+"""
+limitations = [
+    "Only the highest temple authority can excommunicate",
+    "Does not affect those who don't care about the faith",
+    "Can be contested by political allies within the faith",
+    "Excommunicating a popular regent may cause schism"
+]
+oracle_prompts = [
+    "Is the excommunication widely accepted by the faithful?",
+    "Does the target attempt to appeal?",
+    "Do political allies pressure the temple to reconsider?",
+    "Does the excommunication cause a schism?",
+    "What penance might lift the excommunication?"
+]
+contested_by = ["Political pressure", "Schism", "Counter-excommunication (rare)"]
+
+[[priest_spells]]
+name = "Divine Wrath"
+temple_requirement = 7
+gold_cost = "10 GB"
+regency_cost = "10 RP"
+casting_time = "1 full domain turn"
+duration = "Instantaneous"
+range = "Province where deity is offended"
+description = """
+The priest channels the fury of their deity against those who have
+committed serious offenses against the faith. This is rare and requires
+genuine divine grievance.
+"""
+effect = """
+The deity's wrath manifests as appropriate:
+- Natural disaster (earthquake, storm, flood): Province level -1d3
+- Plague upon the guilty: Target regent's bloodline damaged (-1d4 points)
+- Curse upon holdings: Target loses 1d6 levels across all holdings
+- Military destruction: Target loses 1d6 military units
+- Personal judgment: Target must save vs death or be struck down
+
+The form of wrath reflects the deity's nature and the offense.
+"""
+requirements = [
+    "Target must have genuinely offended the deity",
+    "Temple must have presented evidence to the deity",
+    "Deity must agree the offense warrants wrath",
+    "This is not a weapon for political disputes"
+]
+oracle_prompts = [
+    "Does the deity agree the offense warrants wrath?",
+    "What form does the divine wrath take?",
+    "Is the punishment proportional or excessive?",
+    "Do witnesses recognize the divine judgment?",
+    "Does the target survive to repent?"
+]
+contested_by = ["Divine intervention (opposing deity)", "True repentance", "Innocent blood shields"]
+
+# =============================================================================
+# SPECIAL REALM MAGIC
+# =============================================================================
+
+[[special_spells]]
+name = "Coronation"
+type = "joint"
+temple_requirement = 4
+description = """
+A combination of Investiture and blessing that formally installs a new
+regent over a domain. Provides legitimacy bonuses.
+"""
+effect = """
+The crowned regent gains:
+- +2 RP collection for first year
+- +1 loyalty in all provinces for first season
+- Recognition by other regents as legitimate
+- Divine blessing of the officiating temple's deity
+
+Multiple temples participating increase the effect.
+"""
+oracle_prompts = [
+    "Is the coronation contested by anyone?",
+    "Do all relevant temples participate?",
+    "Are there omens during the ceremony?",
+    "Do foreign regents attend and recognize the new ruler?"
+]
+
+[[special_spells]]
+name = "Anoint Champion"
+type = "priest"
+temple_requirement = 5
+gold_cost = "5 GB"
+regency_cost = "5 RP"
+description = """
+The priest designates a warrior as the deity's champion, granting them
+divine power for a specific purpose.
+"""
+effect = """
+The champion gains:
+- +4 to personal combat
+- Blessed weapons (affect incorporeal undead)
+- Immune to fear and charm
+- Can sense servants of the deity's enemies
+- Healing 1d6 once per day
+
+The anointing lasts until the purpose is fulfilled or the champion falls.
+"""
+oracle_prompts = [
+    "Is the warrior worthy of the honor?",
+    "What specific purpose requires a champion?",
+    "Does the champion face temptation to misuse the power?",
+    "Does the deity's enemy take notice?"
+]
+
+[[special_spells]]
+name = "Interdict"
+type = "priest"
+temple_requirement = 6
+gold_cost = "5 GB"
+regency_cost = "10 RP"
+description = """
+The priest places an entire domain under religious sanctions - no ceremonies,
+no blessings, no burials. Devastating to faithful populations.
+"""
+effect = """
+The interdicted domain suffers:
+- All temple holdings cease to function
+- No temple realm spells can be cast
+- Population morale drops drastically (loyalty -2)
+- No marriages, funerals, or holy days observed
+- Trade with faithful domains may cease
+
+Interdict lasts until the offending condition is resolved.
+"""
+oracle_prompts = [
+    "Is the interdict justified by doctrine?",
+    "Does the population blame the regent or the temple?",
+    "Are there faithful who defy the interdict?",
+    "Do other faiths try to fill the void?"
+]
+
+# =============================================================================
+# ORACLE TABLES FOR REALM MAGIC
+# =============================================================================
+
+[oracle_tables.spell_complications]
+description = "Roll when a realm spell has uncertain results"
+entries = [
+    { roll = [1, 2], result = "Complete success with bonus effect" },
+    { roll = [3, 5], result = "Success as intended" },
+    { roll = [6, 7], result = "Success but with minor complication" },
+    { roll = [8, 9], result = "Partial success - reduced effect" },
+    { roll = [10, 10], result = "Failure with backlash" }
+]
+
+[oracle_tables.magical_backlash]
+description = "Roll when a spell fails or is dispelled violently"
+entries = [
+    { roll = [1, 2], result = "Source/temple holding damaged (-1 level)" },
+    { roll = [3, 4], result = "Caster loses 1d6 additional RP" },
+    { roll = [5, 6], result = "Magical turbulence affects province (minor)" },
+    { roll = [7, 8], result = "Caster takes bloodline damage" },
+    { roll = [9, 10], result = "Uncontrolled magical effect (roll on appropriate table)" }
+]
+
+[oracle_tables.spell_discovery]
+description = "Roll to see if enemy spellcasting is detected"
+entries = [
+    { roll = [1, 3], result = "Spell goes completely unnoticed" },
+    { roll = [4, 6], result = "Magical disturbance felt but source unknown" },
+    { roll = [7, 8], result = "Spell detected, general direction known" },
+    { roll = [9, 9], result = "Caster identified by magical signature" },
+    { roll = [10, 10], result = "Full details known (spell, caster, location)" }
+]
+
+[oracle_tables.divine_response]
+description = "Roll for deity reaction to priest realm magic"
+entries = [
+    { roll = [1, 1], result = "Deity displeased - spell fails, penance required" },
+    { roll = [2, 3], result = "Deity indifferent - spell works normally" },
+    { roll = [4, 6], result = "Deity approves - spell works as intended" },
+    { roll = [7, 8], result = "Deity supportive - minor bonus effect" },
+    { roll = [9, 10], result = "Deity highly pleased - significant bonus or miracle" }
+]

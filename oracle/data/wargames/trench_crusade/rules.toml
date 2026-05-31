@@ -1,0 +1,386 @@
+# Trench Crusade - Core Rules Reference
+# Skirmish wargame set in an alternate WW1 where Hell has invaded Earth
+# Rules are free: https://www.trenchcrusade.com/rules/
+
+[system]
+name = "Trench Crusade"
+edition = "1.0"
+scale = "28mm skirmish"
+typical_warband = "5-15 models"
+description = "During the Crusades, a heretical band of Templars unleashed the forces of Hell upon the Earth. Over 800 years later, in 1914, this brutal war between Heaven and Hell rages on in the trenches."
+
+# =============================================================================
+# CORE MECHANICS
+# =============================================================================
+
+[[rules]]
+name = "Success Rolls"
+category = "core"
+description = "Roll 2D6 and add them together. 2-6 is a FAIL, 7-11 is a SUCCESS, 12+ is a CRITICAL SUCCESS with bonus effects"
+examples = [
+    "Roll 2D6, get 4 and 5 = 9 = Success",
+    "Roll 2D6, get 6 and 6 = 12 = Critical Success",
+    "Roll 2D6, get 2 and 3 = 5 = Fail"
+]
+keywords = ["dice", "success", "critical"]
+
+[[rules]]
+name = "Dice Modifiers"
+category = "core"
+description = "Modifiers add or remove dice from your pool. With +Dice, roll extra D6s and take the 2 HIGHEST. With -Dice, take the 2 LOWEST"
+examples = [
+    "+1 Dice: Roll 3D6, take highest two (4, 5, 6 = keep 5+6 = 11)",
+    "-1 Dice: Roll 3D6, take lowest two (2, 4, 6 = keep 2+4 = 6)",
+    "+2 Dice: Roll 4D6, take highest two"
+]
+keywords = ["modifier", "dice", "advantage"]
+
+[[rules]]
+name = "Risky Success Rolls"
+category = "core"
+description = "Some actions are Risky - if you fail, your activation immediately ends"
+examples = [
+    "Moving through Dangerous Terrain is Risky",
+    "Some special abilities require Risky rolls",
+    "Failed Risky roll = no more actions this activation"
+]
+keywords = ["risky", "activation", "fail"]
+
+# =============================================================================
+# ACTION SYSTEM
+# =============================================================================
+
+[[rules]]
+name = "Actions"
+category = "actions"
+description = "Models perform Actions in any order but can only use each action type ONCE per activation. Common actions: Move, Shoot, Fight, Dash"
+examples = [
+    "Move then Shoot (valid)",
+    "Shoot then Move (valid)",
+    "Move then Move again (INVALID - same action twice)"
+]
+keywords = ["action", "activation", "turn"]
+
+[[rules]]
+name = "Move Action"
+category = "actions"
+description = "Move up to your Movement characteristic in inches"
+examples = [
+    "Movement 6 model moves up to 6 inches",
+    "Can split movement around terrain"
+]
+keywords = ["move", "movement"]
+
+[[rules]]
+name = "Dash Action"
+category = "actions"
+description = "Move an additional distance equal to your Movement characteristic. Cannot Dash and Shoot in same activation"
+examples = [
+    "Movement 6 model: Move 6 + Dash 6 = 12 inches total",
+    "Used to close distance quickly or flee"
+]
+keywords = ["dash", "run", "movement"]
+
+[[rules]]
+name = "Shoot Action"
+category = "actions"
+description = "Make a ranged attack against a target in range and line of sight. Roll 2D6 to hit, then roll for Injury"
+examples = [
+    "Select target in range",
+    "Roll 2D6 to hit (7+ succeeds)",
+    "If hit, roll on Injury Table"
+]
+keywords = ["shoot", "ranged", "attack"]
+
+[[rules]]
+name = "Fight Action"
+category = "actions"
+description = "Make melee attacks against models in base contact. Roll 2D6 to hit, then Injury"
+examples = [
+    "Must be in base contact to Fight",
+    "Charging grants +1 Dice to hit",
+    "Cannot fight unarmed without special rules"
+]
+keywords = ["fight", "melee", "combat"]
+
+[[rules]]
+name = "Charge"
+category = "actions"
+description = "Move into base contact with an enemy and make a Fight action with +1 Dice to hit. Must have Line of Sight to charge target. Can only charge ONE target"
+examples = [
+    "Declare charge against visible enemy",
+    "Move into base contact",
+    "Fight with +1 Dice bonus"
+]
+keywords = ["charge", "melee", "combat"]
+
+# =============================================================================
+# INJURY & BLOOD MARKERS
+# =============================================================================
+
+[[rules]]
+name = "Injury Table"
+category = "injury"
+description = "When a model is hit, roll 2D6 on the Injury Table: 2-6 = Blood Marker, 7-8 = Downed, 9-12 = Out of Action"
+examples = [
+    "Roll 5 = Blood Marker placed on target",
+    "Roll 8 = Target is Downed (knocked prone)",
+    "Roll 10 = Target is Out of Action (removed)"
+]
+keywords = ["injury", "damage", "wound"]
+
+[[rules]]
+name = "Blood Markers"
+category = "injury"
+description = "Models accumulate Blood Markers representing damage. Markers can be spent by opponents to hinder the model or boost attacks against it"
+examples = [
+    "Spend 1 marker: Target gets -1 Dice on their action",
+    "Spend 1 marker per extra Injury die when attacking",
+    "Spend 6 markers (3 if Downed): BLOODBATH - roll 3D6 and sum ALL for injury"
+]
+keywords = ["blood", "marker", "damage"]
+
+[[rules]]
+name = "Downed"
+category = "injury"
+description = "A Downed model is knocked prone. They can stand up but are vulnerable. Melee attacks against Downed models get +1 Injury Die"
+examples = [
+    "Downed model must spend action to stand",
+    "Easier to finish off in melee",
+    "Bloodbath costs only 3 markers vs Downed"
+]
+keywords = ["downed", "prone", "vulnerable"]
+
+[[rules]]
+name = "Out of Action"
+category = "injury"
+description = "Model is removed from the battle. In campaigns, roll after battle to see if they survive, are injured, or die permanently"
+examples = [
+    "Model removed from table",
+    "Campaign: Roll for survival after game",
+    "May gain lasting injuries"
+]
+keywords = ["casualty", "death", "removed"]
+
+# =============================================================================
+# MORALE
+# =============================================================================
+
+[[rules]]
+name = "Morale Phase"
+category = "morale"
+description = "When 50% or more of your warband is Out of Action, you must roll a Morale test. Failing makes your warband SHAKEN"
+examples = [
+    "6 model warband loses 3 = Morale test required",
+    "Roll 2D6, need 7+ to pass",
+    "Leader may add bonuses to roll"
+]
+keywords = ["morale", "break", "leadership"]
+
+[[rules]]
+name = "Shaken"
+category = "morale"
+description = "A Shaken warband treats ALL rolls as Risky. Failing a second Morale test while Shaken = immediate loss"
+examples = [
+    "All actions become Risky (fail = end activation)",
+    "Second failed morale test = game over",
+    "Very dangerous state"
+]
+keywords = ["shaken", "morale", "fear"]
+
+# =============================================================================
+# RANGED COMBAT SPECIAL RULES
+# =============================================================================
+
+[[rules]]
+name = "Blast"
+category = "ranged"
+description = "Blast weapons can target any point on the battlefield, not just enemy models. All models under template are hit. Enables indirect fire"
+examples = [
+    "Target a point behind cover",
+    "Place blast template",
+    "All models touched are hit"
+]
+keywords = ["blast", "template", "explosion"]
+
+[[rules]]
+name = "Shotgun"
+category = "ranged"
+description = "At long range, Shotgun weapons suffer -1 Dice to Injury rolls instead of -1 to hit"
+examples = [
+    "Close range: Full effect",
+    "Long range: Easier to hit but harder to injure"
+]
+keywords = ["shotgun", "spread"]
+
+[[rules]]
+name = "Flamethrower"
+category = "ranged"
+description = "Flamethrower weapons automatically hit their targets - no to-hit roll required"
+examples = [
+    "No to-hit roll needed",
+    "Roll directly for Injury",
+    "Devastating but short range"
+]
+keywords = ["flamer", "fire", "auto-hit"]
+
+# =============================================================================
+# MELEE COMBAT SPECIAL RULES
+# =============================================================================
+
+[[rules]]
+name = "Two-Weapon Fighting"
+category = "melee"
+description = "Models with two melee weapons may make extra attacks within the same Fight action"
+examples = [
+    "Sword + Knife = additional attack",
+    "All attacks in same Fight action"
+]
+keywords = ["dual-wield", "melee", "attacks"]
+
+[[rules]]
+name = "Unarmed"
+category = "melee"
+description = "Models cannot fight unarmed unless they have a special rule allowing it. Always bring a melee weapon"
+examples = [
+    "No melee weapon = cannot Fight",
+    "Some units can fight unarmed (claws, etc.)"
+]
+keywords = ["unarmed", "melee"]
+
+# =============================================================================
+# TERRAIN
+# =============================================================================
+
+[[rules]]
+name = "Open Terrain"
+category = "terrain"
+description = "No special rules - models move through freely"
+examples = [
+    "Open ground, roads, etc."
+]
+keywords = ["terrain", "open"]
+
+[[rules]]
+name = "Difficult Terrain"
+category = "terrain"
+description = "Movement is impeded - typically costs extra inches to traverse"
+examples = [
+    "Craters, rubble, barbed wire",
+    "Slows movement"
+]
+keywords = ["terrain", "difficult", "slow"]
+
+[[rules]]
+name = "Dangerous Terrain"
+category = "terrain"
+description = "Moving through requires a Risky Success Roll. Failure may cause damage or end activation"
+examples = [
+    "Minefields, gas clouds, fire",
+    "Roll 7+ or suffer consequences",
+    "Flying models now affected by mines/traps"
+]
+keywords = ["terrain", "dangerous", "risky"]
+
+[[rules]]
+name = "Cover"
+category = "terrain"
+description = "Models in cover are harder to hit with ranged attacks. Provides -1 Dice to attackers"
+examples = [
+    "Behind walls, in trenches, etc.",
+    "Attacker rolls with -1 Dice"
+]
+keywords = ["cover", "defense"]
+
+# =============================================================================
+# CAMPAIGN RULES
+# =============================================================================
+
+[[rules]]
+name = "Warband Creation"
+category = "campaign"
+description = "Start with 700 Ducats to build your warband. Choose a Patron for flavor and bonuses"
+examples = [
+    "700 Ducats to spend on models and equipment",
+    "Choose faction and Patron",
+    "Start with basic equipment"
+]
+keywords = ["warband", "campaign", "creation"]
+
+[[rules]]
+name = "Ducats"
+category = "campaign"
+description = "Currency for hiring models and buying equipment. Can be gained or lost between games"
+examples = [
+    "Hire new soldiers",
+    "Buy weapons and armor",
+    "Earned through Exploration"
+]
+keywords = ["money", "currency", "ducats"]
+
+[[rules]]
+name = "Glory"
+category = "campaign"
+description = "Earned through gameplay achievements. Used to hire elite units and mercenaries. Limited refresh"
+examples = [
+    "Earned by completing objectives",
+    "Spent on special units",
+    "More valuable than Ducats"
+]
+keywords = ["glory", "experience", "prestige"]
+
+[[rules]]
+name = "Exploration"
+category = "campaign"
+description = "After each game, roll dice based on game size to find Ducats and hidden locations"
+examples = [
+    "Larger games = more exploration dice",
+    "Find Ducats",
+    "Discover hidden locations with bonuses"
+]
+keywords = ["exploration", "loot", "campaign"]
+
+[[rules]]
+name = "Reinforcements"
+category = "campaign"
+description = "Forgo monetary growth to reset unit tier while keeping Glory and experience"
+examples = [
+    "Reset a unit's tier",
+    "Keep their experience",
+    "Costs exploration income"
+]
+keywords = ["reinforcement", "campaign"]
+
+# =============================================================================
+# EQUIPMENT
+# =============================================================================
+
+[[rules]]
+name = "Hand Slots"
+category = "equipment"
+description = "Models have 4 hand slots: 2 for ranged weapons, 2 for melee. Two-handed weapons take both slots of their type"
+examples = [
+    "Rifle (2-handed ranged) + Sword (1-handed melee) + Pistol (1-handed ranged) = valid",
+    "Two rifles = INVALID (need both ranged slots each)"
+]
+keywords = ["equipment", "hands", "weapons"]
+
+[[rules]]
+name = "Grenades"
+category = "equipment"
+description = "Grenades do not require hand slots - they are carried separately"
+examples = [
+    "Frag grenades, gas grenades, holy water",
+    "No hand slot required"
+]
+keywords = ["grenade", "thrown"]
+
+[[rules]]
+name = "Armor"
+category = "equipment"
+description = "Armor provides protection, often granting +Dice to Injury resistance or other defensive bonuses"
+examples = [
+    "Trench armor, blessed vestments",
+    "May slow movement"
+]
+keywords = ["armor", "defense", "protection"]

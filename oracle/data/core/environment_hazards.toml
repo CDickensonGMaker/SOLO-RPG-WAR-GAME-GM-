@@ -1,0 +1,296 @@
+# Dynamic Environment Hazards and Tactical Features
+# Universal hazard system for any setting - fantasy, sci-fi, modern, historical
+# 150+ entries covering terrain, structures, battlefields, and tactical opportunities
+
+# =============================================================================
+# NATURAL HAZARDS (45 entries)
+# =============================================================================
+[natural_hazards]
+entries = [
+  { text = "Unstable ground - risk of collapse into cavern below", weight = 1 },
+  { text = "Quicksand or bog - sinking hazard, movement fatal", weight = 1 },
+  { text = "Flash flood channel - dry now but runoff imminent", weight = 1 },
+  { text = "Avalanche zone - noise could trigger deadly slide", weight = 1 },
+  { text = "Rockslide area - loose stones, one wrong step triggers cascade", weight = 1 },
+  { text = "Toxic plants nearby - contact causes rash, ingestion worse", weight = 1 },
+  { text = "Dangerous wildlife territory - predator signs everywhere", weight = 2 },
+  { text = "Steep cliff or drop - fatal fall risk, no safety margins", weight = 1 },
+  { text = "Fast-moving water - crossing extremely dangerous", weight = 1 },
+  { text = "Extreme cold exposure risk - frostbite in minutes", weight = 1 },
+  { text = "Extreme heat exposure risk - heatstroke likely", weight = 1 },
+  { text = "Venomous creatures abundant - snakes, spiders, scorpions", weight = 2 },
+  { text = "Sinkhole area - ground could give way without warning", weight = 1 },
+  { text = "Geothermal vents - scalding steam erupts unpredictably", weight = 1 },
+  { text = "Volcanic activity - tremors, gas, possible eruption", weight = 1 },
+  { text = "Thorny undergrowth - movement painful and noisy", weight = 2 },
+  { text = "Carnivorous plants - larger specimens pose real threat", weight = 1 },
+  { text = "Nesting ground - disturbing inhabitants invites attack", weight = 1 },
+  { text = "Razor grass - cuts exposed skin, ruins clothing", weight = 1 },
+  { text = "Underground river - ground above unstable", weight = 1 },
+  { text = "Glacier crevasse - hidden beneath snow, deep falls", weight = 1 },
+  { text = "Thin ice over water - weight limit uncertain", weight = 1 },
+  { text = "Mudslide risk - saturated slope ready to release", weight = 1 },
+  { text = "Lightning strike zone - elevated position, metal present", weight = 1 },
+  { text = "Falling rocks - cliff face unstable, debris dropping", weight = 2 },
+  { text = "Stagnant water - disease vector, contaminated", weight = 2 },
+  { text = "Deep snowdrifts - concealed terrain, exhausting movement", weight = 1 },
+  { text = "Loose scree slope - no stable footing, sliding inevitable", weight = 1 },
+  { text = "Dense fog over cliff edge - fall risk extreme", weight = 1 },
+  { text = "Whirlpool in water - swimming fatal", weight = 1 },
+  { text = "Undertow current - swimmers pulled out to deep water", weight = 1 },
+  { text = "Corrosive water - acidic spring damages equipment", weight = 1 },
+  { text = "Poisonous spores in air - area contaminated by fungi", weight = 1 },
+  { text = "Miasma zone - fetid air causes illness", weight = 1 },
+  { text = "Natural tar pit - sticky death for the unwary", weight = 1 },
+  { text = "Explosive gas pockets - open flame fatal", weight = 1 },
+  { text = "Oxygen-depleted area - suffocation risk", weight = 1 },
+  { text = "Magnetic anomaly - compasses useless, electronics affected", weight = 1 },
+  { text = "Seismic instability - tremors constant, collapse likely", weight = 1 },
+  { text = "Tidal zone - water level changes rapidly", weight = 1 },
+  { text = "Rip current - swimmers pulled away from shore", weight = 1 },
+  { text = "Cave-in prone tunnel - supports failing", weight = 1 },
+  { text = "Flooding cavern - water rising, exits closing", weight = 1 },
+  { text = "Steep ravine - difficult to cross, easy to fall", weight = 1 },
+  { text = "Razor-sharp rock formations - cuts and injuries inevitable", weight = 1 }
+]
+
+# =============================================================================
+# STRUCTURAL HAZARDS (35 entries)
+# =============================================================================
+[structural_hazards]
+entries = [
+  { text = "Unstable building - walls cracked, collapse imminent", weight = 1 },
+  { text = "Weakened floor - boards rotted, weight limit unknown", weight = 1 },
+  { text = "Gas leak - invisible danger, spark would be catastrophic", weight = 1 },
+  { text = "Fire spreading - smoke filling structure, exits narrowing", weight = 1 },
+  { text = "Electrical hazard - live wires exposed, water present", weight = 1 },
+  { text = "Flooded basement - water concealing floor hazards", weight = 1 },
+  { text = "Trapped survivors - rescue needed, time critical", weight = 1 },
+  { text = "Compromised bridge - structural integrity questionable", weight = 1 },
+  { text = "Abandoned well - uncovered, deep fall", weight = 1 },
+  { text = "Rotting stairs - weight could cause collapse", weight = 2 },
+  { text = "Unstable chimney - ready to topple", weight = 1 },
+  { text = "Hanging debris - could fall at any moment", weight = 2 },
+  { text = "Blocked exits - fire escape compromised", weight = 1 },
+  { text = "Toxic materials exposed - asbestos, lead, chemicals", weight = 1 },
+  { text = "Pressure vessel - damaged container could explode", weight = 1 },
+  { text = "Flooded elevator shaft - electrical risk", weight = 1 },
+  { text = "Compromised dam - breach risk downstream", weight = 1 },
+  { text = "Leaking fuel - spill spreading, ignition source needed", weight = 1 },
+  { text = "Abandoned mine shaft - unstable throughout", weight = 1 },
+  { text = "Crumbling wall - could collapse outward", weight = 1 },
+  { text = "Sewer gas buildup - toxic and explosive", weight = 1 },
+  { text = "Radiation source - contaminated materials present", weight = 1 },
+  { text = "Boiler under pressure - explosion risk", weight = 1 },
+  { text = "Industrial machinery - exposed gears, no safety guards", weight = 1 },
+  { text = "Swaying tower - structural failure progressing", weight = 1 },
+  { text = "Glass ceiling weakening - shards could rain down", weight = 1 },
+  { text = "Underground utility lines - rupture risk if excavating", weight = 1 },
+  { text = "Unstable scaffolding - one bump and it falls", weight = 1 },
+  { text = "Loaded crane - cable fraying, load suspended", weight = 1 },
+  { text = "Chemical storage - containers breached or leaking", weight = 1 },
+  { text = "Compromised retaining wall - mudslide into structure", weight = 1 },
+  { text = "Flooded basement with electrical systems", weight = 1 },
+  { text = "Burned-out structure - still smoldering, hot spots", weight = 1 },
+  { text = "Collapsed section - unstable debris pile", weight = 2 },
+  { text = "Infested structure - vermin, insects, or worse", weight = 2 }
+]
+
+# =============================================================================
+# BATTLEFIELD HAZARDS (35 entries)
+# =============================================================================
+[battlefield_hazards]
+entries = [
+  { text = "Unexploded ordnance - munitions scattered, any could detonate", weight = 2 },
+  { text = "Marked minefield - known danger, route around", weight = 1 },
+  { text = "Unmarked minefield - signs of previous casualties", weight = 1 },
+  { text = "Sniper alley - exposed approach, shooter unlocated", weight = 1 },
+  { text = "Artillery kill zone - recent impacts, fire ongoing", weight = 1 },
+  { text = "Booby-trapped doorway - tripwire visible on inspection", weight = 1 },
+  { text = "Concealed booby trap - no visible warning signs", weight = 1 },
+  { text = "Chemical contamination zone - agent unknown", weight = 1 },
+  { text = "Biological contamination - disease vector area", weight = 1 },
+  { text = "Destroyed vehicles blocking path - climb or detour", weight = 2 },
+  { text = "Friendly fire risk area - overlapping fields of fire", weight = 1 },
+  { text = "Dead ground - no line of sight to support", weight = 1 },
+  { text = "Crossfire zone - multiple firing positions intersect here", weight = 1 },
+  { text = "Impact crater - cover available but terrain difficult", weight = 2 },
+  { text = "Wire obstacles - barbed wire slowing movement", weight = 2 },
+  { text = "Tank ditch - vehicle barrier, infantry can cross", weight = 1 },
+  { text = "Anti-vehicle obstacles - dragons teeth, hedgehogs", weight = 1 },
+  { text = "Burning wreckage - smoke screen but fire spreading", weight = 1 },
+  { text = "Ammunition cooking off - explosions in burning vehicle", weight = 1 },
+  { text = "Fuel spill - area around destroyed vehicle flammable", weight = 1 },
+  { text = "Bodies everywhere - psychological impact, disease risk", weight = 2 },
+  { text = "Mass grave - recently disturbed earth, horror revealed", weight = 1 },
+  { text = "Propaganda speakers - enemy broadcasting, morale attack", weight = 1 },
+  { text = "Jamming zone - communications unreliable", weight = 2 },
+  { text = "Drone surveillance overhead - position compromised", weight = 1 },
+  { text = "Illumination flare active - no concealment", weight = 1 },
+  { text = "Smoke screen - visibility zero, disorienting", weight = 2 },
+  { text = "Tear gas lingering - respiratory protection needed", weight = 1 },
+  { text = "Sonic weapon area - disorienting audio assault", weight = 1 },
+  { text = "Flashbang aftermath - defenders temporarily disabled", weight = 1 },
+  { text = "Caltrops scattered - foot injury risk", weight = 2 },
+  { text = "Punji pit concealed - impalement trap hidden", weight = 1 },
+  { text = "Observation post overlooking - movement detected", weight = 2 },
+  { text = "Kill box - preplanned artillery target zone", weight = 1 },
+  { text = "Ambush site - terrain favors attackers, bad ground", weight = 1 }
+]
+
+# =============================================================================
+# TACTICAL FEATURES - DEFENSIVE (20 entries)
+# =============================================================================
+[defensive_features]
+entries = [
+  { text = "Excellent defensive position - natural fortification", weight = 2 },
+  { text = "Stone wall providing hard cover", weight = 2 },
+  { text = "Trench line available - prepared defensive position", weight = 1 },
+  { text = "Bunker or hardened shelter - protection from heavy weapons", weight = 1 },
+  { text = "Fighting position prepared - sandbags, firing ports", weight = 1 },
+  { text = "Defensible building - solid construction, limited entries", weight = 2 },
+  { text = "High ground available - elevated defensive position", weight = 2 },
+  { text = "Natural chokepoint - force enemy into kill zone", weight = 1 },
+  { text = "Tower or elevated platform - overwatch position", weight = 1 },
+  { text = "Cave or tunnel entrance - defensible with one way in", weight = 1 },
+  { text = "Bridge chokepoint - control crossing to control movement", weight = 1 },
+  { text = "Gate or doorway - funnel enemies through narrow point", weight = 2 },
+  { text = "Rooftop position - height advantage, multiple sight lines", weight = 1 },
+  { text = "Corner position - only exposed in one direction", weight = 2 },
+  { text = "Window or murder hole - fire from protected position", weight = 2 },
+  { text = "Reverse slope - protected from direct fire", weight = 1 },
+  { text = "Defilade position - covered from enemy observation", weight = 1 },
+  { text = "Fighting withdrawal route - fall-back positions prepared", weight = 1 },
+  { text = "Vehicle as cover - solid metal between you and enemy", weight = 2 },
+  { text = "Rubble pile - improvised cover, difficult to assault", weight = 2 }
+]
+
+# =============================================================================
+# TACTICAL FEATURES - MOVEMENT (20 entries)
+# =============================================================================
+[movement_features]
+entries = [
+  { text = "Concealed approach route - move unseen to objective", weight = 2 },
+  { text = "Covered approach - protected from fire while moving", weight = 2 },
+  { text = "Communication trench - move between positions safely", weight = 1 },
+  { text = "Drainage ditch - crawl space below line of sight", weight = 1 },
+  { text = "Tree line - concealment while moving along edge", weight = 2 },
+  { text = "Building shadows - darkness aids movement", weight = 2 },
+  { text = "Smoke screen available - concealment for crossing", weight = 1 },
+  { text = "Tunnel or sewer access - underground bypass route", weight = 1 },
+  { text = "Rooftop route - avoid street level entirely", weight = 1 },
+  { text = "Dead ground to exploit - hidden from observation", weight = 1 },
+  { text = "Flanking route available - approach from unexpected angle", weight = 2 },
+  { text = "Alternate route discovered - avoid known danger", weight = 2 },
+  { text = "Interior route through buildings - avoid open streets", weight = 1 },
+  { text = "Gully or ravine - covered movement, concealed approach", weight = 1 },
+  { text = "Bocage or hedgerow - concealment and cover combined", weight = 1 },
+  { text = "High grass or crops - movement concealed at cost of visibility", weight = 2 },
+  { text = "Broken wall sections - move through rather than around", weight = 2 },
+  { text = "Rubble path - difficult but concealed route", weight = 1 },
+  { text = "River bed - dry or low water allows hidden approach", weight = 1 },
+  { text = "Night approach feasible - darkness aids final advance", weight = 1 }
+]
+
+# =============================================================================
+# TACTICAL FEATURES - OBSERVATION (15 entries)
+# =============================================================================
+[observation_features]
+entries = [
+  { text = "Excellent observation point - see without being seen", weight = 2 },
+  { text = "High vantage point - overview of entire area", weight = 2 },
+  { text = "Window overlooking objective - observe enemy positions", weight = 2 },
+  { text = "Tree suitable for climbing - elevated observation", weight = 1 },
+  { text = "Ridge line - observe far side without cresting", weight = 1 },
+  { text = "Bell tower or minaret - highest point in area", weight = 1 },
+  { text = "Building with roof access - urban observation point", weight = 1 },
+  { text = "Concealed hide site - long-term observation position", weight = 1 },
+  { text = "Multiple sight lines available - observe several approaches", weight = 2 },
+  { text = "Gap in foliage - observation lane through cover", weight = 1 },
+  { text = "Reflection surface - observe around corner", weight = 1 },
+  { text = "Listening post position - audio observation point", weight = 1 },
+  { text = "Elevated terrain feature - natural observation platform", weight = 1 },
+  { text = "Clear field of view - unobstructed observation", weight = 2 },
+  { text = "Sensor placement opportunity - electronic observation", weight = 1 }
+]
+
+# =============================================================================
+# TERRAIN DIFFICULTIES (25 entries)
+# =============================================================================
+[terrain_difficulties]
+entries = [
+  { text = "Open ground - no cover, fully exposed", weight = 2 },
+  { text = "Difficult terrain - slows all movement significantly", weight = 2 },
+  { text = "Impassable to vehicles - foot traffic only", weight = 2 },
+  { text = "Deep mud - exhausting, risks losing equipment", weight = 1 },
+  { text = "Flooded area - wading required, slow and loud", weight = 1 },
+  { text = "Rocky terrain - ankle-breaking potential, noisy", weight = 2 },
+  { text = "Dense vegetation - slow progress, limited visibility", weight = 2 },
+  { text = "Steep slope - climbing required, vulnerable while ascending", weight = 1 },
+  { text = "Loose sand - exhausting movement, no solid footing", weight = 1 },
+  { text = "Ice sheet - treacherous footing, falls likely", weight = 1 },
+  { text = "Debris field - slow picking through wreckage", weight = 2 },
+  { text = "Crater-pocked ground - constant ups and downs", weight = 1 },
+  { text = "Narrow ledge - single file, long fall if misstep", weight = 1 },
+  { text = "Swamp - every step a struggle, leeches", weight = 1 },
+  { text = "Thick jungle - machete required, extremely slow", weight = 1 },
+  { text = "Burned forest - ash and fallen trees block path", weight = 1 },
+  { text = "Building rubble - climbing over collapsed structures", weight = 2 },
+  { text = "Plowed field - furrows trip and exhaust", weight = 1 },
+  { text = "Snow depth significant - post-holing exhausts quickly", weight = 1 },
+  { text = "Urban obstacles - fences, walls, vehicles blocking", weight = 2 },
+  { text = "Tight corridors - no room to maneuver, fighting limited", weight = 1 },
+  { text = "Low ceiling - crouching required, fatigue", weight = 1 },
+  { text = "Unstable footing throughout - every step uncertain", weight = 1 },
+  { text = "Concealed obstacles - holes, wires, debris hidden", weight = 2 },
+  { text = "Vertical climb required - rope or climbing skill needed", weight = 1 }
+]
+
+# =============================================================================
+# RESOURCE OPPORTUNITIES (20 entries)
+# =============================================================================
+[resource_opportunities]
+entries = [
+  { text = "Water source nearby - stream, well, or cistern", weight = 2 },
+  { text = "Abandoned supplies - previous occupants left materials", weight = 2 },
+  { text = "Fuel depot - vehicles or equipment can refuel", weight = 1 },
+  { text = "Ammunition cache - resupply opportunity", weight = 1 },
+  { text = "Medical supplies available - treatment possible", weight = 1 },
+  { text = "Food stores discovered - rations available", weight = 2 },
+  { text = "Workshop or tools - repairs possible", weight = 1 },
+  { text = "Communication equipment - contact possible", weight = 1 },
+  { text = "Transportation available - vehicles, mounts, boats", weight = 1 },
+  { text = "Shelter suitable for rest - secure enough to sleep", weight = 2 },
+  { text = "Intelligence opportunity - documents, maps, prisoners", weight = 1 },
+  { text = "High value target present - leadership, equipment", weight = 1 },
+  { text = "Civilian assistance available - locals willing to help", weight = 1 },
+  { text = "Hidden cache marked - previous forces left supplies", weight = 1 },
+  { text = "Scavenging opportunity - useful materials scattered", weight = 2 },
+  { text = "Power source available - generator or grid connection", weight = 1 },
+  { text = "Defensible position for camp - secure rest possible", weight = 2 },
+  { text = "Local knowledge available - guide or informant present", weight = 1 },
+  { text = "Reinforcement linkup point - friendly forces nearby", weight = 1 },
+  { text = "Evacuation point accessible - extraction possible", weight = 1 }
+]
+
+# =============================================================================
+# ENVIRONMENTAL COMPLICATIONS (15 entries)
+# =============================================================================
+[environmental_complications]
+entries = [
+  { text = "Civilians in the area - collateral damage risk", weight = 2 },
+  { text = "Neutral parties present - diplomatic considerations", weight = 1 },
+  { text = "Press or observers watching - actions under scrutiny", weight = 1 },
+  { text = "Protected site - cultural, religious, or historical value", weight = 1 },
+  { text = "Hospital or school - rules of engagement restrictive", weight = 1 },
+  { text = "Environmental hazard - pollution, contamination spread risk", weight = 1 },
+  { text = "Infrastructure critical - damage has strategic consequences", weight = 1 },
+  { text = "Humanitarian crisis - refugees, wounded civilians", weight = 1 },
+  { text = "Political sensitivity - wrong move causes incident", weight = 1 },
+  { text = "Alliance complications - partners present with own agenda", weight = 1 },
+  { text = "Media attention - actions will be broadcast", weight = 1 },
+  { text = "Legal restrictions - specific rules of engagement apply", weight = 1 },
+  { text = "Time pressure - deadline approaching", weight = 2 },
+  { text = "Resource scarcity - supplies running low", weight = 2 },
+  { text = "Communication problems - out of contact with support", weight = 2 }
+]

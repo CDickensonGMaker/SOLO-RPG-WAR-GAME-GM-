@@ -1,0 +1,234 @@
+# Trench Crusade - Cult of the Black Grail
+# Vampiric knights who spread infection and corruption
+
+name = "Cult of the Black Grail"
+allegiance = "Fallen"
+description = "Once noble knights who drank from a cursed grail, these vampiric warriors spread corruption through infection. They march in towering stilts through no-man's land, spreading plague."
+playstyle = "Aggressive melee with unique Infection Marker mechanics. Infect enemies to weaken them, then finish them off with your elite Grail Knights."
+strengths = ["Infection Markers weaken enemies", "Durable Grail Knights", "Stilt Walkers ignore terrain", "Vampiric regeneration"]
+weaknesses = ["Vulnerable to holy weapons", "Expensive elite units", "Few ranged options"]
+
+[faction_rules]
+name = "The Spreading Corruption"
+description = "Cult units can inflict Infection Markers on enemies. Infected models suffer penalties to rolls. At 3+ markers, they must test or become Corrupted."
+
+# =============================================================================
+# CHARACTERS / LEADERS
+# =============================================================================
+
+[[units]]
+name = "Grail Knight"
+type = "infantry"
+category = "HQ"
+points = 80
+models = "1"
+tactical_role = "elite_assault"
+threat_level = "very_high"
+preferred_targets = ["characters", "elite_infantry"]
+weaknesses = ["holy_weapons", "massed_fire", "fire"]
+special_rules = ["Leader", "Vampiric", "Infection", "Regeneration", "Fearless"]
+keywords = ["Infantry", "Character", "Vampire", "Fallen", "Knight"]
+
+[units.stats]
+Movement = 6
+Ranged = "5+"
+Melee = "2+"
+Defense = "3+"
+Wounds = 3
+
+[[units.weapons]]
+name = "Grail Blade"
+range = "Melee"
+strength = "+2"
+type = "Melee"
+abilities = ["Unholy", "Infection", "Rending"]
+
+[[units.weapons]]
+name = "Cursed Pistol"
+range = "12\""
+strength = "Standard"
+type = "Pistol"
+shots = "1"
+abilities = ["Infection"]
+
+# =============================================================================
+# TROOPS
+# =============================================================================
+
+[[units]]
+name = "Thrall"
+type = "infantry"
+category = "Troops"
+points = 12
+models = "1"
+tactical_role = "expendable_assault"
+threat_level = "low"
+preferred_targets = ["infantry"]
+weaknesses = ["everything", "holy"]
+special_rules = ["Expendable", "Mindless", "Infection Vector"]
+keywords = ["Infantry", "Human", "Fallen", "Thrall"]
+
+[units.stats]
+Movement = 6
+Ranged = "-"
+Melee = "5+"
+Defense = "6+"
+Wounds = 1
+
+[[units.weapons]]
+name = "Rotting Claws"
+range = "Melee"
+strength = "-1"
+type = "Melee"
+abilities = ["Infection"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Plague Cultist"
+type = "infantry"
+category = "Troops"
+points = 18
+models = "1"
+tactical_role = "infection_spreader"
+threat_level = "medium"
+preferred_targets = ["infantry", "groups"]
+weaknesses = ["ranged_fire", "holy"]
+special_rules = ["Infection", "Corrupted"]
+keywords = ["Infantry", "Human", "Fallen", "Cultist"]
+
+[units.stats]
+Movement = 6
+Ranged = "5+"
+Melee = "4+"
+Defense = "5+"
+Wounds = 1
+
+[[units.weapons]]
+name = "Plague Censer"
+range = "6\""
+strength = "Standard"
+type = "Thrown"
+shots = "1"
+abilities = ["Blast", "Infection"]
+
+[[units.weapons]]
+name = "Rusted Blade"
+range = "Melee"
+strength = "Standard"
+type = "Melee"
+abilities = ["Infection"]
+
+# =============================================================================
+# ELITES
+# =============================================================================
+
+[[units]]
+name = "Stilt Walker"
+type = "infantry"
+category = "Elites"
+points = 45
+models = "1"
+tactical_role = "terrain_assault"
+threat_level = "high"
+preferred_targets = ["infantry", "fortifications"]
+weaknesses = ["heavy_weapons", "anti-tank"]
+special_rules = ["Stilts", "Terror", "Infection", "Ignores Difficult Terrain"]
+keywords = ["Infantry", "Human", "Fallen", "Walker"]
+
+[units.stats]
+Movement = 8
+Ranged = "5+"
+Melee = "3+"
+Defense = "4+"
+Wounds = 2
+
+[[units.weapons]]
+name = "Impaling Spear"
+range = "Melee"
+strength = "+2"
+type = "Melee"
+abilities = ["Reach", "Infection"]
+
+[[units.weapons]]
+name = "Plague Vials"
+range = "8\""
+strength = "-1"
+type = "Thrown"
+shots = "D3"
+abilities = ["Infection", "Blast"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Ghoul"
+type = "beast"
+category = "Elites"
+points = 30
+models = "1"
+tactical_role = "fast_assault"
+threat_level = "high"
+preferred_targets = ["infantry", "wounded"]
+weaknesses = ["heavy_weapons", "fire"]
+special_rules = ["Fast", "Feast", "Regeneration", "Infection"]
+keywords = ["Beast", "Undead", "Fallen"]
+
+[units.stats]
+Movement = 8
+Ranged = "-"
+Melee = "3+"
+Defense = "5+"
+Wounds = 2
+
+[[units.weapons]]
+name = "Rending Claws"
+range = "Melee"
+strength = "+1"
+type = "Melee"
+abilities = ["Rending", "Infection"]
+
+[[units.weapons]]
+name = "Gnashing Teeth"
+range = "Melee"
+strength = "Standard"
+type = "Melee"
+abilities = ["Extra Attack", "Feast"]
+
+# =============================================================================
+# HEAVY SUPPORT
+# =============================================================================
+
+[[units]]
+name = "Plague Bearer"
+type = "monster"
+category = "Heavy Support"
+points = 70
+models = "1"
+tactical_role = "heavy_assault"
+threat_level = "extreme"
+preferred_targets = ["groups", "fortifications"]
+weaknesses = ["anti-monster", "holy_weapons", "fire"]
+special_rules = ["Large", "Terror", "Infection Aura", "Regeneration"]
+keywords = ["Monster", "Daemon", "Fallen"]
+
+[units.stats]
+Movement = 5
+Ranged = "-"
+Melee = "2+"
+Defense = "3+"
+Wounds = 5
+
+[[units.weapons]]
+name = "Plague Touch"
+range = "Melee"
+strength = "+2"
+type = "Melee"
+abilities = ["Infection", "Plague Aura"]
+
+# =============================================================================
+# VARIANTS / SUB-FACTIONS
+# =============================================================================
+
+# Knights of the Crimson Tide - Elite cavalry focus
+# Plague Monasteries - Heavy infection mechanics
+# The Risen Court - Undead thrall hordes

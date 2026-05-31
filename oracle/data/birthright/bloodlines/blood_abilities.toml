@@ -1,0 +1,1815 @@
+# ============================================================================
+# BIRTHRIGHT BLOOD ABILITIES
+# ============================================================================
+# The supernatural powers granted by divine bloodlines. Each ability requires
+# a minimum bloodline strength and many are tied to specific derivations.
+# ============================================================================
+
+[meta]
+title = "Blood Abilities of Cerilia"
+description = "The divine powers inherited from the gods who fell at Deismaar"
+source = "Birthright Campaign Setting, Blood Enemies, Book of Magecraft, various sourcebooks"
+
+# ============================================================================
+# BLOOD ABILITY STRENGTH REQUIREMENTS
+# ============================================================================
+
+[strength_requirements]
+description = "Blood abilities require minimum bloodline strength to manifest"
+
+[strength_requirements.tainted]
+score_range = "1-9"
+abilities_available = "Basic abilities only, often weakened forms"
+typical_count = 1
+
+[strength_requirements.minor]
+score_range = "10-24"
+abilities_available = "Common abilities at full strength"
+typical_count = 2
+
+[strength_requirements.major]
+score_range = "25-44"
+abilities_available = "Uncommon abilities become available"
+typical_count = 3
+
+[strength_requirements.great]
+score_range = "45-74"
+abilities_available = "Rare abilities become available"
+typical_count = 4
+
+[strength_requirements.true]
+score_range = "75+"
+abilities_available = "All abilities available, enhanced effects"
+typical_count = 5
+
+# ============================================================================
+# ALERTNESS
+# ============================================================================
+
+[[blood_abilities]]
+name = "Alertness"
+derivation = ["any"]
+min_strength = "tainted"
+category = "Defensive"
+
+description = """
+The scion possesses supernatural awareness of danger. Their divine blood warns \
+them of threats before they manifest, granting an almost precognitive sense of \
+imminent peril. This manifests as a prickling sensation, a sudden certainty, or \
+vivid flash of the danger to come."""
+
+[blood_abilities.effect_by_strength]
+tainted = "Occasional warnings (advantage on one surprise check per long rest)"
+minor = "Reliable warnings (cannot be surprised while conscious)"
+major = "Danger sense extends to allies within 10 feet"
+great = "Sense danger up to 1 minute before it occurs"
+true = "Sense the nature and direction of threats"
+
+effect_5e = """
+Minor: You cannot be surprised while conscious, and other creatures don't gain \
+advantage on attack rolls against you as a result of being hidden from you.
+
+Major+: You and allies within 10 feet cannot be surprised. You have advantage \
+on initiative rolls."""
+
+roleplay_notes = """
+Alertness creates a constant low-level awareness. The scion may seem paranoid \
+or jumpy to others, but they have simply learned to trust their blood's warnings. \
+Sleep may be fitful as the blood watches even during rest."""
+
+# ============================================================================
+# ALTER APPEARANCE
+# ============================================================================
+
+[[blood_abilities]]
+name = "Alter Appearance"
+derivation = ["brenna", "vorynn", "azrai"]
+min_strength = "minor"
+category = "Utility"
+
+description = """
+The scion can reshape their physical appearance, altering features, coloring, \
+height, and build within humanoid limits. This is true physical transformation, \
+not illusion, though it requires concentration to maintain significant changes."""
+
+[blood_abilities.effect_by_strength]
+tainted = "Minor changes (hair color, eye color, small features)"
+minor = "Significant changes (different face, apparent age +/- 20 years)"
+major = "Complete transformation (different race, gender, size within humanoid range)"
+great = "Instant transformation, maintained without concentration"
+true = "Can mimic specific individuals perfectly"
+
+effect_5e = """
+At will, you can cast Alter Self (Change Appearance option only) without \
+expending a spell slot.
+
+Major+: The transformation is physical, not magical, and cannot be detected \
+by Detect Magic or True Seeing. You can maintain the form indefinitely without \
+concentration.
+
+Great+: You can perfectly mimic a specific individual you have studied for at \
+least 1 hour. Creatures familiar with the individual can make a DC 20 Insight \
+check to notice something is off."""
+
+roleplay_notes = """
+Scions with this ability often struggle with identity. Which face is truly \
+theirs? Brenna scions use it for advantage in deals; Vorynn scions hide in \
+shadows; Azrai scions become whoever they need to be to seize power."""
+
+# ============================================================================
+# ANIMAL AFFINITY
+# ============================================================================
+
+[[blood_abilities]]
+name = "Animal Affinity"
+derivation = ["reynir", "masela", "azrai"]
+min_strength = "tainted"
+category = "Communication"
+
+description = """
+The scion shares a bond with a specific type of animal, able to communicate \
+with them and command their aid. Reynir scions typically bond with forest \
+creatures, Masela with sea life, and Azrai with predators or creatures of ill omen."""
+
+[blood_abilities.effect_by_strength]
+tainted = "Basic empathic communication with one animal type"
+minor = "Clear communication, animals of type are friendly"
+major = "Command animals of type, communicate with related species"
+great = "Animals of type serve willingly, enhanced communication"
+true = "Legendary bond - animals travel great distances to serve"
+
+effect_5e = """
+You can communicate simple concepts with beasts of your chosen type. These \
+creatures regard you as friendly unless you threaten them.
+
+Minor+: You can cast Speak with Animals at will but only for your chosen type. \
+Beasts of your type will not attack you unless magically compelled or you attack first.
+
+Major+: You can cast Animal Friendship and Beast Bond at will targeting your \
+chosen type. You can have a number of beasts equal to your proficiency bonus \
+under your influence simultaneously."""
+
+typical_animals = """
+Reynir: Wolves, bears, eagles, stags, forest creatures
+Masela: Fish, dolphins, whales, seabirds, sharks
+Azrai: Ravens, wolves, serpents, bats, spiders"""
+
+roleplay_notes = """
+The bond is genuine kinship. Animals sense the divine nature in the scion's \
+blood and respond accordingly. This can be disconcerting - being followed by \
+ravens or having wolves appear at crucial moments draws attention."""
+
+# ============================================================================
+# BATTLEWISE
+# ============================================================================
+
+[[blood_abilities]]
+name = "Battlewise"
+derivation = ["anduiras"]
+min_strength = "minor"
+category = "Combat"
+derivation_exclusive = true
+
+description = """
+The blood of the Noble Lord grants supernatural tactical awareness. The scion \
+perceives the flow of battle with divine clarity, anticipating enemy movements \
+and seeing opportunities invisible to others. In war, they seem to know what \
+the enemy will do before they do it."""
+
+[blood_abilities.effect_by_strength]
+minor = "Personal combat advantage, never surprised in battle"
+major = "Tactical awareness extends to commanded troops"
+great = "Strategic foresight, sense enemy battle plans"
+true = "Legendary commander - troops fight with supernatural coordination"
+
+effect_5e = """
+You have advantage on initiative rolls. You cannot be surprised, and you have \
+advantage on attack rolls against any creature that hasn't taken a turn in combat yet.
+
+Major+: When you take the Attack action, you can forgo one attack to give an \
+ally within 30 feet advantage on their next attack roll before the start of \
+your next turn.
+
+Great+: At the start of combat, you can grant a number of allies equal to your \
+Charisma modifier (minimum 1) advantage on their initiative rolls."""
+
+roleplay_notes = """
+Battlewise scions often find themselves thrust into leadership positions. The \
+blood demands they lead, and others instinctively follow. They may see threats \
+in tactical terms even in social situations."""
+
+# ============================================================================
+# BLOOD HISTORY
+# ============================================================================
+
+[[blood_abilities]]
+name = "Blood History"
+derivation = ["any"]
+min_strength = "minor"
+category = "Divination"
+
+description = """
+The scion can perceive the history of bloodlines through touch. When contacting \
+another blooded individual or an item strongly connected to bloodline history, \
+they receive visions of the past - the triumphs and tragedies of the blood."""
+
+[blood_abilities.effect_by_strength]
+minor = "Sense bloodline derivation and approximate strength"
+major = "Receive flashes of significant bloodline events"
+great = "See detailed visions of bloodline history"
+true = "Perceive complete bloodline heritage back to Deismaar"
+
+effect_5e = """
+By touching a blooded creature (willing or restrained) for 1 minute, you learn \
+their bloodline derivation and general strength category.
+
+Major+: You receive visions of up to three significant events in the bloodline's \
+history. The DM determines what you see, but it typically includes moments of \
+triumph, tragedy, or bloodtheft.
+
+Great+: You can trace the complete lineage, including any bloodtheft in the \
+line's history. You learn the names and fates of significant ancestors."""
+
+roleplay_notes = """
+Blood History visions can be overwhelming. Azrai bloodlines often show \
+disturbing images of corruption and cruelty. Learning your own blood history \
+may reveal uncomfortable truths about ancestors or how the bloodline was acquired."""
+
+# ============================================================================
+# BLOODMARK
+# ============================================================================
+
+[[blood_abilities]]
+name = "Bloodmark"
+derivation = ["any"]
+min_strength = "tainted"
+category = "Identification"
+
+description = """
+The scion bears a visible mark of their divine heritage - a birthmark, unusual \
+coloring, or physical feature that marks them as blooded. While this can be \
+concealed, it cannot be removed. The mark often reflects the derivation: \
+golden patterns for Anduiras, wave-like marks for Masela, shadow-dark patches for Azrai."""
+
+[blood_abilities.effect_by_strength]
+tainted = "Small, easily concealed mark"
+minor = "Visible mark, clearly divine in nature"
+major = "Prominent mark that commands attention"
+great = "Mark glows or moves slightly"
+true = "Mark is unmistakably divine, may have minor effects"
+
+effect_5e = """
+Your bloodmark identifies you as blooded to those who know what to look for. \
+Other blooded individuals can recognize you on sight (no check required).
+
+Major+: Your bloodmark grants advantage on Charisma (Persuasion) checks with \
+those who respect bloodline authority and advantage on Charisma (Intimidation) \
+checks against those who fear the blooded.
+
+True: Your mark glows faintly when you use blood abilities, and you have \
+advantage on saving throws against effects that would disguise or conceal your \
+bloodline nature."""
+
+roleplay_notes = """
+Bloodmarks are double-edged. They command respect but also make the scion a \
+target. Azrai bloodmarks are often disturbing - shadows that move wrong, red \
+patterns like bloody handprints, or features that hint at monstrous transformation."""
+
+# ============================================================================
+# CHARACTER READING
+# ============================================================================
+
+[[blood_abilities]]
+name = "Character Reading"
+derivation = ["brenna"]
+min_strength = "minor"
+category = "Divination"
+derivation_exclusive = true
+
+description = """
+Brenna's blood grants insight into the hearts of others. The scion can perceive \
+motivations, desires, and intentions - invaluable for merchants, diplomats, and \
+spies. A glance tells them what someone wants; a conversation reveals what they'll \
+do to get it."""
+
+[blood_abilities.effect_by_strength]
+minor = "Sense general emotional state and primary motivation"
+major = "Perceive specific desires and intentions"
+great = "Read surface thoughts related to desires"
+true = "Know exactly what someone wants and their price"
+
+effect_5e = """
+You have advantage on Wisdom (Insight) checks to determine a creature's \
+motivations or emotional state.
+
+Major+: After conversing with a creature for at least 1 minute, you learn \
+one thing they desire and one thing they fear. The creature does not know \
+you have learned this.
+
+Great+: You can cast Detect Thoughts at will, but you can only perceive \
+thoughts related to the creature's desires, fears, and intentions."""
+
+roleplay_notes = """
+Character Reading makes social interaction a different game entirely. The \
+scion always knows the subtext. This can breed cynicism - everyone wants \
+something - or wisdom about the universal nature of desire."""
+
+# ============================================================================
+# COURAGE
+# ============================================================================
+
+[[blood_abilities]]
+name = "Courage"
+derivation = ["anduiras", "basaia"]
+min_strength = "tainted"
+category = "Defensive"
+
+description = """
+The scion's divine blood burns away fear. They stand firm when others flee, \
+face horrors with steady nerves, and inspire others with their unshakeable \
+resolve. This is not recklessness but true courage - the ability to act despite \
+understanding the danger."""
+
+[blood_abilities.effect_by_strength]
+tainted = "Advantage against mundane fear"
+minor = "Immunity to fear effects"
+major = "Project courage to nearby allies"
+great = "Fear effects reversed - become empowering"
+true = "Presence alone can break enemy morale"
+
+effect_5e = """
+You have advantage on saving throws against being frightened.
+
+Minor+: You are immune to the frightened condition.
+
+Major+: Allies within 10 feet of you have advantage on saving throws against \
+being frightened. If they are already frightened, they can use their reaction \
+to immediately repeat the saving throw when they start their turn within range.
+
+Great+: When a creature attempts to frighten you and fails, you can use your \
+reaction to frighten them instead (Wisdom save, DC = 8 + proficiency + Charisma modifier)."""
+
+roleplay_notes = """
+Courage doesn't mean foolishness. The scion understands danger perfectly well \
+- they simply don't let it control them. Others often mistake this for \
+confidence or even arrogance."""
+
+# ============================================================================
+# DEATH TOUCH
+# ============================================================================
+
+[[blood_abilities]]
+name = "Death Touch"
+derivation = ["azrai"]
+min_strength = "major"
+category = "Offensive"
+derivation_exclusive = true
+
+description = """
+The ultimate expression of Azrai's destructive nature. The scion's touch can \
+extinguish life itself, withering flesh and stopping hearts. This terrible \
+power is one of the reasons Azrai scions are so feared - and so tempted by \
+their dark heritage."""
+
+[blood_abilities.effect_by_strength]
+major = "Touch deals significant necrotic damage"
+great = "Touch can kill outright (weaker creatures)"
+true = "Death Touch can affect even powerful creatures"
+
+effect_5e = """
+As an action, you can make a melee spell attack against a creature (using \
+Charisma as your spellcasting ability). On a hit, the creature takes 6d10 \
+necrotic damage. You can use this ability a number of times equal to your \
+proficiency bonus, regaining all uses after a long rest.
+
+Great+: If this damage reduces a creature to 0 hit points, you can choose to \
+have them die instantly without death saving throws. When you use this ability, \
+make a DC 15 Wisdom saving throw. On a failure, you gain one level of corruption.
+
+True: The damage increases to 8d10, and creatures reduced to 0 hit points die \
+instantly. The corruption save DC increases to 18."""
+
+corruption_risk = """
+Death Touch is one of the most corrupting abilities. Each use that kills a \
+sentient creature risks pushing the scion further toward awnshegh transformation. \
+Many Azrai scions who rely on this power eventually lose their humanity entirely."""
+
+roleplay_notes = """
+Even possessing this ability marks one as dangerous. The temptation to use it \
+- to solve problems permanently with a touch - is constant. Resisting requires \
+iron will and strong moral anchors."""
+
+# ============================================================================
+# DETECT ILLUSION
+# ============================================================================
+
+[[blood_abilities]]
+name = "Detect Illusion"
+derivation = ["basaia", "vorynn"]
+min_strength = "minor"
+category = "Divination"
+
+description = """
+The scion's divine sight pierces deception. Illusions, glamours, and magical \
+disguises reveal their true nature to the scion's blessed eyes. Basaia scions \
+see truth in light; Vorynn scions perceive the gaps between reality and falsehood."""
+
+[blood_abilities.effect_by_strength]
+minor = "Sense presence of illusions within 30 feet"
+major = "See through illusions automatically"
+great = "Perceive the true form behind any magical disguise"
+true = "Immunity to illusion effects, see through all deceptions"
+
+effect_5e = """
+You have advantage on saving throws against illusion spells and effects. You \
+can use an action to study a creature or object within 30 feet; you immediately \
+know if it is under an illusion effect.
+
+Major+: You automatically succeed on saving throws against illusion spells of \
+5th level or lower. You can see through illusory terrain and objects.
+
+Great+: You gain Truesight out to 30 feet regarding illusions and magical disguises only."""
+
+roleplay_notes = """
+Illusion detection can be socially awkward. The scion sees through the polite \
+fictions that lubricate society. They know when someone's smile is false, when \
+the "wealthy merchant" is actually poor, when the throne room's grandeur is enhanced."""
+
+# ============================================================================
+# DETECT LIE
+# ============================================================================
+
+[[blood_abilities]]
+name = "Detect Lie"
+derivation = ["basaia", "brenna", "anduiras"]
+min_strength = "minor"
+category = "Divination"
+
+description = """
+Truth cannot hide from this scion's awareness. They perceive lies as clearly \
+as spoken words - a discordant note in the music of speech, a shadow behind \
+the eyes, or a cold certainty in their gut. Basaia scions see truth illuminated; \
+Brenna scions read the tells; Anduiras scions sense dishonor."""
+
+[blood_abilities.effect_by_strength]
+minor = "Sense deliberate lies (not omissions or misdirection)"
+major = "Detect lies, half-truths, and deliberate misdirection"
+great = "Know exactly what part of a statement is false"
+true = "Perceive the truth behind the lie"
+
+effect_5e = """
+You know when a creature within 30 feet speaks a deliberate lie. This doesn't \
+reveal the truth, only that the statement was false. Creatures aware of your \
+ability can choose careful wording to avoid lying directly.
+
+Major+: You also detect half-truths and deliberate misdirection. When a \
+creature lies to you, you can use your reaction to demand they speak truth \
+(Charisma save DC = 8 + proficiency + Charisma modifier). On failure, they \
+must speak truthfully for 1 minute.
+
+Great+: When you detect a lie, you get a general sense of what truth the \
+creature is concealing."""
+
+roleplay_notes = """
+Lie detection is a heavy gift. The scion learns how often people lie - to \
+others, to themselves, about small things and large. This can breed cynicism \
+or compassion, depending on how the scion processes this constant awareness of deception."""
+
+# ============================================================================
+# DIRECTION SENSE
+# ============================================================================
+
+[[blood_abilities]]
+name = "Direction Sense"
+derivation = ["reynir", "masela", "brenna"]
+min_strength = "tainted"
+category = "Utility"
+
+description = """
+The scion always knows where they are and how to get where they're going. \
+Reynir scions feel the lay of the land; Masela scions sense currents and stars; \
+Brenna scions know the fastest route to their destination. They cannot be lost \
+by natural means."""
+
+[blood_abilities.effect_by_strength]
+tainted = "Always know cardinal directions"
+minor = "Cannot become lost, always know general location"
+major = "Sense the shortest path to a known destination"
+great = "Perceive the location of specific people or objects"
+true = "Navigate between planes and through magical misdirection"
+
+effect_5e = """
+You always know which way is north. You have advantage on Wisdom (Survival) \
+checks to navigate or avoid becoming lost.
+
+Minor+: You cannot become lost by nonmagical means. You always know the general \
+direction to any location you have visited before.
+
+Major+: Once per long rest, you can meditate for 10 minutes to learn the \
+direction and approximate distance to a specific creature or object you can \
+clearly visualize, provided it is on the same plane."""
+
+roleplay_notes = """
+Direction sense is more than navigation. The scion feels connected to the \
+world in a fundamental way. They sense the rightness of paths, the pull of \
+destiny, the way the world wants them to go."""
+
+# ============================================================================
+# DIVINE AURA
+# ============================================================================
+
+[[blood_abilities]]
+name = "Divine Aura"
+derivation = ["anduiras", "basaia", "azrai"]
+min_strength = "major"
+category = "Social"
+
+description = """
+The scion's divine heritage manifests as an almost visible radiance. Others \
+feel the weight of divinity in their presence - awe for Anduiras, illumination \
+for Basaia, dread for Azrai. This is the presence of kings and prophets, the \
+unmistakable mark of one touched by the gods."""
+
+[blood_abilities.effect_by_strength]
+major = "Strong presence affecting reactions"
+great = "Overwhelming presence, commands attention"
+true = "Divine radiance visible to all, godlike presence"
+
+effect_5e = """
+You have advantage on all Charisma checks involving authority, leadership, or \
+presence. Creatures meeting you for the first time must succeed on a Wisdom \
+save (DC = 8 + proficiency + Charisma modifier) or be charmed by you for 1 \
+minute (Anduiras/Basaia) or frightened of you (Azrai).
+
+Great+: You can activate your aura as a bonus action. For 1 minute, creatures \
+of your choice within 30 feet have disadvantage on attack rolls against you \
+and your allies unless they succeed on the Wisdom save. You can use this \
+ability once per short rest.
+
+True: Your presence is so overwhelming that creatures below CR 2 will not \
+attack you unless attacked first or magically compelled."""
+
+roleplay_notes = """
+Divine Aura changes every social interaction. The scion commands attention \
+merely by existing. This can be useful but also exhausting - there is no blending \
+in, no anonymity. Privacy becomes precious."""
+
+# ============================================================================
+# DIVINE WRATH
+# ============================================================================
+
+[[blood_abilities]]
+name = "Divine Wrath"
+derivation = ["anduiras"]
+min_strength = "great"
+category = "Offensive"
+derivation_exclusive = true
+
+description = """
+The scion can channel the righteous fury of Anduiras himself. Divine energy \
+blazes through their weapon, striking with the force of heaven's judgment. \
+This is the power of the god of war made manifest in mortal hands - terrible \
+and beautiful."""
+
+[blood_abilities.effect_by_strength]
+great = "Weapon strikes with divine force, extra radiant damage"
+true = "Devastating divine strike, can smite multiple foes"
+
+effect_5e = """
+Once per short rest, when you hit a creature with a weapon attack, you can \
+call upon Divine Wrath. The attack deals an additional 4d8 radiant damage. \
+If the target is of evil alignment or an enemy of your cause, the additional \
+damage increases to 6d8.
+
+True: Divine Wrath deals 6d8 radiant damage (8d8 against evil). Additionally, \
+you can make the radiant damage explode outward; all creatures of your choice \
+within 10 feet of the target must make a Dexterity save (DC = 8 + proficiency \
++ Charisma modifier) or take half the additional damage."""
+
+roleplay_notes = """
+Divine Wrath is not casual power. It comes with absolute certainty of righteous \
+cause. The scion who calls upon it must believe utterly in the justice of their \
+strike. Those who abuse it may find the power no longer answers."""
+
+# ============================================================================
+# ELEMENTAL CONTROL
+# ============================================================================
+
+[[blood_abilities]]
+name = "Elemental Control"
+derivation = ["masela", "reynir", "azrai"]
+min_strength = "minor"
+category = "Offensive/Utility"
+
+description = """
+The scion can command elemental forces - the element depends on their derivation. \
+Masela scions control water and weather; Reynir scions command earth and growing \
+things; Azrai scions twist fire and shadow. This control begins subtle but can \
+grow to reshape the landscape."""
+
+[blood_abilities.effect_by_strength]
+minor = "Minor manipulation (ripples, breezes, sparks)"
+major = "Significant control (waves, winds, flames)"
+great = "Powerful manipulation (storms, earthquakes, infernos)"
+true = "Legendary control rivaling archmages"
+
+[blood_abilities.elements]
+masela = "Water, weather, storms, cold"
+reynir = "Earth, plants, weather, animals"
+azrai = "Fire, shadow, decay, corruption"
+
+effect_5e = """
+You learn two cantrips appropriate to your element:
+- Masela: Shape Water, Ray of Frost
+- Reynir: Druidcraft, Mold Earth
+- Azrai: Control Flames, Chill Touch
+
+You can cast these at will.
+
+Major+: Once per short rest, you can cast a 3rd-level elemental spell without \
+expending a spell slot:
+- Masela: Tidal Wave, Call Lightning, Sleet Storm
+- Reynir: Erupting Earth, Plant Growth, Wind Wall
+- Azrai: Fireball, Darkness (at will), Vampiric Touch
+
+Great+: The spell level increases to 5th (Maelstrom, Control Winds, Wall of Stone, \
+Transmute Rock, Flame Strike, Cloudkill, etc.), and you regain the use after a short rest."""
+
+roleplay_notes = """
+Elemental control connects the scion to the natural world in a primal way. \
+They may find themselves responding to weather emotionally, feeling earthquakes \
+as personal affronts, or sensing distant storms as pressure in their blood."""
+
+# ============================================================================
+# ENHANCED SENSE
+# ============================================================================
+
+[[blood_abilities]]
+name = "Enhanced Sense"
+derivation = ["any"]
+min_strength = "minor"
+category = "Utility"
+
+description = """
+One of the scion's senses is supernaturally acute. This might be vision that \
+pierces darkness, hearing that catches whispers across a crowded hall, or \
+smell that tracks like a hound. The sense typically reflects the derivation."""
+
+[blood_abilities.effect_by_strength]
+minor = "One sense enhanced to exceptional human levels"
+major = "Sense enhanced beyond human capability"
+great = "Sense grants special perception"
+true = "Legendary sensory ability"
+
+[blood_abilities.typical_senses]
+anduiras = "Sight (spot threats, read battle)"
+basaia = "Sight (see magic, pierce illusion)"
+reynir = "Smell and hearing (track, sense nature)"
+brenna = "All senses (notice opportunity, read rooms)"
+masela = "Hearing (through water), pressure sense"
+vorynn = "Sight (see in darkness), sense hidden"
+azrai = "Smell (blood, fear), hearing (whispers)"
+
+effect_5e = """
+Choose one sense when you gain this ability:
+- Sight: You can see in dim light as if bright, darkness as if dim. Range 60 feet.
+- Hearing: Advantage on Perception checks using hearing. Can hear through 1 foot of stone.
+- Smell: Advantage on Survival checks to track. Can identify creatures by scent.
+- Touch: Advantage on Investigation checks. Can sense vibrations through solid surfaces.
+
+Major+: Your enhanced sense improves dramatically:
+- Sight: Darkvision 120 feet, can see invisible creatures as faint outlines
+- Hearing: Blindsight 30 feet based on sound
+- Smell: Can track creatures up to 1 week old, identify emotions by scent
+- Touch: Tremorsense 30 feet
+
+Great+: Your sense becomes supernatural - see through solid objects, hear \
+thoughts as whispers, smell lies, feel the future through vibrations."""
+
+roleplay_notes = """
+Enhanced senses can be overwhelming. The scion perceives more than others, \
+which can be distracting or even painful in certain environments. They may \
+need to learn to filter out unwanted input."""
+
+# ============================================================================
+# FEAR
+# ============================================================================
+
+[[blood_abilities]]
+name = "Fear"
+derivation = ["azrai"]
+min_strength = "minor"
+category = "Offensive"
+derivation_exclusive = true
+
+description = """
+The scion projects the terror of the Shadow Lord. Their presence can freeze \
+hearts and break will - enemies flee, courage crumbles, and even the brave \
+falter. This is supernatural dread, the primal fear of darkness that lurks \
+in every mortal heart."""
+
+[blood_abilities.effect_by_strength]
+minor = "Frighten a single creature"
+major = "Project fear in an area"
+great = "Overwhelming terror, can cause flight or paralysis"
+true = "Legendary fear aura, can kill with terror"
+
+effect_5e = """
+As an action, you can target a creature within 30 feet that can see you. It \
+must succeed on a Wisdom save (DC = 8 + proficiency + Charisma modifier) or be \
+frightened of you for 1 minute. It can repeat the save at the end of each turn.
+
+Major+: You can target all creatures of your choice within 30 feet. Creatures \
+that fail by 5 or more are paralyzed with fear until the end of their next turn.
+
+Great+: Creatures that fail the save by 10 or more fall unconscious from terror \
+for 1 minute. They awake if they take damage.
+
+True: On your turn, without using an action, you can maintain an aura of fear. \
+Any creature that starts its turn within 30 feet must save or be frightened."""
+
+corruption_risk = """
+Using Fear to torment or for cruelty accelerates corruption. The ability itself \
+is not corrupting, but the temptation to abuse it is constant."""
+
+roleplay_notes = """
+Fear is the easiest path and the most dangerous. It solves problems quickly \
+but breeds enemies and accelerates the scion's descent. Those who rely on it \
+often find themselves alone, surrounded by cowering servants who hate them."""
+
+# ============================================================================
+# FOREST WALK
+# ============================================================================
+
+[[blood_abilities]]
+name = "Forest Walk"
+derivation = ["reynir"]
+min_strength = "minor"
+category = "Utility"
+derivation_exclusive = true
+
+description = """
+The forests welcome the scion of Reynir as one of their own. Undergrowth parts, \
+branches bend aside, and the woodland floor becomes as easy as a paved road. \
+The scion moves through wilderness with supernatural ease, leaving no trail \
+and taking no hindrance."""
+
+[blood_abilities.effect_by_strength]
+minor = "Move through natural difficult terrain without penalty"
+major = "Leave no trail, cannot be tracked through nature"
+great = "Forest provides shelter, sustenance, and protection"
+true = "Can travel instantly between trees (limited teleportation)"
+
+effect_5e = """
+You can move through nonmagical difficult terrain made of plants, undergrowth, \
+or natural terrain at normal speed without taking damage from thorns, brambles, \
+or similar hazards.
+
+Major+: You leave no trail in natural terrain and cannot be tracked except by \
+magical means. You have advantage on Stealth checks in forests or other natural areas.
+
+Great+: While in a forest, you can find shelter and food without checks. Once \
+per long rest, you can merge with a tree (as Tree Stride) for up to 8 hours.
+
+True: Once per long rest, you can step into a tree and emerge from another \
+tree of the same kind within 500 feet, or travel up to 5 miles if within \
+contiguous forest."""
+
+roleplay_notes = """
+Forest Walk creates a deep bond with woodland spaces. The scion feels the \
+forest's mood, knows when it is healthy or sick, and may become uncomfortable \
+in places where nature has been completely removed."""
+
+# ============================================================================
+# HEALING
+# ============================================================================
+
+[[blood_abilities]]
+name = "Healing"
+derivation = ["reynir", "basaia", "anduiras", "masela"]
+min_strength = "minor"
+category = "Restoration"
+
+description = """
+The scion can channel their divine blood to mend injuries. This is not magical \
+healing in the arcane sense but rather the life-force of the gods themselves \
+flowing through the scion to restore what was broken. Each derivation expresses \
+this differently."""
+
+[blood_abilities.effect_by_strength]
+minor = "Heal minor wounds (equivalent to a healing potion)"
+major = "Heal significant injuries, cure disease"
+great = "Regenerate lost limbs (over time), cure curses"
+true = "Miraculous healing, can restore even the dying"
+
+[blood_abilities.derivation_flavor]
+reynir = "Life energy of nature, wounds close like healing bark"
+basaia = "Golden light of the sun, warmth that mends"
+anduiras = "Restoration through will and authority"
+masela = "Cleansing waters, washing away injury"
+
+effect_5e = """
+You can use an action to touch a creature and restore hit points equal to 2d8 \
++ your Wisdom modifier. You can use this ability a number of times equal to \
+your proficiency bonus per long rest.
+
+Major+: You can also cure one disease or neutralize one poison affecting the \
+creature. The healing increases to 4d8 + Wisdom modifier.
+
+Great+: You can cast Lesser Restoration at will and Greater Restoration once \
+per long rest without material components. Healing increases to 6d8 + Wisdom.
+
+True: Once per long rest, you can use your action to restore a creature to \
+full hit points and remove all conditions affecting it (as Power Word Heal)."""
+
+roleplay_notes = """
+Healing creates obligation. Others seek out the scion for aid, and refusing \
+carries moral weight. The scion must decide who to help - healing ability is \
+limited, but need is not."""
+
+# ============================================================================
+# HEIGHTENED ABILITY
+# ============================================================================
+
+[[blood_abilities]]
+name = "Heightened Ability"
+derivation = ["any"]
+min_strength = "tainted"
+category = "Enhancement"
+
+description = """
+The scion's divine blood enhances one ability score beyond mortal limits. This \
+is the most common blood ability, often manifesting early and reflecting the \
+nature of the derivation. Anduiras grants strength or charisma; Basaia grants \
+intelligence; Reynir grants wisdom; and so forth."""
+
+[blood_abilities.effect_by_strength]
+tainted = "+1 to one ability score (can exceed 20)"
+minor = "+2 to one ability score"
+major = "+3 to one ability score, or +1 to two"
+great = "+4 to one ability score, or +2 to two"
+true = "+5 to one ability score, or various combinations"
+
+[blood_abilities.typical_abilities]
+anduiras = "Strength or Charisma"
+basaia = "Intelligence or Wisdom"
+reynir = "Wisdom or Constitution"
+brenna = "Charisma or Dexterity"
+masela = "Constitution or Charisma"
+vorynn = "Intelligence or Dexterity"
+azrai = "Any (often Charisma or Constitution)"
+
+effect_5e = """
+Choose one ability score when you gain this ability. That score increases by \
+an amount based on your bloodline strength. This increase can raise the ability \
+above 20.
+
+Tainted: +1
+Minor: +2
+Major: +3 (or +1 to two abilities)
+Great: +4 (or +2 to two abilities)
+True: +5 (or other combinations totaling 5)
+
+Note: Your ability score maximum for the affected ability increases to 22 (minor), \
+24 (major), 26 (great), or 30 (true)."""
+
+roleplay_notes = """
+Heightened Ability is subtle but pervasive. The scion simply is better at \
+something than should be possible. This colors every interaction and challenge \
+involving that ability."""
+
+# ============================================================================
+# HOME HEARKENING
+# ============================================================================
+
+[[blood_abilities]]
+name = "Home Hearkening"
+derivation = ["any"]
+min_strength = "minor"
+category = "Domain"
+
+description = """
+The scion is mystically connected to their domain. They sense its health, feel \
+when it is threatened, and know instinctively what their people need. Distance \
+means nothing - a regent can feel their kingdom's pain from across the continent."""
+
+[blood_abilities.effect_by_strength]
+minor = "Sense general condition of domain"
+major = "Perceive specific threats and significant events"
+great = "Detailed awareness of domain conditions"
+true = "Perfect awareness, can observe any part of domain"
+
+effect_5e = """
+While you are a regent of a domain, you can spend 10 minutes in meditation to \
+learn the general state of your domain (peaceful, threatened, prosperous, \
+suffering, etc.).
+
+Major+: You sense immediately when your domain is attacked or suffers significant \
+harm. You can perceive specific events affecting your domain's holdings during meditation.
+
+Great+: You can observe any location within your domain as if using Scrying, \
+once per long rest.
+
+True: You can use Home Hearkening at will. You are immediately aware of any \
+significant event in your domain and can observe it in real-time."""
+
+roleplay_notes = """
+Home Hearkening creates deep responsibility. The scion feels their people's \
+suffering. Neglecting the domain causes physical discomfort. This drives many \
+regents to become deeply involved in governance."""
+
+# ============================================================================
+# INVULNERABILITY
+# ============================================================================
+
+[[blood_abilities]]
+name = "Invulnerability"
+derivation = ["anduiras", "azrai"]
+min_strength = "great"
+category = "Defensive"
+
+description = """
+The scion's flesh is supernaturally tough, resistant to harm that would kill \
+ordinary mortals. Blades turn aside, arrows deflect, and even magic struggles \
+to affect them. This is divine protection made manifest - the gods' favor \
+warding their chosen."""
+
+[blood_abilities.effect_by_strength]
+great = "Resistance to one damage type"
+true = "Resistance to multiple types or immunity to one"
+
+[blood_abilities.typical_resistances]
+anduiras = "Slashing, piercing (weapons of war)"
+azrai = "Necrotic, poison, or psychic"
+
+effect_5e = """
+Choose one damage type when you gain this ability: bludgeoning, piercing, \
+slashing, fire, cold, lightning, acid, poison, necrotic, radiant, or psychic. \
+You have resistance to that damage type.
+
+True: Choose three damage types for resistance, OR choose one type for immunity. \
+Additionally, nonmagical weapons have disadvantage on attack rolls against you."""
+
+roleplay_notes = """
+Invulnerability can breed arrogance. The scion who cannot be harmed may take \
+risks others cannot, but may also forget the value of caution - and there are \
+always ways around even divine protection."""
+
+# ============================================================================
+# IRON WILL
+# ============================================================================
+
+[[blood_abilities]]
+name = "Iron Will"
+derivation = ["anduiras", "basaia", "azrai"]
+min_strength = "minor"
+category = "Defensive"
+
+description = """
+The scion's mind is a fortress. Mental attacks, compulsions, and attempts to \
+break their will shatter against their divine determination. This is the \
+stubbornness of the gods themselves - the certainty that cannot be shaken."""
+
+[blood_abilities.effect_by_strength]
+minor = "Advantage against mind-affecting effects"
+major = "Resistance to psychic damage, strong mental defense"
+great = "Immunity to charm and compulsion"
+true = "Complete mental fortress, can project protection"
+
+effect_5e = """
+You have advantage on saving throws against being charmed or having your mind \
+read. You have resistance to psychic damage.
+
+Major+: You are immune to the charmed condition. You automatically succeed on \
+saving throws against spells that would detect your thoughts or determine if \
+you are lying.
+
+Great+: You are also immune to the frightened condition (if not already) and \
+cannot be compelled to act against your nature by any magical means.
+
+True: Once per long rest, you can extend your Iron Will to allies within 30 \
+feet for 1 minute, granting them your mental protections."""
+
+roleplay_notes = """
+Iron Will is double-edged. The scion cannot be swayed - but also struggles to \
+change. Stubbornness becomes a defining trait. They may resist good influences \
+as readily as bad ones."""
+
+# ============================================================================
+# LIGHT OF REASON
+# ============================================================================
+
+[[blood_abilities]]
+name = "Light of Reason"
+derivation = ["basaia"]
+min_strength = "minor"
+category = "Utility"
+derivation_exclusive = true
+
+description = """
+Basaia's scions carry her illumination. They can call forth divine light that \
+reveals truth and banishes shadow. This is not mere physical light but the \
+radiance of reason itself - darkness and deception cannot stand before it."""
+
+[blood_abilities.effect_by_strength]
+minor = "Create light equivalent to a torch"
+major = "Bright light that reveals invisible and hidden"
+great = "Light that harms undead and shadow creatures"
+true = "Sunlight equivalent, devastating to creatures of darkness"
+
+effect_5e = """
+You can cast Light at will without material components. The light is clearly \
+divine in nature - golden and warm.
+
+Major+: As an action, you can create bright light in a 30-foot radius and dim \
+light for an additional 30 feet. Invisible creatures and objects within the \
+bright light become visible. This lasts for 1 minute and you can use it once \
+per short rest.
+
+Great+: The light functions as Sunlight for the purpose of creature vulnerabilities. \
+Undead and shadow creatures in the bright light take 2d6 radiant damage at the \
+start of each of their turns.
+
+True: You can create a permanent Light of Reason effect on an object or location \
+once per long rest. You are immune to magical darkness."""
+
+roleplay_notes = """
+Light of Reason is both gift and burden. The scion sees clearly - too clearly, \
+sometimes. The light reveals not just physical darkness but moral shadows as \
+well. They may find it difficult to ignore wrongdoing they can so clearly see."""
+
+# ============================================================================
+# LONG LIFE
+# ============================================================================
+
+[[blood_abilities]]
+name = "Long Life"
+derivation = ["any"]
+min_strength = "minor"
+category = "Enhancement"
+
+description = """
+The divine blood sustains the scion beyond mortal years. They age slowly, \
+remain vital longer, and may live centuries if not killed. This extended \
+lifespan grants perspective but also brings the sorrow of outliving loved ones."""
+
+[blood_abilities.effect_by_strength]
+minor = "Age at half normal rate, maximum age doubled"
+major = "Age at quarter rate, lifespan quadrupled"
+great = "Negligible aging, can live centuries"
+true = "Effective immortality (ageless, not unkillable)"
+
+effect_5e = """
+You age at half the normal rate and have advantage on saving throws against \
+effects that would age you magically. Your maximum lifespan is doubled.
+
+Major+: You age at one quarter the normal rate and are immune to magical aging. \
+Your maximum lifespan is quadrupled.
+
+Great+: You no longer age. You can live indefinitely unless killed by violence, \
+disease, or accident.
+
+True: You are immune to disease and poison in addition to aging. Only violence \
+or powerful magic can end your existence."""
+
+roleplay_notes = """
+Long Life changes perspective fundamentally. The scion thinks in decades and \
+centuries. Mortal concerns seem fleeting. But watching generations of loved \
+ones age and die while you remain unchanged is a unique sorrow."""
+
+# ============================================================================
+# MEBHAIGHL SENSE
+# ============================================================================
+
+[[blood_abilities]]
+name = "Mebhaighl Sense"
+derivation = ["basaia", "vorynn", "reynir"]
+min_strength = "minor"
+category = "Divination"
+
+description = """
+The scion perceives mebhaighl - the magical energy that flows through Cerilia's \
+land. They sense ley lines, magical auras, and the presence of powerful magic. \
+This is essential for source regents and any who deal with realm magic."""
+
+[blood_abilities.effect_by_strength]
+minor = "Detect magic within 30 feet"
+major = "Sense ley lines and source potential"
+great = "Perceive realm magic being worked"
+true = "Total magical awareness within domain"
+
+effect_5e = """
+You can cast Detect Magic at will without material components.
+
+Major+: You can sense the presence and approximate strength of ley lines and \
+magical sources within 1 mile. You know immediately when realm magic is being \
+cast that affects territory you can see.
+
+Great+: You can trace ley lines visually and sense realm magic being cast \
+anywhere in a domain you occupy. You have advantage on saving throws against \
+realm magic.
+
+True: You perceive all magical effects within your domain instantly. You can \
+sense when any spell of 6th level or higher is cast within your domain."""
+
+roleplay_notes = """
+Mebhaighl Sense reveals the invisible magical infrastructure of Cerilia. The \
+scion sees power others cannot perceive. This can be overwhelming in magically \
+active areas or invaluable in understanding the true nature of the land."""
+
+# ============================================================================
+# PERSUASION
+# ============================================================================
+
+[[blood_abilities]]
+name = "Persuasion"
+derivation = ["brenna", "anduiras", "basaia"]
+min_strength = "minor"
+category = "Social"
+
+description = """
+The scion's words carry divine weight. Others find themselves inclined to agree, \
+to comply, to see things the scion's way. This is not magical compulsion but \
+rather supernatural charisma - the gift of the gods to make their chosen ones \
+compelling."""
+
+[blood_abilities.effect_by_strength]
+minor = "Advantage on persuasion attempts"
+major = "Can sway groups, influence leaders"
+great = "Words can change minds, inspire movements"
+true = "Legendary persuader, can convince almost anyone"
+
+effect_5e = """
+You have advantage on Charisma (Persuasion) checks.
+
+Major+: Once per short rest, you can cast Suggestion without expending a spell \
+slot. The target has disadvantage on the saving throw.
+
+Great+: You can cast Mass Suggestion once per long rest without expending a \
+spell slot. Your Suggestion is now at will.
+
+True: Creatures have disadvantage on all saving throws against your enchantment \
+spells and persuasion-based abilities. Once per long rest, you can make a \
+single persuasion appeal that affects all creatures within 60 feet who can \
+hear and understand you (mass Suggestion with no save for creatures CR 2 or lower)."""
+
+roleplay_notes = """
+Persuasion raises ethical questions. The scion's influence is so strong that \
+consent becomes murky. Are people agreeing because they're convinced, or because \
+they're influenced? The responsible scion must consider this constantly."""
+
+# ============================================================================
+# POISON SENSE
+# ============================================================================
+
+[[blood_abilities]]
+name = "Poison Sense"
+derivation = ["azrai", "reynir", "brenna"]
+min_strength = "minor"
+category = "Defensive"
+
+description = """
+The scion instinctively detects poison - in food, drink, air, or weapons. This \
+defensive ability has saved many regents from assassination. The sense may \
+manifest as smell, taste, visual perception, or gut instinct."""
+
+[blood_abilities.effect_by_strength]
+minor = "Detect poison within 5 feet"
+major = "Detect poison within 30 feet, identify type"
+great = "Immunity to poison, sense poisoners"
+true = "Perfect poison awareness, can neutralize poisons by touch"
+
+effect_5e = """
+You can detect the presence of poison within 5 feet. As an action, you can \
+determine if food or drink you can see is poisoned.
+
+Major+: You can detect poison within 30 feet and identify the type of poison. \
+You have advantage on saving throws against poison and resistance to poison damage.
+
+Great+: You are immune to poison damage and the poisoned condition. You know \
+instantly if someone within 30 feet intends to poison you.
+
+True: You can neutralize poison by touch (as the spell, at will). You can \
+sense if poison has been used in a location within the past 24 hours."""
+
+roleplay_notes = """
+Poison Sense reveals the darker side of politics. The scion discovers how often \
+assassination is attempted, how many "accidents" are actually murders. This \
+breeds paranoia in some, vigilance in others."""
+
+# ============================================================================
+# PROTECTION FROM EVIL
+# ============================================================================
+
+[[blood_abilities]]
+name = "Protection from Evil"
+derivation = ["anduiras", "basaia", "reynir"]
+min_strength = "minor"
+category = "Defensive"
+
+description = """
+The scion is warded against creatures of evil - particularly the spawn of Azrai, \
+fiends, and undead. Evil finds it difficult to touch them, and corrupted \
+creatures recoil from their divine presence."""
+
+[blood_abilities.effect_by_strength]
+minor = "Aberrations, fiends, and undead have disadvantage to hit you"
+major = "Cannot be possessed or charmed by evil creatures"
+great = "Evil creatures cannot approach within 10 feet"
+true = "Powerful aura that damages evil creatures in proximity"
+
+effect_5e = """
+Aberrations, fiends, and undead have disadvantage on attack rolls against you. \
+You have advantage on saving throws against their special abilities.
+
+Major+: You cannot be charmed, frightened, or possessed by aberrations, fiends, \
+or undead. You can cast Protection from Evil and Good on yourself at will.
+
+Great+: As an action, you can activate an aura. Aberrations, fiends, and undead \
+cannot willingly enter within 10 feet of you. If they start their turn there, \
+they must succeed on a Charisma save or be pushed 10 feet. Lasts 1 minute, \
+once per short rest.
+
+True: Evil creatures that start their turn within 10 feet of you take 2d6 radiant \
+damage. Awnsheghlien take 4d6 radiant damage."""
+
+roleplay_notes = """
+Protection from Evil marks the scion as a champion of light. Evil creatures \
+recognize them as threats. This provides defense but also makes the scion a \
+priority target for the forces of darkness."""
+
+# ============================================================================
+# REGENERATION
+# ============================================================================
+
+[[blood_abilities]]
+name = "Regeneration"
+derivation = ["azrai", "reynir"]
+min_strength = "major"
+category = "Enhancement"
+
+description = """
+The scion's body repairs itself with supernatural speed. Wounds close, broken \
+bones mend, and even severed limbs can regrow over time. Reynir's regeneration \
+is natural and clean; Azrai's is often disturbing, the flesh knitting together \
+wrongly before correcting itself."""
+
+[blood_abilities.effect_by_strength]
+major = "Regain hit points over time"
+great = "Rapid regeneration, regrow lost limbs"
+true = "Nearly unkillable, only certain things prevent regeneration"
+
+effect_5e = """
+At the start of each of your turns, you regain 1 hit point if you have at least \
+1 hit point. You stabilize automatically when reduced to 0 hit points.
+
+Great+: You regain 5 hit points at the start of each turn if you have at least \
+1 hit point. Lost limbs regrow after 24 hours. You can reattach severed limbs \
+by holding them to the stump for 1 minute.
+
+True: You regain 10 hit points at the start of each turn. Fire and acid damage \
+cannot be regenerated until you finish a long rest. If you die, you return to \
+life with 1 hit point after 24 hours unless your body is completely destroyed \
+or you are killed by fire or acid."""
+
+roleplay_notes = """
+Regeneration changes the scion's relationship with danger. They can take risks \
+others cannot. But it does not prevent pain, and watching your flesh knit back \
+together is never pleasant. Azrai regeneration may cause temporary monstrous \
+features as the body "forgets" its original form."""
+
+# ============================================================================
+# RESISTANCE
+# ============================================================================
+
+[[blood_abilities]]
+name = "Resistance"
+derivation = ["any"]
+min_strength = "minor"
+category = "Defensive"
+
+description = """
+The scion's divine blood grants protection against a specific type of harm. \
+The type typically reflects the derivation: Masela grants resistance to cold, \
+Azrai to necrotic, Basaia to radiant or fire. This protection is innate and \
+always active."""
+
+[blood_abilities.effect_by_strength]
+minor = "Resistance to one damage type"
+major = "Resistance to two types or advantage on related saves"
+great = "Immunity to one type or resistance to several"
+true = "Broad immunities and resistances"
+
+[blood_abilities.typical_resistances]
+anduiras = "Slashing, piercing, bludgeoning (nonmagical)"
+basaia = "Fire, radiant"
+reynir = "Poison, cold"
+brenna = "Psychic"
+masela = "Cold, lightning"
+vorynn = "Psychic, necrotic"
+azrai = "Necrotic, poison, fire"
+
+effect_5e = """
+Choose one damage type appropriate to your derivation. You have resistance to \
+that damage type.
+
+Major+: Choose a second damage type for resistance, OR gain advantage on saving \
+throws against effects that deal your resisted damage type.
+
+Great+: Choose immunity to one damage type (from your minor choice) and resistance \
+to two additional types.
+
+True: Immunity to two damage types and resistance to two additional types."""
+
+roleplay_notes = """
+Resistance is passive but ever-present. The scion may not even realize they \
+have it until exposed to the element in question. Surviving what should kill \
+draws attention."""
+
+# ============================================================================
+# SEA SONG
+# ============================================================================
+
+[[blood_abilities]]
+name = "Sea Song"
+derivation = ["masela"]
+min_strength = "minor"
+category = "Utility/Control"
+derivation_exclusive = true
+
+description = """
+Masela's children hear the song of the sea and can sing back to it. They can \
+call creatures of the deep, calm or rouse the waves, and navigate by the ocean's \
+music. Sailors with this gift are legendary - no storm can sink their ship, \
+no voyage defeat them."""
+
+[blood_abilities.effect_by_strength]
+minor = "Calm or agitate water in small area, communicate with sea creatures"
+major = "Call sea creatures, significant water manipulation"
+great = "Command storms at sea, speak to the ocean itself"
+true = "The sea itself serves the scion"
+
+effect_5e = """
+You can communicate simple concepts with aquatic creatures. You can cast \
+Shape Water at will. You have advantage on all checks related to sailing, \
+swimming, and naval navigation.
+
+Major+: Once per long rest, you can cast Conjure Animals to summon aquatic \
+creatures. You can cast Control Water once per long rest. While aboard a ship, \
+the ship has advantage on all checks to avoid hazards.
+
+Great+: Once per long rest, you can cast Control Weather but only over water. \
+You can breathe water indefinitely. Sea creatures will not attack you unless \
+magically compelled or attacked first.
+
+True: You can cast Control Water at will. Once per week, you can summon a \
+massive storm or calm one, affecting an area up to 10 miles in radius."""
+
+roleplay_notes = """
+Sea Song creates an intimate bond with the ocean. The scion feels the tides \
+in their blood, hears the calls of distant whales, and may become restless far \
+from salt water. The sea is home, and everywhere else is exile."""
+
+# ============================================================================
+# SHADOW FORM
+# ============================================================================
+
+[[blood_abilities]]
+name = "Shadow Form"
+derivation = ["vorynn", "azrai"]
+min_strength = "major"
+category = "Utility"
+derivation_exclusive = true
+
+description = """
+The scion can become one with shadows, transforming their body into living \
+darkness. In this form, they can slip through cracks, hide in the smallest \
+shadow, and become nearly impossible to detect or harm. Vorynn's form is \
+silvery and subtle; Azrai's is absolute darkness."""
+
+[blood_abilities.effect_by_strength]
+major = "Become shadow for short duration"
+great = "Extended shadow form, movement through shadows"
+true = "Mastery of shadow, teleportation through darkness"
+
+effect_5e = """
+As an action, you can transform into shadow for up to 1 minute. In this form: \
+you are resistant to all damage except radiant and force; you can move through \
+spaces as small as 1 inch; you have advantage on Stealth checks; you cannot \
+attack or cast spells. You can end the form as a bonus action. Once used, \
+you cannot use this ability again until you finish a short rest.
+
+Great+: The duration extends to 10 minutes. You can attack while in shadow \
+form (your attacks deal cold damage instead of their normal type). You can \
+move through solid objects that have shadows, emerging from any shadow within \
+60 feet.
+
+True: You can maintain shadow form indefinitely. As a bonus action while in \
+shadow form, you can teleport up to 60 feet to another shadow you can see."""
+
+roleplay_notes = """
+Shadow Form blurs the line between person and darkness. The scion may find \
+shadows comforting, feel exposed in bright light, and wonder sometimes where \
+they end and the darkness begins. For Azrai scions, extended use risks losing \
+oneself entirely."""
+
+# ============================================================================
+# TOUCH OF DECAY
+# ============================================================================
+
+[[blood_abilities]]
+name = "Touch of Decay"
+derivation = ["azrai"]
+min_strength = "minor"
+category = "Offensive"
+derivation_exclusive = true
+
+description = """
+The corruption of Azrai flows through the scion's touch, causing living things \
+to wither and objects to crumble. Plants die, food spoils, and flesh rots at \
+their contact. This is not death but decay - the slow victory of entropy."""
+
+[blood_abilities.effect_by_strength]
+minor = "Wither plants, spoil food, minor decay"
+major = "Cause living creatures pain and weakness"
+great = "Significant necrotic damage, age targets"
+true = "Devastating decay, can destroy objects and buildings"
+
+effect_5e = """
+Your touch causes organic matter to wither. Plants you touch die. Food you \
+touch spoils. You can use an action to touch a creature and deal 2d6 necrotic \
+damage (Constitution save for half, DC = 8 + proficiency + Constitution modifier).
+
+Major+: The necrotic damage increases to 4d6. Creatures that fail the save \
+also gain one level of exhaustion. Objects you touch for 1 minute take damage \
+as if affected by 50 years of decay.
+
+Great+: Damage increases to 6d6. Creatures that fail the save age 1d10 years \
+(this can cause death from old age for shorter-lived races). You can destroy \
+up to a 5-foot cube of wood, leather, or similar organic material with 1 minute \
+of concentration.
+
+True: Damage increases to 8d6. You can affect stone and metal as if organic. \
+Once per long rest, you can touch a structure and cause it to begin collapsing \
+over the next minute."""
+
+corruption_risk = """
+Touch of Decay is inherently corrupting. Each use - especially on living \
+creatures - pushes the scion further toward becoming an awnshegh. The power is \
+seductive because it is so effective, but this seduction is the path to damnation."""
+
+roleplay_notes = """
+Touch of Decay is a curse as much as a power. The scion must be careful what \
+they touch. Accidental use can destroy cherished possessions or harm loved ones. \
+Many Azrai scions learn to wear gloves and maintain physical distance from others."""
+
+# ============================================================================
+# TRAVEL
+# ============================================================================
+
+[[blood_abilities]]
+name = "Travel"
+derivation = ["brenna", "masela"]
+min_strength = "minor"
+category = "Utility"
+derivation_exclusive = true
+
+description = """
+Brenna's blessing makes the scion a natural traveler. Roads seem shorter, \
+weather more favorable, and obstacles that would delay others barely slow them. \
+The goddess of commerce blessed those who carry goods between peoples, and her \
+scions still bear that gift."""
+
+[blood_abilities.effect_by_strength]
+minor = "Travel 25% faster, favorable conditions"
+major = "Travel 50% faster, avoid delays"
+great = "Near-instant travel along roads, unaffected by terrain"
+true = "Teleportation along established routes"
+
+effect_5e = """
+Your overland travel speed increases by 25%. You have advantage on Constitution \
+checks to avoid exhaustion from forced marches. When traveling, you encounter \
+favorable conditions more often (weather, road quality, etc.).
+
+Major+: Your overland travel speed increases by 50%. You and your party cannot \
+become lost by nonmagical means. Random encounters during travel are less \
+frequent (roll twice, take the more favorable result).
+
+Great+: While traveling on roads or established routes, you can cover a full \
+day's travel in 4 hours. Difficult terrain does not slow your travel speed.
+
+True: Once per long rest, you can teleport to any location you have visited \
+before, provided there is an established route between your current location \
+and the destination. The teleportation takes 1 minute of concentration."""
+
+roleplay_notes = """
+Travel creates wanderlust. The scion is always aware of roads not taken, \
+destinations not visited, journeys waiting to begin. Sitting still becomes \
+uncomfortable. The road calls."""
+
+# ============================================================================
+# UNREADABLE THOUGHTS
+# ============================================================================
+
+[[blood_abilities]]
+name = "Unreadable Thoughts"
+derivation = ["vorynn", "brenna", "azrai"]
+min_strength = "minor"
+category = "Defensive"
+derivation_exclusive = true
+
+description = """
+The scion's mind is hidden from magical detection. Spells that would read \
+thoughts, detect lies magically, or peer into memory find only shadows or \
+misleading images. The secret-keeper's perfect defense."""
+
+[blood_abilities.effect_by_strength]
+minor = "Advantage against mind-reading"
+major = "Immunity to magical thought detection"
+great = "Can project false thoughts"
+true = "Mind is completely unassailable"
+
+effect_5e = """
+You have advantage on saving throws against spells and effects that would read \
+your thoughts, detect your lies, or probe your memories.
+
+Major+: You are immune to Detect Thoughts, Zone of Truth, and similar effects. \
+Attempts to magically read your mind automatically fail.
+
+Great+: When a creature attempts to read your thoughts and fails, you can \
+choose to project false thoughts of your choice. You have advantage on Deception \
+checks to conceal your true intentions.
+
+True: Your mind cannot be affected by any divination magic unless you allow it. \
+You can sense when someone attempts to read your mind and learn their identity."""
+
+roleplay_notes = """
+Unreadable Thoughts breeds mystery. Others cannot verify the scion's intentions \
+even magically, which can breed trust issues. But it also means the scion's \
+secrets are their own - a rare gift in a world of magic and intrigue."""
+
+# ============================================================================
+# ADDITIONAL/RARE BLOOD ABILITIES
+# ============================================================================
+
+[[blood_abilities]]
+name = "Animal Form"
+derivation = ["reynir"]
+min_strength = "great"
+category = "Transformation"
+
+description = """
+The scion can transform into an animal - typically one associated with their \
+bloodline or personal nature. This is true shapechange, not illusion, and \
+grants all the natural abilities of the assumed form."""
+
+effect_5e = """
+You can cast Polymorph on yourself only, without expending a spell slot, \
+transforming into a beast of CR equal to your proficiency bonus or lower. \
+This lasts for 1 hour and you can use it once per long rest.
+
+True: You can use this ability at will. You can transform into beasts of CR \
+equal to twice your proficiency bonus."""
+
+[[blood_abilities]]
+name = "Arcane Mastery"
+derivation = ["basaia", "vorynn"]
+min_strength = "great"
+category = "Magic"
+
+description = """
+The scion's connection to magic is so profound that they can manipulate the \
+arcane directly. Spells come easier, magical effects bend to their will, and \
+they can interfere with the magic of others."""
+
+effect_5e = """
+You have advantage on saving throws against spells. When you cast a spell that \
+requires a saving throw, the DC increases by 2.
+
+True: You can use Counterspell at will at 3rd level (uses Charisma as your \
+spellcasting ability). Once per long rest, you can cast any spell of 5th level \
+or lower that you have seen cast in the past 24 hours."""
+
+[[blood_abilities]]
+name = "Corruption"
+derivation = ["azrai"]
+min_strength = "great"
+category = "Offensive"
+
+description = """
+The scion can corrupt the blood of others, twisting their divine heritage toward \
+Azrai. This is one of the most feared abilities - it can turn a noble champion \
+into a creature of shadow over time."""
+
+effect_5e = """
+When you deal damage to a blooded creature with a blood ability or make \
+physical contact during a moment of high emotion, you can attempt to corrupt \
+their bloodline. The target makes a Wisdom save (DC = 8 + proficiency + your \
+bloodline score modifier). On failure, their derivation begins shifting toward \
+Azrai. After three failures (across any number of encounters), their derivation \
+permanently changes to Azrai.
+
+True: A single failure causes the derivation change. You can affect unblooded \
+creatures, potentially creating new Azrai-blooded scions."""
+
+corruption_risk = "Using this ability automatically causes a corruption check for the user."
+
+[[blood_abilities]]
+name = "Fortune's Favor"
+derivation = ["brenna"]
+min_strength = "great"
+category = "Utility"
+
+description = """
+Brenna's chosen are extraordinarily lucky. Coins land favorably, dice roll \
+true, and chance consistently breaks their way. This is not mere probability \
+but divine favor from the goddess of fortune."""
+
+effect_5e = """
+Once per short rest, when you or a creature within 30 feet makes an attack \
+roll, ability check, or saving throw, you can roll a d20 and choose to replace \
+their roll with yours (before the outcome is determined).
+
+True: You can use this ability twice per short rest. Additionally, you have \
+advantage on all ability checks related to games of chance, and you cannot \
+roll below a 10 on any ability check or saving throw (treat rolls of 9 or \
+lower as 10)."""
+
+[[blood_abilities]]
+name = "Storm Lord"
+derivation = ["masela"]
+min_strength = "great"
+category = "Offensive"
+
+description = """
+The scion commands storms with divine authority. They can summon tempests, \
+direct lightning, and calm or enrage the weather across vast distances."""
+
+effect_5e = """
+You can cast Call Lightning at will. Once per long rest, you can cast Control \
+Weather. You are immune to lightning and thunder damage.
+
+True: You can cast Storm of Vengeance once per long rest. Storms you create \
+can cover an area up to 1 mile in radius."""
+
+[[blood_abilities]]
+name = "True Seeing"
+derivation = ["basaia", "vorynn"]
+min_strength = "great"
+category = "Divination"
+
+description = """
+The scion sees the true nature of all things. Illusions, disguises, ethereal \
+creatures, and even lies become transparent before their divine sight."""
+
+effect_5e = """
+You can cast True Seeing on yourself without material components once per \
+long rest. The duration extends to 8 hours.
+
+True: You have permanent Truesight out to 60 feet. You can see into the \
+Ethereal plane and perceive the true form of any shapechanger or creature \
+transformed by magic."""
+
+[[blood_abilities]]
+name = "Water Breathing"
+derivation = ["masela"]
+min_strength = "minor"
+category = "Utility"
+
+description = """
+Masela's children can breathe water as easily as air. The sea welcomes them \
+into its depths without harm."""
+
+effect_5e = """
+You can breathe underwater. You have a swimming speed equal to your walking \
+speed.
+
+Major+: You can breathe both air and water indefinitely. Your swimming speed \
+equals twice your walking speed. You can see normally in darkness underwater.
+
+Great+: You are immune to pressure damage from deep water. You can cast \
+Water Breathing on others at will."""
+
+[[blood_abilities]]
+name = "Shadow Walk"
+derivation = ["vorynn", "azrai"]
+min_strength = "great"
+category = "Movement"
+
+description = """
+The scion can step through shadows, traveling vast distances in moments by \
+passing through the Shadow World."""
+
+effect_5e = """
+Once per long rest, you can cast Shadow Walk (as the spell Transport via Plants \
+but using shadows instead of plants). You can bring up to 8 willing creatures \
+with you.
+
+True: You can use Shadow Walk at will. You can also use shadows to plane shift \
+to the Shadow World."""
+
+[[blood_abilities]]
+name = "Nature's Wrath"
+derivation = ["reynir"]
+min_strength = "great"
+category = "Offensive"
+
+description = """
+The scion can call upon nature itself to punish despoilers and enemies. The \
+earth opens, plants attack, and animals swarm at the scion's command."""
+
+effect_5e = """
+Once per long rest, you can cast Earthquake, Insect Plague, or Wall of Thorns \
+without expending a spell slot.
+
+True: You can cast any of these spells once per short rest. Additionally, once \
+per long rest, you can cast Storm of Vengeance flavored as nature's fury \
+(locusts instead of lightning, etc.)."""
+
+[[blood_abilities]]
+name = "Awnshegh Transformation"
+derivation = ["azrai"]
+min_strength = "true"
+category = "Transformation"
+corruption_risk = "Automatic"
+
+description = """
+The scion begins transforming into an awnshegh - a creature of shadow whose \
+human form is overtaken by monstrous features reflecting their inner nature. \
+This grants tremendous power but at the cost of humanity."""
+
+effect_5e = """
+This is not an ability that is chosen but rather one that manifests when \
+corruption reaches its apex. The transformation grants:
+- +4 to any two ability scores
+- Two additional blood abilities of any type
+- Natural weapons dealing 2d6 damage
+- Resistance to nonmagical damage
+- Unique monstrous features (DM determined)
+
+However, the scion's alignment shifts to Evil if not already, they must make \
+regular Wisdom saves to resist destructive urges, and they can no longer be \
+resurrected by normal means."""
+
+roleplay_notes = """
+Becoming an awnshegh is usually a tragedy. The scion may have tremendous power \
+but has lost what made them human. Some awnsheghlien embrace their nature; \
+others rage against it eternally. All are monsters, whatever they once were."""
+
+# ============================================================================
+# BLOOD ABILITY ACQUISITION
+# ============================================================================
+
+[acquisition]
+description = "How blood abilities are gained and developed"
+
+[acquisition.at_birth]
+description = """
+Most scions are born with one or more blood abilities already manifest. The \
+abilities typically reflect the derivation and family heritage. A scion born \
+to a line of warriors might manifest Battlewise; one born to merchants, \
+Character Reading."""
+
+[acquisition.development]
+description = """
+As bloodline strength increases (through bloodtheft, investiture, or rare \
+magical means), new abilities may manifest. The scion may also develop existing \
+abilities to greater power as their blood grows stronger."""
+
+[acquisition.bloodtheft_acquisition]
+description = """
+When a scion commits bloodtheft, they may acquire one or more of the victim's \
+blood abilities. This is one of the few ways to gain abilities outside one's \
+derivation. However, bloodtheft carries moral and practical consequences."""
+
+# ============================================================================
+# USING BLOOD ABILITIES IN PLAY
+# ============================================================================
+
+[gameplay]
+
+[gameplay.activation]
+description = """
+Most blood abilities are either passive (always active) or require an action \
+to activate. The scion simply wills the power into being, channeling their \
+divine heritage. No verbal or somatic components are required unless specified."""
+
+[gameplay.detection]
+description = """
+Using blood abilities is not inherently detectable, but the effects often are. \
+A scion using Divine Aura is not visibly "casting a spell" but others notice \
+the overwhelming presence. Detect Magic will reveal active blood abilities as \
+divine magic of the appropriate school."""
+
+[gameplay.limits]
+description = """
+Blood abilities do not require spell slots but many have limited uses per rest. \
+The divine blood requires time to recover after channeling significant power. \
+Passive abilities have no usage limits."""
+
+[gameplay.roleplaying]
+description = """
+Blood abilities should feel different from spells. They are part of the scion, \
+not learned skills. Using them feels like flexing a muscle or remembering \
+something instinctively. Losing them (through bloodtheft or investiture) feels \
+like losing a sense or limb."""

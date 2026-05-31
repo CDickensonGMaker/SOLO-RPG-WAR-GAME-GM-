@@ -1,0 +1,44 @@
+# Historical NPC Dispositions
+# 25+ initial attitudes and stances toward the player/situation
+
+[dispositions]
+entries = [
+  # Positive Dispositions
+  { text = "Welcoming and eager to assist", weight = 2 },
+  { text = "Respectful and professional", weight = 3 },
+  { text = "Friendly but businesslike", weight = 3 },
+  { text = "Grateful for past assistance", weight = 1 },
+  { text = "Impressed by reputation and willing to help", weight = 1 },
+  { text = "Sympathetic to the cause", weight = 2 },
+  { text = "Sees a kindred spirit", weight = 1 },
+  { text = "Owes a debt and seeks to repay it", weight = 1 },
+
+  # Neutral Dispositions
+  { text = "Cautious but open to discussion", weight = 3 },
+  { text = "Businesslike and transactional", weight = 3 },
+  { text = "Distracted by other concerns", weight = 2 },
+  { text = "Curious but noncommittal", weight = 2 },
+  { text = "Following orders without personal investment", weight = 3 },
+  { text = "Weary and indifferent", weight = 2 },
+  { text = "Professionally detached", weight = 2 },
+  { text = "Waiting to see which way the wind blows", weight = 2 },
+
+  # Negative Dispositions
+  { text = "Suspicious and guarded", weight = 2 },
+  { text = "Hostile due to past grievance", weight = 1 },
+  { text = "Contemptuous of outsiders", weight = 2 },
+  { text = "Fearful and reluctant to engage", weight = 2 },
+  { text = "Resentful of authority being exercised over them", weight = 2 },
+  { text = "Disgusted by what they perceive as moral failings", weight = 1 },
+  { text = "Jealous of position or success", weight = 1 },
+  { text = "Bitter from personal losses", weight = 2 },
+  { text = "Actively obstructive", weight = 1 },
+  { text = "Openly hostile and threatening", weight = 1 },
+
+  # Complex Dispositions
+  { text = "Conflicted between duty and conscience", weight = 1 },
+  { text = "Hiding fear behind bravado", weight = 2 },
+  { text = "Testing to see if trust is warranted", weight = 2 },
+  { text = "Putting on a front for observers", weight = 1 },
+  { text = "Desperate and willing to bargain", weight = 1 }
+]

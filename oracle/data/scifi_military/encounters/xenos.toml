@@ -1,0 +1,77 @@
+# Sci-Fi Military Xenos Encounters
+# Alien contact, combat, and phenomena
+
+[encounters]
+entries = [
+  # First Contact
+  { text = "Unknown xenos species makes contact, intentions unclear", weight = 1 },
+  { text = "Ancient alien intelligence awakens from millennia of slumber", weight = 1 },
+  { text = "Dying xenos transmits warning about greater threat", weight = 1 },
+  { text = "Xenos ambassador appears seeking alliance against common enemy", weight = 1 },
+  { text = "Peaceful xenos settlement discovered, command wants it eliminated", weight = 1 },
+  { text = "Xenos traders offer technology in exchange for passage", weight = 1 },
+  { text = "Alien artifact activates when touched by human", weight = 1 },
+  { text = "Xenos refugees fleeing their own war beg for protection", weight = 1 },
+  { text = "First contact turns violent due to miscommunication", weight = 1 },
+  { text = "Xenos observe from distance, neither attacking nor communicating", weight = 1 },
+
+  # Hostile Encounters
+  { text = "Swarm assault, thousands of small xenos overwhelming defenses", weight = 1 },
+  { text = "Warrior caste attack, elite alien soldiers in organized assault", weight = 1 },
+  { text = "Psyker entity, alien projecting psychic attacks", weight = 1 },
+  { text = "Shape-shifter infiltration, xenos mimicking human form", weight = 1 },
+  { text = "Parasitic infestation, aliens implanting hosts", weight = 1 },
+  { text = "Hive mind coordination, perfectly synchronized alien attack", weight = 1 },
+  { text = "Bio-weapon deployment, living organisms as weapons", weight = 1 },
+  { text = "Alpha predator, single massive xenos hunting the unit", weight = 1 },
+  { text = "Ambush predators, xenos that attack from concealment", weight = 1 },
+  { text = "Burrowing attackers, xenos emerging from beneath the ground", weight = 1 },
+
+  # Alien Technology
+  { text = "Alien weapon found, power source unknown but devastating", weight = 1 },
+  { text = "Xenos vehicle encountered, unfamiliar propulsion system", weight = 1 },
+  { text = "Alien structure activates, purpose unclear but energy building", weight = 1 },
+  { text = "Portal opens, xenos emerging from different location or dimension", weight = 1 },
+  { text = "Force field barrier blocks path, alien technology impenetrable", weight = 1 },
+  { text = "Drone swarm, autonomous xenos machines attacking", weight = 1 },
+  { text = "Gravity weapon, aliens manipulating fundamental forces", weight = 1 },
+  { text = "Living ship, xenos spacecraft that is itself alive", weight = 1 },
+  { text = "Stasis trap, alien technology freezing soldiers in time", weight = 1 },
+  { text = "Mind-control device, technology affecting human thoughts", weight = 1 },
+
+  # Alien Phenomena
+  { text = "Spore cloud exposure, unknown biological effects manifesting", weight = 1 },
+  { text = "Alien sound causing psychological effects in soldiers", weight = 1 },
+  { text = "Bioluminescent organisms creating disorienting light display", weight = 1 },
+  { text = "Pheromone attack, chemical signals triggering aggression", weight = 1 },
+  { text = "Symbiotic organisms attempting to bond with humans", weight = 1 },
+  { text = "Alien disease outbreak, symptoms unlike any known pathogen", weight = 1 },
+  { text = "Hallucinogenic environment, reality seems unstable", weight = 1 },
+  { text = "Terraforming in progress, environment being altered to alien preference", weight = 1 },
+  { text = "Hive network, organic structures spreading across landscape", weight = 1 },
+  { text = "Living terrain, ground and walls are xenos organisms", weight = 1 },
+
+  # Specific Xenos Types
+  { text = "Insectoid warriors, chitinous armor and blade limbs", weight = 1 },
+  { text = "Reptilian soldiers, cold-blooded tactical thinkers", weight = 1 },
+  { text = "Fungal intelligence, hive mind spreading through spores", weight = 1 },
+  { text = "Silicon-based lifeforms, rocky bodies shrugging off bullets", weight = 1 },
+  { text = "Energy beings, barely corporeal and weapon-resistant", weight = 1 },
+  { text = "Mechanical race, robotic xenos of unknown origin", weight = 1 },
+  { text = "Aquatic xenos, amphibious aliens adapted to water", weight = 1 },
+  { text = "Flying swarm, aerial xenos attacking from above", weight = 1 },
+  { text = "Giant megafauna, xenos larger than vehicles", weight = 1 },
+  { text = "Microscopic invasion, alien organisms infiltrating at cellular level", weight = 1 },
+
+  # Horror Elements
+  { text = "Xenos using human corpses as puppets or armor", weight = 1 },
+  { text = "Conversion in progress, captured soldiers becoming xenos", weight = 1 },
+  { text = "Breeding chamber discovered, humans used as hosts", weight = 1 },
+  { text = "Xenos feeding grounds, remains of consumed victims", weight = 1 },
+  { text = "Hybrid creature, disturbing fusion of human and xenos", weight = 1 },
+  { text = "Mind-linked human, person controlled by alien intelligence", weight = 1 },
+  { text = "Psychic scream, dying xenos projecting death to all nearby minds", weight = 1 },
+  { text = "Ancestor memory, xenos knows everything its lineage experienced", weight = 1 },
+  { text = "Xenos worshippers, humans who have turned traitor to serve aliens", weight = 1 },
+  { text = "Thing from the void, xenos that should not exist in normal space", weight = 1 }
+]

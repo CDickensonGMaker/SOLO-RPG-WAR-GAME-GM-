@@ -1,0 +1,967 @@
+# Hive City Gangs - Grimdark Future
+# Imperial Guard equivalents - masses of regular humans with tanks
+# One Page Rules - Free Wargaming System
+
+[faction]
+name = "Hive City Gangs"
+description = "Massive armies of regular humans backed by heavy armor and artillery"
+playstyle = "Horde, combined arms, attrition"
+difficulty = "intermediate"
+strengths = [
+    "Cheap troops enable massive armies",
+    "Excellent tanks and artillery",
+    "Orders system for flexibility",
+    "Strong combined arms tactics",
+    "Reliable leadership structure"
+]
+weaknesses = [
+    "Individual models are weak",
+    "Poor armor on infantry",
+    "Morale can collapse quickly",
+    "Quality 4+ limits accuracy"
+]
+tactics = """
+Hive City Gangs win through overwhelming numbers and devastating firepower. Screen your
+valuable tanks and artillery with expendable infantry. Use Officers to issue Orders that
+dramatically improve unit effectiveness. Layer defenses - conscripts in front, veterans
+behind, tanks and artillery supporting. Never fight fair - always have numerical or
+firepower advantage. Accept casualties to achieve objectives.
+"""
+
+# =============================================================================
+# HQ UNITS
+# =============================================================================
+
+[[units]]
+name = "Gang Lord"
+type = "infantry"
+category = "hq"
+points = 55
+models = "1"
+base_size = "25mm"
+tactical_role = "command"
+threat_level = "medium"
+priority_target = true
+preferred_targets = ["infantry"]
+avoid_targets = ["heavy_armor", "elite_melee"]
+weaknesses = ["snipers", "assassination", "melee_specialists"]
+synergies = ["Orders boost nearby units", "Keep near key squads"]
+special_rules = ["Hero", "Orders(2)"]
+keywords = ["Infantry", "Character", "Hive Gang"]
+notes = "Orders(2) means issue 2 orders per turn. Critical force multiplier. Protect at all costs."
+
+[units.stats]
+quality = "4+"
+defense = "5+"
+tough = 3
+movement = "6\""
+
+[[units.weapons]]
+name = "Pistol"
+range = "12\""
+shots = "1"
+ap = "0"
+
+[[units.weapons]]
+name = "Power Sword"
+range = "Melee"
+shots = "3"
+ap = "2"
+special = ["Deadly(3)"]
+
+[[units.upgrades]]
+name = "Plasma Pistol"
+points = 5
+weapon = { name = "Plasma Pistol", range = "12\"", shots = "1", ap = "2", special = ["Deadly(3)"] }
+
+[[units.upgrades]]
+name = "Power Fist"
+points = 10
+replaces = "Power Sword"
+weapon = { name = "Power Fist", range = "Melee", shots = "3", ap = "3", special = ["Deadly(3)"] }
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Veteran Sergeant"
+type = "infantry"
+category = "hq"
+points = 35
+models = "1"
+base_size = "25mm"
+tactical_role = "junior_command"
+threat_level = "low"
+priority_target = false
+preferred_targets = ["infantry"]
+avoid_targets = ["heavy_armor"]
+weaknesses = ["focused_fire"]
+synergies = ["Orders(1) for squad support", "Cheap officer option"]
+special_rules = ["Hero", "Orders(1)"]
+keywords = ["Infantry", "Character", "Hive Gang"]
+notes = "Budget officer. One order per turn is still valuable. Place with critical squads."
+
+[units.stats]
+quality = "4+"
+defense = "5+"
+tough = 2
+movement = "6\""
+
+[[units.weapons]]
+name = "Pistol"
+range = "12\""
+shots = "1"
+ap = "0"
+
+[[units.weapons]]
+name = "CCW"
+range = "Melee"
+shots = "2"
+ap = "0"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Psyker"
+type = "infantry"
+category = "hq"
+points = 40
+models = "1"
+base_size = "25mm"
+tactical_role = "psychic_support"
+threat_level = "medium"
+priority_target = true
+preferred_targets = ["infantry", "psychics"]
+avoid_targets = ["anti_psyker"]
+weaknesses = ["perils", "fragile", "snipers"]
+synergies = ["Psychic powers complement shooting", "Debuff enemy units"]
+special_rules = ["Hero", "Psychic(1)"]
+keywords = ["Infantry", "Character", "Hive Gang", "Psychic"]
+notes = "Glass cannon psyker. Devastating powers but fragile. Hide behind troops."
+
+[units.stats]
+quality = "4+"
+defense = "6+"
+tough = 2
+movement = "6\""
+
+[[units.weapons]]
+name = "Pistol"
+range = "12\""
+shots = "1"
+ap = "0"
+
+[[units.weapons]]
+name = "Staff"
+range = "Melee"
+shots = "1"
+ap = "0"
+
+[[units.psychic_powers]]
+name = "Mind Blast"
+type = "attack"
+description = "Target enemy unit within 18\" takes D6+3 hits with AP(1)"
+
+[[units.psychic_powers]]
+name = "Terrify"
+type = "debuff"
+description = "Target enemy unit within 18\" must pass morale test or become Shaken"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Commissar"
+type = "infantry"
+category = "hq"
+points = 45
+models = "1"
+base_size = "25mm"
+tactical_role = "morale_enforcement"
+threat_level = "low"
+priority_target = true
+preferred_targets = ["fleeing_units"]
+avoid_targets = ["heavy_armor"]
+weaknesses = ["snipers", "assassination"]
+synergies = ["Attached unit becomes Fearless", "Prevents morale collapse"]
+special_rules = ["Hero", "Execution"]
+keywords = ["Infantry", "Character", "Hive Gang", "Commissar"]
+notes = "Execution: attached unit is Fearless but if they would flee, remove one model instead. Keep morale-sensitive units fighting."
+
+[units.stats]
+quality = "4+"
+defense = "5+"
+tough = 2
+movement = "6\""
+
+[[units.weapons]]
+name = "Pistol"
+range = "12\""
+shots = "1"
+ap = "0"
+
+[[units.weapons]]
+name = "Power Sword"
+range = "Melee"
+shots = "3"
+ap = "2"
+special = ["Deadly(3)"]
+
+# =============================================================================
+# TROOPS
+# =============================================================================
+
+[[units]]
+name = "Gang Infantry"
+type = "infantry"
+category = "troops"
+points = 65
+models = "10"
+base_size = "25mm"
+tactical_role = "line_infantry"
+threat_level = "low"
+priority_target = false
+preferred_targets = ["other_infantry"]
+avoid_targets = ["elite_units", "vehicles"]
+weaknesses = ["everything", "morale", "low_quality"]
+synergies = ["Orders dramatically improve", "Numbers absorb fire"]
+special_rules = []
+keywords = ["Infantry", "Hive Gang"]
+notes = "Basic troops. Expendable. Use Orders to make them effective. Screen valuable units."
+
+[units.stats]
+quality = "4+"
+defense = "6+"
+tough = 1
+movement = "6\""
+
+[[units.weapons]]
+name = "Laser Rifle"
+range = "24\""
+shots = "1"
+ap = "0"
+
+[[units.weapons]]
+name = "CCW"
+range = "Melee"
+shots = "1"
+ap = "0"
+
+[[units.upgrades]]
+name = "Flamer"
+points = 5
+models_affected = 1
+weapon = { name = "Flamer", range = "12\"", shots = "6", ap = "0", special = ["Reliable"] }
+
+[[units.upgrades]]
+name = "Plasma Gun"
+points = 10
+models_affected = 1
+weapon = { name = "Plasma Gun", range = "24\"", shots = "1", ap = "2", special = ["Deadly(3)"] }
+
+[[units.upgrades]]
+name = "Missile Launcher"
+points = 15
+models_affected = 1
+weapon = { name = "Missile Launcher", range = "36\"", shots = "1", ap = "2", special = ["Blast(3)", "Deadly(3)"] }
+
+[[units.upgrades]]
+name = "Heavy Machinegun"
+points = 10
+models_affected = 1
+weapon = { name = "Heavy Machinegun", range = "36\"", shots = "3", ap = "1", special = ["Deadly(3)"] }
+
+[[units.upgrades]]
+name = "Sergeant with Power Sword"
+points = 5
+models_affected = 1
+weapon = { name = "Power Sword", range = "Melee", shots = "2", ap = "2", special = ["Deadly(3)"] }
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Conscript Mob"
+type = "infantry"
+category = "troops"
+points = 100
+models = "20"
+base_size = "25mm"
+tactical_role = "expendable_screen"
+threat_level = "very_low"
+priority_target = false
+preferred_targets = ["nothing"]
+avoid_targets = ["everything"]
+weaknesses = ["shooting", "melee", "morale", "breathing"]
+synergies = ["Screen valuable units", "Absorb charges", "Hold objectives"]
+special_rules = ["Green"]
+keywords = ["Infantry", "Hive Gang", "Conscript"]
+notes = "Green: -1 to Quality. Meat shields. Absorb firepower and charges so real units survive."
+
+[units.stats]
+quality = "5+"
+defense = "6+"
+tough = 1
+movement = "6\""
+
+[[units.weapons]]
+name = "Laser Pistol"
+range = "12\""
+shots = "1"
+ap = "0"
+
+[[units.weapons]]
+name = "CCW"
+range = "Melee"
+shots = "1"
+ap = "0"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Veteran Gang"
+type = "infantry"
+category = "troops"
+points = 85
+models = "10"
+base_size = "25mm"
+tactical_role = "elite_infantry"
+threat_level = "medium"
+priority_target = false
+preferred_targets = ["infantry", "light_vehicles"]
+avoid_targets = ["heavy_armor"]
+weaknesses = ["elite_melee", "heavy_weapons"]
+synergies = ["Special weapons platform", "Orders make them deadly"]
+special_rules = ["Veteran Infantry"]
+keywords = ["Infantry", "Hive Gang", "Veteran"]
+notes = "Veteran Infantry: +1 Quality to 3+. Your elite shooters. Load with special weapons."
+
+[units.stats]
+quality = "3+"
+defense = "5+"
+tough = 1
+movement = "6\""
+
+[[units.weapons]]
+name = "Laser Rifle"
+range = "24\""
+shots = "1"
+ap = "0"
+
+[[units.weapons]]
+name = "CCW"
+range = "Melee"
+shots = "1"
+ap = "0"
+
+[[units.upgrades]]
+name = "3x Plasma Gun"
+points = 30
+models_affected = 3
+weapon = { name = "Plasma Gun", range = "24\"", shots = "1", ap = "2", special = ["Deadly(3)"] }
+
+[[units.upgrades]]
+name = "3x Melta Gun"
+points = 30
+models_affected = 3
+weapon = { name = "Melta Gun", range = "12\"", shots = "1", ap = "4", special = ["Deadly(6)"] }
+
+[[units.upgrades]]
+name = "3x Flamer"
+points = 15
+models_affected = 3
+weapon = { name = "Flamer", range = "12\"", shots = "6", ap = "0", special = ["Reliable"] }
+
+# =============================================================================
+# ELITES
+# =============================================================================
+
+[[units]]
+name = "Storm Troopers"
+type = "infantry"
+category = "elite"
+points = 110
+models = "10"
+base_size = "25mm"
+tactical_role = "special_operations"
+threat_level = "medium"
+priority_target = true
+preferred_targets = ["elite_infantry", "characters", "light_vehicles"]
+avoid_targets = ["heavy_armor"]
+weaknesses = ["expensive_for_guard", "still_fragile"]
+synergies = ["Deep strike delivery", "Hot-shot las devastation"]
+special_rules = ["Ambush", "Strider"]
+keywords = ["Infantry", "Hive Gang", "Storm Trooper"]
+notes = "Elite operatives with AP lasers. Deep strike behind enemy lines. Glass cannons."
+
+[units.stats]
+quality = "3+"
+defense = "4+"
+tough = 1
+movement = "6\""
+
+[[units.weapons]]
+name = "Hot-Shot Laser"
+range = "18\""
+shots = "2"
+ap = "1"
+
+[[units.weapons]]
+name = "CCW"
+range = "Melee"
+shots = "1"
+ap = "0"
+
+[[units.upgrades]]
+name = "2x Plasma Gun"
+points = 20
+models_affected = 2
+weapon = { name = "Plasma Gun", range = "24\"", shots = "1", ap = "2", special = ["Deadly(3)"] }
+
+[[units.upgrades]]
+name = "2x Melta Gun"
+points = 20
+models_affected = 2
+weapon = { name = "Melta Gun", range = "12\"", shots = "1", ap = "4", special = ["Deadly(6)"] }
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Ogryn Brutes"
+type = "infantry"
+category = "elite"
+points = 120
+models = "3"
+base_size = "40mm"
+tactical_role = "heavy_assault"
+threat_level = "high"
+priority_target = true
+preferred_targets = ["infantry", "light_vehicles"]
+avoid_targets = ["heavy_anti_tank", "kiting"]
+weaknesses = ["slow", "low_quality"]
+synergies = ["Bullet sponges", "Devastating charges"]
+special_rules = ["Fearless", "Tough(3)", "Slow"]
+keywords = ["Infantry", "Hive Gang", "Ogryn"]
+notes = "Huge mutant brutes. Tough(3) on each model. Slow but devastating in melee."
+
+[units.stats]
+quality = "4+"
+defense = "4+"
+tough = 3
+movement = "4\""
+
+[[units.weapons]]
+name = "Ripper Gun"
+range = "12\""
+shots = "3"
+ap = "1"
+
+[[units.weapons]]
+name = "Huge Club"
+range = "Melee"
+shots = "3"
+ap = "2"
+special = ["Deadly(3)"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Ratling Snipers"
+type = "infantry"
+category = "elite"
+points = 50
+models = "5"
+base_size = "25mm"
+tactical_role = "character_hunter"
+threat_level = "medium"
+priority_target = true
+preferred_targets = ["characters", "special_weapons"]
+avoid_targets = ["vehicles", "melee"]
+weaknesses = ["any_attention", "morale"]
+synergies = ["Pick off support characters", "Deploy in cover"]
+special_rules = ["Scout", "Stealth"]
+keywords = ["Infantry", "Hive Gang", "Ratling"]
+notes = "Halfling snipers. Stealth + Scout makes them excellent assassins. Very fragile though."
+
+[units.stats]
+quality = "3+"
+defense = "6+"
+tough = 1
+movement = "6\""
+
+[[units.weapons]]
+name = "Sniper Rifle"
+range = "36\""
+shots = "1"
+ap = "1"
+special = ["Sniper", "Deadly(3)"]
+
+[[units.weapons]]
+name = "Knife"
+range = "Melee"
+shots = "1"
+ap = "0"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Heavy Weapons Team"
+type = "infantry"
+category = "elite"
+points = 60
+models = "3"
+base_size = "60mm"
+tactical_role = "fire_support"
+threat_level = "medium"
+priority_target = true
+preferred_targets = ["varies_by_loadout"]
+avoid_targets = ["assault_units"]
+weaknesses = ["immobile", "close_combat"]
+synergies = ["Overlapping fields of fire", "Support infantry advance"]
+special_rules = ["Slow"]
+keywords = ["Infantry", "Hive Gang", "Heavy Weapons"]
+notes = "Crew-served weapons. Autocannons for versatility, lascannons for tanks, mortars for indirect."
+
+[units.stats]
+quality = "4+"
+defense = "5+"
+tough = 2
+movement = "4\""
+
+[[units.weapons]]
+name = "Autocannon"
+range = "48\""
+shots = "2"
+ap = "2"
+special = ["Deadly(3)"]
+
+[[units.upgrades]]
+name = "Lascannon"
+points = 15
+replaces = "Autocannon"
+weapon = { name = "Lascannon", range = "48\"", shots = "1", ap = "4", special = ["Deadly(6)"] }
+
+[[units.upgrades]]
+name = "Mortar"
+points = 0
+replaces = "Autocannon"
+weapon = { name = "Mortar", range = "48\"", shots = "1", ap = "1", special = ["Blast(3)", "Indirect"] }
+
+[[units.upgrades]]
+name = "Missile Launcher"
+points = 5
+replaces = "Autocannon"
+weapon = { name = "Missile Launcher", range = "36\"", shots = "1", ap = "2", special = ["Blast(3)", "Deadly(3)"] }
+
+# =============================================================================
+# FAST ATTACK
+# =============================================================================
+
+[[units]]
+name = "Rough Riders"
+type = "cavalry"
+category = "fast_attack"
+points = 80
+models = "5"
+base_size = "25x50mm"
+tactical_role = "shock_cavalry"
+threat_level = "medium"
+priority_target = false
+preferred_targets = ["infantry", "artillery"]
+avoid_targets = ["heavy_armor", "prepared_positions"]
+weaknesses = ["shooting", "heavy_weapons"]
+synergies = ["Flank charges", "Hunt artillery"]
+special_rules = ["Fast", "Impact(1)"]
+keywords = ["Cavalry", "Hive Gang"]
+notes = "Cavalry charge unit. Impact(1) on charge. Fragile but fast. Hit isolated units."
+
+[units.stats]
+quality = "4+"
+defense = "5+"
+tough = 1
+movement = "10\""
+
+[[units.weapons]]
+name = "Pistol"
+range = "12\""
+shots = "1"
+ap = "0"
+
+[[units.weapons]]
+name = "Hunting Lance"
+range = "Melee"
+shots = "1"
+ap = "3"
+special = ["Deadly(3)", "Lance"]
+notes = "Lance: AP and Deadly only apply on charge turn"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Sentinel Walker"
+type = "vehicle"
+category = "fast_attack"
+points = 45
+models = "1"
+base_size = "60mm"
+tactical_role = "light_reconnaissance"
+threat_level = "low"
+priority_target = false
+preferred_targets = ["light_vehicles", "infantry"]
+avoid_targets = ["heavy_armor", "melee"]
+weaknesses = ["anti_armor", "low_tough"]
+synergies = ["Scout flanks", "Cheap fire support"]
+special_rules = ["Scout", "Walker", "Tough(4)"]
+keywords = ["Vehicle", "Hive Gang", "Walker"]
+notes = "Light scout walker. Scout deployment. Cheap but fragile. Outflank with autocannon."
+
+[units.stats]
+quality = "4+"
+defense = "4+"
+tough = 4
+movement = "8\""
+
+[[units.weapons]]
+name = "Autocannon"
+range = "48\""
+shots = "2"
+ap = "2"
+special = ["Deadly(3)"]
+
+[[units.upgrades]]
+name = "Lascannon"
+points = 10
+replaces = "Autocannon"
+weapon = { name = "Lascannon", range = "48\"", shots = "1", ap = "4", special = ["Deadly(6)"] }
+
+[[units.upgrades]]
+name = "Multi-Laser"
+points = 0
+replaces = "Autocannon"
+weapon = { name = "Multi-Laser", range = "36\"", shots = "3", ap = "1" }
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Hellhound"
+type = "vehicle"
+category = "fast_attack"
+points = 95
+models = "1"
+base_size = "hull"
+tactical_role = "anti_infantry"
+threat_level = "high"
+priority_target = true
+preferred_targets = ["infantry_hordes", "light_vehicles"]
+avoid_targets = ["heavy_anti_tank"]
+weaknesses = ["melta", "short_range"]
+synergies = ["Flush infantry from cover", "Screen breaker"]
+special_rules = ["Fast", "Tough(8)"]
+keywords = ["Vehicle", "Hive Gang", "Tank"]
+notes = "Flamer tank. Inferno cannon devastates infantry. Fast for a tank. Suicidal charges welcome."
+
+[units.stats]
+quality = "4+"
+defense = "3+"
+tough = 8
+movement = "12\""
+
+[[units.weapons]]
+name = "Inferno Cannon"
+range = "18\""
+shots = "12"
+ap = "1"
+special = ["Reliable"]
+
+[[units.weapons]]
+name = "Heavy Machinegun"
+range = "36\""
+shots = "3"
+ap = "1"
+special = ["Deadly(3)"]
+
+# =============================================================================
+# HEAVY SUPPORT
+# =============================================================================
+
+[[units]]
+name = "Battle Tank"
+type = "vehicle"
+category = "heavy_support"
+points = 155
+models = "1"
+base_size = "hull"
+tactical_role = "main_battle_tank"
+threat_level = "very_high"
+priority_target = true
+preferred_targets = ["vehicles", "heavy_infantry"]
+avoid_targets = ["fast_melee"]
+weaknesses = ["melta", "close_combat"]
+synergies = ["Infantry screen", "Combined fire"]
+special_rules = ["Tough(12)"]
+keywords = ["Vehicle", "Hive Gang", "Tank"]
+notes = "Iconic battle tank. Versatile loadout options. Cheaper than Battle Brothers version."
+
+[units.stats]
+quality = "4+"
+defense = "2+"
+tough = 12
+movement = "10\""
+
+[[units.weapons]]
+name = "Battle Cannon"
+range = "48\""
+shots = "2"
+ap = "3"
+special = ["Blast(3)", "Deadly(3)"]
+
+[[units.weapons]]
+name = "Heavy Machinegun"
+range = "36\""
+shots = "3"
+ap = "1"
+special = ["Deadly(3)"]
+
+[[units.upgrades]]
+name = "Vanquisher Cannon"
+points = 10
+replaces = "Battle Cannon"
+weapon = { name = "Vanquisher Cannon", range = "48\"", shots = "1", ap = "5", special = ["Deadly(9)"] }
+
+[[units.upgrades]]
+name = "Demolisher Cannon"
+points = 5
+replaces = "Battle Cannon"
+weapon = { name = "Demolisher Cannon", range = "24\"", shots = "2", ap = "4", special = ["Blast(6)", "Deadly(3)"] }
+
+[[units.upgrades]]
+name = "Plasma Sponsons"
+points = 30
+weapon = { name = "Twin Plasma Cannon", range = "24\"", shots = "2", ap = "2", special = ["Deadly(3)"] }
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Artillery Battery"
+type = "vehicle"
+category = "heavy_support"
+points = 110
+models = "1"
+base_size = "hull"
+tactical_role = "indirect_fire"
+threat_level = "high"
+priority_target = true
+preferred_targets = ["infantry", "light_vehicles"]
+avoid_targets = ["fast_assault"]
+weaknesses = ["assault", "minimum_range"]
+synergies = ["Remove infantry from objectives", "Force enemy movement"]
+special_rules = ["Tough(8)", "Artillery"]
+keywords = ["Vehicle", "Hive Gang", "Artillery"]
+notes = "Indirect fire platform. Bombard enemy positions. Protect with screens."
+
+[units.stats]
+quality = "4+"
+defense = "3+"
+tough = 8
+movement = "8\""
+
+[[units.weapons]]
+name = "Earthshaker Cannon"
+range = "72\""
+shots = "1"
+ap = "3"
+special = ["Blast(6)", "Deadly(3)", "Indirect"]
+
+[[units.weapons]]
+name = "Heavy Machinegun"
+range = "36\""
+shots = "3"
+ap = "1"
+special = ["Deadly(3)"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Super Heavy Tank"
+type = "vehicle"
+category = "heavy_support"
+points = 295
+models = "1"
+base_size = "super_heavy"
+tactical_role = "super_heavy"
+threat_level = "extreme"
+priority_target = true
+preferred_targets = ["everything"]
+avoid_targets = ["nothing"]
+weaknesses = ["focused_melta", "expensive"]
+synergies = ["Army centerpiece", "Fire magnet"]
+special_rules = ["Tough(18)", "Fearless"]
+keywords = ["Vehicle", "Hive Gang", "Super Heavy"]
+notes = "Massive tank. Multiple weapon systems. Point sink but terrifying."
+
+[units.stats]
+quality = "4+"
+defense = "2+"
+tough = 18
+movement = "8\""
+
+[[units.weapons]]
+name = "Volcano Cannon"
+range = "60\""
+shots = "1"
+ap = "6"
+special = ["Deadly(12)"]
+
+[[units.weapons]]
+name = "Twin Battle Cannon"
+range = "48\""
+shots = "4"
+ap = "3"
+special = ["Blast(3)", "Deadly(3)"]
+
+[[units.weapons]]
+name = "Heavy Machineguns"
+range = "36\""
+shots = "9"
+ap = "1"
+special = ["Deadly(3)"]
+
+# =============================================================================
+# TRANSPORTS
+# =============================================================================
+
+[[units]]
+name = "Chimera"
+type = "vehicle"
+category = "transport"
+points = 80
+models = "1"
+base_size = "hull"
+tactical_role = "transport"
+threat_level = "medium"
+priority_target = false
+preferred_targets = ["infantry"]
+avoid_targets = ["heavy_anti_tank"]
+weaknesses = ["anti_armor"]
+synergies = ["Deliver veterans", "Mobile firebase"]
+special_rules = ["Tough(8)", "Transport(12)"]
+keywords = ["Vehicle", "Hive Gang", "Transport"]
+notes = "Standard transport. Multilaser and heavy flamer for support. Deliver special weapon squads."
+
+[units.stats]
+quality = "4+"
+defense = "3+"
+tough = 8
+movement = "12\""
+
+[[units.weapons]]
+name = "Multi-Laser"
+range = "36\""
+shots = "3"
+ap = "1"
+
+[[units.weapons]]
+name = "Heavy Flamer"
+range = "12\""
+shots = "6"
+ap = "1"
+special = ["Reliable"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Valkyrie"
+type = "vehicle"
+category = "transport"
+points = 145
+models = "1"
+base_size = "hull"
+tactical_role = "airborne_transport"
+threat_level = "medium"
+priority_target = true
+preferred_targets = ["infantry", "light_vehicles"]
+avoid_targets = ["dedicated_anti_air"]
+weaknesses = ["anti_air", "heavy_weapons"]
+synergies = ["Deep strike delivery alternative", "Gunship support"]
+special_rules = ["Tough(10)", "Aircraft", "Transport(12)"]
+keywords = ["Vehicle", "Hive Gang", "Aircraft", "Transport"]
+notes = "Flying transport. Deliver troops anywhere. Rocket pods for fire support."
+
+[units.stats]
+quality = "4+"
+defense = "3+"
+tough = 10
+movement = "20\""
+
+[[units.weapons]]
+name = "Multi-Laser"
+range = "36\""
+shots = "3"
+ap = "1"
+
+[[units.weapons]]
+name = "Rocket Pods"
+range = "24\""
+shots = "6"
+ap = "1"
+special = ["Blast(3)"]
+
+# =============================================================================
+# ORDERS REFERENCE
+# =============================================================================
+
+[orders]
+description = "Officers may issue Orders to friendly units within 12\". Each order can only affect a unit once per round."
+
+[[orders.list]]
+name = "Take Aim"
+effect = "Unit gets +1 to hit when shooting this activation"
+
+[[orders.list]]
+name = "First Rank Fire"
+effect = "Unit's las weapons gain +1 shot"
+
+[[orders.list]]
+name = "Get Back in the Fight"
+effect = "Remove Shaken from target unit"
+
+[[orders.list]]
+name = "Move! Move! Move!"
+effect = "Unit may move an additional 6\" this activation"
+
+[[orders.list]]
+name = "Bring It Down"
+effect = "Unit gains +1 AP when shooting this activation"
+
+# =============================================================================
+# EXAMPLE ARMY LISTS
+# =============================================================================
+
+[army_lists.starter_750]
+name = "Steel Wall - 750 points"
+description = "Infantry and armor combined"
+points = 745
+units = [
+    { name = "Gang Lord", count = 1, points = 55 },
+    { name = "Commissar", count = 1, points = 45 },
+    { name = "Gang Infantry", count = 3, points = 195, upgrades = ["Plasma Gun"] },
+    { name = "Veteran Gang", count = 1, points = 115, upgrades = ["3x Plasma Gun"] },
+    { name = "Heavy Weapons Team", count = 2, points = 150, upgrades = ["Lascannon"] },
+    { name = "Battle Tank", count = 1, points = 155 },
+    { name = "Chimera", count = 1, points = 80 }
+]
+tactics = "Infantry screens tanks. Lord issues orders to boost key units. Veterans in Chimera for mobile threat. Lascannons and tank handle armor."
+
+[army_lists.competitive_1500]
+name = "Emperor's Hammer - 1500 points"
+description = "Heavy armor with infantry support"
+points = 1500
+units = [
+    { name = "Gang Lord", count = 1, points = 55 },
+    { name = "Commissar", count = 2, points = 90 },
+    { name = "Gang Infantry", count = 4, points = 260 },
+    { name = "Conscript Mob", count = 1, points = 100 },
+    { name = "Storm Troopers", count = 1, points = 130, upgrades = ["2x Plasma Gun"] },
+    { name = "Heavy Weapons Team", count = 2, points = 150, upgrades = ["Lascannon"] },
+    { name = "Battle Tank", count = 3, points = 465 },
+    { name = "Artillery Battery", count = 1, points = 110 },
+    { name = "Chimera", count = 1, points = 80 }
+]
+tactics = "Conscripts and infantry screen armor. Artillery pins enemies. Tanks concentrate fire on priority targets. Storm Troopers deep strike to eliminate key threats. Commissars keep infantry fighting."

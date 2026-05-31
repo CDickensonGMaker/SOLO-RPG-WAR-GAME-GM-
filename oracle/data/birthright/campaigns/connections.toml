@@ -1,0 +1,421 @@
+# Campaign Connections and Cross-Campaign Integration
+# Defines how campaigns interact, shared state, and world timeline
+
+[meta]
+version = "1.0"
+description = "Cross-campaign integration layer for Birthright Campaign Manager"
+
+# ============================================================================
+# CAMPAIGN GRAPH - How campaigns relate and unlock
+# ============================================================================
+
+[campaign_graph]
+starting_campaigns = ["iron_throne", "gorgons_shadow", "web_of_shadows", "sources_of_power"]
+culminating_campaign = "chosen_bloodline"
+
+[campaign_graph.prerequisites]
+cerilian_alliance = { requires_any = ["iron_throne", "gorgons_shadow"], description = "Need political or military experience" }
+chosen_bloodline = { requires_count = 2, from = ["iron_throne", "gorgons_shadow", "web_of_shadows", "sources_of_power", "cerilian_alliance"], description = "Must prove yourself in multiple campaigns" }
+
+[campaign_graph.recommended_order]
+sequence_1 = ["iron_throne", "web_of_shadows", "cerilian_alliance", "chosen_bloodline"]
+sequence_2 = ["gorgons_shadow", "cerilian_alliance", "chosen_bloodline"]
+sequence_3 = ["sources_of_power", "iron_throne", "chosen_bloodline"]
+sequence_4 = ["web_of_shadows", "sources_of_power", "chosen_bloodline"]
+
+[campaign_graph.parallel_capable]
+pairs = [
+    ["iron_throne", "gorgons_shadow"],  # Political and military can happen simultaneously
+    ["web_of_shadows", "sources_of_power"],  # Espionage and magical mystery complement
+]
+
+# ============================================================================
+# SHARED NPC STATE - NPCs that appear across campaigns
+# ============================================================================
+
+[shared_npcs]
+
+[shared_npcs.darien_avan]
+appears_in = ["iron_throne", "cerilian_alliance"]
+persistent_state = ["disposition", "alive", "emperor_status", "alliance_status"]
+disposition_carry = 0.8  # 80% of disposition carries between campaigns
+
+[shared_npcs.archduke_boeruine]
+appears_in = ["iron_throne", "gorgons_shadow", "cerilian_alliance"]
+persistent_state = ["disposition", "alive", "military_strength", "alliance_status"]
+disposition_carry = 0.8
+
+[shared_npcs.the_gorgon]
+appears_in = ["gorgons_shadow", "cerilian_alliance", "chosen_bloodline"]
+persistent_state = ["alive", "weakened", "power_level"]
+cross_campaign_events = [
+    { trigger = "gorgon_defeated_in_gorgons_shadow", effect = "gorgon_weakened_in_cerilian_alliance" },
+    { trigger = "gorgon_slain_in_gorgons_shadow", effect = "gorgon_absent_from_cerilian_alliance" }
+]
+
+[shared_npcs.the_spider]
+appears_in = ["iron_throne", "web_of_shadows", "cerilian_alliance"]
+persistent_state = ["alive", "exposed", "network_strength"]
+cross_campaign_events = [
+    { trigger = "spider_exposed_in_web_of_shadows", effect = "spider_network_weakened_everywhere" },
+    { trigger = "spider_destroyed_in_web_of_shadows", effect = "spider_absent_from_other_campaigns" }
+]
+
+[shared_npcs.hierarch_diem]
+appears_in = ["iron_throne", "cerilian_alliance"]
+persistent_state = ["disposition", "alive", "temple_status", "endorsement"]
+disposition_carry = 0.9
+
+[shared_npcs.the_magian]
+appears_in = ["sources_of_power"]
+persistent_state = ["bound", "destroyed", "awakening_level"]
+cross_campaign_events = [
+    { trigger = "magian_awakens_in_sources_of_power", effect = "magical_instability_in_all_campaigns" }
+]
+
+[shared_npcs.the_herald]
+appears_in = ["chosen_bloodline"]
+persistent_state = ["relationship", "guidance_given"]
+special = "Remembers player across all campaigns"
+
+# ============================================================================
+# WORLD STATE - Global state tracked across campaigns
+# ============================================================================
+
+[world_state]
+
+[world_state.political]
+iron_throne_status = { values = ["vacant", "contested", "claimed_avan", "claimed_boeruine", "claimed_player", "claimed_other"], default = "vacant" }
+anuire_unity = { range = [0, 100], default = 30, description = "How unified are the Anuirean realms" }
+temple_schism_resolved = { type = "boolean", default = false }
+
+[world_state.military]
+gorgon_threat_level = { range = [0, 100], default = 60, description = "How dangerous is the Gorgon" }
+awnshegh_coordination = { range = [0, 100], default = 20, description = "How unified are the awnsheghlien" }
+total_war_active = { type = "boolean", default = false }
+
+[world_state.magical]
+mebhaighl_health = { range = [0, 100], default = 100, description = "Health of Cerilia's magical web" }
+magian_status = { values = ["bound", "stirring", "awakened", "defeated"], default = "bound" }
+corruption_spread = { range = [0, 100], default = 0 }
+
+[world_state.espionage]
+spider_network_strength = { range = [0, 100], default = 80 }
+spider_identity_known = { type = "boolean", default = false }
+shadow_world_accessible = { type = "boolean", default = false }
+
+[world_state.alliance]
+cerilian_alliance_formed = { type = "boolean", default = false }
+alliance_members = { type = "list", default = [] }
+alliance_cohesion = { range = [0, 100], default = 0 }
+
+[world_state.divine]
+bloodline_awakening_widespread = { type = "boolean", default = false }
+ascension_imminent = { type = "boolean", default = false }
+new_god_risen = { type = "boolean", default = false }
+
+# ============================================================================
+# CROSS-CAMPAIGN EVENT TRIGGERS
+# ============================================================================
+
+[triggers]
+
+# Iron Throne outcomes affecting other campaigns
+[triggers.iron_throne_outcomes]
+
+[triggers.iron_throne_outcomes.player_claims_throne]
+condition = "iron_throne.victory_type == 'claim_throne'"
+effects = [
+    { target = "world_state.political.iron_throne_status", value = "claimed_player" },
+    { target = "world_state.political.anuire_unity", modifier = 30 },
+    { target = "cerilian_alliance.anuire_faction_united", value = true }
+]
+
+[triggers.iron_throne_outcomes.avan_claims_throne]
+condition = "iron_throne.avan_wins"
+effects = [
+    { target = "world_state.political.iron_throne_status", value = "claimed_avan" },
+    { target = "cerilian_alliance.avan_leads_anuire", value = true }
+]
+
+[triggers.iron_throne_outcomes.succession_war_continues]
+condition = "iron_throne.no_resolution"
+effects = [
+    { target = "world_state.political.anuire_unity", modifier = -20 },
+    { target = "cerilian_alliance.anuire_faction_divided", value = true }
+]
+
+# Gorgon's Shadow outcomes
+[triggers.gorgon_outcomes]
+
+[triggers.gorgon_outcomes.gorgon_defeated]
+condition = "gorgons_shadow.victory_type in ['gorgon_slain', 'gorgon_driven_back']"
+effects = [
+    { target = "world_state.military.gorgon_threat_level", modifier = -40 },
+    { target = "cerilian_alliance.northern_front_secure", value = true },
+    { target = "chosen_bloodline.gorgon_available_as_rival", value = false }
+]
+
+[triggers.gorgon_outcomes.gorgon_rampant]
+condition = "gorgons_shadow.failure_type == 'conquest'"
+effects = [
+    { target = "world_state.military.gorgon_threat_level", value = 100 },
+    { target = "cerilian_alliance.northern_front_collapsed", value = true },
+    { target = "world_state.military.awnshegh_coordination", modifier = 20 }
+]
+
+# Web of Shadows outcomes
+[triggers.spider_outcomes]
+
+[triggers.spider_outcomes.spider_destroyed]
+condition = "web_of_shadows.victory_type == 'spider_destroyed'"
+effects = [
+    { target = "world_state.espionage.spider_network_strength", value = 0 },
+    { target = "iron_throne.spider_interference", value = false },
+    { target = "cerilian_alliance.internal_sabotage", modifier = -30 }
+]
+
+[triggers.spider_outcomes.spider_exposed]
+condition = "web_of_shadows.victory_type == 'spider_exposed'"
+effects = [
+    { target = "world_state.espionage.spider_identity_known", value = true },
+    { target = "world_state.espionage.spider_network_strength", modifier = -50 },
+    { target = "all_campaigns.spider_activities_reduced", value = true }
+]
+
+[triggers.spider_outcomes.player_corrupted]
+condition = "web_of_shadows.failure_type == 'corruption'"
+effects = [
+    { target = "chosen_bloodline.player_tainted", value = true },
+    { target = "chosen_bloodline.dark_ascension_available", value = true }
+]
+
+# Sources of Power outcomes
+[triggers.magical_outcomes]
+
+[triggers.magical_outcomes.magian_bound]
+condition = "sources_of_power.victory_type == 'magian_bound'"
+effects = [
+    { target = "world_state.magical.magian_status", value = "defeated" },
+    { target = "world_state.magical.mebhaighl_health", value = 100 },
+    { target = "all_campaigns.magic_stable", value = true }
+]
+
+[triggers.magical_outcomes.magian_awakened]
+condition = "sources_of_power.failure_type == 'time_expired'"
+effects = [
+    { target = "world_state.magical.magian_status", value = "awakened" },
+    { target = "world_state.magical.mebhaighl_health", modifier = -50 },
+    { target = "all_campaigns.magical_crisis", value = true },
+    { target = "cerilian_alliance.magical_front_active", value = true }
+]
+
+[triggers.magical_outcomes.magic_dies]
+condition = "sources_of_power.failure_type == 'magical_death'"
+effects = [
+    { target = "world_state.magical.mebhaighl_health", value = 0 },
+    { target = "all_campaigns.realm_magic_disabled", value = true },
+    { target = "chosen_bloodline.ascension_impossible", value = true }
+]
+
+# Cerilian Alliance outcomes
+[triggers.alliance_outcomes]
+
+[triggers.alliance_outcomes.alliance_victorious]
+condition = "cerilian_alliance.victory_type in ['awnshegh_defeated', 'lasting_alliance']"
+effects = [
+    { target = "world_state.alliance.cerilian_alliance_formed", value = true },
+    { target = "world_state.military.awnshegh_coordination", value = 0 },
+    { target = "chosen_bloodline.world_unified", value = true }
+]
+
+[triggers.alliance_outcomes.alliance_fails]
+condition = "cerilian_alliance.failure_type == 'alliance_collapse'"
+effects = [
+    { target = "world_state.alliance.cerilian_alliance_formed", value = false },
+    { target = "world_state.military.awnshegh_coordination", modifier = 30 },
+    { target = "chosen_bloodline.world_fractured", value = true }
+]
+
+# ============================================================================
+# TIMELINE - Cerilian calendar and event scheduling
+# ============================================================================
+
+[timeline]
+calendar = "michaeline_reckoning"  # MR - years since Michael Roele's death
+current_year = 551
+seasons_per_year = 4  # Spring, Summer, Autumn, Winter
+turns_per_season = 3  # 3 domain turns per season
+
+[timeline.seasons]
+spring = { months = ["Pasiphiel", "Sarimie", "Deismir"], domain_modifier = { trade = 1.1 } }
+summer = { months = ["Haelyn", "Anarire", "Roele"], domain_modifier = { war = 1.2 } }
+autumn = { months = ["Haelyn's Festival", "Emmanir", "Keltier"], domain_modifier = { harvest = 1.3 } }
+winter = { months = ["Faniele", "Serimier", "Fanalier"], domain_modifier = { defense = 1.1, movement = 0.8 } }
+
+[timeline.major_events]
+551_spring = "Iron Throne campaign can begin"
+551_summer = "Gorgon begins mobilization (if not defeated)"
+551_autumn = "Spider activity increases"
+552_spring = "Sources of Power crisis point"
+552_summer = "Cerilian Alliance potential formation"
+553 = "Chosen Bloodline convergence window"
+
+[timeline.synchronization]
+# When campaigns run simultaneously, use this to sync events
+sync_points = [
+    { turn = 12, event = "end_of_year_551", all_campaigns_pause = true },
+    { turn = 24, event = "mid_552", alliance_check = true },
+    { turn = 36, event = "end_of_year_552", culmination_check = true }
+]
+
+# ============================================================================
+# PLAYER LEGACY - What carries between campaigns
+# ============================================================================
+
+[player_legacy]
+
+[player_legacy.persistent]
+# These always carry forward
+character_name = true
+bloodline = true
+bloodline_score = true  # Can increase between campaigns
+reputation = true
+titles = true
+legendary_items = true
+key_relationships = true  # Major NPC dispositions
+
+[player_legacy.conditional]
+# These carry forward if relevant
+domain = { condition = "player_still_regent" }
+army = { condition = "player_commands_forces" }
+spy_network = { condition = "player_ran_web_of_shadows" }
+source_holdings = { condition = "player_is_wizard" }
+alliance_memberships = { condition = "alliances_active" }
+
+[player_legacy.achievements]
+# Titles and achievements earned
+iron_throne = ["Emperor", "Chancellor", "Prince", "Survivor"]
+gorgons_shadow = ["Gorgonslayer", "Defender of Anuire", "Warlord"]
+web_of_shadows = ["Spiders Bane", "Light in Darkness", "Shadow Walker"]
+sources_of_power = ["Binder", "Mebhaighls Champion", "Savior of Magic"]
+cerilian_alliance = ["Savior of Cerilia", "Unifier", "Shield"]
+chosen_bloodline = ["Ascended", "Vessel", "Reformer", "Legend", "Dark One"]
+
+[player_legacy.bloodline_evolution]
+# Bloodline can grow across campaigns
+base_growth_per_campaign = 2
+victory_bonus = 3
+heroic_action_bonus = 1
+max_natural_score = 50  # True bloodline is 50+
+ascension_threshold = 60
+
+# ============================================================================
+# DIFFICULTY MODIFIERS - Based on prior campaign outcomes
+# ============================================================================
+
+[difficulty_modifiers]
+
+[difficulty_modifiers.easier_if]
+gorgon_defeated = { campaigns = ["cerilian_alliance"], modifier = -1 }
+spider_destroyed = { campaigns = ["iron_throne", "cerilian_alliance"], modifier = -1 }
+mebhaighl_restored = { campaigns = ["chosen_bloodline"], modifier = -1 }
+anuire_unified = { campaigns = ["cerilian_alliance"], modifier = -2 }
+
+[difficulty_modifiers.harder_if]
+gorgon_rampant = { campaigns = ["cerilian_alliance", "chosen_bloodline"], modifier = 2 }
+magic_failing = { campaigns = ["cerilian_alliance", "chosen_bloodline"], modifier = 2 }
+spider_controls_player = { campaigns = ["all"], modifier = 3 }
+alliance_failed = { campaigns = ["chosen_bloodline"], modifier = 2 }
+
+# ============================================================================
+# RANDOM EVENTS - Cross-campaign random event injection
+# ============================================================================
+
+[cross_campaign_events]
+
+[cross_campaign_events.while_iron_throne_active]
+gorgon_probes = { chance = 10, effect = "northern_border_skirmish", severity = "minor" }
+spider_meddles = { chance = 15, effect = "assassination_attempt_or_blackmail", severity = "moderate" }
+magical_flicker = { chance = 5, effect = "source_weakness_noticed", severity = "flavor" }
+
+[cross_campaign_events.while_gorgons_shadow_active]
+succession_drama = { chance = 10, effect = "anuirean_reinforcements_delayed", severity = "moderate" }
+spider_agents = { chance = 10, effect = "intelligence_compromised", severity = "minor" }
+divine_portent = { chance = 5, effect = "bloodline_vision", severity = "flavor" }
+
+[cross_campaign_events.while_web_of_shadows_active]
+military_pressure = { chance = 10, effect = "gorgon_creates_distraction", severity = "moderate" }
+throne_politics = { chance = 15, effect = "political_complication", severity = "minor" }
+magical_instability = { chance = 5, effect = "scrying_disrupted", severity = "minor" }
+
+[cross_campaign_events.while_sources_of_power_active]
+political_ignorance = { chance = 20, effect = "nobody_takes_threat_seriously", severity = "frustrating" }
+awnshegh_exploitation = { chance = 10, effect = "awnsheghlien_benefit_from_chaos", severity = "moderate" }
+divine_attention = { chance = 5, effect = "gods_notice_crisis", severity = "significant" }
+
+[cross_campaign_events.universal]
+# Can happen in any campaign
+comet_appears = { chance = 2, effect = "bloodline_visions_continent_wide", severity = "major" }
+ancient_tomb_opens = { chance = 3, effect = "old_power_awakens", severity = "significant" }
+divine_manifestation = { chance = 1, effect = "god_fragment_appears", severity = "major" }
+
+# ============================================================================
+# SAVE DATA STRUCTURE
+# ============================================================================
+
+[save_structure]
+version = "1.0"
+
+[save_structure.campaign_save]
+current_campaign = "string"
+turn_number = "integer"
+act = "integer"
+character_state = "character_object"
+domain_state = "domain_object"
+npc_states = "array[npc_state]"
+event_history = "array[event_record]"
+variables = "object"
+oracle_chaos = "integer"
+
+[save_structure.world_save]
+completed_campaigns = "array[campaign_record]"
+world_state = "object"  # All world_state variables
+npc_persistent_state = "object"  # Shared NPC data
+player_legacy = "object"  # Titles, achievements, etc
+timeline_position = "object"  # Current date, events occurred
+difficulty_modifiers = "object"  # Active modifiers
+
+[save_structure.auto_backup]
+enabled = true
+frequency = "every_turn"
+max_backups = 10
+backup_on_campaign_complete = true
+
+# ============================================================================
+# API FOR GUI INTEGRATION
+# ============================================================================
+
+[api]
+
+[api.queries]
+get_available_campaigns = "Returns list of campaigns player can start"
+get_campaign_state = "Returns current state of active campaign"
+get_world_state = "Returns global world state"
+get_npc_disposition = "Returns NPC relationship accounting for all campaigns"
+get_player_legacy = "Returns accumulated achievements and persistent state"
+get_timeline = "Returns current date and historical events"
+
+[api.mutations]
+start_campaign = "Initialize new campaign with inherited state"
+advance_turn = "Process turn, update states, return events"
+make_choice = "Process player choice, apply effects"
+save_game = "Serialize all state to file"
+load_game = "Deserialize state from file"
+
+[api.events]
+on_campaign_complete = "Called when campaign reaches ending"
+on_turn_complete = "Called after turn processing"
+on_world_state_change = "Called when global state changes"
+on_npc_state_change = "Called when shared NPC state changes"
+on_achievement_unlocked = "Called when player earns achievement"

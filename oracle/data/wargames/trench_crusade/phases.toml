@@ -1,0 +1,74 @@
+# Trench Crusade - Turn Structure
+# Alternating activations skirmish game
+
+[turn_structure]
+name = "Alternating Activations"
+description = "Players take turns activating one model at a time until all models have activated"
+
+[[phases]]
+name = "Initiative"
+order = 1
+description = "Determine who activates first this turn"
+steps = [
+    "Roll off at start of game to determine first player",
+    "After first turn, player who activated last goes first next turn",
+    "Alternates each round"
+]
+
+[[phases]]
+name = "Activation"
+order = 2
+description = "Active player selects one model to activate"
+steps = [
+    "Select an unactivated friendly model",
+    "Perform Actions in any order (each action type once)",
+    "Mark model as activated",
+    "Opponent then activates one of their models"
+]
+
+[[phases]]
+name = "Actions"
+order = 3
+description = "The activated model performs available actions"
+available_actions = [
+    "Move - Move up to Movement characteristic",
+    "Dash - Additional movement (no shooting)",
+    "Shoot - Make ranged attack",
+    "Fight - Make melee attacks",
+    "Charge - Move into combat with +1 Dice",
+    "Special Actions - Unit-specific abilities"
+]
+
+[[phases]]
+name = "Morale Phase"
+order = 4
+description = "Check morale when 50%+ casualties"
+steps = [
+    "If 50% or more of warband Out of Action, roll Morale",
+    "Roll 2D6, need 7+ to pass",
+    "Failure = warband becomes Shaken",
+    "Second failure while Shaken = game lost"
+]
+
+[[phases]]
+name = "End Phase"
+order = 5
+description = "Resolve end-of-turn effects"
+steps = [
+    "Remove temporary effects",
+    "Check victory conditions",
+    "Prepare for next turn"
+]
+
+# =============================================================================
+# QUICK REFERENCE
+# =============================================================================
+
+[quick_reference]
+success_roll = "2D6: 2-6 Fail, 7-11 Success, 12+ Critical"
+injury_table = "2D6: 2-6 Blood Marker, 7-8 Downed, 9-12 Out"
+charge_bonus = "+1 Dice to hit"
+cover = "-1 Dice to attacker"
+downed_melee = "+1 Injury Die vs Downed"
+bloodbath_cost = "6 markers (3 if Downed) = roll 3D6 sum all"
+morale_trigger = "50%+ Out of Action"

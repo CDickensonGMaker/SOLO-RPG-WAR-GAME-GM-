@@ -1,0 +1,151 @@
+# Fantasy NPC Roles
+# Occupations, positions, and social roles for NPCs
+
+[roles]
+entries = [
+  # Common Folk
+  { text = "innkeeper", weight = 3 },
+  { text = "blacksmith", weight = 3 },
+  { text = "farmer", weight = 4 },
+  { text = "miller", weight = 2 },
+  { text = "baker", weight = 2 },
+  { text = "butcher", weight = 2 },
+  { text = "tanner", weight = 1 },
+  { text = "carpenter", weight = 2 },
+  { text = "mason", weight = 1 },
+  { text = "fisherman", weight = 2 },
+  { text = "shepherd", weight = 2 },
+  { text = "stablehand", weight = 2 },
+  { text = "serving wench", weight = 2 },
+  { text = "barkeep", weight = 2 },
+  { text = "cook", weight = 2 },
+  { text = "brewer", weight = 1 },
+  { text = "weaver", weight = 1 },
+  { text = "potter", weight = 1 },
+  { text = "chandler", weight = 1 },
+  { text = "cobbler", weight = 1 },
+
+  # Merchants & Traders
+  { text = "merchant", weight = 2 },
+  { text = "peddler", weight = 2 },
+  { text = "caravan master", weight = 1 },
+  { text = "moneylender", weight = 1 },
+  { text = "fence", weight = 1 },
+  { text = "horse trader", weight = 1 },
+  { text = "spice merchant", weight = 1 },
+  { text = "jeweler", weight = 1 },
+  { text = "apothecary", weight = 2 },
+
+  # Nobility & Officials
+  { text = "knight", weight = 2 },
+  { text = "squire", weight = 2 },
+  { text = "lord", weight = 1 },
+  { text = "lady", weight = 1 },
+  { text = "baron", weight = 1 },
+  { text = "count", weight = 1 },
+  { text = "duke", weight = 1 },
+  { text = "steward", weight = 1 },
+  { text = "herald", weight = 1 },
+  { text = "tax collector", weight = 1 },
+  { text = "magistrate", weight = 1 },
+  { text = "bailiff", weight = 1 },
+  { text = "reeve", weight = 1 },
+
+  # Religious
+  { text = "priest", weight = 2 },
+  { text = "priestess", weight = 2 },
+  { text = "acolyte", weight = 2 },
+  { text = "monk", weight = 2 },
+  { text = "nun", weight = 1 },
+  { text = "paladin", weight = 1 },
+  { text = "inquisitor", weight = 1 },
+  { text = "pilgrim", weight = 2 },
+  { text = "shrine keeper", weight = 1 },
+  { text = "oracle", weight = 1 },
+  { text = "cultist", weight = 1 },
+  { text = "cult leader", weight = 1 },
+  { text = "heretic", weight = 1 },
+
+  # Magical
+  { text = "hedge wizard", weight = 1 },
+  { text = "court wizard", weight = 1 },
+  { text = "witch", weight = 1 },
+  { text = "warlock", weight = 1 },
+  { text = "sorcerer", weight = 1 },
+  { text = "alchemist", weight = 1 },
+  { text = "enchanter", weight = 1 },
+  { text = "diviner", weight = 1 },
+  { text = "necromancer", weight = 1 },
+  { text = "wizard's apprentice", weight = 2 },
+  { text = "arcane scholar", weight = 1 },
+
+  # Rogues & Criminals
+  { text = "thief", weight = 2 },
+  { text = "pickpocket", weight = 2 },
+  { text = "burglar", weight = 1 },
+  { text = "assassin", weight = 1 },
+  { text = "smuggler", weight = 1 },
+  { text = "bandit", weight = 2 },
+  { text = "highwayman", weight = 1 },
+  { text = "crime lord", weight = 1 },
+  { text = "con artist", weight = 1 },
+  { text = "spy", weight = 1 },
+  { text = "information broker", weight = 1 },
+
+  # Warriors & Military
+  { text = "soldier", weight = 3 },
+  { text = "guard", weight = 3 },
+  { text = "captain", weight = 1 },
+  { text = "sergeant", weight = 1 },
+  { text = "mercenary", weight = 2 },
+  { text = "sellsword", weight = 2 },
+  { text = "bounty hunter", weight = 1 },
+  { text = "veteran", weight = 1 },
+  { text = "archer", weight = 1 },
+  { text = "siege engineer", weight = 1 },
+
+  # Adventurers
+  { text = "adventurer", weight = 2 },
+  { text = "dungeon delver", weight = 1 },
+  { text = "treasure hunter", weight = 1 },
+  { text = "monster hunter", weight = 1 },
+  { text = "ranger", weight = 1 },
+  { text = "wandering bard", weight = 1 },
+  { text = "retired adventurer", weight = 1 },
+
+  # Entertainers
+  { text = "bard", weight = 2 },
+  { text = "minstrel", weight = 1 },
+  { text = "jester", weight = 1 },
+  { text = "actor", weight = 1 },
+  { text = "acrobat", weight = 1 },
+  { text = "fortune teller", weight = 1 },
+  { text = "storyteller", weight = 1 },
+
+  # Scholars & Learned
+  { text = "sage", weight = 1 },
+  { text = "scholar", weight = 1 },
+  { text = "scribe", weight = 1 },
+  { text = "librarian", weight = 1 },
+  { text = "cartographer", weight = 1 },
+  { text = "historian", weight = 1 },
+  { text = "tutor", weight = 1 },
+
+  # Healers
+  { text = "healer", weight = 2 },
+  { text = "herbalist", weight = 2 },
+  { text = "midwife", weight = 1 },
+  { text = "chirurgeon", weight = 1 },
+  { text = "plague doctor", weight = 1 },
+
+  # Outcasts & Unusual
+  { text = "hermit", weight = 1 },
+  { text = "beggar", weight = 2 },
+  { text = "madman", weight = 1 },
+  { text = "wanderer", weight = 1 },
+  { text = "exile", weight = 1 },
+  { text = "fugitive", weight = 1 },
+  { text = "grave digger", weight = 1 },
+  { text = "executioner", weight = 1 },
+  { text = "rat catcher", weight = 1 },
+]

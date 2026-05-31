@@ -1,0 +1,711 @@
+# Warhammer 40,000 2nd Edition Wargear Cards Reference
+# Classic wargear from the golden age of 40K
+
+[wargear_info]
+description = "Wargear cards were a defining feature of 2nd Edition, providing equipment options for characters and squads"
+
+# =============================================================================
+# MELEE WEAPONS
+# =============================================================================
+
+[[wargear]]
+name = "Chainsword"
+type = "melee"
+category = "common"
+description = "A motorized blade with adamantium teeth that roar when activated"
+effects = ["Close combat weapon", "+1 Attack when paired with pistol"]
+points = 2
+availability = ["Space Marines", "Imperial Guard", "Chaos", "Orks"]
+
+[[wargear]]
+name = "Power Sword"
+type = "melee"
+category = "power_weapon"
+description = "A blade wreathed in a disruptive energy field"
+effects = ["Ignores armor saves", "User Strength"]
+points = 15
+availability = ["Space Marines", "Imperial Guard Officers", "Eldar", "Chaos"]
+
+[[wargear]]
+name = "Power Axe"
+type = "melee"
+category = "power_weapon"
+description = "A heavy axe with a power field generator"
+effects = ["Ignores armor saves", "+1 Strength", "Strikes at Initiative 1"]
+points = 15
+availability = ["Space Marines", "Chaos", "Imperial Guard"]
+
+[[wargear]]
+name = "Power Fist"
+type = "melee"
+category = "power_weapon"
+description = "A massive armored gauntlet crackling with energy"
+effects = ["Doubles Strength", "Ignores armor saves", "Strikes at Initiative 1", "Unwieldy"]
+points = 25
+availability = ["Space Marines", "Chaos", "Imperial Guard"]
+
+[[wargear]]
+name = "Lightning Claw"
+type = "melee"
+category = "power_weapon"
+description = "Gauntlet fitted with energized adamantium blades"
+effects = ["Ignores armor saves", "Re-roll failed wounds", "+1 Attack if paired"]
+points = 30
+availability = ["Space Marines", "Chaos"]
+
+[[wargear]]
+name = "Thunder Hammer"
+type = "melee"
+category = "power_weapon"
+description = "A massive hammer that releases energy on impact"
+effects = ["Doubles Strength", "Ignores armor saves", "Strikes at Initiative 1", "Concussive"]
+points = 30
+availability = ["Space Marines", "Chaos"]
+
+[[wargear]]
+name = "Force Sword"
+type = "melee"
+category = "force_weapon"
+description = "A psychically attuned blade that can slay with a thought"
+effects = ["Ignores armor saves", "Instant Death on psychic test", "Psyker only"]
+points = 25
+availability = ["Space Marine Librarians", "Grey Knights", "Chaos Sorcerers"]
+
+[[wargear]]
+name = "Force Axe"
+type = "melee"
+category = "force_weapon"
+description = "A force weapon in axe form"
+effects = ["Ignores armor saves", "+1 Strength", "Instant Death on psychic test", "Strikes at I1"]
+points = 25
+availability = ["Space Marine Librarians", "Chaos Sorcerers"]
+
+[[wargear]]
+name = "Witchblade"
+type = "melee"
+category = "force_weapon"
+description = "An Eldar psychic weapon that wounds on a 2+"
+effects = ["Always wounds on 2+", "Ignores armor saves", "Psyker only"]
+points = 25
+availability = ["Eldar Farseers", "Eldar Warlocks"]
+
+[[wargear]]
+name = "Bonesword"
+type = "melee"
+category = "tyranid"
+description = "A Tyranid bioweapon that drains life force"
+effects = ["Ignores armor saves", "Instant Death on double wound roll"]
+points = 20
+availability = ["Tyranid Warriors", "Hive Tyrants"]
+
+[[wargear]]
+name = "Choppa"
+type = "melee"
+category = "ork"
+description = "An Ork close combat weapon, crudely effective"
+effects = ["Close combat weapon", "+1 Strength on charge"]
+points = 1
+availability = ["Orks"]
+
+[[wargear]]
+name = "Big Choppa"
+type = "melee"
+category = "ork"
+description = "A massive Ork blade for killin' big things"
+effects = ["+2 Strength", "Two-handed"]
+points = 5
+availability = ["Orks"]
+
+[[wargear]]
+name = "Power Klaw"
+type = "melee"
+category = "ork"
+description = "Ork version of a power fist, dead killy"
+effects = ["Doubles Strength", "Ignores armor saves", "Strikes at Initiative 1"]
+points = 25
+availability = ["Orks"]
+
+[[wargear]]
+name = "Eviscerator"
+type = "melee"
+category = "imperial"
+description = "A two-handed chainsword used by zealots"
+effects = ["Doubles Strength", "Ignores armor saves", "Two-handed", "Unwieldy"]
+points = 25
+availability = ["Sisters of Battle", "Adeptus Ministorum"]
+
+[[wargear]]
+name = "Power Maul"
+type = "melee"
+category = "power_weapon"
+description = "A power weapon in mace form, favored by enforcers"
+effects = ["+2 Strength", "AP4", "Concussive"]
+points = 15
+availability = ["Space Marines", "Arbites", "Imperial Guard"]
+
+[[wargear]]
+name = "Frost Blade"
+type = "melee"
+category = "space_wolves"
+description = "A finely crafted power weapon of Fenris"
+effects = ["+1 Strength", "Ignores armor saves"]
+points = 25
+availability = ["Space Wolves"]
+
+[[wargear]]
+name = "Crozius Arcanum"
+type = "melee"
+category = "chaplain"
+description = "The sacred weapon of Space Marine Chaplains"
+effects = ["+2 Strength", "Ignores armor saves", "Chaplain only"]
+points = 25
+availability = ["Space Marine Chaplains"]
+
+# =============================================================================
+# RANGED WEAPONS (BASIC)
+# =============================================================================
+
+[[wargear]]
+name = "Bolt Pistol"
+type = "ranged"
+category = "pistol"
+description = "Standard sidearm of the Adeptus Astartes"
+stats = { range = "12\"", strength = "4", ap = "5", type = "Pistol" }
+effects = ["+1 Attack in close combat with CCW"]
+points = 1
+availability = ["Space Marines", "Sisters of Battle", "Chaos"]
+
+[[wargear]]
+name = "Plasma Pistol"
+type = "ranged"
+category = "pistol"
+description = "A compact plasma weapon with tremendous power"
+stats = { range = "12\"", strength = "7", ap = "2", type = "Pistol" }
+effects = ["Gets Hot!", "+1 Attack in close combat with CCW"]
+points = 15
+availability = ["Space Marines", "Chaos", "Imperial Guard Officers"]
+
+[[wargear]]
+name = "Laspistol"
+type = "ranged"
+category = "pistol"
+description = "Standard Imperial sidearm"
+stats = { range = "12\"", strength = "3", ap = "-", type = "Pistol" }
+effects = ["+1 Attack in close combat with CCW"]
+points = 1
+availability = ["Imperial Guard", "Chaos Cultists"]
+
+[[wargear]]
+name = "Boltgun"
+type = "ranged"
+category = "basic"
+description = "The iconic weapon of the Space Marines"
+stats = { range = "24\"", strength = "4", ap = "5", type = "Rapid Fire" }
+effects = ["Rapid Fire at 12\""]
+points = 2
+availability = ["Space Marines", "Sisters of Battle", "Chaos"]
+
+[[wargear]]
+name = "Lasgun"
+type = "ranged"
+category = "basic"
+description = "Standard Imperial Guard rifle"
+stats = { range = "24\"", strength = "3", ap = "-", type = "Rapid Fire" }
+effects = ["Rapid Fire at 12\""]
+points = 0
+availability = ["Imperial Guard"]
+
+[[wargear]]
+name = "Autogun"
+type = "ranged"
+category = "basic"
+description = "Solid projectile weapon, common among militia"
+stats = { range = "24\"", strength = "3", ap = "-", type = "Rapid Fire" }
+effects = ["Rapid Fire at 12\""]
+points = 0
+availability = ["Chaos Cultists", "PDF", "Genestealer Cult"]
+
+[[wargear]]
+name = "Shuriken Catapult"
+type = "ranged"
+category = "eldar"
+description = "Eldar weapon firing monomolecular discs"
+stats = { range = "12\"", strength = "4", ap = "5", type = "Assault 2" }
+effects = ["Assault weapon", "Bladestorm on 6 to wound"]
+points = 2
+availability = ["Eldar"]
+
+[[wargear]]
+name = "Shoota"
+type = "ranged"
+category = "ork"
+description = "Ork ballistic weapon, loud and inaccurate"
+stats = { range = "18\"", strength = "4", ap = "6", type = "Assault 2" }
+effects = ["Assault weapon", "Dakka Dakka Dakka"]
+points = 2
+availability = ["Orks"]
+
+[[wargear]]
+name = "Slugga"
+type = "ranged"
+category = "ork"
+description = "Ork pistol, big and killy"
+stats = { range = "12\"", strength = "4", ap = "6", type = "Pistol" }
+effects = ["+1 Attack in close combat with Choppa"]
+points = 1
+availability = ["Orks"]
+
+# =============================================================================
+# SPECIAL WEAPONS
+# =============================================================================
+
+[[wargear]]
+name = "Flamer"
+type = "ranged"
+category = "special"
+description = "Projects a gout of burning promethium"
+stats = { range = "Template", strength = "4", ap = "5", type = "Assault 1" }
+effects = ["Template weapon", "No cover saves", "Ignores BS"]
+points = 6
+availability = ["Space Marines", "Imperial Guard", "Chaos", "Sisters of Battle"]
+
+[[wargear]]
+name = "Meltagun"
+type = "ranged"
+category = "special"
+description = "Fires a blast of superheated fusion energy"
+stats = { range = "12\"", strength = "8", ap = "1", type = "Assault 1" }
+effects = ["Melta - 2D6 armor penetration at half range", "Tank hunter"]
+points = 10
+availability = ["Space Marines", "Imperial Guard", "Chaos", "Sisters of Battle"]
+
+[[wargear]]
+name = "Plasma Gun"
+type = "ranged"
+category = "special"
+description = "Fires bolts of superheated plasma"
+stats = { range = "24\"", strength = "7", ap = "2", type = "Rapid Fire" }
+effects = ["Gets Hot!", "Rapid Fire at 12\""]
+points = 15
+availability = ["Space Marines", "Imperial Guard", "Chaos"]
+
+[[wargear]]
+name = "Grenade Launcher"
+type = "ranged"
+category = "special"
+description = "Versatile weapon firing frag or krak grenades"
+stats = { range = "24\"", strength = "3/6", ap = "6/4", type = "Assault 1" }
+effects = ["Frag: S3 AP6 Blast", "Krak: S6 AP4"]
+points = 8
+availability = ["Imperial Guard", "Space Marine Scouts"]
+
+[[wargear]]
+name = "Storm Bolter"
+type = "ranged"
+category = "special"
+description = "Twin-linked boltgun for sustained fire"
+stats = { range = "24\"", strength = "4", ap = "5", type = "Assault 2" }
+effects = ["Twin-linked", "Assault weapon"]
+points = 5
+availability = ["Space Marines", "Grey Knights", "Sisters of Battle"]
+
+[[wargear]]
+name = "Combi-Weapon"
+type = "ranged"
+category = "special"
+description = "Boltgun with underslung special weapon"
+stats = { range = "24\"", strength = "4", ap = "5", type = "Rapid Fire" }
+effects = ["May fire as Boltgun OR special weapon once per game"]
+points = 10
+availability = ["Space Marines", "Chaos"]
+
+# =============================================================================
+# HEAVY WEAPONS
+# =============================================================================
+
+[[wargear]]
+name = "Heavy Bolter"
+type = "ranged"
+category = "heavy"
+description = "Larger caliber bolter for sustained suppressive fire"
+stats = { range = "36\"", strength = "5", ap = "4", type = "Heavy 3" }
+effects = ["Sustained Fire 1 die"]
+points = 15
+availability = ["Space Marines", "Imperial Guard", "Chaos", "Sisters of Battle"]
+
+[[wargear]]
+name = "Lascannon"
+type = "ranged"
+category = "heavy"
+description = "Powerful anti-tank laser weapon"
+stats = { range = "48\"", strength = "9", ap = "2", type = "Heavy 1" }
+effects = ["Anti-tank", "Long range"]
+points = 25
+availability = ["Space Marines", "Imperial Guard", "Chaos"]
+
+[[wargear]]
+name = "Missile Launcher"
+type = "ranged"
+category = "heavy"
+description = "Versatile weapon with multiple warhead types"
+stats = { range = "48\"", strength = "4/8", ap = "6/3", type = "Heavy 1" }
+effects = ["Frag: S4 AP6 Blast", "Krak: S8 AP3"]
+points = 20
+availability = ["Space Marines", "Imperial Guard", "Chaos"]
+
+[[wargear]]
+name = "Multi-melta"
+type = "ranged"
+category = "heavy"
+description = "Heavy fusion weapon for tank hunting"
+stats = { range = "24\"", strength = "8", ap = "1", type = "Heavy 1" }
+effects = ["Melta - 2D6 armor penetration at 12\""]
+points = 20
+availability = ["Space Marines", "Sisters of Battle", "Chaos"]
+
+[[wargear]]
+name = "Plasma Cannon"
+type = "ranged"
+category = "heavy"
+description = "Heavy plasma weapon firing devastating blasts"
+stats = { range = "36\"", strength = "7", ap = "2", type = "Heavy 1" }
+effects = ["Gets Hot!", "Blast"]
+points = 25
+availability = ["Space Marines", "Chaos"]
+
+[[wargear]]
+name = "Autocannon"
+type = "ranged"
+category = "heavy"
+description = "High-caliber automatic cannon"
+stats = { range = "48\"", strength = "7", ap = "4", type = "Heavy 2" }
+effects = ["Reliable", "Good vs light vehicles"]
+points = 15
+availability = ["Imperial Guard", "Chaos"]
+
+[[wargear]]
+name = "Mortar"
+type = "ranged"
+category = "heavy"
+description = "Indirect fire weapon for suppression"
+stats = { range = "48\"", strength = "4", ap = "6", type = "Heavy 1" }
+effects = ["Blast", "Indirect Fire - no line of sight needed", "Barrage"]
+points = 10
+availability = ["Imperial Guard"]
+
+[[wargear]]
+name = "Assault Cannon"
+type = "ranged"
+category = "heavy"
+description = "Multi-barreled rotary cannon with tremendous fire rate"
+stats = { range = "24\"", strength = "6", ap = "4", type = "Heavy 4" }
+effects = ["Sustained Fire 3 dice", "Rending on 6s"]
+points = 30
+availability = ["Space Marine Terminators"]
+
+[[wargear]]
+name = "Conversion Beamer"
+type = "ranged"
+category = "heavy"
+description = "Exotic weapon more powerful at longer range"
+stats = { range = "72\"", strength = "6-10", ap = "1-4", type = "Heavy 1" }
+effects = ["Strength increases with range", "Rare"]
+points = 50
+availability = ["Space Marine Techmarines"]
+
+# =============================================================================
+# GRENADES
+# =============================================================================
+
+[[wargear]]
+name = "Frag Grenades"
+type = "grenade"
+category = "offensive"
+description = "Standard fragmentation grenades"
+stats = { range = "8\"", strength = "3", ap = "-", type = "Assault 1" }
+effects = ["Blast", "Assault grenades - no Initiative penalty for charging"]
+points = 1
+availability = ["Space Marines", "Imperial Guard", "Eldar", "Chaos"]
+
+[[wargear]]
+name = "Krak Grenades"
+type = "grenade"
+category = "offensive"
+description = "Anti-armor grenades"
+stats = { range = "8\"", strength = "6", ap = "4", type = "Assault 1" }
+effects = ["Anti-vehicle in close combat"]
+points = 2
+availability = ["Space Marines", "Imperial Guard", "Chaos"]
+
+[[wargear]]
+name = "Melta Bombs"
+type = "grenade"
+category = "offensive"
+description = "Anti-tank thermal charges"
+stats = { strength = "8", ap = "1", type = "Melee" }
+effects = ["2D6 armor penetration", "Melta", "Vehicle only in close combat"]
+points = 5
+availability = ["Space Marines", "Imperial Guard Veterans", "Chaos"]
+
+[[wargear]]
+name = "Plasma Grenades"
+type = "grenade"
+category = "eldar"
+description = "Eldar assault grenades"
+stats = { range = "8\"", strength = "4", ap = "4", type = "Assault 1" }
+effects = ["Blast", "Assault grenades"]
+points = 2
+availability = ["Eldar"]
+
+[[wargear]]
+name = "Haywire Grenades"
+type = "grenade"
+category = "eldar"
+description = "Eldar anti-vehicle grenades that disrupt electronics"
+stats = { strength = "-", ap = "-", type = "Melee" }
+effects = ["Glancing hit on 2-5", "Penetrating hit on 6", "Vehicle only"]
+points = 5
+availability = ["Eldar"]
+
+[[wargear]]
+name = "Stikkbombs"
+type = "grenade"
+category = "ork"
+description = "Ork fragmentation grenades, crude but effective"
+stats = { range = "6\"", strength = "3", ap = "-", type = "Assault 1" }
+effects = ["Blast", "Assault grenades"]
+points = 1
+availability = ["Orks"]
+
+# =============================================================================
+# ARMOR AND PROTECTION
+# =============================================================================
+
+[[wargear]]
+name = "Power Armor"
+type = "armor"
+category = "marine"
+description = "Standard Adeptus Astartes battle armor"
+effects = ["3+ Armor Save"]
+points = 0
+availability = ["Space Marines", "Chaos Marines"]
+
+[[wargear]]
+name = "Terminator Armor"
+type = "armor"
+category = "marine"
+description = "Tactical Dreadnought Armor for elite warriors"
+effects = ["2+ Armor Save", "5+ Invulnerable Save", "Cannot Sweeping Advance"]
+points = 25
+availability = ["Space Marine Terminators", "Chaos Terminators"]
+
+[[wargear]]
+name = "Scout Armor"
+type = "armor"
+category = "marine"
+description = "Lighter armor for reconnaissance troops"
+effects = ["4+ Armor Save"]
+points = 0
+availability = ["Space Marine Scouts"]
+
+[[wargear]]
+name = "Artificer Armor"
+type = "armor"
+category = "marine"
+description = "Masterwork power armor crafted by Tech-Marines"
+effects = ["2+ Armor Save"]
+points = 20
+availability = ["Space Marine Characters"]
+
+[[wargear]]
+name = "Carapace Armor"
+type = "armor"
+category = "imperial"
+description = "Heavy combat armor for elite Imperial troops"
+effects = ["4+ Armor Save"]
+points = 5
+availability = ["Imperial Guard Storm Troopers", "Arbites"]
+
+[[wargear]]
+name = "Flak Armor"
+type = "armor"
+category = "imperial"
+description = "Standard Imperial Guard body armor"
+effects = ["5+ Armor Save"]
+points = 0
+availability = ["Imperial Guard"]
+
+[[wargear]]
+name = "Refractor Field"
+type = "armor"
+category = "force_field"
+description = "Personal energy shield for officers"
+effects = ["5+ Invulnerable Save"]
+points = 15
+availability = ["Imperial Officers", "Commissars"]
+
+[[wargear]]
+name = "Iron Halo"
+type = "armor"
+category = "force_field"
+description = "Sacred protective field generator"
+effects = ["4+ Invulnerable Save"]
+points = 25
+availability = ["Space Marine Captains", "Chaplains"]
+
+[[wargear]]
+name = "Storm Shield"
+type = "armor"
+category = "shield"
+description = "Large combat shield with built-in power field"
+effects = ["3+ Invulnerable Save", "Cannot use two-handed weapons"]
+points = 15
+availability = ["Space Marines"]
+
+[[wargear]]
+name = "Combat Shield"
+type = "armor"
+category = "shield"
+description = "Smaller shield for close combat"
+effects = ["5+ Invulnerable Save in close combat only"]
+points = 5
+availability = ["Space Marines", "Imperial Guard"]
+
+[[wargear]]
+name = "Rosarius"
+type = "armor"
+category = "force_field"
+description = "Sacred symbol with built-in force field"
+effects = ["4+ Invulnerable Save"]
+points = 25
+availability = ["Chaplains", "Sisters of Battle Canoness"]
+
+# =============================================================================
+# WARGEAR AND EQUIPMENT
+# =============================================================================
+
+[[wargear]]
+name = "Jump Pack"
+type = "equipment"
+category = "mobility"
+description = "Personal flight system for rapid assault"
+effects = ["12\" move", "Ignore terrain", "Deep Strike", "Hammer of Wrath"]
+points = 15
+availability = ["Space Marines", "Chaos Marines", "Sisters of Battle Seraphim"]
+
+[[wargear]]
+name = "Teleport Homer"
+type = "equipment"
+category = "tactical"
+description = "Homing beacon for teleporting Terminators"
+effects = ["Terminators Deep Strike without scatter within 6\""]
+points = 10
+availability = ["Space Marines"]
+
+[[wargear]]
+name = "Auspex"
+type = "equipment"
+category = "tactical"
+description = "Handheld scanner for detecting enemies"
+effects = ["Reduce enemy cover saves by 1 within 12\""]
+points = 5
+availability = ["Space Marines", "Imperial Guard"]
+
+[[wargear]]
+name = "Signum"
+type = "equipment"
+category = "tactical"
+description = "Targeting system for fire coordination"
+effects = ["One model in unit may re-roll to hit"]
+points = 10
+availability = ["Space Marine Sergeants"]
+
+[[wargear]]
+name = "Narthecium"
+type = "equipment"
+category = "medical"
+description = "Medical kit of the Apothecary"
+effects = ["Feel No Pain 5+ for unit"]
+points = 15
+availability = ["Space Marine Apothecaries"]
+
+[[wargear]]
+name = "Medi-Pack"
+type = "equipment"
+category = "medical"
+description = "Field medical supplies"
+effects = ["Feel No Pain 5+ for unit"]
+points = 10
+availability = ["Imperial Guard Medics"]
+
+[[wargear]]
+name = "Vox-Caster"
+type = "equipment"
+category = "communication"
+description = "Long-range communication device"
+effects = ["Re-roll failed Morale tests if in contact with Officer"]
+points = 5
+availability = ["Imperial Guard"]
+
+[[wargear]]
+name = "Power Generator"
+type = "equipment"
+category = "squat"
+description = "Portable power source for Squat equipment"
+effects = ["Required for some Squat heavy weapons"]
+points = 5
+availability = ["Squats"]
+
+[[wargear]]
+name = "Digital Weapons"
+type = "equipment"
+category = "exotic"
+description = "Miniaturized weapons built into rings"
+effects = ["+1 Attack in close combat", "AP2"]
+points = 15
+availability = ["Space Marine Characters", "Inquisitors"]
+
+[[wargear]]
+name = "Psychic Hood"
+type = "equipment"
+category = "psychic"
+description = "Device that helps nullify enemy psychic powers"
+effects = ["Nullify enemy psychic powers on 4+ within 24\""]
+points = 25
+availability = ["Space Marine Librarians"]
+
+[[wargear]]
+name = "Force Rod"
+type = "equipment"
+category = "psychic"
+description = "Shorter force weapon for psykers"
+effects = ["Force weapon", "+1 to psychic tests"]
+points = 20
+availability = ["Grey Knights"]
+
+[[wargear]]
+name = "Spirit Stones"
+type = "equipment"
+category = "eldar"
+description = "Eldar soulstones that protect the wearer"
+effects = ["Nullify Perils of the Warp on 4+"]
+points = 10
+availability = ["Eldar Psykers"]
+
+[[wargear]]
+name = "Waaagh! Banner"
+type = "equipment"
+category = "ork"
+description = "Inspiring banner that drives Orks to greater violence"
+effects = ["+1 WS to unit", "Re-roll failed Morale"]
+points = 15
+availability = ["Orks"]
+
+[[wargear]]
+name = "Bioelectric Node"
+type = "equipment"
+category = "tyranid"
+description = "Tyranid psychic amplifier"
+effects = ["+1 to psychic tests", "Synapse range +6\""]
+points = 20
+availability = ["Tyranid Synapse Creatures"]

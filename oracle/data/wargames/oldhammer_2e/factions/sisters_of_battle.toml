@@ -1,0 +1,827 @@
+# Warhammer 40,000 2nd Edition - Sisters of Battle
+# The Adepta Sororitas - Daughters of the Emperor
+
+name = "Sisters of Battle"
+codex = "Codex: Sisters of Battle (1997)"
+description = "The militant arm of the Ecclesiarchy, fanatically devoted warrior-nuns wielding holy fire"
+playstyle = "Elite infantry with powerful flamers, meltas, and faith-based abilities"
+strengths = ["Acts of Faith", "Excellent special weapons", "High Leadership", "Flamers and Meltas", "Stubborn devotion"]
+weaknesses = ["No psykers", "Limited heavy armor", "Expensive infantry"]
+
+[faction_rules]
+name = "Acts of Faith"
+description = "Sisters may perform miraculous Acts of Faith, powered by their unwavering devotion to the Emperor"
+
+# =============================================================================
+# HQ UNITS
+# =============================================================================
+
+[[units]]
+name = "Canoness"
+type = "infantry"
+category = "HQ"
+points = 65
+models = "1"
+tactical_role = "commander"
+threat_level = "high"
+preferred_targets = ["characters", "heretics"]
+weaknesses = ["psykers", "massed_fire"]
+special_rules = ["Independent Character", "Shield of Faith (6++)", "Acts of Faith", "Lead the Righteous"]
+keywords = ["Infantry", "Character", "Adepta Sororitas"]
+
+[units.stats]
+M = 4
+WS = 5
+BS = 5
+S = 3
+T = 3
+W = 3
+I = 4
+A = 3
+Ld = 10
+Sv = "3+"
+
+[[units.weapons]]
+name = "Bolt Pistol"
+range = "12\""
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Pistol"
+shots = "1"
+
+[[units.weapons]]
+name = "Power Sword"
+range = "Melee"
+strength = "User"
+ap = "-"
+damage = "1"
+type = "Melee"
+abilities = ["Ignores Armor Saves"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Palatine"
+type = "infantry"
+category = "HQ"
+points = 45
+models = "1"
+tactical_role = "commander"
+threat_level = "medium"
+preferred_targets = ["infantry"]
+weaknesses = ["focused_fire"]
+special_rules = ["Independent Character", "Shield of Faith (6++)", "Acts of Faith"]
+keywords = ["Infantry", "Character", "Adepta Sororitas"]
+
+[units.stats]
+M = 4
+WS = 4
+BS = 4
+S = 3
+T = 3
+W = 2
+I = 4
+A = 2
+Ld = 9
+Sv = "3+"
+
+[[units.weapons]]
+name = "Bolt Pistol"
+range = "12\""
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Pistol"
+shots = "1"
+
+[[units.weapons]]
+name = "Chainsword"
+range = "Melee"
+strength = "User"
+ap = "-"
+damage = "1"
+type = "Melee"
+abilities = ["+1 Attack"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Missionary"
+type = "infantry"
+category = "HQ"
+points = 40
+models = "1"
+tactical_role = "support"
+threat_level = "low"
+preferred_targets = ["heretics"]
+weaknesses = ["focused_fire"]
+special_rules = ["Independent Character", "Zealot", "Hymns of Battle", "War Hymns"]
+keywords = ["Infantry", "Character", "Ministorum"]
+
+[units.stats]
+M = 4
+WS = 4
+BS = 3
+S = 3
+T = 3
+W = 2
+I = 3
+A = 2
+Ld = 8
+Sv = "4+"
+
+[[units.weapons]]
+name = "Autogun"
+range = "24\""
+strength = "3"
+ap = "-"
+damage = "1"
+type = "Rapid Fire"
+shots = "1"
+
+[[units.weapons]]
+name = "Eviscerator"
+range = "Melee"
+strength = "x2"
+ap = "-"
+damage = "1"
+type = "Melee"
+abilities = ["Ignores Armor Saves", "Unwieldy", "Two-handed"]
+
+# =============================================================================
+# ELITES
+# =============================================================================
+
+[[units]]
+name = "Celestians"
+type = "infantry"
+category = "Elites"
+points = 20
+models = "5-10"
+tactical_role = "elite_infantry"
+threat_level = "high"
+preferred_targets = ["infantry", "characters"]
+weaknesses = ["heavy_weapons"]
+special_rules = ["Shield of Faith (6++)", "Acts of Faith", "Bodyguard"]
+keywords = ["Infantry", "Celestians", "Adepta Sororitas"]
+
+[units.stats]
+M = 4
+WS = 4
+BS = 4
+S = 3
+T = 3
+W = 1
+I = 4
+A = 2
+Ld = 9
+Sv = "3+"
+
+[[units.weapons]]
+name = "Boltgun"
+range = "24\""
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Rapid Fire"
+shots = "1"
+
+[[units.weapons]]
+name = "Bolt Pistol"
+range = "12\""
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Pistol"
+shots = "1"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Sisters Repentia"
+type = "infantry"
+category = "Elites"
+points = 15
+models = "5-10"
+tactical_role = "assault"
+threat_level = "high"
+preferred_targets = ["infantry", "monsters"]
+weaknesses = ["shooting"]
+special_rules = ["Fearless", "Feel No Pain (5+)", "Zealot", "Seeking Redemption"]
+keywords = ["Infantry", "Repentia", "Adepta Sororitas"]
+
+[units.stats]
+M = 6
+WS = 4
+BS = 3
+S = 3
+T = 3
+W = 1
+I = 4
+A = 2
+Ld = 8
+Sv = "-"
+
+[[units.weapons]]
+name = "Penitent Eviscerator"
+range = "Melee"
+strength = "x2"
+ap = "-"
+damage = "D3"
+type = "Melee"
+abilities = ["Ignores Armor Saves", "Unwieldy"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Dialogus"
+type = "infantry"
+category = "Elites"
+points = 35
+models = "1"
+tactical_role = "support"
+threat_level = "low"
+preferred_targets = ["allies"]
+weaknesses = ["snipers"]
+special_rules = ["Shield of Faith (6++)", "Laud Hailer", "Stirring Rhetoric"]
+keywords = ["Infantry", "Character", "Adepta Sororitas"]
+
+[units.stats]
+M = 4
+WS = 3
+BS = 3
+S = 3
+T = 3
+W = 2
+I = 3
+A = 1
+Ld = 8
+Sv = "3+"
+
+[[units.weapons]]
+name = "Bolt Pistol"
+range = "12\""
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Pistol"
+shots = "1"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Hospitaller"
+type = "infantry"
+category = "Elites"
+points = 40
+models = "1"
+tactical_role = "medic"
+threat_level = "low"
+preferred_targets = ["wounded_allies"]
+weaknesses = ["snipers"]
+special_rules = ["Shield of Faith (6++)", "Chirurgeon", "Healer"]
+keywords = ["Infantry", "Character", "Adepta Sororitas"]
+
+[units.stats]
+M = 4
+WS = 3
+BS = 3
+S = 3
+T = 3
+W = 2
+I = 3
+A = 1
+Ld = 8
+Sv = "3+"
+
+[[units.weapons]]
+name = "Bolt Pistol"
+range = "12\""
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Pistol"
+shots = "1"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Imagifier"
+type = "infantry"
+category = "Elites"
+points = 45
+models = "1"
+tactical_role = "support"
+threat_level = "low"
+preferred_targets = ["allies"]
+weaknesses = ["snipers"]
+special_rules = ["Shield of Faith (6++)", "Simulacrum Imperialis", "Tale of the Faithful"]
+keywords = ["Infantry", "Character", "Adepta Sororitas"]
+
+[units.stats]
+M = 4
+WS = 3
+BS = 3
+S = 3
+T = 3
+W = 2
+I = 3
+A = 1
+Ld = 8
+Sv = "3+"
+
+[[units.weapons]]
+name = "Bolt Pistol"
+range = "12\""
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Pistol"
+shots = "1"
+
+# =============================================================================
+# TROOPS
+# =============================================================================
+
+[[units]]
+name = "Battle Sisters Squad"
+type = "infantry"
+category = "Troops"
+points = 13
+models = "5-20"
+tactical_role = "line_infantry"
+threat_level = "medium"
+preferred_targets = ["infantry"]
+weaknesses = ["heavy_weapons", "assault"]
+special_rules = ["Shield of Faith (6++)", "Acts of Faith"]
+keywords = ["Infantry", "Battle Sisters", "Adepta Sororitas"]
+
+[units.stats]
+M = 4
+WS = 4
+BS = 4
+S = 3
+T = 3
+W = 1
+I = 3
+A = 1
+Ld = 8
+Sv = "3+"
+
+[[units.weapons]]
+name = "Boltgun"
+range = "24\""
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Rapid Fire"
+shots = "1"
+
+[[units.weapons]]
+name = "Bolt Pistol"
+range = "12\""
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Pistol"
+shots = "1"
+
+[[units.weapons]]
+name = "Frag Grenades"
+range = "8\""
+strength = "3"
+ap = "-"
+damage = "1"
+type = "Assault 1"
+abilities = ["Blast"]
+
+[[units.weapons]]
+name = "Krak Grenades"
+range = "8\""
+strength = "6"
+ap = "4"
+damage = "1"
+type = "Assault 1"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Dominion Squad"
+type = "infantry"
+category = "Troops"
+points = 15
+models = "5-10"
+tactical_role = "special_weapons"
+threat_level = "high"
+preferred_targets = ["vehicles", "elite_infantry"]
+weaknesses = ["assault"]
+special_rules = ["Shield of Faith (6++)", "Acts of Faith", "Vanguard", "Scout"]
+keywords = ["Infantry", "Dominions", "Adepta Sororitas"]
+
+[units.stats]
+M = 4
+WS = 4
+BS = 4
+S = 3
+T = 3
+W = 1
+I = 3
+A = 1
+Ld = 8
+Sv = "3+"
+
+[[units.weapons]]
+name = "Meltagun"
+range = "12\""
+strength = "8"
+ap = "1"
+damage = "D6"
+type = "Assault 1"
+abilities = ["Melta"]
+
+[[units.weapons]]
+name = "Flamer"
+range = "Template"
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Assault 1"
+abilities = ["Template"]
+
+# =============================================================================
+# FAST ATTACK
+# =============================================================================
+
+[[units]]
+name = "Seraphim Squad"
+type = "infantry"
+category = "Fast Attack"
+points = 21
+models = "5-10"
+tactical_role = "assault"
+threat_level = "high"
+preferred_targets = ["infantry", "characters"]
+weaknesses = ["overwatch"]
+special_rules = ["Shield of Faith (6++)", "Acts of Faith", "Jump Pack", "Hit and Run"]
+keywords = ["Infantry", "Jump Pack", "Seraphim", "Adepta Sororitas"]
+
+[units.stats]
+M = 12
+WS = 4
+BS = 4
+S = 3
+T = 3
+W = 1
+I = 4
+A = 1
+Ld = 8
+Sv = "3+"
+
+[[units.weapons]]
+name = "Twin Bolt Pistols"
+range = "12\""
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Pistol 2"
+shots = "2"
+
+[[units.weapons]]
+name = "Twin Inferno Pistols"
+range = "6\""
+strength = "8"
+ap = "1"
+damage = "D6"
+type = "Pistol 2"
+abilities = ["Melta"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Zephyrim Squad"
+type = "infantry"
+category = "Fast Attack"
+points = 20
+models = "5-10"
+tactical_role = "assault"
+threat_level = "high"
+preferred_targets = ["infantry", "characters"]
+weaknesses = ["overwatch"]
+special_rules = ["Shield of Faith (6++)", "Acts of Faith", "Jump Pack", "Zealot"]
+keywords = ["Infantry", "Jump Pack", "Zephyrim", "Adepta Sororitas"]
+
+[units.stats]
+M = 12
+WS = 4
+BS = 4
+S = 3
+T = 3
+W = 1
+I = 4
+A = 2
+Ld = 8
+Sv = "3+"
+
+[[units.weapons]]
+name = "Bolt Pistol"
+range = "12\""
+strength = "4"
+ap = "5"
+damage = "1"
+type = "Pistol"
+shots = "1"
+
+[[units.weapons]]
+name = "Power Sword"
+range = "Melee"
+strength = "User"
+ap = "-"
+damage = "1"
+type = "Melee"
+abilities = ["Ignores Armor Saves"]
+
+# =============================================================================
+# HEAVY SUPPORT
+# =============================================================================
+
+[[units]]
+name = "Retributor Squad"
+type = "infantry"
+category = "Heavy Support"
+points = 15
+models = "5-10"
+tactical_role = "fire_support"
+threat_level = "high"
+preferred_targets = ["vehicles", "monsters"]
+weaknesses = ["assault"]
+special_rules = ["Shield of Faith (6++)", "Acts of Faith", "Storm of Retribution"]
+keywords = ["Infantry", "Retributors", "Adepta Sororitas"]
+
+[units.stats]
+M = 4
+WS = 4
+BS = 4
+S = 3
+T = 3
+W = 1
+I = 3
+A = 1
+Ld = 8
+Sv = "3+"
+
+[[units.weapons]]
+name = "Heavy Bolter"
+range = "36\""
+strength = "5"
+ap = "4"
+damage = "1"
+type = "Heavy 3"
+abilities = ["Sustained Fire 1"]
+
+[[units.weapons]]
+name = "Multi-melta"
+range = "24\""
+strength = "8"
+ap = "1"
+damage = "D6"
+type = "Heavy 1"
+abilities = ["Melta"]
+
+[[units.weapons]]
+name = "Heavy Flamer"
+range = "Template"
+strength = "5"
+ap = "4"
+damage = "1"
+type = "Assault 1"
+abilities = ["Template"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Penitent Engine"
+type = "vehicle"
+category = "Heavy Support"
+points = 85
+models = "1-3"
+tactical_role = "assault"
+threat_level = "high"
+preferred_targets = ["infantry", "vehicles"]
+weaknesses = ["melta", "lascannons"]
+special_rules = ["Walker", "Zealot", "Berserk", "Feel No Pain (5+)"]
+keywords = ["Vehicle", "Walker", "Penitent Engine", "Adepta Sororitas"]
+
+[units.stats]
+M = 8
+WS = 4
+BS = 3
+S = 8
+T = "-"
+W = "-"
+I = 4
+A = 3
+Ld = "-"
+Sv = "-"
+
+[units.armor]
+front = 11
+side = 11
+rear = 11
+
+[[units.weapons]]
+name = "Heavy Flamer (x2)"
+range = "Template"
+strength = "5"
+ap = "4"
+damage = "1"
+type = "Assault 1"
+abilities = ["Template"]
+
+[[units.weapons]]
+name = "Penitent Buzz-blades"
+range = "Melee"
+strength = "x2"
+ap = "-"
+damage = "D3"
+type = "Melee"
+abilities = ["Ignores Armor Saves"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Exorcist"
+type = "vehicle"
+category = "Heavy Support"
+points = 135
+models = "1"
+tactical_role = "fire_support"
+threat_level = "very_high"
+preferred_targets = ["vehicles", "monsters"]
+weaknesses = ["melta", "assault"]
+special_rules = ["Tank"]
+keywords = ["Vehicle", "Tank", "Exorcist", "Adepta Sororitas"]
+
+[units.stats]
+M = 10
+WS = "-"
+BS = 4
+S = "-"
+T = "-"
+W = "-"
+I = "-"
+A = "-"
+Ld = "-"
+Sv = "-"
+
+[units.armor]
+front = 13
+side = 11
+rear = 10
+
+[[units.weapons]]
+name = "Exorcist Missile Launcher"
+range = "48\""
+strength = "8"
+ap = "1"
+damage = "D3"
+type = "Heavy D6"
+abilities = ["Random shots"]
+
+[[units.weapons]]
+name = "Heavy Bolter"
+range = "36\""
+strength = "5"
+ap = "4"
+damage = "1"
+type = "Heavy 3"
+abilities = ["Sustained Fire 1"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Immolator"
+type = "vehicle"
+category = "Dedicated Transport"
+points = 75
+models = "1"
+tactical_role = "assault_transport"
+threat_level = "medium"
+preferred_targets = ["infantry"]
+weaknesses = ["melta", "assault"]
+special_rules = ["Tank", "Transport (6)"]
+keywords = ["Vehicle", "Tank", "Transport", "Immolator", "Adepta Sororitas"]
+
+[units.stats]
+M = 10
+WS = "-"
+BS = 4
+S = "-"
+T = "-"
+W = "-"
+I = "-"
+A = "-"
+Ld = "-"
+Sv = "-"
+
+[units.armor]
+front = 11
+side = 11
+rear = 10
+
+[[units.weapons]]
+name = "Twin-linked Heavy Flamer"
+range = "Template"
+strength = "5"
+ap = "4"
+damage = "1"
+type = "Assault 1"
+abilities = ["Template", "Twin-linked"]
+
+[[units.weapons]]
+name = "Twin-linked Multi-melta"
+range = "24\""
+strength = "8"
+ap = "1"
+damage = "D6"
+type = "Heavy 1"
+abilities = ["Melta", "Twin-linked"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Mortifiers"
+type = "vehicle"
+category = "Heavy Support"
+points = 65
+models = "1-4"
+tactical_role = "assault"
+threat_level = "high"
+preferred_targets = ["infantry"]
+weaknesses = ["melta", "lascannons"]
+special_rules = ["Walker", "Berserk Killing Machine"]
+keywords = ["Vehicle", "Walker", "Mortifiers", "Adepta Sororitas"]
+
+[units.stats]
+M = 8
+WS = 4
+BS = 3
+S = 6
+T = "-"
+W = "-"
+I = 4
+A = 4
+Ld = "-"
+Sv = "-"
+
+[units.armor]
+front = 11
+side = 11
+rear = 11
+
+[[units.weapons]]
+name = "Heavy Bolter (x2)"
+range = "36\""
+strength = "5"
+ap = "4"
+damage = "1"
+type = "Heavy 3"
+abilities = ["Sustained Fire 1"]
+
+[[units.weapons]]
+name = "Penitent Flails"
+range = "Melee"
+strength = "User"
+ap = "-"
+damage = "1"
+type = "Melee"
+abilities = ["+2 Attacks"]
+
+# =============================================================================
+# ACTS OF FAITH
+# =============================================================================
+
+[[acts_of_faith]]
+name = "Spirit of the Martyr"
+description = "When a model is slain, roll a D6. On a 5+, the model may make a single attack or shoot before being removed"
+point_cost = 0
+
+[[acts_of_faith]]
+name = "The Passion"
+description = "Unit may pile in and fight again at the end of the Fight phase"
+point_cost = 1
+
+[[acts_of_faith]]
+name = "Hand of the Emperor"
+description = "Add 1 to the unit's Strength characteristic until the end of the turn"
+point_cost = 1
+
+[[acts_of_faith]]
+name = "Light of the Emperor"
+description = "Unit automatically passes Morale and Pinning tests until the end of the turn"
+point_cost = 1
+
+[[acts_of_faith]]
+name = "Divine Guidance"
+description = "Unit's weapons wound on a 6 regardless of target's Toughness, and ignore armor saves"
+point_cost = 2

@@ -1,0 +1,77 @@
+# Cyberpunk Building Interior Locations
+# Inside the structures of the sprawl
+
+[locations]
+entries = [
+  # Nightlife
+  { text = "Underground techno club - bass you feel in your bones, laser grids", weight = 2 },
+  { text = "Corporate executive lounge - hushed deals over synthetic whiskey", weight = 1 },
+  { text = "Dive bar - sticky floors, cheap drinks, information for sale", weight = 3 },
+  { text = "Braindance den - customers slumped in chairs, living other lives", weight = 2 },
+  { text = "Combat sport arena - cage fights, augmented athletes, bloody crowds", weight = 2 },
+  { text = "Rooftop club - open sky, beautiful people, deadly falls", weight = 1 },
+  { text = "Karaoke bar - private rooms, soundproofed for deals and secrets", weight = 2 },
+  { text = "Strip club backroom - private dances and private conversations", weight = 2 },
+  { text = "Underground casino - high stakes, higher security, no law", weight = 2 },
+  { text = "Jazz lounge - live music, old money, suspicious meetings", weight = 1 },
+
+  # Medical
+  { text = "Back-alley ripperdoc clinic - bloody table, cheap chrome, no questions", weight = 3 },
+  { text = "Corporate medical center - gleaming surfaces, premium care, premium price", weight = 1 },
+  { text = "Trauma Team dispatch - armored medics, platinum response times", weight = 1 },
+  { text = "Cyberpsychosis ward - restrained patients, desperate treatments", weight = 1 },
+  { text = "Black market organ bank - cold storage, no provenance checks", weight = 1 },
+  { text = "Addiction recovery clinic - underfunded, overcrowded, trying", weight = 2 },
+  { text = "Gene therapy lab - experimental treatments, willing subjects", weight = 1 },
+  { text = "Street doc's apartment - medical equipment in the living room", weight = 2 },
+  { text = "Memory editing suite - change your past, premium service", weight = 1 },
+  { text = "Prosthetics showroom - latest cyberware on mannequin display", weight = 2 },
+
+  # Corporate
+  { text = "Megacorp lobby - security checkpoint, corporate propaganda screens", weight = 2 },
+  { text = "Executive boardroom - long table, power plays, window walls", weight = 1 },
+  { text = "Server farm - endless racks, cooling systems, netrunner target", weight = 2 },
+  { text = "R&D laboratory - prototype tech, paranoid security, trade secrets", weight = 1 },
+  { text = "Corporate cafeteria - subsidized food, monitored conversations", weight = 2 },
+  { text = "Secure archive - paper records, old secrets, physical access only", weight = 1 },
+  { text = "Executive suite - penthouse office, city views, fortress security", weight = 1 },
+  { text = "HR processing center - hiring, firing, contract enforcement", weight = 1 },
+  { text = "Corporate gym - executives maintaining their edge", weight = 1 },
+  { text = "Stockholder presentation hall - quarterly reports, managed expectations", weight = 1 },
+
+  # Criminal
+  { text = "Fixer's office - backroom of a legitimate business, deals made here", weight = 2 },
+  { text = "Gang clubhouse - stolen goods, armed guards, territorial pride", weight = 2 },
+  { text = "Smuggler's warehouse - shipping containers, hidden compartments", weight = 2 },
+  { text = "Illegal workshop - custom weapons, modified vehicles", weight = 2 },
+  { text = "Drug lab - chemical smell, paranoid chemists, armed guards", weight = 2 },
+  { text = "Counterfeit chip factory - fake credsticks, identity documents", weight = 1 },
+  { text = "Interrogation room - soundproofed, drains in the floor", weight = 1 },
+  { text = "Safe house apartment - bland, disposable, emergency supplies", weight = 2 },
+  { text = "Underground fighting ring - blood sport, big money changing hands", weight = 2 },
+  { text = "Stolen goods fence - everything available, nothing traceable", weight = 2 },
+
+  # Residential
+  { text = "Megabuilding apartment - cramped living, paper walls, community", weight = 2 },
+  { text = "Luxury penthouse - excess space, private security, isolation", weight = 1 },
+  { text = "Coffin hotel pod - just enough room to sleep, nothing more", weight = 2 },
+  { text = "Squatter den - abandoned building, makeshift living, solidarity", weight = 2 },
+  { text = "Corporate dormitory - company housing, company rules, company life", weight = 2 },
+  { text = "Nomad family vehicle interior - mobile home, tight quarters, freedom", weight = 1 },
+  { text = "Shared hacker apartment - cables everywhere, screens on every surface", weight = 2 },
+  { text = "Retired merc's home - trophies on walls, weapons within reach", weight = 1 },
+  { text = "Street kid hideout - abandoned building, youthful defiance", weight = 2 },
+  { text = "Middle-class home - normal life maintained against the chaos", weight = 1 },
+
+  # Services
+  { text = "Gun shop - legal firearms, illegal modifications available", weight = 2 },
+  { text = "Tech repair kiosk - fix anything, ask nothing", weight = 2 },
+  { text = "Data haven - secure servers, privacy guaranteed, premium rates", weight = 1 },
+  { text = "Netcafe - public terminals, private booths, information exchange", weight = 2 },
+  { text = "Clothing shop - armored fashion, style and protection", weight = 2 },
+  { text = "Vehicle garage - repairs, modifications, discrete storage", weight = 2 },
+  { text = "Pawn shop - desperate sales, no questions, quick cash", weight = 2 },
+  { text = "Legal office - corporate lawyers, contracts, loopholes", weight = 1 },
+  { text = "Private investigator office - missing persons, corporate espionage", weight = 1 },
+  { text = "Courier service hub - packages moving, no inspection", weight = 2 },
+]

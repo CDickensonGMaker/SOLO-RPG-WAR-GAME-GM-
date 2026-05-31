@@ -1,0 +1,434 @@
+# =============================================================================
+# BIRTHRIGHT CLASS CONSIDERATIONS - 5E INTEGRATION
+# =============================================================================
+# How standard 5e classes function in the Cerilian setting.
+# Includes cultural prevalence, arcane restrictions, and divine considerations.
+# =============================================================================
+
+[meta]
+title = "Cerilian Class Guide"
+version = "1.0"
+system = "5e"
+source = "Birthright Campaign Setting (adapted)"
+
+# =============================================================================
+# ARCANE MAGIC IN CERILIA
+# =============================================================================
+# The most significant difference from standard 5e: true arcane magic is tied
+# to the land and requires divine blood to access fully.
+# =============================================================================
+
+[arcane_magic]
+description = """
+In Cerilia, arcane magic is rare and feared by common folk (except in Khinasi
+lands). The ability to cast true arcane magic - magic that draws upon the
+essence of the land itself - requires either elven heritage or a divine
+bloodline inherited from the gods who died at Deismaar.
+
+There are two types of arcane casters:
+1. TRUE MAGES - Blooded individuals or elves who can cast realm magic
+2. MAGICIANS - Lesser casters who learn a limited form of magic
+"""
+
+[arcane_magic.true_mage]
+name = "True Mage"
+requirement = "Must be blooded (any derivation) OR Sidhelien elf"
+description = """
+True mages can access the full power of arcane magic. Only they can:
+- Cast spells of 6th level and higher
+- Create and control Sources (magical ley lines)
+- Cast Realm Spells that affect entire provinces
+- Create permanent magical items
+"""
+classes_affected = ["Wizard", "Sorcerer", "Warlock (with DM approval)", "Bard (partial)"]
+
+[arcane_magic.magician]
+name = "Magician (Lesser Mage)"
+requirement = "None - any character can learn"
+description = """
+Magicians learn a limited form of arcane magic through study and formula.
+They can never truly touch the magical essence of the land.
+"""
+limitations = [
+    "Maximum spell level: 5th",
+    "Cannot create Sources or cast Realm Spells",
+    "Cannot create permanent magical items",
+    "Spell save DC reduced by 2 against blooded targets",
+    "Cannot take the Archmage class features"
+]
+classes_affected = ["Wizard (Magician subclass)", "Eldritch Knight", "Arcane Trickster"]
+
+# =============================================================================
+# CLASS ENTRIES
+# =============================================================================
+
+[[classes]]
+name = "Barbarian"
+arcane_type = "none"
+description = """
+Barbarians are most common among the Vos and Rjurik, where the harsh land
+breeds fierce warriors. Anuireans view barbarians as uncivilized, though they
+respect their martial prowess. Khinasi rarely produce barbarians.
+"""
+
+[classes.cultural_prevalence]
+anuirean = "Rare (frontier regions only)"
+brecht = "Rare"
+khinasi = "Very Rare"
+rjurik = "Common (berserker tradition)"
+vos = "Very Common (core warrior tradition)"
+
+[classes.subclass_notes]
+path_of_the_berserker = "Most common among Vos; called 'Blood Ragers'"
+path_of_the_totem_warrior = "Favored by Rjurik; bear, wolf, and elk totems common"
+path_of_the_ancestral_guardian = "Vos tradition - ancestors demand blood"
+path_of_wild_magic = "Extremely rare; may indicate latent bloodline"
+
+[[classes]]
+name = "Bard"
+arcane_type = "partial"
+description = """
+Bards in Cerilia serve as historians, diplomats, and keepers of lore. In
+Anuirean lands, they are heralds and court entertainers. Among the Rjurik,
+they are skalds who preserve the oral tradition. Brecht bards often work as
+spies and information brokers.
+"""
+
+[classes.magic_rules]
+blooded = "Full spellcasting; can participate in realm magic through Court actions"
+unblooded = "Limited to 5th level spells; focus on enchantment and illusion"
+
+[classes.cultural_prevalence]
+anuirean = "Common (court tradition)"
+brecht = "Common (guild information networks)"
+khinasi = "Common (storyteller tradition)"
+rjurik = "Common (skald tradition)"
+vos = "Rare (seen as weak; war-chanters exist)"
+
+[classes.subclass_notes]
+college_of_lore = "Most common; found in all cultures"
+college_of_swords = "Favored by Vos war-chanters"
+college_of_whispers = "Common among Brecht spies"
+college_of_eloquence = "Khinasi court poets"
+
+[[classes]]
+name = "Cleric"
+arcane_type = "divine"
+description = """
+Clerics draw power from the gods of Cerilia, who are themselves ascended
+champions of Deismaar (or their successors). Each culture has preferred
+deities, and clerics often serve as temporal as well as spiritual leaders.
+"""
+
+[classes.divine_magic]
+note = "Divine magic is not affected by bloodline requirements"
+temple_holdings = "High-level clerics often control Temple holdings and can cast realm magic through faith"
+
+[classes.cultural_prevalence]
+anuirean = "Very Common (Haelyn dominant)"
+brecht = "Common (Sera, Eloele)"
+khinasi = "Very Common (Avani dominant)"
+rjurik = "Common (Erik dominant)"
+vos = "Common (Belinik, Kriesha)"
+
+[classes.faith_by_culture]
+anuirean = ["Haelyn (law, nobility)", "Cuiraecen (battle)", "Nesirie (sea, mourning)", "Sarimie (wealth)"]
+brecht = ["Sera (commerce, luck)", "Eloele (night, thieves)", "Cuiraecen (battle)"]
+khinasi = ["Avani (sun, magic)", "Nasri (law)", "Rilni (knowledge)"]
+rjurik = ["Erik (nature, hunt)", "Cuiraecen (battle)"]
+vos = ["Belinik (war, terror)", "Kriesha (winter, hardship)"]
+evil_cults = ["Azrai-spawn (various names)", "Cold Rider (Kriesha)", "Kartathok (goblins)"]
+
+[classes.subclass_notes]
+war_domain = "Favored by Cuiraecen, Belinik clerics"
+life_domain = "Nesirie, Erik (healing aspect)"
+light_domain = "Avani, Haelyn (solar aspect)"
+knowledge_domain = "Rilni, Avani (lore aspect)"
+nature_domain = "Erik (primary)"
+tempest_domain = "Cuiraecen (storm aspect), Nesirie (sea aspect)"
+trickery_domain = "Eloele, Sera (luck aspect)"
+
+[[classes]]
+name = "Druid"
+arcane_type = "divine"
+description = """
+Druids are strongly associated with Erik and the Rjurik people. They are
+guardians of the wild places and often serve as advisors to jarls. In other
+lands, druids are rarer and may be viewed with suspicion as foreign mystics.
+"""
+
+[classes.divine_magic]
+note = "Druidic magic is not affected by bloodline; draws from Erik/nature"
+special = "Druids can sense Sources but cannot control them unless blooded"
+
+[classes.cultural_prevalence]
+anuirean = "Rare (frontier, Erebannien forest)"
+brecht = "Rare"
+khinasi = "Very Rare (desert has few druids)"
+rjurik = "Very Common (core spiritual tradition)"
+vos = "Rare (Cold Riders serve Kriesha instead)"
+
+[classes.subclass_notes]
+circle_of_the_land = "Most common; arctic (Rjurik), forest (everywhere)"
+circle_of_the_moon = "Rjurik tradition; shapeshifting hunters"
+circle_of_the_shepherd = "Erik's aspect of the hunt"
+circle_of_spores = "Associated with the Shadow World"
+
+[[classes]]
+name = "Fighter"
+arcane_type = "none"
+description = """
+Fighters are common throughout Cerilia. Every culture values martial prowess,
+though the style varies. Anuirean knights, Brecht marines, Khinasi cavalry,
+Rjurik huskarls, and Vos warriors all use the Fighter class.
+"""
+
+[classes.cultural_prevalence]
+anuirean = "Very Common (knight tradition)"
+brecht = "Common (marines, mercenaries)"
+khinasi = "Common (cavalry tradition)"
+rjurik = "Common (huskarls, jarls)"
+vos = "Very Common (all warriors)"
+
+[classes.subclass_notes]
+champion = "Universal; pure martial excellence"
+battle_master = "Favored by Anuirean tacticians"
+cavalier = "Anuirean knights, Khinasi cavalry"
+eldritch_knight = "Requires blooded or magician limitation"
+samurai = "Reflavor as Khinasi sword-saints"
+
+[[classes]]
+name = "Monk"
+arcane_type = "ki"
+description = """
+True monks are extremely rare in Cerilia. The martial arts traditions of other
+worlds did not develop here. However, some orders of Haelyn practice martial
+discipline, and Khinasi mystics developed meditative combat techniques.
+"""
+
+[classes.cultural_prevalence]
+anuirean = "Very Rare (Order of the Scepter)"
+brecht = "Very Rare"
+khinasi = "Rare (Avani contemplatives)"
+rjurik = "Almost Unknown"
+vos = "Almost Unknown"
+
+[classes.subclass_notes]
+way_of_the_open_hand = "Khinasi tradition"
+way_of_shadow = "Brecht assassin guilds (reflavored)"
+way_of_the_sun_soul = "Avani mystics"
+
+[[classes]]
+name = "Paladin"
+arcane_type = "divine"
+description = """
+Paladins are holy warriors bound to the gods and their causes. The tradition
+is strongest in Anuirean lands, where the Order of Haelyn's Aegis produces
+legendary champions. Other cultures have equivalent sacred warriors.
+"""
+
+[classes.divine_magic]
+note = "Paladins must serve a deity; no 'generic' paladins in Cerilia"
+faiths = "Typically Haelyn (law), Cuiraecen (battle), or Avani (light)"
+
+[classes.cultural_prevalence]
+anuirean = "Common (Haelyn's champions)"
+brecht = "Rare (some Cuiraecen paladins)"
+khinasi = "Uncommon (Avani's chosen)"
+rjurik = "Very Rare (Erik favors druids)"
+vos = "Rare (Belinik's oathbreakers - often fallen)"
+
+[classes.subclass_notes]
+oath_of_devotion = "Haelyn's primary oath"
+oath_of_the_ancients = "Erik (rare), Sidhelien tradition"
+oath_of_vengeance = "Cuiraecen's oath"
+oath_of_conquest = "Belinik's oath (often becomes Oathbreaker)"
+oathbreaker = "Surprisingly common; Azrai's corruption"
+
+[[classes]]
+name = "Ranger"
+arcane_type = "divine"
+description = """
+Rangers are common throughout Cerilia, especially in wild regions. Rjurik
+hunters, Anuirean wardens, and Sidhelien border guards all fall into this
+class. They serve as scouts, guides, and protectors of civilization's edges.
+"""
+
+[classes.divine_magic]
+note = "Ranger magic comes from connection to nature/Erik"
+special = "Rangers can sense Shadow World intrusions"
+
+[classes.cultural_prevalence]
+anuirean = "Common (foresters, scouts)"
+brecht = "Common (guides, scouts)"
+khinasi = "Uncommon (desert guides)"
+rjurik = "Very Common (hunter tradition)"
+vos = "Common (trackers, hunters)"
+sidhelien = "Very Common (border wardens)"
+
+[classes.subclass_notes]
+beast_master = "Common among Rjurik"
+hunter = "Universal; Sidhelien favored"
+gloom_stalker = "Shadow World specialists"
+monster_slayer = "Awnsheghlien hunters"
+
+[[classes]]
+name = "Rogue"
+arcane_type = "none"
+description = """
+Rogues thrive everywhere civilization exists. Brecht guilds include many
+rogues, Anuirean courts harbor spies, and even Vos warbands have scouts.
+The Arcane Trickster subclass has special considerations for bloodlines.
+"""
+
+[classes.cultural_prevalence]
+anuirean = "Common (spies, scouts)"
+brecht = "Very Common (guild tradition)"
+khinasi = "Common (bazaar merchants)"
+rjurik = "Uncommon (scouts only)"
+vos = "Uncommon (viewed as dishonorable)"
+
+[classes.subclass_notes]
+thief = "Universal; Brecht guilds"
+assassin = "Brecht guilds, Anuirean courts"
+arcane_trickster = "Blooded or limited to 5th level spells"
+mastermind = "Brecht guildmasters, Anuirean nobles"
+scout = "Rjurik, Vos traditions"
+
+[[classes]]
+name = "Sorcerer"
+arcane_type = "true_mage"
+description = """
+Sorcerers in Cerilia are those whose bloodline manifests as raw magical power
+rather than learned wizardry. All sorcerers in Cerilia are blooded - their
+innate magic IS their bloodline expressing itself.
+"""
+
+[classes.magic_rules]
+requirement = "MUST be blooded - sorcerous power comes from bloodline"
+unblooded = "Cannot be sorcerer; bloodline IS the source of sorcery"
+special = "Bloodline derivation often determines sorcerous origin"
+
+[classes.cultural_prevalence]
+anuirean = "Rare (prefer trained wizards)"
+brecht = "Rare"
+khinasi = "Uncommon (respected as touched by divinity)"
+rjurik = "Very Rare (viewed with suspicion)"
+vos = "Rare (often Azrai-descended; feared)"
+
+[classes.subclass_notes]
+draconic_bloodline = "Reflavor as 'Awakened Blood' - bloodline manifesting strongly"
+wild_magic = "Unstable bloodline; often Azrai or Vorynn derived"
+divine_soul = "Bloodline so pure it grants divine connection"
+shadow_magic = "Shadow World touched; often Azrai derived"
+
+[classes.bloodline_to_origin]
+anduiras = ["Divine Soul (reflavored)", "Draconic (valor/courage)"]
+basaia = ["Divine Soul", "Draconic (fire/light)"]
+brenna = ["Wild Magic (luck)", "Divine Soul (fortune)"]
+masela = ["Storm Sorcery", "Draconic (sea/storm)"]
+reynir = ["Wild Magic", "Draconic (nature)"]
+vorynn = ["Wild Magic", "Shadow Magic"]
+azrai = ["Shadow Magic", "Aberrant Mind", "Wild Magic (corrupted)"]
+
+[[classes]]
+name = "Warlock"
+arcane_type = "special"
+description = """
+Warlocks are complicated in Cerilia. Their patrons could be powerful
+awnsheghlien, entities from the Shadow World, or even old god-fragments.
+Most societies view warlocks with extreme suspicion.
+"""
+
+[classes.magic_rules]
+blooded = "Full warlock abilities"
+unblooded = "Can be warlock but limited to 5th level spells from pact"
+patron_note = "Patron must be Cerilian - no 'generic' patrons"
+
+[classes.cultural_prevalence]
+anuirean = "Very Rare (heretical)"
+brecht = "Rare (shadow pacts)"
+khinasi = "Rare (genie pacts exist)"
+rjurik = "Very Rare (druidic opposition)"
+vos = "Uncommon (dark pacts accepted)"
+
+[classes.subclass_notes]
+archfey = "Pact with powerful Sidhelien or fey lord"
+fiend = "Pact with awnsheghlien (reflavored - no true demons)"
+great_old_one = "Pact with Shadow World entity or lost god"
+hexblade = "Pact with cursed weapon or awnsheghlien (Raven, Gorgon, etc.)"
+celestial = "Pact with ascended hero or god-fragment"
+
+[[classes]]
+name = "Wizard"
+arcane_type = "true_mage"
+description = """
+Wizards are the iconic arcane casters of Cerilia. True wizards must be blooded
+to access the full power of magic. Unblooded wizards are 'magicians' with
+significantly reduced capabilities.
+"""
+
+[classes.magic_rules]
+blooded = "True Wizard - full spellcasting, can control Sources, cast realm magic"
+unblooded = "Magician - max 5th level spells, cannot control Sources"
+sidhelien = "Elves count as blooded for wizard purposes"
+
+[classes.cultural_prevalence]
+anuirean = "Uncommon (respected but rare)"
+brecht = "Uncommon (practical magic)"
+khinasi = "Common (el-Arrasi tradition; honored)"
+rjurik = "Rare (druidic tradition dominant)"
+vos = "Very Rare (feared, often killed)"
+sidhelien = "Common (natural arcanists)"
+
+[classes.subclass_notes]
+abjuration = "Common; protective magic valued"
+conjuration = "Uncommon; summoning viewed with suspicion"
+divination = "Khinasi tradition; seers and oracles"
+enchantment = "Common but dangerous; mind control is feared"
+evocation = "Battle mages; war wizards"
+illusion = "Common among Sidhelien"
+necromancy = "Almost universally banned; Azrai's domain"
+transmutation = "Anuirean tradition; practical magic"
+
+[classes.magician_subclass]
+name = "School of Lesser Arts (Magician)"
+description = "For unblooded wizards - limited but functional"
+features = [
+    { level = 2, name = "Formulaic Magic", description = "Choose two schools. Your spells from other schools are cast at +1 spell level cost" },
+    { level = 6, name = "Efficient Study", description = "Learn spells from your chosen schools at half time/cost" },
+    { level = 10, name = "Magical Resilience", description = "Advantage on saves vs. magic from blooded casters" },
+    { level = 14, name = "Master of Lesser Arts", description = "Your spells of 5th level or lower are cast as if you were blooded (no DC penalty)" }
+]
+
+# =============================================================================
+# MULTICLASSING CONSIDERATIONS
+# =============================================================================
+
+[multiclassing]
+arcane_mixing = """
+Characters can multiclass between arcane classes, but the bloodline requirement
+applies to all. An unblooded character multiclassing Fighter/Wizard is still
+limited as a magician in their wizard levels.
+"""
+
+divine_arcane = """
+Divine and arcane casting can be combined normally. A blooded Cleric/Wizard
+can cast both types of magic fully.
+"""
+
+sorcerer_special = """
+Sorcerers MUST be blooded. An unblooded character cannot take sorcerer levels.
+This represents the fundamental nature of sorcery as awakened bloodline.
+"""
+
+# =============================================================================
+# CLASS FEATURES AFFECTED BY SETTING
+# =============================================================================
+
+[class_feature_modifications]
+arcane_recovery = "Magicians recover only half the spell levels (minimum 1)"
+channel_divinity = "Effects vary by deity; see faith_by_culture"
+wild_shape = "Forms limited to Cerilian fauna"
+divine_smite = "Extra damage vs. awnsheghlien and creatures of shadow"
+favored_enemy = "Awnsheghlien and Shadow creatures are valid choices"

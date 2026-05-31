@@ -1,0 +1,871 @@
+# Battle Brothers - Grimdark Future
+# Genetically enhanced super-soldiers in power armor
+# One Page Rules - Free Wargaming System
+
+[faction]
+name = "Battle Brothers"
+description = "Genetically enhanced super-soldiers clad in power armor, the elite defenders of humanity"
+playstyle = "Elite, durable, versatile"
+difficulty = "beginner"
+strengths = [
+    "High quality troops (3+ across the board)",
+    "Excellent armor saves (4+ standard)",
+    "Flexible loadout options",
+    "Strong morale (Fearless common)",
+    "Good mix of shooting and melee"
+]
+weaknesses = [
+    "Low model count",
+    "Expensive units limit board control",
+    "Vulnerable to massed AP weapons",
+    "Limited horde-clearing options"
+]
+tactics = """
+Battle Brothers excel at focused strikes and holding key positions. Use transports to
+deliver assault units while fire support pins enemies. Your quality advantage means you
+win most one-on-one fights, so avoid getting overwhelmed by superior numbers. Focus fire
+to eliminate threats before they can mass against you. Veterans and characters punch well
+above their weight - use them to crack tough nuts.
+"""
+
+# =============================================================================
+# HQ UNITS
+# =============================================================================
+
+[[units]]
+name = "Battle Captain"
+type = "infantry"
+category = "hq"
+points = 85
+models = "1"
+base_size = "32mm"
+tactical_role = "force_multiplier"
+threat_level = "high"
+priority_target = true
+preferred_targets = ["elite_infantry", "characters", "light_vehicles"]
+avoid_targets = ["heavy_vehicles", "hordes"]
+weaknesses = ["focused_fire", "snipers", "assassination"]
+synergies = ["Attaches to squads", "Aura abilities boost nearby units"]
+special_rules = ["Hero", "Fearless", "Tough(3)"]
+keywords = ["Infantry", "Character", "Battle Brothers"]
+notes = "Attach to key squad for protection and melee punch. Keep near other units for aura benefits."
+
+[units.stats]
+quality = "3+"
+defense = "4+"
+tough = 3
+movement = "6\""
+
+[[units.weapons]]
+name = "Plasma Pistol"
+range = "12\""
+shots = "1"
+ap = "2"
+special = ["Deadly(3)"]
+
+[[units.weapons]]
+name = "Energy Sword"
+range = "Melee"
+shots = "4"
+ap = "2"
+special = ["Deadly(3)"]
+
+[[units.upgrades]]
+name = "Thunder Hammer"
+replaces = "Energy Sword"
+points = 15
+weapon = { name = "Thunder Hammer", range = "Melee", shots = "4", ap = "3", special = ["Deadly(3)", "Slow"] }
+
+[[units.upgrades]]
+name = "Storm Shield"
+points = 10
+effect = "Defense becomes 3+"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Battle Chaplain"
+type = "infantry"
+category = "hq"
+points = 75
+models = "1"
+base_size = "32mm"
+tactical_role = "melee_buffer"
+threat_level = "high"
+priority_target = true
+preferred_targets = ["elite_infantry", "characters"]
+avoid_targets = ["heavy_armor", "flyers"]
+weaknesses = ["ranged_focus", "kiting"]
+synergies = ["Grants Furious to attached unit", "Melee-focused squads"]
+special_rules = ["Hero", "Fearless", "Tough(3)", "War Chant"]
+keywords = ["Infantry", "Character", "Battle Brothers"]
+notes = "War Chant grants Furious to unit. Attach to assault squads for devastating charges."
+
+[units.stats]
+quality = "3+"
+defense = "4+"
+tough = 3
+movement = "6\""
+
+[[units.weapons]]
+name = "Pistol"
+range = "12\""
+shots = "1"
+ap = "1"
+
+[[units.weapons]]
+name = "Energy Mace"
+range = "Melee"
+shots = "4"
+ap = "2"
+special = ["Deadly(3)"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Battle Psychic"
+type = "infantry"
+category = "hq"
+points = 80
+models = "1"
+base_size = "32mm"
+tactical_role = "psychic_support"
+threat_level = "high"
+priority_target = true
+preferred_targets = ["infantry", "psychics"]
+avoid_targets = ["anti-psyker_units", "heavy_vehicles"]
+weaknesses = ["perils", "anti-psyker", "snipers"]
+synergies = ["Psychic powers support any unit", "Devastating against low-Defense targets"]
+special_rules = ["Hero", "Fearless", "Tough(3)", "Psychic(1)"]
+keywords = ["Infantry", "Character", "Battle Brothers", "Psychic"]
+notes = "Versatile psychic powers for offense or support. Protect from snipers."
+
+[units.stats]
+quality = "3+"
+defense = "4+"
+tough = 3
+movement = "6\""
+
+[[units.weapons]]
+name = "Pistol"
+range = "12\""
+shots = "1"
+ap = "1"
+
+[[units.weapons]]
+name = "Psychic Staff"
+range = "Melee"
+shots = "3"
+ap = "1"
+special = ["Deadly(3)"]
+
+[[units.psychic_powers]]
+name = "Psychic Bolt"
+type = "attack"
+description = "Target enemy unit within 18\" takes D6 hits with AP(2)"
+
+[[units.psychic_powers]]
+name = "Psychic Shield"
+type = "buff"
+description = "Friendly unit within 12\" gains +1 Defense until next activation"
+
+# =============================================================================
+# TROOPS
+# =============================================================================
+
+[[units]]
+name = "Battle Brother Infantry"
+type = "infantry"
+category = "troops"
+points = 100
+models = "5"
+base_size = "32mm"
+tactical_role = "line_infantry"
+threat_level = "medium"
+priority_target = false
+preferred_targets = ["infantry", "light_vehicles"]
+avoid_targets = ["heavy_vehicles", "aircraft"]
+weaknesses = ["massed_fire", "heavy_ap_weapons", "outnumbered"]
+synergies = ["Combine with Captain for re-rolls", "Transport for mobility"]
+special_rules = ["Fearless"]
+keywords = ["Infantry", "Battle Brothers"]
+notes = "Workhorse unit. Flexible loadout allows adaptation to mission needs."
+
+[units.stats]
+quality = "3+"
+defense = "4+"
+tough = 1
+movement = "6\""
+
+[[units.weapons]]
+name = "Rifle"
+range = "24\""
+shots = "1"
+ap = "1"
+
+[[units.weapons]]
+name = "CCW"
+range = "Melee"
+shots = "1"
+ap = "0"
+
+[[units.upgrades]]
+name = "Plasma Rifle"
+points = 10
+models_affected = 1
+weapon = { name = "Plasma Rifle", range = "24\"", shots = "1", ap = "2", special = ["Deadly(3)"] }
+
+[[units.upgrades]]
+name = "Fusion Rifle"
+points = 15
+models_affected = 1
+weapon = { name = "Fusion Rifle", range = "12\"", shots = "1", ap = "4", special = ["Deadly(6)"] }
+
+[[units.upgrades]]
+name = "Missile Launcher"
+points = 20
+models_affected = 1
+weapon = { name = "Missile Launcher", range = "36\"", shots = "1", ap = "2", special = ["Blast(3)", "Deadly(3)"] }
+
+[[units.upgrades]]
+name = "Sergeant with Energy Sword"
+points = 5
+models_affected = 1
+weapon = { name = "Energy Sword", range = "Melee", shots = "2", ap = "2", special = ["Deadly(3)"] }
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Battle Brother Scouts"
+type = "infantry"
+category = "troops"
+points = 75
+models = "5"
+base_size = "32mm"
+tactical_role = "reconnaissance"
+threat_level = "low"
+priority_target = false
+preferred_targets = ["isolated_units", "objectives"]
+avoid_targets = ["assault_units", "heavy_armor"]
+weaknesses = ["lighter_armor", "melee_focus"]
+synergies = ["Scout deployment for board control", "Sniper rifles for character hunting"]
+special_rules = ["Scout", "Strider"]
+keywords = ["Infantry", "Battle Brothers", "Scout"]
+notes = "Deploy forward to grab objectives or set up sniper positions. Lighter armor than standard brothers."
+
+[units.stats]
+quality = "3+"
+defense = "5+"
+tough = 1
+movement = "6\""
+
+[[units.weapons]]
+name = "Scout Rifle"
+range = "24\""
+shots = "1"
+ap = "0"
+
+[[units.weapons]]
+name = "CCW"
+range = "Melee"
+shots = "1"
+ap = "0"
+
+[[units.upgrades]]
+name = "Sniper Rifles"
+points = 10
+models_affected = "all"
+weapon = { name = "Sniper Rifle", range = "36\"", shots = "1", ap = "1", special = ["Sniper", "Deadly(3)"] }
+
+[[units.upgrades]]
+name = "Shotguns"
+points = 0
+models_affected = "all"
+weapon = { name = "Shotgun", range = "12\"", shots = "2", ap = "0" }
+
+# =============================================================================
+# ELITES
+# =============================================================================
+
+[[units]]
+name = "Battle Brother Veterans"
+type = "infantry"
+category = "elite"
+points = 150
+models = "5"
+base_size = "32mm"
+tactical_role = "elite_assault"
+threat_level = "high"
+priority_target = true
+preferred_targets = ["elite_infantry", "characters", "medium_vehicles"]
+avoid_targets = ["hordes", "tar_pits"]
+weaknesses = ["massed_attacks", "weight_of_dice"]
+synergies = ["Chaplain for Furious", "Transport for delivery"]
+special_rules = ["Fearless", "Veteran Infantry"]
+keywords = ["Infantry", "Battle Brothers", "Veteran"]
+notes = "Elite assault unit. Storm shields make them incredibly durable. Thunder hammers crack any target."
+
+[units.stats]
+quality = "3+"
+defense = "4+"
+tough = 1
+movement = "6\""
+
+[[units.weapons]]
+name = "Storm Pistol"
+range = "12\""
+shots = "2"
+ap = "1"
+
+[[units.weapons]]
+name = "Energy Claws"
+range = "Melee"
+shots = "2"
+ap = "2"
+special = ["Rending"]
+
+[[units.upgrades]]
+name = "Thunder Hammers and Storm Shields"
+points = 25
+models_affected = "all"
+effect = "Defense 3+, replace weapons"
+weapon = { name = "Thunder Hammer", range = "Melee", shots = "2", ap = "3", special = ["Deadly(3)", "Slow"] }
+
+[[units.upgrades]]
+name = "Twin Energy Claws"
+points = 10
+models_affected = "all"
+weapon = { name = "Twin Energy Claws", range = "Melee", shots = "4", ap = "2", special = ["Rending"] }
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Battle Brother Destroyers"
+type = "infantry"
+category = "elite"
+points = 185
+models = "5"
+base_size = "40mm"
+tactical_role = "heavy_assault"
+threat_level = "very_high"
+priority_target = true
+preferred_targets = ["heavy_infantry", "monsters", "vehicles"]
+avoid_targets = ["hordes", "chaff"]
+weaknesses = ["expensive", "low_model_count"]
+synergies = ["Deep strike delivery", "Captain attachment"]
+special_rules = ["Fearless", "Tough(3)", "Flying"]
+keywords = ["Infantry", "Battle Brothers", "Destroyer"]
+notes = "Elite jump infantry. Expensive but devastating on the charge. Use Flying to bypass screens."
+
+[units.stats]
+quality = "3+"
+defense = "4+"
+tough = 3
+movement = "8\""
+
+[[units.weapons]]
+name = "Storm Pistol"
+range = "12\""
+shots = "2"
+ap = "1"
+
+[[units.weapons]]
+name = "Energy Hammer"
+range = "Melee"
+shots = "3"
+ap = "3"
+special = ["Deadly(3)"]
+
+[[units.upgrades]]
+name = "Energy Claws"
+points = 0
+replaces = "Energy Hammer"
+weapon = { name = "Energy Claws", range = "Melee", shots = "4", ap = "2", special = ["Rending"] }
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Armored Walker"
+type = "vehicle"
+category = "elite"
+points = 120
+models = "1"
+base_size = "60mm"
+tactical_role = "fire_support"
+threat_level = "high"
+priority_target = true
+preferred_targets = ["vehicles", "heavy_infantry", "monsters"]
+avoid_targets = ["melee_swarms"]
+weaknesses = ["close_combat", "melta_weapons"]
+synergies = ["Provides heavy fire support for infantry advance"]
+special_rules = ["Fearless", "Tough(6)", "Walker"]
+keywords = ["Vehicle", "Battle Brothers", "Walker"]
+notes = "Flexible weapons platform. Twin autocannon for anti-infantry, lascannon for anti-tank."
+
+[units.stats]
+quality = "3+"
+defense = "3+"
+tough = 6
+movement = "8\""
+
+[[units.weapons]]
+name = "Twin Autocannon"
+range = "36\""
+shots = "4"
+ap = "1"
+special = ["Deadly(3)"]
+
+[[units.weapons]]
+name = "Heavy Flamer"
+range = "12\""
+shots = "6"
+ap = "1"
+special = ["Reliable"]
+
+[[units.weapons]]
+name = "Walker Fist"
+range = "Melee"
+shots = "4"
+ap = "3"
+special = ["Deadly(3)"]
+
+[[units.upgrades]]
+name = "Lascannon"
+points = 15
+replaces = "Twin Autocannon"
+weapon = { name = "Lascannon", range = "48\"", shots = "1", ap = "4", special = ["Deadly(6)"] }
+
+[[units.upgrades]]
+name = "Missile Launcher"
+points = 10
+replaces = "Heavy Flamer"
+weapon = { name = "Missile Launcher", range = "36\"", shots = "1", ap = "2", special = ["Blast(3)", "Deadly(3)"] }
+
+# =============================================================================
+# FAST ATTACK
+# =============================================================================
+
+[[units]]
+name = "Assault Brothers"
+type = "infantry"
+category = "fast_attack"
+points = 125
+models = "5"
+base_size = "32mm"
+tactical_role = "jump_assault"
+threat_level = "high"
+priority_target = true
+preferred_targets = ["infantry", "artillery", "isolated_units"]
+avoid_targets = ["heavy_armor", "melee_specialists"]
+weaknesses = ["shooting_focused_armies", "interceptors"]
+synergies = ["Chaplain for Furious", "Deep strike behind enemy lines"]
+special_rules = ["Fearless", "Flying"]
+keywords = ["Infantry", "Battle Brothers", "Assault"]
+notes = "Jump pack assault troops. Use mobility to strike weak points. Avoid prolonged firefights."
+
+[units.stats]
+quality = "3+"
+defense = "4+"
+tough = 1
+movement = "10\""
+
+[[units.weapons]]
+name = "Pistol"
+range = "12\""
+shots = "1"
+ap = "1"
+
+[[units.weapons]]
+name = "Energy Sword"
+range = "Melee"
+shots = "2"
+ap = "2"
+special = ["Deadly(3)"]
+
+[[units.upgrades]]
+name = "Plasma Pistols"
+points = 10
+models_affected = "all"
+weapon = { name = "Plasma Pistol", range = "12\"", shots = "1", ap = "2", special = ["Deadly(3)"] }
+
+[[units.upgrades]]
+name = "Thunder Hammer (Sergeant)"
+points = 10
+models_affected = 1
+weapon = { name = "Thunder Hammer", range = "Melee", shots = "2", ap = "3", special = ["Deadly(3)", "Slow"] }
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Attack Bikes"
+type = "vehicle"
+category = "fast_attack"
+points = 120
+models = "3"
+base_size = "75mm oval"
+tactical_role = "mobile_firepower"
+threat_level = "medium"
+priority_target = false
+preferred_targets = ["light_vehicles", "isolated_infantry"]
+avoid_targets = ["heavy_anti_tank", "large_melee_units"]
+weaknesses = ["focused_fire", "terrain_restrictions"]
+synergies = ["Flank enemy positions", "Hunt enemy vehicles"]
+special_rules = ["Fast", "Tough(3)"]
+keywords = ["Vehicle", "Battle Brothers", "Bike"]
+notes = "Fast flankers. Multi-melta loadout for tank hunting. Avoid getting bogged down."
+
+[units.stats]
+quality = "3+"
+defense = "4+"
+tough = 3
+movement = "12\""
+
+[[units.weapons]]
+name = "Twin Rifle"
+range = "24\""
+shots = "2"
+ap = "1"
+
+[[units.weapons]]
+name = "Heavy Machinegun"
+range = "36\""
+shots = "3"
+ap = "1"
+special = ["Deadly(3)"]
+
+[[units.upgrades]]
+name = "Multi-Melta"
+points = 15
+replaces = "Heavy Machinegun"
+weapon = { name = "Multi-Melta", range = "24\"", shots = "1", ap = "4", special = ["Deadly(6)", "Blast(3)"] }
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Speeder"
+type = "vehicle"
+category = "fast_attack"
+points = 85
+models = "1"
+base_size = "60mm flight"
+tactical_role = "harassment"
+threat_level = "medium"
+priority_target = false
+preferred_targets = ["light_vehicles", "infantry"]
+avoid_targets = ["dedicated_anti_air", "heavy_armor"]
+weaknesses = ["anti_air_weapons", "focused_fire"]
+synergies = ["Pairs well for concentrated strikes", "Support infantry advance"]
+special_rules = ["Fast", "Flying", "Tough(4)"]
+keywords = ["Vehicle", "Battle Brothers", "Speeder"]
+notes = "Light skimmer. Use speed and Flying to stay out of trouble."
+
+[units.stats]
+quality = "3+"
+defense = "4+"
+tough = 4
+movement = "14\""
+
+[[units.weapons]]
+name = "Heavy Machinegun"
+range = "36\""
+shots = "3"
+ap = "1"
+special = ["Deadly(3)"]
+
+[[units.weapons]]
+name = "Heavy Flamer"
+range = "12\""
+shots = "6"
+ap = "1"
+special = ["Reliable"]
+
+[[units.upgrades]]
+name = "Multi-Melta"
+points = 15
+replaces = "Heavy Machinegun"
+weapon = { name = "Multi-Melta", range = "24\"", shots = "1", ap = "4", special = ["Deadly(6)", "Blast(3)"] }
+
+[[units.upgrades]]
+name = "Assault Cannon"
+points = 10
+replaces = "Heavy Machinegun"
+weapon = { name = "Assault Cannon", range = "24\"", shots = "6", ap = "1", special = ["Deadly(3)"] }
+
+# =============================================================================
+# HEAVY SUPPORT
+# =============================================================================
+
+[[units]]
+name = "Devastator Brothers"
+type = "infantry"
+category = "heavy_support"
+points = 130
+models = "5"
+base_size = "32mm"
+tactical_role = "fire_support"
+threat_level = "high"
+priority_target = true
+preferred_targets = ["vehicles", "monsters", "heavy_infantry"]
+avoid_targets = ["fast_assault_units", "close_range"]
+weaknesses = ["slow", "close_combat", "outflanking"]
+synergies = ["Elevated positions", "Overlapping fire lanes"]
+special_rules = ["Fearless", "Relentless"]
+keywords = ["Infantry", "Battle Brothers", "Heavy Support"]
+notes = "Long-range fire support. Set up with good sight lines. Protect flanks with other units."
+
+[units.stats]
+quality = "3+"
+defense = "4+"
+tough = 1
+movement = "6\""
+
+[[units.weapons]]
+name = "Rifle"
+range = "24\""
+shots = "1"
+ap = "1"
+
+[[units.weapons]]
+name = "Lascannon"
+range = "48\""
+shots = "1"
+ap = "4"
+special = ["Deadly(6)"]
+
+[[units.weapons]]
+name = "CCW"
+range = "Melee"
+shots = "1"
+ap = "0"
+
+[[units.upgrades]]
+name = "4x Lascannon"
+points = 60
+models_affected = 4
+weapon = { name = "Lascannon", range = "48\"", shots = "1", ap = "4", special = ["Deadly(6)"] }
+
+[[units.upgrades]]
+name = "4x Missile Launcher"
+points = 40
+models_affected = 4
+weapon = { name = "Missile Launcher", range = "36\"", shots = "1", ap = "2", special = ["Blast(3)", "Deadly(3)"] }
+
+[[units.upgrades]]
+name = "4x Heavy Machinegun"
+points = 20
+models_affected = 4
+weapon = { name = "Heavy Machinegun", range = "36\"", shots = "3", ap = "1", special = ["Deadly(3)"] }
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Battle Tank"
+type = "vehicle"
+category = "heavy_support"
+points = 200
+models = "1"
+base_size = "hull"
+tactical_role = "main_battle_tank"
+threat_level = "very_high"
+priority_target = true
+preferred_targets = ["vehicles", "monsters", "buildings"]
+avoid_targets = ["fast_melee_units", "melta_infantry"]
+weaknesses = ["close_combat", "melta_weapons", "outflanking"]
+synergies = ["Infantry screen", "Multiple tanks for redundancy"]
+special_rules = ["Fearless", "Tough(12)", "Vehicle"]
+keywords = ["Vehicle", "Battle Brothers", "Tank"]
+notes = "Main battle tank. Versatile loadouts. Keep infantry nearby to prevent close assaults."
+
+[units.stats]
+quality = "3+"
+defense = "2+"
+tough = 12
+movement = "10\""
+
+[[units.weapons]]
+name = "Battle Cannon"
+range = "48\""
+shots = "2"
+ap = "3"
+special = ["Blast(3)", "Deadly(3)"]
+
+[[units.weapons]]
+name = "Twin Heavy Machinegun"
+range = "36\""
+shots = "6"
+ap = "1"
+special = ["Deadly(3)"]
+
+[[units.upgrades]]
+name = "Lascannon"
+points = 15
+replaces = "Battle Cannon"
+weapon = { name = "Twin Lascannon", range = "48\"", shots = "2", ap = "4", special = ["Deadly(6)"] }
+
+[[units.upgrades]]
+name = "Demolisher Cannon"
+points = 10
+replaces = "Battle Cannon"
+weapon = { name = "Demolisher Cannon", range = "24\"", shots = "2", ap = "4", special = ["Blast(6)", "Deadly(3)"] }
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Heavy Walker"
+type = "vehicle"
+category = "heavy_support"
+points = 165
+models = "1"
+base_size = "90mm"
+tactical_role = "assault_walker"
+threat_level = "very_high"
+priority_target = true
+preferred_targets = ["vehicles", "heavy_infantry", "monsters"]
+avoid_targets = ["swarm_units", "tar_pits"]
+weaknesses = ["melta_weapons", "sustained_close_combat"]
+synergies = ["Infantry support", "Multi-threat loadout"]
+special_rules = ["Fearless", "Tough(8)", "Walker"]
+keywords = ["Vehicle", "Battle Brothers", "Walker", "Heavy"]
+notes = "Heavy assault walker. Excellent in melee with massive fists. Ranged weapons for approach."
+
+[units.stats]
+quality = "3+"
+defense = "2+"
+tough = 8
+movement = "8\""
+
+[[units.weapons]]
+name = "Assault Cannon"
+range = "24\""
+shots = "6"
+ap = "1"
+special = ["Deadly(3)"]
+
+[[units.weapons]]
+name = "Heavy Flamer"
+range = "12\""
+shots = "6"
+ap = "1"
+special = ["Reliable"]
+
+[[units.weapons]]
+name = "Walker Fists"
+range = "Melee"
+shots = "6"
+ap = "4"
+special = ["Deadly(3)"]
+
+[[units.upgrades]]
+name = "Twin Lascannon"
+points = 20
+replaces = "Assault Cannon"
+weapon = { name = "Twin Lascannon", range = "48\"", shots = "2", ap = "4", special = ["Deadly(6)"] }
+
+# =============================================================================
+# TRANSPORTS
+# =============================================================================
+
+[[units]]
+name = "Armored Transport"
+type = "vehicle"
+category = "transport"
+points = 85
+models = "1"
+base_size = "hull"
+tactical_role = "transport"
+threat_level = "medium"
+priority_target = false
+preferred_targets = ["infantry", "light_vehicles"]
+avoid_targets = ["heavy_anti_tank"]
+weaknesses = ["heavy_weapons", "close_combat"]
+synergies = ["Assault unit delivery", "Objective grabbing"]
+special_rules = ["Fearless", "Tough(6)", "Transport(10)"]
+keywords = ["Vehicle", "Battle Brothers", "Transport"]
+notes = "Workhorse transport. Storm bolter for light fire support. Deliver assault troops safely."
+
+[units.stats]
+quality = "3+"
+defense = "3+"
+tough = 6
+movement = "12\""
+
+[[units.weapons]]
+name = "Storm Bolter"
+range = "24\""
+shots = "2"
+ap = "1"
+
+[[units.upgrades]]
+name = "Twin Lascannon"
+points = 25
+weapon = { name = "Twin Lascannon", range = "48\"", shots = "2", ap = "4", special = ["Deadly(6)"] }
+
+[[units.upgrades]]
+name = "Twin Assault Cannon"
+points = 20
+weapon = { name = "Twin Assault Cannon", range = "24\"", shots = "12", ap = "1", special = ["Deadly(3)"] }
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Drop Pod"
+type = "vehicle"
+category = "transport"
+points = 50
+models = "1"
+base_size = "hull"
+tactical_role = "deep_strike_delivery"
+threat_level = "low"
+priority_target = false
+preferred_targets = ["N/A"]
+avoid_targets = ["N/A"]
+weaknesses = ["immobile_after_landing"]
+synergies = ["Devastating alpha strike delivery", "Objective denial"]
+special_rules = ["Fearless", "Tough(6)", "Transport(10)", "Deep Strike"]
+keywords = ["Vehicle", "Battle Brothers", "Transport", "Drop Pod"]
+notes = "Deep strike delivery system. One-way trip. Use for critical first-turn strikes."
+
+[units.stats]
+quality = "3+"
+defense = "3+"
+tough = 6
+movement = "0\""
+
+[[units.weapons]]
+name = "Storm Bolter"
+range = "24\""
+shots = "2"
+ap = "1"
+
+# =============================================================================
+# EXAMPLE ARMY LISTS
+# =============================================================================
+
+[army_lists.starter_750]
+name = "Strike Force - 750 points"
+description = "Balanced starter force for learning the army"
+points = 745
+units = [
+    { name = "Battle Captain", count = 1, points = 85, notes = "Attach to Veterans" },
+    { name = "Battle Brother Infantry", count = 2, points = 200, notes = "Troop backbone" },
+    { name = "Battle Brother Veterans", count = 1, points = 150, notes = "Elite assault" },
+    { name = "Armored Walker", count = 1, points = 120, notes = "Fire support" },
+    { name = "Attack Bikes", count = 1, points = 120, notes = "Mobile flank" },
+    { name = "Armored Transport", count = 1, points = 85, notes = "For Veterans" }
+]
+tactics = "Use transport to deliver Veterans and Captain into melee. Infantry holds objectives. Walker provides fire support. Bikes flank."
+
+[army_lists.competitive_1500]
+name = "Iron Fist - 1500 points"
+description = "Competitive balanced list"
+points = 1485
+units = [
+    { name = "Battle Captain", count = 1, points = 100, upgrades = ["Thunder Hammer"] },
+    { name = "Battle Chaplain", count = 1, points = 75 },
+    { name = "Battle Brother Infantry", count = 3, points = 330, upgrades = ["Plasma Rifles"] },
+    { name = "Battle Brother Destroyers", count = 1, points = 185 },
+    { name = "Devastator Brothers", count = 1, points = 190, upgrades = ["4x Lascannon"] },
+    { name = "Battle Tank", count = 2, points = 400 },
+    { name = "Armored Transport", count = 2, points = 205, upgrades = ["Twin Assault Cannon"] }
+]
+tactics = "Devastators and Tanks provide firebase. Destroyers deep strike key targets. Infantry in transports secure objectives. Characters buff key units."

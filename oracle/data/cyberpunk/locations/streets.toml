@@ -1,0 +1,65 @@
+# Cyberpunk Street and Neighborhood Locations
+# The sprawling urban maze from glittering heights to toxic depths
+
+[locations]
+entries = [
+  # Combat zones and slums
+  { text = "Collapsed overpass occupied by squatters - tarps and fires in the ruins", weight = 2 },
+  { text = "Flooded understreet - knee-deep toxic water, bioluminescent algae", weight = 1 },
+  { text = "Boostergang territory - graffiti tags mark the kill zone boundaries", weight = 2 },
+  { text = "Abandoned rail yard - rusted cars converted to housing", weight = 2 },
+  { text = "Toxic waste dump perimeter - scavengers picking through corp refuse", weight = 1 },
+  { text = "Burned-out block - fire damage from gang war, never rebuilt", weight = 2 },
+  { text = "Tent city under highway - hundreds living in squalor", weight = 2 },
+  { text = "Demolished factory district - rubble and improvised shelters", weight = 2 },
+  { text = "Open-air drug market - dealers and users in plain sight", weight = 2 },
+  { text = "Contested intersection - three gangs claim it, none hold it", weight = 1 },
+
+  # Commercial districts
+  { text = "Neon-soaked night market - vendors selling everything, asking nothing", weight = 3 },
+  { text = "Street food alley - smoke and sizzle, best food in the city", weight = 2 },
+  { text = "Black market bazaar - illegal goods under UV-lit tarps", weight = 2 },
+  { text = "Corporate plaza - sterile, surveilled, security drones overhead", weight = 2 },
+  { text = "Outlet mall ruins - squatters in old retail, ironic brand graffiti", weight = 1 },
+  { text = "Entertainment strip - clubs, braindance parlors, sensory overload", weight = 2 },
+  { text = "Red light district - joy workers behind glass, neon promises", weight = 2 },
+  { text = "Tech gray market - used cyberware, no questions, no warranties", weight = 2 },
+  { text = "Food court wasteland - chain restaurants, corp drones on lunch break", weight = 1 },
+  { text = "Luxury shopping arcade - armed guards, verified customers only", weight = 1 },
+
+  # Residential areas
+  { text = "Megabuilding entrance plaza - thousands live above, chaos below", weight = 2 },
+  { text = "Coffin hotel block - stacked sleeping pods, privacy is extra", weight = 2 },
+  { text = "Middle-class suburb checkpoint - walls and guards keeping poverty out", weight = 1 },
+  { text = "Corporate housing complex - identical units, company store nearby", weight = 2 },
+  { text = "Nomad camp perimeter - vehicles circled, outsiders watched", weight = 1 },
+  { text = "Rooftop shantytown - illegals living above legal tenants", weight = 2 },
+  { text = "Converted parking structure - floors of improvised apartments", weight = 2 },
+  { text = "Capsule apartment corridor - tiny living, tight community", weight = 2 },
+  { text = "Gated community entrance - biometric scanners, armed response", weight = 1 },
+  { text = "Artist collective squat - murals on condemned buildings", weight = 1 },
+
+  # Infrastructure
+  { text = "Monorail station platform - crowds, pickpockets, buskers", weight = 2 },
+  { text = "Highway on-ramp camp - homeless under concrete, traffic above", weight = 2 },
+  { text = "Water treatment facility perimeter - guards protecting the supply", weight = 1 },
+  { text = "Power substation alley - humming transformers, fried rat smell", weight = 1 },
+  { text = "Waste processing plant gate - stench and desperate workers", weight = 1 },
+  { text = "Automated delivery hub - drones coming and going constantly", weight = 2 },
+  { text = "Maglev construction site - half-finished future, worker camps", weight = 1 },
+  { text = "Old subway entrance - sealed officially, used unofficially", weight = 2 },
+  { text = "Comm tower base - antennas reaching skyward, security cameras everywhere", weight = 1 },
+  { text = "Charging station plaza - vehicles plugged in, drivers killing time", weight = 2 },
+
+  # Unique locations
+  { text = "Memorial wall - names of the dead from the last corporate war", weight = 1 },
+  { text = "Street preacher corner - end times prophecy, surprising crowd", weight = 1 },
+  { text = "Illegal racing strip - straight road, modified cars, big bets", weight = 2 },
+  { text = "Rooftop garden collective - green oasis above the smog", weight = 1 },
+  { text = "Open-air clinic - street doc treating patients on folding tables", weight = 2 },
+  { text = "Graffiti gallery - famous tags, art tourists, gang tributes", weight = 1 },
+  { text = "Protest gathering point - anti-corp signs, riot police nearby", weight = 1 },
+  { text = "Street gym - weights made from scrap, fighters training", weight = 2 },
+  { text = "Public execution site - corporate justice, crowd deterrence", weight = 1 },
+  { text = "Dead drop alley - known exchange point, watched by everyone", weight = 2 },
+]

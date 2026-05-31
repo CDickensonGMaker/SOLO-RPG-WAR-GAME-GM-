@@ -1,0 +1,695 @@
+# Universal Loot Tables
+# System-agnostic items suitable for any genre
+# Use weights to adjust probability (higher = more common)
+
+[mundane_items]
+entries = [
+  # Currency and Trade (weight 3-5 = common)
+  { text = "A few coins of local currency", weight = 5 },
+  { text = "A handful of small denomination coins", weight = 4 },
+  { text = "Crumpled currency notes of low value", weight = 3 },
+  { text = "Trade tokens from a local establishment", weight = 2 },
+  { text = "Foreign currency, value uncertain", weight = 2 },
+
+  # Weapons - Poor Quality (weight 2-3)
+  { text = "A worn knife of poor quality", weight = 3 },
+  { text = "A crude club, little more than a weighted stick", weight = 3 },
+  { text = "A rusted blade, serviceable but unreliable", weight = 2 },
+  { text = "Improvised weapon made from scavenged parts", weight = 2 },
+  { text = "A broken weapon, useful only for parts", weight = 2 },
+  { text = "A dull knife barely sharp enough to cut rope", weight = 2 },
+  { text = "A weapon with a cracked handle, prone to breaking", weight = 1 },
+
+  # Food and Water (weight 2-4)
+  { text = "Rations for one day", weight = 3 },
+  { text = "A water container, half full", weight = 3 },
+  { text = "Dried meat of questionable origin", weight = 3 },
+  { text = "Hardtack or travel bread, stale but edible", weight = 3 },
+  { text = "A flask of weak alcohol", weight = 2 },
+  { text = "Preserved fruit in a sealed container", weight = 2 },
+  { text = "Salt or spices in a small pouch", weight = 2 },
+  { text = "Nuts and dried berries wrapped in cloth", weight = 2 },
+  { text = "A waterskin with a small leak", weight = 2 },
+  { text = "Foraged food, recently gathered", weight = 1 },
+  { text = "Emergency rations, compact and tasteless", weight = 1 },
+
+  # Tools and Equipment (weight 1-3)
+  { text = "A length of rope, fraying but usable", weight = 3 },
+  { text = "Flint and steel for firestarting", weight = 3 },
+  { text = "A lantern or torch, partially used", weight = 2 },
+  { text = "A small toolkit with basic implements", weight = 2 },
+  { text = "A repair kit for equipment", weight = 2 },
+  { text = "A sewing kit with needle and thread", weight = 2 },
+  { text = "A whetstone for sharpening blades", weight = 2 },
+  { text = "A coil of wire", weight = 1 },
+  { text = "Lockpicks, crudely made", weight = 1 },
+  { text = "A crowbar or prying tool", weight = 1 },
+  { text = "A hammer and a handful of nails", weight = 1 },
+  { text = "Fishing line and hooks", weight = 1 },
+  { text = "A small saw, blade worn thin", weight = 1 },
+  { text = "A shovel, handle splintered", weight = 1 },
+  { text = "An empty sack, useful for carrying", weight = 2 },
+
+  # Light and Vision (weight 1-2)
+  { text = "A small mirror, cracked", weight = 1 },
+  { text = "Candles, partially melted", weight = 2 },
+  { text = "Matches or fire starters", weight = 2 },
+  { text = "A lens, chipped but functional", weight = 1 },
+  { text = "Goggles for protection against dust or glare", weight = 1 },
+  { text = "A shuttered lantern, low on fuel", weight = 1 },
+
+  # Writing and Recording (weight 1-2)
+  { text = "Writing materials - paper and ink", weight = 1 },
+  { text = "A blank journal, pages water-damaged", weight = 1 },
+  { text = "Charcoal sticks for marking", weight = 2 },
+  { text = "A slate and chalk", weight = 1 },
+  { text = "Sealing wax and a nondescript stamp", weight = 1 },
+
+  # Entertainment and Vice (weight 1-2)
+  { text = "Dice or cards, well-worn", weight = 2 },
+  { text = "A musical instrument, out of tune", weight = 1 },
+  { text = "Tobacco or smoking supplies", weight = 2 },
+  { text = "A deck of fortune-telling cards", weight = 1 },
+  { text = "Gambling chips from an unknown establishment", weight = 1 },
+  { text = "A half-finished carving and a whittling knife", weight = 1 },
+  { text = "A puzzle box, mechanism jammed", weight = 1 },
+
+  # Religious and Spiritual (weight 1-2)
+  { text = "A religious symbol, cheaply made", weight = 2 },
+  { text = "Prayer beads, several missing", weight = 1 },
+  { text = "A small idol of an unknown deity", weight = 1 },
+  { text = "Incense and a small burner", weight = 1 },
+  { text = "Holy water in a simple vial", weight = 1 },
+  { text = "A tattered holy text, common prayers", weight = 1 },
+
+  # Keys and Access (weight 1-2)
+  { text = "Keys to unknown locks", weight = 2 },
+  { text = "A key ring with several mundane keys", weight = 2 },
+  { text = "A key with a tag indicating a location", weight = 1 },
+  { text = "A bent key that no longer works", weight = 1 },
+  { text = "A master key that fits nothing you've found", weight = 1 },
+
+  # Personal Care (weight 1-2)
+  { text = "Personal hygiene kit, well-used", weight = 2 },
+  { text = "A comb or brush", weight = 2 },
+  { text = "A razor and strop", weight = 1 },
+  { text = "Soap, partially used", weight = 2 },
+  { text = "A small towel, threadbare", weight = 1 },
+  { text = "Perfume or cologne, cheap quality", weight = 1 },
+
+  # Medicine (weight 1-2)
+  { text = "Bandages, previously used but clean", weight = 2 },
+  { text = "A poultice of uncertain potency", weight = 1 },
+  { text = "Pain-relief herbs, dried", weight = 1 },
+  { text = "A splint and binding materials", weight = 1 },
+  { text = "Salve for minor wounds", weight = 1 },
+  { text = "Antidote of unknown effectiveness", weight = 1 },
+
+  # Clothing Extras (weight 1-2)
+  { text = "A spare set of worn clothing", weight = 2 },
+  { text = "A patched cloak or coat", weight = 2 },
+  { text = "Gloves with holes in the fingers", weight = 1 },
+  { text = "A hat or head covering", weight = 2 },
+  { text = "Extra bootlaces or belt", weight = 1 },
+  { text = "A scarf, stained but warm", weight = 1 },
+
+  # Containers (weight 1-2)
+  { text = "A small wooden box, empty", weight = 2 },
+  { text = "A leather pouch with a broken clasp", weight = 2 },
+  { text = "Glass vials, empty and stoppered", weight = 1 },
+  { text = "A metal tin, rusted shut", weight = 1 },
+  { text = "A canvas bag with shoulder strap", weight = 1 },
+
+  # Miscellaneous (weight 1-2)
+  { text = "A ball of twine", weight = 2 },
+  { text = "Chalk for marking surfaces", weight = 2 },
+  { text = "A whistle on a cord", weight = 1 },
+  { text = "A compass, needle sticking", weight = 1 },
+  { text = "A small bell", weight = 1 },
+  { text = "Caltrops, a handful", weight = 1 },
+  { text = "A signal mirror", weight = 1 },
+  { text = "Adhesive paste in a small pot", weight = 1 },
+  { text = "A measuring tape or marked cord", weight = 1 },
+  { text = "A hand-drawn map, crude and local", weight = 1 },
+]
+
+[valuable_items]
+entries = [
+  # Currency (weight 2-3)
+  { text = "A pouch of silver coins or credits", weight = 3 },
+  { text = "A money clip holding quality currency", weight = 2 },
+  { text = "A coin purse with mixed denominations", weight = 2 },
+  { text = "Bearer bonds or promissory notes", weight = 1 },
+  { text = "A cache of foreign currency, valuable", weight = 1 },
+  { text = "Trade bars of precious metal", weight = 1 },
+
+  # Quality Weapons (weight 1-2)
+  { text = "A quality weapon in good condition", weight = 2 },
+  { text = "A well-maintained sidearm", weight = 2 },
+  { text = "A blade of superior craftsmanship", weight = 1 },
+  { text = "A ranged weapon with fine mechanisms", weight = 1 },
+  { text = "A matched pair of weapons", weight = 1 },
+  { text = "A weapon with family markings", weight = 1 },
+  { text = "A concealed weapon of expert design", weight = 1 },
+  { text = "A trophy weapon from a notable foe", weight = 1 },
+
+  # Armor and Protection (weight 1-2)
+  { text = "Quality armor, well-fitted", weight = 1 },
+  { text = "A protective vest of good make", weight = 1 },
+  { text = "A reinforced helmet", weight = 1 },
+  { text = "Armored gloves or gauntlets", weight = 1 },
+  { text = "A shield bearing heraldry", weight = 1 },
+
+  # Jewelry (weight 1-2)
+  { text = "Jewelry of moderate value", weight = 2 },
+  { text = "A signet ring with an unfamiliar crest", weight = 1 },
+  { text = "A pendant on a quality chain", weight = 1 },
+  { text = "Earrings set with semi-precious stones", weight = 1 },
+  { text = "A bracelet of worked metal", weight = 1 },
+  { text = "A brooch suitable for formal occasions", weight = 1 },
+  { text = "A decorative hair pin with gemstone", weight = 1 },
+  { text = "Cufflinks or clasps of precious metal", weight = 1 },
+
+  # Clothing and Accessories (weight 1-2)
+  { text = "Fine clothing, tailored", weight = 1 },
+  { text = "A quality coat or cloak", weight = 1 },
+  { text = "Boots of excellent leather", weight = 1 },
+  { text = "Formal wear appropriate for high society", weight = 1 },
+  { text = "A military uniform with rank insignia", weight = 1 },
+  { text = "A hat of expensive materials", weight = 1 },
+
+  # Trade Goods (weight 1-2)
+  { text = "Trade goods worth selling", weight = 2 },
+  { text = "Bolts of quality fabric", weight = 1 },
+  { text = "Spices of considerable value", weight = 1 },
+  { text = "Crafting materials in demand", weight = 1 },
+  { text = "Rare dyes or pigments", weight = 1 },
+  { text = "Quality alcohol meant for trade", weight = 1 },
+  { text = "Exotic pelts or leathers", weight = 1 },
+  { text = "Processed materials ready for sale", weight = 1 },
+
+  # Medical and Scientific (weight 1-2)
+  { text = "Medical supplies of professional grade", weight = 2 },
+  { text = "Surgical instruments in a case", weight = 1 },
+  { text = "Medicines of verified potency", weight = 1 },
+  { text = "A physician's kit, well-stocked", weight = 1 },
+  { text = "Scientific instruments for analysis", weight = 1 },
+  { text = "A chemistry set, portable", weight = 1 },
+
+  # Substances (weight 1-2)
+  { text = "Alcohol or drugs with trade value", weight = 2 },
+  { text = "Recreational substances, quality grade", weight = 1 },
+  { text = "Performance-enhancing compounds", weight = 1 },
+  { text = "Poisons in labeled containers", weight = 1 },
+  { text = "Sedatives or anesthetics", weight = 1 },
+
+  # Navigation and Communication (weight 1-2)
+  { text = "Navigation equipment of quality make", weight = 1 },
+  { text = "A communication device, short range", weight = 1 },
+  { text = "Professional surveying tools", weight = 1 },
+  { text = "A spyglass or telescope", weight = 1 },
+  { text = "Detailed charts of the region", weight = 1 },
+  { text = "A signal kit for long-distance communication", weight = 1 },
+
+  # Documents and Information (weight 1-2)
+  { text = "A detailed map of significant territory", weight = 2 },
+  { text = "Travel papers valid for restricted areas", weight = 1 },
+  { text = "A license for a regulated profession", weight = 1 },
+  { text = "Letters of credit from a reputable source", weight = 1 },
+  { text = "An invitation to an exclusive event", weight = 1 },
+  { text = "A membership card to a private organization", weight = 1 },
+
+  # Tools and Instruments (weight 1-2)
+  { text = "Artisan tools of quality make", weight = 1 },
+  { text = "A lockpick set, professional grade", weight = 1 },
+  { text = "Musical instrument of fine craftsmanship", weight = 1 },
+  { text = "An artist's kit with quality materials", weight = 1 },
+  { text = "Precision measuring instruments", weight = 1 },
+  { text = "A toolkit for a specialized trade", weight = 1 },
+
+  # Timepieces and Devices (weight 1-2)
+  { text = "A pocket watch or timepiece", weight = 2 },
+  { text = "A mechanical device of clever design", weight = 1 },
+  { text = "An encrypted communication device", weight = 1 },
+  { text = "A recording device, memories stored", weight = 1 },
+  { text = "A light source of advanced design", weight = 1 },
+
+  # Books and Knowledge (weight 1-2)
+  { text = "A rare book sought by collectors", weight = 1 },
+  { text = "Technical manuals of a restricted nature", weight = 1 },
+  { text = "A coded ledger of transactions", weight = 1 },
+  { text = "A bestiary with detailed illustrations", weight = 1 },
+  { text = "A journal of an explorer's discoveries", weight = 1 },
+
+  # Art and Collectibles (weight 1-2)
+  { text = "A small sculpture of quality work", weight = 1 },
+  { text = "A portrait miniature, finely painted", weight = 1 },
+  { text = "Collectible tokens or medallions", weight = 1 },
+  { text = "An antique of historical significance", weight = 1 },
+  { text = "A decorated box of intricate design", weight = 1 },
+]
+
+[rare_items]
+entries = [
+  # High-Value Currency (weight 1)
+  { text = "A cache of gold or high-value credits", weight = 1 },
+  { text = "Platinum coins minted by a fallen empire", weight = 1 },
+  { text = "Untraceable bearer instruments worth a fortune", weight = 1 },
+  { text = "A letter of credit with no spending limit", weight = 1 },
+  { text = "Currency from a nation that no longer exists, now priceless", weight = 1 },
+
+  # Exceptional Weapons (weight 1)
+  { text = "A masterwork weapon of legendary craftsmanship", weight = 1 },
+  { text = "A weapon with a storied history", weight = 1 },
+  { text = "A prototype weapon never mass-produced", weight = 1 },
+  { text = "A weapon belonging to a famous figure", weight = 1 },
+  { text = "An assassin's tool of perfect balance", weight = 1 },
+  { text = "A weapon that carries its own reputation", weight = 1 },
+  { text = "A ceremonial weapon still deadly in function", weight = 1 },
+
+  # Gemstones and Precious Materials (weight 1)
+  { text = "A valuable gemstone of excellent cut", weight = 1 },
+  { text = "An uncut gem of significant size", weight = 1 },
+  { text = "A pearl of unusual color and luster", weight = 1 },
+  { text = "A diamond with a famous flaw that proves its origin", weight = 1 },
+  { text = "Precious metal in raw form, assay-marked", weight = 1 },
+  { text = "A container of rare earth elements", weight = 1 },
+
+  # Artifacts and Relics (weight 1)
+  { text = "An ancient artifact of unknown purpose", weight = 1 },
+  { text = "A relic from a bygone civilization", weight = 1 },
+  { text = "An item of religious significance to a major faith", weight = 1 },
+  { text = "A device from a lost technological age", weight = 1 },
+  { text = "A fragment of something greater, clearly important", weight = 1 },
+  { text = "An object that defies easy explanation", weight = 1 },
+
+  # Documents of Power (weight 1)
+  { text = "A deed or ownership document for valuable property", weight = 1 },
+  { text = "Encrypted data of extremely high value", weight = 1 },
+  { text = "A will naming an unexpected heir", weight = 1 },
+  { text = "Evidence of a crime by someone powerful", weight = 1 },
+  { text = "A treaty or agreement with binding authority", weight = 1 },
+  { text = "Access codes to restricted systems or locations", weight = 1 },
+  { text = "A patent or formula worth killing for", weight = 1 },
+
+  # Rare Crafting Materials (weight 1)
+  { text = "Rare crafting materials sought by masters", weight = 1 },
+  { text = "A sample of an extinct species", weight = 1 },
+  { text = "Alchemical reagents of the highest purity", weight = 1 },
+  { text = "Materials from another world or plane", weight = 1 },
+  { text = "A component needed for a legendary creation", weight = 1 },
+
+  # Historical Significance (weight 1)
+  { text = "An item of historical significance", weight = 1 },
+  { text = "A flag or standard from a famous battle", weight = 1 },
+  { text = "The personal effects of a historical figure", weight = 1 },
+  { text = "A document bearing signatures that changed history", weight = 1 },
+  { text = "An item from a moment everyone remembers", weight = 1 },
+
+  # Art and Cultural Treasures (weight 1)
+  { text = "A painting by a renowned artist", weight = 1 },
+  { text = "A sculpture that belongs in a museum", weight = 1 },
+  { text = "A musical instrument played by a virtuoso", weight = 1 },
+  { text = "A manuscript in the author's own hand", weight = 1 },
+  { text = "A cultural artifact stolen from its rightful place", weight = 1 },
+
+  # Unique Items (weight 1)
+  { text = "An item that may be one of a kind", weight = 1 },
+  { text = "Something whose true value is known only to experts", weight = 1 },
+  { text = "An heirloom that families have died to protect", weight = 1 },
+  { text = "A key to something that no longer has a door", weight = 1 },
+  { text = "The last remaining example of its kind", weight = 1 },
+
+  # Exotic and Strange (weight 1)
+  { text = "A container of something that moves on its own", weight = 1 },
+  { text = "An item that weighs nothing - or too much", weight = 1 },
+  { text = "Something that wasn't here a moment ago", weight = 1 },
+  { text = "An object that seems to watch you", weight = 1 },
+  { text = "A device with no obvious means of activation", weight = 1 },
+]
+
+[documents]
+entries = [
+  # Secrets and Intelligence (weight 1-2)
+  { text = "A letter revealing a dangerous secret", weight = 2 },
+  { text = "Orders or mission briefing, classified", weight = 2 },
+  { text = "Intelligence reports on enemy movements", weight = 1 },
+  { text = "A dossier on an important figure", weight = 1 },
+  { text = "Surveillance notes on a target", weight = 1 },
+  { text = "Decrypted messages from an enemy", weight = 1 },
+  { text = "A list of informants or agents", weight = 1 },
+
+  # Personal Journals (weight 1-2)
+  { text = "A journal with personal details and observations", weight = 2 },
+  { text = "A diary revealing inner thoughts and fears", weight = 1 },
+  { text = "Travel notes with marked routes and dangers", weight = 1 },
+  { text = "Research notes on an obsessive project", weight = 1 },
+  { text = "A confession written but never delivered", weight = 1 },
+  { text = "A chronicle of increasingly disturbing events", weight = 1 },
+
+  # Coded and Hidden Messages (weight 1-2)
+  { text = "A coded message requiring decryption", weight = 2 },
+  { text = "A cipher key without its corresponding message", weight = 1 },
+  { text = "A message hidden in innocent-seeming text", weight = 1 },
+  { text = "Instructions written in an obscure language", weight = 1 },
+  { text = "A dead drop location and recognition signals", weight = 1 },
+  { text = "A book with certain letters marked", weight = 1 },
+
+  # Blackmail and Leverage (weight 1-2)
+  { text = "A blackmail file with damning evidence", weight = 1 },
+  { text = "Photographs that could ruin someone", weight = 1 },
+  { text = "Receipts for transactions that shouldn't exist", weight = 1 },
+  { text = "Recording transcripts of incriminating conversations", weight = 1 },
+  { text = "Medical records revealing hidden conditions", weight = 1 },
+  { text = "A list of bribes paid and received", weight = 1 },
+
+  # Legal Documents (weight 1-2)
+  { text = "A will with unexpected beneficiaries", weight = 1 },
+  { text = "A deed to contested property", weight = 1 },
+  { text = "A contract with unusual terms buried in the text", weight = 1 },
+  { text = "Adoption papers or birth certificates", weight = 1 },
+  { text = "Marriage or divorce documents", weight = 1 },
+  { text = "A royal decree or official proclamation", weight = 1 },
+  { text = "Citizenship papers for multiple identities", weight = 1 },
+
+  # Lists and Records (weight 1-2)
+  { text = "A list of names, some crossed out", weight = 2 },
+  { text = "Inventory records of illegal goods", weight = 1 },
+  { text = "A ledger of debts owed and owing", weight = 1 },
+  { text = "Membership rolls of a secret society", weight = 1 },
+  { text = "A kill list with names still remaining", weight = 1 },
+  { text = "Personnel files with annotations", weight = 1 },
+  { text = "A schedule of guard rotations and patrols", weight = 1 },
+
+  # Maps and Locations (weight 1-2)
+  { text = "A map with marked locations", weight = 2 },
+  { text = "Blueprints of a secure facility", weight = 1 },
+  { text = "Hidden routes through dangerous territory", weight = 1 },
+  { text = "The location of a safe house", weight = 1 },
+  { text = "Coordinates without context", weight = 1 },
+  { text = "A treasure map, possibly authentic", weight = 1 },
+  { text = "Escape routes marked for emergency use", weight = 1 },
+
+  # Forged and False (weight 1-2)
+  { text = "Forged identity papers of high quality", weight = 1 },
+  { text = "A letter of introduction that may be fabricated", weight = 1 },
+  { text = "Credentials for an organization that might not exist", weight = 1 },
+  { text = "A passport with multiple entry stamps", weight = 1 },
+  { text = "Academic credentials of questionable authenticity", weight = 1 },
+
+  # Correspondence (weight 1-2)
+  { text = "Love letters revealing an affair", weight = 2 },
+  { text = "Threatening letters from an unknown sender", weight = 1 },
+  { text = "Business correspondence with coded meanings", weight = 1 },
+  { text = "Letters between conspirators", weight = 1 },
+  { text = "A final letter meant to be read after death", weight = 1 },
+  { text = "Intercepted messages never delivered", weight = 1 },
+
+  # Technical and Academic (weight 1-2)
+  { text = "Research notes on a dangerous subject", weight = 1 },
+  { text = "Formulas or schematics, incomplete", weight = 1 },
+  { text = "Laboratory results that raise questions", weight = 1 },
+  { text = "A thesis on forbidden knowledge", weight = 1 },
+  { text = "Technical specifications for a weapon", weight = 1 },
+  { text = "Instructions for a ritual or procedure", weight = 1 },
+]
+
+[personal_effects]
+entries = [
+  # Sentimental Jewelry (weight 1-2)
+  { text = "A locket with a portrait inside", weight = 2 },
+  { text = "A wedding ring worn smooth by years", weight = 2 },
+  { text = "A friendship bracelet, handmade", weight = 1 },
+  { text = "A necklace with a child's first tooth", weight = 1 },
+  { text = "Matching rings from a pair now separated", weight = 1 },
+  { text = "A pendant containing a lock of hair", weight = 1 },
+
+  # Letters and Messages (weight 1-2)
+  { text = "A letter never sent", weight = 2 },
+  { text = "The last letter received from someone who didn't return", weight = 1 },
+  { text = "A stack of love letters, tied with ribbon", weight = 1 },
+  { text = "A letter of apology, never accepted", weight = 1 },
+  { text = "A goodbye note that explains nothing", weight = 1 },
+  { text = "Correspondence from a child to a parent far away", weight = 1 },
+
+  # Children's Items (weight 1-2)
+  { text = "A child's toy, well-loved and worn", weight = 2 },
+  { text = "A hand-drawn picture labeled 'family'", weight = 1 },
+  { text = "A child's first shoes, preserved", weight = 1 },
+  { text = "A stuffed animal with button eyes", weight = 1 },
+  { text = "A storybook with a name written inside", weight = 1 },
+  { text = "A music box that plays a lullaby", weight = 1 },
+
+  # Religious Items (weight 1-2)
+  { text = "A religious text, heavily annotated", weight = 2 },
+  { text = "Prayer beads worn by devoted use", weight = 1 },
+  { text = "A saint's medal or holy symbol passed down", weight = 1 },
+  { text = "A devotional object carried for protection", weight = 1 },
+  { text = "A hymnal with favorites marked", weight = 1 },
+  { text = "A pilgrimage token from a holy site", weight = 1 },
+
+  # Photographs and Images (weight 1-2)
+  { text = "Photographs of family, creased from handling", weight = 2 },
+  { text = "A portrait of someone who looks familiar", weight = 1 },
+  { text = "A group photograph with one face scratched out", weight = 1 },
+  { text = "Images of a place that might be home", weight = 1 },
+  { text = "A wedding photograph", weight = 1 },
+  { text = "The only existing image of a deceased loved one", weight = 1 },
+
+  # Identification (weight 1-2)
+  { text = "Dog tags or identification markers", weight = 2 },
+  { text = "A service medal earned in conflict", weight = 1 },
+  { text = "A badge of office no longer valid", weight = 1 },
+  { text = "School or academy identification", weight = 1 },
+  { text = "A brand or marking showing allegiance", weight = 1 },
+  { text = "A retired credential kept for sentiment", weight = 1 },
+
+  # Luck and Superstition (weight 1-2)
+  { text = "A lucky charm carried everywhere", weight = 2 },
+  { text = "A four-leaf clover pressed and preserved", weight = 1 },
+  { text = "A coin from the year of their birth", weight = 1 },
+  { text = "A stone from an important place", weight = 1 },
+  { text = "A feather kept for its significance", weight = 1 },
+  { text = "An object from a moment of survival", weight = 1 },
+
+  # Books and Reading (weight 1-2)
+  { text = "A book of poetry, certain verses marked", weight = 1 },
+  { text = "A novel read so many times the spine is broken", weight = 1 },
+  { text = "A journal only partially filled", weight = 1 },
+  { text = "A book of recipes from home", weight = 1 },
+  { text = "A how-to manual for a hobby never mastered", weight = 1 },
+
+  # Vice and Comfort (weight 1-2)
+  { text = "Tobacco or smoking supplies of a specific brand", weight = 2 },
+  { text = "A flask engraved with initials", weight = 1 },
+  { text = "Gambling tokens from a favorite establishment", weight = 1 },
+  { text = "A snuff box with a dent in the lid", weight = 1 },
+  { text = "A deck of cards with a specific game's wear", weight = 1 },
+
+  # Craft and Hobby (weight 1-2)
+  { text = "Knitting needles and an unfinished project", weight = 1 },
+  { text = "A sketchbook of drawings, amateur but earnest", weight = 1 },
+  { text = "Musical instrument of sentimental value", weight = 1 },
+  { text = "A collection of pressed flowers", weight = 1 },
+  { text = "Carved figures of animals or people", weight = 1 },
+
+  # Memory Objects (weight 1-2)
+  { text = "A key to a home that no longer exists", weight = 1 },
+  { text = "Sand or soil from a distant homeland", weight = 1 },
+  { text = "A fragment of something destroyed", weight = 1 },
+  { text = "A bullet that was removed from their body", weight = 1 },
+  { text = "A clock stopped at a significant time", weight = 1 },
+  { text = "A memento from the day everything changed", weight = 1 },
+
+  # Relationship Tokens (weight 1-2)
+  { text = "A gift from someone who mattered", weight = 2 },
+  { text = "Something borrowed and never returned", weight = 1 },
+  { text = "A promise token waiting to be fulfilled", weight = 1 },
+  { text = "An object that proves a shared experience", weight = 1 },
+  { text = "Something held for someone who might return", weight = 1 },
+]
+
+[hidden_items]
+entries = [
+  # Secret Compartments (weight 1-2)
+  { text = "A secret compartment reveals a hidden cache", weight = 2 },
+  { text = "A false bottom in a container hides valuables", weight = 2 },
+  { text = "A hollow book conceals documents", weight = 1 },
+  { text = "A hidden panel slides open to reveal a space", weight = 1 },
+  { text = "A piece of furniture has a concealed drawer", weight = 1 },
+  { text = "A wall safe behind a mundane object", weight = 1 },
+
+  # Sewn or Hidden in Clothing (weight 1-2)
+  { text = "Coins sewn into the lining of clothing", weight = 2 },
+  { text = "Documents hidden in a coat's inner pocket", weight = 1 },
+  { text = "A blade concealed in a boot", weight = 1 },
+  { text = "Keys woven into a belt", weight = 1 },
+  { text = "A garotte disguised as a decorative cord", weight = 1 },
+  { text = "Poison in a hollow ring", weight = 1 },
+  { text = "A lockpick sewn into a hat band", weight = 1 },
+
+  # Concealed Weapons (weight 1-2)
+  { text = "A hidden blade in an ordinary walking stick", weight = 1 },
+  { text = "A weapon disguised as a tool", weight = 1 },
+  { text = "A single-shot device concealed in a pen", weight = 1 },
+  { text = "A blade hidden in a religious symbol", weight = 1 },
+  { text = "A weapon built into a prosthetic", weight = 1 },
+  { text = "A concealed mechanism in jewelry", weight = 1 },
+
+  # Coded or Hidden Messages (weight 1-2)
+  { text = "A coded message hidden in an ordinary book", weight = 2 },
+  { text = "Text visible only under certain light", weight = 1 },
+  { text = "A message revealed by applying heat", weight = 1 },
+  { text = "Words hidden in a larger document", weight = 1 },
+  { text = "A map concealed in a piece of art", weight = 1 },
+  { text = "Information encoded in music or poetry", weight = 1 },
+
+  # Buried or Cached (weight 1-2)
+  { text = "A marker indicating something buried beneath", weight = 1 },
+  { text = "A cache hidden in a natural formation", weight = 1 },
+  { text = "Valuables sealed in a waterproof container underwater", weight = 1 },
+  { text = "Something bricked up behind a wall", weight = 1 },
+  { text = "A dead drop in a pre-arranged location", weight = 1 },
+
+  # In Plain Sight (weight 1-2)
+  { text = "Valuable items disguised as worthless junk", weight = 1 },
+  { text = "A real gemstone set among fakes", weight = 1 },
+  { text = "Important papers mixed with mundane ones", weight = 1 },
+  { text = "A key hidden among many keys", weight = 1 },
+  { text = "Something hidden by making it obvious", weight = 1 },
+]
+
+[cursed_or_dangerous]
+entries = [
+  # Pursuit and Revenge (weight 1-2)
+  { text = "The item is stolen - someone wants it back badly", weight = 2 },
+  { text = "A faction considers this item sacred and demands its return", weight = 1 },
+  { text = "The previous owner's associates are looking for it", weight = 1 },
+  { text = "Taking this has made you a target for revenge", weight = 1 },
+  { text = "The item's theft will be discovered soon", weight = 1 },
+  { text = "Powerful people have noticed this item's disappearance", weight = 1 },
+
+  # Trapped or Harmful (weight 1-2)
+  { text = "The item is trapped or booby-trapped", weight = 2 },
+  { text = "A contact poison coats the surface", weight = 1 },
+  { text = "Opening it fully will trigger something", weight = 1 },
+  { text = "The item is rigged to harm its next user", weight = 1 },
+  { text = "A hidden mechanism activates under certain conditions", weight = 1 },
+  { text = "The item contains something that should not be released", weight = 1 },
+
+  # Surveillance and Tracking (weight 1-2)
+  { text = "The item is being tracked", weight = 2 },
+  { text = "A beacon broadcasts its location", weight = 1 },
+  { text = "Magical or technological surveillance monitors it", weight = 1 },
+  { text = "Someone always knows where this item is", weight = 1 },
+  { text = "The item marks those who carry it", weight = 1 },
+
+  # Dangerous Contents (weight 1-2)
+  { text = "The item contains something dangerous", weight = 2 },
+  { text = "A disease or contamination threatens the holder", weight = 1 },
+  { text = "Something inside is alive and hostile", weight = 1 },
+  { text = "The contents are explosive or unstable", weight = 1 },
+  { text = "What's inside should never have been preserved", weight = 1 },
+  { text = "The container is barely holding something back", weight = 1 },
+
+  # Legal and Political Danger (weight 1-2)
+  { text = "The item is evidence of a crime", weight = 2 },
+  { text = "Possessing this is punishable by death in some jurisdictions", weight = 1 },
+  { text = "The item proves involvement in a conspiracy", weight = 1 },
+  { text = "This is contraband of the most serious kind", weight = 1 },
+  { text = "Having this makes you complicit in past events", weight = 1 },
+
+  # Powerful Enemies (weight 1-2)
+  { text = "The item belongs to someone very powerful", weight = 2 },
+  { text = "A criminal organization claims ownership", weight = 1 },
+  { text = "The government wants this item classified", weight = 1 },
+  { text = "A wealthy family will pay to recover this - or punish", weight = 1 },
+  { text = "The item was taken from someone who doesn't forgive", weight = 1 },
+
+  # Supernatural or Strange (weight 1-2)
+  { text = "The item carries a curse that transfers to new owners", weight = 1 },
+  { text = "Bad luck follows whoever possesses it", weight = 1 },
+  { text = "The item attracts unwanted attention from beyond", weight = 1 },
+  { text = "Previous owners have met unfortunate ends", weight = 1 },
+  { text = "The item seems to have its own agenda", weight = 1 },
+  { text = "Something awakens when the item moves", weight = 1 },
+
+  # Moral and Ethical (weight 1-2)
+  { text = "The item was taken from the innocent", weight = 1 },
+  { text = "Using this will harm someone who doesn't deserve it", weight = 1 },
+  { text = "The item's history is soaked in suffering", weight = 1 },
+  { text = "Profiting from this makes you part of the problem", weight = 1 },
+  { text = "Someone needs this item more than you need its value", weight = 1 },
+]
+
+[pocket_contents]
+entries = [
+  # Common Pocket Items (weight 2-3)
+  { text = "Lint and thread", weight = 3 },
+  { text = "A few small coins", weight = 3 },
+  { text = "A crumpled receipt", weight = 3 },
+  { text = "A used handkerchief", weight = 2 },
+  { text = "Keys on a simple ring", weight = 2 },
+  { text = "A folding knife", weight = 2 },
+  { text = "Matches or a lighter", weight = 2 },
+  { text = "Wrapped candy or mint", weight = 2 },
+  { text = "A stub of pencil", weight = 2 },
+
+  # Notes and Paper (weight 1-2)
+  { text = "A shopping list", weight = 2 },
+  { text = "A note with an address", weight = 1 },
+  { text = "A reminder note to self", weight = 1 },
+  { text = "A torn ticket stub", weight = 2 },
+  { text = "A business card", weight = 2 },
+  { text = "A love note, well-worn", weight = 1 },
+  { text = "A scrap with a name and time", weight = 1 },
+
+  # Personal Items (weight 1-2)
+  { text = "A comb or small brush", weight = 2 },
+  { text = "A compact mirror", weight = 1 },
+  { text = "A small vial of medicine", weight = 1 },
+  { text = "A religious token", weight = 1 },
+  { text = "A photograph, wallet-sized", weight = 1 },
+  { text = "A button that fell off", weight = 2 },
+  { text = "A lucky coin", weight = 1 },
+
+  # Surprising Finds (weight 1)
+  { text = "A key that doesn't match their locks", weight = 1 },
+  { text = "Someone else's identification", weight = 1 },
+  { text = "A tooth - origin unknown", weight = 1 },
+  { text = "A small gemstone, possibly real", weight = 1 },
+  { text = "A note in a language you don't recognize", weight = 1 },
+  { text = "A single bullet or charge", weight = 1 },
+  { text = "A piece of another person's jewelry", weight = 1 },
+]
+
+[container_contents]
+entries = [
+  # Common Containers (weight 2-3)
+  { text = "The container is empty", weight = 3 },
+  { text = "Holds exactly what the label says", weight = 3 },
+  { text = "Contains spoiled or expired contents", weight = 2 },
+  { text = "Partially full of the expected contents", weight = 2 },
+
+  # Unexpected Contents (weight 1-2)
+  { text = "Contains something completely different than labeled", weight = 2 },
+  { text = "Empty except for a single important item", weight = 1 },
+  { text = "The contents have been replaced with worthless substitutes", weight = 1 },
+  { text = "Holds more than should physically fit", weight = 1 },
+  { text = "Contains evidence someone wanted hidden", weight = 1 },
+  { text = "The real contents are beneath a false layer", weight = 1 },
+
+  # Dangerous Contents (weight 1)
+  { text = "Something inside is still alive", weight = 1 },
+  { text = "Contains a substance that shouldn't be opened here", weight = 1 },
+  { text = "The contents are under pressure", weight = 1 },
+  { text = "What's inside reacts badly with air", weight = 1 },
+  { text = "Opening releases something unpleasant", weight = 1 },
+
+  # Valuable Contents (weight 1)
+  { text = "Contains items worth far more than expected", weight = 1 },
+  { text = "Someone's hidden savings", weight = 1 },
+  { text = "Smuggled goods of significant value", weight = 1 },
+  { text = "A collection someone devoted years to", weight = 1 },
+  { text = "The last of something rare", weight = 1 },
+]

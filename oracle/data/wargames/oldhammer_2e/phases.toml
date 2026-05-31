@@ -1,0 +1,218 @@
+# Warhammer 40K 2nd Edition - Turn Sequence Reference
+# This is the classic Oldhammer turn structure
+
+name = "Warhammer 40K 2nd Edition Turn Sequence"
+description = "Complete turn breakdown for 2nd Edition 40K"
+
+[turn_structure]
+description = "Players alternate turns. Each turn follows this sequence."
+
+[[phases]]
+name = "Movement Phase"
+order = 1
+description = "Move your models according to their Movement characteristic"
+
+[[phases.steps]]
+step = 1
+action = "Declare Charges"
+details = "Announce which units will attempt to charge enemy units"
+
+[[phases.steps]]
+step = 2
+action = "Compulsory Moves"
+details = "Move models that MUST move (Frenzied, Raging, etc.)"
+
+[[phases.steps]]
+step = 3
+action = "Move Other Units"
+details = "Move remaining units up to their Movement value"
+rules = [
+    "Infantry: 4\" normal move",
+    "Running: Double move, no shooting",
+    "Difficult terrain: Half movement",
+    "Cannot move within 1\" of enemy unless charging",
+]
+
+[[phases.steps]]
+step = 4
+action = "Charge Moves"
+details = "Move charging units into base contact with target"
+rules = [
+    "Must be able to see target at start of phase",
+    "Roll 2D6 for charge distance (or use fixed movement)",
+    "If reach enemy, move into base contact",
+    "If fail, move full distance toward enemy",
+]
+
+[[phases]]
+name = "Shooting Phase"
+order = 2
+description = "Fire ranged weapons at enemy units"
+
+[[phases.steps]]
+step = 1
+action = "Nominate Firing Unit"
+details = "Choose which unit will shoot"
+
+[[phases.steps]]
+step = 2
+action = "Choose Target"
+details = "Select a visible enemy unit within weapon range"
+rules = [
+    "Must have line of sight",
+    "Must be within weapon range",
+    "Closest enemy model must be targeted first (usually)",
+]
+
+[[phases.steps]]
+step = 3
+action = "Roll To Hit"
+details = "Roll D6 for each shot, need BS or better"
+rules = [
+    "BS 1 = 6+, BS 2 = 5+, BS 3 = 4+, BS 4 = 3+, BS 5 = 2+",
+    "Long range: -1 to hit",
+    "Moving & shooting: -1 to hit (most weapons)",
+    "Cover: -1 to hit",
+]
+
+[[phases.steps]]
+step = 4
+action = "Roll To Wound"
+details = "Compare weapon Strength to target Toughness"
+rules = [
+    "S >= T+2: 2+ to wound",
+    "S = T+1: 3+ to wound",
+    "S = T: 4+ to wound",
+    "S = T-1: 5+ to wound",
+    "S <= T-2: 6+ to wound",
+]
+
+[[phases.steps]]
+step = 5
+action = "Armor Saves"
+details = "Target rolls armor save (if applicable)"
+rules = [
+    "Roll D6 vs Save value",
+    "Modifiers from weapon AP",
+    "No save allowed if AP beats save",
+]
+
+[[phases.steps]]
+step = 6
+action = "Remove Casualties"
+details = "Remove models that failed saves"
+
+[[phases]]
+name = "Close Combat Phase"
+order = 3
+description = "Fight hand-to-hand combat with engaged units"
+
+[[phases.steps]]
+step = 1
+action = "Determine Combat Order"
+details = "Higher Initiative fights first"
+rules = [
+    "Charging units strike first (usually)",
+    "Then in Initiative order",
+    "Equal Initiative = roll off",
+]
+
+[[phases.steps]]
+step = 2
+action = "Roll To Hit"
+details = "Compare WS to determine needed roll"
+rules = [
+    "WS >= defender x2: 2+ to hit",
+    "WS > defender: 3+ to hit",
+    "WS = defender: 4+ to hit",
+    "WS < defender: 5+ to hit",
+    "WS <= defender x0.5: 6+ to hit",
+]
+
+[[phases.steps]]
+step = 3
+action = "Roll To Wound"
+details = "Same as shooting - S vs T"
+
+[[phases.steps]]
+step = 4
+action = "Armor Saves"
+details = "Roll saves for wounded models"
+
+[[phases.steps]]
+step = 5
+action = "Calculate Combat Result"
+details = "Compare wounds caused + modifiers"
+rules = [
+    "+1 per wound caused",
+    "+1 for charging",
+    "+1 for outnumbering",
+    "+1 for higher ground",
+    "+1 for standards (some)",
+]
+
+[[phases.steps]]
+step = 6
+action = "Loser Tests Morale"
+details = "Losing side tests Leadership"
+rules = [
+    "Roll 2D6 vs Leadership",
+    "Fail = Fall Back",
+    "Fall Back = 2D6\" away from enemy",
+    "Sweeping Advance if caught",
+]
+
+[[phases]]
+name = "Psychology Phase"
+order = 4
+description = "Check for special psychology effects"
+
+[[phases.steps]]
+step = 1
+action = "Fear Tests"
+details = "Test for units within 8\" of Fear-causing enemies"
+
+[[phases.steps]]
+step = 2
+action = "Terror Tests"
+details = "Test for units within 12\" of Terror-causing enemies"
+
+[[phases.steps]]
+step = 3
+action = "Rally Tests"
+details = "Attempt to rally Falling Back units"
+
+[special_actions]
+description = "Actions available during your turn"
+
+[[special_actions.actions]]
+name = "Overwatch"
+when = "Instead of shooting"
+effect = "Put unit on Overwatch - can shoot at enemies in THEIR turn"
+rules = [
+    "Declare instead of normal shooting",
+    "Fire at any enemy that moves within range",
+    "Only one Overwatch shot per enemy unit",
+    "-1 to hit for Overwatch fire",
+]
+
+[[special_actions.actions]]
+name = "Go to Ground"
+when = "When targeted by shooting"
+effect = "Gain cover save but cannot act next turn"
+
+[[special_actions.actions]]
+name = "Psychic Powers"
+when = "During appropriate phase (varies)"
+effect = "Use Warp-based abilities"
+rules = [
+    "Test against WP characteristic",
+    "Perils of the Warp on double 1 or 6",
+]
+
+[quick_reference]
+to_hit_shooting = "BS 1=6+, BS 2=5+, BS 3=4+, BS 4=3+, BS 5=2+"
+to_wound = "S>T+1=2+, S>T=3+, S=T=4+, S<T=5+, S<T-1=6+"
+morale = "Roll 2D6 <= Leadership to pass"
+falling_back = "2D6\" directly away from enemy"
+rally = "Roll 2D6 <= Leadership, must be 50%+ strength"

@@ -1,0 +1,99 @@
+# Fantasy Monster Encounters
+# Creatures, beasts, and supernatural entities
+
+[monsters]
+entries = [
+  # Humanoid Monsters
+  { text = "a warband of orcs on a raiding expedition", weight = 2 },
+  { text = "goblins have set up an ambush point", weight = 2 },
+  { text = "hobgoblin soldiers in disciplined formation", weight = 1 },
+  { text = "kobolds defending their warren with traps", weight = 1 },
+  { text = "gnolls hunting in a pack, tracking prey", weight = 1 },
+  { text = "bugbears lurking to ambush travelers", weight = 1 },
+  { text = "a tribe of lizardfolk protecting their territory", weight = 1 },
+  { text = "troglodytes emerging from underground caves", weight = 1 },
+  { text = "an ogre demanding a toll to pass", weight = 1 },
+  { text = "a band of ogres serving a more intelligent master", weight = 1 },
+
+  # Giants
+  { text = "a hill giant throwing boulders from above", weight = 1 },
+  { text = "a stone giant considers you trespassers in its domain", weight = 1 },
+  { text = "a frost giant hunting party in the mountains", weight = 1 },
+  { text = "a fire giant smith and its minions", weight = 1 },
+  { text = "a cloud giant's castle drifts overhead", weight = 1 },
+  { text = "an ettin argues with itself about what to do with you", weight = 1 },
+  { text = "cyclops tending their flocks react to intruders", weight = 1 },
+
+  # Undead
+  { text = "skeletons rise from unmarked graves", weight = 2 },
+  { text = "zombies shamble through the fog", weight = 2 },
+  { text = "ghouls feast on a recent kill", weight = 1 },
+  { text = "a wight guards its barrow", weight = 1 },
+  { text = "wraiths drift through the midnight air", weight = 1 },
+  { text = "a ghost demands resolution of its unfinished business", weight = 1 },
+  { text = "a vampire spawn hunts for its master", weight = 1 },
+  { text = "a mummy awakens in a desecrated tomb", weight = 1 },
+  { text = "shadows drain the life from trespassers", weight = 1 },
+  { text = "a banshee wails in the night", weight = 1 },
+  { text = "a death knight leads a host of undead soldiers", weight = 1 },
+  { text = "a lich regards you as beneath its notice... almost", weight = 1 },
+
+  # Dragons
+  { text = "a young dragon claims this territory as its own", weight = 1 },
+  { text = "a dragon flies overhead, casting a massive shadow", weight = 1 },
+  { text = "an ancient dragon awakens from a long slumber", weight = 1 },
+  { text = "a dragon turtle surfaces near the ship", weight = 1 },
+  { text = "a wyvern nest threatens travelers below", weight = 1 },
+  { text = "a drake pack hunts like wolves", weight = 1 },
+  { text = "a pseudodragon seeks help against a larger threat", weight = 1 },
+
+  # Aberrations
+  { text = "an aberration from beyond reality tears through", weight = 1 },
+  { text = "a mind flayer hunts for brains to consume", weight = 1 },
+  { text = "a beholder's eye rays sweep the area", weight = 1 },
+  { text = "an aboleth's mental influence spreads from the water", weight = 1 },
+  { text = "a gibbering mouther blocks the passage", weight = 1 },
+  { text = "an ooze engulfs everything in its path", weight = 1 },
+  { text = "a mimic disguised as treasure attacks", weight = 1 },
+  { text = "a rust monster threatens equipment", weight = 1 },
+
+  # Magical Beasts
+  { text = "a griffon protects its nest aggressively", weight = 1 },
+  { text = "a hippogriff circles overhead, curious", weight = 1 },
+  { text = "a cockatrice pecks at something concerning", weight = 1 },
+  { text = "a basilisk's gaze turns victims to stone", weight = 1 },
+  { text = "a manticore toys with its prey before striking", weight = 1 },
+  { text = "a chimera combines three deadly threats", weight = 1 },
+  { text = "a hydra blocks the swamp crossing", weight = 1 },
+  { text = "a peryton hunts from the skies", weight = 1 },
+  { text = "an owlbear rampages through the forest", weight = 1 },
+  { text = "a displacer beast stalks from the shadows", weight = 1 },
+  { text = "phase spiders blink in and out of visibility", weight = 1 },
+
+  # Elementals & Outsiders
+  { text = "an earth elemental rises from the ground", weight = 1 },
+  { text = "a fire elemental rages out of control", weight = 1 },
+  { text = "a water elemental guards the sacred pool", weight = 1 },
+  { text = "an air elemental whips up a deadly windstorm", weight = 1 },
+  { text = "a demon breaks through a weakened seal", weight = 1 },
+  { text = "a devil offers a bargain too good to be true", weight = 1 },
+  { text = "an angel fallen from grace seeks redemption through violence", weight = 1 },
+
+  # Fey Creatures
+  { text = "a hag offers a deal with hidden consequences", weight = 1 },
+  { text = "a coven of hags works dark magic", weight = 1 },
+  { text = "dryads defend their sacred grove", weight = 1 },
+  { text = "a satyr's music compels dangerous behavior", weight = 1 },
+  { text = "pixies play tricks that turn dangerous", weight = 1 },
+  { text = "a redcap seeks to dye its cap in fresh blood", weight = 1 },
+  { text = "quicklings attack with supernatural speed", weight = 1 },
+
+  # Beasts (Dire/Monstrous)
+  { text = "a dire wolf pack has picked up the party's trail", weight = 1 },
+  { text = "a giant spider drops from above on webbing", weight = 1 },
+  { text = "a swarm of rats pours from the sewers", weight = 1 },
+  { text = "a giant scorpion bursts from the sand", weight = 1 },
+  { text = "a pack of worgs serves as mounts for goblins", weight = 1 },
+  { text = "a cave bear defends its territory", weight = 1 },
+  { text = "giant centipedes infest the passage", weight = 1 },
+]

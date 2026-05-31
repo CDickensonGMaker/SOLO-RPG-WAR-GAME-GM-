@@ -1,0 +1,77 @@
+# Cyberpunk Social Encounters
+# Negotiations, betrayals, and human complications
+
+[encounters]
+entries = [
+  # Fixer and job encounters
+  { text = "Fixer meet - new job offer, suspicious details", weight = 3 },
+  { text = "Payment dispute - client claiming non-completion, refusing payment", weight = 2 },
+  { text = "Contract renegotiation - scope changed, compensation demands", weight = 2 },
+  { text = "Double booking - same fixer assigned same job to rival crew", weight = 2 },
+  { text = "Intermediary meeting - never meet the real client", weight = 2 },
+  { text = "Job interview - potential employer testing your capabilities", weight = 2 },
+  { text = "Reputation check - past deeds catching up, questions being asked", weight = 2 },
+  { text = "Reference call - someone checking if you're trustworthy", weight = 2 },
+  { text = "Fixer blackmail - your contact leveraging past jobs", weight = 1 },
+  { text = "New fixer introduction - expanding network, establishing trust", weight = 2 },
+
+  # Deal encounters
+  { text = "Arms deal - illegal weapons changing hands, tension high", weight = 2 },
+  { text = "Data sale - information being traded, verification needed", weight = 2 },
+  { text = "Protection arrangement - paying for safety, negotiating terms", weight = 2 },
+  { text = "Fence negotiation - selling hot goods, arguing value", weight = 2 },
+  { text = "Smuggling contract - cargo needs moving, customs needs avoiding", weight = 2 },
+  { text = "Intel exchange - trading secrets, verifying authenticity", weight = 2 },
+  { text = "Medical debt collection - ripperdoc wants payment or parts", weight = 2 },
+  { text = "Loan shark confrontation - interest compounding, patience ending", weight = 2 },
+  { text = "Hostage negotiation - someone has value, someone wants them", weight = 1 },
+  { text = "Territory treaty - gangs discussing boundaries, outsider involvement", weight = 1 },
+
+  # Betrayal encounters
+  { text = "Crew member defection - someone's been turned, loyalties shifting", weight = 2 },
+  { text = "Informant exposure - your inside source has been made", weight = 2 },
+  { text = "Setup revelation - the job was always a trap, options limited", weight = 2 },
+  { text = "Client betrayal - employer eliminating loose ends", weight = 2 },
+  { text = "Inside job - theft from within, suspicion on everyone", weight = 2 },
+  { text = "False friend - long-term contact revealed as corporate plant", weight = 1 },
+  { text = "Sold out - someone traded your location for their safety", weight = 2 },
+  { text = "Evidence planted - you're being framed by a trusted contact", weight = 1 },
+  { text = "Crew split - ideological differences turning violent", weight = 1 },
+  { text = "Lover's betrayal - personal relationship weaponized", weight = 1 },
+
+  # Corporate encounters
+  { text = "Corporate interview - executive considering hiring you off-books", weight = 2 },
+  { text = "Whistleblower contact - corporate employee wants to talk", weight = 2 },
+  { text = "Legal threat - corporate lawyers with cease and desist", weight = 2 },
+  { text = "Acquisition offer - corp wants to buy your operation", weight = 1 },
+  { text = "Embedded journalist - media asking questions about corporate jobs", weight = 2 },
+  { text = "Corporate defector - exec fleeing, needs help, has information", weight = 1 },
+  { text = "PR management - corp offering money to change your story", weight = 2 },
+  { text = "Contract negotiation - corporate job offer, reading the fine print", weight = 2 },
+  { text = "Non-disclosure enforcement - corp reminding you what you signed", weight = 2 },
+  { text = "Industrial espionage pitch - competitor wants you to switch sides", weight = 1 },
+
+  # Personal encounters
+  { text = "Family emergency - relative in trouble, obligations calling", weight = 2 },
+  { text = "Old debt collection - past favor being called in", weight = 2 },
+  { text = "Romance complication - relationship interfering with work", weight = 2 },
+  { text = "Mentor return - figure from the past with advice or demands", weight = 1 },
+  { text = "Student seeking guidance - someone wants to learn from you", weight = 1 },
+  { text = "Rival confrontation - personal enemy forcing a reckoning", weight = 2 },
+  { text = "Reunion encounter - someone from before the life found you", weight = 1 },
+  { text = "Child in danger - innocent caught up in your world", weight = 1 },
+  { text = "Health crisis - your body failing, decisions required", weight = 1 },
+  { text = "Identity crisis - someone claiming to be you, or you're the copy", weight = 1 },
+
+  # Community encounters
+  { text = "Neighborhood dispute - locals want you to solve a problem", weight = 2 },
+  { text = "Community protection - locals need defense, can't pay much", weight = 2 },
+  { text = "Street kid recruitment - young person wants into the life", weight = 2 },
+  { text = "Witness situation - you saw something, someone knows", weight = 2 },
+  { text = "Reputation challenge - someone claiming you can't do what you say", weight = 2 },
+  { text = "Favor request - someone who helped you needs help now", weight = 2 },
+  { text = "Cultural misunderstanding - crossed lines you didn't see", weight = 2 },
+  { text = "Memorial service - paying respects, networking, old wounds", weight = 1 },
+  { text = "Street court - community judging a dispute, your input requested", weight = 1 },
+  { text = "Block party politics - community event with underlying tensions", weight = 1 },
+]

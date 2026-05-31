@@ -1,0 +1,61 @@
+# Historical Political Encounters
+# 40+ political intrigue and power struggles
+
+[encounters]
+entries = [
+  # Court and Noble Intrigue
+  { text = "A powerful noble seeks an alliance against a mutual rival", weight = 1 },
+  { text = "A faction at court attempts to discredit a rival through rumor", weight = 1 },
+  { text = "An audience with royalty requires navigating complex protocol", weight = 1 },
+  { text = "A marriage negotiation that would shift the balance of power", weight = 1 },
+  { text = "Discovery of a plot against the throne or government", weight = 1 },
+  { text = "Competing for a royal appointment or commission", weight = 2 },
+  { text = "A disgraced noble seeks restoration through desperate means", weight = 1 },
+  { text = "Inheritance dispute threatens to tear a family apart", weight = 2 },
+  { text = "A regent's decisions are questioned by those loyal to the absent ruler", weight = 1 },
+  { text = "Secret negotiations for a separate peace", weight = 1 },
+
+  # Military Politics
+  { text = "Rival officers compete for command of a prestigious assignment", weight = 2 },
+  { text = "A general's failures are being covered up by powerful friends", weight = 1 },
+  { text = "Blame for a defeat must be assigned and someone will pay", weight = 1 },
+  { text = "A successful commander becomes too popular for political comfort", weight = 1 },
+  { text = "Supplies are being diverted through corruption in the chain of command", weight = 2 },
+  { text = "A court martial where politics matter more than evidence", weight = 1 },
+  { text = "Officers loyal to different factions nearly come to blows", weight = 2 },
+  { text = "A military appointment is being sold to the highest bidder", weight = 1 },
+
+  # Diplomatic Encounters
+  { text = "Peace negotiations where both sides posture and delay", weight = 1 },
+  { text = "A diplomatic incident threatens to expand the conflict", weight = 1 },
+  { text = "Exchange of prisoners involves complex negotiations", weight = 2 },
+  { text = "A neutral power is being courted by both sides", weight = 1 },
+  { text = "Treaty terms must be interpreted in a contentious situation", weight = 2 },
+  { text = "A foreign observer's report could influence opinion abroad", weight = 1 },
+  { text = "Safe passage for a diplomat through hostile territory", weight = 2 },
+  { text = "An ultimatum is delivered with a deadline", weight = 1 },
+
+  # Colonial and Imperial
+  { text = "Local leaders resist imperial demands through passive resistance", weight = 2 },
+  { text = "Settlers and administration clash over frontier policy", weight = 2 },
+  { text = "A governor's corruption is exposed but powerful friends protect him", weight = 1 },
+  { text = "Indigenous allies demand better terms for their cooperation", weight = 2 },
+  { text = "Trade monopoly is challenged by smugglers and free traders", weight = 2 },
+  { text = "Religious mission conflicts with commercial interests", weight = 2 },
+
+  # Revolutionary and Underground
+  { text = "Secret meeting of conspirators planning to overthrow the government", weight = 1 },
+  { text = "An informer has infiltrated the revolutionary cell", weight = 1 },
+  { text = "Printing and distributing forbidden literature", weight = 2 },
+  { text = "A public demonstration that could turn into a riot", weight = 2 },
+  { text = "Revolutionary tribunal passes judgment on enemies of the people", weight = 1 },
+  { text = "Underground railroad helping the persecuted escape", weight = 1 },
+  { text = "Debate within the movement over tactics and goals", weight = 2 },
+  { text = "Former allies now on opposite sides of a political divide", weight = 2 },
+
+  # War and Occupation
+  { text = "Occupation authorities demand collaboration from local leaders", weight = 1 },
+  { text = "Question of whether to resist or accommodate the conquerors", weight = 1 },
+  { text = "Trials of collaborators after liberation raise difficult questions", weight = 1 },
+  { text = "Competing resistance factions fight each other as much as the enemy", weight = 1 }
+]

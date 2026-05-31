@@ -1,0 +1,382 @@
+# Warhammer: The Old World - Core Rules Reference
+# Classic Fantasy Battles ruleset
+
+[system]
+name = "Warhammer: The Old World"
+edition = "2024"
+scale = "28mm"
+base_sizes = "20mm/25mm infantry, 25x50mm cavalry, 50mm monsters"
+
+# =============================================================================
+# MOVEMENT RULES
+# =============================================================================
+
+[[rules]]
+name = "Movement"
+category = "movement"
+description = "Units move up to their Movement characteristic in inches during the Movement phase"
+examples = ["M4 infantry moves up to 4 inches", "M8 cavalry moves up to 8 inches"]
+
+[[rules]]
+name = "March Move"
+category = "movement"
+description = "Units may double their Movement if they start more than 8 inches from visible enemies and do not move within 8 inches of visible enemies"
+examples = ["M4 infantry can march 8 inches", "Cannot march if enemies within 8 inches"]
+
+[[rules]]
+name = "Charge"
+category = "movement"
+description = "Declare charges at the start of Movement phase. Roll 2D6 and add Movement characteristic to determine charge range"
+examples = ["M4 infantry charges 4+2D6 inches (avg 11 inches)", "Failed charge moves unit forward highest die roll"]
+
+[[rules]]
+name = "Fleeing"
+category = "movement"
+description = "Fleeing units move 2D6 inches directly away from the enemy. If caught, the unit is destroyed"
+examples = ["Flee move is 2D6 regardless of Movement", "Rallying requires Leadership test"]
+
+[[rules]]
+name = "Reforming"
+category = "movement"
+description = "A unit may change its formation during the Movement phase instead of moving normally"
+examples = ["Change from 5 wide to 10 wide", "Cannot reform if within 1 inch of enemy"]
+
+[[rules]]
+name = "Wheeling"
+category = "movement"
+description = "A unit pivots around one corner. The distance moved is measured from the outside corner"
+examples = ["Outside models measure full wheel distance", "Can combine with forward movement"]
+
+# =============================================================================
+# COMBAT RULES
+# =============================================================================
+
+[[rules]]
+name = "Ranks"
+category = "combat"
+description = "Units with 5+ models in a rank gain +1 combat resolution per rank after the first, up to +3"
+examples = ["A unit 5 wide and 4 deep has +3 ranks bonus", "Minimum 5 models per rank to count"]
+
+[[rules]]
+name = "Steadfast"
+category = "combat"
+description = "A unit with more complete ranks than the enemy is Stubborn in that combat, ignoring negative Leadership modifiers from combat resolution"
+examples = ["4 ranks vs 2 ranks = Steadfast", "Stubborn means use unmodified Leadership for Break test"]
+
+[[rules]]
+name = "Supporting Attacks"
+category = "combat"
+description = "Models in the second rank can make 1 supporting attack each. Monstrous Infantry/Cavalry can make supporting attacks from the third rank"
+examples = ["10 wide, 3 deep swordsmen = 10 attacks + 10 supporting attacks", "Supporting attacks use base Attacks (usually 1)"]
+
+[[rules]]
+name = "Combat Resolution"
+category = "combat"
+description = "Add wounds caused, ranks (max +3), standard (+1), battle standard within 12 inches (+1), charging (+1), flank (+1), rear (+2), and other modifiers. Loser takes Break test on Leadership minus the difference"
+examples = ["Won by 3 = enemy tests on Ld-3", "Insane Courage on double 1s"]
+
+[[rules]]
+name = "Parry"
+category = "combat"
+description = "Models with hand weapons and shields in close combat gain a 6+ ward save against attacks to their front"
+examples = ["State Troops with sword and shield get 6+ parry", "Does not work against attacks from flank/rear"]
+
+[[rules]]
+name = "Fight in Extra Ranks"
+category = "combat"
+description = "Some weapons (spears, halberds in specific formations) allow models to fight from additional ranks"
+examples = ["Spearmen fight in 3 ranks normally, 4 ranks if charged", "High Elf Spearmen fight in 4 ranks"]
+
+[[rules]]
+name = "Stomp"
+category = "combat"
+description = "Monstrous creatures can make D6 automatic S4 hits at the end of combat against non-monstrous enemies"
+examples = ["Giant Stomps for D6 hits", "Thunderstomp is D6+1 hits"]
+
+[[rules]]
+name = "Impact Hits"
+category = "combat"
+description = "Some units deal automatic hits when they charge, resolved at the model's Strength before normal attacks"
+examples = ["Chariots cause D6 impact hits", "Resolved at Initiative 10 step"]
+
+[[rules]]
+name = "Killing Blow"
+category = "combat"
+description = "A roll of 6 to wound causes instant death against Infantry, Cavalry, and War Beasts. Does not work against Monstrous creatures"
+examples = ["Wight King's attacks have Killing Blow", "Heroic Killing Blow affects all targets"]
+
+[[rules]]
+name = "Armor Piercing"
+category = "combat"
+description = "Reduces the target's armor save by the AP value. AP(1) makes a 4+ save into a 5+ save"
+examples = ["Great weapons are AP(2)", "Handguns are AP(1)"]
+
+[[rules]]
+name = "Multiple Wounds"
+category = "combat"
+description = "Some attacks cause multiple wounds per unsaved wound. Each wound must be saved separately"
+examples = ["Great weapons cause Multiple Wounds (2) against Monstrous creatures", "D3 wounds per failed save"]
+
+# =============================================================================
+# SHOOTING RULES
+# =============================================================================
+
+[[rules]]
+name = "To Hit Modifiers"
+category = "shooting"
+description = "BS determines base to hit. Modifiers: Long range (-1), moving (-1), soft cover (-1), hard cover (-2), large target (+1)"
+examples = ["BS3 hits on 4+, BS4 hits on 3+", "BS3 at long range into cover = 6+ to hit"]
+
+[[rules]]
+name = "Stand and Shoot"
+category = "shooting"
+description = "A charged unit may elect to Stand and Shoot as a charge reaction if the charger started more than half its charge range away"
+examples = ["Handgunners stand and shoot at charging cavalry", "Counts as moving for to-hit penalties"]
+
+[[rules]]
+name = "Volley Fire"
+category = "shooting"
+description = "Units 3 or more ranks deep may fire in a volley. Half the models in rear ranks (rounded up) may also shoot, but at -1 to hit"
+examples = ["30 handgunners in 3 ranks: 10 front rank + 10 volley fire", "Volley fire at additional -1 to hit"]
+
+[[rules]]
+name = "Move or Fire"
+category = "shooting"
+description = "Some weapons (handguns, crossbows, war machines) cannot be fired if the unit moved that turn"
+examples = ["Handgunners cannot move and shoot", "Bows can move and shoot"]
+
+[[rules]]
+name = "Quick to Fire"
+category = "shooting"
+description = "Bows and similar weapons can be fired even if the unit moved, without additional penalty"
+examples = ["Empire Archers can march and shoot at -1 to hit", "Elven bows benefit from this rule"]
+
+# =============================================================================
+# MAGIC RULES
+# =============================================================================
+
+[[rules]]
+name = "Winds of Magic"
+category = "magic"
+description = "At the start of each Magic phase, roll 2D6. The active player gets that many power dice; the opponent gets the highest single die as dispel dice"
+examples = ["Roll 8 = 8 power dice, 4-5 dispel dice", "Channeling adds extra dice on 6s"]
+
+[[rules]]
+name = "Casting"
+category = "magic"
+description = "Declare spell and targets, allocate power dice (1-6), roll and add wizard's level. Meet or beat casting value to succeed. Double 6 is Irresistible Force (spell cannot be dispelled but roll on miscast table)"
+examples = ["Level 2 wizard +2 to casting roll", "Casting value 8 needs 8+ on dice + wizard level"]
+
+[[rules]]
+name = "Dispelling"
+category = "magic"
+description = "Opposing wizard allocates dispel dice (1-6), rolls and adds wizard level. Beat casting roll to dispel. Double 6 always dispels"
+examples = ["Dispel roll must exceed casting roll", "Dispel scrolls automatically dispel one spell"]
+
+[[rules]]
+name = "Miscast"
+category = "magic"
+description = "When rolling double 1s or causing Irresistible Force, roll on the Miscast table. Effects range from losing remaining power dice to wizard taking wounds or worse"
+examples = ["2D6 on miscast table", "Results include Dimensional Cascade"]
+
+[[rules]]
+name = "Lores of Magic"
+category = "magic"
+description = "Wizards select a lore of magic. Each lore has a signature spell (always known) plus numbered spells. Roll D6 or pick specific spells depending on army rules"
+examples = ["Lore of Fire - aggressive damage spells", "Lore of Life - healing and buffing"]
+
+[[rules]]
+name = "Bound Spells"
+category = "magic"
+description = "Magic items with bound spells can be cast using the listed power level. They do not use power dice but can be dispelled normally"
+examples = ["Bound spell power level 3 casts on 3+", "Can be used even by non-wizards"]
+
+# =============================================================================
+# PSYCHOLOGY RULES
+# =============================================================================
+
+[[rules]]
+name = "Fear"
+category = "psychology"
+description = "When charged by or charging a Fear-causing enemy, take a Leadership test. If failed, the unit is WS1 for that combat phase"
+examples = ["Undead cause Fear", "Units that cause Fear are immune to Fear"]
+
+[[rules]]
+name = "Terror"
+category = "psychology"
+description = "Terror-causing units also cause Fear. When charged by Terror-causing enemy, take a Leadership test or flee. Units must pass Ld test to charge Terror-causing enemies"
+examples = ["Dragons cause Terror", "Units that cause Terror are immune to Fear and Terror"]
+
+[[rules]]
+name = "Frenzy"
+category = "psychology"
+description = "Frenzied units gain +1 Attack and are immune to psychology. Must pursue fleeing enemies and must charge if able. Lost if unit loses combat"
+examples = ["Witch Elves are Frenzied", "Khorne units often Frenzied"]
+
+[[rules]]
+name = "Hatred"
+category = "psychology"
+description = "Units with Hatred re-roll failed to-hit rolls in the first round of each combat against hated enemies"
+examples = ["Dwarfs hate Greenskins", "Dark Elves hate High Elves"]
+
+[[rules]]
+name = "Stubborn"
+category = "psychology"
+description = "Stubborn units always use their unmodified Leadership for Break tests, ignoring combat resolution modifiers"
+examples = ["Dwarf Hammerers are Stubborn", "General's Inspiring Presence still applies"]
+
+[[rules]]
+name = "Unbreakable"
+category = "psychology"
+description = "Unbreakable units never take Break tests and cannot flee. They are also immune to psychology"
+examples = ["Flagellants are Unbreakable", "Most constructs are Unbreakable"]
+
+[[rules]]
+name = "Immune to Psychology"
+category = "psychology"
+description = "The unit is immune to Fear, Terror, and Panic. They still take Break tests normally"
+examples = ["Units in buildings are Immune to Psychology", "Many undead have this rule"]
+
+[[rules]]
+name = "Panic"
+category = "psychology"
+description = "Units must take a Panic test when: a friendly unit within 6 inches is destroyed or breaks from combat, or if the unit suffers 25% casualties from shooting"
+examples = ["Failed Panic = unit flees", "Immune to Panic if Ld10 or General within 12 inches"]
+
+# =============================================================================
+# SPECIAL RULES
+# =============================================================================
+
+[[rules]]
+name = "Regeneration"
+category = "special"
+description = "After failing an armor save, roll a D6. On a 4+ (or value specified), the wound is ignored. Does not work against Flaming attacks"
+examples = ["Trolls have Regeneration (4+)", "Hydra has Regeneration"]
+
+[[rules]]
+name = "Ward Save"
+category = "special"
+description = "An additional save taken after armor save. Not modified by AP or Strength. Multiple ward saves do not stack - use the best"
+examples = ["4+ ward save from magic item", "Daemon 5+ ward save"]
+
+[[rules]]
+name = "Flaming Attacks"
+category = "special"
+description = "Attacks count as fire. Negates Regeneration. Double wounds against Flammable targets"
+examples = ["Flaming Sword spell grants Flaming Attacks", "Fire Magic spells are Flaming"]
+
+[[rules]]
+name = "Ethereal"
+category = "special"
+description = "Only magical attacks can harm Ethereal units. They ignore terrain and can move through other units"
+examples = ["Spirit Hosts are Ethereal", "Banshees are Ethereal"]
+
+[[rules]]
+name = "Fly"
+category = "special"
+description = "May move up to 10 inches ignoring terrain and models. May charge normally using this movement. Cannot march"
+examples = ["Pegasus riders can Fly", "Fly movement ignores interposing units"]
+
+[[rules]]
+name = "Scouts"
+category = "special"
+description = "May deploy after all other units, anywhere on the battlefield more than 12 inches from enemy units"
+examples = ["Wood Elf Scouts deploy forward", "Cannot be placed in buildings if enemy within 12 inches"]
+
+[[rules]]
+name = "Skirmishers"
+category = "special"
+description = "Do not have facings. Free reform. -1 to be hit by shooting. Cannot gain rank bonus"
+examples = ["Free Company are Skirmishers", "Do not block line of sight for other skirmishers"]
+
+[[rules]]
+name = "Vanguard"
+category = "special"
+description = "After deployment but before first turn, may make a free move up to M value (not march). Cannot end within 12 inches of enemy"
+examples = ["Fast cavalry often have Vanguard", "Great for early objective control"]
+
+[[rules]]
+name = "Fast Cavalry"
+category = "special"
+description = "May reform freely during movement. May fire in any direction. Free reform after rally"
+examples = ["Empire Outriders are Fast Cavalry", "Excellent for harassment"]
+
+[[rules]]
+name = "Devastating Charge"
+category = "special"
+description = "On the turn a unit charges, it gains bonus attacks or other benefits as specified"
+examples = ["Bretonnian Knights gain +1 Strength on the charge", "Often +1 Attack or +1 Strength"]
+
+[[rules]]
+name = "Always Strikes First"
+category = "special"
+description = "Attacks at Initiative 10. If actual Initiative is 10 or higher, re-rolls failed to-hit rolls"
+examples = ["High Elves have Always Strikes First", "Elven agility rule"]
+
+[[rules]]
+name = "Always Strikes Last"
+category = "special"
+description = "Attacks at Initiative 1 regardless of actual Initiative"
+examples = ["Great weapons cause Always Strikes Last", "Some monsters are sluggish"]
+
+[[rules]]
+name = "Swiftstride"
+category = "special"
+description = "Roll 3D6 and discard the lowest for charge, flee, and pursuit distances"
+examples = ["Cavalry have Swiftstride", "Improves average charge range significantly"]
+
+# =============================================================================
+# ARMY COMPOSITION
+# =============================================================================
+
+[[rules]]
+name = "Army Composition"
+category = "army_building"
+description = "Armies are built to a points limit. Core units must be at least 25% of points. Special units may be up to 50%. Rare units may be up to 25%. Lords and Heroes have their own limits"
+examples = ["2000 point army = 500+ Core minimum", "Max 500 points of Rare choices"]
+
+[[rules]]
+name = "Duplicate Restrictions"
+category = "army_building"
+description = "No more than 3 of the same Special unit. No more than 2 of the same Rare unit. Named characters are 0-1"
+examples = ["Can have 3 units of Reiksguard", "Only 1 Steam Tank"]
+
+[[rules]]
+name = "General"
+category = "army_building"
+description = "The character with highest Leadership is the General. Friendly units within 12 inches may use General's Leadership"
+examples = ["General's Inspiring Presence is 12 inches", "Must be a Lord or Hero choice"]
+
+[[rules]]
+name = "Battle Standard Bearer"
+category = "army_building"
+description = "One non-wizard character may carry the Battle Standard. Units within 12 inches re-roll failed Break tests"
+examples = ["BSB cannot carry magic weapons", "Extremely valuable for morale"]
+
+# =============================================================================
+# TERRAIN RULES
+# =============================================================================
+
+[[rules]]
+name = "Dangerous Terrain"
+category = "terrain"
+description = "Each model moving through dangerous terrain must roll D6. On a 1, the model suffers a wound with no armor save"
+examples = ["Rivers are often dangerous terrain", "Cavalry especially vulnerable"]
+
+[[rules]]
+name = "Difficult Terrain"
+category = "terrain"
+description = "Units in or moving through difficult terrain halve their Movement (after other modifiers). Cannot march through difficult terrain"
+examples = ["Forests are difficult terrain", "Does not affect Skirmishers"]
+
+[[rules]]
+name = "Obstacles"
+category = "terrain"
+description = "Walls and fences grant cover (-1 to hit) and are difficult terrain to cross. Defenders behind obstacles strike first"
+examples = ["Stone walls are hard cover (-2)", "Fences are soft cover (-1)"]
+
+[[rules]]
+name = "Buildings"
+category = "terrain"
+description = "Infantry units may garrison buildings. They gain hard cover and cannot be charged. Only 10-20 models may fight per floor"
+examples = ["Garrison limits vary by building size", "Assaulting buildings is special combat"]

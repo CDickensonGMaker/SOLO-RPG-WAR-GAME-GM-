@@ -1,0 +1,3667 @@
+# =============================================================================
+# BIRTHRIGHT DOMAIN RANDOM EVENTS
+# =============================================================================
+# Comprehensive event tables for solo play campaign generation
+# Roll on main table each domain turn, then use subtables for details
+# =============================================================================
+
+[metadata]
+title = "Domain Random Events"
+version = "1.0.0"
+description = "Random events that drive solo Birthright campaigns forward"
+usage = "Roll d100 on main_events table each domain turn"
+
+# =============================================================================
+# MAIN EVENT TABLE (d100)
+# =============================================================================
+# Determines event severity and general category
+# Roll once per domain turn (typically 1 season/3 months)
+
+[[main_events]]
+roll_range = [1, 10]
+severity = "none"
+name = "Quiet Season"
+description = "The realm enjoys a period of relative peace and stability."
+oracle_questions = [
+    "Does this calm feel suspicious to the regent?",
+    "Are enemies using this time to prepare?",
+    "Does the regent use this time productively?"
+]
+
+[[main_events]]
+roll_range = [11, 15]
+severity = "minor_positive"
+name = "Minor Boon"
+description = "A small piece of good fortune befalls the realm."
+subtable = "minor_positive_events"
+
+[[main_events]]
+roll_range = [16, 35]
+severity = "minor_negative"
+name = "Minor Trouble"
+description = "A small problem requires the regent's attention."
+subtable = "minor_negative_events"
+
+[[main_events]]
+roll_range = [36, 45]
+severity = "moderate_positive"
+name = "Good Fortune"
+description = "Significant good news arrives at the court."
+subtable = "moderate_positive_events"
+
+[[main_events]]
+roll_range = [46, 70]
+severity = "moderate_negative"
+name = "Significant Problem"
+description = "A serious matter demands the regent's intervention."
+subtable = "moderate_negative_events"
+
+[[main_events]]
+roll_range = [71, 80]
+severity = "major_positive"
+name = "Great Bounty"
+description = "Exceptional good fortune smiles upon the realm."
+subtable = "major_positive_events"
+
+[[main_events]]
+roll_range = [81, 95]
+severity = "major_negative"
+name = "Crisis"
+description = "A major crisis threatens the stability of the realm."
+subtable = "major_negative_events"
+
+[[main_events]]
+roll_range = [96, 99]
+severity = "catastrophic"
+name = "Catastrophe"
+description = "Disaster strikes! The realm faces an existential threat."
+subtable = "catastrophic_events"
+
+[[main_events]]
+roll_range = [100, 100]
+severity = "legendary"
+name = "Legendary Event"
+description = "Something unprecedented occurs - for good or ill."
+subtable = "legendary_events"
+
+# =============================================================================
+# MINOR POSITIVE EVENTS (d20)
+# =============================================================================
+
+[[subtables.minor_positive_events]]
+die = "d20"
+name = "Minor Positive Events"
+
+[[subtables.minor_positive_events.entries]]
+roll = 1
+category = "economic"
+name = "Merchant Caravan Arrives"
+description = "A wealthy merchant caravan passes through, boosting local trade."
+mechanical_effect = "+1 GB one-time bonus"
+oracle_questions = [
+    "Do they carry exotic goods from distant lands?",
+    "Is the caravan master seeking permanent trade relations?",
+    "Are they fleeing trouble elsewhere?"
+]
+
+[[subtables.minor_positive_events.entries]]
+roll = 2
+category = "diplomatic"
+name = "Favorable Rumors"
+description = "Positive stories about the regent spread to neighboring realms."
+mechanical_effect = "+1 to next diplomacy check with neighbors"
+oracle_questions = [
+    "What deed sparked these rumors?",
+    "Does a specific neighbor take particular interest?",
+    "Are the rumors accurate or exaggerated?"
+]
+
+[[subtables.minor_positive_events.entries]]
+roll = 3
+category = "military"
+name = "Veteran Returns"
+description = "A skilled warrior returns home, offering service to the regent."
+mechanical_effect = "Gain a minor lieutenant NPC"
+oracle_questions = [
+    "Where did they gain their experience?",
+    "Do they bring news from foreign lands?",
+    "What price do they ask for service?"
+]
+
+[[subtables.minor_positive_events.entries]]
+roll = 4
+category = "religious"
+name = "Auspicious Omen"
+description = "Temple priests report signs of divine favor."
+mechanical_effect = "+1 to realm morale for the season"
+oracle_questions = [
+    "Which god sent the omen?",
+    "Does the omen portend something specific?",
+    "Do rival faiths dispute the interpretation?"
+]
+
+[[subtables.minor_positive_events.entries]]
+roll = 5
+category = "natural"
+name = "Bountiful Weather"
+description = "Ideal weather conditions benefit the realm's agriculture."
+mechanical_effect = "+1 GB from agricultural provinces"
+oracle_questions = [
+    "Is this natural or magically influenced?",
+    "Do neighbors experience the same fortune?",
+    "Will this attract settlers?"
+]
+
+[[subtables.minor_positive_events.entries]]
+roll = 6
+category = "magical"
+name = "Minor Mebhaighl Surge"
+description = "A temporary increase in magical energy flows through the land."
+mechanical_effect = "+1 RP for source holders this turn"
+oracle_questions = [
+    "What caused the surge?",
+    "Do any magical effects manifest visibly?",
+    "Does this draw attention from other wizards?"
+]
+
+[[subtables.minor_positive_events.entries]]
+roll = 7
+category = "intrigue"
+name = "Spy Uncovered"
+description = "Your agents discover a foreign spy operating in your realm."
+mechanical_effect = "Option to capture, turn, or expel the spy"
+oracle_questions = [
+    "Which realm sent the spy?",
+    "What were they seeking?",
+    "Can they be turned to your service?"
+]
+
+[[subtables.minor_positive_events.entries]]
+roll = 8
+category = "personal"
+name = "Old Friend Visits"
+description = "A trusted companion from the regent's past arrives at court."
+mechanical_effect = "Potential ally or advisor available"
+oracle_questions = [
+    "What brings them here now?",
+    "Do they seek something from the regent?",
+    "What news do they carry?"
+]
+
+[[subtables.minor_positive_events.entries]]
+roll = 9
+category = "economic"
+name = "Resource Discovery"
+description = "Miners or farmers discover a small but useful resource deposit."
+mechanical_effect = "+0.5 GB per turn from affected province"
+oracle_questions = [
+    "What resource was found?",
+    "Will extraction cause any problems?",
+    "Do others have claims to this land?"
+]
+
+[[subtables.minor_positive_events.entries]]
+roll = 10
+category = "military"
+name = "Bandit Leader Surrenders"
+description = "A minor bandit chief offers to surrender and serve the realm."
+mechanical_effect = "Reduce bandit activity, potential scout unit"
+oracle_questions = [
+    "Is the surrender genuine?",
+    "What drove them to this decision?",
+    "Will other bandits follow or seek revenge?"
+]
+
+[[subtables.minor_positive_events.entries]]
+roll = 11
+category = "diplomatic"
+name = "Cultural Exchange"
+description = "Artists or scholars from another realm visit, improving relations."
+mechanical_effect = "+1 to relations with source realm"
+oracle_questions = [
+    "What knowledge do they share?",
+    "Do they seek to stay permanently?",
+    "Is this part of a larger diplomatic initiative?"
+]
+
+[[subtables.minor_positive_events.entries]]
+roll = 12
+category = "religious"
+name = "Pilgrim Influx"
+description = "Pilgrims visit a holy site in your realm, bringing offerings."
+mechanical_effect = "+1 GB from pilgrim spending"
+oracle_questions = [
+    "What draws them to this site?",
+    "Do they bring news from their homelands?",
+    "Will this become a regular occurrence?"
+]
+
+[[subtables.minor_positive_events.entries]]
+roll = 13
+category = "natural"
+name = "Game Abundance"
+description = "Hunting is exceptionally good this season."
+mechanical_effect = "Improved food supplies, happy nobility"
+oracle_questions = [
+    "Does this attract noble hunting parties?",
+    "Are predators also more active?",
+    "Is something driving the game here?"
+]
+
+[[subtables.minor_positive_events.entries]]
+roll = 14
+category = "magical"
+name = "Hedge Wizard Offers Service"
+description = "A minor spellcaster seeks employment at the regent's court."
+mechanical_effect = "Access to minor magical services"
+oracle_questions = [
+    "What is their specialty?",
+    "Why did they leave their previous position?",
+    "Can they be trusted with secrets?"
+]
+
+[[subtables.minor_positive_events.entries]]
+roll = 15
+category = "intrigue"
+name = "Informant Comes Forward"
+description = "A servant in a rival court offers to provide information."
+mechanical_effect = "Potential intelligence source"
+oracle_questions = [
+    "What motivates their betrayal?",
+    "Is this a trap?",
+    "What do they want in return?"
+]
+
+[[subtables.minor_positive_events.entries]]
+roll = 16
+category = "personal"
+name = "Talent Discovered"
+description = "Someone in the regent's household shows exceptional ability."
+mechanical_effect = "Potential future lieutenant or specialist"
+oracle_questions = [
+    "What talent do they possess?",
+    "How should they be trained?",
+    "Does this create jealousy among others?"
+]
+
+[[subtables.minor_positive_events.entries]]
+roll = 17
+category = "economic"
+name = "Craft Guild Expansion"
+description = "Local craftsmen expand their operations, improving production."
+mechanical_effect = "+0.5 GB from guild province"
+oracle_questions = [
+    "What goods do they produce?",
+    "Do they seek guild charter privileges?",
+    "Will this compete with existing guilds?"
+]
+
+[[subtables.minor_positive_events.entries]]
+roll = 18
+category = "military"
+name = "Weapons Cache Found"
+description = "A hidden cache of arms is discovered and claimed for the realm."
+mechanical_effect = "Enough equipment for one unit"
+oracle_questions = [
+    "Who hid these weapons and why?",
+    "Are they of local or foreign make?",
+    "Is someone looking for them?"
+]
+
+[[subtables.minor_positive_events.entries]]
+roll = 19
+category = "diplomatic"
+name = "Marriage Proposal"
+description = "A minor noble house proposes a marriage alliance."
+mechanical_effect = "Potential alliance with noble family"
+oracle_questions = [
+    "Is the match politically advantageous?",
+    "Is the proposed spouse suitable?",
+    "What do they expect in return?"
+]
+
+[[subtables.minor_positive_events.entries]]
+roll = 20
+category = "religious"
+name = "Relic Fragment Found"
+description = "A fragment of a holy relic is discovered in the realm."
+mechanical_effect = "+1 to temple holdings' influence"
+oracle_questions = [
+    "To which saint or deity does it belong?",
+    "Do others claim ownership?",
+    "Does it have any power?"
+]
+
+# =============================================================================
+# MINOR NEGATIVE EVENTS (d20)
+# =============================================================================
+
+[[subtables.minor_negative_events]]
+die = "d20"
+name = "Minor Negative Events"
+
+[[subtables.minor_negative_events.entries]]
+roll = 1
+category = "economic"
+name = "Trade Dispute"
+description = "Merchants quarrel over trade rights, disrupting commerce."
+mechanical_effect = "-1 GB this turn from affected guild"
+oracle_questions = [
+    "Which merchants are involved?",
+    "Is a foreign power backing one side?",
+    "Can the regent profit from mediating?"
+]
+
+[[subtables.minor_negative_events.entries]]
+roll = 2
+category = "diplomatic"
+name = "Diplomatic Incident"
+description = "A minor insult or misunderstanding strains relations with a neighbor."
+mechanical_effect = "-1 to relations with affected realm"
+oracle_questions = [
+    "What caused the incident?",
+    "Was it accidental or deliberate?",
+    "Can it be smoothed over easily?"
+]
+
+[[subtables.minor_negative_events.entries]]
+roll = 3
+category = "military"
+name = "Desertion"
+description = "A small group of soldiers desert their posts."
+mechanical_effect = "One unit at -1 strength until reinforced"
+oracle_questions = [
+    "Why did they desert?",
+    "Where did they go?",
+    "Will others follow?"
+]
+
+[[subtables.minor_negative_events.entries]]
+roll = 4
+category = "religious"
+name = "Temple Dispute"
+description = "Priests argue over doctrine or temple resources."
+mechanical_effect = "-1 RP from temple holdings this turn"
+oracle_questions = [
+    "What is the theological issue?",
+    "Do factions form among the clergy?",
+    "Does this affect the common folk?"
+]
+
+[[subtables.minor_negative_events.entries]]
+roll = 5
+category = "natural"
+name = "Crop Blight"
+description = "A disease affects crops in one province."
+mechanical_effect = "-1 GB from agricultural income"
+oracle_questions = [
+    "Is the blight natural or magical?",
+    "Will it spread to neighboring areas?",
+    "Can anything be done to stop it?"
+]
+
+[[subtables.minor_negative_events.entries]]
+roll = 6
+category = "magical"
+name = "Magical Mishap"
+description = "A spell goes awry, causing minor chaos."
+mechanical_effect = "Local disruption, investigation needed"
+oracle_questions = [
+    "Who cast the spell?",
+    "What effects linger?",
+    "Does this reveal hidden magical activity?"
+]
+
+[[subtables.minor_negative_events.entries]]
+roll = 7
+category = "intrigue"
+name = "Rumors of Corruption"
+description = "Whispers suggest an official is taking bribes."
+mechanical_effect = "-1 to loyalty in affected province"
+oracle_questions = [
+    "Are the rumors true?",
+    "Who spread them?",
+    "Is this a smear campaign?"
+]
+
+[[subtables.minor_negative_events.entries]]
+roll = 8
+category = "personal"
+name = "Minor Illness"
+description = "The regent or a close family member falls ill."
+mechanical_effect = "-1 to all actions for one turn"
+oracle_questions = [
+    "Is the illness natural?",
+    "How severe will it become?",
+    "Does this create succession concerns?"
+]
+
+[[subtables.minor_negative_events.entries]]
+roll = 9
+category = "economic"
+name = "Counterfeit Currency"
+description = "Fake coins appear in circulation, disrupting trade."
+mechanical_effect = "-1 GB while problem persists"
+oracle_questions = [
+    "Who is minting the fakes?",
+    "Is a foreign power involved?",
+    "How widespread is the problem?"
+]
+
+[[subtables.minor_negative_events.entries]]
+roll = 10
+category = "military"
+name = "Equipment Shortage"
+description = "A supply problem leaves troops poorly equipped."
+mechanical_effect = "One unit at -1 to combat until resolved"
+oracle_questions = [
+    "What caused the shortage?",
+    "Is this sabotage?",
+    "How quickly can it be fixed?"
+]
+
+[[subtables.minor_negative_events.entries]]
+roll = 11
+category = "diplomatic"
+name = "Trade Tariffs"
+description = "A neighbor raises tariffs on your goods."
+mechanical_effect = "-1 GB from cross-border trade"
+oracle_questions = [
+    "What prompted this action?",
+    "Is retaliation wise?",
+    "Can negotiation resolve this?"
+]
+
+[[subtables.minor_negative_events.entries]]
+roll = 12
+category = "religious"
+name = "Heretical Preacher"
+description = "An unauthorized preacher spreads questionable doctrine."
+mechanical_effect = "-1 to temple influence in province"
+oracle_questions = [
+    "What are they preaching?",
+    "Do they have many followers?",
+    "Is there truth in their message?"
+]
+
+[[subtables.minor_negative_events.entries]]
+roll = 13
+category = "natural"
+name = "Livestock Disease"
+description = "An illness spreads among farm animals."
+mechanical_effect = "-0.5 GB from agricultural provinces"
+oracle_questions = [
+    "Can the disease spread to humans?",
+    "Is quarantine possible?",
+    "Will this cause food shortages?"
+]
+
+[[subtables.minor_negative_events.entries]]
+roll = 14
+category = "magical"
+name = "Ley Line Fluctuation"
+description = "Magical energies become unstable in an area."
+mechanical_effect = "-1 RP from affected sources"
+oracle_questions = [
+    "What caused the fluctuation?",
+    "Are there dangerous side effects?",
+    "Will it stabilize naturally?"
+]
+
+[[subtables.minor_negative_events.entries]]
+roll = 15
+category = "intrigue"
+name = "Blackmail Attempt"
+description = "Someone attempts to blackmail a court official."
+mechanical_effect = "Risk of secret exposure or financial loss"
+oracle_questions = [
+    "What secret do they hold?",
+    "Is the blackmailer known?",
+    "Should the regent intervene?"
+]
+
+[[subtables.minor_negative_events.entries]]
+roll = 16
+category = "personal"
+name = "Family Quarrel"
+description = "Disagreement breaks out within the regent's family."
+mechanical_effect = "-1 to court actions while unresolved"
+oracle_questions = [
+    "What is the source of conflict?",
+    "Are outside parties involved?",
+    "Could this escalate dangerously?"
+]
+
+[[subtables.minor_negative_events.entries]]
+roll = 17
+category = "economic"
+name = "Labor Dispute"
+description = "Workers demand better conditions or pay."
+mechanical_effect = "-1 GB until resolved"
+oracle_questions = [
+    "Are their grievances legitimate?",
+    "Is someone agitating them?",
+    "Will force or negotiation work better?"
+]
+
+[[subtables.minor_negative_events.entries]]
+roll = 18
+category = "military"
+name = "Training Accident"
+description = "An accident during military exercises causes casualties."
+mechanical_effect = "One unit temporarily reduced"
+oracle_questions = [
+    "Was this truly accidental?",
+    "How do the troops react?",
+    "Is the commander at fault?"
+]
+
+[[subtables.minor_negative_events.entries]]
+roll = 19
+category = "diplomatic"
+name = "Refugee Influx"
+description = "Refugees from elsewhere seek shelter in your realm."
+mechanical_effect = "Strain on resources, potential unrest"
+oracle_questions = [
+    "Where are they fleeing from?",
+    "What skills do they bring?",
+    "Will they integrate or cause problems?"
+]
+
+[[subtables.minor_negative_events.entries]]
+roll = 20
+category = "religious"
+name = "Ill Omen"
+description = "Priests report signs of divine displeasure."
+mechanical_effect = "-1 to morale until addressed"
+oracle_questions = [
+    "What form did the omen take?",
+    "What action is required?",
+    "Is this genuine or priestly politics?"
+]
+
+# =============================================================================
+# MODERATE POSITIVE EVENTS (d20)
+# =============================================================================
+
+[[subtables.moderate_positive_events]]
+die = "d20"
+name = "Moderate Positive Events"
+
+[[subtables.moderate_positive_events.entries]]
+roll = 1
+category = "diplomatic"
+name = "Embassy Arrives"
+description = "A neighboring regent sends a formal embassy seeking negotiations."
+mechanical_effect = "Diplomatic opportunity"
+subtable = "embassy_purpose"
+oracle_questions = [
+    "Is the embassy's stated purpose their true purpose?",
+    "Does the embassy bring valuable gifts?",
+    "Is there a spy among the delegation?",
+    "Does the ambassador have personal ambitions?"
+]
+
+[[subtables.moderate_positive_events.entries]]
+roll = 2
+category = "economic"
+name = "Trade Boom"
+description = "Increased demand for local goods creates economic prosperity."
+mechanical_effect = "+2 GB this turn, +1 GB ongoing"
+oracle_questions = [
+    "What product is in demand?",
+    "Will this attract competitors?",
+    "Is the demand sustainable?"
+]
+
+[[subtables.moderate_positive_events.entries]]
+roll = 3
+category = "military"
+name = "Mercenary Company Available"
+description = "A reputable mercenary company offers its services."
+mechanical_effect = "Option to hire experienced troops"
+subtable = "mercenary_type"
+oracle_questions = [
+    "What is their reputation?",
+    "Why are they seeking employment here?",
+    "What are their terms?"
+]
+
+[[subtables.moderate_positive_events.entries]]
+roll = 4
+category = "religious"
+name = "Religious Festival Success"
+description = "A major religious festival brings unity and celebration."
+mechanical_effect = "+2 to loyalty across realm"
+oracle_questions = [
+    "Does the celebration honor the regent?",
+    "Do foreign dignitaries attend?",
+    "Are any miracles reported?"
+]
+
+[[subtables.moderate_positive_events.entries]]
+roll = 5
+category = "natural"
+name = "Abundant Harvest"
+description = "Exceptional growing conditions produce a surplus harvest."
+mechanical_effect = "+3 GB from agricultural provinces"
+oracle_questions = [
+    "Can the surplus be stored or exported?",
+    "Does this attract immigrants?",
+    "Will prices drop too far?"
+]
+
+[[subtables.moderate_positive_events.entries]]
+roll = 6
+category = "magical"
+name = "Magical Discovery"
+description = "A wizard uncovers forgotten magical knowledge."
+mechanical_effect = "New spell or magical capability available"
+oracle_questions = [
+    "What was discovered?",
+    "Is it dangerous?",
+    "Do others seek this knowledge?"
+]
+
+[[subtables.moderate_positive_events.entries]]
+roll = 7
+category = "intrigue"
+name = "Enemy Plot Uncovered"
+description = "Your agents expose a foreign scheme against your realm."
+mechanical_effect = "Thwart enemy action, gain intelligence"
+subtable = "plot_type"
+oracle_questions = [
+    "How extensive is the plot?",
+    "Can you turn this to your advantage?",
+    "Are there local collaborators?"
+]
+
+[[subtables.moderate_positive_events.entries]]
+roll = 8
+category = "personal"
+name = "Heir Born"
+description = "A child is born to the regent's family, securing succession."
+mechanical_effect = "Succession stability, celebration"
+oracle_questions = [
+    "Is the child healthy?",
+    "Are there any prophecies about the child?",
+    "How do rivals react to this news?"
+]
+
+[[subtables.moderate_positive_events.entries]]
+roll = 9
+category = "economic"
+name = "Guild Charter Request"
+description = "Wealthy merchants petition for a new guild charter."
+mechanical_effect = "Opportunity for new guild holding"
+oracle_questions = [
+    "What trade do they represent?",
+    "Will existing guilds oppose this?",
+    "What terms do they offer?"
+]
+
+[[subtables.moderate_positive_events.entries]]
+roll = 10
+category = "military"
+name = "Monster Slain"
+description = "A local hero or patrol eliminates a regional threat."
+mechanical_effect = "Province safety improved, +1 loyalty"
+subtable = "monster_type"
+oracle_questions = [
+    "Who accomplished this feat?",
+    "Was the monster alone or part of something larger?",
+    "What treasure or secrets did it guard?"
+]
+
+[[subtables.moderate_positive_events.entries]]
+roll = 11
+category = "diplomatic"
+name = "Alliance Offer"
+description = "A neighboring realm formally proposes an alliance."
+mechanical_effect = "Major diplomatic opportunity"
+subtable = "alliance_terms"
+oracle_questions = [
+    "What threatens them that they seek alliance?",
+    "Are the terms equitable?",
+    "What do they expect you to provide?"
+]
+
+[[subtables.moderate_positive_events.entries]]
+roll = 12
+category = "religious"
+name = "Saintly Vision"
+description = "A priest or peasant reports a divine vision."
+mechanical_effect = "+1 temple influence, increased devotion"
+oracle_questions = [
+    "What did the vision reveal?",
+    "Is the visionary trustworthy?",
+    "Does this have political implications?"
+]
+
+[[subtables.moderate_positive_events.entries]]
+roll = 13
+category = "natural"
+name = "Mineral Vein Discovered"
+description = "Prospectors find a significant deposit of valuable ore."
+mechanical_effect = "+2 GB ongoing from mining"
+subtable = "mineral_type"
+oracle_questions = [
+    "Who controls the land where it was found?",
+    "Will mining damage the environment?",
+    "Does anyone else claim these rights?"
+]
+
+[[subtables.moderate_positive_events.entries]]
+roll = 14
+category = "magical"
+name = "Source Manifestation"
+description = "A new source of magical energy manifests in the realm."
+mechanical_effect = "New source holding opportunity"
+oracle_questions = [
+    "Where did it appear?",
+    "What caused its manifestation?",
+    "Do other wizards sense it?"
+]
+
+[[subtables.moderate_positive_events.entries]]
+roll = 15
+category = "intrigue"
+name = "Defector Arrives"
+description = "A high-ranking official from a rival realm seeks asylum."
+mechanical_effect = "Valuable intelligence, potential advisor"
+oracle_questions = [
+    "Why did they defect?",
+    "Is this a trap?",
+    "What secrets do they carry?"
+]
+
+[[subtables.moderate_positive_events.entries]]
+roll = 16
+category = "personal"
+name = "Blooded Champion Emerges"
+description = "Someone with bloodline abilities is discovered in the realm."
+mechanical_effect = "Potential lieutenant or vassal"
+subtable = "bloodline_strength"
+oracle_questions = [
+    "What derivation is their bloodline?",
+    "Do they know of their heritage?",
+    "What are their ambitions?"
+]
+
+[[subtables.moderate_positive_events.entries]]
+roll = 17
+category = "economic"
+name = "Foreign Investment"
+description = "Wealthy foreigners wish to invest in the realm's economy."
+mechanical_effect = "+3 GB investment opportunity"
+oracle_questions = [
+    "What are their true motives?",
+    "Will this give them too much influence?",
+    "Which sectors interest them?"
+]
+
+[[subtables.moderate_positive_events.entries]]
+roll = 18
+category = "military"
+name = "Veterans Return"
+description = "Soldiers return from foreign wars, battle-hardened and loyal."
+mechanical_effect = "Free unit upgrade or new veteran unit"
+oracle_questions = [
+    "Where did they fight?",
+    "What tales do they tell?",
+    "Do they bring foreign ideas or contacts?"
+]
+
+[[subtables.moderate_positive_events.entries]]
+roll = 19
+category = "diplomatic"
+name = "Royal Visit"
+description = "A regent from a friendly realm wishes to visit."
+mechanical_effect = "Major diplomatic and social event"
+oracle_questions = [
+    "What is the purpose of their visit?",
+    "What impression will your court make?",
+    "Is this visit truly friendly?"
+]
+
+[[subtables.moderate_positive_events.entries]]
+roll = 20
+category = "religious"
+name = "Temple Expansion"
+description = "The faithful petition to build a new temple."
+mechanical_effect = "Opportunity to increase temple holdings"
+oracle_questions = [
+    "Which deity do they wish to honor?",
+    "Who will fund the construction?",
+    "Will rival faiths object?"
+]
+
+# =============================================================================
+# MODERATE NEGATIVE EVENTS (d30)
+# =============================================================================
+
+[[subtables.moderate_negative_events]]
+die = "d30"
+name = "Moderate Negative Events"
+
+[[subtables.moderate_negative_events.entries]]
+roll = 1
+category = "diplomatic"
+name = "Border Dispute"
+description = "A neighbor makes territorial claims on border lands."
+mechanical_effect = "-2 to relations, risk of escalation"
+oracle_questions = [
+    "Do they have any legitimate claim?",
+    "Are they testing your resolve?",
+    "What forces do they have nearby?"
+]
+
+[[subtables.moderate_negative_events.entries]]
+roll = 2
+category = "economic"
+name = "Trade Route Disruption"
+description = "Bandits or war interrupt a major trade route."
+mechanical_effect = "-2 GB ongoing until resolved"
+oracle_questions = [
+    "What is causing the disruption?",
+    "Are rival merchants benefiting?",
+    "Can you reroute trade?"
+]
+
+[[subtables.moderate_negative_events.entries]]
+roll = 3
+category = "military"
+name = "Border Incursion"
+description = "Armed forces from another realm cross into your territory."
+mechanical_effect = "Military threat, must respond"
+subtable = "incursion_type"
+oracle_questions = [
+    "Is this sanctioned by their regent?",
+    "What is their objective?",
+    "How large is the force?"
+]
+
+[[subtables.moderate_negative_events.entries]]
+roll = 4
+category = "religious"
+name = "Heresy Spreads"
+description = "A heretical movement gains followers in the realm."
+mechanical_effect = "-1 to temple holdings, unrest risk"
+subtable = "heresy_type"
+oracle_questions = [
+    "What do the heretics believe?",
+    "Who leads them?",
+    "Is there foreign backing?"
+]
+
+[[subtables.moderate_negative_events.entries]]
+roll = 5
+category = "natural"
+name = "Flooding"
+description = "Heavy rains cause rivers to overflow, damaging lowlands."
+mechanical_effect = "-2 GB damage, infrastructure repairs needed"
+oracle_questions = [
+    "How widespread is the flooding?",
+    "Are any settlements destroyed?",
+    "Will this cause disease?"
+]
+
+[[subtables.moderate_negative_events.entries]]
+roll = 6
+category = "magical"
+name = "Magical Corruption"
+description = "An area becomes tainted with dark magical energies."
+mechanical_effect = "Province becomes dangerous, -1 loyalty"
+oracle_questions = [
+    "What caused the corruption?",
+    "Is it spreading?",
+    "Can it be cleansed?"
+]
+
+[[subtables.moderate_negative_events.entries]]
+roll = 7
+category = "intrigue"
+name = "Assassination Attempt"
+description = "Someone attempts to kill a prominent figure in the realm."
+mechanical_effect = "Target injured or killed, investigation needed"
+subtable = "assassination_target"
+oracle_questions = [
+    "Who was the target?",
+    "Was the attempt successful?",
+    "Who ordered the assassination?"
+]
+
+[[subtables.moderate_negative_events.entries]]
+roll = 8
+category = "personal"
+name = "Scandal at Court"
+description = "A scandal rocks the regent's court."
+mechanical_effect = "-2 to court influence, damage to reputation"
+subtable = "scandal_type"
+oracle_questions = [
+    "Who is involved?",
+    "Is the scandal true or fabricated?",
+    "Who benefits from this revelation?"
+]
+
+[[subtables.moderate_negative_events.entries]]
+roll = 9
+category = "economic"
+name = "Merchant Guild Conflict"
+description = "Rival guilds engage in economic warfare."
+mechanical_effect = "-2 GB, risk of violence"
+oracle_questions = [
+    "What triggered the conflict?",
+    "Are foreign interests involved?",
+    "Which side should you favor?"
+]
+
+[[subtables.moderate_negative_events.entries]]
+roll = 10
+category = "military"
+name = "Monster Raid"
+description = "Monsters attack settlements in the realm."
+mechanical_effect = "Casualties and damage, military response needed"
+subtable = "monster_raid_type"
+oracle_questions = [
+    "What type of monsters?",
+    "Where did they come from?",
+    "Is this part of a larger problem?"
+]
+
+[[subtables.moderate_negative_events.entries]]
+roll = 11
+category = "diplomatic"
+name = "Diplomatic Betrayal"
+description = "An ally secretly works against your interests."
+mechanical_effect = "Alliance damaged, enemy action succeeds"
+oracle_questions = [
+    "What did they do?",
+    "Why did they betray you?",
+    "Can the alliance be salvaged?"
+]
+
+[[subtables.moderate_negative_events.entries]]
+roll = 12
+category = "religious"
+name = "Temple Rivalry"
+description = "Two temples within the realm come into open conflict."
+mechanical_effect = "-1 RP from temples, civil unrest"
+oracle_questions = [
+    "Which faiths are involved?",
+    "What sparked the conflict?",
+    "Will this turn violent?"
+]
+
+[[subtables.moderate_negative_events.entries]]
+roll = 13
+category = "natural"
+name = "Drought"
+description = "Lack of rain threatens crops and water supplies."
+mechanical_effect = "-2 GB, risk of famine"
+oracle_questions = [
+    "How severe is the drought?",
+    "Can water be diverted from elsewhere?",
+    "Is this natural or magical?"
+]
+
+[[subtables.moderate_negative_events.entries]]
+roll = 14
+category = "magical"
+name = "Rogue Wizard"
+description = "A wizard acts against the realm's interests."
+mechanical_effect = "Magical threat, investigation needed"
+subtable = "wizard_agenda"
+oracle_questions = [
+    "What are their goals?",
+    "How powerful are they?",
+    "Do they have allies?"
+]
+
+[[subtables.moderate_negative_events.entries]]
+roll = 15
+category = "intrigue"
+name = "Spy Network Exposed"
+description = "Your intelligence network in another realm is discovered."
+mechanical_effect = "Loss of agents, diplomatic incident"
+oracle_questions = [
+    "How were they discovered?",
+    "Were any agents captured?",
+    "Did they reveal anything under torture?"
+]
+
+[[subtables.moderate_negative_events.entries]]
+roll = 16
+category = "personal"
+name = "Family Member Kidnapped"
+description = "Someone close to the regent is abducted."
+mechanical_effect = "Personal crisis, ransom demands"
+subtable = "kidnapping_purpose"
+oracle_questions = [
+    "Who was taken?",
+    "Who is responsible?",
+    "What do they demand?"
+]
+
+[[subtables.moderate_negative_events.entries]]
+roll = 17
+category = "economic"
+name = "Currency Crisis"
+description = "Loss of confidence in the realm's currency causes economic turmoil."
+mechanical_effect = "-3 GB, trade disruption"
+oracle_questions = [
+    "What caused the crisis?",
+    "Is someone manipulating this?",
+    "How can confidence be restored?"
+]
+
+[[subtables.moderate_negative_events.entries]]
+roll = 18
+category = "military"
+name = "Mutiny"
+description = "A military unit rebels against its commanders."
+mechanical_effect = "Unit becomes hostile, others may follow"
+oracle_questions = [
+    "What are their grievances?",
+    "Who leads the mutiny?",
+    "Can they be negotiated with?"
+]
+
+[[subtables.moderate_negative_events.entries]]
+roll = 19
+category = "diplomatic"
+name = "Trade Embargo"
+description = "A realm imposes an embargo on trade with you."
+mechanical_effect = "-2 GB ongoing, diplomatic crisis"
+oracle_questions = [
+    "What prompted this action?",
+    "Can you find alternative trade partners?",
+    "Is military response warranted?"
+]
+
+[[subtables.moderate_negative_events.entries]]
+roll = 20
+category = "religious"
+name = "Undead Stirring"
+description = "The dead rise in an area of the realm."
+mechanical_effect = "Province becomes dangerous, -2 loyalty"
+oracle_questions = [
+    "What is raising them?",
+    "Is this connected to a larger threat?",
+    "Can the church put them to rest?"
+]
+
+[[subtables.moderate_negative_events.entries]]
+roll = 21
+category = "natural"
+name = "Disease Outbreak"
+description = "A serious illness spreads through the population."
+mechanical_effect = "-1 GB, population decline risk"
+subtable = "disease_severity"
+oracle_questions = [
+    "How contagious is it?",
+    "Can healers treat it?",
+    "Where did it originate?"
+]
+
+[[subtables.moderate_negative_events.entries]]
+roll = 22
+category = "magical"
+name = "Cursed Object"
+description = "A cursed item causes trouble in the realm."
+mechanical_effect = "Localized chaos until removed"
+oracle_questions = [
+    "What is the object?",
+    "Who brought it here?",
+    "What must be done to lift the curse?"
+]
+
+[[subtables.moderate_negative_events.entries]]
+roll = 23
+category = "intrigue"
+name = "Noble Conspiracy"
+description = "Several nobles plot against the regent's authority."
+mechanical_effect = "-2 to loyalty in involved provinces"
+subtable = "conspiracy_goal"
+oracle_questions = [
+    "Who leads the conspiracy?",
+    "What do they hope to achieve?",
+    "Can any be turned back to loyalty?"
+]
+
+[[subtables.moderate_negative_events.entries]]
+roll = 24
+category = "personal"
+name = "Challenger Appears"
+description = "Someone publicly challenges the regent's right to rule."
+mechanical_effect = "Legitimacy crisis, must respond"
+subtable = "challenger_claim"
+oracle_questions = [
+    "Who is the challenger?",
+    "What is their claim?",
+    "Do they have powerful backers?"
+]
+
+[[subtables.moderate_negative_events.entries]]
+roll = 25
+category = "economic"
+name = "Mine Collapse"
+description = "A major mine collapses, killing workers and halting production."
+mechanical_effect = "-2 GB ongoing until repairs complete"
+oracle_questions = [
+    "Was this accident or sabotage?",
+    "How many died?",
+    "Will workers return to the mine?"
+]
+
+[[subtables.moderate_negative_events.entries]]
+roll = 26
+category = "military"
+name = "Pirate Activity"
+description = "Pirates or raiders threaten coastal areas or trade ships."
+mechanical_effect = "-2 GB from coastal/naval trade"
+subtable = "pirate_strength"
+oracle_questions = [
+    "Who are the pirates?",
+    "Where is their base?",
+    "Are they backed by a rival power?"
+]
+
+[[subtables.moderate_negative_events.entries]]
+roll = 27
+category = "diplomatic"
+name = "Demands for Tribute"
+description = "A more powerful realm demands tribute or concessions."
+mechanical_effect = "Pay tribute or face consequences"
+oracle_questions = [
+    "How much do they demand?",
+    "What will they do if refused?",
+    "Can you find allies against them?"
+]
+
+[[subtables.moderate_negative_events.entries]]
+roll = 28
+category = "religious"
+name = "Demonic Influence"
+description = "Evidence of demonic activity appears in the realm."
+mechanical_effect = "-2 loyalty, requires investigation"
+oracle_questions = [
+    "What form does it take?",
+    "Is a cult responsible?",
+    "How widespread is the corruption?"
+]
+
+[[subtables.moderate_negative_events.entries]]
+roll = 29
+category = "natural"
+name = "Severe Storm"
+description = "A major storm devastates part of the realm."
+mechanical_effect = "-2 GB damage, infrastructure repairs"
+oracle_questions = [
+    "Was the storm natural?",
+    "Which areas were hit hardest?",
+    "Are there casualties?"
+]
+
+[[subtables.moderate_negative_events.entries]]
+roll = 30
+category = "magical"
+name = "Source Contested"
+description = "Another wizard attempts to claim sources in your realm."
+mechanical_effect = "Contest for magical control"
+oracle_questions = [
+    "Who is the rival wizard?",
+    "What resources do they have?",
+    "Can this be resolved diplomatically?"
+]
+
+# =============================================================================
+# MAJOR POSITIVE EVENTS (d12)
+# =============================================================================
+
+[[subtables.major_positive_events]]
+die = "d12"
+name = "Major Positive Events"
+
+[[subtables.major_positive_events.entries]]
+roll = 1
+category = "diplomatic"
+name = "Fealty Offered"
+description = "A neighboring minor realm offers to become your vassal."
+mechanical_effect = "Potential new vassal domain"
+oracle_questions = [
+    "Why do they offer fealty?",
+    "What do they expect in return?",
+    "Will this anger other neighbors?",
+    "Is this offer genuine?"
+]
+
+[[subtables.major_positive_events.entries]]
+roll = 2
+category = "economic"
+name = "Golden Age of Trade"
+description = "Trade flourishes beyond all expectation."
+mechanical_effect = "+5 GB this turn, +2 GB ongoing"
+oracle_questions = [
+    "What drives this prosperity?",
+    "Will competitors try to undermine it?",
+    "Does this shift regional power?"
+]
+
+[[subtables.major_positive_events.entries]]
+roll = 3
+category = "military"
+name = "Enemy Army Defects"
+description = "A military unit from a rival realm offers to serve you."
+mechanical_effect = "Gain experienced military unit"
+oracle_questions = [
+    "Why did they defect?",
+    "Are they truly loyal?",
+    "How will their former lord respond?"
+]
+
+[[subtables.major_positive_events.entries]]
+roll = 4
+category = "religious"
+name = "Miracle Occurs"
+description = "A genuine miracle takes place in the realm."
+mechanical_effect = "+3 temple influence, mass conversion"
+subtable = "miracle_type"
+oracle_questions = [
+    "What form did the miracle take?",
+    "Who witnessed it?",
+    "What does the deity demand in return?"
+]
+
+[[subtables.major_positive_events.entries]]
+roll = 5
+category = "natural"
+name = "Years of Plenty"
+description = "Multiple consecutive seasons of exceptional harvests."
+mechanical_effect = "+4 GB per turn for one year"
+oracle_questions = [
+    "Is this blessing natural or divine?",
+    "How will you use the surplus?",
+    "Will this attract immigration?"
+]
+
+[[subtables.major_positive_events.entries]]
+roll = 6
+category = "magical"
+name = "Ancient Magic Awakens"
+description = "Long-dormant magical power stirs to benefit the realm."
+mechanical_effect = "Major magical boon or artifact"
+subtable = "ancient_magic_type"
+oracle_questions = [
+    "What ancient power has awakened?",
+    "What price does it demand?",
+    "Does this draw dangerous attention?"
+]
+
+[[subtables.major_positive_events.entries]]
+roll = 7
+category = "intrigue"
+name = "Enemy Regent Compromised"
+description = "You gain devastating leverage over a rival regent."
+mechanical_effect = "Major diplomatic advantage"
+subtable = "leverage_type"
+oracle_questions = [
+    "What secret have you discovered?",
+    "How should you use this leverage?",
+    "Is this too good to be true?"
+]
+
+[[subtables.major_positive_events.entries]]
+roll = 8
+category = "personal"
+name = "Bloodline Strengthens"
+description = "The regent's bloodline manifests new or stronger abilities."
+mechanical_effect = "Gain new blood ability or strengthen existing"
+subtable = "blood_ability_type"
+oracle_questions = [
+    "What ability has manifested?",
+    "What triggered this awakening?",
+    "Does this change how others view you?"
+]
+
+[[subtables.major_positive_events.entries]]
+roll = 9
+category = "economic"
+name = "Treasure Discovered"
+description = "A significant treasure trove is discovered in the realm."
+mechanical_effect = "+10 GB one-time windfall"
+subtable = "treasure_type"
+oracle_questions = [
+    "Whose treasure was it?",
+    "Does anyone else have a claim?",
+    "What else was found with it?"
+]
+
+[[subtables.major_positive_events.entries]]
+roll = 10
+category = "military"
+name = "Strategic Victory"
+description = "Your forces achieve an unexpected major victory."
+mechanical_effect = "Enemy forces routed, +2 morale"
+oracle_questions = [
+    "How was victory achieved?",
+    "Who are the heroes of the battle?",
+    "Will the enemy seek revenge?"
+]
+
+[[subtables.major_positive_events.entries]]
+roll = 11
+category = "diplomatic"
+name = "Grand Alliance Formed"
+description = "Multiple realms agree to ally with you."
+mechanical_effect = "Multi-realm alliance"
+oracle_questions = [
+    "What common threat unites you?",
+    "Who leads the alliance?",
+    "What obligations does this create?"
+]
+
+[[subtables.major_positive_events.entries]]
+roll = 12
+category = "personal"
+name = "Legendary Hero Joins"
+description = "A renowned hero pledges service to the regent."
+mechanical_effect = "Gain powerful lieutenant NPC"
+subtable = "hero_type"
+oracle_questions = [
+    "What are their legendary deeds?",
+    "Why have they chosen to serve you?",
+    "What do they expect?"
+]
+
+# =============================================================================
+# MAJOR NEGATIVE EVENTS (d20)
+# =============================================================================
+
+[[subtables.major_negative_events]]
+die = "d20"
+name = "Major Negative Events"
+
+[[subtables.major_negative_events.entries]]
+roll = 1
+category = "diplomatic"
+name = "Declaration of War"
+description = "A neighboring realm formally declares war."
+mechanical_effect = "State of war, mobilization required"
+oracle_questions = [
+    "What is their casus belli?",
+    "What are their war aims?",
+    "Who will ally with whom?"
+]
+
+[[subtables.major_negative_events.entries]]
+roll = 2
+category = "economic"
+name = "Economic Collapse"
+description = "The realm's economy suffers a catastrophic failure."
+mechanical_effect = "-5 GB this turn, -2 GB ongoing"
+oracle_questions = [
+    "What caused the collapse?",
+    "Who profits from the chaos?",
+    "How can recovery begin?"
+]
+
+[[subtables.major_negative_events.entries]]
+roll = 3
+category = "military"
+name = "Invasion"
+description = "A significant military force invades the realm."
+mechanical_effect = "Major military crisis"
+subtable = "invasion_force"
+oracle_questions = [
+    "Who is invading?",
+    "What is their strength?",
+    "What are their objectives?"
+]
+
+[[subtables.major_negative_events.entries]]
+roll = 4
+category = "religious"
+name = "Religious Schism"
+description = "The dominant faith splits into warring factions."
+mechanical_effect = "Temple holdings divided, civil unrest"
+oracle_questions = [
+    "What doctrine caused the split?",
+    "Which faction is stronger?",
+    "Will this turn violent?"
+]
+
+[[subtables.major_negative_events.entries]]
+roll = 5
+category = "natural"
+name = "Plague"
+description = "A devastating plague sweeps through the realm."
+mechanical_effect = "-3 GB, province level decreases"
+subtable = "plague_type"
+oracle_questions = [
+    "How deadly is the plague?",
+    "Where did it originate?",
+    "Can it be contained?"
+]
+
+[[subtables.major_negative_events.entries]]
+roll = 6
+category = "magical"
+name = "Awnshegh Attention"
+description = "An awnshegh turns its attention toward your realm."
+mechanical_effect = "Major supernatural threat"
+subtable = "awnshegh_interest"
+oracle_questions = [
+    "Which awnshegh?",
+    "What drew their attention?",
+    "What do they want?"
+]
+
+[[subtables.major_negative_events.entries]]
+roll = 7
+category = "intrigue"
+name = "Coup Attempt"
+description = "Powerful nobles attempt to overthrow the regent."
+mechanical_effect = "Civil war risk, loyalty crisis"
+subtable = "coup_leader"
+oracle_questions = [
+    "Who leads the coup?",
+    "Who remains loyal?",
+    "Is there foreign backing?"
+]
+
+[[subtables.major_negative_events.entries]]
+roll = 8
+category = "personal"
+name = "Assassination"
+description = "The regent or heir is successfully assassinated."
+mechanical_effect = "Succession crisis or regent death"
+oracle_questions = [
+    "Who was killed?",
+    "Who ordered it?",
+    "Who benefits most?"
+]
+
+[[subtables.major_negative_events.entries]]
+roll = 9
+category = "economic"
+name = "Famine"
+description = "Widespread crop failure causes mass starvation."
+mechanical_effect = "-4 GB, population loss, unrest"
+oracle_questions = [
+    "How widespread is the famine?",
+    "Can food be imported?",
+    "Will there be food riots?"
+]
+
+[[subtables.major_negative_events.entries]]
+roll = 10
+category = "military"
+name = "Army Destroyed"
+description = "A major military force is lost in battle or disaster."
+mechanical_effect = "Lose multiple units, morale collapse"
+oracle_questions = [
+    "How were they destroyed?",
+    "Were there survivors?",
+    "Who will fill the void?"
+]
+
+[[subtables.major_negative_events.entries]]
+roll = 11
+category = "diplomatic"
+name = "Alliance Collapse"
+description = "A key alliance breaks down catastrophically."
+mechanical_effect = "Loss of allies, potential new enemies"
+oracle_questions = [
+    "What caused the collapse?",
+    "Will former allies become enemies?",
+    "Can it be repaired?"
+]
+
+[[subtables.major_negative_events.entries]]
+roll = 12
+category = "religious"
+name = "Divine Punishment"
+description = "The gods express displeasure with the realm."
+mechanical_effect = "-3 to morale, temple crisis"
+subtable = "divine_punishment_form"
+oracle_questions = [
+    "What offense caused this?",
+    "How can atonement be made?",
+    "Is this genuine or priestly manipulation?"
+]
+
+[[subtables.major_negative_events.entries]]
+roll = 13
+category = "natural"
+name = "Great Earthquake"
+description = "A massive earthquake devastates the realm."
+mechanical_effect = "-5 GB damage, infrastructure destroyed"
+oracle_questions = [
+    "Which areas were hit hardest?",
+    "Are there aftershocks?",
+    "Was this natural or magical?"
+]
+
+[[subtables.major_negative_events.entries]]
+roll = 14
+category = "magical"
+name = "Magical Catastrophe"
+description = "A spell or magical event causes widespread destruction."
+mechanical_effect = "Province devastated, magical fallout"
+subtable = "magical_catastrophe_type"
+oracle_questions = [
+    "What caused this?",
+    "Are there lasting effects?",
+    "Who is responsible?"
+]
+
+[[subtables.major_negative_events.entries]]
+roll = 15
+category = "intrigue"
+name = "Regent Framed"
+description = "The regent is convincingly framed for a terrible crime."
+mechanical_effect = "Reputation destroyed, legitimacy crisis"
+oracle_questions = [
+    "What crime?",
+    "Who framed them?",
+    "Can innocence be proven?"
+]
+
+[[subtables.major_negative_events.entries]]
+roll = 16
+category = "personal"
+name = "Bloodtheft Attempt"
+description = "Someone attempts bloodtheft against the regent."
+mechanical_effect = "Risk of bloodline loss"
+subtable = "bloodtheft_method"
+oracle_questions = [
+    "Who is the attacker?",
+    "What is their bloodline?",
+    "Was the attempt successful?"
+]
+
+[[subtables.major_negative_events.entries]]
+roll = 17
+category = "economic"
+name = "Guild Monopoly Broken"
+description = "A major guild holding collapses or is seized."
+mechanical_effect = "Lose guild holding, -3 GB ongoing"
+oracle_questions = [
+    "What caused the collapse?",
+    "Who benefits?",
+    "Can it be rebuilt?"
+]
+
+[[subtables.major_negative_events.entries]]
+roll = 18
+category = "military"
+name = "Siege"
+description = "A major city or castle comes under siege."
+mechanical_effect = "Province cut off, supplies dwindling"
+oracle_questions = [
+    "Who is besieging?",
+    "What are their demands?",
+    "Can relief arrive in time?"
+]
+
+[[subtables.major_negative_events.entries]]
+roll = 19
+category = "diplomatic"
+name = "Excommunication"
+description = "The regent is excommunicated by the church."
+mechanical_effect = "Temple opposition, legitimacy crisis"
+oracle_questions = [
+    "What offense justified this?",
+    "Which temple issued it?",
+    "How do the faithful react?"
+]
+
+[[subtables.major_negative_events.entries]]
+roll = 20
+category = "personal"
+name = "Madness"
+description = "The regent or heir succumbs to madness."
+mechanical_effect = "Erratic behavior, succession concerns"
+subtable = "madness_type"
+oracle_questions = [
+    "What caused the madness?",
+    "Can it be cured?",
+    "How do advisors respond?"
+]
+
+# =============================================================================
+# CATASTROPHIC EVENTS (d12)
+# =============================================================================
+
+[[subtables.catastrophic_events]]
+die = "d12"
+name = "Catastrophic Events"
+
+[[subtables.catastrophic_events.entries]]
+roll = 1
+category = "military"
+name = "Full-Scale War"
+description = "Multiple realms unite in war against you."
+mechanical_effect = "Multi-front war, realm survival at stake"
+oracle_questions = [
+    "Who are your enemies?",
+    "Who might still be allies?",
+    "What are their ultimate aims?"
+]
+
+[[subtables.catastrophic_events.entries]]
+roll = 2
+category = "magical"
+name = "Awnshegh Invasion"
+description = "An awnshegh and their forces attack the realm."
+mechanical_effect = "Supernatural war, realm devastation"
+subtable = "awnshegh_attacker"
+oracle_questions = [
+    "Which awnshegh attacks?",
+    "What is their objective?",
+    "Who can help stop them?"
+]
+
+[[subtables.catastrophic_events.entries]]
+roll = 3
+category = "natural"
+name = "Great Plague"
+description = "A devastating plague kills thousands across the realm."
+mechanical_effect = "Lose 1 province level everywhere, -10 GB"
+oracle_questions = [
+    "What is the nature of the plague?",
+    "Is there any cure?",
+    "Did someone create this?"
+]
+
+[[subtables.catastrophic_events.entries]]
+roll = 4
+category = "religious"
+name = "Holy War Declared"
+description = "A crusade or holy war is declared against the realm."
+mechanical_effect = "Religious and military crisis combined"
+oracle_questions = [
+    "What heresy or offense justified this?",
+    "Who leads the crusade?",
+    "How zealous are they?"
+]
+
+[[subtables.catastrophic_events.entries]]
+roll = 5
+category = "intrigue"
+name = "Civil War"
+description = "The realm descends into full civil war."
+mechanical_effect = "Realm divided, all holdings contested"
+subtable = "civil_war_factions"
+oracle_questions = [
+    "What are the factions?",
+    "Who leads the opposition?",
+    "Can unity be restored?"
+]
+
+[[subtables.catastrophic_events.entries]]
+roll = 6
+category = "natural"
+name = "Natural Catastrophe"
+description = "A volcanic eruption, tsunami, or similar disaster strikes."
+mechanical_effect = "Province destroyed, mass casualties"
+subtable = "catastrophe_type"
+oracle_questions = [
+    "What form did it take?",
+    "Which areas are affected?",
+    "Will there be more?"
+]
+
+[[subtables.catastrophic_events.entries]]
+roll = 7
+category = "magical"
+name = "Shadow World Breach"
+description = "The barrier to the Shadow World weakens or breaks."
+mechanical_effect = "Undead flood, source corruption"
+oracle_questions = [
+    "What caused the breach?",
+    "What comes through?",
+    "Can it be sealed?"
+]
+
+[[subtables.catastrophic_events.entries]]
+roll = 8
+category = "personal"
+name = "Dynasty Ends"
+description = "The regent and all heirs are killed or incapacitated."
+mechanical_effect = "Complete succession crisis"
+oracle_questions = [
+    "How did this happen?",
+    "Are there any distant relatives?",
+    "Who will claim the throne?"
+]
+
+[[subtables.catastrophic_events.entries]]
+roll = 9
+category = "economic"
+name = "Total Economic Ruin"
+description = "The realm's economy completely collapses."
+mechanical_effect = "No income for 1 year, mass unrest"
+oracle_questions = [
+    "What precipitated total collapse?",
+    "Who profits from the chaos?",
+    "Is foreign intervention possible?"
+]
+
+[[subtables.catastrophic_events.entries]]
+roll = 10
+category = "military"
+name = "Capital Falls"
+description = "The realm's capital city falls to enemy forces."
+mechanical_effect = "Seat of power lost, government in exile"
+oracle_questions = [
+    "Who captured the capital?",
+    "What was lost with it?",
+    "Where can you regroup?"
+]
+
+[[subtables.catastrophic_events.entries]]
+roll = 11
+category = "diplomatic"
+name = "Universal Betrayal"
+description = "All allies simultaneously turn against you."
+mechanical_effect = "Complete diplomatic isolation"
+oracle_questions = [
+    "Why did everyone turn?",
+    "Is there a mastermind?",
+    "Is anyone still trustworthy?"
+]
+
+[[subtables.catastrophic_events.entries]]
+roll = 12
+category = "magical"
+name = "Bloodline Cursed"
+description = "A powerful curse affects the regent's bloodline."
+mechanical_effect = "Bloodline abilities corrupted or lost"
+subtable = "bloodline_curse_type"
+oracle_questions = [
+    "Who cursed the bloodline?",
+    "What form does it take?",
+    "How can it be lifted?"
+]
+
+# =============================================================================
+# LEGENDARY EVENTS (d10) - Roll 100 on main table
+# =============================================================================
+
+[[subtables.legendary_events]]
+die = "d10"
+name = "Legendary Events"
+
+[[subtables.legendary_events.entries]]
+roll = 1
+category = "positive"
+name = "Deismaar Echo"
+description = "A fragment of divine power from Deismaar manifests in the realm."
+mechanical_effect = "Massive bloodline enhancement potential"
+oracle_questions = [
+    "What form does this power take?",
+    "Who else senses it?",
+    "What price must be paid to claim it?"
+]
+
+[[subtables.legendary_events.entries]]
+roll = 2
+category = "positive"
+name = "Lost Kingdom Discovered"
+description = "An entire lost kingdom or civilization is discovered."
+mechanical_effect = "New territory, ancient treasures"
+oracle_questions = [
+    "What kingdom was it?",
+    "Why was it lost?",
+    "What dangers guard it?"
+]
+
+[[subtables.legendary_events.entries]]
+roll = 3
+category = "positive"
+name = "Divine Favor"
+description = "A god directly intervenes on behalf of the realm."
+mechanical_effect = "Major divine blessing"
+oracle_questions = [
+    "Which god?",
+    "What form does their favor take?",
+    "What do they expect?"
+]
+
+[[subtables.legendary_events.entries]]
+roll = 4
+category = "negative"
+name = "Awnshegh Arrives"
+description = "An awnshegh personally arrives to claim the realm."
+mechanical_effect = "Fight or submit to a demigod"
+oracle_questions = [
+    "Which awnshegh?",
+    "What drew them here?",
+    "Is negotiation possible?"
+]
+
+[[subtables.legendary_events.entries]]
+roll = 5
+category = "negative"
+name = "Azrai's Shadow Stirs"
+description = "The dead god Azrai's influence grows in the realm."
+mechanical_effect = "Corruption spreads, evil grows"
+oracle_questions = [
+    "What awakened this influence?",
+    "How does it manifest?",
+    "Can it be stopped?"
+]
+
+[[subtables.legendary_events.entries]]
+roll = 6
+category = "mixed"
+name = "New God Ascends"
+description = "A blooded individual achieves divine or near-divine status."
+mechanical_effect = "Religious upheaval, power shift"
+oracle_questions = [
+    "Who ascended?",
+    "What is their portfolio?",
+    "How do existing churches react?"
+]
+
+[[subtables.legendary_events.entries]]
+roll = 7
+category = "mixed"
+name = "Cerilian Artifact Surfaces"
+description = "One of the legendary artifacts of Cerilia appears."
+mechanical_effect = "Race to claim ultimate power"
+subtable = "legendary_artifact"
+oracle_questions = [
+    "Which artifact?",
+    "Where did it appear?",
+    "Who else seeks it?"
+]
+
+[[subtables.legendary_events.entries]]
+roll = 8
+category = "mixed"
+name = "Ley Line Catastrophe"
+description = "The ley lines of Cerilia shift dramatically."
+mechanical_effect = "All sources change, magical upheaval"
+oracle_questions = [
+    "How do the ley lines shift?",
+    "Who gains and who loses?",
+    "What caused this?"
+]
+
+[[subtables.legendary_events.entries]]
+roll = 9
+category = "positive"
+name = "Prophecy Fulfilled"
+description = "An ancient prophecy is fulfilled in the regent's favor."
+mechanical_effect = "Destiny manifests"
+oracle_questions = [
+    "What was the prophecy?",
+    "What does fulfillment bring?",
+    "Are there consequences?"
+]
+
+[[subtables.legendary_events.entries]]
+roll = 10
+category = "negative"
+name = "Prophecy of Doom"
+description = "An ancient prophecy of doom begins to manifest."
+mechanical_effect = "Fated catastrophe approaches"
+oracle_questions = [
+    "What does the prophecy foretell?",
+    "Can it be averted?",
+    "Who else knows of this?"
+]
+
+# =============================================================================
+# DETAIL SUBTABLES
+# =============================================================================
+# These provide specifics when rolled on main event subtables
+
+# -----------------------------------------------------------------------------
+# DIPLOMATIC SUBTABLES
+# -----------------------------------------------------------------------------
+
+[[subtables.embassy_purpose]]
+die = "d12"
+name = "Embassy Purpose"
+
+[[subtables.embassy_purpose.entries]]
+roll = 1
+result = "Alliance proposal against common enemy"
+oracle_questions = ["Who is the common enemy?", "What do they expect you to contribute?"]
+
+[[subtables.embassy_purpose.entries]]
+roll = 2
+result = "Trade agreement negotiation"
+oracle_questions = ["What goods are they interested in?", "What do they offer in exchange?"]
+
+[[subtables.embassy_purpose.entries]]
+roll = 3
+result = "Marriage alliance proposal"
+oracle_questions = ["Who is the proposed spouse?", "What political advantage does this offer?"]
+
+[[subtables.embassy_purpose.entries]]
+roll = 4
+result = "Border dispute resolution"
+oracle_questions = ["What territory is contested?", "Are they willing to compromise?"]
+
+[[subtables.embassy_purpose.entries]]
+roll = 5
+result = "Mutual defense pact"
+oracle_questions = ["What threatens them?", "Is this a trap?"]
+
+[[subtables.embassy_purpose.entries]]
+roll = 6
+result = "Request for military passage"
+oracle_questions = ["Where are they marching?", "Will they cause trouble passing through?"]
+
+[[subtables.embassy_purpose.entries]]
+roll = 7
+result = "Cultural exchange proposal"
+oracle_questions = ["What knowledge do they seek?", "What will you learn from them?"]
+
+[[subtables.embassy_purpose.entries]]
+roll = 8
+result = "Offer of vassalage (them to you)"
+oracle_questions = ["Why do they seek your protection?", "What obligations will this create?"]
+
+[[subtables.embassy_purpose.entries]]
+roll = 9
+result = "Demand for tribute or concession"
+oracle_questions = ["What do they demand?", "Can you afford to refuse?"]
+
+[[subtables.embassy_purpose.entries]]
+roll = 10
+result = "Religious cooperation"
+oracle_questions = ["Which faith do they represent?", "What do they want the church to do?"]
+
+[[subtables.embassy_purpose.entries]]
+roll = 11
+result = "Intelligence sharing arrangement"
+oracle_questions = ["Against whom?", "What do they know that you don't?"]
+
+[[subtables.embassy_purpose.entries]]
+roll = 12
+result = "Formal apology for past offense"
+oracle_questions = ["What offense?", "Is the apology sincere?"]
+
+[[subtables.alliance_terms]]
+die = "d8"
+name = "Alliance Terms"
+
+[[subtables.alliance_terms.entries]]
+roll = 1
+result = "Equal partnership with shared costs"
+oracle_questions = ["How will decisions be made?", "What if interests diverge?"]
+
+[[subtables.alliance_terms.entries]]
+roll = 2
+result = "You as senior partner"
+oracle_questions = ["What do they expect in return for deference?", "Will they truly follow your lead?"]
+
+[[subtables.alliance_terms.entries]]
+roll = 3
+result = "Them as senior partner"
+oracle_questions = ["Can you accept a subordinate role?", "What benefits offset the loss of autonomy?"]
+
+[[subtables.alliance_terms.entries]]
+roll = 4
+result = "Defensive alliance only"
+oracle_questions = ["Will this deter aggression?", "What if they provoke an attack?"]
+
+[[subtables.alliance_terms.entries]]
+roll = 5
+result = "Offensive alliance against specific target"
+oracle_questions = ["Who is the target?", "What will you gain from war?"]
+
+[[subtables.alliance_terms.entries]]
+roll = 6
+result = "Economic alliance"
+oracle_questions = ["How will trade be structured?", "Who benefits more?"]
+
+[[subtables.alliance_terms.entries]]
+roll = 7
+result = "Religious alliance"
+oracle_questions = ["Which faith unites you?", "What are the theological implications?"]
+
+[[subtables.alliance_terms.entries]]
+roll = 8
+result = "Alliance through marriage"
+oracle_questions = ["Who will marry whom?", "What if the marriage fails?"]
+
+# -----------------------------------------------------------------------------
+# MILITARY SUBTABLES
+# -----------------------------------------------------------------------------
+
+[[subtables.mercenary_type]]
+die = "d10"
+name = "Mercenary Company Type"
+
+[[subtables.mercenary_type.entries]]
+roll = 1
+result = "Heavy cavalry - knights errant seeking employment"
+stats = { unit_type = "Knights", strength = 2, cost_multiplier = 1.5 }
+
+[[subtables.mercenary_type.entries]]
+roll = 2
+result = "Pikemen - disciplined infantry from foreign lands"
+stats = { unit_type = "Pike", strength = 2, cost_multiplier = 1.0 }
+
+[[subtables.mercenary_type.entries]]
+roll = 3
+result = "Crossbowmen - siege specialists"
+stats = { unit_type = "Crossbow", strength = 2, cost_multiplier = 1.2 }
+
+[[subtables.mercenary_type.entries]]
+roll = 4
+result = "Light cavalry - scouts and raiders"
+stats = { unit_type = "Light Cavalry", strength = 2, cost_multiplier = 1.0 }
+
+[[subtables.mercenary_type.entries]]
+roll = 5
+result = "Mixed company - infantry and archers"
+stats = { unit_type = "Mixed", strength = 3, cost_multiplier = 1.3 }
+
+[[subtables.mercenary_type.entries]]
+roll = 6
+result = "Dwarf infantry - heavily armored fighters"
+stats = { unit_type = "Dwarf Infantry", strength = 2, cost_multiplier = 2.0 }
+
+[[subtables.mercenary_type.entries]]
+roll = 7
+result = "Elf archers - woodland skirmishers"
+stats = { unit_type = "Elf Archers", strength = 2, cost_multiplier = 2.0 }
+
+[[subtables.mercenary_type.entries]]
+roll = 8
+result = "Irregulars - bandits turned soldiers"
+stats = { unit_type = "Irregulars", strength = 3, cost_multiplier = 0.8 }
+
+[[subtables.mercenary_type.entries]]
+roll = 9
+result = "Naval marines - shipborne fighters"
+stats = { unit_type = "Marines", strength = 2, cost_multiplier = 1.5 }
+
+[[subtables.mercenary_type.entries]]
+roll = 10
+result = "Elite bodyguard - small but exceptional"
+stats = { unit_type = "Bodyguard", strength = 1, cost_multiplier = 3.0 }
+
+[[subtables.monster_type]]
+die = "d20"
+name = "Monster Type Slain/Encountered"
+
+[[subtables.monster_type.entries]]
+roll = 1
+result = "Troll - regenerating terror"
+threat_level = "moderate"
+
+[[subtables.monster_type.entries]]
+roll = 2
+result = "Giant - hill or stone"
+threat_level = "significant"
+
+[[subtables.monster_type.entries]]
+roll = 3
+result = "Wyvern - winged predator"
+threat_level = "significant"
+
+[[subtables.monster_type.entries]]
+roll = 4
+result = "Owlbear - forest menace"
+threat_level = "moderate"
+
+[[subtables.monster_type.entries]]
+roll = 5
+result = "Dire wolves - pack of supernatural predators"
+threat_level = "moderate"
+
+[[subtables.monster_type.entries]]
+roll = 6
+result = "Ogres - raiding band"
+threat_level = "moderate"
+
+[[subtables.monster_type.entries]]
+roll = 7
+result = "Basilisk - petrifying horror"
+threat_level = "significant"
+
+[[subtables.monster_type.entries]]
+roll = 8
+result = "Griffon - aerial hunter"
+threat_level = "moderate"
+
+[[subtables.monster_type.entries]]
+roll = 9
+result = "Manticore - intelligent predator"
+threat_level = "significant"
+
+[[subtables.monster_type.entries]]
+roll = 10
+result = "Ettin - two-headed giant"
+threat_level = "moderate"
+
+[[subtables.monster_type.entries]]
+roll = 11
+result = "Chimera - three-headed beast"
+threat_level = "major"
+
+[[subtables.monster_type.entries]]
+roll = 12
+result = "Hydra - multi-headed serpent"
+threat_level = "major"
+
+[[subtables.monster_type.entries]]
+roll = 13
+result = "Cockatrice - petrifying bird"
+threat_level = "moderate"
+
+[[subtables.monster_type.entries]]
+roll = 14
+result = "Lamia - shapeshifting deceiver"
+threat_level = "significant"
+
+[[subtables.monster_type.entries]]
+roll = 15
+result = "Medusa - petrifying monster"
+threat_level = "major"
+
+[[subtables.monster_type.entries]]
+roll = 16
+result = "Will-o-wisps - swamp lights"
+threat_level = "moderate"
+
+[[subtables.monster_type.entries]]
+roll = 17
+result = "Treant - forest protector"
+threat_level = "significant"
+
+[[subtables.monster_type.entries]]
+roll = 18
+result = "Phase spider - dimensional predator"
+threat_level = "moderate"
+
+[[subtables.monster_type.entries]]
+roll = 19
+result = "Beholder - aberrant terror"
+threat_level = "major"
+
+[[subtables.monster_type.entries]]
+roll = 20
+result = "Young dragon - elemental fury"
+threat_level = "major"
+
+[[subtables.incursion_type]]
+die = "d8"
+name = "Border Incursion Type"
+
+[[subtables.incursion_type.entries]]
+roll = 1
+result = "Raiding party seeking plunder"
+force_size = "small"
+intent = "looting"
+
+[[subtables.incursion_type.entries]]
+roll = 2
+result = "Reconnaissance in force"
+force_size = "moderate"
+intent = "intelligence gathering"
+
+[[subtables.incursion_type.entries]]
+roll = 3
+result = "Hot pursuit of criminals or rebels"
+force_size = "small"
+intent = "pursuit"
+
+[[subtables.incursion_type.entries]]
+roll = 4
+result = "Unauthorized noble's personal vendetta"
+force_size = "moderate"
+intent = "revenge"
+
+[[subtables.incursion_type.entries]]
+roll = 5
+result = "Testing your defenses"
+force_size = "moderate"
+intent = "probing"
+
+[[subtables.incursion_type.entries]]
+roll = 6
+result = "Claiming disputed territory"
+force_size = "significant"
+intent = "occupation"
+
+[[subtables.incursion_type.entries]]
+roll = 7
+result = "Pursuing fleeing enemies"
+force_size = "moderate"
+intent = "pursuit"
+
+[[subtables.incursion_type.entries]]
+roll = 8
+result = "Full invasion force"
+force_size = "major"
+intent = "conquest"
+
+[[subtables.invasion_force]]
+die = "d8"
+name = "Invasion Force Composition"
+
+[[subtables.invasion_force.entries]]
+roll = 1
+result = "Infantry-heavy traditional army"
+composition = "60% infantry, 20% archers, 20% cavalry"
+
+[[subtables.invasion_force.entries]]
+roll = 2
+result = "Cavalry-dominant mobile force"
+composition = "60% cavalry, 30% horse archers, 10% infantry"
+
+[[subtables.invasion_force.entries]]
+roll = 3
+result = "Combined arms professional military"
+composition = "Balanced with siege equipment"
+
+[[subtables.invasion_force.entries]]
+roll = 4
+result = "Barbarian horde"
+composition = "Light infantry mass with elite champions"
+
+[[subtables.invasion_force.entries]]
+roll = 5
+result = "Naval-borne invasion"
+composition = "Marines and shipboard troops"
+
+[[subtables.invasion_force.entries]]
+roll = 6
+result = "Goblinoid army"
+composition = "Goblin masses with hobgoblin officers and bugbear shock troops"
+
+[[subtables.invasion_force.entries]]
+roll = 7
+result = "Undead legion"
+composition = "Skeleton infantry with necromancer commanders"
+
+[[subtables.invasion_force.entries]]
+roll = 8
+result = "Mixed force with monster auxiliaries"
+composition = "Human troops with giant, troll, or other monster support"
+
+[[subtables.monster_raid_type]]
+die = "d12"
+name = "Monster Raid Composition"
+
+[[subtables.monster_raid_type.entries]]
+roll = 1
+result = "Goblin raiding party"
+numbers = "30-60 goblins with worg riders"
+
+[[subtables.monster_raid_type.entries]]
+roll = 2
+result = "Orc warband"
+numbers = "20-40 orcs with a war chief"
+
+[[subtables.monster_raid_type.entries]]
+roll = 3
+result = "Gnoll pack"
+numbers = "15-30 gnolls"
+
+[[subtables.monster_raid_type.entries]]
+roll = 4
+result = "Ogre gang"
+numbers = "3-6 ogres"
+
+[[subtables.monster_raid_type.entries]]
+roll = 5
+result = "Troll hunting party"
+numbers = "2-4 trolls"
+
+[[subtables.monster_raid_type.entries]]
+roll = 6
+result = "Giant and minions"
+numbers = "1 giant with 10-20 humanoid servants"
+
+[[subtables.monster_raid_type.entries]]
+roll = 7
+result = "Undead horde"
+numbers = "50-100 zombies/skeletons with wight leaders"
+
+[[subtables.monster_raid_type.entries]]
+roll = 8
+result = "Harpy flock"
+numbers = "8-12 harpies"
+
+[[subtables.monster_raid_type.entries]]
+roll = 9
+result = "Werewolf pack"
+numbers = "4-8 werewolves"
+
+[[subtables.monster_raid_type.entries]]
+roll = 10
+result = "Bugbear warband"
+numbers = "10-20 bugbears"
+
+[[subtables.monster_raid_type.entries]]
+roll = 11
+result = "Kobold swarm"
+numbers = "100+ kobolds with traps"
+
+[[subtables.monster_raid_type.entries]]
+roll = 12
+result = "Mixed humanoid alliance"
+numbers = "Various humanoid tribes united"
+
+[[subtables.pirate_strength]]
+die = "d6"
+name = "Pirate/Raider Strength"
+
+[[subtables.pirate_strength.entries]]
+roll = 1
+result = "Single ship with small crew"
+ships = 1
+threat = "minor"
+
+[[subtables.pirate_strength.entries]]
+roll = 2
+result = "Small flotilla (2-3 ships)"
+ships = 3
+threat = "moderate"
+
+[[subtables.pirate_strength.entries]]
+roll = 3
+result = "Pirate fleet (4-6 ships)"
+ships = 5
+threat = "significant"
+
+[[subtables.pirate_strength.entries]]
+roll = 4
+result = "Pirate kingdom (7+ ships with land base)"
+ships = 8
+threat = "major"
+
+[[subtables.pirate_strength.entries]]
+roll = 5
+result = "State-sponsored privateers"
+ships = 4
+threat = "significant"
+
+[[subtables.pirate_strength.entries]]
+roll = 6
+result = "Legendary pirate lord"
+ships = 6
+threat = "major"
+
+# -----------------------------------------------------------------------------
+# INTRIGUE SUBTABLES
+# -----------------------------------------------------------------------------
+
+[[subtables.plot_type]]
+die = "d10"
+name = "Enemy Plot Type"
+
+[[subtables.plot_type.entries]]
+roll = 1
+result = "Assassination of regent or key figure"
+
+[[subtables.plot_type.entries]]
+roll = 2
+result = "Economic sabotage of trade or guilds"
+
+[[subtables.plot_type.entries]]
+roll = 3
+result = "Spreading propaganda against the realm"
+
+[[subtables.plot_type.entries]]
+roll = 4
+result = "Corrupting key officials with bribes"
+
+[[subtables.plot_type.entries]]
+roll = 5
+result = "Supporting rebel faction"
+
+[[subtables.plot_type.entries]]
+roll = 6
+result = "Stealing military secrets"
+
+[[subtables.plot_type.entries]]
+roll = 7
+result = "Poisoning relationships with allies"
+
+[[subtables.plot_type.entries]]
+roll = 8
+result = "Magical scrying and espionage"
+
+[[subtables.plot_type.entries]]
+roll = 9
+result = "Kidnapping for leverage"
+
+[[subtables.plot_type.entries]]
+roll = 10
+result = "Preparation for military invasion"
+
+[[subtables.assassination_target]]
+die = "d10"
+name = "Assassination Target"
+
+[[subtables.assassination_target.entries]]
+roll = 1
+result = "The regent"
+severity = "critical"
+
+[[subtables.assassination_target.entries]]
+roll = 2
+result = "The heir"
+severity = "major"
+
+[[subtables.assassination_target.entries]]
+roll = 3
+result = "The regent's spouse"
+severity = "major"
+
+[[subtables.assassination_target.entries]]
+roll = 4
+result = "Chief advisor or seneschal"
+severity = "significant"
+
+[[subtables.assassination_target.entries]]
+roll = 5
+result = "Military commander"
+severity = "significant"
+
+[[subtables.assassination_target.entries]]
+roll = 6
+result = "Temple leader"
+severity = "significant"
+
+[[subtables.assassination_target.entries]]
+roll = 7
+result = "Guild master"
+severity = "moderate"
+
+[[subtables.assassination_target.entries]]
+roll = 8
+result = "Provincial governor"
+severity = "moderate"
+
+[[subtables.assassination_target.entries]]
+roll = 9
+result = "Court wizard"
+severity = "significant"
+
+[[subtables.assassination_target.entries]]
+roll = 10
+result = "Visiting dignitary"
+severity = "variable"
+
+[[subtables.scandal_type]]
+die = "d12"
+name = "Court Scandal Type"
+
+[[subtables.scandal_type.entries]]
+roll = 1
+result = "Adultery involving the regent or spouse"
+
+[[subtables.scandal_type.entries]]
+roll = 2
+result = "Financial corruption and embezzlement"
+
+[[subtables.scandal_type.entries]]
+roll = 3
+result = "Secret worship of forbidden god"
+
+[[subtables.scandal_type.entries]]
+roll = 4
+result = "Illegitimate child revealed"
+
+[[subtables.scandal_type.entries]]
+roll = 5
+result = "Treason - secret correspondence with enemies"
+
+[[subtables.scandal_type.entries]]
+roll = 6
+result = "Murder covered up"
+
+[[subtables.scandal_type.entries]]
+roll = 7
+result = "Cowardice in battle revealed"
+
+[[subtables.scandal_type.entries]]
+roll = 8
+result = "Broken oath exposed"
+
+[[subtables.scandal_type.entries]]
+roll = 9
+result = "Dark magic use discovered"
+
+[[subtables.scandal_type.entries]]
+roll = 10
+result = "Shameful ancestry revealed"
+
+[[subtables.scandal_type.entries]]
+roll = 11
+result = "Secret addiction or vice"
+
+[[subtables.scandal_type.entries]]
+roll = 12
+result = "Betrayal of former ally or friend"
+
+[[subtables.kidnapping_purpose]]
+die = "d6"
+name = "Kidnapping Purpose"
+
+[[subtables.kidnapping_purpose.entries]]
+roll = 1
+result = "Ransom - gold or treasure demanded"
+demands = "10-50 GB depending on victim status"
+
+[[subtables.kidnapping_purpose.entries]]
+roll = 2
+result = "Political concession - release prisoners or cede territory"
+demands = "Specific political action"
+
+[[subtables.kidnapping_purpose.entries]]
+roll = 3
+result = "Marriage coercion - forced betrothal"
+demands = "Marriage alliance"
+
+[[subtables.kidnapping_purpose.entries]]
+roll = 4
+result = "Bloodtheft - kidnapped for their bloodline"
+demands = "None - they want to kill the victim"
+
+[[subtables.kidnapping_purpose.entries]]
+roll = 5
+result = "Leverage for ongoing control"
+demands = "Compliance with future demands"
+
+[[subtables.kidnapping_purpose.entries]]
+roll = 6
+result = "Personal vendetta - pure revenge"
+demands = "Suffering of the regent"
+
+[[subtables.conspiracy_goal]]
+die = "d8"
+name = "Noble Conspiracy Goal"
+
+[[subtables.conspiracy_goal.entries]]
+roll = 1
+result = "Replace regent with one of their own"
+
+[[subtables.conspiracy_goal.entries]]
+roll = 2
+result = "Force policy changes through threat"
+
+[[subtables.conspiracy_goal.entries]]
+roll = 3
+result = "Gain independence for their provinces"
+
+[[subtables.conspiracy_goal.entries]]
+roll = 4
+result = "Change succession in their favor"
+
+[[subtables.conspiracy_goal.entries]]
+roll = 5
+result = "Remove specific advisor or faction"
+
+[[subtables.conspiracy_goal.entries]]
+roll = 6
+result = "Stop a planned reform"
+
+[[subtables.conspiracy_goal.entries]]
+roll = 7
+result = "Force war with a specific neighbor"
+
+[[subtables.conspiracy_goal.entries]]
+roll = 8
+result = "Install foreign puppet ruler"
+
+[[subtables.coup_leader]]
+die = "d8"
+name = "Coup Leader Type"
+
+[[subtables.coup_leader.entries]]
+roll = 1
+result = "Ambitious noble with legitimate claim"
+legitimacy = "high"
+
+[[subtables.coup_leader.entries]]
+roll = 2
+result = "Military commander with loyal troops"
+legitimacy = "moderate"
+
+[[subtables.coup_leader.entries]]
+roll = 3
+result = "Regent's own family member"
+legitimacy = "high"
+
+[[subtables.coup_leader.entries]]
+roll = 4
+result = "Temple faction seeking theocracy"
+legitimacy = "moderate"
+
+[[subtables.coup_leader.entries]]
+roll = 5
+result = "Guild coalition seeking mercantile control"
+legitimacy = "low"
+
+[[subtables.coup_leader.entries]]
+roll = 6
+result = "Foreign puppet with backing"
+legitimacy = "low"
+
+[[subtables.coup_leader.entries]]
+roll = 7
+result = "Popular demagogue"
+legitimacy = "moderate"
+
+[[subtables.coup_leader.entries]]
+roll = 8
+result = "Cabal of court insiders"
+legitimacy = "variable"
+
+[[subtables.challenger_claim]]
+die = "d8"
+name = "Challenger's Claim to Rule"
+
+[[subtables.challenger_claim.entries]]
+roll = 1
+result = "Claims to be true heir (better bloodline claim)"
+
+[[subtables.challenger_claim.entries]]
+roll = 2
+result = "Divine mandate - gods favor them"
+
+[[subtables.challenger_claim.entries]]
+roll = 3
+result = "Conquest right - might makes right"
+
+[[subtables.challenger_claim.entries]]
+roll = 4
+result = "Popular acclaim - the people want them"
+
+[[subtables.challenger_claim.entries]]
+roll = 5
+result = "Ancient right - their family ruled before"
+
+[[subtables.challenger_claim.entries]]
+roll = 6
+result = "Reagent is illegitimate (forged documents, etc.)"
+
+[[subtables.challenger_claim.entries]]
+roll = 7
+result = "Regent has forfeited right through tyranny"
+
+[[subtables.challenger_claim.entries]]
+roll = 8
+result = "Foreign sovereign claims overlordship"
+
+[[subtables.leverage_type]]
+die = "d8"
+name = "Type of Leverage Gained"
+
+[[subtables.leverage_type.entries]]
+roll = 1
+result = "Evidence of treason against their own allies"
+
+[[subtables.leverage_type.entries]]
+roll = 2
+result = "Proof of illegitimacy of their bloodline"
+
+[[subtables.leverage_type.entries]]
+roll = 3
+result = "Documentation of crimes"
+
+[[subtables.leverage_type.entries]]
+roll = 4
+result = "Captured family member"
+
+[[subtables.leverage_type.entries]]
+roll = 5
+result = "Magical compulsion or geas"
+
+[[subtables.leverage_type.entries]]
+roll = 6
+result = "Massive debt they cannot pay"
+
+[[subtables.leverage_type.entries]]
+roll = 7
+result = "Secret alliance with mutual enemy"
+
+[[subtables.leverage_type.entries]]
+roll = 8
+result = "Damning religious transgression"
+
+[[subtables.civil_war_factions]]
+die = "d6"
+name = "Civil War Faction Types"
+
+[[subtables.civil_war_factions.entries]]
+roll = 1
+result = "Succession dispute - two claimants to throne"
+
+[[subtables.civil_war_factions.entries]]
+roll = 2
+result = "Regional rebellion - provinces vs. center"
+
+[[subtables.civil_war_factions.entries]]
+roll = 3
+result = "Religious war - faiths in conflict"
+
+[[subtables.civil_war_factions.entries]]
+roll = 4
+result = "Class war - nobles vs. commoners"
+
+[[subtables.civil_war_factions.entries]]
+roll = 5
+result = "Ethnic conflict - human vs. demihuman or different human cultures"
+
+[[subtables.civil_war_factions.entries]]
+roll = 6
+result = "Ideological - traditionalists vs. reformers"
+
+# -----------------------------------------------------------------------------
+# RELIGIOUS SUBTABLES
+# -----------------------------------------------------------------------------
+
+[[subtables.heresy_type]]
+die = "d10"
+name = "Heresy Type"
+
+[[subtables.heresy_type.entries]]
+roll = 1
+result = "Azrai worship revival"
+severity = "extreme"
+oracle_questions = ["How did this spread?", "Who leads the cult?"]
+
+[[subtables.heresy_type.entries]]
+roll = 2
+result = "Denial of bloodline divinity"
+severity = "moderate"
+oracle_questions = ["What do they believe instead?", "Do commoners support this?"]
+
+[[subtables.heresy_type.entries]]
+roll = 3
+result = "Syncretism with foreign faith"
+severity = "moderate"
+oracle_questions = ["Which faiths are merging?", "Is this tolerable?"]
+
+[[subtables.heresy_type.entries]]
+roll = 4
+result = "Radical interpretation of doctrine"
+severity = "moderate"
+oracle_questions = ["What do they believe differently?", "Are they violent?"]
+
+[[subtables.heresy_type.entries]]
+roll = 5
+result = "False prophet with own revelations"
+severity = "significant"
+oracle_questions = ["What do they claim?", "Do they have real power?"]
+
+[[subtables.heresy_type.entries]]
+roll = 6
+result = "Nature worship revival"
+severity = "minor"
+oracle_questions = ["Which spirits do they honor?", "Does this conflict with temples?"]
+
+[[subtables.heresy_type.entries]]
+roll = 7
+result = "Ancestor worship superseding gods"
+severity = "moderate"
+oracle_questions = ["Which families lead this?", "Is there power in it?"]
+
+[[subtables.heresy_type.entries]]
+roll = 8
+result = "Rejection of all divine bloodlines"
+severity = "significant"
+oracle_questions = ["What political aims lie beneath?", "Do they have noble support?"]
+
+[[subtables.heresy_type.entries]]
+roll = 9
+result = "Shadow World communion"
+severity = "extreme"
+oracle_questions = ["What entities do they contact?", "How dangerous is this?"]
+
+[[subtables.heresy_type.entries]]
+roll = 10
+result = "Claim that a god still lives"
+severity = "major"
+oracle_questions = ["Which god?", "What evidence do they offer?"]
+
+[[subtables.miracle_type]]
+die = "d10"
+name = "Miracle Type"
+
+[[subtables.miracle_type.entries]]
+roll = 1
+result = "Mass healing of plague or illness"
+
+[[subtables.miracle_type.entries]]
+roll = 2
+result = "Divine messenger appears with prophecy"
+
+[[subtables.miracle_type.entries]]
+roll = 3
+result = "Holy site springs water or fire"
+
+[[subtables.miracle_type.entries]]
+roll = 4
+result = "Saint's preserved body found incorrupt"
+
+[[subtables.miracle_type.entries]]
+roll = 5
+result = "Enemies struck down by divine power"
+
+[[subtables.miracle_type.entries]]
+roll = 6
+result = "Faithful protected from disaster"
+
+[[subtables.miracle_type.entries]]
+roll = 7
+result = "Sacred object weeps or bleeds"
+
+[[subtables.miracle_type.entries]]
+roll = 8
+result = "Crop or livestock miraculous multiplication"
+
+[[subtables.miracle_type.entries]]
+roll = 9
+result = "Divine vision granted to many witnesses"
+
+[[subtables.miracle_type.entries]]
+roll = 10
+result = "Resurrection of a holy figure"
+
+[[subtables.divine_punishment_form]]
+die = "d8"
+name = "Divine Punishment Manifestation"
+
+[[subtables.divine_punishment_form.entries]]
+roll = 1
+result = "Crops wither and livestock sicken"
+
+[[subtables.divine_punishment_form.entries]]
+roll = 2
+result = "Temple holy symbols crack or tarnish"
+
+[[subtables.divine_punishment_form.entries]]
+roll = 3
+result = "Prayers go unanswered, clerical magic fails"
+
+[[subtables.divine_punishment_form.entries]]
+roll = 4
+result = "Plague of vermin descends"
+
+[[subtables.divine_punishment_form.entries]]
+roll = 5
+result = "Water sources become bitter or foul"
+
+[[subtables.divine_punishment_form.entries]]
+roll = 6
+result = "Children born with ill omens"
+
+[[subtables.divine_punishment_form.entries]]
+roll = 7
+result = "Sacred ground becomes defiled"
+
+[[subtables.divine_punishment_form.entries]]
+roll = 8
+result = "Undead rise from consecrated ground"
+
+# -----------------------------------------------------------------------------
+# NATURAL/ECONOMIC SUBTABLES
+# -----------------------------------------------------------------------------
+
+[[subtables.mineral_type]]
+die = "d8"
+name = "Mineral Type Discovered"
+
+[[subtables.mineral_type.entries]]
+roll = 1
+result = "Iron ore deposit"
+value = "high"
+
+[[subtables.mineral_type.entries]]
+roll = 2
+result = "Copper and tin (bronze)"
+value = "moderate"
+
+[[subtables.mineral_type.entries]]
+roll = 3
+result = "Silver vein"
+value = "high"
+
+[[subtables.mineral_type.entries]]
+roll = 4
+result = "Gold deposit"
+value = "very high"
+
+[[subtables.mineral_type.entries]]
+roll = 5
+result = "Gemstones"
+value = "very high"
+
+[[subtables.mineral_type.entries]]
+roll = 6
+result = "Quality building stone"
+value = "moderate"
+
+[[subtables.mineral_type.entries]]
+roll = 7
+result = "Coal deposit"
+value = "moderate"
+
+[[subtables.mineral_type.entries]]
+roll = 8
+result = "Mithral traces (rare magical metal)"
+value = "extraordinary"
+
+[[subtables.treasure_type]]
+die = "d10"
+name = "Treasure Discovery Type"
+
+[[subtables.treasure_type.entries]]
+roll = 1
+result = "Ancient buried hoard"
+contents = "Gold, silver, gems"
+
+[[subtables.treasure_type.entries]]
+roll = 2
+result = "Shipwreck with cargo"
+contents = "Trade goods, coins, potentially magical items"
+
+[[subtables.treasure_type.entries]]
+roll = 3
+result = "Hidden temple vault"
+contents = "Religious artifacts, blessed items, records"
+
+[[subtables.treasure_type.entries]]
+roll = 4
+result = "Noble family's hidden wealth"
+contents = "Coins, jewelry, family heirlooms"
+
+[[subtables.treasure_type.entries]]
+roll = 5
+result = "Monster's lair hoard"
+contents = "Mixed treasures from victims"
+
+[[subtables.treasure_type.entries]]
+roll = 6
+result = "Pre-Deismaar ruins"
+contents = "Ancient artifacts, potentially magical"
+
+[[subtables.treasure_type.entries]]
+roll = 7
+result = "Lost caravan cargo"
+contents = "Trade goods, coins, equipment"
+
+[[subtables.treasure_type.entries]]
+roll = 8
+result = "Wizard's abandoned laboratory"
+contents = "Magical components, spellbooks, items"
+
+[[subtables.treasure_type.entries]]
+roll = 9
+result = "Bandit chief's stash"
+contents = "Stolen goods, coins, weapons"
+
+[[subtables.treasure_type.entries]]
+roll = 10
+result = "Royal regalia of fallen kingdom"
+contents = "Crown jewels, ceremonial items, legitimacy symbols"
+
+[[subtables.plague_type]]
+die = "d8"
+name = "Plague Type"
+
+[[subtables.plague_type.entries]]
+roll = 1
+result = "Sweating sickness - high fever, rapid death"
+mortality = "30%"
+spread = "fast"
+
+[[subtables.plague_type.entries]]
+roll = 2
+result = "Bloody flux - dysentery plague"
+mortality = "20%"
+spread = "moderate"
+
+[[subtables.plague_type.entries]]
+roll = 3
+result = "Rotting plague - flesh corruption"
+mortality = "40%"
+spread = "slow"
+
+[[subtables.plague_type.entries]]
+roll = 4
+result = "Lung fever - respiratory illness"
+mortality = "25%"
+spread = "fast"
+
+[[subtables.plague_type.entries]]
+roll = 5
+result = "Wasting disease - slow decline"
+mortality = "15%"
+spread = "slow"
+
+[[subtables.plague_type.entries]]
+roll = 6
+result = "Madness plague - attacks the mind"
+mortality = "10%"
+spread = "moderate"
+
+[[subtables.plague_type.entries]]
+roll = 7
+result = "Black boils - painful sores"
+mortality = "35%"
+spread = "moderate"
+
+[[subtables.plague_type.entries]]
+roll = 8
+result = "Shadow taint - supernatural disease"
+mortality = "variable"
+spread = "unknown"
+
+[[subtables.disease_severity]]
+die = "d6"
+name = "Disease Outbreak Severity"
+
+[[subtables.disease_severity.entries]]
+roll = 1
+result = "Contained - single community affected"
+scope = "local"
+
+[[subtables.disease_severity.entries]]
+roll = 2
+result = "Spreading - multiple villages"
+scope = "provincial"
+
+[[subtables.disease_severity.entries]]
+roll = 3
+result = "Epidemic - entire province"
+scope = "regional"
+
+[[subtables.disease_severity.entries]]
+roll = 4
+result = "Pandemic threat - multiple provinces"
+scope = "realm-wide"
+
+[[subtables.disease_severity.entries]]
+roll = 5
+result = "Cross-border outbreak"
+scope = "international"
+
+[[subtables.disease_severity.entries]]
+roll = 6
+result = "Civilization-threatening plague"
+scope = "continental"
+
+[[subtables.catastrophe_type]]
+die = "d8"
+name = "Natural Catastrophe Type"
+
+[[subtables.catastrophe_type.entries]]
+roll = 1
+result = "Volcanic eruption"
+effects = "Ash fall, lava flows, toxic gas"
+
+[[subtables.catastrophe_type.entries]]
+roll = 2
+result = "Massive earthquake"
+effects = "Building collapse, landslides, fires"
+
+[[subtables.catastrophe_type.entries]]
+roll = 3
+result = "Tsunami or great flood"
+effects = "Coastal devastation, inland flooding"
+
+[[subtables.catastrophe_type.entries]]
+roll = 4
+result = "Wildfire conflagration"
+effects = "Forest destruction, smoke, displacement"
+
+[[subtables.catastrophe_type.entries]]
+roll = 5
+result = "Hurricane or typhoon"
+effects = "Wind damage, flooding, shipwrecks"
+
+[[subtables.catastrophe_type.entries]]
+roll = 6
+result = "Landslide or mudslide"
+effects = "Communities buried, roads blocked"
+
+[[subtables.catastrophe_type.entries]]
+roll = 7
+result = "Ice storm or blizzard"
+effects = "Frozen deaths, crop loss, isolation"
+
+[[subtables.catastrophe_type.entries]]
+roll = 8
+result = "Sinkhole or ground collapse"
+effects = "Settlements swallowed, mines destroyed"
+
+# -----------------------------------------------------------------------------
+# MAGICAL SUBTABLES
+# -----------------------------------------------------------------------------
+
+[[subtables.ancient_magic_type]]
+die = "d8"
+name = "Ancient Magic Awakening Type"
+
+[[subtables.ancient_magic_type.entries]]
+roll = 1
+result = "Ley line node activates"
+effect = "New source potential, magical surges"
+
+[[subtables.ancient_magic_type.entries]]
+roll = 2
+result = "Pre-Deismaar artifact surfaces"
+effect = "Powerful magical item available"
+
+[[subtables.ancient_magic_type.entries]]
+roll = 3
+result = "Ancient ward system reactivates"
+effect = "Realm protection against specific threat"
+
+[[subtables.ancient_magic_type.entries]]
+roll = 4
+result = "Sleeping guardian awakens"
+effect = "Powerful magical creature becomes ally"
+
+[[subtables.ancient_magic_type.entries]]
+roll = 5
+result = "Lost library of magic discovered"
+effect = "Access to forgotten spells and lore"
+
+[[subtables.ancient_magic_type.entries]]
+roll = 6
+result = "Portal or gate opens"
+effect = "Access to distant location or plane"
+
+[[subtables.ancient_magic_type.entries]]
+roll = 7
+result = "Bound elemental freed to serve"
+effect = "Elemental servant for a task"
+
+[[subtables.ancient_magic_type.entries]]
+roll = 8
+result = "Prophecy magic activates"
+effect = "Visions of the future granted"
+
+[[subtables.wizard_agenda]]
+die = "d8"
+name = "Rogue Wizard's Agenda"
+
+[[subtables.wizard_agenda.entries]]
+roll = 1
+result = "Claiming sources for themselves"
+
+[[subtables.wizard_agenda.entries]]
+roll = 2
+result = "Researching forbidden magic"
+
+[[subtables.wizard_agenda.entries]]
+roll = 3
+result = "Creating monsters or undead"
+
+[[subtables.wizard_agenda.entries]]
+roll = 4
+result = "Working for a foreign power"
+
+[[subtables.wizard_agenda.entries]]
+roll = 5
+result = "Seeking magical artifacts"
+
+[[subtables.wizard_agenda.entries]]
+roll = 6
+result = "Attempting to become awnshegh/ershegh"
+
+[[subtables.wizard_agenda.entries]]
+roll = 7
+result = "Personal vendetta against regent"
+
+[[subtables.wizard_agenda.entries]]
+roll = 8
+result = "Summoning extraplanar entities"
+
+[[subtables.magical_catastrophe_type]]
+die = "d8"
+name = "Magical Catastrophe Type"
+
+[[subtables.magical_catastrophe_type.entries]]
+roll = 1
+result = "Realm spell backfire"
+effects = "Caster and target area devastated"
+
+[[subtables.magical_catastrophe_type.entries]]
+roll = 2
+result = "Ley line rupture"
+effects = "Wild magic zone, source destruction"
+
+[[subtables.magical_catastrophe_type.entries]]
+roll = 3
+result = "Summoning gone wrong"
+effects = "Hostile entity rampages"
+
+[[subtables.magical_catastrophe_type.entries]]
+roll = 4
+result = "Magical plague unleashed"
+effects = "Spreading magical corruption"
+
+[[subtables.magical_catastrophe_type.entries]]
+roll = 5
+result = "Time distortion"
+effects = "Area experiences temporal anomalies"
+
+[[subtables.magical_catastrophe_type.entries]]
+roll = 6
+result = "Planar breach"
+effects = "Other-dimensional incursion"
+
+[[subtables.magical_catastrophe_type.entries]]
+roll = 7
+result = "Mass transformation"
+effects = "Population or area magically altered"
+
+[[subtables.magical_catastrophe_type.entries]]
+roll = 8
+result = "Magical dead zone"
+effects = "All magic ceases to function in area"
+
+[[subtables.awnshegh_interest]]
+die = "d8"
+name = "Why the Awnshegh Is Interested"
+
+[[subtables.awnshegh_interest.entries]]
+roll = 1
+result = "Territorial expansion"
+
+[[subtables.awnshegh_interest.entries]]
+roll = 2
+result = "Seeking a specific bloodline"
+
+[[subtables.awnshegh_interest.entries]]
+roll = 3
+result = "Vengeance for past offense"
+
+[[subtables.awnshegh_interest.entries]]
+roll = 4
+result = "Magical resource or artifact"
+
+[[subtables.awnshegh_interest.entries]]
+roll = 5
+result = "Tribute demands"
+
+[[subtables.awnshegh_interest.entries]]
+roll = 6
+result = "Someone in realm drew their attention"
+
+[[subtables.awnshegh_interest.entries]]
+roll = 7
+result = "Ancient prophecy or compulsion"
+
+[[subtables.awnshegh_interest.entries]]
+roll = 8
+result = "Testing defenses for larger plan"
+
+[[subtables.awnshegh_attacker]]
+die = "d12"
+name = "Which Awnshegh Attacks"
+
+[[subtables.awnshegh_attacker.entries]]
+roll = 1
+result = "The Spider"
+forces = "Spiderfell goblins, giant spiders"
+
+[[subtables.awnshegh_attacker.entries]]
+roll = 2
+result = "The Gorgon"
+forces = "Undead legions, monstrous servants"
+
+[[subtables.awnshegh_attacker.entries]]
+roll = 3
+result = "The Vampire"
+forces = "Vampire spawn, thralls, night creatures"
+
+[[subtables.awnshegh_attacker.entries]]
+roll = 4
+result = "The Sphinx"
+forces = "Desert raiders, magical beasts"
+
+[[subtables.awnshegh_attacker.entries]]
+roll = 5
+result = "The Magian"
+forces = "Khinasi wizards, bound elementals"
+
+[[subtables.awnshegh_attacker.entries]]
+roll = 6
+result = "The Serpent"
+forces = "Snake cultists, yuan-ti, lizardfolk"
+
+[[subtables.awnshegh_attacker.entries]]
+roll = 7
+result = "The Raven"
+forces = "Brecht mercenaries, corvid swarms"
+
+[[subtables.awnshegh_attacker.entries]]
+roll = 8
+result = "The Hag"
+forces = "Corrupted fey, swamp creatures"
+
+[[subtables.awnshegh_attacker.entries]]
+roll = 9
+result = "A new/unknown awnshegh"
+forces = "Unknown composition"
+
+[[subtables.awnshegh_attacker.entries]]
+roll = 10
+result = "The Cold Rider"
+forces = "Frost giants, winter wolves, ice elementals"
+
+[[subtables.awnshegh_attacker.entries]]
+roll = 11
+result = "The Swordhawk"
+forces = "Marauding cavalry, beast riders"
+
+[[subtables.awnshegh_attacker.entries]]
+roll = 12
+result = "The Seadrake"
+forces = "Pirates, sea monsters, sahuagin"
+
+[[subtables.legendary_artifact]]
+die = "d10"
+name = "Legendary Cerilian Artifact"
+
+[[subtables.legendary_artifact.entries]]
+roll = 1
+result = "The Iron Throne of the Gorgon"
+power = "Dominion over undead, incredible durability"
+
+[[subtables.legendary_artifact.entries]]
+roll = 2
+result = "Roele's Scepter"
+power = "Legitimacy of empire, command over blooded"
+
+[[subtables.legendary_artifact.entries]]
+roll = 3
+result = "Sword of Haelyn's Light"
+power = "Holy weapon, smites evil, grants courage"
+
+[[subtables.legendary_artifact.entries]]
+roll = 4
+result = "The Shadow Stone"
+power = "Opens ways to Shadow World, necromantic power"
+
+[[subtables.legendary_artifact.entries]]
+roll = 5
+result = "Thorn of Erik"
+power = "Control over nature, druidic might"
+
+[[subtables.legendary_artifact.entries]]
+roll = 6
+result = "Crown of Shadows"
+power = "Illusions, deception, control over darkness"
+
+[[subtables.legendary_artifact.entries]]
+roll = 7
+result = "Azrai's Fang"
+power = "Bloodtheft without touch, corruption"
+
+[[subtables.legendary_artifact.entries]]
+roll = 8
+result = "The First Bloodstone"
+power = "Bloodline amplification, divine connection"
+
+[[subtables.legendary_artifact.entries]]
+roll = 9
+result = "Ship of the Sea Lords"
+power = "Commands oceans, cannot be sunk"
+
+[[subtables.legendary_artifact.entries]]
+roll = 10
+result = "The Book of Laws"
+power = "Oaths become binding, truth compelled"
+
+[[subtables.bloodline_curse_type]]
+die = "d6"
+name = "Bloodline Curse Type"
+
+[[subtables.bloodline_curse_type.entries]]
+roll = 1
+result = "Bloodline begins reverting to Azrai derivation"
+
+[[subtables.bloodline_curse_type.entries]]
+roll = 2
+result = "Blood abilities cause pain when used"
+
+[[subtables.bloodline_curse_type.entries]]
+roll = 3
+result = "Bloodline cannot pass to heirs"
+
+[[subtables.bloodline_curse_type.entries]]
+roll = 4
+result = "Physical transformation begins (pre-awnshegh)"
+
+[[subtables.bloodline_curse_type.entries]]
+roll = 5
+result = "Bloodline slowly draining away"
+
+[[subtables.bloodline_curse_type.entries]]
+roll = 6
+result = "Blood abilities inverted (blessing becomes curse)"
+
+# -----------------------------------------------------------------------------
+# PERSONAL SUBTABLES
+# -----------------------------------------------------------------------------
+
+[[subtables.bloodline_strength]]
+die = "d6"
+name = "Discovered Bloodline Strength"
+
+[[subtables.bloodline_strength.entries]]
+roll = 1
+result = "Tainted (1-10)"
+significance = "Minor potential"
+
+[[subtables.bloodline_strength.entries]]
+roll = 2
+result = "Minor (11-20)"
+significance = "Modest abilities"
+
+[[subtables.bloodline_strength.entries]]
+roll = 3
+result = "Major (21-35)"
+significance = "Significant power"
+
+[[subtables.bloodline_strength.entries]]
+roll = 4
+result = "Great (36-50)"
+significance = "Considerable power"
+
+[[subtables.bloodline_strength.entries]]
+roll = 5
+result = "True (51-75)"
+significance = "Remarkable power"
+
+[[subtables.bloodline_strength.entries]]
+roll = 6
+result = "Great True (76+)"
+significance = "Exceptional, near legendary"
+
+[[subtables.blood_ability_type]]
+die = "d12"
+name = "Blood Ability Manifested"
+
+[[subtables.blood_ability_type.entries]]
+roll = 1
+result = "Bloodmark - visible sign of divine heritage"
+
+[[subtables.blood_ability_type.entries]]
+roll = 2
+result = "Heightened Ability - supernatural enhancement"
+
+[[subtables.blood_ability_type.entries]]
+roll = 3
+result = "Detect Lie - sense deception"
+
+[[subtables.blood_ability_type.entries]]
+roll = 4
+result = "Divine Aura - inspire or terrify"
+
+[[subtables.blood_ability_type.entries]]
+roll = 5
+result = "Protection from Evil - ward against corruption"
+
+[[subtables.blood_ability_type.entries]]
+roll = 6
+result = "Courage - immune to fear, inspire others"
+
+[[subtables.blood_ability_type.entries]]
+roll = 7
+result = "Animal Affinity - command beasts"
+
+[[subtables.blood_ability_type.entries]]
+roll = 8
+result = "Enhanced Sense - supernatural perception"
+
+[[subtables.blood_ability_type.entries]]
+roll = 9
+result = "Travel - magical movement ability"
+
+[[subtables.blood_ability_type.entries]]
+roll = 10
+result = "Healing - cure wounds or disease"
+
+[[subtables.blood_ability_type.entries]]
+roll = 11
+result = "Resistance - immunity to damage type"
+
+[[subtables.blood_ability_type.entries]]
+roll = 12
+result = "Major derivation power (based on bloodline)"
+
+[[subtables.hero_type]]
+die = "d10"
+name = "Legendary Hero Type"
+
+[[subtables.hero_type.entries]]
+roll = 1
+result = "Renowned knight-champion"
+specialty = "Combat, leadership, honor"
+
+[[subtables.hero_type.entries]]
+roll = 2
+result = "Master wizard"
+specialty = "Arcane magic, lore, magical solutions"
+
+[[subtables.hero_type.entries]]
+roll = 3
+result = "High priest or priestess"
+specialty = "Divine magic, moral authority, healing"
+
+[[subtables.hero_type.entries]]
+roll = 4
+result = "Master spy and assassin"
+specialty = "Intelligence, covert operations, elimination"
+
+[[subtables.hero_type.entries]]
+roll = 5
+result = "Legendary general"
+specialty = "Military strategy, army command, logistics"
+
+[[subtables.hero_type.entries]]
+roll = 6
+result = "Dragon slayer"
+specialty = "Monster hunting, courage, fame"
+
+[[subtables.hero_type.entries]]
+roll = 7
+result = "Wandering sage"
+specialty = "Knowledge, advice, lost lore"
+
+[[subtables.hero_type.entries]]
+roll = 8
+result = "Robin Hood figure"
+specialty = "Popular support, guerrilla warfare, justice"
+
+[[subtables.hero_type.entries]]
+roll = 9
+result = "Former awnshegh/redeemed villain"
+specialty = "Dark knowledge, unique abilities, infamy"
+
+[[subtables.hero_type.entries]]
+roll = 10
+result = "Ershegh (good blooded creature)"
+specialty = "Supernatural abilities, ancient wisdom"
+
+[[subtables.bloodtheft_method]]
+die = "d6"
+name = "Bloodtheft Attempt Method"
+
+[[subtables.bloodtheft_method.entries]]
+roll = 1
+result = "Direct assassination attempt"
+oracle_questions = ["How did they get close?", "Were there accomplices?"]
+
+[[subtables.bloodtheft_method.entries]]
+roll = 2
+result = "Poisoned weapon during battle"
+oracle_questions = ["What battle?", "Who wielded the weapon?"]
+
+[[subtables.bloodtheft_method.entries]]
+roll = 3
+result = "Ritual bloodtheft using captured blood"
+oracle_questions = ["How was blood obtained?", "Is this even possible?"]
+
+[[subtables.bloodtheft_method.entries]]
+roll = 4
+result = "Challenge to formal duel"
+oracle_questions = ["Can you refuse?", "What are the terms?"]
+
+[[subtables.bloodtheft_method.entries]]
+roll = 5
+result = "Awnshegh attack"
+oracle_questions = ["Which awnshegh?", "Can you survive?"]
+
+[[subtables.bloodtheft_method.entries]]
+roll = 6
+result = "Magical bloodtheft attempt"
+oracle_questions = ["What magic was used?", "Is this known to be possible?"]
+
+[[subtables.madness_type]]
+die = "d8"
+name = "Type of Madness"
+
+[[subtables.madness_type.entries]]
+roll = 1
+result = "Paranoid delusions - sees enemies everywhere"
+
+[[subtables.madness_type.entries]]
+roll = 2
+result = "Megalomania - believes themselves a god"
+
+[[subtables.madness_type.entries]]
+roll = 3
+result = "Depression - cannot make decisions or act"
+
+[[subtables.madness_type.entries]]
+roll = 4
+result = "Violent rages - unpredictable attacks"
+
+[[subtables.madness_type.entries]]
+roll = 5
+result = "Hallucinations - sees things that aren't there"
+
+[[subtables.madness_type.entries]]
+roll = 6
+result = "Split personality - multiple identities"
+
+[[subtables.madness_type.entries]]
+roll = 7
+result = "Obsessive fixation - single-minded pursuit"
+
+[[subtables.madness_type.entries]]
+roll = 8
+result = "Blood madness - craves bloodtheft"

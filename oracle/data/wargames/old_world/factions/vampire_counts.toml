@@ -1,0 +1,792 @@
+# Warhammer: The Old World - Vampire Counts
+# The Undead legions of the night, led by immortal lords
+
+[faction]
+name = "Vampire Counts"
+description = "The Undead legions of Sylvania and beyond, raised by the dark magic of Vampires. Endless hordes of zombies, skeletons, and terrifying creatures serve their immortal masters"
+playstyle = "Attrition army with resurrection, Fear-causing units, and powerful characters"
+strengths = ["Immune to Psychology", "Raise and heal units", "Powerful characters", "Fear/Terror", "No morale issues"]
+weaknesses = ["Crumble when general dies", "Need Invocation constantly", "Vulnerable to magic phase denial", "No shooting"]
+lore_notes = "Vampires were created when Nagash's elixir of immortality was stolen. Different bloodlines have unique characteristics. They raise armies from the dead to conquer the living"
+
+# =============================================================================
+# LORDS
+# =============================================================================
+
+[[units]]
+name = "Vampire Lord"
+type = "character"
+category = "Lords"
+points = 220
+models = "1"
+tactical_role = "combat_commander"
+threat_level = "extreme"
+preferred_targets = ["enemy_characters", "units"]
+weaknesses = ["massed_attacks", "magic"]
+special_rules = ["Undead", "Vampiric", "Level 1 Wizard", "The Hunger"]
+keywords = ["Character", "Infantry", "Vampire", "Lord", "Wizard"]
+equipment = ["Hand weapon", "Heavy armor"]
+options = ["May upgrade to Level 2/3 wizard", "May take Bloodline Powers", "May take Abyssal Terror, Hellsteed, Zombie Dragon, or Coven Throne", "May take magic items up to 100 points"]
+
+[units.stats]
+M = 6
+WS = 7
+BS = 5
+S = 5
+T = 5
+W = 3
+I = 7
+A = 4
+Ld = 10
+Sv = "5+"
+
+[[units]]
+name = "Master Necromancer"
+type = "character"
+category = "Lords"
+points = 165
+models = "1"
+tactical_role = "magic"
+threat_level = "high"
+preferred_targets = ["raising_dead"]
+weaknesses = ["close_combat", "snipers"]
+special_rules = ["Undead", "Level 3 Wizard", "May upgrade to Level 4 (+35 pts)"]
+keywords = ["Character", "Infantry", "Necromancer", "Lord", "Wizard"]
+equipment = ["Hand weapon"]
+options = ["May take Unholy Lodestone", "May take magic items up to 100 points"]
+
+[units.stats]
+M = 4
+WS = 3
+BS = 3
+S = 3
+T = 3
+W = 3
+I = 3
+A = 1
+Ld = 8
+Sv = "-"
+
+[[units]]
+name = "Strigoi Ghoul King"
+type = "character"
+category = "Lords"
+points = 260
+models = "1"
+tactical_role = "monster_slayer"
+threat_level = "extreme"
+preferred_targets = ["monsters", "characters"]
+weaknesses = ["massed_attacks"]
+special_rules = ["Undead", "Vampiric", "Hatred", "Poisoned Attacks", "Regeneration (5+)", "Infinite Hatred"]
+keywords = ["Character", "Infantry", "Vampire", "Strigoi", "Lord"]
+equipment = ["Claws (count as two hand weapons)"]
+options = ["May take magic items up to 100 points", "May take Terrorgheist mount (+225 pts)"]
+
+[units.stats]
+M = 6
+WS = 7
+BS = 3
+S = 6
+T = 5
+W = 4
+I = 5
+A = 5
+Ld = 10
+Sv = "-"
+
+# =============================================================================
+# HEROES
+# =============================================================================
+
+[[units]]
+name = "Vampire"
+type = "character"
+category = "Heroes"
+points = 105
+models = "1"
+tactical_role = "support_combat"
+threat_level = "high"
+preferred_targets = ["enemy_champions", "units"]
+weaknesses = ["powerful_characters"]
+special_rules = ["Undead", "Vampiric", "Level 1 Wizard", "The Hunger"]
+keywords = ["Character", "Infantry", "Vampire", "Hero", "Wizard"]
+equipment = ["Hand weapon", "Heavy armor"]
+options = ["May upgrade to Level 2 wizard", "May take Bloodline Powers", "May take magic items up to 50 points"]
+
+[units.stats]
+M = 6
+WS = 6
+BS = 4
+S = 5
+T = 4
+W = 2
+I = 6
+A = 3
+Ld = 8
+Sv = "5+"
+
+[[units]]
+name = "Necromancer"
+type = "character"
+category = "Heroes"
+points = 65
+models = "1"
+tactical_role = "magic_support"
+threat_level = "medium"
+preferred_targets = ["raising_dead"]
+weaknesses = ["close_combat"]
+special_rules = ["Level 1 Wizard", "May upgrade to Level 2 (+35 pts)"]
+keywords = ["Character", "Infantry", "Necromancer", "Hero", "Wizard"]
+equipment = ["Hand weapon"]
+options = ["May take magic items up to 50 points"]
+
+[units.stats]
+M = 4
+WS = 3
+BS = 3
+S = 3
+T = 3
+W = 2
+I = 3
+A = 1
+Ld = 7
+Sv = "-"
+
+[[units]]
+name = "Wight King"
+type = "character"
+category = "Heroes"
+points = 85
+models = "1"
+tactical_role = "support_combat"
+threat_level = "high"
+preferred_targets = ["characters"]
+weaknesses = ["magic"]
+special_rules = ["Undead", "Killing Blow"]
+keywords = ["Character", "Infantry", "Wight", "Hero"]
+equipment = ["Hand weapon", "Heavy armor", "Shield"]
+options = ["May carry Battle Standard (+25 pts)", "May take magic items up to 50 points", "May take Skeletal Steed"]
+
+[units.stats]
+M = 4
+WS = 5
+BS = 3
+S = 4
+T = 4
+W = 2
+I = 4
+A = 3
+Ld = 9
+Sv = "4+"
+
+[[units]]
+name = "Tomb Banshee"
+type = "character"
+category = "Heroes"
+points = 95
+models = "1"
+tactical_role = "character_hunter"
+threat_level = "high"
+preferred_targets = ["low_ld_characters", "units"]
+weaknesses = ["magic_attacks"]
+special_rules = ["Undead", "Ethereal", "Ghostly Howl"]
+keywords = ["Character", "Infantry", "Spirit", "Hero"]
+equipment = ["Spectral claws"]
+
+[units.stats]
+M = 6
+WS = 3
+BS = 0
+S = 3
+T = 3
+W = 2
+I = 3
+A = 1
+Ld = 7
+Sv = "-"
+
+# =============================================================================
+# CORE UNITS
+# =============================================================================
+
+[[units]]
+name = "Skeleton Warriors"
+type = "infantry"
+category = "Core"
+points = 5
+models = "10-40"
+tactical_role = "tarpit"
+threat_level = "low"
+preferred_targets = ["nothing"]
+weaknesses = ["everything"]
+special_rules = ["Undead"]
+keywords = ["Infantry", "Skeleton", "Core"]
+equipment = ["Hand weapon", "Light armor", "Shield"]
+options = ["May take spears (+0.5 pt/model)", "May add musician (+5 pts)", "May add standard bearer (+10 pts)", "May take magic standard up to 25 pts"]
+
+[units.stats]
+M = 4
+WS = 2
+BS = 2
+S = 3
+T = 3
+W = 1
+I = 2
+A = 1
+Ld = 3
+Sv = "5+"
+
+[[units]]
+name = "Zombies"
+type = "infantry"
+category = "Core"
+points = 3
+models = "20-60"
+tactical_role = "tarpit"
+threat_level = "very_low"
+preferred_targets = ["nothing"]
+weaknesses = ["everything"]
+special_rules = ["Undead", "Always Strikes Last"]
+keywords = ["Infantry", "Zombie", "Core"]
+equipment = ["Hand weapons"]
+options = ["May add standard bearer (+10 pts)"]
+
+[units.stats]
+M = 4
+WS = 1
+BS = 0
+S = 3
+T = 3
+W = 1
+I = 1
+A = 1
+Ld = 2
+Sv = "-"
+
+[[units]]
+name = "Crypt Ghouls"
+type = "infantry"
+category = "Core"
+points = 10
+models = "10-40"
+tactical_role = "flankers"
+threat_level = "medium"
+preferred_targets = ["light_infantry"]
+weaknesses = ["heavy_infantry"]
+special_rules = ["Undead", "Poisoned Attacks"]
+keywords = ["Infantry", "Ghoul", "Core"]
+equipment = ["Claws (two hand weapons)"]
+options = ["May upgrade one model to Crypt Ghast (+10 pts)"]
+
+[units.stats]
+M = 4
+WS = 3
+BS = 0
+S = 3
+T = 4
+W = 1
+I = 3
+A = 2
+Ld = 5
+Sv = "-"
+
+[[units]]
+name = "Dire Wolves"
+type = "warbeast"
+category = "Core"
+points = 8
+models = "5-20"
+tactical_role = "fast_flankers"
+threat_level = "low"
+preferred_targets = ["war_machines", "wizards"]
+weaknesses = ["shooting", "combat"]
+special_rules = ["Undead", "Vanguard", "Swiftstride"]
+keywords = ["War Beast", "Dire Wolf", "Core"]
+equipment = ["Fangs"]
+
+[units.stats]
+M = 9
+WS = 3
+BS = 0
+S = 3
+T = 3
+W = 1
+I = 3
+A = 1
+Ld = 3
+Sv = "-"
+
+# =============================================================================
+# SPECIAL UNITS
+# =============================================================================
+
+[[units]]
+name = "Grave Guard"
+type = "infantry"
+category = "Special"
+points = 11
+models = "10-30"
+tactical_role = "elite_infantry"
+threat_level = "high"
+preferred_targets = ["elite_infantry"]
+weaknesses = ["shooting"]
+special_rules = ["Undead", "Killing Blow"]
+keywords = ["Infantry", "Wight", "Special"]
+equipment = ["Hand weapon", "Heavy armor", "Shield"]
+options = ["May swap for great weapons (+2 pts/model)", "May add musician (+5 pts)", "May add standard bearer (+10 pts)", "May take magic standard up to 75 pts"]
+
+[units.stats]
+M = 4
+WS = 3
+BS = 3
+S = 4
+T = 4
+W = 1
+I = 3
+A = 1
+Ld = 8
+Sv = "4+"
+
+[[units]]
+name = "Black Knights"
+type = "cavalry"
+category = "Special"
+points = 21
+models = "5-15"
+tactical_role = "shock_cavalry"
+threat_level = "high"
+preferred_targets = ["infantry", "light_cavalry"]
+weaknesses = ["elite_cavalry"]
+special_rules = ["Undead", "Killing Blow", "Spectral Steeds"]
+keywords = ["Cavalry", "Wight", "Special"]
+equipment = ["Lance", "Hand weapon", "Heavy armor", "Shield", "Skeletal Steed"]
+options = ["May swap for barding (+3 pts/model)", "May add musician (+5 pts)", "May add standard bearer (+10 pts)", "May take magic standard up to 50 pts"]
+
+[units.stats]
+M = 4
+WS = 3
+BS = 3
+S = 4
+T = 4
+W = 1
+I = 3
+A = 1
+Ld = 8
+Sv = "4+"
+
+[units.mount]
+name = "Skeletal Steed"
+M = 8
+WS = 2
+S = 3
+T = 3
+W = 1
+I = 2
+A = 1
+
+[[units]]
+name = "Hexwraiths"
+type = "cavalry"
+category = "Special"
+points = 30
+models = "5-10"
+tactical_role = "flankers"
+threat_level = "high"
+preferred_targets = ["flanks", "cavalry"]
+weaknesses = ["magic_attacks"]
+special_rules = ["Undead", "Ethereal", "Soulstriders"]
+keywords = ["Cavalry", "Spirit", "Special"]
+equipment = ["Scythes", "Spectral Steeds"]
+
+[units.stats]
+M = 8
+WS = 3
+BS = 0
+S = 3
+T = 3
+W = 1
+I = 3
+A = 1
+Ld = 5
+Sv = "-"
+
+[[units]]
+name = "Spirit Hosts"
+type = "swarm"
+category = "Special"
+points = 45
+models = "3-9 bases"
+tactical_role = "tarpit"
+threat_level = "medium"
+preferred_targets = ["flanks"]
+weaknesses = ["magic_attacks"]
+special_rules = ["Undead", "Ethereal"]
+keywords = ["Swarm", "Spirit", "Special"]
+equipment = ["Spectral claws"]
+
+[units.stats]
+M = 6
+WS = 3
+BS = 0
+S = 3
+T = 3
+W = 3
+I = 1
+A = 4
+Ld = 4
+Sv = "-"
+
+[[units]]
+name = "Corpse Cart"
+type = "chariot"
+category = "Special"
+points = 90
+models = "1"
+tactical_role = "support"
+threat_level = "low"
+preferred_targets = ["NA"]
+weaknesses = ["war_machines"]
+special_rules = ["Undead", "Vigour Mortis (ASF bubble on invocation)", "Regeneration nearby"]
+keywords = ["Chariot", "Undead", "Special"]
+equipment = ["Corpse claws"]
+options = ["May take Unholy Lodestone (+25 pts) or Balefire (+25 pts)"]
+
+[units.stats]
+M = 4
+WS = 2
+BS = 0
+S = 3
+T = 4
+W = 4
+I = 1
+A = 2
+Ld = 4
+Sv = "-"
+
+[[units]]
+name = "Crypt Horrors"
+type = "monstrous_infantry"
+category = "Special"
+points = 38
+models = "3-9"
+tactical_role = "monster"
+threat_level = "high"
+preferred_targets = ["infantry", "light_cavalry"]
+weaknesses = ["high_strength_attacks"]
+special_rules = ["Undead", "Poisoned Attacks", "Regeneration (5+)"]
+keywords = ["Monstrous Infantry", "Ghoul", "Special"]
+equipment = ["Claws"]
+
+[units.stats]
+M = 6
+WS = 3
+BS = 0
+S = 4
+T = 4
+W = 3
+I = 2
+A = 3
+Ld = 6
+Sv = "-"
+
+[[units]]
+name = "Vargheists"
+type = "monstrous_infantry"
+category = "Special"
+points = 46
+models = "3-9"
+tactical_role = "flankers"
+threat_level = "very_high"
+preferred_targets = ["war_machines", "wizards", "flanks"]
+weaknesses = ["shooting"]
+special_rules = ["Undead", "Fly", "Frenzy"]
+keywords = ["Monstrous Infantry", "Vampire", "Special", "Fly"]
+equipment = ["Claws"]
+
+[units.stats]
+M = 6
+WS = 4
+BS = 0
+S = 5
+T = 4
+W = 3
+I = 4
+A = 3
+Ld = 7
+Sv = "-"
+
+[[units]]
+name = "Fell Bats"
+type = "warbeast"
+category = "Special"
+points = 16
+models = "3-10"
+tactical_role = "war_machine_hunters"
+threat_level = "medium"
+preferred_targets = ["war_machines", "lone_characters"]
+weaknesses = ["shooting"]
+special_rules = ["Undead", "Fly"]
+keywords = ["War Beast", "Bat", "Special", "Fly"]
+equipment = ["Fangs"]
+
+[units.stats]
+M = 1
+WS = 3
+BS = 0
+S = 3
+T = 3
+W = 2
+I = 3
+A = 2
+Ld = 3
+Sv = "-"
+
+# =============================================================================
+# RARE UNITS
+# =============================================================================
+
+[[units]]
+name = "Blood Knights"
+type = "cavalry"
+category = "Rare"
+points = 50
+models = "4-10"
+tactical_role = "elite_shock_cavalry"
+threat_level = "extreme"
+preferred_targets = ["cavalry", "monsters", "characters"]
+weaknesses = ["mass_shooting"]
+special_rules = ["Undead", "Vampiric", "Frenzy", "Martial Honour"]
+keywords = ["Cavalry", "Vampire", "Rare"]
+equipment = ["Lance", "Hand weapon", "Heavy armor", "Shield", "Nightmare"]
+
+[units.stats]
+M = 4
+WS = 5
+BS = 3
+S = 5
+T = 4
+W = 1
+I = 5
+A = 2
+Ld = 8
+Sv = "2+"
+
+[units.mount]
+name = "Nightmare"
+M = 8
+WS = 3
+S = 4
+T = 4
+W = 1
+I = 2
+A = 1
+
+[[units]]
+name = "Varghulf"
+type = "monster"
+category = "Rare"
+points = 175
+models = "1"
+tactical_role = "monster"
+threat_level = "very_high"
+preferred_targets = ["infantry", "cavalry"]
+weaknesses = ["high_strength_attacks"]
+special_rules = ["Undead", "Vampiric", "Bestial Fury", "Regeneration (4+)", "Terror"]
+keywords = ["Monster", "Vampire", "Rare"]
+equipment = ["Claws"]
+
+[units.stats]
+M = 8
+WS = 5
+BS = 0
+S = 5
+T = 5
+W = 4
+I = 4
+A = 4
+Ld = 6
+Sv = "-"
+
+[[units]]
+name = "Terrorgheist"
+type = "monster"
+category = "Rare"
+points = 225
+models = "1"
+tactical_role = "flying_monster"
+threat_level = "extreme"
+preferred_targets = ["low_ld_units", "characters"]
+weaknesses = ["war_machines"]
+special_rules = ["Undead", "Fly", "Terror", "Death Shriek", "Regeneration (6+)"]
+keywords = ["Monster", "Undead", "Rare", "Fly"]
+equipment = ["Fangs and claws"]
+
+[units.stats]
+M = 6
+WS = 3
+BS = 0
+S = 5
+T = 5
+W = 6
+I = 2
+A = 4
+Ld = 4
+Sv = "-"
+
+[[units]]
+name = "Mortis Engine"
+type = "unique"
+category = "Rare"
+points = 220
+models = "1"
+tactical_role = "magic_support"
+threat_level = "high"
+preferred_targets = ["any"]
+weaknesses = ["war_machines"]
+special_rules = ["Undead", "Ethereal (Spirit Hosts)", "Blasphemous Tome", "Reliquary"]
+keywords = ["Unique", "Undead", "Rare"]
+equipment = ["Spirit Hosts"]
+
+[units.stats]
+M = 4
+WS = 3
+BS = 0
+S = 3
+T = 5
+W = 5
+I = 1
+A = 6
+Ld = 4
+Sv = "-"
+
+[[units]]
+name = "Black Coach"
+type = "chariot"
+category = "Rare"
+points = 195
+models = "1"
+tactical_role = "magic_absorber"
+threat_level = "high"
+preferred_targets = ["flanks", "wizards"]
+weaknesses = ["magic_attacks", "war_machines"]
+special_rules = ["Undead", "Ethereal", "Impact Hits (D6+1)", "Evocation of Death"]
+keywords = ["Chariot", "Spirit", "Rare"]
+equipment = ["Cairn Wraith scythes"]
+
+[units.stats]
+M = "4-8"
+WS = 5
+BS = 0
+S = 5
+T = 6
+W = 4
+I = 5
+A = "variable"
+Ld = 9
+Sv = "-"
+
+# =============================================================================
+# FACTION SPECIAL RULES
+# =============================================================================
+
+[[faction_rules]]
+name = "Undead"
+description = "Immune to Psychology, Fear, Terror, Panic. Never flee. Cannot march unless within 12\" of General. Unstable - if lose combat, take wounds equal to combat resolution difference (no saves)"
+
+[[faction_rules]]
+name = "The General Must Be Vampiric"
+description = "The army General must be a Vampire character"
+
+[[faction_rules]]
+name = "Vampiric"
+description = "Can march within 12\" of General. The Hunger - recover 1 wound when causing unsaved wounds in close combat"
+
+[[faction_rules]]
+name = "Crumble"
+description = "If the Vampiric General is slain, all Undead units take an immediate Leadership test. If failed, they take wounds equal to the amount failed by (no saves)"
+
+[[faction_rules]]
+name = "Invocation of Nehek"
+description = "Signature spell of Lore of Vampires. Heals D6+caster level wounds to Undead units within range. Can resurrect dead models"
+
+[[faction_rules]]
+name = "Spectral Steeds"
+description = "Black Knights' mounts are Ethereal. Unit ignores dangerous terrain tests"
+
+# =============================================================================
+# BLOODLINE POWERS
+# =============================================================================
+
+[[faction_items]]
+name = "Red Fury"
+type = "bloodline"
+points = 50
+description = "For each unsaved wound caused, immediately make another Attack. These bonus attacks can generate more attacks"
+restrictions = ["Vampire characters only"]
+
+[[faction_items]]
+name = "Quickblood"
+type = "bloodline"
+points = 30
+description = "Always Strikes First"
+restrictions = ["Vampire characters only"]
+
+[[faction_items]]
+name = "Flying Horror"
+type = "bloodline"
+points = 30
+description = "Vampire has Fly"
+restrictions = ["Vampire characters only", "Cannot be mounted"]
+
+[[faction_items]]
+name = "Beguile"
+type = "bloodline"
+points = 25
+description = "One enemy model in base contact must pass Leadership test at start of combat or is WS1 and cannot attack the Vampire"
+restrictions = ["Vampire characters only"]
+
+[[faction_items]]
+name = "Aura of Dark Majesty"
+type = "bloodline"
+points = 25
+description = "Enemies within 6\" are -1 Leadership"
+restrictions = ["Vampire characters only"]
+
+# =============================================================================
+# FACTION MAGIC ITEMS
+# =============================================================================
+
+[[faction_items]]
+name = "Nightshroud"
+type = "magic_armor"
+points = 50
+description = "Heavy armor. Enemies in base contact have Always Strikes Last. Cannot be combined with shield"
+restrictions = ["Vampire Counts characters only"]
+
+[[faction_items]]
+name = "Skabscrath"
+type = "magic_weapon"
+points = 35
+description = "Flail. On any turn the bearer charges, all unsaved wounds are multiplied to D3 wounds"
+restrictions = ["Vampire Counts characters only"]
+
+[[faction_items]]
+name = "The Cursed Book"
+type = "arcane"
+points = 60
+description = "One use. All enemy wizards within 12\" must roll a D6. On 1-3, they forget one random spell"
+restrictions = ["Vampire Counts Wizards only"]
+
+[[faction_items]]
+name = "Staff of Damnation"
+type = "arcane"
+points = 40
+description = "Bound spell (Power Level 3). All friendly Undead units within 6\" can immediately make a 4\" move"
+restrictions = ["Vampire Counts Wizards only"]
+
+[[faction_items]]
+name = "Banner of the Barrows"
+type = "banner"
+points = 50
+description = "Grave Guard and Black Knights within 6\" gain +1 to hit in close combat"
+restrictions = ["Wight King or unit standard bearer only"]

@@ -1,0 +1,220 @@
+# Birthright Domain-Level Warfare - Battle Events (d100)
+# Compatible with Oracle WargameAI system
+# Dramatic events that can shift the tide of battle
+# Weight: higher = more common (1-3 typical range)
+
+[events]
+entries = [
+    # ==========================================================================
+    # HEROISM AND VALOR (01-10)
+    # ==========================================================================
+    { roll_min = 1, roll_max = 2, text = "A common soldier performs an act of extraordinary bravery, inspiring nearby units (+1 morale to one unit)", weight = 2 },
+    { roll_min = 3, roll_max = 4, text = "A unit's sergeant rallies the men with a stirring speech - they fight with renewed vigor (+1 attack this round)", weight = 2 },
+    { roll_min = 5, roll_max = 6, text = "The battle standard is held high despite wounds - no morale checks this round for units within sight", weight = 2 },
+    { roll_min = 7, roll_max = 8, text = "A champion emerges from the ranks, challenging enemy heroes to single combat", weight = 2 },
+    { roll_min = 9, roll_max = 10, text = "Veterans form a rear guard, sacrificing themselves to protect withdrawing comrades", weight = 1 },
+
+    # ==========================================================================
+    # COMMANDER EVENTS (11-20)
+    # ==========================================================================
+    { roll_min = 11, roll_max = 12, text = "Commander wounded! Leadership bonus lost until healed or replaced", weight = 2 },
+    { roll_min = 13, roll_max = 14, text = "Enemy commander spotted in the open - assassination or capture opportunity", weight = 1 },
+    { roll_min = 15, roll_max = 16, text = "Commander's bodyguard diverted to crisis elsewhere on the field", weight = 2 },
+    { roll_min = 17, roll_max = 18, text = "Junior officer shows unexpected tactical brilliance - one unit gets +1 attack and defense", weight = 2 },
+    { roll_min = 19, roll_max = 20, text = "Command dispute paralyzes decision-making - one unit cannot receive orders this round", weight = 1 },
+
+    # ==========================================================================
+    # TACTICAL OPPORTUNITIES (21-30)
+    # ==========================================================================
+    { roll_min = 21, roll_max = 22, text = "Flanking opportunity! Unguarded approach to enemy flank discovered by scouts", weight = 2 },
+    { roll_min = 23, roll_max = 24, text = "Enemy formation has a gap - breakthrough possible with immediate action", weight = 2 },
+    { roll_min = 25, roll_max = 26, text = "High ground becomes available - first unit to occupy gains +1 attack and defense", weight = 2 },
+    { roll_min = 27, roll_max = 28, text = "Hidden path discovered - one unit may reposition without triggering reactions", weight = 2 },
+    { roll_min = 29, roll_max = 30, text = "Enemy supply train spotted - raid could cripple their war effort", weight = 1 },
+
+    # ==========================================================================
+    # WEATHER AND ENVIRONMENT (31-40)
+    # ==========================================================================
+    { roll_min = 31, roll_max = 32, text = "Sudden fog rolls in - visibility reduced, ranged attacks suffer -2", weight = 2 },
+    { roll_min = 33, roll_max = 34, text = "Rain begins to fall - ground becomes difficult terrain for cavalry", weight = 2 },
+    { roll_min = 35, roll_max = 36, text = "Wind shifts dramatically - missile fire from one direction gains +1, opposite -1", weight = 2 },
+    { roll_min = 37, roll_max = 38, text = "Thunderstorm approaching - battle may need to pause or fight through lightning", weight = 1 },
+    { roll_min = 39, roll_max = 40, text = "Sun breaks through clouds - units facing the sun are -1 to hit", weight = 2 },
+
+    # ==========================================================================
+    # REINFORCEMENTS (41-50)
+    # ==========================================================================
+    { roll_min = 41, roll_max = 42, text = "Allied reinforcements arrive! Additional unit joins the battle", weight = 1 },
+    { roll_min = 43, roll_max = 44, text = "Enemy reinforcements spotted approaching - they arrive in 2 rounds", weight = 2 },
+    { roll_min = 45, roll_max = 46, text = "Expected reinforcements delayed - they will not arrive this battle", weight = 2 },
+    { roll_min = 47, roll_max = 48, text = "Local militia rallies to your cause - irregular unit joins temporarily", weight = 1 },
+    { roll_min = 49, roll_max = 50, text = "Mercenary company offers services mid-battle - 2 GB to hire immediately", weight = 1 },
+
+    # ==========================================================================
+    # MORALE AND PSYCHOLOGY (51-60)
+    # ==========================================================================
+    { roll_min = 51, roll_max = 52, text = "Enemy unit's morale collapses - they rout without being engaged!", weight = 1 },
+    { roll_min = 53, roll_max = 54, text = "Fear spreads through your lines - one unit must take immediate morale check", weight = 2 },
+    { roll_min = 55, roll_max = 56, text = "War cry echoes across the battlefield - charging units gain +1 morale", weight = 2 },
+    { roll_min = 57, roll_max = 58, text = "Grim determination settles over your troops - no retreat possible, +1 defense", weight = 1 },
+    { roll_min = 59, roll_max = 60, text = "Panic begins to spread - if one unit routs, adjacent units must check morale", weight = 2 },
+
+    # ==========================================================================
+    # BLOODLINE POWERS MANIFEST (61-70) - Birthright specific
+    # ==========================================================================
+    { roll_min = 61, roll_max = 62, text = "Bloodline power surges! Blooded regent may activate one bloodline ability without cost", weight = 1 },
+    { roll_min = 63, roll_max = 64, text = "Enemy regent's bloodline manifests - terrible power displayed, your troops -1 morale", weight = 1 },
+    { roll_min = 65, roll_max = 66, text = "The blood of Anduiras stirs - Anuirean units gain +1 attack this round", weight = 1 },
+    { roll_min = 67, roll_max = 68, text = "Masela's blessing - naval units or units near water gain +1 defense", weight = 1 },
+    { roll_min = 69, roll_max = 70, text = "Azrai's shadow falls - undead or awnsheghlien forces gain +1 attack, others -1 morale", weight = 1 },
+
+    # ==========================================================================
+    # MONSTER INTERVENTION (71-80) - Birthright specific
+    # ==========================================================================
+    { roll_min = 71, roll_max = 72, text = "Gnoll warband attracted by battle sounds - may attack either side or both!", weight = 1 },
+    { roll_min = 73, roll_max = 74, text = "Giant spotted watching the battle - may be convinced to join (Diplomacy check)", weight = 1 },
+    { roll_min = 75, roll_max = 76, text = "Troll emerges from nearby swamp - attacks nearest unit regardless of allegiance", weight = 1 },
+    { roll_min = 77, roll_max = 78, text = "Goblin scouts report to unknown master - enemy gains intelligence about your forces", weight = 2 },
+    { roll_min = 79, roll_max = 80, text = "Ancient creature disturbed by battle - dragon, hydra, or similar threatens all combatants", weight = 1 },
+
+    # ==========================================================================
+    # DIVINE INTERVENTION (81-85) - Birthright specific
+    # ==========================================================================
+    { roll_min = 81, roll_max = 82, text = "Haelyn's light shines upon the righteous - lawful units gain +1 to all rolls", weight = 1 },
+    { roll_min = 83, roll_max = 84, text = "Erik's storm gathers - outdoor battle faces weather penalties, but Rjurik gain +1", weight = 1 },
+    { roll_min = 85, roll_max = 85, text = "Dark portent from the Shadow World - all units -1 morale, undead gain +1 attack", weight = 1 },
+
+    # ==========================================================================
+    # TERRAIN EVENTS (86-90)
+    # ==========================================================================
+    { roll_min = 86, roll_max = 87, text = "Ground gives way - one unit repositioned involuntarily, possible casualties", weight = 2 },
+    { roll_min = 88, roll_max = 89, text = "Bridge, ford, or pass compromised - movement restricted, defensive bonus available", weight = 2 },
+    { roll_min = 90, roll_max = 90, text = "Fire breaks out on the battlefield - units in area take damage, must relocate", weight = 1 },
+
+    # ==========================================================================
+    # SUPPLY AND EQUIPMENT (91-95)
+    # ==========================================================================
+    { roll_min = 91, roll_max = 92, text = "Ammunition running low - ranged units -1 attack until resupplied", weight = 2 },
+    { roll_min = 93, roll_max = 94, text = "Equipment failure - siege weapon or war machine disabled this round", weight = 2 },
+    { roll_min = 95, roll_max = 95, text = "Supply cache discovered on battlefield - one unit fully resupplied", weight = 1 },
+
+    # ==========================================================================
+    # CRITICAL MOMENTS (96-100)
+    # ==========================================================================
+    { roll_min = 96, roll_max = 97, text = "The decisive moment! Next action determines battle outcome - all modifiers doubled", weight = 1 },
+    { roll_min = 98, roll_max = 99, text = "Complete chaos on the battlefield - all units act simultaneously, GM determines order", weight = 1 },
+    { roll_min = 100, roll_max = 100, text = "The impossible happens! Roll again and apply result to most dramatic possible target", weight = 1 }
+]
+
+# =============================================================================
+# EXTENDED EVENTS BY CATEGORY - For themed battles or specific situations
+# =============================================================================
+
+[events_by_theme]
+
+# Events specific to battles involving awnsheghlien
+awnsheghlien_battle = [
+    { text = "The awnsheghlien's presence warps reality - terrain shifts unnaturally", weight = 2 },
+    { text = "Bloodline corruption spreads - blooded soldiers feel the pull of Azrai", weight = 1 },
+    { text = "The abomination's true form revealed - all units must pass morale check or flee", weight = 1 },
+    { text = "Ancient power awakens in response to the awnsheghlien - unexpected ally appears", weight = 1 },
+    { text = "The awnsheghlien offers parley - is it a trick or genuine negotiation?", weight = 1 }
+]
+
+# Events specific to siege battles
+siege_battle = [
+    { text = "Sally forth! Defenders launch surprise attack from hidden postern gate", weight = 2 },
+    { text = "Wall section weakened - next siege attack may create breach", weight = 2 },
+    { text = "Siege tower catches fire - attackers must abandon or burn with it", weight = 1 },
+    { text = "Defenders running low on provisions - -1 morale, but fight desperately", weight = 2 },
+    { text = "Sappers complete tunnel - explosion creates breach in walls", weight = 1 },
+    { text = "Boiling oil prepared - next assault on walls takes massive casualties", weight = 2 },
+    { text = "Treachery! Someone opens a gate from within", weight = 1 },
+    { text = "Disease breaks out within the fortress - defenders weakened", weight = 1 }
+]
+
+# Events specific to naval battles
+naval_battle = [
+    { text = "Ramming attack! Ships locked together, boarding combat begins", weight = 2 },
+    { text = "Fire ship launched! Target ship must evade or burn", weight = 1 },
+    { text = "Sudden squall separates the fleets - battle pauses one round", weight = 2 },
+    { text = "Ship taking on water - must withdraw or sink within 3 rounds", weight = 2 },
+    { text = "Sea creature disturbed by battle - attacks random ship", weight = 1 },
+    { text = "Enemy flagship identified - destroying it may end the battle", weight = 2 },
+    { text = "Favorable current - one fleet gains +1 movement this round", weight = 2 },
+    { text = "Man overboard! Important figure in the water, rescue or capture possible", weight = 1 }
+]
+
+# Events for battles in the Shadow World or against undead
+shadow_world = [
+    { text = "Reality thins - living units -1 to all actions, undead +1", weight = 2 },
+    { text = "The Lost pour through a rift - additional undead unit joins enemy", weight = 1 },
+    { text = "Positive energy surge - undead take damage, living heal wounds", weight = 1 },
+    { text = "Shadows lengthen unnaturally - concealment available everywhere", weight = 2 },
+    { text = "Spirits of the fallen rise - fight for whoever slew them", weight = 1 },
+    { text = "A halfling guide appears, offering escape route from the Shadow World", weight = 1 },
+    { text = "Time flows strangely - one unit ages rapidly, another grows younger", weight = 1 }
+]
+
+# Events for battles involving elves or fey
+fey_involvement = [
+    { text = "The Sidhe take interest - elven warriors may join if properly entreated", weight = 1 },
+    { text = "Glamour descends - all units confused about friend and foe for one round", weight = 1 },
+    { text = "Ancient elven magic activates - terrain becomes alive and hostile", weight = 1 },
+    { text = "The Wild Hunt passes nearby - all must hide or be swept up", weight = 1 },
+    { text = "Elven archers appear from nowhere, loose a volley, and vanish", weight = 2 },
+    { text = "A curse is spoken - one unit transformed until battle's end", weight = 1 }
+]
+
+# Events for battles in specific Birthright regions
+anuirean_battle = [
+    { text = "Chivalric challenge! Knights on both sides demand single combat before battle", weight = 2 },
+    { text = "The memory of the Iron Throne inspires - Anuirean units +1 morale", weight = 2 },
+    { text = "Temple of Haelyn's blessing invoked - lawful units gain protection", weight = 1 },
+    { text = "Ancient battlefield from Empire's fall - spirits may interfere", weight = 1 },
+    { text = "Noble houses' honor at stake - no retreat possible without shame", weight = 2 }
+]
+
+rjurik_battle = [
+    { text = "Erik's druids emerge from the forest to aid defenders of the land", weight = 1 },
+    { text = "Berserker rage spreads through the ranks - +2 attack, -1 defense", weight = 2 },
+    { text = "The aurora blazes - omens read by seers affect morale", weight = 1 },
+    { text = "Wolf pack joins the Rjurik warriors - additional irregular unit", weight = 1 },
+    { text = "Ancestral spirits called upon - one unit fights as if possessed", weight = 1 }
+]
+
+khinasi_battle = [
+    { text = "Desert storm reduces visibility - ranged attacks impossible", weight = 2 },
+    { text = "Sayim's blessing of the wind - Khinasi cavalry +1 movement", weight = 1 },
+    { text = "El-Arrasi tactics remembered - feigned retreat lures enemy into trap", weight = 1 },
+    { text = "Oasis control becomes critical - units without water suffer", weight = 2 },
+    { text = "Magic of the ancient Masetians stirs - unpredictable effects", weight = 1 }
+]
+
+brecht_battle = [
+    { text = "Guild mercenaries consider switching sides - highest bidder may win them", weight = 2 },
+    { text = "Trade goods at stake - victor gains significant wealth", weight = 2 },
+    { text = "Naval support arrives from merchant fleet - bombardment available", weight = 1 },
+    { text = "Brecht pragmatism prevails - both sides consider negotiated settlement", weight = 2 },
+    { text = "Sea mist rolls in from coast - perfect cover for maneuver", weight = 2 }
+]
+
+vos_battle = [
+    { text = "Blood challenge! Vos warriors demand brutal single combat", weight = 2 },
+    { text = "Kriesha's cold descends - non-Vos units suffer from bitter chill", weight = 1 },
+    { text = "Belinik's fury invoked - Vos warriors enter killing frenzy", weight = 1 },
+    { text = "Raiding instinct takes over - Vos may abandon battle to loot", weight = 2 },
+    { text = "Varsk riders sweep across the field - devastating cavalry charge", weight = 1 }
+]
+
+# =============================================================================
+# EVENT TRIGGERS - Conditions that may trigger automatic events
+# =============================================================================
+
+[event_triggers]
+bloodline_clash = { trigger = "Two blooded regents meet in battle", event = "Bloodline powers may manifest automatically" }
+holy_ground = { trigger = "Battle on consecrated ground", event = "Divine intervention more likely" }
+ancient_battlefield = { trigger = "Battle on site of historical significance", event = "Spirits of fallen warriors may appear" }
+eclipse = { trigger = "Battle during eclipse or astronomical event", event = "Shadow World influence increases" }
+dragon_territory = { trigger = "Battle in dragon's claimed territory", event = "Dragon may intervene" }
+mebhaighl_node = { trigger = "Battle on source of magical power", event = "Wild magic effects possible" }

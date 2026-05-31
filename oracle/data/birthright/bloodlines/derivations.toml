@@ -1,0 +1,714 @@
+# ============================================================================
+# BIRTHRIGHT BLOODLINE DERIVATIONS
+# ============================================================================
+# The divine bloodlines descended from the gods who fell at Mount Deismaar.
+# Each derivation carries the essence of its divine progenitor.
+# ============================================================================
+
+[meta]
+title = "Bloodline Derivations of Cerilia"
+description = "The seven divine bloodlines that flow through the veins of Cerilia's scions"
+source = "Birthright Campaign Setting, Blood Enemies, various sourcebooks"
+
+# ============================================================================
+# BLOODLINE STRENGTH CATEGORIES
+# ============================================================================
+
+[bloodline_strengths]
+description = "The power of a bloodline is measured by its strength score"
+
+[bloodline_strengths.tainted]
+name = "Tainted"
+score_range = "1-9"
+description = "The faintest echo of divine blood. Often unaware of their heritage."
+blood_ability_slots = 1
+regency_collection = "1d4-2 per domain turn (minimum 0)"
+typical_origin = "Distant descendants, diluted lines, or those touched by bloodtheft"
+
+[bloodline_strengths.minor]
+name = "Minor"
+score_range = "10-24"
+description = "A clear but modest divine heritage. Recognized as blooded nobility."
+blood_ability_slots = 2
+regency_collection = "1d6 per domain turn"
+typical_origin = "Lesser noble houses, cadet branches of major families"
+
+[bloodline_strengths.major]
+name = "Major"
+score_range = "25-44"
+description = "Strong divine blood marking a true scion. Commands respect among the blooded."
+blood_ability_slots = 3
+regency_collection = "2d6 per domain turn"
+typical_origin = "Ruling houses, established regents, heroic bloodlines"
+
+[bloodline_strengths.great]
+name = "Great"
+score_range = "45-74"
+description = "Powerful bloodline rivaling the ancient champions. Rare and coveted."
+blood_ability_slots = 4
+regency_collection = "3d6 per domain turn"
+typical_origin = "High kings, archmages, legendary heroes, ancient lineages"
+
+[bloodline_strengths.true]
+name = "True"
+score_range = "75+"
+description = "The purest divine essence, closest to the gods themselves. Exceedingly rare."
+blood_ability_slots = 5
+regency_collection = "4d6 per domain turn"
+typical_origin = "Direct descendants of Deismaar champions, awnsheghlien, legendary figures"
+
+# ============================================================================
+# ANDUIRAS - THE BLOODLINE OF NOBILITY
+# ============================================================================
+
+[derivations.anduiras]
+name = "Anduiras"
+epithet = "The Noble Lord"
+domain = "Nobility, War, Leadership, Justice"
+alignment_tendency = "Lawful (any)"
+symbol = "Golden lion on crimson field"
+color = "Gold and crimson"
+
+description = """
+Anduiras was the god of nobility and war, the champion of the human tribes who \
+led them against Azrai at Mount Deismaar. His was the bloodline of kings and \
+commanders, those born to lead and to fight for justice. The scions of Anduiras \
+carry themselves with natural authority - commoners instinctively defer to them, \
+and even other blooded individuals recognize their inherent right to rule.
+
+Those of Anduiras blood feel the weight of responsibility keenly. They are drawn \
+to causes greater than themselves, compelled to protect the weak and uphold order. \
+The blood sings with the clash of steel and the roar of armies, but also with the \
+quiet dignity of wise judgment and fair rule."""
+
+[derivations.anduiras.characteristics]
+primary_traits = ["Natural leadership", "Martial prowess", "Sense of duty", "Personal honor"]
+common_personalities = ["Noble", "Commanding", "Just", "Protective", "Proud"]
+flaws = ["Arrogance", "Inflexibility", "Obsession with honor", "Cannot ignore injustice"]
+physical_signs = ["Regal bearing", "Golden eyes (rare)", "Commanding voice", "Leonine features"]
+
+[derivations.anduiras.typical_regents]
+primary = ["Landed rulers", "Military commanders", "Knights and paladins"]
+secondary = ["Judges and magistrates", "Temple leaders (war gods)", "Noble advisors"]
+uncommon = ["Mercenary captains", "Crusaders", "Revolutionary leaders"]
+
+[derivations.anduiras.domains]
+favored = ["Law holdings", "Military provinces", "Landed realms"]
+province_types = ["Established kingdoms", "Martial states", "Fortified regions"]
+holding_affinity = ["Law", "Provinces"]
+notes = "Anduiras scions excel at direct rule and military matters"
+
+[derivations.anduiras.roleplay]
+hooks = [
+    "Cannot stand by when injustice occurs, even at personal cost",
+    "Other blooded individuals instinctively recognize your authority",
+    "Feel responsible for those under your protection",
+    "Dreams of ancient battles and noble courts",
+    "Compelled to accept formal challenges to honor"
+]
+conflicts = [
+    "Duty vs. personal desire",
+    "Rigid honor vs. practical necessity",
+    "Protecting the few vs. the many",
+    "Lawful rule vs. corrupt institutions"
+]
+quotes = [
+    "The crown is not a privilege - it is a burden willingly borne.",
+    "My sword serves the realm, not my ambition.",
+    "Even a king must kneel before justice."
+]
+
+[derivations.anduiras.blood_abilities]
+common = ["Battlewise", "Courage", "Divine Aura", "Heightened Ability (Strength)"]
+uncommon = ["Iron Will", "Blood History", "Protection from Evil"]
+rare = ["Divine Wrath", "Invulnerability"]
+derivation_exclusive = ["Battlewise", "Divine Wrath"]
+
+[derivations.anduiras.relations]
+allied = ["Basaia (shared nobility)", "Reynir (protector of lands)"]
+opposed = ["Azrai (eternal enemy)", "Brenna (honor vs. pragmatism)"]
+neutral = ["Masela", "Vorynn"]
+
+# ============================================================================
+# BASAIA - THE BLOODLINE OF THE SUN
+# ============================================================================
+
+[derivations.basaia]
+name = "Basaia"
+epithet = "The Lady of the Sun"
+domain = "Sun, Reason, Magic, Truth"
+alignment_tendency = "Lawful Good or Neutral Good"
+symbol = "Rising sun with seven rays"
+color = "White and gold"
+
+description = """
+Basaia was the goddess of the sun, patron of reason, enlightenment, and the \
+arcane arts. Her followers were scholars, mages, and seekers of truth who \
+believed that knowledge could illuminate the darkness of ignorance. At Deismaar, \
+her priests stood alongside the warriors, their magic turning the tide of battle.
+
+The scions of Basaia are touched by the light of reason. They possess keen \
+intellects and an intuitive understanding of magic that goes beyond mere study. \
+The blood whispers secrets of the arcane, reveals hidden truths, and burns away \
+deception. Many of the greatest wizards of Cerilia carry this bloodline, their \
+magic enhanced by divine essence."""
+
+[derivations.basaia.characteristics]
+primary_traits = ["Intellectual brilliance", "Magical aptitude", "Truth-seeking", "Illumination"]
+common_personalities = ["Scholarly", "Rational", "Perceptive", "Idealistic", "Patient"]
+flaws = ["Ivory tower thinking", "Emotional detachment", "Intellectual arrogance", "Analysis paralysis"]
+physical_signs = ["Luminous eyes", "Fair complexion", "Aura of calm", "Drawn to light"]
+
+[derivations.basaia.typical_regents]
+primary = ["Wizard-kings", "Temple leaders (knowledge gods)", "Court mages"]
+secondary = ["University rectors", "Lore keepers", "Magical researchers"]
+uncommon = ["Inquisitors", "Truth-seekers", "Philosopher-rulers"]
+
+[derivations.basaia.domains]
+favored = ["Source holdings", "Temple holdings (knowledge)", "Magical academies"]
+province_types = ["Scholarly realms", "Magical territories", "Enlightened kingdoms"]
+holding_affinity = ["Source", "Temple"]
+notes = "Basaia scions are natural source regents and magical rulers"
+
+[derivations.basaia.roleplay]
+hooks = [
+    "Compelled to seek truth and expose lies",
+    "Dreams filled with arcane symbols and forgotten lore",
+    "Instinctively sense the presence of magic",
+    "Drawn to ancient mysteries and lost knowledge",
+    "Cannot abide willful ignorance"
+]
+conflicts = [
+    "Truth vs. kindness (harsh truths)",
+    "Knowledge vs. wisdom (knowing when not to act)",
+    "Reason vs. faith",
+    "Enlightenment vs. dangerous secrets"
+]
+quotes = [
+    "In light, there is truth. In truth, there is power.",
+    "The ignorant fear what they do not understand. I choose to understand.",
+    "Magic is not supernatural - it is nature's deepest secret."
+]
+
+[derivations.basaia.blood_abilities]
+common = ["Light of Reason", "Detect Lie", "Detect Illusion", "Mebhaighl Sense"]
+uncommon = ["Divine Aura", "Heightened Ability (Intelligence)", "Resistance (Magic)"]
+rare = ["True Sight", "Arcane Mastery"]
+derivation_exclusive = ["Light of Reason"]
+
+[derivations.basaia.relations]
+allied = ["Anduiras (shared nobility)", "Vorynn (magical kinship)"]
+opposed = ["Azrai (light vs. shadow)", "Brenna (truth vs. manipulation)"]
+neutral = ["Reynir", "Masela"]
+
+# ============================================================================
+# REYNIR - THE BLOODLINE OF NATURE
+# ============================================================================
+
+[derivations.reynir]
+name = "Reynir"
+epithet = "The Great Druid"
+domain = "Nature, Forests, Animals, Growth"
+alignment_tendency = "Neutral (true neutral or neutral good)"
+symbol = "Great oak tree"
+color = "Green and brown"
+
+description = """
+Reynir was the god of the forests and wild places, the voice of nature itself. \
+His druids tended the sacred groves and spoke for the beasts and trees that could \
+not speak for themselves. At Deismaar, the forces of nature rose alongside the \
+human tribes - wolves and bears, storms and earthquakes answered Reynir's call.
+
+The scions of Reynir feel the pulse of the living world. They hear the whisper \
+of trees, sense the approach of storms, and move through wilderness as easily as \
+city-dwellers walk paved streets. The blood connects them to the great web of \
+life, granting them kinship with beasts and power over the green growing things. \
+Many become druids, rangers, or protectors of the wild places."""
+
+[derivations.reynir.characteristics]
+primary_traits = ["Nature attunement", "Animal kinship", "Patience of trees", "Cyclical thinking"]
+common_personalities = ["Patient", "Observant", "Pragmatic", "Protective", "Cyclical in outlook"]
+flaws = ["Disdain for civilization", "Slow to act", "Alien priorities", "Ruthless natural selection"]
+physical_signs = ["Green-tinged eyes", "Affinity with animals", "Weathered appearance", "Plant-like features (rare)"]
+
+[derivations.reynir.typical_regents]
+primary = ["Druid circles", "Forest kingdoms", "Elven-allied realms"]
+secondary = ["Rangers and wardens", "Rural nobles", "Beast cults"]
+uncommon = ["Urban druids", "Agricultural lords", "Storm priests"]
+
+[derivations.reynir.domains]
+favored = ["Source holdings (natural)", "Wilderness provinces", "Temple (nature gods)"]
+province_types = ["Forested realms", "Untamed wilderness", "Druidic territories"]
+holding_affinity = ["Source", "Province (wilderness)"]
+notes = "Reynir scions draw power from unspoiled nature"
+
+[derivations.reynir.roleplay]
+hooks = [
+    "Animals react positively, sensing kinship",
+    "Dreams of running with wolf packs or soaring as eagles",
+    "Uncomfortable in large cities or heavily developed areas",
+    "Sense disturbances in natural order",
+    "Feel seasonal changes deeply"
+]
+conflicts = [
+    "Nature vs. civilization",
+    "Individual creatures vs. ecosystem balance",
+    "Preservation vs. natural change",
+    "Human needs vs. nature's needs"
+]
+quotes = [
+    "The forest does not hurry, yet everything is accomplished.",
+    "You call it wilderness. I call it home.",
+    "The oak does not debate with the storm. It endures."
+]
+
+[derivations.reynir.blood_abilities]
+common = ["Animal Affinity", "Forest Walk", "Direction Sense", "Heightened Ability (Wisdom)"]
+uncommon = ["Healing", "Elemental Control (weather)", "Enhanced Sense"]
+rare = ["Animal Form", "Nature's Wrath"]
+derivation_exclusive = ["Forest Walk"]
+
+[derivations.reynir.relations]
+allied = ["Masela (natural kinship)", "Anduiras (protector of lands)"]
+opposed = ["Azrai (corruption of nature)", "Vorynn (nature vs. arcane)"]
+neutral = ["Basaia", "Brenna"]
+
+# ============================================================================
+# BRENNA - THE BLOODLINE OF COMMERCE
+# ============================================================================
+
+[derivations.brenna]
+name = "Brenna"
+epithet = "The Lady of Fortune"
+domain = "Commerce, Travel, Luck, Guile"
+alignment_tendency = "Neutral or Chaotic Neutral"
+symbol = "Crossed silver keys"
+color = "Silver and blue"
+
+description = """
+Brenna was the goddess of commerce, travel, and fortune. Her followers were \
+merchants, travelers, and those who lived by their wits. She blessed the bold, \
+the clever, and those willing to take risks for great rewards. At Deismaar, her \
+scions moved unseen through enemy lines, gathered intelligence, and struck from \
+unexpected quarters.
+
+The scions of Brenna are blessed with uncanny luck and silver tongues. Fortune \
+favors them in ways both small and large - coins turn up when needed, the right \
+words come at the right moment, and danger often passes them by. The blood grants \
+them an intuitive understanding of people and situations, making them natural \
+negotiators, spies, and merchants."""
+
+[derivations.brenna.characteristics]
+primary_traits = ["Luck manipulation", "Social acumen", "Quick thinking", "Opportunism"]
+common_personalities = ["Charming", "Adaptable", "Cunning", "Risk-taking", "Pragmatic"]
+flaws = ["Unreliable", "Self-serving", "Gambling addiction", "Cannot resist a deal"]
+physical_signs = ["Quick smile", "Nimble fingers", "Forgettable features (or memorable by choice)", "Lucky birthmarks"]
+
+[derivations.brenna.typical_regents]
+primary = ["Guild masters", "Trade princes", "Merchant houses"]
+secondary = ["Spymasters", "Diplomats", "Caravan leaders"]
+uncommon = ["Thieves' guild leaders", "Gambling den owners", "Information brokers"]
+
+[derivations.brenna.domains]
+favored = ["Guild holdings", "Trade routes", "Urban provinces"]
+province_types = ["Trade hubs", "Port cities", "Crossroads realms"]
+holding_affinity = ["Guild", "Trade Routes"]
+notes = "Brenna scions excel at economic manipulation and information gathering"
+
+[derivations.brenna.roleplay]
+hooks = [
+    "Uncanny luck in games of chance",
+    "Always seem to have the right contact",
+    "Dreams of golden opportunities and narrow escapes",
+    "Instinctively read people's motivations",
+    "Drawn to making deals and trades"
+]
+conflicts = [
+    "Short-term gain vs. long-term relationships",
+    "Personal profit vs. greater good",
+    "Honesty vs. profitable deception",
+    "Loyalty vs. opportunity"
+]
+quotes = [
+    "Everyone has a price. Finding it is the art.",
+    "Luck favors the prepared - and I am always prepared.",
+    "Why fight when you can negotiate?"
+]
+
+[derivations.brenna.blood_abilities]
+common = ["Character Reading", "Persuasion", "Travel", "Heightened Ability (Charisma)"]
+uncommon = ["Alter Appearance", "Detect Lie", "Direction Sense"]
+rare = ["Fortune's Favor", "Shadow Walk"]
+derivation_exclusive = ["Character Reading", "Travel"]
+
+[derivations.brenna.relations]
+allied = ["Vorynn (secrets and shadows)", "Masela (sea trade)"]
+opposed = ["Anduiras (guile vs. honor)", "Basaia (manipulation vs. truth)"]
+neutral = ["Reynir", "Azrai (dangerous dealing)"]
+
+# ============================================================================
+# MASELA - THE BLOODLINE OF THE SEA
+# ============================================================================
+
+[derivations.masela]
+name = "Masela"
+epithet = "The Lady of the Waves"
+domain = "Sea, Storms, Water, Change"
+alignment_tendency = "Chaotic (any)"
+symbol = "Wave cresting before a full moon"
+color = "Blue and silver"
+
+description = """
+Masela was the goddess of the sea, storms, and the ever-changing waters. Her \
+domain was all that flowed - rivers, oceans, and the rains that fell from the \
+sky. Her followers were sailors, fishermen, and all who made their living from \
+the water. At Deismaar, the seas themselves rose against Azrai's forces, \
+drowning armies and shattering fleets.
+
+The scions of Masela carry the ocean in their blood. They feel the pull of the \
+tides, sense approaching storms, and find the sea calls to them like a second \
+home. The blood grants them power over water in all its forms and an almost \
+supernatural ability to navigate the waves. Many become admirals, sea traders, \
+or rulers of coastal realms."""
+
+[derivations.masela.characteristics]
+primary_traits = ["Water affinity", "Storm sense", "Adaptability", "Restlessness"]
+common_personalities = ["Restless", "Passionate", "Changeable", "Free-spirited", "Tempestuous"]
+flaws = ["Unpredictable", "Difficulty with commitment", "Mood swings", "Claustrophobic (inland)"]
+physical_signs = ["Sea-colored eyes", "Salt-scented", "Weathered skin", "Webbed fingers (rare)"]
+
+[derivations.masela.typical_regents]
+primary = ["Naval commanders", "Coastal rulers", "Sea traders"]
+secondary = ["Harbor masters", "Temple leaders (sea gods)", "Island kings"]
+uncommon = ["River barons", "Lake lords", "Storm priests"]
+
+[derivations.masela.domains]
+favored = ["Coastal provinces", "Naval forces", "Maritime trade routes"]
+province_types = ["Island realms", "Coastal kingdoms", "Port states"]
+holding_affinity = ["Province (coastal)", "Guild (maritime)"]
+notes = "Masela scions dominate naval affairs and coastal regions"
+
+[derivations.masela.roleplay]
+hooks = [
+    "Dreams of vast oceans and storms at sea",
+    "Restless when too long on land",
+    "Instinctively know weather changes",
+    "Feel kinship with sea creatures",
+    "Moods shift like the tides"
+]
+conflicts = [
+    "Freedom vs. responsibility",
+    "Change vs. stability",
+    "The sea's call vs. landlocked duties",
+    "Passion vs. prudence"
+]
+quotes = [
+    "The sea gives and the sea takes. Such is the way of things.",
+    "You cannot command the waves, but you can learn to sail.",
+    "Still waters are just storms waiting to be born."
+]
+
+[derivations.masela.blood_abilities]
+common = ["Sea Song", "Elemental Control (water/weather)", "Direction Sense", "Enhanced Sense (weather)"]
+uncommon = ["Resistance (cold)", "Healing (water-based)", "Travel (sea)"]
+rare = ["Storm Lord", "Water Breathing (permanent)"]
+derivation_exclusive = ["Sea Song"]
+
+[derivations.masela.relations]
+allied = ["Reynir (natural kinship)", "Brenna (sea trade)"]
+opposed = ["Azrai (corrupted seas)", "Anduiras (chaos vs. order)"]
+neutral = ["Basaia", "Vorynn"]
+
+# ============================================================================
+# VORYNN - THE BLOODLINE OF THE MOON
+# ============================================================================
+
+[derivations.vorynn]
+name = "Vorynn"
+epithet = "The Silver Prince"
+domain = "Moon, Magic, Shadows, Secrets"
+alignment_tendency = "Neutral (any)"
+symbol = "Crescent moon and stars"
+color = "Silver and black"
+
+description = """
+Vorynn was the god of the moon, magic, and the spaces between light and dark. \
+Where Basaia represented the magic of reason and illumination, Vorynn embodied \
+the mysterious, intuitive aspects of the arcane. His followers were mystics, \
+seers, and those who walked between worlds. At Deismaar, his magic wove subtle \
+webs that confounded Azrai's forces.
+
+The scions of Vorynn are touched by mystery and shadow. They possess an intuitive \
+understanding of magic that borders on instinct, and they are drawn to secrets \
+both hidden and forbidden. The blood grants them power in darkness and the ability \
+to perceive what others cannot. Many become wizards, but their magic tends toward \
+divination, illusion, and the manipulation of shadows."""
+
+[derivations.vorynn.characteristics]
+primary_traits = ["Magical intuition", "Shadow affinity", "Secret-keeping", "Liminal awareness"]
+common_personalities = ["Mysterious", "Introspective", "Secretive", "Intuitive", "Detached"]
+flaws = ["Paranoid", "Manipulative", "Hoarder of secrets", "Difficulty with directness"]
+physical_signs = ["Silver or pale eyes", "Nocturnal preferences", "Shadowy presence", "Moon-touched features"]
+
+[derivations.vorynn.typical_regents]
+primary = ["Court wizards", "Spy networks", "Mystery cults"]
+secondary = ["Seers and oracles", "Shadow guilds", "Magical researchers"]
+uncommon = ["Assassin guilds", "Secret societies", "Underground rulers"]
+
+[derivations.vorynn.domains]
+favored = ["Source holdings", "Guild holdings (information)", "Hidden domains"]
+province_types = ["Mysterious realms", "Shadow lands", "Magical territories"]
+holding_affinity = ["Source", "Guild (covert)"]
+notes = "Vorynn scions excel at subtle magic and hidden influence"
+
+[derivations.vorynn.roleplay]
+hooks = [
+    "Dreams of silver moons and hidden truths",
+    "Collect secrets almost compulsively",
+    "More comfortable in darkness than light",
+    "Sense hidden things and concealed motives",
+    "Feel the pull of the moon's phases"
+]
+conflicts = [
+    "Revelation vs. concealment",
+    "Trust vs. paranoia",
+    "Using secrets vs. keeping them",
+    "Light magic vs. shadow magic"
+]
+quotes = [
+    "Every shadow holds a secret. I know them all.",
+    "The moon sees what the sun cannot.",
+    "Truth is a weapon - know when to wield it and when to sheathe it."
+]
+
+[derivations.vorynn.blood_abilities]
+common = ["Mebhaighl Sense", "Shadow Form", "Detect Illusion", "Heightened Ability (Intelligence)"]
+uncommon = ["Unreadable Thoughts", "Alter Appearance", "Enhanced Sense (night vision)"]
+rare = ["Shadow Walk", "True Seeing"]
+derivation_exclusive = ["Shadow Form", "Unreadable Thoughts"]
+
+[derivations.vorynn.relations]
+allied = ["Basaia (magical kinship)", "Brenna (secrets and shadows)"]
+opposed = ["Azrai (shadow corruption)", "Reynir (mystery vs. nature)"]
+neutral = ["Anduiras", "Masela"]
+
+# ============================================================================
+# AZRAI - THE BLOODLINE OF SHADOW
+# ============================================================================
+
+[derivations.azrai]
+name = "Azrai"
+epithet = "The Shadow Lord"
+domain = "Shadow, Evil, Corruption, Power"
+alignment_tendency = "Evil (any)"
+symbol = "Black sun or red hand"
+color = "Black and crimson"
+
+description = """
+Azrai was the god of shadow and evil, the great enemy who nearly conquered all \
+of Cerilia. His followers were those who craved power at any cost - tyrants, \
+dark priests, and creatures of nightmare. At Deismaar, his physical form was \
+destroyed, but his essence scattered across the battlefield, touching friend \
+and foe alike. The scions of Azrai carry the most powerful - and most dangerous \
+- bloodline.
+
+The blood of Azrai whispers constantly of power and domination. It corrupts slowly \
+but surely, twisting its bearers toward darkness even as it grants them terrible \
+abilities. Many of Cerilia's most fearsome threats - the awnsheghlien - are scions \
+of Azrai whose humanity has been consumed by their tainted heritage. Yet some \
+resist, using shadow's power while fighting its influence."""
+
+[derivations.azrai.characteristics]
+primary_traits = ["Shadow manipulation", "Fear induction", "Corruption resistance/embrace", "Raw power"]
+common_personalities = ["Ambitious", "Ruthless", "Manipulative", "Paranoid", "Hungry for power"]
+flaws = ["Corrupting influence", "Trusted by none", "Paranoia", "Blood's whispers"]
+physical_signs = ["Red-tinged eyes", "Shadow-touched features", "Unnerving presence", "Monstrous features (if corrupted)"]
+
+[derivations.azrai.typical_regents]
+primary = ["Tyrants and despots", "Awnsheghlien", "Dark temple leaders"]
+secondary = ["Conquering warlords", "Shadow guild masters", "Corrupt nobles"]
+uncommon = ["Redeemed scions", "Monster hunters (know thy enemy)", "Anti-heroes"]
+
+[derivations.azrai.domains]
+favored = ["Any (through conquest)", "Shadow lands", "Corrupted territories"]
+province_types = ["Tyrannies", "Monster realms", "Cursed lands"]
+holding_affinity = ["Any (through force)", "Temple (dark gods)"]
+notes = "Azrai scions can rule anything they can conquer and hold"
+
+[derivations.azrai.roleplay]
+hooks = [
+    "Blood constantly whispers of power and shortcuts",
+    "Other blooded individuals sense your taint",
+    "Dreams of shadow and conquest",
+    "Constant temptation to embrace darkness",
+    "Fear and awe in equal measure from others"
+]
+conflicts = [
+    "Power vs. humanity",
+    "The blood's whispers vs. conscience",
+    "Fear vs. respect",
+    "Redemption vs. acceptance of nature"
+]
+quotes = [
+    "They call it evil. I call it power without pretense.",
+    "The shadow offers what the light denies.",
+    "Better to reign in darkness than serve in light... or so the blood whispers."
+]
+
+[derivations.azrai.blood_abilities]
+common = ["Fear", "Death Touch", "Touch of Decay", "Heightened Ability (any)"]
+uncommon = ["Shadow Form", "Poison Sense", "Blood History (twisted visions)"]
+rare = ["Invulnerability", "Corruption", "Awnshegh Transformation"]
+derivation_exclusive = ["Fear", "Death Touch", "Touch of Decay"]
+
+[derivations.azrai.relations]
+allied = ["None (Azrai stands alone)"]
+opposed = ["All other derivations (especially Anduiras and Basaia)"]
+neutral = []
+
+[derivations.azrai.corruption]
+description = """
+The blood of Azrai actively corrupts its bearers. Each use of Azrai blood abilities \
+risks pushing the scion further toward becoming an awnshegh - a creature of shadow \
+whose humanity is consumed by their divine heritage."""
+
+corruption_triggers = [
+    "Using blood abilities for selfish evil",
+    "Committing bloodtheft",
+    "Embracing the blood's whispers",
+    "Great acts of cruelty or domination",
+    "Failing to resist temptation"
+]
+
+resistance_methods = [
+    "Acts of genuine selflessness",
+    "Rejecting the blood's urgings",
+    "Atonement for dark deeds",
+    "Strong moral anchors (loved ones, causes)",
+    "Priestly guidance and blessing"
+]
+
+# ============================================================================
+# MIXED BLOODLINES
+# ============================================================================
+
+[mixed_bloodlines]
+description = "Some scions carry the blood of multiple derivations, either through ancestry or bloodtheft"
+
+[mixed_bloodlines.mechanics]
+inheritance = """
+When two blooded individuals have children, the child typically inherits one \
+parent's derivation (usually the stronger bloodline). Rarely, traits of both \
+manifest."""
+
+bloodtheft = """
+Through bloodtheft (slaying a blooded individual in a moment of great passion \
+or ritual), a scion can absorb another's bloodline. This can result in mixed \
+derivations, though one usually dominates."""
+
+[mixed_bloodlines.common_combinations]
+anduiras_basaia = "Noble wizard-kings, enlightened rulers"
+brenna_vorynn = "Master spies, information brokers"
+masela_reynir = "Druids of sea and storm, coastal shamans"
+azrai_any = "Corrupted lines, dangerous and unstable"
+
+[mixed_bloodlines.roleplay_notes]
+description = """
+Mixed bloodlines create internal conflict. The scion may feel pulled in different \
+directions by their heritage. This is especially pronounced with any Azrai mixing, \
+where the shadow blood constantly wars with the other derivation's nature."""
+
+# ============================================================================
+# BLOODLINE ACQUISITION AND LOSS
+# ============================================================================
+
+[bloodline_mechanics]
+
+[bloodline_mechanics.bloodtheft]
+description = """
+The most direct and violent means of increasing bloodline power. When a blooded \
+individual is slain by another blooded individual in a moment of great passion \
+or through deliberate ritual, their blood power can transfer to the killer."""
+
+requirements = [
+    "Both parties must be blooded",
+    "Death must be personal (by the scion's own hand)",
+    "Emotional intensity or ritual preparation required",
+    "Proximity at moment of death"
+]
+
+results = [
+    "Killer may gain portion of victim's bloodline strength",
+    "May gain one of victim's blood abilities",
+    "May shift derivation toward victim's",
+    "Azrai bloodtheft risks corruption"
+]
+
+[bloodline_mechanics.investiture]
+description = """
+A regent can willingly transfer bloodline power to another through formal \
+investiture. This is how new regents are created and how bloodlines pass \
+peacefully between generations."""
+
+ceremony = """
+Investiture requires a formal ceremony, usually involving witnesses, oaths, \
+and symbolic transfer of authority. The donor can transfer any amount of their \
+bloodline strength, up to all of it."""
+
+[bloodline_mechanics.bloodline_loss]
+causes = [
+    "Investiture (voluntary)",
+    "Bloodtheft (involuntary)",
+    "Divine curse",
+    "Extreme corruption (Azrai)",
+    "Generations of dilution"
+]
+
+effects = """
+Losing all bloodline power renders an individual commoner, unable to collect \
+regency or use blood abilities. Many former scions find this loss devastating, \
+having known divine power and lost it."""
+
+# ============================================================================
+# ROLEPLAYING BLOODLINES
+# ============================================================================
+
+[roleplay_guidance]
+
+[roleplay_guidance.general]
+description = """
+Bloodlines are not just mechanical benefits - they are fundamental aspects of \
+a character's identity. A scion of Anduiras doesn't just have combat bonuses; \
+they feel the weight of noble responsibility. A scion of Azrai doesn't just \
+have dark powers; they constantly struggle against corruption."""
+
+[roleplay_guidance.social_implications]
+noble_society = """
+In Cerilia, blood is literally noble. Blooded individuals are recognized as \
+having divine right to rule. Even a tainted scion of a lesser derivation \
+outranks an unblooded noble in many social contexts."""
+
+commoner_reaction = """
+Commoners often instinctively recognize blooded individuals, showing deference \
+or fear depending on the derivation and context. This recognition is not always \
+conscious - it manifests as an inexplicable feeling that this person is somehow \
+"more" than others."""
+
+between_scions = """
+Blooded individuals recognize each other. There is an unspoken kinship - and \
+rivalry - among the blooded. They can sense each other's approximate strength \
+and derivation with time and proximity."""
+
+[roleplay_guidance.the_blood_speaks]
+description = """
+Each derivation has a "voice" - a way the blood influences its bearer's \
+thoughts and impulses. This is not mind control but rather a subtle pressure, \
+like instinct or intuition."""
+
+anduiras_voice = "Urges toward leadership, protection, and confronting injustice"
+basaia_voice = "Drives toward truth-seeking, understanding, and illumination"
+reynir_voice = "Calls toward nature, patience, and ecological thinking"
+brenna_voice = "Whispers of opportunity, advantage, and clever solutions"
+masela_voice = "Pulls toward freedom, change, and the sea"
+vorynn_voice = "Murmurs of secrets, hidden truths, and shadow paths"
+azrai_voice = "Demands power, domination, and the embrace of darkness"

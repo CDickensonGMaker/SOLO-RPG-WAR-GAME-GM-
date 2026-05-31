@@ -1,0 +1,204 @@
+# Trench Crusade - Iron Sultanate
+# Alchemists and artificers who create life from bronze and flame
+
+name = "Iron Sultanate"
+allegiance = "Faithful"
+description = "Masters of alchemy and artifice, the Iron Sultanate creates artificial warriors and wields strange alchemical ammunition. Their constructs march alongside mortal soldiers."
+playstyle = "Versatile faction excelling at all ranges, especially mid-to-long range firepower with alchemical ammunition. Fast artificial bruisers like the Lion of Jahbir provide melee punch."
+strengths = ["Range flexibility", "Alchemical ammunition", "Artificial constructs", "Strong shooting"]
+weaknesses = ["Expensive units", "Construct reliance", "Vulnerability to anti-armor"]
+
+[faction_rules]
+name = "Alchemical Artifice"
+description = "The Iron Sultanate can field artificial life - constructs like the Lion of Jahbir and Brazen Bull. Alchemical ammunition provides special effects."
+
+# =============================================================================
+# CHARACTERS / LEADERS
+# =============================================================================
+
+[[units]]
+name = "Alchemist Master"
+type = "infantry"
+category = "HQ"
+points = 70
+models = "1"
+tactical_role = "support_commander"
+threat_level = "high"
+preferred_targets = ["groups", "monsters"]
+weaknesses = ["melee_assault", "snipers"]
+special_rules = ["Leader", "Alchemist", "Construct Commander", "Elixir of Life"]
+keywords = ["Infantry", "Character", "Human", "Faithful", "Alchemist"]
+
+[units.stats]
+Movement = 6
+Ranged = "3+"
+Melee = "5+"
+Defense = "5+"
+Wounds = 2
+
+[[units.weapons]]
+name = "Alchemical Pistol"
+range = "12\""
+strength = "Standard"
+type = "Pistol"
+shots = "1"
+abilities = ["Alchemical Ammunition"]
+
+[[units.weapons]]
+name = "Staff"
+range = "Melee"
+strength = "-1"
+type = "Melee"
+
+# =============================================================================
+# TROOPS
+# =============================================================================
+
+[[units]]
+name = "Janissary"
+type = "infantry"
+category = "Troops"
+points = 20
+models = "1"
+tactical_role = "line_infantry"
+threat_level = "medium"
+preferred_targets = ["infantry"]
+weaknesses = ["heavy_weapons", "constructs"]
+special_rules = ["Disciplined", "Alchemical Rounds"]
+keywords = ["Infantry", "Human", "Faithful"]
+
+[units.stats]
+Movement = 6
+Ranged = "4+"
+Melee = "4+"
+Defense = "5+"
+Wounds = 1
+
+[[units.weapons]]
+name = "Jezail"
+range = "24\""
+strength = "Standard"
+type = "Rifle"
+shots = "1"
+abilities = ["Alchemical Ammunition"]
+
+[[units.weapons]]
+name = "Curved Sword"
+range = "Melee"
+strength = "Standard"
+type = "Melee"
+
+# =============================================================================
+# ELITES
+# =============================================================================
+
+[[units]]
+name = "Siege Jezzail Team"
+type = "infantry"
+category = "Elites"
+points = 50
+models = "2"
+tactical_role = "sniper"
+threat_level = "high"
+preferred_targets = ["characters", "heavy_infantry"]
+weaknesses = ["melee", "flanking"]
+special_rules = ["Sniper", "Long Range", "Crew Served"]
+keywords = ["Infantry", "Human", "Faithful", "Sniper"]
+
+[units.stats]
+Movement = 4
+Ranged = "2+"
+Melee = "5+"
+Defense = "5+"
+Wounds = 2
+
+[[units.weapons]]
+name = "Siege Jezzail"
+range = "48\""
+strength = "+2"
+type = "Heavy"
+shots = "1"
+abilities = ["Sniper", "Armor Piercing", "Alchemical"]
+
+# =============================================================================
+# CONSTRUCTS
+# =============================================================================
+
+[[units]]
+name = "Lion of Jahbir"
+type = "construct"
+category = "Elites"
+points = 60
+models = "1"
+tactical_role = "fast_assault"
+threat_level = "very_high"
+preferred_targets = ["infantry", "characters"]
+weaknesses = ["anti-construct", "massed_fire"]
+special_rules = ["Construct", "Fast", "Pounce", "Bronze Body"]
+keywords = ["Construct", "Beast", "Faithful", "Artificial"]
+
+[units.stats]
+Movement = 8
+Ranged = "-"
+Melee = "2+"
+Defense = "4+"
+Wounds = 3
+
+[[units.weapons]]
+name = "Bronze Claws"
+range = "Melee"
+strength = "+2"
+type = "Melee"
+abilities = ["Rending"]
+
+[[units.weapons]]
+name = "Crushing Jaws"
+range = "Melee"
+strength = "+3"
+type = "Melee"
+abilities = ["Armor Piercing"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Brazen Bull"
+type = "construct"
+category = "Heavy Support"
+points = 80
+models = "1"
+tactical_role = "heavy_fire_support"
+threat_level = "extreme"
+preferred_targets = ["groups", "fortifications", "vehicles"]
+weaknesses = ["anti-armor", "melee_swarm"]
+special_rules = ["Construct", "Slow", "Cannon Carrier", "Bronze Body"]
+keywords = ["Construct", "Vehicle", "Faithful", "Artificial"]
+
+[units.stats]
+Movement = 4
+Ranged = "3+"
+Melee = "4+"
+Defense = "2+"
+Wounds = 5
+
+[[units.weapons]]
+name = "Belly Cannon"
+range = "36\""
+strength = "+3"
+type = "Heavy"
+shots = "1"
+abilities = ["Blast", "Armor Piercing"]
+
+[[units.weapons]]
+name = "Bronze Horns"
+range = "Melee"
+strength = "+2"
+type = "Melee"
+abilities = ["Impact"]
+
+# =============================================================================
+# VARIANTS / SUB-FACTIONS
+# =============================================================================
+
+# Fida'i of Alamut - Up to 3 assassins
+# House of Wisdom - Customizable homunculi
+# Defenders of the Iron Wall - Defensive sharpshooters

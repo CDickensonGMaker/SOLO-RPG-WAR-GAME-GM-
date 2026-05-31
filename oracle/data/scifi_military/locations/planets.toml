@@ -1,0 +1,77 @@
+# Sci-Fi Military Planetary Environments
+# Warzone worlds and hostile environments
+
+[locations]
+entries = [
+  # Hostile Environments
+  { text = "Toxic jungle, vegetation that secretes contact poison", weight = 1 },
+  { text = "Ash waste, volcanic world with air that burns the lungs", weight = 1 },
+  { text = "Ice world, temperatures that freeze exposed flesh in seconds", weight = 1 },
+  { text = "Desert planet, sandstorms that strip flesh from bone", weight = 1 },
+  { text = "Death world jungle, every organism evolved to kill", weight = 1 },
+  { text = "Rad-blasted wasteland, legacy of ancient nuclear war", weight = 1 },
+  { text = "Acid ocean world, even the rain is corrosive", weight = 1 },
+  { text = "High gravity planet, every step exhausting", weight = 1 },
+  { text = "Low gravity moon, disorienting and muscle-wasting", weight = 1 },
+  { text = "Tidally locked world, eternal day on one side, frozen night on other", weight = 1 },
+
+  # Urban Warfare
+  { text = "Hive city ruins, kilometer-tall spires now hollow shells", weight = 1 },
+  { text = "Manufactorum district, endless factory blocks now battleground", weight = 1 },
+  { text = "Hab-block maze, millions of identical living units turned into kill zones", weight = 1 },
+  { text = "Underground city, entire civilization built beneath the surface", weight = 1 },
+  { text = "Spaceport complex, massive landing fields under contested control", weight = 1 },
+  { text = "Cathedral district, religious buildings used as strongpoints", weight = 1 },
+  { text = "Administrative quarter, bureaucratic buildings now rubble", weight = 1 },
+  { text = "Refugee camp, millions of displaced civilians in the crossfire", weight = 1 },
+  { text = "Industrial zone, chemical tanks that could detonate catastrophically", weight = 1 },
+  { text = "Market district, abandoned stalls now cover for snipers", weight = 1 },
+
+  # Strategic Terrain
+  { text = "Mountain fortress, carved into peaks overlooking approaches", weight = 1 },
+  { text = "River crossing, bridges destroyed forcing contested fording", weight = 1 },
+  { text = "Valley pass, the only route through impassable mountains", weight = 1 },
+  { text = "Coastal landing zone, beaches under fire from fortified cliffs", weight = 1 },
+  { text = "Forest of giant fungi, alien ecology providing concealment", weight = 1 },
+  { text = "Crystal plains, terrain that amplifies and distorts communications", weight = 1 },
+  { text = "Swamp region, vehicles useless in the muck", weight = 1 },
+  { text = "Cave system, tunnels extending for kilometers underground", weight = 1 },
+  { text = "Plateau battlefield, flat terrain with no cover", weight = 1 },
+  { text = "Canyon network, ambush terrain favoring defenders", weight = 1 },
+
+  # Alien Worlds
+  { text = "Xenos ruins, structures built by inhuman architects", weight = 1 },
+  { text = "Bug hive, organic tunnels of the enemy species", weight = 1 },
+  { text = "Corrupted zone, reality itself bends and warps", weight = 1 },
+  { text = "Spore forest, alien vegetation spreading infection", weight = 1 },
+  { text = "Necropolis, dead xenos city awakening to defend itself", weight = 1 },
+  { text = "Living world, the planet itself seems hostile and aware", weight = 1 },
+  { text = "Webway fragment, alien dimension bleeding into reality", weight = 1 },
+  { text = "Warp-touched region, impossible physics and screaming skies", weight = 1 },
+  { text = "Tyranid digestion pool, biomass being consumed by the swarm", weight = 1 },
+  { text = "Ork settlement, crude fortifications of scrap and violence", weight = 1 },
+
+  # Specific Objectives
+  { text = "Orbital cannon emplacement, weapon capable of destroying ships", weight = 1 },
+  { text = "Shield generator facility, protecting the entire continent", weight = 1 },
+  { text = "Communications array, vital for sector command", weight = 1 },
+  { text = "Promethium refinery, fuel processing vital to the war effort", weight = 1 },
+  { text = "Gene-seed repository, sacred space marine legacy cache", weight = 1 },
+  { text = "Munitions factory, producing millions of rounds daily", weight = 1 },
+  { text = "Prison compound, POWs or political prisoners held here", weight = 1 },
+  { text = "Research facility, classified projects of unknown nature", weight = 1 },
+  { text = "Stargate complex, portal to distant worlds", weight = 1 },
+  { text = "Ancient temple, technology mistaken for religious artifacts", weight = 1 },
+
+  # Aftermath Zones
+  { text = "Crater field, orbital bombardment turned land to moonscape", weight = 1 },
+  { text = "Mass grave site, thousands of dead barely covered", weight = 1 },
+  { text = "Burning city, fires still raging from last assault", weight = 1 },
+  { text = "Virus-bombed zone, sterilized land where nothing lives", weight = 1 },
+  { text = "Battlefield memorial, previous war's dead honored here", weight = 1 },
+  { text = "Wrecked vehicle graveyard, armored hulks rusting in formation", weight = 1 },
+  { text = "Refugee trail, paths of displaced civilians fleeing combat", weight = 1 },
+  { text = "No-man's-land, cratered hell between opposing trenches", weight = 1 },
+  { text = "Quarantine zone, plague outbreak contained by force", weight = 1 },
+  { text = "Razed farmland, food production destroyed to deny enemy", weight = 1 }
+]

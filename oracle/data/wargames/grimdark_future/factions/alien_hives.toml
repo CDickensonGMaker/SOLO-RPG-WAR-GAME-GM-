@@ -1,0 +1,721 @@
+# Alien Hives - Grimdark Future
+# Endless swarms of bio-engineered monstrosities
+# One Page Rules - Free Wargaming System
+
+[faction]
+name = "Alien Hives"
+description = "Endless swarms of bio-engineered monstrosities consuming all in their path"
+playstyle = "Horde, melee-focused, synapse network"
+difficulty = "advanced"
+strengths = [
+    "Massive model counts",
+    "Devastating melee combat",
+    "Monsters provide synergy buffs",
+    "Adaptation to any threat",
+    "Regenerating monstrous creatures"
+]
+weaknesses = [
+    "Limited ranged options",
+    "Synapse dependency for morale",
+    "Expensive monsters",
+    "Vulnerable to template weapons"
+]
+tactics = """
+Alien Hives overwhelm through numbers and evolution. Synapse creatures keep swarms in
+line - losing them causes morale cascades. Lead with disposable gaunts to absorb fire,
+then deliver Warriors and monsters into melee. Use Genestealers and Lictors for ambush
+strikes. Monsters like Carnifexes and Hive Tyrants are force multipliers - protect them
+while they buff nearby swarms. Overwhelm isolated units, avoid getting shot to pieces
+in the open.
+"""
+
+# =============================================================================
+# HQ UNITS
+# =============================================================================
+
+[[units]]
+name = "Hive Tyrant"
+type = "monster"
+category = "hq"
+points = 185
+models = "1"
+base_size = "60mm"
+tactical_role = "monster_commander"
+threat_level = "extreme"
+priority_target = true
+preferred_targets = ["infantry", "characters", "vehicles"]
+avoid_targets = ["massed_anti_tank"]
+weaknesses = ["focused_fire", "expensive"]
+synergies = ["Synapse for morale", "Psychic powers", "Melee devastation"]
+special_rules = ["Hero", "Fearless", "Tough(6)", "Synapse", "Psychic(2)"]
+keywords = ["Monster", "Character", "Alien", "Synapse"]
+notes = "Army centerpiece. Synapse keeps nearby units in line. Psychic(2) for multiple powers. Devastating in melee."
+
+[units.stats]
+quality = "3+"
+defense = "3+"
+tough = 6
+movement = "8\""
+
+[[units.weapons]]
+name = "Bio-Cannon"
+range = "18\""
+shots = "6"
+ap = "2"
+
+[[units.weapons]]
+name = "Massive Scything Talons"
+range = "Melee"
+shots = "6"
+ap = "3"
+special = ["Deadly(3)"]
+
+[[units.upgrades]]
+name = "Wings"
+points = 25
+effect = "Gains Flying, movement becomes 10\""
+
+[[units.upgrades]]
+name = "Lash Whip and Bonesword"
+points = 10
+weapon = { name = "Lash and Bonesword", range = "Melee", shots = "6", ap = "2", special = ["Deadly(3)", "Phalanx"] }
+
+[[units.psychic_powers]]
+name = "The Horror"
+type = "debuff"
+description = "Target enemy unit within 18\" must pass morale test or become Shaken"
+
+[[units.psychic_powers]]
+name = "Catalyst"
+type = "buff"
+description = "Friendly unit within 12\" gains Regeneration until next activation"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Hive Prime"
+type = "infantry"
+category = "hq"
+points = 70
+models = "1"
+base_size = "40mm"
+tactical_role = "infantry_commander"
+threat_level = "high"
+priority_target = true
+preferred_targets = ["infantry", "light_vehicles"]
+avoid_targets = ["heavy_armor"]
+weaknesses = ["focused_fire"]
+synergies = ["Synapse for Warriors", "Warrior squad leader"]
+special_rules = ["Hero", "Fearless", "Tough(4)", "Synapse"]
+keywords = ["Infantry", "Character", "Alien", "Synapse"]
+notes = "Budget synapse creature. Attach to Warrior squads. Good melee punch."
+
+[units.stats]
+quality = "3+"
+defense = "4+"
+tough = 4
+movement = "6\""
+
+[[units.weapons]]
+name = "Deathspitter"
+range = "18\""
+shots = "3"
+ap = "1"
+
+[[units.weapons]]
+name = "Boneswords"
+range = "Melee"
+shots = "4"
+ap = "2"
+special = ["Deadly(3)"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Broodlord"
+type = "infantry"
+category = "hq"
+points = 85
+models = "1"
+base_size = "40mm"
+tactical_role = "assault_commander"
+threat_level = "very_high"
+priority_target = true
+preferred_targets = ["infantry", "characters"]
+avoid_targets = ["vehicles"]
+weaknesses = ["shooting", "no_synapse"]
+synergies = ["Genestealer squad leader", "Devastating charges"]
+special_rules = ["Hero", "Fearless", "Tough(4)", "Psychic(1)"]
+keywords = ["Infantry", "Character", "Alien", "Genestealer"]
+notes = "Elite melee assassin. Rending claws shred anything. No Synapse but excellent in combat."
+
+[units.stats]
+quality = "3+"
+defense = "4+"
+tough = 4
+movement = "8\""
+
+[[units.weapons]]
+name = "Rending Claws"
+range = "Melee"
+shots = "6"
+ap = "1"
+special = ["Rending"]
+
+[[units.psychic_powers]]
+name = "Hypnotic Gaze"
+type = "debuff"
+description = "Target enemy unit within 12\" gets -1 to hit until next activation"
+
+# =============================================================================
+# TROOPS
+# =============================================================================
+
+[[units]]
+name = "Gaunt Swarm"
+type = "infantry"
+category = "troops"
+points = 70
+models = "15"
+base_size = "25mm"
+tactical_role = "expendable_horde"
+threat_level = "low"
+priority_target = false
+preferred_targets = ["objectives", "screening"]
+avoid_targets = ["heavy_infantry"]
+weaknesses = ["everything", "morale_without_synapse"]
+synergies = ["Screening", "Tarpit", "Objective flooding"]
+special_rules = ["Swarm"]
+keywords = ["Infantry", "Alien", "Gaunt"]
+notes = "Disposable screening units. Flood objectives. Absorb firepower. Die horribly but cheaply."
+
+[units.stats]
+quality = "5+"
+defense = "6+"
+tough = 1
+movement = "6\""
+
+[[units.weapons]]
+name = "Fleshborer"
+range = "12\""
+shots = "1"
+ap = "0"
+
+[[units.weapons]]
+name = "Claws"
+range = "Melee"
+shots = "1"
+ap = "0"
+
+[[units.upgrades]]
+name = "Devourers"
+points = 15
+weapon = { name = "Devourer", range = "18\"", shots = "2", ap = "0" }
+
+[[units.upgrades]]
+name = "Toxin Sacs"
+points = 10
+effect = "Melee attacks gain Poison(4+)"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Hive Warriors"
+type = "infantry"
+category = "troops"
+points = 95
+models = "3"
+base_size = "40mm"
+tactical_role = "core_infantry"
+threat_level = "medium"
+priority_target = true
+preferred_targets = ["infantry"]
+avoid_targets = ["heavy_armor"]
+weaknesses = ["ap_weapons", "monsters"]
+synergies = ["Synapse", "Flexible loadouts"]
+special_rules = ["Fearless", "Tough(3)", "Synapse"]
+keywords = ["Infantry", "Alien", "Warrior", "Synapse"]
+notes = "Core synapse troops. Keep nearby gaunts in line. Good melee and shooting."
+
+[units.stats]
+quality = "3+"
+defense = "4+"
+tough = 3
+movement = "6\""
+
+[[units.weapons]]
+name = "Deathspitter"
+range = "18\""
+shots = "2"
+ap = "1"
+
+[[units.weapons]]
+name = "Scything Talons"
+range = "Melee"
+shots = "2"
+ap = "0"
+
+[[units.upgrades]]
+name = "Boneswords"
+points = 15
+weapon = { name = "Boneswords", range = "Melee", shots = "2", ap = "2", special = ["Deadly(3)"] }
+
+[[units.upgrades]]
+name = "Barbed Strangler"
+points = 10
+models_affected = 1
+weapon = { name = "Barbed Strangler", range = "24\"", shots = "1", ap = "1", special = ["Blast(6)"] }
+
+[[units.upgrades]]
+name = "Venom Cannon"
+points = 15
+models_affected = 1
+weapon = { name = "Venom Cannon", range = "36\"", shots = "1", ap = "3", special = ["Deadly(3)"] }
+
+# =============================================================================
+# ELITES
+# =============================================================================
+
+[[units]]
+name = "Genestealers"
+type = "infantry"
+category = "elite"
+points = 105
+models = "5"
+base_size = "32mm"
+tactical_role = "elite_assault"
+threat_level = "very_high"
+priority_target = true
+preferred_targets = ["infantry", "characters"]
+avoid_targets = ["vehicles"]
+weaknesses = ["shooting", "no_ranged"]
+synergies = ["Ambush deployment", "Broodlord leader"]
+special_rules = ["Fearless", "Scout", "Stealth"]
+keywords = ["Infantry", "Alien", "Genestealer"]
+notes = "Elite melee killers. Scout and Stealth for delivery. Rending claws devastate anything."
+
+[units.stats]
+quality = "3+"
+defense = "5+"
+tough = 1
+movement = "8\""
+
+[[units.weapons]]
+name = "Rending Claws"
+range = "Melee"
+shots = "3"
+ap = "1"
+special = ["Rending"]
+
+[[units.upgrades]]
+name = "Extended Carapace"
+points = 10
+effect = "Defense becomes 4+"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Hive Guard"
+type = "infantry"
+category = "elite"
+points = 120
+models = "3"
+base_size = "40mm"
+tactical_role = "fire_support"
+threat_level = "high"
+priority_target = true
+preferred_targets = ["vehicles", "heavy_infantry"]
+avoid_targets = ["fast_melee"]
+weaknesses = ["slow", "close_combat"]
+synergies = ["Indirect fire support", "Anti-tank"]
+special_rules = ["Fearless", "Tough(3)"]
+keywords = ["Infantry", "Alien", "Hive Guard"]
+notes = "Rare ranged hive unit. Impaler cannons hit hard. Indirect fire option available."
+
+[units.stats]
+quality = "3+"
+defense = "3+"
+tough = 3
+movement = "5\""
+
+[[units.weapons]]
+name = "Impaler Cannon"
+range = "36\""
+shots = "2"
+ap = "3"
+special = ["Deadly(3)"]
+
+[[units.weapons]]
+name = "Claws"
+range = "Melee"
+shots = "2"
+ap = "0"
+
+[[units.upgrades]]
+name = "Shock Cannons"
+points = 0
+weapon = { name = "Shock Cannon", range = "24\"", shots = "2", ap = "2", special = ["Indirect"] }
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Lictors"
+type = "infantry"
+category = "elite"
+points = 85
+models = "3"
+base_size = "40mm"
+tactical_role = "ambush_assassin"
+threat_level = "high"
+priority_target = true
+preferred_targets = ["artillery", "characters", "isolated_units"]
+avoid_targets = ["large_squads"]
+weaknesses = ["massed_fire"]
+synergies = ["Ambush deployment", "Character assassination"]
+special_rules = ["Fearless", "Ambush", "Stealth", "Scout", "Tough(3)"]
+keywords = ["Infantry", "Alien", "Lictor"]
+notes = "Perfect ambushers. All the deployment tricks. Appear and assassinate key targets."
+
+[units.stats]
+quality = "3+"
+defense = "4+"
+tough = 3
+movement = "8\""
+
+[[units.weapons]]
+name = "Rending Claws"
+range = "Melee"
+shots = "4"
+ap = "1"
+special = ["Rending"]
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Zoanthropes"
+type = "infantry"
+category = "elite"
+points = 100
+models = "3"
+base_size = "40mm"
+tactical_role = "psychic_artillery"
+threat_level = "high"
+priority_target = true
+preferred_targets = ["vehicles", "heavy_infantry"]
+avoid_targets = ["fast_assault"]
+weaknesses = ["anti_psyker", "fragile"]
+synergies = ["Synapse", "Psychic devastation"]
+special_rules = ["Fearless", "Tough(3)", "Flying", "Synapse", "Psychic(1)"]
+keywords = ["Infantry", "Alien", "Zoanthrope", "Synapse"]
+notes = "Floating brains. Synapse and Psychic support. Warp Blast devastates targets."
+
+[units.stats]
+quality = "4+"
+defense = "4+"
+tough = 3
+movement = "6\""
+
+[[units.weapons]]
+name = "Warp Blast"
+range = "24\""
+shots = "D6"
+ap = "3"
+special = ["Deadly(3)"]
+
+[[units.psychic_powers]]
+name = "Spirit Leech"
+type = "attack"
+description = "Target enemy unit within 18\" takes D6 mortal wounds"
+
+# =============================================================================
+# FAST ATTACK
+# =============================================================================
+
+[[units]]
+name = "Gargoyles"
+type = "infantry"
+category = "fast_attack"
+points = 65
+models = "10"
+base_size = "32mm"
+tactical_role = "fast_screen"
+threat_level = "low"
+priority_target = false
+preferred_targets = ["objectives", "screening"]
+avoid_targets = ["heavy_infantry"]
+weaknesses = ["shooting", "blast_weapons"]
+synergies = ["Fast screening", "Objective grabbing"]
+special_rules = ["Flying"]
+keywords = ["Infantry", "Alien", "Gargoyle"]
+notes = "Flying gaunts. Use speed to grab objectives and screen. Expendable."
+
+[units.stats]
+quality = "5+"
+defense = "6+"
+tough = 1
+movement = "10\""
+
+[[units.weapons]]
+name = "Fleshborer"
+range = "12\""
+shots = "1"
+ap = "0"
+
+[[units.weapons]]
+name = "Claws"
+range = "Melee"
+shots = "1"
+ap = "0"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Raveners"
+type = "infantry"
+category = "fast_attack"
+points = 120
+models = "3"
+base_size = "40mm"
+tactical_role = "fast_assault"
+threat_level = "high"
+priority_target = true
+preferred_targets = ["infantry", "artillery"]
+avoid_targets = ["heavy_armor"]
+weaknesses = ["focused_fire"]
+synergies = ["Fast delivery", "Ambush potential"]
+special_rules = ["Fearless", "Tough(3)", "Fast", "Ambush"]
+keywords = ["Infantry", "Alien", "Ravener"]
+notes = "Fast assault beasts. Ambush or speed across the board. Devastating melee."
+
+[units.stats]
+quality = "3+"
+defense = "4+"
+tough = 3
+movement = "10\""
+
+[[units.weapons]]
+name = "Rending Claws"
+range = "Melee"
+shots = "4"
+ap = "1"
+special = ["Rending"]
+
+[[units.upgrades]]
+name = "Devourers"
+points = 10
+weapon = { name = "Devourers", range = "18\"", shots = "4", ap = "0" }
+
+# =============================================================================
+# HEAVY SUPPORT
+# =============================================================================
+
+[[units]]
+name = "Carnifex"
+type = "monster"
+category = "heavy_support"
+points = 145
+models = "1"
+base_size = "105mm oval"
+tactical_role = "heavy_assault"
+threat_level = "very_high"
+priority_target = true
+preferred_targets = ["infantry", "vehicles"]
+avoid_targets = ["nothing"]
+weaknesses = ["massed_anti_tank", "slow"]
+synergies = ["Spearhead assault", "Tank hunting"]
+special_rules = ["Fearless", "Tough(8)", "Regeneration", "Impact(3)"]
+keywords = ["Monster", "Alien", "Carnifex"]
+notes = "Iconic assault monster. Impact(3) on charge is devastating. Regeneration keeps it fighting."
+
+[units.stats]
+quality = "4+"
+defense = "3+"
+tough = 8
+movement = "7\""
+
+[[units.weapons]]
+name = "Bio-Cannon"
+range = "18\""
+shots = "4"
+ap = "2"
+
+[[units.weapons]]
+name = "Crushing Claws"
+range = "Melee"
+shots = "4"
+ap = "4"
+special = ["Deadly(6)"]
+
+[[units.upgrades]]
+name = "Scything Talons"
+points = 0
+weapon = { name = "Scything Talons", range = "Melee", shots = "6", ap = "1" }
+
+[[units.upgrades]]
+name = "Heavy Venom Cannon"
+points = 15
+replaces = "Bio-Cannon"
+weapon = { name = "Heavy Venom Cannon", range = "36\"", shots = "2", ap = "4", special = ["Deadly(6)"] }
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Tyrannofex"
+type = "monster"
+category = "heavy_support"
+points = 175
+models = "1"
+base_size = "105mm oval"
+tactical_role = "heavy_fire_support"
+threat_level = "very_high"
+priority_target = true
+preferred_targets = ["vehicles", "monsters", "heavy_infantry"]
+avoid_targets = ["fast_melee"]
+weaknesses = ["close_combat", "slow"]
+synergies = ["Long range fire support", "Anti-tank"]
+special_rules = ["Fearless", "Tough(10)", "Regeneration"]
+keywords = ["Monster", "Alien", "Tyrannofex"]
+notes = "Living artillery. Rupture cannon is devastating anti-tank. Keep at range."
+
+[units.stats]
+quality = "4+"
+defense = "2+"
+tough = 10
+movement = "6\""
+
+[[units.weapons]]
+name = "Rupture Cannon"
+range = "48\""
+shots = "2"
+ap = "5"
+special = ["Deadly(6)"]
+
+[[units.weapons]]
+name = "Stinger Salvo"
+range = "18\""
+shots = "4"
+ap = "1"
+
+[[units.weapons]]
+name = "Powerful Limbs"
+range = "Melee"
+shots = "3"
+ap = "2"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Trygon"
+type = "monster"
+category = "heavy_support"
+points = 165
+models = "1"
+base_size = "105mm oval"
+tactical_role = "tunneling_assault"
+threat_level = "very_high"
+priority_target = true
+preferred_targets = ["infantry", "characters"]
+avoid_targets = ["heavy_anti_tank"]
+weaknesses = ["focused_fire"]
+synergies = ["Deep strike assault", "Delivers troops via tunnel"]
+special_rules = ["Fearless", "Tough(8)", "Regeneration", "Ambush", "Tunneler"]
+keywords = ["Monster", "Alien", "Trygon"]
+notes = "Tunneling monster. Ambush behind enemy lines. Can bring troops through its tunnel."
+
+[units.stats]
+quality = "3+"
+defense = "4+"
+tough = 8
+movement = "9\""
+
+[[units.weapons]]
+name = "Bio-Electric Pulse"
+range = "12\""
+shots = "6"
+ap = "1"
+
+[[units.weapons]]
+name = "Massive Scything Talons"
+range = "Melee"
+shots = "6"
+ap = "3"
+special = ["Deadly(3)"]
+
+[[units.abilities]]
+name = "Tunneler"
+description = "One friendly Infantry unit in reserves may arrive within 6\" of this model when it deep strikes"
+
+# -----------------------------------------------------------------------------
+
+[[units]]
+name = "Exocrine"
+type = "monster"
+category = "heavy_support"
+points = 155
+models = "1"
+base_size = "105mm oval"
+tactical_role = "bio_artillery"
+threat_level = "very_high"
+priority_target = true
+preferred_targets = ["infantry", "light_vehicles"]
+avoid_targets = ["fast_melee"]
+weaknesses = ["close_combat"]
+synergies = ["Long range bombardment", "Infantry deletion"]
+special_rules = ["Fearless", "Tough(10)", "Regeneration"]
+keywords = ["Monster", "Alien", "Exocrine"]
+notes = "Bio-artillery beast. Bio-plasmic cannon devastates infantry. Stay back and shoot."
+
+[units.stats]
+quality = "4+"
+defense = "3+"
+tough = 10
+movement = "6\""
+
+[[units.weapons]]
+name = "Bio-Plasmic Cannon"
+range = "36\""
+shots = "6"
+ap = "2"
+special = ["Blast(3)"]
+
+[[units.weapons]]
+name = "Powerful Limbs"
+range = "Melee"
+shots = "3"
+ap = "2"
+
+# =============================================================================
+# EXAMPLE ARMY LISTS
+# =============================================================================
+
+[army_lists.starter_750]
+name = "Swarm Tide - 750 points"
+description = "Classic horde approach"
+points = 750
+units = [
+    { name = "Hive Prime", count = 1, points = 70, notes = "Budget synapse" },
+    { name = "Broodlord", count = 1, points = 85, notes = "Assault leader" },
+    { name = "Gaunt Swarm", count = 2, points = 140, notes = "Screening horde" },
+    { name = "Hive Warriors", count = 1, points = 95, notes = "Core synapse" },
+    { name = "Genestealers", count = 1, points = 105, notes = "Elite assault" },
+    { name = "Carnifex", count = 1, points = 145, notes = "Heavy assault" },
+    { name = "Hive Guard", count = 1, points = 120, notes = "Fire support" }
+]
+tactics = "Gaunts screen the advance. Warriors provide synapse coverage. Genestealers and Broodlord flank. Carnifex leads the assault. Hive Guard provide ranged support."
+
+[army_lists.competitive_1500]
+name = "Living Tide - 1500 points"
+description = "Monster-mash with synapse backbone"
+points = 1500
+units = [
+    { name = "Hive Tyrant", count = 1, points = 210, upgrades = ["Wings"] },
+    { name = "Hive Prime", count = 1, points = 70 },
+    { name = "Gaunt Swarm", count = 3, points = 210 },
+    { name = "Hive Warriors", count = 2, points = 190 },
+    { name = "Genestealers", count = 2, points = 210 },
+    { name = "Zoanthropes", count = 1, points = 100 },
+    { name = "Hive Guard", count = 1, points = 120 },
+    { name = "Carnifex", count = 2, points = 290 },
+    { name = "Exocrine", count = 1, points = 155 }
+]
+tactics = "Flying Tyrant is force multiplier and assassination threat. Multiple synapse creatures ensure coverage. Gaunts screen monsters. Genestealers scout for flanks. Carnifexes spearhead assault. Exocrine and Hive Guard provide fire support."
