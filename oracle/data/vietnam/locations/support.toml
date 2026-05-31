@@ -1,0 +1,74 @@
+# Vietnam War Support Locations
+# Rear echelon, R&R, the machine behind the war
+
+[locations]
+
+# Command Centers
+command = [
+    { id = "macv_hq", name = "MACV Headquarters", desc = "Military Assistance Command, Vietnam. Where strategy meets delusion. The maps look clean up here. The body counts add up perfectly." },
+    { id = "pentagon_east", name = "Pentagon East", desc = "Tan Son Nhut's command complex. Air conditioned, carpeted, the war as statistics. Reality is a briefing, not a jungle." },
+    { id = "tactical_ops", name = "Tactical Operations Center", desc = "The war on screens and maps. Radio traffic, situation reports, the chaos organized. Decisions made in climate control." },
+    { id = "intelligence_center", name = "Intelligence Analysis Center", desc = "Where reports become predictions. Photo interpretation, signal analysis. The puzzle that never completes." },
+    { id = "psyops_hq", name = "PSYOPS Headquarters", desc = "Psychological Operations. Leaflet design, loudspeaker scripts. 'Chieu Hoi' campaigns. Winning minds, if not hearts." },
+    { id = "cia_station", name = "CIA Saigon Station", desc = "Embassy annex, unmarked doors. Phoenix Program operations, agent networks. The war behind the war." },
+]
+
+# Medical Facilities
+medical = [
+    { id = "field_hospital", name = "Field Hospital", desc = "MASH-style forward surgery. Golden hour or death. The doctors perform miracles in tents." },
+    { id = "evacuation_hospital", name = "Evacuation Hospital", desc = "24th, 85th, 91st - the numbers that mean life. Stabilize, treat, evacuate. The conveyor belt of wounded." },
+    { id = "hospital_ship", name = "USS Sanctuary/Repose", desc = "Hospital ship offshore. Floating surgery. The seriously wounded come here. Many don't leave except as cargo." },
+    { id = "burns_unit", name = "Burns Unit", desc = "Napalm, white phosphorus, fuel fires. The specialization no one wanted. The screaming ward." },
+    { id = "psychiatric_ward", name = "Psychiatric Ward", desc = "Section 8 processing. Combat fatigue, breakdowns, the mind's surrender. 'Adjustment disorder' is the paperwork term." },
+    { id = "morgue", name = "Mortuary Affairs", desc = "Processing remains for transport home. Identification, preparation, the final dignity. The paperwork of death." },
+    { id = "medevac_pad", name = "Medevac Helipad", desc = "Where Dustoff lands. Rotors never stop, wounded never stop. 'Your war is over' begins here." },
+]
+
+# R&R Destinations
+r_and_r = [
+    { id = "bangkok", name = "R&R: Bangkok", desc = "Thai paradise for five days. Temples and brothels. Forget the war exists. Remember again on the flight back." },
+    { id = "hong_kong", name = "R&R: Hong Kong", desc = "Suits tailored, watches bought. British colony, shopping paradise. The World through a different lens." },
+    { id = "sydney", name = "R&R: Sydney", desc = "Australia, round-eye women, beer that's cold. Almost America. The Aussies understand something." },
+    { id = "tokyo", name = "R&R: Tokyo", desc = "Japan in the jet age. Ginza lights, geisha myths. The enemy forty years ago, the ally now." },
+    { id = "hawaii", name = "R&R: Hawaii", desc = "Meet the wife, see the kids. Five days pretending everything is normal. The return flight is the hardest." },
+    { id = "singapore", name = "R&R: Singapore", desc = "British order, Chinese enterprise. Clean streets after monsoon mud. The shock of civilization." },
+    { id = "vung_tau", name = "In-Country R&R: Vung Tau", desc = "Beach resort in a war zone. Australian rules, relatively safe. R&R without leaving Vietnam." },
+    { id = "china_beach_rr", name = "In-Country R&R: China Beach", desc = "USO shows, surf, sand. The war is background noise. Pretend for 48 hours." },
+]
+
+# Supply and Logistics
+logistics = [
+    { id = "supply_depot", name = "Supply Depot", desc = "Mountains of materiel. Everything the war needs, stacked to the sky. Midnight requisition headquarters." },
+    { id = "ammo_dump", name = "Ammunition Supply Point", desc = "Ordnance enough to level provinces. Sapper target, catastrophe waiting. The guards don't sleep." },
+    { id = "motor_pool", name = "Motor Pool", desc = "Jeeps, trucks, APCs. Grease and diesel. Keeping the war mobile one repair at a time." },
+    { id = "port_facility", name = "Cam Ranh Bay Port", desc = "Where supplies enter Vietnam. Container ships, offloading. The umbilical cord from the World." },
+    { id = "aerial_port", name = "Aerial Port", desc = "Cargo planes landing, taking off. C-130s, C-141s, the air bridge. Mail, supplies, replacements in. Bodies, wounded out." },
+    { id = "fuel_depot", name = "POL Storage", desc = "Petroleum, Oil, Lubricants. The war runs on JP-4 and diesel. Prime sapper target." },
+]
+
+# Communication
+communication = [
+    { id = "signal_site", name = "Signal Site", desc = "Hilltop communication relay. Radio, teletype, the nervous system. Antenna farm in hostile territory." },
+    { id = "afvn_station", name = "AFVN Radio Station", desc = "Armed Forces Vietnam Network. 'Goooood Morning, Vietnam!' Music, news, the voice from home." },
+    { id = "mars_station", name = "MARS Station", desc = "Military Affiliate Radio System. Phone calls home, 'over.' Hearing family voices. The connection that breaks hearts." },
+    { id = "press_center", name = "JUSPAO Press Center", desc = "Joint US Public Affairs Office. The Five O'Clock Follies. Official lies, unofficial truths. Journalists circling." },
+]
+
+# Administrative
+administrative = [
+    { id = "replacement_depot", name = "Replacement Depot", desc = "Where FNGs wait for assignment. Purgatory with bunks. Your unit is out there. You'll meet them soon." },
+    { id = "personnel_center", name = "Personnel Center", desc = "Records, assignments, rotations. The paperwork that controls lives. 'The system' made manifest." },
+    { id = "finance_office", name = "Finance Office", desc = "Pay, allotments, death benefits. The money side of war. Combat pay is extra." },
+    { id = "jag_office", name = "JAG Office", desc = "Judge Advocate General. Military law, Article 15s, courts martial. Justice, Vietnam style." },
+    { id = "graves_registration", name = "Graves Registration Point", desc = "Identifying remains. Personal effects processed. The final paperwork. Letters that destroy families." },
+    { id = "out_processing", name = "Out-Processing Center", desc = "DEROS reached, going home. Medical check, records review, freedom bird assignment. The last hours in-country." },
+]
+
+# Air Operations
+air_ops = [
+    { id = "flight_line", name = "Flight Line", desc = "Where aircraft wait and launch. Hueys in rows, crew chiefs prepping. The rotors never completely stop." },
+    { id = "maintenance_hangar", name = "Aircraft Maintenance Hangar", desc = "Keeping birds flying. Hydraulics, avionics, the technical war. Bullet holes patched, blood cleaned." },
+    { id = "control_tower", name = "Air Traffic Control", desc = "Managing chaos. Incoming, outgoing, emergency. The choreography of air power." },
+    { id = "ready_room", name = "Pilot Ready Room", desc = "Briefings, waiting, cards. The time between missions. Adrenaline and boredom, alternating." },
+    { id = "revetment", name = "Aircraft Revetment", desc = "Protective walls around parked aircraft. Mortar damage control. The geometry of survival." },
+]

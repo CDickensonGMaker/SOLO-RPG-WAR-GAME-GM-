@@ -1,0 +1,164 @@
+# Cyberpunk Megacorporations
+# The entities that own the world and everyone in it
+
+[corporations]
+# Major megacorps with global reach
+entries = [
+  # The Big Ten
+  { text = "Arasaka - Japanese security megacorp, owns half the military contracts worldwide, run by the ancient Saburo Arasaka from Tokyo", weight = 3 },
+  { text = "Militech - American arms manufacturer, Pentagon's favorite contractor, locked in eternal war with Arasaka", weight = 3 },
+  { text = "Biotechnica - Italian biotech giant, controls most gene therapy patents, rumored human cloning program", weight = 2 },
+  { text = "Kang Tao - Chinese weapons manufacturer, smart gun specialists, rapidly expanding through corporate espionage", weight = 2 },
+  { text = "Petrochem - Energy conglomerate, controls CHOOH2 fuel production, owns entire nations in the Resource Wars", weight = 2 },
+  { text = "Zetatech - Cyberware and electronics, consumer grade to military spec, planned obsolescence masters", weight = 2 },
+  { text = "Trauma Team International - Premium medical response, platinum memberships only, will kill to save a client", weight = 2 },
+  { text = "Network News 54 - Media conglomerate, shapes public opinion, decides what's true", weight = 2 },
+  { text = "Orbital Air - Space transport monopoly, controls orbital stations, holds the high ground", weight = 1 },
+  { text = "SovOil - Russian petrochemical giant, former state enterprise, brutally efficient", weight = 2 },
+
+  # Major Players
+  { text = "Kiroshi Opticals - Cybereye monopoly, sees everything their customers see, massive surveillance potential", weight = 2 },
+  { text = "Raven Microcybernetics - Budget cyberware for the masses, quantity over quality, explosive growth", weight = 2 },
+  { text = "Kendachi - Japanese weapons manufacturer, monowire specialists, Arasaka subsidiary", weight = 1 },
+  { text = "Constitutional Arms - American firearms company, Second Amendment marketing, militia contracts", weight = 1 },
+  { text = "Dynalar Technologies - Cyberlimb pioneers, prosthetics that exceed organic limits", weight = 2 },
+  { text = "IEC - International Electric Corporation, controls the power grid, can blackout entire cities", weight = 2 },
+  { text = "Microtech - Computer hardware giant, server infrastructure, stores everyone's data", weight = 2 },
+  { text = "WorldSat Communications - Satellite network owners, global telecommunications backbone", weight = 1 },
+  { text = "Euro Business Machines - European tech conglomerate, corporate software, enterprise solutions", weight = 1 },
+  { text = "Lazarus Military Group - Private military corporation, former spec-ops operators, nation-building contracts", weight = 2 },
+
+  # Regional Powers
+  { text = "Night Corp - Night City's municipal management, city services privatized, controls infrastructure", weight = 2 },
+  { text = "Continental Brands - Food and consumer goods, owns every grocery chain, controls what people eat", weight = 2 },
+  { text = "All Foods - Protein farms and processing, synthetic meat empire, feeding the masses", weight = 2 },
+  { text = "Arasaka Bank - Financial services arm, controls corporate debt, forecloses on lives", weight = 2 },
+  { text = "Rocklin Augmentics - Mid-tier cyberware, street level distribution, gang connections", weight = 2 },
+  { text = "Segotari - Japanese electronics, consumer devices, listening through every speaker", weight = 1 },
+  { text = "Zhirafa - African mining consortium, rare earth monopoly, blood minerals", weight = 1 },
+  { text = "Tsunami Defense Systems - Naval and coastal security, pirate hunters, smuggler trackers", weight = 1 },
+  { text = "Budget Arms - Cheap firearms for the masses, disposable weapons, gang supplier", weight = 2 },
+  { text = "Araska Transport - Shipping and logistics, AV fleets, moves everything everywhere", weight = 2 },
+]
+
+[corporate_events]
+# Things happening in the corporate world
+entries = [
+  # Hostile Actions
+  { text = "Hostile takeover attempt - stocks crashing, extraction teams mobilizing, blood in the water", weight = 2 },
+  { text = "Corporate assassination - executive found dead, official story doesn't match the bullet holes", weight = 2 },
+  { text = "Data breach scandal - customer information leaked, stock price plummeting, heads rolling", weight = 2 },
+  { text = "Merger announcement - two giants becoming one, thousands losing jobs, streets flooded with laid-off workers", weight = 2 },
+  { text = "Patent war escalation - lawyers as weapons, injunctions as bombs, innovation held hostage", weight = 1 },
+  { text = "Black site exposure - secret facility leaked to media, scrambling for damage control", weight = 1 },
+  { text = "Executive defection - VP fled to competitor with secrets, hunter teams deployed", weight = 2 },
+  { text = "Sabotage incident - production line destroyed, billions in losses, internal investigation", weight = 2 },
+  { text = "Proxy war heating up - two corps fighting through gang proxies, collateral damage mounting", weight = 2 },
+  { text = "Corporate espionage trial - show trial for a scapegoat, real perpetrators watching from boardrooms", weight = 1 },
+
+  # Internal Turmoil
+  { text = "Shareholder revolt - board members being replaced, power struggle in the penthouse", weight = 1 },
+  { text = "Union action - workers striking despite risks, security goons mobilizing", weight = 2 },
+  { text = "Whistleblower emergence - someone leaked everything, corp hunting them, media protecting them", weight = 2 },
+  { text = "Succession crisis - CEO dying, heirs fighting, company tearing itself apart", weight = 1 },
+  { text = "Division spinoff - subsidiary breaking free, taking talent and secrets with them", weight = 1 },
+  { text = "Mass layoffs announced - thousands terminated, severance in litigation, desperation on the streets", weight = 2 },
+  { text = "Embezzlement discovery - CFO fled the country, accounts frozen, employees unpaid", weight = 1 },
+  { text = "Sexual harassment scandal - executive caught, victim silenced, coverup unraveling", weight = 2 },
+  { text = "Product recall crisis - defective cyberware killing users, lawsuits mounting, PR nightmare", weight = 2 },
+  { text = "Laboratory accident - containment breach, employees quarantined, neighborhood evacuation", weight = 1 },
+
+  # Market Events
+  { text = "Stock manipulation exposed - insider trading ring busted, markets in chaos", weight = 1 },
+  { text = "Government contract awarded - competitor furious, lobbying intensifies, bribes flow", weight = 2 },
+  { text = "New product launch - revolutionary tech, competitors scrambling to steal it", weight = 2 },
+  { text = "Supply chain disruption - critical components unavailable, production halted, prices spiking", weight = 2 },
+  { text = "Currency manipulation - corp playing forex games, economies destabilizing", weight = 1 },
+  { text = "Environmental disaster - corp-caused catastrophe, cleanup costs astronomical, blame-shifting begins", weight = 1 },
+  { text = "Antitrust investigation - regulators finally noticing monopoly, legal warfare commencing", weight = 1 },
+  { text = "Bailout negotiations - corp too big to fail, government extortion in progress", weight = 1 },
+  { text = "IPO frenzy - startup going public, insiders cashing out, retail investors getting fleeced", weight = 2 },
+  { text = "Bankruptcy filing - giant falling, vultures circling, assets being stripped", weight = 1 },
+]
+
+[corporate_jobs]
+# Work offered by or targeting corporations
+entries = [
+  # Extraction Operations
+  { text = "Data steal from Arasaka tower - suicide mission but the pay is unreal, need the best netrunner alive", weight = 2 },
+  { text = "Executive extraction - VP wants out, family held hostage, 48 hours before they're liquidated", weight = 2 },
+  { text = "Scientist rescue - researcher knows too much, marked for termination, needs to disappear", weight = 2 },
+  { text = "Prototype theft - experimental tech in transit, small window, heavy security", weight = 2 },
+  { text = "Witness extraction - employee saw something, corp knows they talked, get them out alive", weight = 2 },
+  { text = "Server raid - physical access required, air-gapped systems, in-person netrunning job", weight = 2 },
+  { text = "Document retrieval - paper files in secure archive, fire suppression will destroy evidence", weight = 1 },
+  { text = "Sample acquisition - biological specimens needed, containment protocols, biohazard risk", weight = 1 },
+  { text = "Asset liberation - corp holding someone's property hostage, retrieve without triggering war", weight = 2 },
+  { text = "Memory extraction - target has info in their head, ripperdoc standing by, consent optional", weight = 1 },
+
+  # Sabotage
+  { text = "Production line sabotage - make it look like an accident, insurance fraud angle", weight = 2 },
+  { text = "Server destruction - data must not survive, physical and digital elimination", weight = 2 },
+  { text = "Vehicle interdiction - AV carrying critical cargo, must not reach destination", weight = 2 },
+  { text = "Power grid disruption - blackout needed, specific timing, plausible deniability", weight = 1 },
+  { text = "Communications blackout - jam all signals in target area during another operation", weight = 1 },
+  { text = "Supply chain interdiction - shipment must disappear, no evidence, clean job", weight = 2 },
+  { text = "Reputation destruction - plant evidence of crimes, leak to media, destroy careers", weight = 2 },
+  { text = "Product contamination - make the competition's goods dangerous, market share war", weight = 1 },
+  { text = "Research setback - set R&D back years, destroy prototypes, eliminate researchers", weight = 1 },
+  { text = "Financial disruption - crash their stock, exploit the chaos, buyer profits", weight = 1 },
+
+  # Intelligence
+  { text = "Corporate surveillance - bug the boardroom, need to know what they're planning", weight = 2 },
+  { text = "Executive tail - follow without being seen, document contacts, photograph meetings", weight = 2 },
+  { text = "Mole identification - someone's leaking, find them before they destroy us", weight = 2 },
+  { text = "Competitor analysis - infiltrate and assess, strength and weaknesses, full report", weight = 2 },
+  { text = "Technology assessment - evaluate their new product, industrial espionage, steal blueprints", weight = 2 },
+  { text = "Personnel files acquisition - need leverage on specific executives, dirt digging", weight = 2 },
+  { text = "Security audit penetration - test their defenses, report vulnerabilities, don't get caught", weight = 2 },
+  { text = "Communication interception - tap their secured lines, decrypt traffic, long-term surveillance", weight = 1 },
+  { text = "Financial investigation - follow the money, find the hidden accounts, expose the fraud", weight = 1 },
+  { text = "Threat assessment - identify who's gunning for the client, preemptive intelligence", weight = 2 },
+
+  # Wetwork
+  { text = "Executive termination - make it look natural, no investigation, clean death", weight = 1 },
+  { text = "Competitive elimination - remove rival permanently, send a message to others", weight = 1 },
+  { text = "Witness silencing - they know too much, they talked to the wrong people, quiet them", weight = 2 },
+  { text = "Problem employee disposal - knows where bodies are buried, about to become one", weight = 2 },
+  { text = "Family message - hurt someone they love, make them understand consequences", weight = 1 },
+  { text = "Bodycount quota - kill enough of their people that they back down, war of attrition", weight = 1 },
+  { text = "Specific method termination - must look like accident/suicide/natural causes, forensics-proof", weight = 1 },
+  { text = "Mass casualty event - make it look like terrorist attack, false flag operation", weight = 1 },
+  { text = "Interrogation and disposal - get information first, then permanent silence", weight = 1 },
+  { text = "Deniable asset creation - frame someone else for the hit, perfect patsy", weight = 1 },
+]
+
+[corporate_security]
+# Security measures and forces
+entries = [
+  { text = "Armed response teams - tactical gear, automatic weapons, shoot-to-kill authorization", weight = 3 },
+  { text = "Autonomous defense drones - AI-controlled, lethal force enabled, no negotiation", weight = 2 },
+  { text = "Biometric lockdown - DNA, retinal, voice print required, spoofing extremely difficult", weight = 2 },
+  { text = "Cyberspace defenses - black ICE protecting servers, lethal countermeasures", weight = 2 },
+  { text = "Executive protection details - elite bodyguards, former special forces, willing to die", weight = 2 },
+  { text = "Surveillance networks - cameras everywhere, facial recognition, behavior analysis AI", weight = 3 },
+  { text = "Private military contractors - professional soldiers, military hardware, overwhelming force", weight = 2 },
+  { text = "Counter-intelligence division - hunting spies, monitoring employees, trust no one", weight = 2 },
+  { text = "Secure transport protocols - armored vehicles, armed escorts, randomized routes", weight = 2 },
+  { text = "Crisis response teams - trained for every scenario, rapid deployment, contained chaos", weight = 2 },
+]
+
+[corporate_culture]
+# Life inside the megacorps
+entries = [
+  { text = "Mandatory overtime culture - sleeping at desks, family life non-existent, burnout epidemic", weight = 2 },
+  { text = "Performance metrics obsession - numbers define worth, quotas consume lives, failure means termination", weight = 2 },
+  { text = "Internal competition - colleagues are enemies, backstabbing rewarded, paranoia justified", weight = 2 },
+  { text = "Loyalty testing - regular interrogations, polygraphs, surveillance of personal life", weight = 2 },
+  { text = "Golden cage benefits - amazing healthcare but non-transferable, trapped by comfort", weight = 2 },
+  { text = "Corporate housing dependency - lose job, lose home, family on the street immediately", weight = 2 },
+  { text = "Hierarchy worship - rank is everything, executives are gods, workers are expendable", weight = 2 },
+  { text = "Non-compete enforcement - leave the corp and never work again, contracts are chains", weight = 2 },
+  { text = "Indoctrination programs - new hires brainwashed, company loyalty installed, identity erased", weight = 1 },
+  { text = "Retirement elimination - work until death, pension programs dismantled, no escape", weight = 1 },
+]

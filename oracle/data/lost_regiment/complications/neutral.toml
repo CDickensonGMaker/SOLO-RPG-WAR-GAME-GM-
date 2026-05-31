@@ -1,0 +1,65 @@
+# Lost Regiment Complications - Neutral
+# Mixed outcomes and uncertain developments
+
+[neutral]
+entries = [
+    # Trade-offs
+    "Victory in one sector required abandoning another",
+    "New capability came at cost of existing strength",
+    "Alliance gained but independence compromised",
+    "Resource secured but enemy alerted to regiment methods",
+    "Time bought but at cost of initiative",
+    "Position improved but supply lines stretched",
+    "Knowledge gained but source now compromised",
+    "Enemy weakened but allies also damaged",
+
+    # Uncertain Allies
+    "New faction approached but motives unclear",
+    "Allied leader making independent decisions",
+    "Native recruits showing divided loyalties",
+    "Merchant partner's reliability in question",
+    "Religious leader's support conditional on demands",
+    "Former enemy defector's information unverifiable",
+    "Allied tribe's commitment tested by losses",
+    "Partner's promise to deliver supplies uncertain",
+
+    # Changed Circumstances
+    "Enemy strategy shifted in unexpected direction",
+    "Weather altered planned operations",
+    "Resource discovered but in contested territory",
+    "Political change in native kingdoms affects alliance",
+    "Technology developed but with unforeseen limitations",
+    "Population growth straining existing systems",
+    "Success attracted attention regiment didn't want",
+    "Enemy response different than predicted",
+
+    # Internal Tensions
+    "Officers disagreeing on strategic direction",
+    "Native allies and regiment forces friction",
+    "Civilian and military priorities conflicting",
+    "Old hands versus new recruits division forming",
+    "Religious differences becoming operational issue",
+    "Cultural integration creating unexpected problems",
+    "Success creating competition for limited positions",
+    "Knowledge hoarding versus sharing debate",
+
+    # External Complications
+    "Third party intervention changing balance",
+    "Natural event disrupting all parties' plans",
+    "Economic factors overriding military concerns",
+    "Disease affecting both sides equally",
+    "Resource depletion forcing change for all",
+    "Seasonal change ending current phase of operations",
+    "Communication breakdown creating confusion",
+    "Simultaneous crises requiring prioritization",
+
+    # Moral Ambiguity
+    "Right action unclear even with full information",
+    "Multiple duties conflicting with no resolution",
+    "Success requires methods that seem wrong",
+    "Failure came from following principles",
+    "Compromise satisfied no one but was necessary",
+    "Justice and mercy cannot both be served",
+    "Short-term and long-term interests oppose",
+    "Individual and collective needs conflict"
+]

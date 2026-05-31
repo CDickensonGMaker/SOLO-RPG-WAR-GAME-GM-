@@ -1,0 +1,81 @@
+# WWI Hopeful Complications
+# Glimmers of light in the darkness
+
+[survival]
+description = "Life persists"
+entries = [
+    { complication = "Wound is Blighty one", twist = "Bad enough for hospital ship home, good enough to survive" },
+    { complication = "Dud shell saves lives", twist = "Should have killed everyone, didn't explode, factory sabotage or luck" },
+    { complication = "Gas mask works perfectly", twist = "The filter holds, lungs intact, breathing clean" },
+    { complication = "Shell crater provides perfect shelter", twist = "Water-filled hell becomes sanctuary from barrage" },
+    { complication = "Night patrol returns complete", twist = "Everyone made it back, all accounted for, small miracle" },
+    { complication = "Medical aid arrives in time", twist = "Stretcher bearers through the fire, MO works his magic" },
+    { complication = "Reinforcements reach critical position", twist = "Just when it seemed lost, fresh men arrive" }
+]
+
+[connection]
+description = "Human bonds endure"
+entries = [
+    { complication = "Letter from home lifts spirits", twist = "News of birth, recovery, something good happening somewhere" },
+    { complication = "Enemy shows unexpected mercy", twist = "Could have killed, didn't, maybe they're human too" },
+    { complication = "Old friend found in adjacent unit", twist = "Someone from before, connection to the real world" },
+    { complication = "Kindness from French civilian", twist = "Food, shelter, warmth shared despite everything" },
+    { complication = "Chaplain provides genuine comfort", twist = "Right words, real presence, faith or just humanity, helps" },
+    { complication = "Men rally around wounded comrade", twist = "Everyone pitches in, no one left behind" },
+    { complication = "Reconciliation between feuding men", twist = "Grudge dropped, handshake, unity restored" }
+]
+
+[competence]
+description = "Skill makes difference"
+entries = [
+    { complication = "Veteran's advice proves life-saving", twist = "Old hand knew what to do, listened, survived" },
+    { complication = "Improvisation works", twist = "Field expedient solution actually succeeds" },
+    { complication = "Training kicks in perfectly", twist = "Drills become automatic, right action at right time" },
+    { complication = "Natural talent emerges", twist = "Someone previously unremarkable shows unexpected ability" },
+    { complication = "Clever deception fools enemy", twist = "Ruse works, they fall for it, lives saved" },
+    { complication = "Preparation pays off", twist = "Time spent planning, rehearsing, worth it now" }
+]
+
+[luck]
+description = "Fortune favors"
+entries = [
+    { complication = "Enemy attack postponed", twist = "They were coming, something stopped them, breathing room" },
+    { complication = "Weather breaks favorably", twist = "Sun, dry ground, clear skies when needed most" },
+    { complication = "Supply error works in your favor", twist = "Extra rations, wrong but welcome" },
+    { complication = "Enemy makes critical mistake", twist = "They zigged when they should have zagged, advantage gained" },
+    { complication = "Stray shot hits something important", twist = "Random bullet finds enemy ammunition, explosions" },
+    { complication = "Timing coincidence helps", twist = "Right place, right time, pure chance but helpful" }
+]
+
+[support]
+description = "Help arrives"
+entries = [
+    { complication = "Artillery lands perfectly", twist = "For once the guns are accurate, enemy positions wrecked" },
+    { complication = "Air support appears", twist = "RFC overhead, strafing enemy, cheering from trenches" },
+    { complication = "Tank actually works", twist = "Iron monster crushes wire, doesn't break down, terror spreads" },
+    { complication = "Adjacent unit exceeds expectations", twist = "Thought they'd fail, they succeeded, flank secured" },
+    { complication = "Reserves released when needed", twist = "Command actually responds, men pour forward" },
+    { complication = "Engineers solve impossible problem", twist = "Bridge built, obstacle cleared, way opened" }
+]
+
+[meaning]
+description = "Purpose found"
+entries = [
+    { complication = "Action saves civilian lives", twist = "Village evacuated, family protected, something good done" },
+    { complication = "Captured intelligence prevents disaster", twist = "Information gathered stops enemy attack, lives saved" },
+    { complication = "Mercy shown is repaid", twist = "Prisoner spared gives vital help later" },
+    { complication = "Small kindness ripples outward", twist = "One good act inspires others, morale lifts" },
+    { complication = "Stand against odds inspires others", twist = "Holding when hopeless rallies the line" },
+    { complication = "Sacrifice accomplishes something real", twist = "Death meant something, objective achieved, it mattered" }
+]
+
+[respite]
+description = "Brief peace"
+entries = [
+    { complication = "Relief comes early", twist = "Rotation up, out of the line sooner than expected" },
+    { complication = "Rest area is actually restful", twist = "Billets comfortable, estaminet friendly, real sleep" },
+    { complication = "Leave granted unexpectedly", twist = "Home, family, brief return to the real world" },
+    { complication = "Medical leave for minor ailment", twist = "Nothing serious but enough to get out for a while" },
+    { complication = "Cushy assignment appears", twist = "Staff duty, training role, something safer" },
+    { complication = "Sector goes quiet", twist = "Both sides exhausted, informal cease-fire, breathing space" }
+]

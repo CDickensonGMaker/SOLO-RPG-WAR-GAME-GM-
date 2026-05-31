@@ -1,0 +1,77 @@
+# Grimdark Complications
+# The darkest outcomes in the darkest war - war crimes, atrocities, despair
+
+[war_crimes]
+description = "The worst humanity has to offer"
+entries = [
+    "Orders come down to take no prisoners, moral line crossed",
+    "Civilians executed in reprisal for partisan action",
+    "POWs being marched to their deaths, no intervention possible",
+    "Discovered mass grave, work of your own side",
+    "Hospital ship attacked despite markings, survivors machine-gunned",
+    "Comfort women facility discovered, victims beyond help",
+    "Village destroyed to deny enemy shelter, children included",
+    "Concentration camp liberation, what you see cannot be unseen",
+    "Friendly fire covered up, families never told truth",
+    "Trophy taking from enemy dead, humanity slipping away"
+]
+
+[betrayal]
+description = "Trust destroyed, often fatally"
+entries = [
+    "Resistance cell sold out, Gestapo waiting at meeting",
+    "Guide leads patrol into ambush, paid by enemy",
+    "Trusted ally revealed as double agent, damage catastrophic",
+    "Officer sacrifices unit to save career",
+    "Collaborator was your childhood friend",
+    "Intelligence burned, source executed because leak suspected",
+    "Partisan betrays hiding family for food",
+    "Soldier trades information for morphine",
+    "Evacuation abandoned those who trusted the plan",
+    "Allied bombing kills the resistance contact"
+]
+
+[despair]
+description = "When hope dies"
+entries = [
+    "Relief force turned back, surrounded and out of options",
+    "Letters found on dead friend, never got to say goodbye",
+    "Entire village dead from reprisals, nobody to save",
+    "Recognized enemy dead as former student or friend",
+    "Last man standing after failed assault, alone",
+    "Mission succeeded but cost was everyone else",
+    "Survivor of camps finds family all gone",
+    "Soldier takes own life, nothing left to fight for",
+    "Unit decimated, replacements all dead in first action",
+    "War criminal escaping justice, protected by new allies"
+]
+
+[moral_corruption]
+description = "War changes everyone, not always for the better"
+entries = [
+    "Looting becomes normal, line between supply and theft gone",
+    "Torture of prisoner justified by intelligence need",
+    "Killing surrendering enemy seems reasonable now",
+    "Black market dealing to survive, morals expensive",
+    "Enjoying the killing, when did that start?",
+    "Turning in hiding people for reward, survival first",
+    "False confession to survive, others executed instead",
+    "Stealing from refugees because they won't need it",
+    "Abandoning wounded to save the rest, cold calculation",
+    "Burning cultural treasures to deny enemy propaganda"
+]
+
+[atrocity_aftermath]
+description = "Living with what was done or witnessed"
+entries = [
+    "Ordered to dispose of evidence of massacre",
+    "Witness to war crime ordered to keep silent",
+    "Survivor of atrocity, trusted nobody to believe",
+    "Perpetrator realizes what they've become, too late",
+    "Documentation of crimes buried by own command",
+    "Victim forced to work with war criminal, both know",
+    "Recognition that liberation came too late",
+    "Evidence destroyed to protect politically useful ally",
+    "Justice denied because witnesses all dead",
+    "Living among people who turned you in"
+]

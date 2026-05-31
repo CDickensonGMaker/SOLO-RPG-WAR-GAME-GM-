@@ -1,5 +1,5 @@
 # Historical Settlement Locations
-# 50+ town and city locations across eras
+# 110+ town and city locations across eras
 
 [locations]
 entries = [
@@ -71,5 +71,67 @@ entries = [
   { text = "Fountain in the central plaza, a gathering spot for all", weight = 2 },
   { text = "Public baths offering cleanliness and social connection", weight = 2 },
   { text = "Hospital run by religious orders, serving the sick poor", weight = 1 },
-  { text = "Poorhouse where the destitute find grim shelter", weight = 1 }
+  { text = "Poorhouse where the destitute find grim shelter", weight = 1 },
+
+  # Roman Urban Spaces
+  { text = "The Forum - heart of civic life where senators, merchants, and beggars mingle", weight = 1 },
+  { text = "Public baths complex with caldarium, tepidarium, and frigidarium", weight = 2 },
+  { text = "Insula apartment block rising five stories, fire hazard and overcrowded", weight = 2 },
+  { text = "Circus Maximus - the roar of chariot races echoes through the city", weight = 1 },
+  { text = "Temple precinct where priests interpret omens and accept offerings", weight = 2 },
+  { text = "The Subura - notorious slum district of brothels and cutthroats", weight = 2 },
+
+  # Medieval Urban Spaces
+  { text = "Castle keep towering over the town, stone walls thick enough for siege", weight = 1 },
+  { text = "The shambles - butchers' district where blood runs in the gutters", weight = 2 },
+  { text = "Leper hospital outside the city walls, bell warnings when inmates pass", weight = 1 },
+  { text = "University quarter where students brawl and scholars debate in Latin", weight = 2 },
+  { text = "Jewish quarter behind its gates, locked at night for 'protection'", weight = 2 },
+  { text = "The stocks and pillory in the market square - justice as public spectacle", weight = 2 },
+
+  # Renaissance Urban Spaces
+  { text = "The artist's bottega - workshop, school, and showroom combined", weight = 2 },
+  { text = "Banking house where the ledgers determine the fate of kingdoms", weight = 1 },
+  { text = "The Doge's palace, seat of a republic that is no democracy", weight = 1 },
+  { text = "Printing shop where sedition and scripture roll off the same presses", weight = 2 },
+  { text = "The piazza where execution and celebration happen on the same stones", weight = 2 },
+  { text = "Anatomical theater where corpses teach the living", weight = 1 },
+
+  # Age of Sail Ports
+  { text = "Pirate haven where the code is the only law - Nassau, Tortuga, Port Royal", weight = 1 },
+  { text = "Slave market where human beings are inspected like livestock", weight = 1 },
+  { text = "Naval dockyard under admiralty control, guards at every gate", weight = 2 },
+  { text = "Sailmaker's loft on the upper floors, catching the sea breeze", weight = 2 },
+  { text = "Rope walk stretching hundreds of yards for the longest cordage", weight = 2 },
+  { text = "The counting house where merchant princes tally their ventures", weight = 2 },
+
+  # Victorian Urban Spaces
+  { text = "The gin palace - gilded mirrors and gas lamps lighting the path to ruin", weight = 2 },
+  { text = "Rookery slum where entire families occupy single rooms", weight = 2 },
+  { text = "The factory floor where machines never stop and neither do the workers", weight = 2 },
+  { text = "Department store - cathedral of commerce with plate glass and gaslight", weight = 2 },
+  { text = "Workhouse where the poor trade freedom for gruel and labor", weight = 1 },
+  { text = "The music hall where the lower classes find their entertainment", weight = 2 },
+  { text = "Opium den in Limehouse - sticky dreams and slow death", weight = 1 },
+  { text = "The morgue beneath the hospital where the unclaimed are displayed", weight = 1 },
+
+  # Educational Institutions
+  { text = "The monastery scriptorium where monks copy and preserve knowledge", weight = 1 },
+  { text = "Grammar school where boys learn Latin, Greek, and the cane", weight = 2 },
+  { text = "The academy where natural philosophers challenge ancient wisdom", weight = 1 },
+  { text = "Public school (actually quite private) where the elite are formed", weight = 2 },
+
+  # Entertainment Venues
+  { text = "The amphitheater awaiting blood sports and executions", weight = 1 },
+  { text = "Bear-baiting pit where crowds wager on animal suffering", weight = 2 },
+  { text = "The playhouse - groundlings and galleries watching scandal onstage", weight = 2 },
+  { text = "Racing grounds where horses run and fortunes change hands", weight = 2 },
+  { text = "The pleasure garden where the respectable and disreputable mix", weight = 2 },
+
+  # Specialized Districts
+  { text = "Tanners' quarter - the stench keeps property values low", weight = 2 },
+  { text = "Goldsmiths' row where fortunes are worked and displayed", weight = 2 },
+  { text = "The red-light district where the oldest profession operates openly", weight = 2 },
+  { text = "Diplomatric quarter where embassies cluster for mutual suspicion", weight = 1 },
+  { text = "The Liberties - outside city jurisdiction, refuge for debtors and criminals", weight = 2 }
 ]

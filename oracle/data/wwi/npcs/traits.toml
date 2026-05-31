@@ -1,0 +1,107 @@
+# WWI Character Traits
+# The marks the war leaves on men
+
+[psychological]
+description = "Mental states shaped by industrial slaughter"
+entries = [
+    { trait = "Thousand yard stare", description = "Eyes that have seen too much, focused on nothing" },
+    { trait = "Shell shock tremors", description = "Hands that won't stop shaking" },
+    { trait = "Jumps at sudden sounds", description = "Flinches at doors slamming, can't help it" },
+    { trait = "Recurring nightmares", description = "Wakes screaming, scares the other men" },
+    { trait = "Combat numbness", description = "Feels nothing anymore, not even fear" },
+    { trait = "Gallows humor", description = "Jokes about death because what else is there" },
+    { trait = "Fatalistic acceptance", description = "Knows he'll die here, made peace with it" },
+    { trait = "Superstitious rituals", description = "Must touch his lucky charm before going over" },
+    { trait = "Hyper-vigilance", description = "Never relaxes, always watching, waiting" },
+    { trait = "Dissociative episodes", description = "Sometimes isn't there, eyes go blank" },
+    { trait = "Survivor's guilt", description = "Why am I alive when they're all dead" },
+    { trait = "Barely contained rage", description = "Anger at everything, everyone, himself" },
+    { trait = "Profound depression", description = "The grey fog that won't lift" },
+    { trait = "Religious mania", description = "Found God in the trenches, won't shut up about it" },
+    { trait = "Lost all faith", description = "No God could allow this, stopped praying" }
+]
+
+[physical]
+description = "The body's testimony to war"
+entries = [
+    { trait = "Missing fingers", description = "Lost to frostbite or shrapnel" },
+    { trait = "Gas-damaged lungs", description = "Wheezes constantly, can't run anymore" },
+    { trait = "Trench foot scars", description = "Feet permanently damaged from standing in water" },
+    { trait = "Hearing loss", description = "Artillery deafened him, speaks too loud" },
+    { trait = "Facial scarring", description = "Shrapnel marks that won't fade" },
+    { trait = "Limping gait", description = "Wound healed wrong, walks crooked now" },
+    { trait = "Persistent cough", description = "Never quite recovered from the gas" },
+    { trait = "Lice-bitten skin", description = "Scratches constantly, can't stop" },
+    { trait = "Malnourished frame", description = "Bully beef and hard tack aren't enough" },
+    { trait = "Prematurely grey", description = "Went white overnight after that barrage" },
+    { trait = "Burn scars", description = "Touched by flame or mustard gas" },
+    { trait = "Nervous tics", description = "Face twitches, can't control it" }
+]
+
+[competence]
+description = "Skills earned in blood"
+entries = [
+    { trait = "Quiet competence under fire", description = "Does what needs doing without fuss" },
+    { trait = "Uncanny danger sense", description = "Knows when shells are coming before they whistle" },
+    { trait = "Expert scrounger", description = "Can find anything, don't ask how" },
+    { trait = "Natural trench navigator", description = "Never gets lost in the maze" },
+    { trait = "Crack shot", description = "Doesn't waste ammunition" },
+    { trait = "Skilled at digging", description = "Can excavate faster than anyone" },
+    { trait = "Wire-cutting expert", description = "Knows how to breach entanglements" },
+    { trait = "Map reading ability", description = "Understands the abstract lines and symbols" },
+    { trait = "First aid knowledge", description = "Can patch men up, keep them alive longer" },
+    { trait = "Horse whisperer", description = "The animals trust him, follow him" },
+    { trait = "Mechanical aptitude", description = "Can fix anything with wire and prayer" },
+    { trait = "Night fighter", description = "Sees in the dark, silent as death" }
+]
+
+[social]
+description = "How the war shaped their relationships"
+entries = [
+    { trait = "Natural leader", description = "Men follow without being ordered" },
+    { trait = "Loner by necessity", description = "Everyone he befriends dies" },
+    { trait = "Mentor to new men", description = "Teaches replacements how to survive" },
+    { trait = "Officers' favorite", description = "Gets the cushy assignments" },
+    { trait = "Troublemaker", description = "Constant minor infractions, can't be broken" },
+    { trait = "Peacekeeper", description = "Stops fights, calms tensions" },
+    { trait = "Chronic complainer", description = "Moans about everything but keeps going" },
+    { trait = "Stoic silence", description = "Rarely speaks, doesn't need to" },
+    { trait = "Writes letters for others", description = "The literate man's burden" },
+    { trait = "Shares everything", description = "His cigarettes, his food, his last bullet" },
+    { trait = "Trusted by the chaplain", description = "Helps with the worst duties" },
+    { trait = "Known coward", description = "Everyone knows, nobody says it aloud" }
+]
+
+[background]
+description = "What they were before"
+entries = [
+    { trait = "Former schoolmaster", description = "Educated man shoveling mud" },
+    { trait = "Career regular", description = "Old contemptible, saw it coming" },
+    { trait = "Enthusiastic volunteer of 1914", description = "Believed the lies, enlisted singing" },
+    { trait = "Reluctant conscript", description = "Dragged here by the state" },
+    { trait = "Underage enlistee", description = "Lied about his age, looks it now" },
+    { trait = "Former miner", description = "Tunneling comes natural" },
+    { trait = "Public school boy", description = "Rugby and Latin didn't prepare him for this" },
+    { trait = "Factory worker", description = "Used to machines, not killing" },
+    { trait = "Farm laborer", description = "Knows mud and hard work" },
+    { trait = "Artist or poet", description = "Sees beauty in horror, writes it down" },
+    { trait = "Gentleman volunteer", description = "Gave up everything comfortable" },
+    { trait = "Colonial veteran", description = "Thought he'd seen war before, was wrong" }
+]
+
+[coping]
+description = "How they survive mentally"
+entries = [
+    { trait = "Writes poetry in dugouts", description = "Finds words for the unspeakable" },
+    { trait = "Sketches constantly", description = "Documents everything in pencil" },
+    { trait = "Plays mouth organ", description = "Music in the mud" },
+    { trait = "Gambles obsessively", description = "Crown and anchor, always betting" },
+    { trait = "Drinks whenever possible", description = "Rum ration isn't enough" },
+    { trait = "Reads voraciously", description = "Escapes into any book available" },
+    { trait = "Prays constantly", description = "Lips always moving silently" },
+    { trait = "Plans for after", description = "Talks about home, the future, hope" },
+    { trait = "Focuses on small tasks", description = "Clean rifle, mend sock, stay sane" },
+    { trait = "Keeps a detailed diary", description = "Recording for someone to remember" },
+    { trait = "Collects souvenirs", description = "Buttons, badges, pieces of enemies" },
+    { trait = "Cultivates a trench garden", description = "Growing something alive in this death" }
+]

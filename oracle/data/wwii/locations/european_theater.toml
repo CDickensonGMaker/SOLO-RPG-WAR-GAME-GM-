@@ -1,0 +1,92 @@
+# European Theater of Operations Locations
+# From the beaches of Normandy to the rubble of Berlin
+
+[normandy]
+description = "D-Day and the breakout"
+entries = [
+    "Omaha Beach, Dog Green sector, bodies in the surf",
+    "Utah Beach, causeways flooded, nowhere to go but forward",
+    "Pointe du Hoc, cliffs scaled under fire, Rangers lead the way",
+    "Sainte-Mère-Église, paratrooper hanging from the church steeple",
+    "Pegasus Bridge, glider troops holding against counterattack",
+    "Bocage country, hedgerows thick enough to stop tanks",
+    "Carentan, street fighting in the crossroads town",
+    "Destroyed Norman village, ancient stones now rubble",
+    "Field hospital in a barn, surgery by lamplight",
+    "Artillery position, guns churning mud into craters"
+]
+
+[france_liberation]
+description = "The drive across France"
+entries = [
+    "Paris, liberation through the Arc de Triomphe",
+    "Cherbourg, port city still burning from demolitions",
+    "Saint-Lô, bombed to rubble for the breakthrough",
+    "Falaise pocket, roads choked with destroyed armor",
+    "French village celebrating liberation with hidden wine",
+    "Château commandeered for headquarters, portraits watching",
+    "Bridge over the Seine, engineers working under fire",
+    "Forest crossroads, signs pointing to the Reich",
+    "Vineyard, grapes rotting while tanks roll through",
+    "Railway junction, resistance sabotage evident"
+]
+
+[ardennes]
+description = "The Battle of the Bulge"
+entries = [
+    "Bastogne, surrounded, Nuts!",
+    "Crossroads in the frozen forest, fog hiding everything",
+    "Belgian farmhouse, civilians caught in the offensive",
+    "Malmedy crossroads, massacre site, blood on snow",
+    "Tank tracks frozen in mud, armor stalled",
+    "Forest clearing, pine trees shattered by artillery",
+    "Supply dump, desperate defense of fuel and ammunition",
+    "Aid station in a cellar, frostbite and bullet wounds",
+    "Roadblock manned by cooks and clerks",
+    "Fog-shrouded village, SS in American uniforms"
+]
+
+[germany]
+description = "Into the Reich"
+entries = [
+    "Siegfried Line, dragon's teeth and bunkers",
+    "Remagen bridge, the miracle still standing",
+    "Ruhr pocket, industrial wasteland surrounded",
+    "German city under artillery, civilians in cellars",
+    "Concentration camp, gates open, horror revealed",
+    "Berlin rubble, street to street, building to building",
+    "Reichstag steps, final Soviet assault",
+    "Hitler's bunker, abandoned command post",
+    "Elbe River, Americans and Soviets meeting",
+    "German farmhouse, white sheets in windows"
+]
+
+[italy]
+description = "The soft underbelly"
+entries = [
+    "Anzio beachhead, four months of hell",
+    "Monte Cassino, monastery on the mountain",
+    "Rapido River crossing, disaster in the dark",
+    "Gothic Line, mountains that favor defense",
+    "Italian village, partisans and Germans both",
+    "Po Valley, final offensive, war ending",
+    "Naples, liberated city, corruption thriving",
+    "Sicily landing beach, stepping stone to Europe",
+    "Roman ruins, ancient columns among modern destruction",
+    "Mountain pass, mule trains bringing supplies"
+]
+
+[eastern_front]
+description = "Where the war was truly won - and truly brutal"
+entries = [
+    "Stalingrad factory, fighting room to room",
+    "Kursk salient, greatest tank battle in history",
+    "Leningrad, 900 days of siege, frozen survivors",
+    "Moscow suburbs, Germans stopped by cold and courage",
+    "Ukrainian village, scorched earth in both directions",
+    "Partisan forest camp, resistance in the woods",
+    "Minsk, city destroyed multiple times",
+    "Warsaw ghetto, uprising crushed, ruins remaining",
+    "Crossing the Vistula, road to Berlin opening",
+    "Soviet field hospital, brutal efficiency"
+]

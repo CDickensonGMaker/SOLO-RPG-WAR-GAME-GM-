@@ -1,5 +1,5 @@
 # Historical NPC Traits
-# 100+ character traits for realistic historical personalities
+# 160+ character traits for realistic historical personalities across eras
 
 [traits]
 entries = [
@@ -119,5 +119,69 @@ entries = [
   { text = "Unassuming appearance", weight = 2 },
   { text = "Drinks heavily", weight = 2 },
   { text = "Chain smoker", weight = 2 },
-  { text = "Nervous habits", weight = 2 }
+  { text = "Nervous habits", weight = 2 },
+
+  # Roman Virtues and Vices
+  { text = "Exemplifies gravitas - weighty dignity in all things", weight = 1 },
+  { text = "Practices pietas - dutiful to gods, family, and state", weight = 1 },
+  { text = "Possesses virtus - manly courage and excellence", weight = 1 },
+  { text = "Maintains dignitas at all costs - honor is everything", weight = 1 },
+  { text = "Remembers every slight - revenge is a dish served cold", weight = 2 },
+  { text = "Patronizes the arts to increase prestige", weight = 2 },
+
+  # Medieval Character
+  { text = "Chivalrous to a fault - honor before practicality", weight = 2 },
+  { text = "Fears damnation above all earthly punishment", weight = 2 },
+  { text = "Believes in the divine right of their station", weight = 2 },
+  { text = "Sees omens and portents in everyday events", weight = 2 },
+  { text = "Fiercely loyal to their liege lord", weight = 2 },
+  { text = "Treats those of lower station as barely human", weight = 2 },
+
+  # Renaissance Character
+  { text = "Cultivates sprezzatura - studied carelessness", weight = 1 },
+  { text = "Practices humanist philosophy", weight = 1 },
+  { text = "Collects antiquities and commissions art", weight = 2 },
+  { text = "Masters multiple disciplines - the universal man", weight = 1 },
+  { text = "Views politics as art form without morality", weight = 1 },
+  { text = "Patronizes scholars as status symbols", weight = 2 },
+
+  # Age of Sail Character
+  { text = "Knows every superstition of the sea and observes them all", weight = 2 },
+  { text = "Maintains absolute authority aboard ship", weight = 2 },
+  { text = "Shares hardship with the crew - earns loyalty", weight = 2 },
+  { text = "Ruthless in pursuit of prize money", weight = 2 },
+  { text = "Drinks rum like water - or more", weight = 2 },
+  { text = "Keeps a journal of every voyage in meticulous detail", weight = 2 },
+
+  # Victorian Character
+  { text = "Obsessed with respectability and appearances", weight = 2 },
+  { text = "Believes in progress and the march of civilization", weight = 2 },
+  { text = "Practices rigid self-control in all things", weight = 2 },
+  { text = "Views charity as moral duty - but judges the recipients", weight = 2 },
+  { text = "Holds scientific rationalism above all", weight = 2 },
+  { text = "Maintains strict separation between public and private life", weight = 2 },
+
+  # Period-Specific Flaws
+  { text = "Addicted to laudanum for 'medicinal' purposes", weight = 1 },
+  { text = "Gambles compulsively on anything", weight = 2 },
+  { text = "Keeps a second family no one knows about", weight = 1 },
+  { text = "Visits prostitutes despite public moralizing", weight = 1 },
+  { text = "Uses their position to exploit those beneath them", weight = 2 },
+  { text = "Maintains racial prejudices typical of the era", weight = 2 },
+
+  # Learned Behaviors
+  { text = "Speaks multiple languages from extensive travel", weight = 1 },
+  { text = "Reads Latin and Greek as easily as their native tongue", weight = 1 },
+  { text = "Trained in classical rhetoric and uses it", weight = 1 },
+  { text = "Educated in fencing and dueling etiquette", weight = 2 },
+  { text = "Knows navigation by stars, compass, and dead reckoning", weight = 2 },
+  { text = "Practices calligraphy as art and meditation", weight = 2 },
+
+  # Survival Traits
+  { text = "Has survived plague and fears nothing else", weight = 1 },
+  { text = "Weathered shipwreck and knows how precious life is", weight = 1 },
+  { text = "Escaped religious persecution, distrusts authority", weight = 1 },
+  { text = "Rose from poverty through ruthless determination", weight = 2 },
+  { text = "Survived battle that killed everyone around them", weight = 1 },
+  { text = "Has been enslaved and won or bought freedom", weight = 1 }
 ]

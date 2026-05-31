@@ -62,4 +62,50 @@ entries = [
   { text = "Street gym - weights made from scrap, fighters training", weight = 2 },
   { text = "Public execution site - corporate justice, crowd deterrence", weight = 1 },
   { text = "Dead drop alley - known exchange point, watched by everyone", weight = 2 },
+
+  # Night City specific streets
+  { text = "Jig-Jig Street - Westbrook's open-air red light district, neon promises, every desire available", weight = 2 },
+  { text = "Kabuki Roundabout - Watson transit hub, crowds flowing, perfect for disappearing", weight = 2 },
+  { text = "Cherry Blossom Market - Japantown shopping arcade, Tyger Claw eyes everywhere", weight = 2 },
+  { text = "Coronado Overpass - Santo Domingo elevated highway, gang checkpoints, vehicle searches", weight = 2 },
+  { text = "The Glen Strip - Heywood business corridor, Valentino gold glinting in windows", weight = 2 },
+  { text = "Pacifica Boardwalk - abandoned tourist trap, squatters and scavengers, do not stop", weight = 2 },
+  { text = "Corpo Plaza Esplanade - City Center showpiece, surveillance dense, security quick", weight = 2 },
+  { text = "Northside Industrial Way - Maelstrom territory, abandoned factories, chrome worship", weight = 2 },
+  { text = "Arroyo Main Street - 6th Street heartland, American flags, veteran memorials", weight = 2 },
+  { text = "Watson Waterfront - smuggler central, shipping containers, midnight transfers", weight = 2 },
+
+  # Landmark-adjacent locations
+  { text = "Afterlife alley - back entrance, mercs smoking, deals in shadows", weight = 2 },
+  { text = "Lizzie's Bar block - Mox territory, rainbow graffiti, protection visible", weight = 2 },
+  { text = "Totentanz approach - industrial decay, bass beats, chrome pilgrims", weight = 2 },
+  { text = "El Coyote Cojo square - Heywood neutral ground, Valentino respect zone", weight = 2 },
+  { text = "Arasaka Tower plaza - corporate monument shadow, security drones circling", weight = 2 },
+  { text = "Viktor's clinic alley - Misty's Esoterica nearby, Watson medical strip", weight = 2 },
+  { text = "Konpeki Plaza approach - luxury hotel zone, wealth concentrated, poverty pushed out", weight = 1 },
+  { text = "Clouds entrance - high-end dollhouse queue, Tyger Claw bouncers, discretion sold", weight = 2 },
+  { text = "Grand Imperial Mall exterior - Animals territory, fighting pit crowds", weight = 2 },
+  { text = "Voodoo Boys chapel steps - Pacifica sacred space, netrunner pilgrimage", weight = 1 },
+
+  # Dangerous intersections
+  { text = "Combat Zone border crossing - no man's land, multiple gangs claiming, violence certain", weight = 2 },
+  { text = "Watson-Westbrook checkpoint - gang territory transition, toll collected", weight = 2 },
+  { text = "Heywood-Pacifica crossing - Valentino to Voodoo Boys, culture shock", weight = 2 },
+  { text = "Badlands city gate - Night City limits, nomad scrutiny, smuggler checkpoint", weight = 2 },
+  { text = "City Center perimeter - wealth boundary, security response times different", weight = 2 },
+  { text = "Arroyo industrial border - 6th Street to corporate zone, veteran suspicion", weight = 2 },
+  { text = "Japantown-Heywood transition - Tyger Claw to Valentino, respect required both directions", weight = 2 },
+  { text = "Pacifica quarantine edge - abandoned district boundary, no services past here", weight = 2 },
+
+  # Atmospheric locations
+  { text = "Night market maze - Watson sprawl, vendors selling everything, narrow passages", weight = 2 },
+  { text = "Megabuilding base plaza - H4, H6, H10, residential towers, community space below", weight = 2 },
+  { text = "Ripperdoc row - street of unlicensed clinics, chrome modifications, discount surgery", weight = 2 },
+  { text = "Fixer meeting corner - known neutral ground, deals struck, jobs assigned", weight = 2 },
+  { text = "Braindance parlor strip - virtual entertainment, addiction services, escape for sale", weight = 2 },
+  { text = "Street racing staging - illegal races gather here, modified vehicles, big bets", weight = 2 },
+  { text = "Drug corner - known dealing spot, steady traffic, gang protected", weight = 2 },
+  { text = "Homeless encampment - tent city, desperate people, informal economy", weight = 2 },
+  { text = "Food cart cluster - best street food, lines forming, information exchanging", weight = 2 },
+  { text = "Body dump site - known corpse disposal, NCPD sometimes checks, mostly doesn't", weight = 1 },
 ]

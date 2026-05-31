@@ -1,0 +1,77 @@
+# Lost Regiment Encounters - Building
+# Creating civilization with future knowledge
+
+[building]
+entries = [
+    # Education and Knowledge Transfer
+    "First class of native children learning to read",
+    "Teaching algebra to future artillery officers",
+    "Native apprentice grasping complex machinery",
+    "Literacy spreading beyond regiment control",
+    "Scientific method explained to native scholars",
+    "Native teacher now teaching other natives",
+    "History of the old world creating new mythology",
+    "Medical knowledge saving lives that couldn't be saved before",
+    "Engineering principles enabling native innovation",
+    "The idea of progress taking root",
+
+    # Industrial Development
+    "First steam engine successfully running",
+    "Railroad reaching new settlement",
+    "Telegraph connecting distant positions",
+    "Factory producing standard parts interchangeably",
+    "Mine output increasing with new methods",
+    "Water power harnessed for industry",
+    "First steel produced from local ore",
+    "Printing press creating first newspaper",
+    "Chemical industry producing essential materials",
+    "Native workers operating complex machinery independently",
+
+    # Infrastructure Projects
+    "Bridge construction over major obstacle",
+    "Road building connecting regiment territory",
+    "Aqueduct bringing clean water to population",
+    "Fortification system protecting expanded territory",
+    "Harbor development enabling water transport",
+    "Irrigation transforming agricultural output",
+    "Sanitation system reducing disease",
+    "Street lighting using gas or oil",
+    "Public buildings demonstrating new construction",
+    "Communication network spanning territory",
+
+    # Social Development
+    "Constitution drafted for new society",
+    "Courts established using new legal principles",
+    "Representative assembly including natives",
+    "Abolition of slavery in regiment territory",
+    "Equal treatment under law regardless of origin",
+    "Property rights established and enforced",
+    "Market economy replacing feudal obligations",
+    "Public education mandated for all children",
+    "Religious freedom proclaimed and protected",
+    "Women's status improving with new ideas",
+
+    # Cultural Exchange
+    "Regiment adopting useful native practices",
+    "Native music incorporating new instruments",
+    "Blended cuisine emerging from both cultures",
+    "Intermarriage becoming accepted",
+    "Joint holidays celebrated by both peoples",
+    "Native art depicting regiment themes",
+    "New language emerging from both tongues",
+    "Religious syncretism developing",
+    "Sport and games combining traditions",
+    "Shared identity beginning to form",
+
+    # Agricultural Innovation
+    "Crop rotation increasing yields dramatically",
+    "New crops introduced from regiment knowledge",
+    "Selective breeding improving livestock",
+    "Farm machinery reducing labor needs",
+    "Food preservation extending supplies",
+    "Veterinary knowledge saving valuable animals",
+    "Land management preventing exhaustion",
+    "Weather prediction improving planning",
+    "Pest control protecting harvests",
+    "Surplus feeding industrial workforce"
+]

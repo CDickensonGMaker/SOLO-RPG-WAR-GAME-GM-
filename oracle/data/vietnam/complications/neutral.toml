@@ -1,0 +1,69 @@
+# Vietnam War Neutral Complications
+# The situations that could go either way
+
+[complications]
+
+# Military Situations
+military = [
+    { id = "command_change", name = "New Commander Arrives", desc = "New LT, new captain, new way of doing things. The patterns that kept people alive might not survive the transition. Wait and see." },
+    { id = "mission_change", name = "Mission Parameters Changed", desc = "Mid-operation redirect. New objective, new route, new intelligence. Adaptation required. The plan is dead, long live the plan." },
+    { id = "reinforcements_arriving", name = "Reinforcements Inbound", desc = "Help coming - fresh troops, more firepower. ETA uncertain. Hold until then. The question is what 'hold' costs." },
+    { id = "extraction_delayed", name = "Extraction Delayed", desc = "Weather, assets diverted, enemy activity. Not coming now. Coming later. Hunker down. Wait. Hope 'later' comes." },
+    { id = "intelligence_unclear", name = "Conflicting Intelligence", desc = "One report says clear, one says hot. Both from reliable sources. Decision required without reliable information. Flip a coin that weighs lives." },
+    { id = "equipment_resupply", name = "Resupply Arriving", desc = "Ammo, medical, water inbound. The logistics that make war possible. What's actually in the bird matters more than the manifest." },
+]
+
+# Personnel Situations
+personnel = [
+    { id = "rotation_incoming", name = "Rotation Date Approaching", desc = "DEROS visible on the calendar. Short-timer syndrome setting in. Survival becomes the only mission. Everyone around you is still operating." },
+    { id = "promotion", name = "Unexpected Promotion", desc = "Field promotion - someone died, slot open. More responsibility, maybe more pay. What it means about who's gone matters more." },
+    { id = "replacement_arrives", name = "Replacement Arrives", desc = "FNG shows up. Green as grass. Keep him alive long enough to become useful. Or watch him learn the hard way." },
+    { id = "unit_merger", name = "Unit Combined", desc = "Casualties forced consolidation. New faces, new dynamics. Squads that don't know each other fighting together. Trust earned or fatal." },
+    { id = "specialist_attached", name = "Specialist Attached", desc = "New asset - interpreter, medic, demo, whatever. Skills needed, integration required. Do they help or complicate?" },
+    { id = "recovered_wounded", name = "Recovered Wounded Returns", desc = "He's back from the hospital. Same man? Different after what happened? The unit moved on. Can he catch up?" },
+]
+
+# Environmental Factors
+environmental = [
+    { id = "monsoon_arrival", name = "Monsoon Season Beginning", desc = "The rains are coming. Everything changes - terrain, movement, visibility. Different war, different rules." },
+    { id = "dry_season_operations", name = "Dry Season Operations", desc = "The ground hardens, movement speeds up. So does the enemy. The war of motion returns." },
+    { id = "eclipse", name = "Solar Eclipse", desc = "The sky darkens at the wrong time. Vietnamese see omens. Americans see tactical considerations. The universe comments on the war." },
+    { id = "wildlife_encounter", name = "Wildlife Encounter", desc = "Tiger, elephant, python - the jungle's other dangers. Kill it, avoid it, respect it. The war doesn't own everything here." },
+    { id = "disease_outbreak", name = "Disease Outbreak", desc = "Malaria, dengue, dysentery - the invisible enemy. Troops down, not from combat. The logistics of illness." },
+]
+
+# Information and Intelligence
+intelligence = [
+    { id = "captured_documents", name = "Documents Captured", desc = "Intel from the field. Orders, maps, rosters. What does it mean? How current is it? Translation pending." },
+    { id = "prisoner_captured", name = "Prisoner Taken", desc = "Live enemy, potential information. Tactical asset or tactical problem. What to do with them?" },
+    { id = "defector_opportunity", name = "Potential Defector", desc = "Someone wants to come over. Genuine switch or trap? The information they offer sounds good. Too good?" },
+    { id = "radio_intercept", name = "Radio Traffic Intercepted", desc = "Their communications in the air. What are they saying? What are they planning? Partial picture, crucial timing." },
+    { id = "false_trail", name = "Trail Gone Cold", desc = "The tracks disappeared. Doubled back, dispersed, or prepared. The hunt continues without direction." },
+]
+
+# Local Relations
+local = [
+    { id = "village_political_shift", name = "Village Political Shift", desc = "The headman changed, the mood changed. Government or VC influence gained ground. The balance tips." },
+    { id = "arvn_reinforcement", name = "ARVN Reinforcement", desc = "South Vietnamese troops assigned. Quality unknown. Integration required. Hope for competence, plan for independence." },
+    { id = "montagnard_contact", name = "Montagnard Contact", desc = "Highland tribe encounter. Traditional enemies of Vietnamese - both sides. Potential allies for Americans. Cultural navigation required." },
+    { id = "missionary_presence", name = "Missionary Presence", desc = "Civilians in the AO. Religious workers, NGOs. Complication to operations, connection to home. Handle with care." },
+    { id = "journalist_interest", name = "Press Interest", desc = "Reporter wants to cover operations. Opportunity or liability? What they see depends on what you show. What they report changes the war." },
+]
+
+# Supply and Logistics
+logistics = [
+    { id = "cache_discovered", name = "Supply Cache Discovered", desc = "Enemy materials found - could be current supplies or old dump. Worth tracking or just destroy and move?" },
+    { id = "air_asset_available", name = "Air Assets Available", desc = "Fast movers or gunships on station. What to use them for? The temporary advantage." },
+    { id = "communication_issues", name = "Communication Degraded", desc = "Radio problems, but not dead. Partial contact with support. Some resources available, coordination difficult." },
+    { id = "resupply_contents", name = "Resupply Contents Unknown", desc = "The bird came, the crates are here. What's inside matches manifest... or doesn't. Priorities versus bureaucracy." },
+    { id = "vehicle_breakdown", name = "Vehicle Breakdown", desc = "Transport disabled. Repair possible, time required. The mission adjusts around mechanical failure." },
+]
+
+# Command and Orders
+command = [
+    { id = "orders_ambiguous", name = "Ambiguous Orders", desc = "Command's intent unclear. Multiple interpretations possible. What did they actually mean? What do you actually do?" },
+    { id = "radio_silence", name = "Radio Silence Ordered", desc = "Comms down for operational security. Alone with your decisions. No confirmation, no support calls. Independence." },
+    { id = "priority_conflict", name = "Conflicting Priorities", desc = "Two valid objectives, resources for one. Command wants both. The impossible choice dressed as orders." },
+    { id = "timeline_pressure", name = "Timeline Pressure", desc = "Deadline imposed from above. Faster than safe. The speed versus security calculation." },
+    { id = "observation_opportunity", name = "Observation Position Available", desc = "High ground, good visibility. Hold for intelligence or continue mission? The detour that might matter." },
+]

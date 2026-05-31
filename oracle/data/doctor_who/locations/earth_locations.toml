@@ -1,0 +1,176 @@
+# Doctor Who Earth Locations
+# Significant places on our pale blue dot
+
+[military_organizations]
+description = "Where humanity defends itself against the impossible"
+
+[[military_organizations.entries]]
+name = "UNIT HQ (The Tower)"
+description = "UNIT operations center beneath the Tower of London. The Black Archive holds artifacts too dangerous for public knowledge. Ravens watch the entrance."
+
+[[military_organizations.entries]]
+name = "The Black Archive"
+description = "Below the Tower, behind memory-wiping technology. Every piece of alien tech UNIT has recovered. The Doctor's file is in there. It's extensive."
+
+[[military_organizations.entries]]
+name = "Geneva UNIT Command"
+description = "International headquarters coordinating global response to alien threats. Bureaucracy meets extraterrestrial diplomacy."
+
+[[military_organizations.entries]]
+name = "Porton Down"
+description = "Government research facility. Officially: chemical weapons. Actually: alien biology. The specimens are concerning."
+
+[[military_organizations.entries]]
+name = "RAF Flyingdales"
+description = "Missile warning station in Yorkshire. Also tracks alien spacecraft. The radar sees things the reports don't mention."
+
+[torchwood_facilities]
+description = "Outside the government, beyond the police"
+
+[[torchwood_facilities.entries]]
+name = "Torchwood Hub (Cardiff)"
+description = "Beneath the Millennium Centre, accessible through a tourist office and a perception filter. Command center, morgue, cells, and a pterodactyl."
+
+[[torchwood_facilities.entries]]
+name = "The Rift Manipulator"
+description = "Heart of Torchwood Cardiff. Controls the space-time rift's opening. Get the settings wrong and you could swallow the city."
+
+[[torchwood_facilities.entries]]
+name = "Torchwood One (Canary Wharf - Destroyed)"
+description = "Former headquarters. Thirty floors of alien research. All gone in the Battle of Canary Wharf. Cybermen and Daleks. Eight hundred dead."
+
+[[torchwood_facilities.entries]]
+name = "Torchwood Two (Glasgow)"
+description = "One very strange man. What he does up there is anyone's guess. Reports are... colorful."
+
+[[torchwood_facilities.entries]]
+name = "Torchwood Four"
+description = "Missing. Completely missing. Vanished one day. The file just says 'pending.' It's been pending for decades."
+
+[[torchwood_facilities.entries]]
+name = "The Vaults"
+description = "Torchwood's secure storage. Alien prisoners, dangerous artifacts, things that can't be destroyed. Life-forms in stasis cells."
+
+[cardiff_rift_zone]
+description = "The wound in space-time"
+
+[[cardiff_rift_zone.entries]]
+name = "Cardiff Bay"
+description = "The Rift runs beneath the water. Energy bleeds through. The TARDIS refuels here. So do less friendly things."
+
+[[cardiff_rift_zone.entries]]
+name = "Roald Dahl Plass"
+description = "Public plaza above the Hub. The perception filter hides the lift. Tourists stand on the invisible entrance."
+
+[[cardiff_rift_zone.entries]]
+name = "The Millennium Centre"
+description = "Arts center above impossible depths. The Rift energy flows up through it. Performances have strange acoustics."
+
+[[cardiff_rift_zone.entries]]
+name = "Cardiff Castle"
+description = "Norman keep on Roman foundations. The Rift was noticed here first. Ancient defenses against ancient incursions."
+
+[[cardiff_rift_zone.entries]]
+name = "Splott"
+description = "Cardiff suburb. Rift activity hotspot. Strange things fall from the sky here. Residents have learned not to ask questions."
+
+[london_landmarks]
+description = "The capital, center of so many invasions"
+
+[[london_landmarks.entries]]
+name = "10 Downing Street"
+description = "The Prime Minister's residence. Slitheen have infiltrated here. The Master has ruled from here. It's been rebuilt several times."
+
+[[london_landmarks.entries]]
+name = "Big Ben / Elizabeth Tower"
+description = "Crashed into by spacecraft. Damaged by various invasions. The clock keeps time despite temporal anomalies. British resilience in architecture."
+
+[[london_landmarks.entries]]
+name = "The Thames"
+description = "London's river. Spaceships have crashed into it. Cybermen have marched across it. The Thames Barrier holds back more than water."
+
+[[london_landmarks.entries]]
+name = "Canary Wharf"
+description = "Financial district. Torchwood One was here. The Battle of Canary Wharf opened the void. The towers remember the screams."
+
+[[london_landmarks.entries]]
+name = "Henrik's Department Store"
+description = "Where Rose Tyler worked. Where the Autons came to life. Where she met the Doctor. Just a shop. Changed everything."
+
+[[london_landmarks.entries]]
+name = "The Powell Estate"
+description = "Council flats in South London. Rose's home. Jackie's domain. The window the Doctor crashed through. Ordinary lives touching the extraordinary."
+
+[[london_landmarks.entries]]
+name = "St Paul's Cathedral"
+description = "Wren's masterpiece. Cybermen marched down its steps during the invasion. The dome has seen more than prayers."
+
+[[london_landmarks.entries]]
+name = "The London Eye"
+description = "Giant wheel on the South Bank. The Nestene Consciousness used it as a transmitter. Lovely views. Occasional alien signals."
+
+[[london_landmarks.entries]]
+name = "The British Museum"
+description = "Contains artifacts from every culture - including some not of this Earth. The Egyptology wing is particularly concerning."
+
+[historical_sites]
+description = "Places with deeper significance"
+
+[[historical_sites.entries]]
+name = "Stonehenge"
+description = "Ancient monument. Below it: the Pandorica Chamber. Every invasion force in the universe came here once. Bad day."
+
+[[historical_sites.entries]]
+name = "Coal Hill School / Academy"
+description = "Where it all began. Susan Foreman was a student. Clara Oswald taught here. The school has an unusual history with time travelers."
+
+[[historical_sites.entries]]
+name = "Balmoral Castle"
+description = "Royal Scottish residence. Queen Victoria met a werewolf here. Founded Torchwood. The monarchy has complicated feelings about the Doctor."
+
+[[historical_sites.entries]]
+name = "Hadrian's Wall"
+description = "Roman boundary. Some say it kept more than Picts out. The ancient stones have witnessed strange things."
+
+[[historical_sites.entries]]
+name = "The Globe Theatre"
+description = "Shakespeare's stage. The Carrionites tried to end the world here. Words have power. Especially his words."
+
+[[historical_sites.entries]]
+name = "Canterbury Cathedral"
+description = "Ancient church with deeper history. Crypts hold secrets. The stone has absorbed centuries of faith - and something else."
+
+[other_significant_locations]
+description = "Places that matter"
+
+[[other_significant_locations.entries]]
+name = "Leadworth"
+description = "Small English village. Amy Pond's home. Prisoner Zero hid here for twelve years. The duck pond has no ducks."
+
+[[other_significant_locations.entries]]
+name = "Sheffield"
+description = "Graham, Ryan, and Yaz's home city. The train where they met the Doctor. Where the Stenza came hunting. Industrial heritage meets alien invasion."
+
+[[other_significant_locations.entries]]
+name = "Lake Silencio"
+description = "Utah, USA. April 22, 2011. A fixed point in time. The Doctor dies here. Or appears to. Time can be rewritten - mostly."
+
+[[other_significant_locations.entries]]
+name = "Adipose Industries"
+description = "London office building. The fat just walks away. Adipose nursery planet Earth. Miss Foster didn't survive the client's arrival."
+
+[[other_significant_locations.entries]]
+name = "The Rattigan Academy"
+description = "Genius school. Actually a Sontaran staging ground. ATMOS devices in every car. The boy genius made a terrible choice."
+
+[[other_significant_locations.entries]]
+name = "Lady Cassandra's Hospital"
+description = "New New York, New Earth. Cat nurses and experimental treatments. Ward 26 is where they keep the Face of Boe."
+
+[[other_significant_locations.entries]]
+name = "The Christmas Star"
+description = "Spaceship that appears as the Christmas star. The Sycorax, the Racnoss, the Titanic. London at Christmas. Guaranteed excitement."
+
+[[other_significant_locations.entries]]
+name = "Devil's End"
+description = "English village hiding an ancient evil. The Master found Azal here. The last of the Daemons. Pagan traditions with alien origins."

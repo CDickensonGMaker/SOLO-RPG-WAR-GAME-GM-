@@ -1,0 +1,92 @@
+# WWII Special Operations Encounters
+# Behind enemy lines, intelligence work, and unconventional warfare
+
+[sabotage]
+description = "Destruction behind enemy lines"
+entries = [
+    "Railway bridge demolition, timer set, guards approaching",
+    "Factory sabotage, making it look like accident",
+    "Power station attack, plunging region into darkness",
+    "Fuel depot destruction, secondary explosions expected",
+    "Communication lines cut, isolating enemy command",
+    "Supply train derailment, Maquis watching from treeline",
+    "Aircraft sabotage on airfield, thermite in engines",
+    "Heavy water facility, Norwegian resistance involved",
+    "U-boat pen attack, concrete thick but not invulnerable",
+    "Radar station demolition, blinding enemy air defense"
+]
+
+[intelligence]
+description = "Gathering information the enemy wants kept secret"
+entries = [
+    "Document photography in enemy headquarters, guards outside door",
+    "Recruiting turned enemy officer, trust is fragile",
+    "Radio intercept station, Enigma traffic patterns",
+    "Prisoner interrogation, time pressure, limited methods",
+    "Aerial reconnaissance analysis, something wrong with that factory",
+    "Dead drop servicing, Gestapo surveillance possible",
+    "Codebreaking breakthrough, Ultra must remain secret",
+    "Agent meeting in neutral territory, identities masked",
+    "Double agent management, which side are they really on",
+    "Order of battle intelligence, counting divisions"
+]
+
+[escape_evasion]
+description = "POWs breaking free, airmen on the run"
+entries = [
+    "Tunnel escape, guards have discovered the entrance",
+    "Downed airman, resistance contact expected at farmhouse",
+    "POW camp wire cutting, searchlights sweeping",
+    "Evading through occupied territory, papers won't hold up",
+    "Resistance safe house compromised, alternate route needed",
+    "Crossing into neutral Switzerland, border patrol ahead",
+    "Hidden in compartment during train search",
+    "Pyrenees crossing, guide may be double agent",
+    "Sea evacuation, fishing boat to England",
+    "Forged papers at checkpoint, German officer suspicious"
+]
+
+[resistance_operations]
+description = "Underground warfare in occupied Europe"
+entries = [
+    "Arms drop reception, RAF aircraft circling",
+    "Cell meeting, new orders from London",
+    "Collaborator assassination, escape route planned",
+    "Underground newspaper distribution, Gestapo hunting",
+    "Weapons cache relocation, current location compromised",
+    "Allied airmen hidden, moving them to next safe house",
+    "Radio transmission to London, direction finders hunting",
+    "Recruitment meeting, potential member or informant?",
+    "Reprisal threat, hostages taken for resistance action",
+    "Liberation planning, coordination with advancing Allies"
+]
+
+[oss_soe_missions]
+description = "Professional intelligence agency operations"
+entries = [
+    "Agent insertion by parachute, reception committee waiting",
+    "Jedburgh team organizing resistance, supplies limited",
+    "Operational group direct action, hit and run",
+    "Circuit organization, compartmentalization essential",
+    "Blown agent extraction, enemy closing in",
+    "W/T operator captured, network compromised",
+    "Assassination of high-value target, political implications",
+    "False flag operation, making it look like internal conflict",
+    "Agent turned by enemy, feeding false intelligence",
+    "Network rollup, damage assessment and survivor extraction"
+]
+
+[special_forces]
+description = "Commando and Ranger operations"
+entries = [
+    "Coastal raid, in by rubber boat, out before dawn",
+    "Prisoner snatch for intelligence, specific target",
+    "Ranger point assault, scaling cliffs under fire",
+    "SAS desert raid, jeeps loaded with Vickers",
+    "Frogman attack on harbor shipping",
+    "Glider assault on fortified position",
+    "Long range desert patrol, behind Rommel's lines",
+    "Brandenburger false flag operation, wearing enemy uniforms",
+    "Beach reconnaissance, mapping invasion obstacles",
+    "Pathfinder marking drop zones, enemy all around"
+]

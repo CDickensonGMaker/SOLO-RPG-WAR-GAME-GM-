@@ -1,0 +1,86 @@
+# Alien Worlds of the Bug War
+# Every planet has a story written in human blood
+
+[bug_infested]
+description = "Worlds controlled by the Arachnids"
+entries = [
+  { text = "Klendathu - The homeworld, a volcanic nightmare where millions have died trying to establish a foothold, the sky burns orange with plasma fire", weight = 2 },
+  { text = "Planet P - Officially designated for propaganda purposes, where brain bugs coordinate system-wide hive activity, every rock hides tunnels", weight = 2 },
+  { text = "Tango Urilla - Desert hellscape, bugs have created underground oceans of their digestive acids, the sand itself is corrosive", weight = 1 },
+  { text = "Zegema Beach - The ironic name given to a world where bugs first demonstrated orbital plasma capability, coastal colonies now glass", weight = 2 },
+  { text = "Dantana - Jungle world, bugs have adapted to live in the canopy, attacks come from above, MI has learned to fear trees", weight = 1 },
+  { text = "Roku San - Former Federation colony, bugs burrowed up through the city centers, the screaming lasted three days", weight = 2 },
+  { text = "Hydora Prime - Water world, bugs have developed aquatic variants, nowhere is safe, not even the seas", weight = 1 },
+  { text = "Big K - Soldier slang for Klendathu's second moon, smaller hive, 'softer' target, still 40% casualty rate on average drops", weight = 2 },
+  { text = "Hesperus - Binary star system, constant twilight, bugs have evolved to see in spectrums humans can't, perfect hunting ground", weight = 1 },
+  { text = "Sanctuary - Named before we knew better, bug tunnels go down thirty kilometers, we've mapped maybe one percent", weight = 1 },
+]
+
+[colonized_worlds]
+description = "Federation-controlled planets"
+entries = [
+  { text = "Terra - Earth, the birthplace, now fortress-protected after Buenos Aires, civilians live under the illusion of safety", weight = 2 },
+  { text = "Luna - Earth's moon, covered in military installations, mining operations supply the war effort, workers are often veterans", weight = 1 },
+  { text = "Mars - Red planet, terraformed generations ago, now primarily military industrial complex, the soil runs with weapon coolant", weight = 1 },
+  { text = "New Buenos Aires - Orbital habitat named in memory, where survivors of the asteroid built new lives under artificial skies", weight = 2 },
+  { text = "Faraway - Edge of explored space, colonists chose distance over safety, bug war seems far away until it isn't", weight = 1 },
+  { text = "Iskander - Garden world, produces most of the Federation's food, defended by three battle groups permanently stationed", weight = 1 },
+  { text = "Port Joe Smith - Major shipyard world, orbital docks visible from the surface, everyone works for Fleet in some way", weight = 1 },
+  { text = "Zephyr - Light gravity world, popular R&R destination, where troopers spend their hazard pay and try to forget", weight = 2 },
+  { text = "Heinlein - Named for a Federation founder, university world, where citizens debate philosophy while MI dies for it", weight = 1 },
+  { text = "Hatari - Mining world, rough frontier culture, closest Federation world to the bug border, everyone is armed", weight = 1 },
+]
+
+[quarantine_zones]
+description = "Worlds locked down by Federation order"
+entries = [
+  { text = "Cordelia - Bug infection confirmed but not overwhelming, planet sealed pending 'cleansing operations' that never seem to come", weight = 2 },
+  { text = "Tophet - Experimental weapon test site, something went wrong, atmosphere now toxic to all known life including bugs", weight = 1 },
+  { text = "Memnon - Possible brain bug capture site, psychic contamination suspected, any ship that lands doesn't leave", weight = 1 },
+  { text = "Perdition - Colony that went silent, reconnaissance found everyone dead but no bugs, quarantine indefinite", weight = 1 },
+  { text = "Echo - Federation research station, studying captured bug technology, quarantine is for our protection, not theirs", weight = 1 },
+  { text = "Cassandra - Colonists reported bug sightings years before official contact, no one believed them, now it's sealed", weight = 1 },
+  { text = "Typhon - Bug biological weapons were deployed here, new strains of unknown capability, Federation burned the cities from orbit", weight = 1 },
+  { text = "Erebus - Dark world, minimal sunlight, colony went silent, scouts reported 'wrong' bugs, no further missions authorized", weight = 1 },
+]
+
+[contested_territories]
+description = "Worlds where the war rages"
+entries = [
+  { text = "Hesperus IV - Changed hands six times this year, current Federation control limited to two firebase perimeters", weight = 2 },
+  { text = "Pollux Colony - Civilian population sheltering underground while MI and bugs fight through the ruins above", weight = 2 },
+  { text = "New Kashmir - Mountain world, bugs in the valleys, humans on the peaks, neither can dislodge the other", weight = 1 },
+  { text = "Tartarus - Appropriately named, bugs and MI have been dying here for five years, strategic value uncertain", weight = 2 },
+  { text = "Marathon - Named for the ancient battle, defenders have held against seventeen major bug offensives", weight = 1 },
+  { text = "Golgotha - Colony reduced to siege conditions, relief convoys can't break through, rations measured in days", weight = 1 },
+  { text = "Kursk - Major armor engagement world, MI heavy units clash with tanker bugs, wrecks dot the plains", weight = 1 },
+  { text = "Stalingrad Station - Orbital facility, bugs have infested lower decks, humans hold upper levels, meter by meter warfare", weight = 1 },
+  { text = "Midway - Strategic system, whoever controls it controls sector shipping, both sides throwing everything at it", weight = 1 },
+  { text = "Thermopylae Pass - Mountain chokepoint, bugs must come through here, humans have built it into a death trap", weight = 1 },
+]
+
+[devastated_worlds]
+description = "Planets destroyed by the war"
+entries = [
+  { text = "Buenos Aires Memorial - Earth territory, still irradiated from the bug asteroid, the crater is visible from orbit", weight = 2 },
+  { text = "Paradise Lost - Former garden world, bug infestation triggered nuclear sterilization, surface is glass and ash", weight = 2 },
+  { text = "Ember - Burned by plasma bug bombardment, atmosphere ignited, three million colonists in forty minutes", weight = 1 },
+  { text = "Testament - World where bugs tested new biological weapons, population died in ways that still show up in nightmares", weight = 1 },
+  { text = "Dust - Asteroid bombardment, Federation's own weapon turned against them by clever bug trajectory manipulation", weight = 1 },
+  { text = "Silence - World where every human simply stopped, brain bug attack on planetary scale, bodies still where they fell", weight = 1 },
+  { text = "Pyre - Federation torch squad got overzealous, bugs and colonists burned together, no inquiry was held", weight = 1 },
+  { text = "Omega - Last stand world, where three regiments held until the evacuation completed, their bones mix with bug shells", weight = 2 },
+  { text = "Memorial Gardens - Once planned as a park world, now a mass grave, names of the dead carved into kilometer-long walls", weight = 1 },
+  { text = "Yesterday - Pre-war colony name, nostalgic, peaceful. Now just a coordinate where recon drones return corrupted data", weight = 1 },
+]
+
+[strategic_worlds]
+description = "Worlds of military importance"
+entries = [
+  { text = "Sanctuary Station - Major Fleet anchorage, repairs and resupply, hundreds of ships at any time, target of constant bug probes", weight = 2 },
+  { text = "Arsenal - Industrial world, produces Morita rifles and power suit components, never seen a bug, paranoid anyway", weight = 1 },
+  { text = "Bastion - Fortress world, multiple defense layers, fallback position if the line breaks, everyone hopes it's unnecessary", weight = 1 },
+  { text = "Gateway - System with natural jump points, whoever holds it controls movement in the sector", weight = 1 },
+  { text = "Logistics Hub Titan - Saturn's moon, warehouse for the entire outer system campaign, bureaucracy as dense as bug tunnels", weight = 1 },
+  { text = "Training World Achilles - Multiple biomes for combat preparation, live bug specimens for realistic exercises", weight = 1 },
+]

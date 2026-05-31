@@ -1,0 +1,85 @@
+# Vietnam War Social Encounters
+# Hearts and minds, the war between battles
+
+[encounters]
+
+# Bar and Recreation
+bars = [
+    { id = "mama_san_bar", name = "Mama-San's Bar", desc = "Saigon tea, watered beer, bar girls with sad eyes. 'You buy me drink, GI?' The economy of occupation. Everyone's working." },
+    { id = "soul_brothers_bar", name = "Soul Brothers' Bar", desc = "Black soldiers have their own spaces now. The racial tension from the World followed them here. Dap handshakes, different music." },
+    { id = "enlisted_club_fight", name = "Enlisted Club Brawl", desc = "Started over nothing, ended in blood. Unit pride, racial tension, or just war spilling out. MPs incoming." },
+    { id = "drug_deal", name = "Drug Deal Offered", desc = "'Number one smoke, GI. Number one scag.' Cheap and available. The escape that becomes the trap." },
+    { id = "bar_girl_proposition", name = "Bar Girl Complexity", desc = "She says she loves you. She says that to everyone. Maybe she means it this time. You want to believe something." },
+    { id = "black_market_contact", name = "Black Market Contact", desc = "'I can get you anything, brother. PX prices.' The underground economy that keeps everyone supplied." },
+]
+
+# ARVN Interactions
+arvn = [
+    { id = "arvn_cooperation", name = "ARVN Joint Operation", desc = "Working with South Vietnamese army. Language barrier, trust barrier, commitment questions. Are they fighting their war or watching us fight it?" },
+    { id = "arvn_abandonment", name = "ARVN Unit Withdraws", desc = "Contact starts, allies disappear. Left holding alone. Hearts and minds, armed and running." },
+    { id = "arvn_corruption", name = "ARVN Corruption Witnessed", desc = "The officer selling supplies. The unit that exists only on paper. Ghost soldiers, real payroll. This is what we're supporting?" },
+    { id = "competent_arvn", name = "Surprisingly Competent ARVN", desc = "This unit fights. Their LT knows his business. Respect earned in combat. The exception that proves nothing." },
+    { id = "arvn_intelligence", name = "ARVN Intelligence Warning", desc = "They know something. Shared or not shared? Trust them, use them, verify everything." },
+]
+
+# Civilian Interactions
+civilians = [
+    { id = "interpreter_trust", name = "Interpreter Reliability", desc = "What did the villager actually say? What did the interpreter say they said? The gap is life and death." },
+    { id = "child_beggar", name = "Child Beggars", desc = "'GI, you give me money! You give me gum!' Innocence weaponized. Grenades from children happened before." },
+    { id = "village_elder", name = "Village Elder Negotiation", desc = "The old man speaks for the village. What does he want? What can you offer? The hearts and minds transaction." },
+    { id = "civilian_casualties", name = "Civilian Casualties Aftermath", desc = "Fire mission hit wrong. The bodies are small. The mother is screaming. There is no good response." },
+    { id = "refugee_column", name = "Refugee Column", desc = "Civilians fleeing combat. VC in their midst? Sympathy and suspicion inseparable. Let them pass or search them?" },
+    { id = "prostitute_humanity", name = "Prostitute's Story", desc = "She had a name before this. Had a family. Had choices. The war took those. What's left is survival." },
+]
+
+# Interrogation
+interrogation = [
+    { id = "interrogation_observe", name = "Interrogation Observation", desc = "ARVN questioning prisoner. Methods not in any manual. Information flowing. The line between useful and torture." },
+    { id = "reluctant_informer", name = "Reluctant Informer", desc = "Villager knows something. Won't say it. Fear of VC retaliation stronger than fear of you. How do you compete with terror?" },
+    { id = "false_confession", name = "Obvious False Confession", desc = "He's saying what he thinks you want. None of it useful. The truth torture doesn't reveal." },
+    { id = "vc_defector", name = "VC Defector", desc = "Chieu Hoi - he came in voluntarily. Genuine switch or infiltrator? The intel is valuable if true. Fatal if false." },
+    { id = "family_leverage", name = "Family Leverage", desc = "'Tell us or your family...' The threat that works because it's real. Effective and soul-destroying." },
+]
+
+# Command Interactions
+command = [
+    { id = "officer_incompetence", name = "Incompetent Officer Orders", desc = "The LT wants to do it his way. His way gets people killed. How do you tell him? Can you tell him?" },
+    { id = "lifer_vs_draftee", name = "Lifer vs. Draftee Tension", desc = "Career NCO believes in the mission. Draftees want to survive it. The fundamental conflict of this war." },
+    { id = "fragging_discussion", name = "Fragging Discussion", desc = "Quiet talk about the lieutenant. 'Accidents happen.' Is this serious? Is this treason? Is this survival?" },
+    { id = "war_crime_order", name = "Illegal Order Given", desc = "The command isn't lawful. Follow it, refuse it, document it? Career, conscience, conviction in conflict." },
+    { id = "medal_politics", name = "Medal Politics", desc = "Silver Star nomination for the captain. The action wasn't what the paperwork says. The combat was real. The heroism was manufactured." },
+]
+
+# Letters and Home
+home = [
+    { id = "dear_john", name = "Dear John Letter", desc = "She found someone else. 'You've changed.' 'I can't wait anymore.' The World continued without him. What's left to go back to?" },
+    { id = "birth_news", name = "Birth of Child News", desc = "Father from 10,000 miles away. Pride and terror mixed. Will he meet this kid? What will he bring home to them?" },
+    { id = "death_in_family", name = "Family Death News", desc = "Father, mother, someone gone. Emergency leave possible but the war doesn't stop. Mourn here or mourn there?" },
+    { id = "hometown_news", name = "News from Hometown", desc = "Protests, politics, the war reported differently than lived. They don't understand. They can't understand." },
+    { id = "recording_message", name = "Recording Message Home", desc = "Reel-to-reel tape, voice instead of letter. What do you say? What can you say? The lies are protection." },
+]
+
+# Moral Dilemmas
+moral = [
+    { id = "wounded_enemy", name = "Wounded Enemy Decision", desc = "NVA soldier, gut-shot, dying slow. Medical supplies limited. Treat him or let him go? What does enemy mean?" },
+    { id = "body_desecration", name = "Body Desecration Witnessed", desc = "Someone's cutting ears, taking teeth. Trophies of war. Stop it? Report it? Participate? The lines are gone." },
+    { id = "village_burning_order", name = "Village Burning Order", desc = "Command says burn it. 'VC sympathizers.' The people watching their homes go. Orders are orders. Conscience is conscience." },
+    { id = "theft_opportunity", name = "Looting Opportunity", desc = "Dead bodies, valuables visible. Who would know? The dead don't report. The living need... something." },
+    { id = "coverup_pressure", name = "Cover-Up Pressure", desc = "Something happened that didn't happen. The official story protects everyone. Going along is easiest. Living with it isn't." },
+]
+
+# Press and Documentation
+press = [
+    { id = "reporter_embedded", name = "Reporter Embedded", desc = "Journalist with the unit. What will they see? What will they report? Truth or narrative? Both are weapons." },
+    { id = "photographer_shot", name = "Photographer Captures Moment", desc = "The camera caught everything. The image will tell a story. Which story depends on context that won't be included." },
+    { id = "interview_request", name = "Interview Request", desc = "Reporter wants your story. What do you say? What does command want you to say? What's the truth even?" },
+    { id = "atrocity_documentation", name = "Atrocity Documentation", desc = "Someone's recording this. Photographs, notes, names. Protection or evidence? What happens with this information?" },
+]
+
+# Vietnamese Relationships
+relationships = [
+    { id = "vietnamese_girlfriend", name = "Vietnamese Girlfriend Relationship", desc = "More than transaction, less than understood. Language barrier, culture barrier, survival on both sides. What is this really?" },
+    { id = "hooch_maid", name = "Hooch Maid Dynamics", desc = "She cleans, does laundry, knows everything. Trusted with access but not trust. The intimacy of service without intimacy." },
+    { id = "kit_carson_tension", name = "Kit Carson Scout Tension", desc = "Former VC, now working for you. How former? How working? The unit doesn't trust him. Maybe shouldn't." },
+    { id = "orphanage_visit", name = "Orphanage Visit", desc = "Kids without parents, war's smallest casualties. Candy and guilt. What future do they have? What future did we give them?" },
+]

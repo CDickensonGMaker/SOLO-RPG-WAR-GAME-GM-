@@ -1,0 +1,65 @@
+# Lost Regiment Locations - Exploration
+# Unknown territory, potential allies, and strategic discoveries
+
+[exploration]
+entries = [
+    # Uncharted Regions
+    "The Unmapped Forest - dense woodland never properly surveyed",
+    "Beyond the Mountains - territory past the natural barrier",
+    "The Far Shore - land across the great water",
+    "Northern Reaches - cold territory with unknown inhabitants",
+    "Southern Jungles - tropical zone beyond current operations",
+    "The Interior - heartland no displaced person has seen",
+    "Island Chain - offshore territory of unknown value",
+    "The Other Side - what lies beyond the enemy's territory",
+    "Underground Rivers - cave systems potentially connecting regions",
+    "The High Passes - mountain routes closed by snow most of year",
+
+    # Potential Ally Territories
+    "The Resisting Kingdom - native realm still fighting the enemy alone",
+    "Free Peoples' Valley - refugees who escaped the enemy",
+    "Hidden City - rumored settlement of escaped slaves",
+    "The Sea Traders - coastal people with ships and commerce",
+    "Mountain Confederation - independent tribes suspicious but not hostile",
+    "River People's Lands - fishers and traders controlling waterways",
+    "The Iron Workers - native smiths with valuable metallurgical knowledge",
+    "Horsebreeders' Steppes - nomads who hate the enemy more than strangers",
+    "The Scholars' Refuge - repository of this world's knowledge",
+    "Rebel Province - enemy subjects ready to revolt with support",
+
+    # Resource Sites
+    "Coal Seams - exposed deposits visible from expedition routes",
+    "Iron Mountain - ore-rich peak waiting for mining expertise",
+    "The Salt Flats - preservation resource in contested territory",
+    "Oil Springs - petroleum seepage with industrial potential",
+    "Sulfur Vents - volcanic deposits needed for powder production",
+    "The Great Forest - timber resources for expansion",
+    "Copper Valley - second metal needed for industry",
+    "Nitrate Caves - natural deposits for explosives",
+    "Clay Beds - ceramic production resource",
+    "Limestone Quarry - flux for steel and building material",
+
+    # Strategic Locations
+    "The Narrows - chokepoint controlling movement between regions",
+    "Signal Peak - height allowing communication across vast distance",
+    "The Harbor - natural port that could enable naval power",
+    "Railroad Gap - terrain allowing rail extension",
+    "Defensive Ridge - natural fortress position",
+    "River Source - control of water supply",
+    "The Isthmus - narrow land controlling two bodies of water",
+    "Observation Heights - vista revealing enemy movements for miles",
+    "Cache Valley - hidden location for supply depots",
+    "The Sanctuary - defensible position for last stand if needed",
+
+    # Mysterious Ruins
+    "The Star Map Chamber - ancient astronomical observatory",
+    "Buried City - excavation revealing previous advanced culture",
+    "The Mechanism - ancient machine of unknown purpose",
+    "Library Ruins - repository of knowledge mostly destroyed",
+    "The Watchers - statues of unknown origin and meaning",
+    "Ancient Harbor - evidence of previous seafaring civilization",
+    "The Warning Stones - monuments in unknown language",
+    "Collapsed Tower - evidence of previous height of construction",
+    "The Sealed Vault - unopened chamber of the ancients",
+    "Roads to Nowhere - infrastructure of vanished people"
+]

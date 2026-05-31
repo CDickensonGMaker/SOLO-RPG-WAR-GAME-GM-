@@ -1,5 +1,5 @@
 # Historical Social Encounters
-# 40+ social interactions and civilian encounters
+# 95+ social interactions and civilian encounters across eras
 
 [encounters]
 entries = [
@@ -57,5 +57,69 @@ entries = [
   { text = "A communal celebration provides cover for private business", weight = 2 },
   { text = "Someone is accused by their neighbors of crimes or impropriety", weight = 2 },
   { text = "Refugees seeking shelter strain community resources and patience", weight = 2 },
-  { text = "A respected figure is revealed to be other than they seemed", weight = 1 }
+  { text = "A respected figure is revealed to be other than they seemed", weight = 1 },
+
+  # Roman Social Life
+  { text = "Patron and client meet at the morning salutatio - favors exchanged for loyalty", weight = 2 },
+  { text = "The public baths become a place for business, gossip, and political deals", weight = 2 },
+  { text = "A freedman grows wealthier than his former master - social tension follows", weight = 2 },
+  { text = "The dinner party (cena) reveals more through seating arrangements than conversation", weight = 2 },
+  { text = "A slave sees everything but must pretend to see nothing", weight = 2 },
+
+  # Medieval Social Customs
+  { text = "The lord's right to first night is invoked - or threatened to be invoked", weight = 1 },
+  { text = "Sanctuary in the church protects a fugitive - but for how long?", weight = 2 },
+  { text = "The village assembles for the manorial court - ancient disputes resurface", weight = 2 },
+  { text = "A troubadour's song mocks a powerful lord in terms everyone understands", weight = 2 },
+  { text = "The midwife's testimony could save or condemn the accused witch", weight = 1 },
+
+  # Renaissance Society
+  { text = "The salon gathers poets, artists, and philosophers under noble patronage", weight = 2 },
+  { text = "A courtier's wit wins favor - or a clever riposte makes a dangerous enemy", weight = 2 },
+  { text = "The Carnevale masks conceal identity - what happens beneath them stays hidden", weight = 2 },
+  { text = "A portrait commission reveals the painter knows too much about the subject", weight = 1 },
+  { text = "The courtesan's influence extends from the bedchamber to the council chamber", weight = 1 },
+
+  # Age of Sail Society
+  { text = "The press gang's victims wake aboard ship - complaint is futile", weight = 1 },
+  { text = "A sailor's sweetheart waits in every port - and so do old debts and enemies", weight = 2 },
+  { text = "The captain's table is an exercise in social navigation as treacherous as the sea", weight = 2 },
+  { text = "Rum rations and ship's biscuit breed grudges that fester for long voyages", weight = 2 },
+  { text = "A naval officer's honor demands satisfaction for an insult - but dueling is forbidden", weight = 2 },
+
+  # Victorian Social Life
+  { text = "The calling card left signals availability - or pointed absence", weight = 2 },
+  { text = "A servant's letter of character will make or break their future employment", weight = 2 },
+  { text = "The coming-out ball presents a daughter to society - and to the marriage market", weight = 2 },
+  { text = "The gentleman's club admits some and excludes others - blackballs are final", weight = 2 },
+  { text = "A lady's reputation hangs on being seen in the right places with the right people", weight = 2 },
+  { text = "The governess occupies an impossible social position - neither servant nor family", weight = 2 },
+
+  # Artisan and Trade Interactions
+  { text = "The guild bars an outsider from practicing their trade - violence enforces the rule", weight = 2 },
+  { text = "A journeyman's masterpiece is rejected - suspicion falls on jealous rivals", weight = 2 },
+  { text = "The tavern keeper knows who drinks too much and talks too freely", weight = 2 },
+  { text = "Apprentices live under their master's roof and authority - for better or worse", weight = 2 },
+  { text = "The moneylender calls in debts at the worst possible moment - as planned", weight = 2 },
+
+  # Public Spectacles and Gatherings
+  { text = "The public execution draws crowds who cheer, weep, or buy souvenirs", weight = 1 },
+  { text = "A traveling fair brings entertainment, opportunity for theft, and strange faces", weight = 2 },
+  { text = "The harvest festival briefly suspends social rules - dangerous liberties taken", weight = 2 },
+  { text = "A political speech inflames the crowd - will it become a rally or a riot?", weight = 2 },
+  { text = "The opera box displays wealth and connections as much as the stage displays art", weight = 2 },
+
+  # Outsiders and Strangers
+  { text = "Travelers from distant lands attract curiosity, suspicion, and opportunity", weight = 2 },
+  { text = "The Jewish quarter exists apart - visited for banking, avoided for everything else", weight = 2 },
+  { text = "Roma encampments bring accusations of child-theft and witch-craft", weight = 1 },
+  { text = "A Moor in a northern court is exotic enough to be interesting, foreign enough to be suspect", weight = 2 },
+  { text = "Refugees from religious persecution test the hospitality of those who share their faith", weight = 2 },
+
+  # Honor and Reputation
+  { text = "A slight to family honor demands response - but what form should it take?", weight = 2 },
+  { text = "Gossip spreads faster than plague - and can be just as deadly to its target", weight = 2 },
+  { text = "The challenge is delivered by second - will satisfaction be given or refused?", weight = 1 },
+  { text = "A woman's honor, once stained, cannot be cleaned - society's rules are unforgiving", weight = 2 },
+  { text = "Bankruptcy destroys more than finances - social standing evaporates overnight", weight = 2 }
 ]

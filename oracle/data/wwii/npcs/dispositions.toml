@@ -1,0 +1,42 @@
+# WWII NPC Dispositions
+# How people behave after years of total war
+
+[cooperative]
+description = "Helpful despite the circumstances"
+entries = [
+    "Exhausted but still fighting, shares what little they have",
+    "War-weary, just wants it over, helps anyone who might end it",
+    "Lost everything, helping others gives purpose",
+    "Professionally competent, does the job regardless of who asks",
+    "Believes in the cause, genuinely wants to help",
+    "Owes a debt from earlier in the war, paying it forward",
+    "Religious conviction to help the suffering",
+    "Sees something familiar in you, opens up"
+]
+
+[neutral]
+description = "Waiting to see which way the wind blows"
+entries = [
+    "Cautious, survived this long by not taking sides",
+    "Bureaucratic, follows procedures regardless of circumstances",
+    "Calculating, weighing what cooperation might cost or gain",
+    "Indifferent, too numbed by war to care much either way",
+    "Professional, willing to deal but keeps it businesslike",
+    "Uncertain, wants to help but fears consequences",
+    "Pragmatic, will cooperate for the right price",
+    "Watchful, judging character before committing"
+]
+
+[hostile]
+description = "Opposition ranging from passive to violent"
+entries = [
+    "Suspicious, too many betrayals to trust anyone",
+    "Resentful, blames your side for personal losses",
+    "Ideologically opposed, true believer in enemy cause",
+    "Fearful, thinks cooperation would bring punishment",
+    "Bitter, war took everything that mattered",
+    "Contemptuous, considers your side barbaric or weak",
+    "Desperate, willing to betray you for survival",
+    "Grieving, your uniform represents who killed their family",
+    "Collaborator, more loyal to occupiers than resistance"
+]

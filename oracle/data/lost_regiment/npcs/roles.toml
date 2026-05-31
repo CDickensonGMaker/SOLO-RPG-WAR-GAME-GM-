@@ -1,0 +1,101 @@
+# Lost Regiment NPC Roles
+# Fish out of water military, specialists, natives, and enemies
+
+[roles]
+entries = [
+    # Regiment Command Structure
+    "Regiment Commander adapting modern tactics to primitive warfare",
+    "Executive Officer managing impossible logistics",
+    "Battalion Commander holding the line with diminishing forces",
+    "Company Captain training local recruits",
+    "Staff Officer planning with incomplete maps",
+    "Adjutant maintaining order through chaos",
+    "Intelligence Officer learning enemy culture to defeat them",
+    "Provost Marshal keeping discipline in desperate times",
+
+    # NCO Corps
+    "Sergeant Major holding the regiment together through will alone",
+    "First Sergeant turning peasants into soldiers",
+    "Drill Sergeant teaching rifle tactics to sword-fighters",
+    "Supply Sergeant performing miracles of logistics",
+    "Weapons Sergeant maintaining irreplaceable firearms",
+    "Scout Sergeant mapping the unknown world",
+    "Medical Sergeant with a bag of dwindling supplies",
+    "Artillery Sergeant teaching geometry to save lives",
+
+    # Technical Specialists
+    "Chief Engineer building railroads from scratch",
+    "Master Machinist creating precision tools without factories",
+    "Gunsmith keeping weapons alive with handmade parts",
+    "Chemist synthesizing medicine from local plants",
+    "Telegraph Operator connecting a primitive world",
+    "Surveyor mapping territory no one has charted",
+    "Metallurgist improving local iron to steel",
+    "Steam Engineer bringing the industrial revolution early",
+
+    # Medical Personnel
+    "Chief Surgeon performing miracles without modern equipment",
+    "Field Medic triaging between saveable and lost",
+    "Nurse maintaining hygiene in a world without germ theory",
+    "Pharmacist creating drugs from memory and local herbs",
+    "Veterinarian keeping precious horses alive",
+    "Sanitation Officer preventing epidemics through knowledge",
+
+    # Support Specialists
+    "Quartermaster feeding an army in hostile territory",
+    "Chaplain maintaining faith in the impossible",
+    "Cook stretching rations into hope",
+    "Farrier shoeing horses for cavalry charges",
+    "Teamster hauling supplies through hostile land",
+    "Signalman coordinating battles with flags and mirrors",
+
+    # Native Allied Leaders
+    "Boyar Lord allied against common enemy",
+    "Tribal Chief who chose the strangers over tradition",
+    "Local Mayor organizing civilian support",
+    "Merchant Prince funding the resistance",
+    "Religious Leader blessing the strange warriors",
+    "Noble Lady using influence for the cause",
+    "Reformed Warlord fighting former allies",
+    "Peasant Leader who rallied the common folk",
+
+    # Native Converts - Military
+    "Native Officer in regiment uniform",
+    "Converted Cavalry Leader adapting old skills",
+    "Local Scout who knows the land intimately",
+    "Tribal Warrior learning rifle discipline",
+    "Former Enemy Prisoner turned soldier",
+    "Native Artillery Recruit with natural talent",
+    "Indigenous Engineer showing hidden resources",
+    "Converted Healer blending old and new medicine",
+
+    # Native Converts - Civilian
+    "Local Teacher spreading literacy",
+    "Native Apprentice Engineer building the future",
+    "Reformed Priest embracing new ideas",
+    "Peasant Inventor improving strange designs",
+    "Local Interpreter bridging two worlds",
+    "Indigenous Healer learning germ theory",
+    "Native Metalworker mastering new techniques",
+    "Local Administrator running hybrid government",
+
+    # Enemy Forces
+    "Horde Warlord commanding overwhelming numbers",
+    "Enemy Scout stalking the regiment's movements",
+    "Alien Priest demanding tribute and terror",
+    "Mounted Champion challenging to single combat",
+    "Siege Master learning to crack fortifications",
+    "Enemy Spy infiltrating allied territory",
+    "Slaver hunting escaped cattle (humans)",
+    "War Chief planning the final assault",
+
+    # Displaced Civilians
+    "Regimental Wife maintaining home in chaos",
+    "Camp Follower providing essential services",
+    "War Correspondent documenting the impossible",
+    "Civilian Doctor improving native medicine",
+    "Teacher educating the next generation",
+    "Merchant establishing trade networks",
+    "Displaced Child growing up between worlds",
+    "Former Slave from the old world, now free"
+]

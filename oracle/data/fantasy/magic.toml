@@ -1,0 +1,229 @@
+# Fantasy Magic System Elements
+# Magical effects, mishaps, items, and arcane phenomena
+
+[magical_effects]
+entries = [
+  # Environmental Signs
+  { text = "the air shimmers with barely-contained power, ozone sharp on the tongue", weight = 2 },
+  { text = "reality ripples like heat-haze, distances becoming uncertain", weight = 1 },
+  { text = "shadows move against the light, stretching toward the caster", weight = 1 },
+  { text = "frost crystals form on every surface despite the warmth", weight = 1 },
+  { text = "the ground trembles as something vast becomes aware of the magic", weight = 1 },
+  { text = "birds fall silent mid-song, then flee in all directions", weight = 1 },
+  { text = "a wind rises that smells of places that have never existed", weight = 1 },
+  { text = "colors drain from the surroundings, pooling around the spell's focus", weight = 1 },
+  { text = "whispers echo in a language that predates speech", weight = 1 },
+  { text = "the caster's shadow splits into multiples, each acting independently", weight = 1 },
+
+  # Visual Manifestations
+  { text = "symbols of light write themselves in the air, fading after being read", weight = 2 },
+  { text = "geometric patterns pulse beneath the skin of the caster, visible through flesh", weight = 1 },
+  { text = "the caster's eyes burn with inner light, leaving afterimages", weight = 1 },
+  { text = "ghostly hands assist in weaving the spell's gestures", weight = 1 },
+  { text = "reality cracks like ice under pressure, revealing void beneath", weight = 1 },
+  { text = "the spell takes visible form as words in a burning script", weight = 1 },
+  { text = "mirrors and reflective surfaces show something other than reality", weight = 1 },
+  { text = "the caster ages visibly as power flows through them, then recovers", weight = 1 },
+  { text = "a second sun seems to rise from the caster's hands", weight = 1 },
+  { text = "the world inverts colors briefly, darkness becoming light", weight = 1 },
+
+  # Auditory Phenomena
+  { text = "a tone rings out that resonates in bone rather than ear", weight = 1 },
+  { text = "distant thunder rolls though the sky is clear", weight = 1 },
+  { text = "the echo of the spell's words continues long after silence", weight = 1 },
+  { text = "a chorus of voices joins the incantation from nowhere", weight = 1 },
+  { text = "glass in the area vibrates at a frequency just below shattering", weight = 1 },
+  { text = "the sound of the spell creates harmonics that form recognizable words", weight = 1 },
+  { text = "silence spreads from the casting, eating all sound", weight = 1 },
+  { text = "the caster's voice deepens and multiplies, speaking from many throats", weight = 1 },
+
+  # Physical Sensations
+  { text = "pressure builds in the ears of all nearby, as before a storm", weight = 1 },
+  { text = "warmth spreads from the spell's center, comfortable at first, then concerning", weight = 1 },
+  { text = "the taste of copper floods every mouth in the vicinity", weight = 1 },
+  { text = "hair rises on end as static charge builds", weight = 1 },
+  { text = "gravity fluctuates, lightening then pressing down hard", weight = 1 },
+  { text = "a crawling sensation moves across skin like invisible insects", weight = 1 },
+  { text = "the spell's power thrums through the ground, felt through boots", weight = 1 },
+  { text = "tears form unbidden in the eyes of witnesses", weight = 1 },
+]
+
+[magical_mishaps]
+entries = [
+  # Temporal Distortions
+  { text = "the spell rebounds - the caster ages ten years in a heartbeat", weight = 1 },
+  { text = "time stutters, leaving everyone with fragmented memories of the last minute", weight = 1 },
+  { text = "the caster relives the same six seconds repeatedly before breaking free", weight = 1 },
+  { text = "everyone's reflection lags a moment behind, then catches up violently", weight = 1 },
+  { text = "the spell completes but won't trigger for d20 years", weight = 1 },
+  { text = "the caster's past and future selves briefly merge, causing confusion", weight = 1 },
+
+  # Physical Transformations
+  { text = "the caster's skin turns glass-transparent for a day, organs visible", weight = 1 },
+  { text = "the spell transforms the caster's bones to silver temporarily", weight = 1 },
+  { text = "random body parts swap locations with nearby creatures", weight = 1 },
+  { text = "the caster's blood turns to light and tries to escape through pores", weight = 1 },
+  { text = "hair becomes living serpents that hiss the caster's thoughts", weight = 1 },
+  { text = "the caster's shadow gains weight and must be carried", weight = 1 },
+  { text = "fingernails crystallize into gemstones that won't grow back", weight = 1 },
+
+  # Mental Effects
+  { text = "the caster forgets their own name but gains memory of another's life", weight = 1 },
+  { text = "languages scramble - the caster speaks all tongues but their native one", weight = 1 },
+  { text = "the spell's knowledge burns away, but adjacent memories go with it", weight = 1 },
+  { text = "the caster's inner voice speaks in someone else's personality now", weight = 1 },
+  { text = "sleep becomes impossible for a week; dreams manifest while waking", weight = 1 },
+  { text = "the caster can only lie for the next month, truth becoming physically painful", weight = 1 },
+
+  # Summoning Accidents
+  { text = "something answered the spell that wasn't invited and won't leave", weight = 1 },
+  { text = "a door opens in reality that the caster cannot close", weight = 1 },
+  { text = "the spell summons the wrong target - a near-miss through planar space", weight = 1 },
+  { text = "part of the caster is exchanged with something from elsewhere", weight = 1 },
+  { text = "the summoned creature is correct but from a wrong version of reality", weight = 1 },
+  { text = "instead of summoning to here, the caster is briefly summoned to there", weight = 1 },
+
+  # Energetic Mishaps
+  { text = "the spell inverts, doing the opposite of intent with equal power", weight = 1 },
+  { text = "magical feedback burns out the caster's ability to cast until rested", weight = 1 },
+  { text = "the power discharge makes the caster a magical beacon for days", weight = 1 },
+  { text = "wild magic cascades, generating d6 random minor effects", weight = 1 },
+  { text = "the spell succeeds but drains all other magic items in range", weight = 1 },
+  { text = "energy backlash knocks the caster unconscious for hours", weight = 1 },
+
+  # Area Effects
+  { text = "the spell's area becomes permanently changed - grass grows glass, stone bleeds, etc.", weight = 1 },
+  { text = "a zone of silence spreads that cannot be dispelled", weight = 1 },
+  { text = "the mishap taints the local water supply with magic", weight = 1 },
+  { text = "plants in the area become carnivorous and hungry", weight = 1 },
+  { text = "animals in range gain human intelligence temporarily, and grievances", weight = 1 },
+  { text = "the location becomes a thin place between worlds permanently", weight = 1 },
+]
+
+[magical_items_discovered]
+entries = [
+  # Weapons
+  { text = "a sword that weeps blood - not its victims', its own", weight = 1 },
+  { text = "a bow that fires arrows of frozen moonlight, silent and cold", weight = 1 },
+  { text = "a dagger that remembers every throat it has cut", weight = 1 },
+  { text = "a hammer that strikes with the force of grudges held against its wielder", weight = 1 },
+  { text = "a spear that always returns - even through walls and flesh", weight = 1 },
+  { text = "an axe forged from a meteor that fell during a god's death", weight = 1 },
+  { text = "a blade with no edge that cuts only what the wielder loves", weight = 1 },
+  { text = "a whip made from a demon's spine, still conscious and bitter", weight = 1 },
+  { text = "arrows that seek the heart of whoever the archer fears most", weight = 1 },
+  { text = "a mace blessed by seven saints, heavy with accumulated holiness", weight = 1 },
+
+  # Armor & Protection
+  { text = "armor made from dragon scales that still dream of flight", weight = 1 },
+  { text = "a shield that absorbs cowardice, forcing its bearer to be brave", weight = 1 },
+  { text = "a helm that shows the wearer how they will die", weight = 1 },
+  { text = "gauntlets that turn the wearer's fists to iron but hunger for violence", weight = 1 },
+  { text = "boots that never leave footprints but steal the tracks of others", weight = 1 },
+  { text = "a cloak woven from shadows that whisper secrets", weight = 1 },
+  { text = "a crown that compels obedience but slowly replaces the wearer's thoughts", weight = 1 },
+  { text = "a ring that grants invisibility to emotions, leaving the wearer hollow", weight = 1 },
+  { text = "armor that heals its wearer by feeding on their memories", weight = 1 },
+  { text = "a mask that changes the wearer's face but slowly becomes their true one", weight = 1 },
+
+  # Utility Items
+  { text = "a compass that points toward the owner's death", weight = 1 },
+  { text = "a mirror that shows what the viewer could have been", weight = 1 },
+  { text = "a lantern that burns lies and illuminates hidden truths", weight = 1 },
+  { text = "a key that opens any lock but closes one door forever", weight = 1 },
+  { text = "a rope that knots itself around the user's worst intentions", weight = 1 },
+  { text = "a book that writes itself, documenting the reader's future", weight = 1 },
+  { text = "a coin that always lands in the holder's favor but must be passed on or it curses", weight = 1 },
+  { text = "a bag that holds more than possible because somewhere else is missing those things", weight = 1 },
+  { text = "a quill that writes with the reader's blood, regardless of ink used", weight = 1 },
+  { text = "a music box that plays the listener's forgotten memories", weight = 1 },
+
+  # Cursed Items
+  { text = "a necklace of preserved tongues that translates all languages at a terrible price", weight = 1 },
+  { text = "a chalice that turns any liquid to wine - including blood still in veins", weight = 1 },
+  { text = "a doll that takes damage meant for its owner but occasionally seeks revenge", weight = 1 },
+  { text = "a portrait that ages while its subject stays young, but the painting develops opinions", weight = 1 },
+  { text = "a bottle containing the last breath of something that shouldn't have died", weight = 1 },
+  { text = "a horn that summons aid but the responders demand payment in years of life", weight = 1 },
+  { text = "gloves that let hands pass through solid matter but slowly unravel the wearer's coherence", weight = 1 },
+  { text = "a bell that banishes spirits but draws something worse from the silence", weight = 1 },
+
+  # Mysterious Artifacts
+  { text = "an orb of absolute darkness that whispers bargains in the deep night", weight = 1 },
+  { text = "a crystallized tear from a god's eye, warm to the touch", weight = 1 },
+  { text = "a shard of the first mirror, showing primordial reflections", weight = 1 },
+  { text = "a feather from something that should not have wings", weight = 1 },
+  { text = "a tooth from the world-serpent, still venomous after eons", weight = 1 },
+  { text = "a vial of water from the river of death, cold enough to burn", weight = 1 },
+  { text = "a scale from the dragon that dreamed the world into being", weight = 1 },
+  { text = "an hourglass containing the last seconds of a dying world", weight = 1 },
+]
+
+[ritual_components]
+entries = [
+  # Body Parts
+  { text = "the heart of a king who died by betrayal", weight = 1 },
+  { text = "tears wept in genuine grief, collected at midnight", weight = 1 },
+  { text = "the eyes of one who has seen the face of a god", weight = 1 },
+  { text = "bone from a saint who lost their faith", weight = 1 },
+  { text = "blood freely given by seven people who share a name", weight = 1 },
+  { text = "hair from a child born during an eclipse", weight = 1 },
+  { text = "the tongue of an honest man", weight = 1 },
+  { text = "fingernails from a corpse buried at a crossroads", weight = 1 },
+
+  # Natural Elements
+  { text = "water that has never seen the sun", weight = 1 },
+  { text = "fire started by lightning on consecrated ground", weight = 1 },
+  { text = "earth from a grave dug by the one who will fill it", weight = 1 },
+  { text = "air from the last breath of something ancient", weight = 1 },
+  { text = "salt from a sea that no longer exists", weight = 1 },
+  { text = "a flower that blooms only in the presence of death", weight = 1 },
+  { text = "wood from a tree that grew through a corpse", weight = 1 },
+  { text = "stone from the foundation of a temple to a forgotten god", weight = 1 },
+
+  # Temporal Components
+  { text = "a moment stolen from another timeline", weight = 1 },
+  { text = "the shadow cast by something that hasn't happened yet", weight = 1 },
+  { text = "dust from a future ruin", weight = 1 },
+  { text = "an echo of words that were never spoken", weight = 1 },
+  { text = "a promise broken before it was made", weight = 1 },
+  { text = "the memory of a color that no longer exists", weight = 1 },
+
+  # Conceptual Components
+  { text = "the name of one who has been truly forgotten", weight = 1 },
+  { text = "a secret that has killed everyone who knew it", weight = 1 },
+  { text = "the weight of a broken oath", weight = 1 },
+  { text = "a song that drives listeners mad", weight = 1 },
+  { text = "the reflection of something invisible", weight = 1 },
+  { text = "a lie believed by its teller", weight = 1 },
+]
+
+[magical_locations]
+entries = [
+  # Ley Line Convergences
+  { text = "a place where three ley lines cross, power crackling visible in the air", weight = 1 },
+  { text = "a ley line terminus, where magical energy pools like water", weight = 1 },
+  { text = "a ley line scar, where a working of great power tore the lines themselves", weight = 1 },
+  { text = "a dead zone where ley lines were deliberately severed", weight = 1 },
+
+  # Thin Places
+  { text = "a crossroads where three worlds meet on moonless nights", weight = 1 },
+  { text = "a doorway between breaths where the fey slip through", weight = 1 },
+  { text = "a wound in reality that bleeds other places into this one", weight = 1 },
+  { text = "a mirror-pool that reflects a different sky", weight = 1 },
+  { text = "a threshold that exists in two places simultaneously", weight = 1 },
+
+  # Sanctified Sites
+  { text = "ground where a god once walked, still warm centuries later", weight = 1 },
+  { text = "an altar stained with the blood of a thousand sacrifices", weight = 1 },
+  { text = "a spring that granted wishes before something poisoned it", weight = 1 },
+  { text = "the burial place of a saint whose body never decayed", weight = 1 },
+  { text = "a temple built to contain something that should not be worshipped", weight = 1 },
+
+  # Corrupted Locations
+  { text = "a clearing where dark magic was worked and the land never forgot", weight = 1 },
+  { text = "a pit into which horrors were cast, seeping their essence upward", weight = 1 },
+  { text = "a tower where a lich achieved their transformation, still resonating", weight = 1 },
+  { text = "a battlefield where so many died that death itself took notice", weight = 1 },
+  { text = "a library where forbidden knowledge soaked into the walls", weight = 1 },
+]

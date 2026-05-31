@@ -1,0 +1,119 @@
+# Vietnam War Names
+# American GIs, ARVN, Vietnamese civilians, VC/NVA, Montagnard allies
+
+[names]
+
+# American GIs - Draftees (working class, reluctant warriors)
+american_draftees = [
+    "Billy Ray Hoskins",
+    "Darnell Washington",
+    "Tommy Kowalski",
+    "Jesus 'Chuy' Ramirez",
+    "Earl Dean Hutchins",
+    "Marcus Freeman",
+    "Johnny Calabrese",
+    "Leroy 'Country' Jenkins",
+    "Dale Swenson",
+    "Hector Delgado",
+    "Raymond 'Ray-Ray' Thompson",
+    "Kevin O'Brien",
+    "Tyrone Jackson",
+    "Bobby Joe Pickens",
+    "Antonio Reyes",
+]
+
+# American GIs - Lifers (career military, true believers or nowhere else to go)
+american_lifers = [
+    "Master Sergeant Vernon T. Griggs",
+    "Staff Sergeant William 'Wild Bill' Cody",
+    "First Sergeant Eugene Harker",
+    "Sergeant Major Otis Blackwood",
+    "Captain James 'Jimmy' Westmoreland",
+    "Lieutenant Colonel Harold Brennan",
+    "Chief Warrant Officer Frank Dupree",
+    "Gunnery Sergeant Carl 'Gunny' Petersen",
+    "Sergeant First Class Melvin Tate",
+    "Captain Richard 'Dick' Halvorsen",
+]
+
+# American Specialists (medics, pilots, intel, etc.)
+american_specialists = [
+    "Specialist Fourth Class 'Doc' Moreno",
+    "Warrant Officer Peter 'Pete' Nguyen",
+    "Lieutenant Sandra 'Sandy' Kowalczyk",
+    "Specialist Five Jerome 'The Professor' Williams",
+    "Sergeant Eddie 'Ears' Nakamura",
+    "PFC Michael 'Mikey' Doyle",
+    "Captain Barbara Ann Sterling",
+    "Specialist Paul 'Spooky' Hendricks",
+]
+
+# ARVN Soldiers (South Vietnamese Army)
+arvn_soldiers = [
+    "Dai Uy Tran Van Minh",
+    "Thieu Uy Nguyen Duc Thang",
+    "Trung Si Pham Quoc Hung",
+    "Chuan Uy Le Thanh Son",
+    "Dai Uy Vo Van Bay",
+    "Thieu Ta Hoang Xuan Lam",
+    "Trung Uy Bui Dinh Dam",
+    "Ha Si Cao Duc Tien",
+]
+
+# Vietnamese Civilians
+vietnamese_civilians = [
+    "Mama-san Nguyen Thi Hoa",
+    "Le Thi Mai",
+    "Tran Van Duc",
+    "Pham Thi Lan",
+    "Nguyen Thanh Binh",
+    "Vo Thi Huong",
+    "Duong Van Khanh",
+    "Bui Thi Ngoc",
+    "Le Van Tuan",
+    "Hoang Thi Thu",
+]
+
+# VC/NVA (Viet Cong and North Vietnamese Army)
+vc_nva = [
+    "Comrade Nguyen Van Troi",
+    "Political Officer Le Duan",
+    "Cadre Pham Xuan An",
+    "Commander Vo Nguyen Giap Jr.",
+    "Sapper Ho Chi Bao",
+    "Nguyen Thi Dinh",
+    "Le Van Nuoi",
+    "Tran Do",
+    "Pham Hung",
+    "Hoang Van Thai",
+]
+
+# Montagnard Allies (Degar people - Jarai, Rhade, Bahnar tribes)
+montagnard = [
+    "Y Bham Enuol",
+    "Nay Luett",
+    "Ksor Kok",
+    "Rcom Briu",
+    "Y Dhe Adrong",
+    "Kpa Doh",
+    "Rmah Dock",
+    "Y Tlur Eban",
+    "Ksor Rot",
+    "Nay Re",
+]
+
+# Nicknames (what they actually get called)
+nicknames = [
+    "Animal",
+    "Bunny",
+    "Tex",
+    "Brooklyn",
+    "Preacher",
+    "Professor",
+    "Chief",
+    "Junior",
+    "Big Man",
+    "Short Round",
+    "Cherry",
+    "FNG",
+]

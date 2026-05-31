@@ -1,0 +1,164 @@
+# Cyberpunk Districts
+# The geography of Night City and its neighborhoods
+
+[districts]
+# Major districts and their character
+entries = [
+  # Watson
+  { text = "Watson - immigrant melting pot, once corp territory now gang-controlled, cheap housing and cheaper lives", weight = 2 },
+  { text = "Kabuki - market district, knockoff everything, street food and stolen goods, Tyger Claw adjacent", weight = 2 },
+  { text = "Little China - dense residential, megabuildings stacked on megabuildings, community in the chaos", weight = 2 },
+  { text = "Northside Industrial - Maelstrom territory, abandoned factories turned chrome temples, dangerous after dark", weight = 2 },
+  { text = "Watson waterfront - smuggling central, container ships and contraband, every gang wants the docks", weight = 2 },
+
+  # Westbrook
+  { text = "Westbrook - corpo playground, where executives spend their blood money, glitter hiding the rot", weight = 2 },
+  { text = "Japantown - Tyger Claw empire, neon and tradition, tourists and yakuza side by side", weight = 2 },
+  { text = "Charter Hill - old money mansions, private security armies, walls keep the poor out", weight = 1 },
+  { text = "North Oak - billionaire enclave, corpo CEOs, politicians, the people who own the city", weight = 1 },
+
+  # Heywood
+  { text = "Heywood - Valentino heartland, Latino culture preserved in chrome and gold, honor and violence", weight = 2 },
+  { text = "The Glen - business district meets gang territory, corpo offices with Valentino protection", weight = 2 },
+  { text = "Vista del Rey - middle class dreams, gated communities, pretending everything's fine", weight = 2 },
+  { text = "Wellsprings - working class residential, Valentino presence keeps it stable, relatively safe", weight = 2 },
+
+  # Pacifica
+  { text = "Pacifica - abandoned resort district, Voodoo Boys territory, Combat Zone adjacent, do not enter", weight = 2 },
+  { text = "Coastview - tourist traps turned death traps, empty hotels full of squatters and danger", weight = 2 },
+  { text = "West Wind Estate - massive housing project, thousands forgotten by the city, community by necessity", weight = 2 },
+  { text = "Pacifica beaches - beautiful coastline, polluted water, bodies wash up regularly", weight = 1 },
+
+  # Santo Domingo
+  { text = "Santo Domingo - industrial backbone, power plants and factories, working class survival", weight = 2 },
+  { text = "Arroyo - 6th Street heartland, veteran community, patriotic and armed to the teeth", weight = 2 },
+  { text = "Rancho Coronado - power infrastructure, cooling towers and substations, essential and ignored", weight = 2 },
+
+  # City Center
+  { text = "City Center - corporate heart of Night City, megacorp HQs, money and power concentrated", weight = 2 },
+  { text = "Corpo Plaza - Arasaka Tower shadow, executive lunch spots, armed security everywhere", weight = 2 },
+  { text = "Downtown - business district, mid-level corps, restaurants and bars for suits", weight = 2 },
+
+  # Badlands
+  { text = "Badlands - wasteland surrounding Night City, nomad territory, freedom and danger in equal measure", weight = 2 },
+  { text = "Biotechnica farms - protein farms stretching forever, synthetic food production, migrant workers", weight = 1 },
+  { text = "Solar fields - endless power generation, guarded perimeter, energy for the city", weight = 1 },
+  { text = "Nomad camps - temporary settlements, family gatherings, trade and tradition", weight = 2 },
+]
+
+[district_atmosphere]
+# The feel of different areas
+entries = [
+  # Watson vibes
+  { text = "Watson night market - steam rising, noodle vendors shouting, stolen electronics changing hands", weight = 2 },
+  { text = "Kabuki rain - neon reflections in puddles, Tyger Claw bikes growling past, danger feels close", weight = 2 },
+  { text = "Northside darkness - industrial shadows, Maelstrom chrome gleaming, machine-god worshippers watching", weight = 2 },
+
+  # Westbrook vibes
+  { text = "Japantown midnight - cherry blossoms and neon, corporate salarymen drunk and dangerous", weight = 2 },
+  { text = "Charter Hill silence - perfect lawns, private security drones, money buys peace", weight = 1 },
+  { text = "Westbrook club district - bass beats escaping walls, beautiful people, ugly transactions", weight = 2 },
+
+  # Heywood vibes
+  { text = "Valentino cruising - lowriders rolling slow, gold catching streetlight, respect demanded and given", weight = 2 },
+  { text = "Glen business hours - suits mixing with soldiers, corporate deals under gang protection", weight = 2 },
+  { text = "Heywood memorial - candles for the dead, murals telling stories, community remembering", weight = 1 },
+
+  # Pacifica vibes
+  { text = "Pacifica silence - abandoned buildings, wind through broken windows, someone watching always", weight = 2 },
+  { text = "Voodoo Boys territory - Haitian flags, netrunner static, digital spirits in the air", weight = 2 },
+  { text = "Combat Zone edge - gunfire in distance, no law, survival mode activated", weight = 2 },
+
+  # Santo Domingo vibes
+  { text = "Arroyo morning - veterans doing PT, American flags, militia breakfast at the diner", weight = 2 },
+  { text = "Industrial shift change - workers flooding streets, tired faces, another day survived", weight = 2 },
+  { text = "Power plant hum - constant background noise, essential infrastructure, nobody cares about workers", weight = 1 },
+
+  # City Center vibes
+  { text = "Corpo Plaza noon - suits everywhere, power lunches, deals worth millions in whispers", weight = 2 },
+  { text = "Downtown evening - after-work drinks, networking, careers made and destroyed", weight = 2 },
+  { text = "Arasaka shadow - the tower looming, security everywhere, corporate eyes on everything", weight = 2 },
+
+  # Badlands vibes
+  { text = "Desert sunrise - endless horizon, freedom from city walls, danger from everything else", weight = 2 },
+  { text = "Nomad caravan - vehicles in formation, family on the move, tradition in motion", weight = 2 },
+  { text = "Wraith territory - burned vehicles, stripped bodies, predators waiting", weight = 2 },
+]
+
+[district_hazards]
+# Dangers specific to areas
+entries = [
+  # Watson
+  { text = "Scav ambush - organ harvesters hunt Watson alleys, wake up missing parts", weight = 2 },
+  { text = "Maelstrom patrol - chrome junkies looking for trouble, violence for the machine god", weight = 2 },
+  { text = "Gang crossfire - Tyger Claws and Maelstrom exchanging fire, civilians in the middle", weight = 2 },
+
+  # Westbrook
+  { text = "Corpo security zone - wrong badge gets you detained, right badge might get you killed", weight = 2 },
+  { text = "Tyger Claw protection check - pay respect or pay consequences, tourists learn fast", weight = 2 },
+  { text = "High-end kidnapping - corpo kids worth ransom, extraction teams everywhere", weight = 1 },
+
+  # Heywood
+  { text = "Valentino territory dispute - respect the colors or become a lesson", weight = 2 },
+  { text = "Protection payment due - local businesses know the drill, outsiders learn it", weight = 2 },
+  { text = "Drive-by zone - rival gangs encroaching, bullets don't discriminate", weight = 2 },
+
+  # Pacifica
+  { text = "Animals hunting ground - combat drugged killers looking for prey, no NCPD response", weight = 2 },
+  { text = "Voodoo Boys netspace - wrong turn online gets you braindead, digital defenses lethal", weight = 2 },
+  { text = "Structural collapse - buildings falling apart, floors giving way, death from above", weight = 2 },
+
+  # Santo Domingo
+  { text = "6th Street checkpoint - prove you belong or prove you can fight", weight = 2 },
+  { text = "Industrial accident zone - toxic spills, radiation leaks, corporate negligence kills", weight = 1 },
+  { text = "Power grid fluctuation - blackouts trigger violence, darkness brings predators", weight = 2 },
+
+  # City Center
+  { text = "Corporate security sweep - random ID checks, detention without cause, lawyer optional", weight = 2 },
+  { text = "Economic violence - wrong financial status gets you removed, poverty is a crime", weight = 2 },
+  { text = "Protest crackdown - anti-corp demonstration, NCPD response disproportionate", weight = 1 },
+
+  # Badlands
+  { text = "Wraith raiders - vehicles approaching fast, no help coming, fight or die", weight = 2 },
+  { text = "Sandstorm - visibility zero, disorientation, easy to disappear forever", weight = 2 },
+  { text = "Militech patrol - corporate military treating Badlands as free-fire zone", weight = 2 },
+]
+
+[district_landmarks]
+# Notable locations in each area
+entries = [
+  # Watson
+  { text = "Totentanz - Maelstrom cathedral, industrial techno temple, chrome worship central", weight = 2 },
+  { text = "Misty's Esoterica - fortune telling, mystic supplies, Afterlife adjacent", weight = 2 },
+  { text = "Kabuki market - everything for sale, nothing guaranteed, twenty-four seven", weight = 2 },
+
+  # Westbrook
+  { text = "Clouds - high-end dollhouse, braindance prostitution, Tyger Claw operated", weight = 2 },
+  { text = "Dark Matter - exclusive nightclub, corpo clientele, deals in VIP rooms", weight = 2 },
+  { text = "Jig-Jig Street - open air red light district, joy workers and joytoys, every desire catered", weight = 2 },
+
+  # Heywood
+  { text = "El Coyote Cojo - legendary bar, Valentino neutral ground, history on the walls", weight = 2 },
+  { text = "Glen office towers - corporate presence, gang protection, business unusual", weight = 2 },
+  { text = "Heywood Memorial Park - community gathering space, weekend markets, evening violence", weight = 1 },
+
+  # Pacifica
+  { text = "Grand Imperial Mall - abandoned shopping center, Animals nest, fighting pits", weight = 2 },
+  { text = "Voodoo Boys chapel - former church, netrunner sanctuary, digital religion", weight = 2 },
+  { text = "Pacifica boardwalk - rusted rides, squatter camps, dreams abandoned", weight = 2 },
+
+  # Santo Domingo
+  { text = "Red Dirt bar - 6th Street headquarters, veteran watering hole, patriot central", weight = 2 },
+  { text = "NightCity Energy Corp plant - power for millions, jobs for thousands, profit for few", weight = 1 },
+  { text = "Municipal Stadium - rallies, riots, occasional sports", weight = 1 },
+
+  # City Center
+  { text = "Arasaka Tower - corporate monument, security nightmare, power manifest", weight = 2 },
+  { text = "Konpeki Plaza - luxury hotel, corporate guests, penthouse deals", weight = 2 },
+  { text = "Memorial Plaza - corporate war victims, nobody reads the names anymore", weight = 1 },
+
+  # Badlands
+  { text = "Protein farms - endless fields, synthetic food, migrant desperation", weight = 2 },
+  { text = "Solar arrays - power generation, guarded perimeter, essential infrastructure", weight = 1 },
+  { text = "Aldecaldo camp - nomad family, trading post, oasis in wasteland", weight = 2 },
+]

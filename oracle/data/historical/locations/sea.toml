@@ -1,5 +1,5 @@
 # Historical Naval and Maritime Locations
-# 40+ sea and port locations
+# 95+ sea and port locations across eras
 
 [locations]
 entries = [
@@ -55,5 +55,56 @@ entries = [
   { text = "Wreck site where a ship met its end on the rocks", weight = 1 },
   { text = "Floating debris from a ship lost at sea", weight = 1 },
   { text = "Prize being escorted into port by its captors", weight = 1 },
-  { text = "Lifeboat adrift with survivors", weight = 1 }
+  { text = "Lifeboat adrift with survivors", weight = 1 },
+
+  # Ancient Maritime
+  { text = "Trireme galley, rowers chained to benches below the ram", weight = 1 },
+  { text = "Phoenician merchant vessel laden with purple dye and cedar", weight = 2 },
+  { text = "Greek harbor with its lighthouse guiding ships past rocks", weight = 2 },
+  { text = "Roman grain ship crossing from Alexandria to Ostia", weight = 2 },
+  { text = "Viking longship beached for raiding, dragon prow watching the shore", weight = 1 },
+
+  # Age of Sail Specific
+  { text = "Man-of-war at anchor, three decks of guns and a thousand souls aboard", weight = 1 },
+  { text = "Pirate sloop rigged for speed and shallow water pursuit", weight = 2 },
+  { text = "East Indiaman, floating fortress of trade worth a fortune", weight = 1 },
+  { text = "Slaver middle passage - the horrors below deck defy description", weight = 1 },
+  { text = "Whaling ship hunting the deep waters for oil and bone", weight = 2 },
+  { text = "Privateer under letters of marque - legal piracy for king and profit", weight = 2 },
+
+  # Pirate Havens
+  { text = "Tortuga anchorage where the Brotherhood trades and carouses", weight = 1 },
+  { text = "Nassau's waterfront - pirates vote here and the Navy dare not enter", weight = 1 },
+  { text = "Madagascar pirate republic - a lawless democracy of cutthroats", weight = 1 },
+  { text = "Careening beach where hulls are cleaned and repaired in hiding", weight = 2 },
+  { text = "The black market in stolen cargo - no questions asked", weight = 2 },
+
+  # Naval Facilities
+  { text = "The Admiralty dockyard where ships of the line are built", weight = 1 },
+  { text = "Hospital ship anchored in harbor, the last hope for the wounded", weight = 2 },
+  { text = "Press gang tavern - drink here and wake up at sea", weight = 2 },
+  { text = "Victualing yard where salt pork and ship's biscuit are loaded", weight = 2 },
+  { text = "The flogging deck - punishment witnessed by all hands", weight = 2 },
+
+  # Specific Waters
+  { text = "The Spanish Main - treasure fleets and those who hunt them", weight = 2 },
+  { text = "Barbary Coast where corsairs take slaves from Christian ships", weight = 1 },
+  { text = "Cape Horn passage - sailors' graveyard of wind and wave", weight = 1 },
+  { text = "The Doldrums where ships rot waiting for wind", weight = 2 },
+  { text = "Trade wind routes that determine the shape of empire", weight = 2 },
+  { text = "Caribbean hurricane season - only the desperate sail now", weight = 1 },
+
+  # Victorian Maritime
+  { text = "Clipper ship racing for the tea trade premium", weight = 2 },
+  { text = "Ironclad warship, the future of naval warfare in ugly iron", weight = 1 },
+  { text = "Steam packet maintaining mail routes regardless of wind", weight = 2 },
+  { text = "Arctic exploration vessel locked in ice for the winter", weight = 1 },
+  { text = "Emigrant ship packed with those fleeing famine or persecution", weight = 2 },
+
+  # Dangerous Waters
+  { text = "Uncharted reef that appears on no map - yet", weight = 1 },
+  { text = "The Sargasso Sea where ships are said to become forever trapped", weight = 1 },
+  { text = "Maelstrom currents that test even experienced navigators", weight = 1 },
+  { text = "Fog so thick that ships collide before seeing each other", weight = 2 },
+  { text = "Pirate hunting grounds where merchantmen travel in convoy or not at all", weight = 2 }
 ]

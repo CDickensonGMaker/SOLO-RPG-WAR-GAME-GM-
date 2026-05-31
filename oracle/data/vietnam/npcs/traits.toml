@@ -1,0 +1,70 @@
+# Vietnam War Character Traits
+# The marks the war leaves
+
+[traits]
+
+# Combat Effects
+combat_effects = [
+    { id = "thousand_yard_stare", name = "Thousand Yard Stare", desc = "Eyes that look through everything to somewhere else. Has seen things that don't un-see. Present physically, absent spiritually." },
+    { id = "hypervigilant", name = "Hypervigilant", desc = "Never sits with back to door. Scans treelines reflexively. Knows where every exit is before sitting down." },
+    { id = "startle_response", name = "Excessive Startle Response", desc = "Hits the deck at any loud noise. Choppers, backfires, doors slamming. Body remembers what mind tries to forget." },
+    { id = "combat_effective", name = "Stone Cold Effective", desc = "Does the job without hesitation or apparent feeling. The kind of calm that terrifies. Efficiency as survival." },
+    { id = "lucky", name = "Supernaturally Lucky", desc = "Should have died a dozen times. Walks through ambushes untouched. Others want to be near him. Others fear what happens when luck runs out." },
+    { id = "death_wish", name = "Unspoken Death Wish", desc = "Takes unnecessary risks. Volunteers for bad jobs. Looking for the round with his name, just wants it done." },
+    { id = "survivor_guilt", name = "Survivor's Guilt", desc = "Why me and not them? Carries the dead like a weight. Every morning is borrowed time from those who didn't make it." },
+    { id = "numb", name = "Emotionally Numb", desc = "Doesn't feel anymore - the protection that costs everything. Can't grieve, can't celebrate, just continues." },
+]
+
+# Substance Use (epidemic in-country)
+substances = [
+    { id = "smoker", name = "Three-Pack-a-Day Smoker", desc = "Marlboros, Salems, Camels - whatever the PX has. Nicotine steadies the hands between contacts." },
+    { id = "drinker", name = "Heavy Drinker", desc = "Ba Muoi Ba beer, Seagram's from care packages. Blackout is the goal. Tomorrow's hangover is tomorrow's problem." },
+    { id = "pothead", name = "Constant Pothead", desc = "Vietnamese grass is strong and cheap. Stays high to stay sane. 'Don't mean nothin'' is easier when nothing feels real." },
+    { id = "heroin", name = "Heroin User", desc = "Saigon white, China white. Started with the pain, continued for the peace. 95% pure and everywhere. The monkey on his back." },
+    { id = "speed", name = "Amphetamine User", desc = "Dexedrine for long patrols, bennies for guard duty. Sleepless and wired. The Army issues them for a reason." },
+    { id = "clean", name = "Aggressively Clean", desc = "Doesn't touch anything - rare and respected or suspected. Either religious or just that stubborn." },
+]
+
+# Attitudes
+attitudes = [
+    { id = "lifer", name = "True Believer Lifer", desc = "Career military who still believes in the mission. Domino theory, containing communism. Increasingly rare as the war drags on." },
+    { id = "antiwar", name = "Quiet Antiwar", desc = "Against this but wearing the uniform. Peace symbol on helmet, still pulls triggers. The contradiction of duty." },
+    { id = "cynical", name = "Bone-Deep Cynical", desc = "'It don't mean nothin'.' Said so often it might be true. Trusts nothing, expects nothing, believes nothing." },
+    { id = "racist", name = "Casually Racist", desc = "Gooks, slopes, dinks - the language of dehumanization. Doesn't see Vietnamese as people. The war's easier that way." },
+    { id = "respectful", name = "Respects the Enemy", desc = "Sees VC/NVA as worthy opponents. 'Charlie's good.' Professional soldier's acknowledgment of skill. Doesn't hate them for fighting." },
+    { id = "mama_san_lover", name = "Gone Native", desc = "Vietnamese girlfriend, eats local food, picks up the language. More comfortable in-country than back in the World. Where does he belong now?" },
+    { id = "fragging_thoughts", name = "Fragging Thoughts", desc = "Eyes the officers with calculation. One grenade, one 'accident,' one less incompetent leader getting men killed. Hasn't done it yet." },
+    { id = "peace_killer", name = "Peace Symbol, Kills Efficiently", desc = "The contradiction embodied. Against the war, excellent at waging it. 'I didn't start this shit.'" },
+]
+
+# Social/Psychological
+psychological = [
+    { id = "letter_writer", name = "Constant Letter Writer", desc = "Writes home daily. Lies about everything - fine, safe, nothing happening. The connection to the World that keeps him human." },
+    { id = "no_letters", name = "Never Writes Home", desc = "Nothing to say, no one to say it to, or already dead inside. The silence says everything." },
+    { id = "photo_carrier", name = "Carries Worn Photo", desc = "Wife, girl, kid, mother - the image is talisman against death. Looks at it before sleep, after contact." },
+    { id = "no_short_timer", name = "Won't Talk Rotation", desc = "Superstitious about discussing DEROS. Saying it out loud tempts fate. Calendar hidden, days uncounted publicly." },
+    { id = "religious", name = "Foxhole Religious", desc = "Found God in combat or holding onto Him desperately. Prays before patrols. The chaplain actually helps." },
+    { id = "lost_faith", name = "Lost Faith", desc = "Was religious once. After what he's seen, what he's done - if there's a God, He's not watching here." },
+    { id = "joker", name = "Gallows Humorist", desc = "Makes jokes about everything, especially the worst things. Laughter as armor. The guy who keeps morale from complete collapse." },
+    { id = "silent", name = "Barely Speaks", desc = "Words are effort. Communicates in grunts and gestures. Said everything worth saying long ago." },
+]
+
+# Trust Issues
+trust = [
+    { id = "trusts_nobody", name = "Trusts No Vietnamese", desc = "Any of them could be VC. Mama-san, ARVN, children - especially children. Paranoia earned through experience." },
+    { id = "trusts_squad", name = "Only Trusts Squad", desc = "These twelve men are his world. Everyone else is threat or obstacle. Blood bonds over all." },
+    { id = "trusts_nobody_at_all", name = "Trusts No One", desc = "Including Americans. Lifers will get you killed for medals. FNGs will get you killed by accident. Only himself." },
+    { id = "naive_trust", name = "Still Trusts People", desc = "Hasn't been broken yet. Believes in ARVN allies, friendly villagers. The FNG's optimism that veterans find painful to watch." },
+]
+
+# Skills/Quirks
+skills = [
+    { id = "scrounger", name = "Expert Scrounger", desc = "Can acquire anything through the black market, theft, or trade. Beer, ammo, clean socks, unauthorized weapons. The economy of need." },
+    { id = "demo_expert", name = "Loves Explosives", desc = "C-4, claymores, det cord - speaks the language of controlled destruction. Maybe too comfortable with boom." },
+    { id = "natural_point", name = "Natural Point Man", desc = "Senses danger before it manifests. Stops the patrol a heartbeat before the ambush. Gift or curse." },
+    { id = "radio_voice", name = "Perfect Radio Voice", desc = "Calm under fire, clear coordinates, proper procedure. The voice that gets artillery on target and dustoff inbound." },
+    { id = "bush_comfortable", name = "More Comfortable in Bush", desc = "Hates base camps, firebases, civilization. Only feels right on patrol. What does that make him?" },
+    { id = "map_reader", name = "Exceptional Navigator", desc = "Never gets lost. Reads terrain, vegetation, light. Finds the firebase when the LT is spinning circles." },
+    { id = "weapon_expert", name = "Weapon Fanatic", desc = "Knows every weapon - American, Soviet, French. Keeps his rifle cleaner than himself. The tool of trade, maintained." },
+    { id = "ears", name = "Exceptional Hearing", desc = "Hears movement others miss. The trip wire before it trips. Human early warning system." },
+]

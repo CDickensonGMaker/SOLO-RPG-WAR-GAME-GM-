@@ -1,0 +1,81 @@
+# Vietnam War Combat Encounters
+# The violence that defines the war
+
+[encounters]
+
+# Ambushes
+ambushes = [
+    { id = "trail_ambush", name = "Ambush on Jungle Trail", desc = "The point man goes down. AK fire from three sides. Whoever moves first dies. Whoever stays dies slower. The kill zone is perfect." },
+    { id = "l_shaped_ambush", name = "L-Shaped Ambush", desc = "Classic VC formation. No escape angle. Automatic weapons fire interlocking. The geometry of death." },
+    { id = "counter_ambush", name = "Ambush the Ambushers", desc = "Intel was right - they're waiting. But not for this. Turn the kill zone inside out." },
+    { id = "river_ambush", name = "River Crossing Ambush", desc = "Caught mid-stream. Water slows everything. Can't go forward, can't go back. Blood in the brown water." },
+    { id = "dawn_ambush", name = "Dawn Ambush", desc = "They were patient all night. First light, first movement, first casualties. Charlie owns the darkness." },
+    { id = "road_ambush", name = "Convoy Ambush", desc = "Lead vehicle gone, tail vehicle gone. Column pinned, can't dismount. RPGs incoming, small arms everywhere." },
+]
+
+# Landing Zones
+lz_operations = [
+    { id = "hot_lz", name = "Hot LZ Insertion", desc = "Door gunners suppressing, rotors screaming. Jump before the skids touch, it's not touching down. Rounds through the floor, through everything." },
+    { id = "cold_lz_turns_hot", name = "Cold LZ Gone Hot", desc = "Looked clear on approach. First boot on ground, hell opens up. They were waiting, watching." },
+    { id = "extraction_under_fire", name = "Emergency Extraction", desc = "Hueys inbound, perimeter collapsing. Load wounded first, count heads, lift off heavy. Leave no one. Leave no one." },
+    { id = "downed_bird", name = "Downed Helicopter", desc = "Huey took rounds, autorotating down. Crash site becomes defensive position. Extract the crew or die trying." },
+    { id = "lz_prep", name = "LZ Prep Gone Wrong", desc = "Arty and air should have cleared it. Should have. The bunkers survived. The enemy survived." },
+]
+
+# Firebase Defense
+firebase = [
+    { id = "night_probe", name = "Night Probe of Firebase", desc = "Trip flares popping, claymores ready. Testing defenses, finding gaps. The main attack comes later. Maybe tonight." },
+    { id = "ground_attack", name = "Firebase Ground Attack", desc = "Sappers in the wire, infantry behind. Flares turn night to day. The perimeter is the world." },
+    { id = "mortar_barrage", name = "Mortar Barrage", desc = "First rounds bracket, adjustment, then fire for effect. Nowhere to go, nothing to do but wait. Count the explosions, count the screams." },
+    { id = "sappers_wire", name = "Sappers in the Wire", desc = "Stripped naked, covered in grease, carrying satchel charges. They're inside before anyone knows. The explosions come from within." },
+    { id = "human_wave", name = "Human Wave Assault", desc = "They keep coming. Ammunition runs low. Barrel overheating. Still coming. The math of attrition." },
+    { id = "rocket_attack", name = "122mm Rocket Attack", desc = "No warning, just destruction. Soviet rockets hit what they hit. Random terror from beyond sight." },
+]
+
+# Tunnel Operations
+tunnels = [
+    { id = "tunnel_clearing", name = "Tunnel Clearing", desc = "Flashlight, pistol, knife. The tunnel rat descends. What's down there? Supplies? Hospitals? Punji traps? Snakes? Them?" },
+    { id = "tunnel_contact", name = "Underground Contact", desc = "Face to face in darkness. Whoever fires first, everyone's deaf. The earth swallows the sound." },
+    { id = "tunnel_collapse", name = "Tunnel Collapse", desc = "Demo went wrong or went right. Someone's buried. Dig or leave? The clock is heartbeats." },
+    { id = "booby_trapped_tunnel", name = "Booby-Trapped Tunnel", desc = "Every inch could be death. Trip wires, pressure plates, grenades in rice jars. The underground maze of murder." },
+    { id = "tunnel_rats_nightmare", name = "Tunnel Rat's Nightmare", desc = "Stuck in narrow passage. Light dies. Sounds ahead and behind. The darkness is absolute." },
+]
+
+# Air Operations
+air_combat = [
+    { id = "arc_light_aftermath", name = "Arc Light Aftermath", desc = "B-52 strike area. Craters like the moon. Bodies in pieces, trees as splinters. Walk through what's left looking for survivors. There aren't any." },
+    { id = "danger_close", name = "Danger Close Air Strike", desc = "Enemy's too close for safety. Call it anyway. Feel the heat, feel the concussion. Hope the pilot's aim is true." },
+    { id = "napalm_drop", name = "Napalm Strike", desc = "The canisters tumble. The air ignites. The screaming doesn't stop. The smell of burning... everything." },
+    { id = "strafing_run", name = "Strafing Run", desc = "Fast mover coming in low. 20mm through the canopy. Friend or foe depends on which side of the gun." },
+    { id = "helicopter_duel", name = "Cobra vs. Anti-Aircraft", desc = "Gunship vs. 12.7mm. The Cobra's rockets, their tracer arcs. Someone's going down." },
+    { id = "dustoff_under_fire", name = "Medevac Under Fire", desc = "Dustoff hovering while bullets fly. Loading wounded, medic working. The crew chief's M60 never stops." },
+]
+
+# Patrols Gone Wrong
+patrol_combat = [
+    { id = "meeting_engagement", name = "Meeting Engagement", desc = "Both sides stumble into each other. No plan, just violence. Whoever reacts faster lives." },
+    { id = "sniper_fire", name = "Sniper in the Treeline", desc = "Single shot, man down. No muzzle flash, no sound location. He's up there. Somewhere. Waiting." },
+    { id = "machine_gun_nest", name = "Concealed Machine Gun", desc = "Dug in, camouflaged, interlocking fire. They've been here for months. The kill zone is surveyed to the inch." },
+    { id = "point_man_down", name = "Point Man Contact", desc = "He saw them first. Didn't help. The burst caught him mid-step. Now the patrol is blind and pinned." },
+    { id = "encirclement", name = "Patrol Surrounded", desc = "They've cut off the back trail. 360-degree security means 360 degrees of enemy. Break out or die here." },
+    { id = "night_firefight", name = "Night Firefight", desc = "Muzzle flashes only indicator. Tracer shows where rounds go. Both ways. The darkness hides everything except death." },
+]
+
+# Booby Traps
+booby_traps = [
+    { id = "punji_pit", name = "Punji Stake Pit", desc = "The ground gives way. Sharpened bamboo, shit-coated tips. The screaming tells everyone where. The wound doesn't heal clean." },
+    { id = "toe_popper", name = "Toe-Popper Mine", desc = "Small pop, foot gone. Medical evac, million-dollar wound, or just dead slow. Step careful. Step always careful." },
+    { id = "grenade_trap", name = "Trip-Wire Grenade", desc = "Thin wire, ankle height. One step past, the pin pulls. Frag has no friends." },
+    { id = "bouncing_betty", name = "Bouncing Betty", desc = "Step on, step off, it rises. Waist height detonation. The wound no man wants." },
+    { id = "command_detonated", name = "Command-Detonated Mine", desc = "They're watching. When the patrol is centered, the wire completes. The ambush starts with a boom." },
+    { id = "false_trail_trap", name = "False Trail Trap", desc = "Easy path through the brush. Too easy. Someone wants you walking here. The trap is the trail itself." },
+]
+
+# Special Operations
+special_ops_combat = [
+    { id = "lrrp_contact", name = "LRRP Team Compromised", desc = "Cover blown, extraction needed. Five men against whatever's coming. Move fast, shoot faster. String the antenna, pray for helos." },
+    { id = "cross_border", name = "Cross-Border Operation", desc = "Laos or Cambodia. We're not here. Neither are they. Except everyone is and everyone's dying." },
+    { id = "phoenix_hit", name = "Phoenix Program Termination", desc = "The target is identified. The team moves in. Extraction or elimination. The paperwork is already done." },
+    { id = "pows", name = "POW Camp Discovery", desc = "Americans held. The mission changes. Extract them or the trying. No one left behind. Even if it costs everyone." },
+    { id = "sog_extraction", name = "SOG Emergency Extraction", desc = "The mission's blown, everyone's hunting. Bright Light assets inbound. Hold until they arrive. They have to arrive." },
+]

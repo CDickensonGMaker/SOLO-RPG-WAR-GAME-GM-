@@ -1,0 +1,136 @@
+# Sci-Fi Military Chain of Command
+# Hierarchy, politics, and command dynamics
+# Tone: Aliens, Halo, Warhammer 40K grunts, The Expanse marines
+
+[ranks]
+entries = [
+  # Enlisted
+  { text = "Private - newest meat, does what they're told or learns why quickly", weight = 1 },
+  { text = "Private First Class - survived long enough to earn a stripe, barely", weight = 1 },
+  { text = "Corporal - team leader, responsible for keeping three other idiots alive", weight = 1 },
+  { text = "Sergeant - squad backbone, NCO who makes everything actually work", weight = 2 },
+  { text = "Staff Sergeant - senior NCO, decades of experience officers ignore", weight = 1 },
+  { text = "Gunnery Sergeant - weapons master, knows more about killing than officers ever will", weight = 1 },
+  { text = "Master Sergeant - senior enlisted, respected or feared usually both", weight = 1 },
+  { text = "Sergeant Major - highest enlisted, speaks for the grunts to command", weight = 1 },
+
+  # Warrant Officers
+  { text = "Warrant Officer - technical specialist, knows one thing better than anyone", weight = 1 },
+  { text = "Chief Warrant Officer - senior technical expert, equipment whisperer", weight = 1 },
+
+  # Company Grade Officers
+  { text = "Lieutenant - newest officer, dangerous with authority and no experience", weight = 2 },
+  { text = "First Lieutenant - slightly less dangerous, starting to listen to NCOs", weight = 1 },
+  { text = "Captain - company commander, where officers either become leaders or corpses", weight = 1 },
+
+  # Field Grade Officers
+  { text = "Major - battalion staff officer, pushing data not people", weight = 1 },
+  { text = "Lieutenant Colonel - battalion commander, real tactical authority", weight = 1 },
+  { text = "Colonel - regiment commander, political animal wearing stars", weight = 1 },
+
+  # Flag Officers
+  { text = "Brigadier General - one star, more politician than soldier now", weight = 1 },
+  { text = "Major General - division commander, moves armies on hololithic maps", weight = 1 },
+  { text = "Lieutenant General - corps commander, responsible for entire campaigns", weight = 1 },
+  { text = "General - theater commander, decisions affect millions of lives", weight = 1 },
+  { text = "Fleet Admiral - void commander, controls space over entire sectors", weight = 1 }
+]
+
+[command_conflicts]
+entries = [
+  # Authority Disputes
+  { text = "Two colonels claiming jurisdiction over the operation, neither willing to yield", weight = 1 },
+  { text = "Political officer overruling military commander on tactical grounds", weight = 2 },
+  { text = "Naval and ground force commanders unable to agree on priorities", weight = 1 },
+  { text = "Intelligence officer demanding assets that would compromise the mission", weight = 1 },
+  { text = "Staff officer from headquarters countermanding local commander's orders", weight = 1 },
+  { text = "Allied commander insisting on operational authority over your unit", weight = 1 },
+  { text = "Logistics officer refusing to release supplies without proper authorization", weight = 1 },
+  { text = "Medical officer declaring unit combat ineffective against commander's wishes", weight = 1 },
+
+  # Chain Disruptions
+  { text = "Commander incapacitated, next in line is inexperienced lieutenant", weight = 2 },
+  { text = "All officers casualties, senior NCO must assume command", weight = 1 },
+  { text = "Orders from two different headquarters contradicting each other", weight = 1 },
+  { text = "Communications down, unit must act on last known orders despite changed situation", weight = 1 },
+  { text = "Commander refuses orders as unlawful, unit must decide who to follow", weight = 2 },
+  { text = "Brevet promotion disputed, two soldiers claiming same rank", weight = 1 },
+  { text = "Detached unit receives orders from unknown authority claiming emergency powers", weight = 1 },
+  { text = "Original mission commander returns after being presumed dead, conflicts with replacement", weight = 1 },
+
+  # Political Interference
+  { text = "Noble demanding their relatives receive safe assignments", weight = 1 },
+  { text = "Press officer insisting on embedded journalists during sensitive operation", weight = 1 },
+  { text = "Religious authority demanding cessation of combat during holy period", weight = 1 },
+  { text = "Corporate representative wanting protection for their assets over military objectives", weight = 1 },
+  { text = "Government official ordering politically motivated offensive", weight = 1 },
+  { text = "Allied diplomats demanding release of captured enemy officers", weight = 1 },
+  { text = "Local government insisting on civilian control of military operations", weight = 1 },
+  { text = "Investigator from central command asking uncomfortable questions about recent actions", weight = 1 }
+]
+
+[command_styles]
+entries = [
+  # Effective Leadership
+  { text = "Leads from the front, first into danger last to safety", weight = 1 },
+  { text = "Trusts subordinates completely, delegates and supports", weight = 1 },
+  { text = "Brilliant tactician, sees moves three steps ahead", weight = 1 },
+  { text = "Father figure to the troops, genuinely cares about each one", weight = 1 },
+  { text = "Ice cold under pressure, never panics never wavers", weight = 1 },
+  { text = "Inspires through personal example, does nothing they wouldn't ask of others", weight = 1 },
+  { text = "Master of logistics, troops always supplied always supported", weight = 1 },
+  { text = "Diplomatic genius, makes allies of everyone works with anyone", weight = 1 },
+
+  # Problematic Leadership
+  { text = "Micromanager, cannot let subordinates make any decisions", weight = 2 },
+  { text = "Glory hound, takes credit for subordinates' achievements", weight = 1 },
+  { text = "By-the-book officer, follows regulations into disaster", weight = 1 },
+  { text = "Political climber, every decision made for career advancement", weight = 1 },
+  { text = "Martinet, obsessed with discipline over effectiveness", weight = 1 },
+  { text = "Coward, always finding reasons to stay away from danger", weight = 1 },
+  { text = "Burned out, going through motions waiting for war to end", weight = 1 },
+  { text = "Sadist, enjoys the authority to inflict pain and humiliation", weight = 2 },
+
+  # Complicated Leadership
+  { text = "Competent but despised, effective but cruel", weight = 1 },
+  { text = "Beloved but ineffective, liked too much to be properly obeyed", weight = 1 },
+  { text = "Genius with terrible people skills, brilliant plans poor execution", weight = 1 },
+  { text = "Formerly great now declining, reputation carrying fading abilities", weight = 1 },
+  { text = "Promoted beyond capability, Peter Principle incarnate", weight = 1 },
+  { text = "Right for peacetime wrong for war, or vice versa", weight = 1 },
+  { text = "Hidden agenda, using command position for personal goals", weight = 1 },
+  { text = "Compromised by enemy but still serving, loyalty uncertain", weight = 1 }
+]
+
+[military_politics]
+entries = [
+  # Institutional Conflicts
+  { text = "Army and Navy fighting over budget allocation affecting equipment availability", weight = 1 },
+  { text = "Elite units receiving resources while line troops starve", weight = 2 },
+  { text = "Old guard resisting new tactics proven effective", weight = 1 },
+  { text = "Technical branch looked down upon by combat arms", weight = 1 },
+  { text = "Veteran units dismissive of newly formed regiments", weight = 1 },
+  { text = "Reserve units treated as second-class by regulars", weight = 1 },
+  { text = "Colonial forces distrusted by home world troops", weight = 1 },
+  { text = "Allied contingents coordinating poorly due to rivalries", weight = 1 },
+
+  # Career Politics
+  { text = "Officer needs victory for promotion, pushing for premature assault", weight = 1 },
+  { text = "Covering up casualties to avoid career consequences", weight = 2 },
+  { text = "Blaming subordinates for failures, claiming credit for successes", weight = 1 },
+  { text = "Political connections protecting incompetent officer", weight = 1 },
+  { text = "Qualified officer passed over for promotion due to lacking connections", weight = 1 },
+  { text = "Rivalry between officers compromising operational effectiveness", weight = 1 },
+  { text = "Staff officer sabotaging field commander's supplies", weight = 1 },
+  { text = "Evidence of misconduct used as blackmail for advancement", weight = 1 },
+
+  # External Politics
+  { text = "Politicians demanding offensive action before troops are ready", weight = 1 },
+  { text = "Peace negotiations ongoing while soldiers keep dying", weight = 1 },
+  { text = "Media coverage affecting tactical decisions", weight = 1 },
+  { text = "Corporate interests influencing military objectives", weight = 1 },
+  { text = "Religious authorities demanding protection of specific sites", weight = 1 },
+  { text = "Allied government threatening to withdraw support", weight = 1 },
+  { text = "Elections coming, need visible victory regardless of cost", weight = 1 },
+  { text = "War unpopular at home, resources being cut mid-campaign", weight = 1 }
+]

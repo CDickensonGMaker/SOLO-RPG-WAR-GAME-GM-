@@ -1,0 +1,78 @@
+# Alternate History Investigation Encounters
+# Researching divergence points, tracking timeline changes, finding artifacts and witnesses
+
+[investigation]
+description = "Encounters involving investigation of the timeline - research, tracking changes, finding evidence"
+entries = [
+  # Researching Divergence Points
+  { text = "The archive room - dusty records that document the exact moment history changed, if you can find the right files", weight = 2 },
+  { text = "The historian's study - a scholar who has spent their life mapping when and why this timeline diverged from others", weight = 2 },
+  { text = "The newspaper morgue - decades of headlines that track how differently events unfolded here", weight = 1 },
+  { text = "The academic conference - historians debate the causes of a war that never happened in your timeline", weight = 1 },
+  { text = "The classified documents - government files about events that were hidden from public knowledge", weight = 2 },
+  { text = "The family history research - genealogical records revealing how your own ancestry was changed by the divergence", weight = 1 },
+  { text = "The archaeological dig - excavation uncovering evidence of a civilization that never existed in your history", weight = 1 },
+  { text = "The oral history interview - an elder recounting memories of living through the events that created this timeline", weight = 2 },
+  { text = "The comparative analysis - laying out evidence from multiple sources to identify exactly when histories diverged", weight = 1 },
+  { text = "The secret library - forbidden books that document the 'original' history before the change", weight = 2 },
+
+  # Tracking Timeline Changes
+  { text = "The anomaly report - documentation of small inconsistencies that suggest ongoing timeline instability", weight = 1 },
+  { text = "The change catalog - a comprehensive list of differences between this timeline and the 'original'", weight = 2 },
+  { text = "The butterfly effect mapping - tracing how one small change cascaded into massive historical shifts", weight = 1 },
+  { text = "The temporal census - records of people who exist in one timeline but not another, or who differ significantly", weight = 1 },
+  { text = "The technology divergence tree - charting how inventions developed differently and why", weight = 1 },
+  { text = "The cultural drift documentation - recording how art, language, and customs evolved along different paths", weight = 1 },
+  { text = "The geopolitical shift analysis - maps showing how borders moved differently after the divergence point", weight = 1 },
+  { text = "The religious evolution study - how faiths developed different doctrines, practices, and influence", weight = 1 },
+  { text = "The economic pathway comparison - how trade, currency, and industry developed along alternate routes", weight = 1 },
+  { text = "The timeline stability assessment - analysis of whether this history is secure or at risk of further changes", weight = 2 },
+
+  # Finding Artifacts from Other Histories
+  { text = "The impossible object - an artifact that shouldn't exist according to this timeline's technology or events", weight = 2 },
+  { text = "The anachronistic document - papers with dates, references, or information that doesn't match this history", weight = 2 },
+  { text = "The wrong currency - money from a nation that never minted coins, or denominations that never existed", weight = 1 },
+  { text = "The displaced photograph - images showing places, people, or events that never occurred here", weight = 2 },
+  { text = "The cross-timeline correspondence - letters between people in different histories, documenting changes", weight = 1 },
+  { text = "The mismatched map - cartography showing borders, cities, or geography that never existed in this timeline", weight = 1 },
+  { text = "The alternate memoir - autobiography of someone whose life went completely differently here", weight = 1 },
+  { text = "The timeline journal - personal diary documenting a traveler's observations across multiple histories", weight = 2 },
+  { text = "The foreign technology sample - device built using principles unknown to this timeline's science", weight = 1 },
+  { text = "The cultural artifact - art, craft, or religious item from a tradition that never developed here", weight = 1 },
+
+  # Interviewing Witnesses to Changes
+  { text = "The rememberer - someone who clearly recalls both versions of history, before and after the change", weight = 2 },
+  { text = "The divergence point survivor - a person who was present at the exact moment history split", weight = 2 },
+  { text = "The displaced refugee - someone who arrived from another timeline and can compare their origin to here", weight = 2 },
+  { text = "The changed-life witness - individual whose personal history was dramatically altered by the divergence", weight = 1 },
+  { text = "The institutional memory - an organization that secretly preserves knowledge of the original timeline", weight = 1 },
+  { text = "The skeptical authority - official who dismisses claims of alternate history while clearly hiding knowledge", weight = 1 },
+  { text = "The conspiracy theorist - someone on the edge of understanding, mixing truth about the change with confusion", weight = 1 },
+  { text = "The multiple timeline traveler - rare individual who has visited several different histories and can compare them all", weight = 1 },
+  { text = "The manipulator contact - someone who claims to have deliberately caused the divergence", weight = 1 },
+  { text = "The dying confession - elderly person who has kept secrets about the timeline change for decades", weight = 2 },
+
+  # Scientific Investigation
+  { text = "The temporal physics lab - researchers studying the mechanics of how timelines diverge and interact", weight = 2 },
+  { text = "The crossing point survey - scientific equipment monitoring a location where timelines touch", weight = 1 },
+  { text = "The timeline energy readings - instruments detecting the unique signature of alternate histories", weight = 1 },
+  { text = "The divergence simulation - computer modeling what would happen if key historical events changed", weight = 1 },
+  { text = "The cross-timeline communication experiment - attempts to send or receive information from parallel histories", weight = 1 },
+  { text = "The temporal forensics - scientific analysis of objects to determine which timeline they originated in", weight = 1 },
+  { text = "The reality stability measurement - monitoring whether the current timeline is secure or degrading", weight = 1 },
+  { text = "The parallel evolution comparison - studying how species, including humans, developed differently across timelines", weight = 1 },
+  { text = "The timeline interference detection - instruments that reveal when someone is attempting to change history", weight = 1 },
+  { text = "The chrono-archaeology expedition - digging for evidence of past timeline manipulations or natural divergences", weight = 1 },
+
+  # Documentary Evidence
+  { text = "The propaganda film archive - movies and newsreels from this timeline showing its version of events", weight = 1 },
+  { text = "The alternative textbook collection - educational materials teaching this world's history as normal", weight = 1 },
+  { text = "The commemorative monument analysis - studying what this timeline chooses to remember and celebrate", weight = 1 },
+  { text = "The diplomatic record examination - treaties and agreements between nations that shouldn't both exist", weight = 1 },
+  { text = "The military history documentation - accounts of battles and wars that never happened in your timeline", weight = 1 },
+  { text = "The economic record review - trade statistics and financial documents from an alternate economic history", weight = 1 },
+  { text = "The census data comparison - population records revealing who exists in each timeline", weight = 1 },
+  { text = "The legal precedent research - court cases that established principles based on this timeline's events", weight = 1 },
+  { text = "The scientific journal review - research papers documenting discoveries made only in this history", weight = 1 },
+  { text = "The art and literature analysis - creative works that reflect this timeline's unique cultural development", weight = 1 },
+]

@@ -1,0 +1,91 @@
+# Historical Warfare - Period-Appropriate Combat and Tactics
+# 55+ entries across multiple eras of warfare
+
+[ancient_warfare]
+entries = [
+  { text = "The legion forms testudo, shields interlocking overhead as arrows rain down", weight = 2 },
+  { text = "Phalanx meets phalanx - the push of shields decides whose line breaks first", weight = 2 },
+  { text = "War elephants trumpet and charge, infantry scatter or hold by sheer discipline", weight = 1 },
+  { text = "The Parthian shot - cavalry feign retreat then turn to loose arrows at pursuers", weight = 1 },
+  { text = "Siege towers roll toward the walls while defenders hurl burning oil", weight = 1 },
+  { text = "The centurion's whistle signals the pilum volley - then gladius work begins", weight = 2 },
+  { text = "A decimation is ordered - every tenth man beaten to death by his comrades", weight = 1 },
+  { text = "The triumphal standards are captured - disgrace that must be avenged in blood", weight = 1 },
+  { text = "Greek fire turns the harbor into an inferno - ships burn to the waterline", weight = 1 },
+  { text = "Slaves man the oars as the trireme rams enemy vessels at ramming speed", weight = 2 },
+  { text = "The city falls after siege - three days of sack promised to the troops", weight = 1 },
+  { text = "Carthaginian mercenaries demand their pay or threaten to switch sides", weight = 2 },
+]
+
+[medieval_warfare]
+entries = [
+  { text = "The trebuchet hurls rotting corpses over the walls - plague follows", weight = 1 },
+  { text = "Armored knights charge the schiltron of spears - steel meets hedgehog of points", weight = 1 },
+  { text = "The longbow volley darkens the sky - French chivalry dies in the mud at Crecy", weight = 1 },
+  { text = "Sappers tunnel beneath the castle walls, shoring with timber to burn later", weight = 2 },
+  { text = "The castle garrison eats the horses, then the leather, then surrenders or starves", weight = 1 },
+  { text = "Chevauchee devastates the countryside - burned farms and slaughtered peasants", weight = 1 },
+  { text = "The herald demands surrender - refuse and the laws of war permit no mercy", weight = 2 },
+  { text = "Knights dismount to fight beside men-at-arms - no room for cavalry in the breach", weight = 2 },
+  { text = "Crossbowmen shelter behind pavises, methodically winding their weapons", weight = 2 },
+  { text = "The castle's water supply is poisoned - surrender or die of thirst", weight = 1 },
+  { text = "A night assault on the walls - scaling ladders and grappling hooks in darkness", weight = 2 },
+  { text = "Ransoms are negotiated for captured nobles while common soldiers are slaughtered", weight = 2 },
+]
+
+[age_of_sail_combat]
+entries = [
+  { text = "Broadsides thunder at pistol range - splinters kill as many as cannonballs", weight = 2 },
+  { text = "Grappling hooks bite into the enemy hull - boarding parties swarm across", weight = 2 },
+  { text = "The magazine explodes - the ship becomes a fireball visible for miles", weight = 1 },
+  { text = "Chain shot shreds the rigging, bringing masts down in tangles of canvas and rope", weight = 2 },
+  { text = "Marines in the fighting tops pick off officers and helmsmen with muskets", weight = 2 },
+  { text = "The fireships drift toward the anchored fleet, flames climbing their rigging", weight = 1 },
+  { text = "Carronades loaded with grape shot turn the enemy deck into a slaughterhouse", weight = 1 },
+  { text = "The surgeon's saw works below the waterline as the ship shudders from impacts", weight = 2 },
+  { text = "Struck colors signal surrender - but was the flag genuinely struck or a trick?", weight = 2 },
+  { text = "The cutting-out expedition rows silently toward the anchored prize at midnight", weight = 2 },
+  { text = "Weather gauge advantage - the upwind ship controls when and how to engage", weight = 2 },
+  { text = "A stern rake sends cannonballs the length of the enemy ship's gun deck", weight = 1 },
+]
+
+[black_powder_warfare]
+entries = [
+  { text = "The thin red line holds, volley fire by ranks while the enemy charges", weight = 2 },
+  { text = "Cannon loaded with canister at close range - human beings turned to mist", weight = 1 },
+  { text = "The square forms against cavalry - if anyone breaks, all die", weight = 1 },
+  { text = "Riflemen skirmish in loose order, picking off officers at extreme range", weight = 2 },
+  { text = "The drummer boy beats the advance - soldiers march in step toward the guns", weight = 2 },
+  { text = "Bayonet charge across open ground - the winner is whoever doesn't flinch", weight = 2 },
+  { text = "Light cavalry screen and scout - hussars riding circles around infantry columns", weight = 2 },
+  { text = "The colors must not fall - color sergeants die at three times the rate of others", weight = 2 },
+  { text = "Redoubt assaulted three times, each assault thrown back with murderous losses", weight = 1 },
+  { text = "Wellington's reverse slope hides his infantry from French artillery", weight = 1 },
+  { text = "The grenadiers go in first - the biggest, bravest men reserved for the worst", weight = 2 },
+  { text = "Broken terrain fragments formations - discipline separates victory from rout", weight = 2 },
+]
+
+[siege_warfare]
+entries = [
+  { text = "The parallels advance zigzag toward the walls, digging closer each night", weight = 2 },
+  { text = "Mining operations meet counter-mines - fighting in claustrophobic darkness below", weight = 1 },
+  { text = "Starvation reduces defenders to eating rats, leather, and worse", weight = 1 },
+  { text = "The breach is practicable - assault tomorrow at dawn with forlorn hope leading", weight = 1 },
+  { text = "Sortie from the garrison spikes the siege guns and retreats before dawn", weight = 2 },
+  { text = "Mortars lob explosive shells into the city, fires spreading unchecked", weight = 2 },
+  { text = "Negotiating surrender terms - will the garrison march out with honors of war?", weight = 2 },
+  { text = "Disease kills more besiegers than defenders - dysentery, typhus, despair", weight = 2 },
+  { text = "The relief column approaches but must break through the siege lines first", weight = 1 },
+]
+
+[dueling_traditions]
+entries = [
+  { text = "Pistols at twenty paces, dawn light barely sufficient to aim", weight = 2 },
+  { text = "Rapiers cross in the first movement of a lethal dance", weight = 2 },
+  { text = "Sabers drawn at an insult to regimental honor - blood must answer", weight = 2 },
+  { text = "The seconds negotiate - perhaps satisfaction can be had without death", weight = 2 },
+  { text = "First blood or to the death - the challenged party chooses the terms", weight = 2 },
+  { text = "The surgeon stands ready with his bag - someone will need him shortly", weight = 2 },
+  { text = "Judicial combat - God will grant victory to the righteous party", weight = 1 },
+  { text = "The mensur scars mark German students - proof of courage, badge of class", weight = 2 },
+]

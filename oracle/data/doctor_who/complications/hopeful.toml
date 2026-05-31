@@ -1,0 +1,185 @@
+# Doctor Who Hopeful Complications
+# The light that shines through - humanity, kindness, and unexpected grace
+
+[human_brilliance]
+description = "When ordinary people do extraordinary things"
+
+[[human_brilliance.entries]]
+name = "Unexpected Hero"
+description = "Someone dismissed as unimportant rises to the moment. The overlooked clerk. The frightened child. The cynical journalist. They find their courage."
+
+[[human_brilliance.entries]]
+name = "Ordinary Genius"
+description = "No Time Lord tech available. A human solves the problem with ingenuity, string, and absolute refusal to accept the impossible."
+
+[[human_brilliance.entries]]
+name = "Compassion Wins"
+description = "Violence wasn't the answer. Kindness was. The enemy expected force and found mercy. It changed everything."
+
+[[human_brilliance.entries]]
+name = "Standing Together"
+description = "Divided groups unite against the common threat. Historical enemies work side by side. Humanity's capacity for unity shines."
+
+[[human_brilliance.entries]]
+name = "The Children Understand"
+description = "Adults are paralyzed by impossibility. The children accept, adapt, and help. Imagination isn't a weakness."
+
+[[human_brilliance.entries]]
+name = "Love Defies Logic"
+description = "The attachment, the bond, the refusal to abandon - it shouldn't work. Logic says give up. Love says try again."
+
+[[human_brilliance.entries]]
+name = "Sacrifice Remembered"
+description = "Someone who died isn't forgotten. Their example inspires. Their memory strengthens. They live on in what they made possible."
+
+[[human_brilliance.entries]]
+name = "Art Saves"
+description = "Music. Painting. Poetry. Words. The creative act defeats the enemy. Beauty has power against darkness."
+
+[[human_brilliance.entries]]
+name = "Faith Matters"
+description = "Not blind belief - active faith. Trust in each other. Trust in possibility. The universe responds to hope."
+
+[[human_brilliance.entries]]
+name = "Second Chances Given"
+description = "The enemy is defeated and vulnerable. Instead of destruction, offer redemption. Not everyone takes it. Some do."
+
+[redemption_and_change]
+description = "When enemies become allies"
+
+[[redemption_and_change.entries]]
+name = "Former Enemy Aid"
+description = "Someone who was hostile now helps. They've seen the truth. They've made different choices. Trust builds slowly."
+
+[[redemption_and_change.entries]]
+name = "Conscience Awakens"
+description = "A minion of evil realizes what they're part of. The organization is wrong. They act against their masters."
+
+[[redemption_and_change.entries]]
+name = "Villain's Hesitation"
+description = "The enemy could strike but pauses. Something gives them pause. A memory. A connection. An unexpected doubt."
+
+[[redemption_and_change.entries]]
+name = "Peaceful Solution Found"
+description = "War isn't the only option. Negotiation succeeds. Understanding replaces conflict. Both sides step back from the edge."
+
+[[redemption_and_change.entries]]
+name = "Breaking the Cycle"
+description = "Generational conflict ends. Ancient hatreds set aside. Someone chooses to forgive rather than continue."
+
+[[redemption_and_change.entries]]
+name = "Changed by Experience"
+description = "The adventure has transformed someone. They return home different - more compassionate, more courageous, more alive."
+
+[[redemption_and_change.entries]]
+name = "Memory of Kindness"
+description = "Past kindness pays dividends. Someone you helped before returns the favor. Good deeds ripple through time."
+
+[[redemption_and_change.entries]]
+name = "Strax Moment"
+description = "The warrior discovers something besides war has value. Healing. Friendship. Making breakfast. Growth is possible."
+
+[timey-wimey salvation]
+description = "When time travel enables hope"
+
+[[timey-wimey salvation.entries]]
+name = "Bootstrap Rescue"
+description = "Help arrives from the future. From yourself. A note, a tool, a warning - you will find a way to send it back."
+
+[[timey-wimey salvation.entries]]
+name = "Fixed Point Grace"
+description = "What seemed fixed point turns out to be flexible. The death is symbolic. The disaster has a loophole. Hope finds a way."
+
+[[timey-wimey salvation.entries]]
+name = "Saved to Somewhere"
+description = "They didn't die. They were displaced. Moved through time and space. Finding them is possible. Reunion awaits."
+
+[[timey-wimey salvation.entries]]
+name = "Message Through Time"
+description = "Communication across centuries. Warning sent to the past. Knowledge preserved for the future. Time as ally, not enemy."
+
+[[timey-wimey salvation.entries]]
+name = "Parallel Reunion"
+description = "Someone lost can be found in another dimension. Another timeline. Not the same, but close. Second chances."
+
+[[timey-wimey salvation.entries]]
+name = "Temporal Witness"
+description = "You can show them the future their sacrifice makes possible. The world they save. The lives they touch. It matters."
+
+[[timey-wimey salvation.entries]]
+name = "History Remembers"
+description = "The hero's story is preserved. Passed down through generations. Their name means something across centuries."
+
+[[timey-wimey salvation.entries]]
+name = "The Long Game Won"
+description = "A plan spanning centuries comes together. Patient work across eras pays off. The Doctor plays long games."
+
+[unexpected help]
+description = "Aid from surprising sources"
+
+[[unexpected help.entries]]
+name = "TARDIS Intervention"
+description = "The old girl takes action. Lands where needed. Provides what's required. She understands more than she says."
+
+[[unexpected help.entries]]
+name = "Alien Allies Arrive"
+description = "Species previously met return in the moment of crisis. Help from across the stars. Relationships have consequences."
+
+[[unexpected help.entries]]
+name = "Historical Figure Recognition"
+description = "The person from history remembers the Doctor. Or you. Help flows from past adventure. Time circles back."
+
+[[unexpected help.entries]]
+name = "Enemy of Enemy"
+description = "A hostile faction has a more hostile enemy. Temporary alliance forms. The enemy of your enemy is... useful."
+
+[[unexpected help.entries]]
+name = "Technology Saves"
+description = "Alien tech or future science provides the solution. The right device at the right moment. Progress has benefits."
+
+[[unexpected help.entries]]
+name = "The Network Activates"
+description = "UNIT. Torchwood. Friends of the Doctor. A distress call activates a web of support across the world."
+
+[[unexpected help.entries]]
+name = "Nature Fights Back"
+description = "The planet, the ecosystem, the universe itself resists the threat. Life finds a way. Balance restores."
+
+[[unexpected help.entries]]
+name = "Companion Courage"
+description = "The companion does what the Doctor can't. Human perspective, human heart, human action. They matter."
+
+[beauty amid darkness]
+description = "Finding wonder in terrible times"
+
+[[beauty amid darkness.entries]]
+name = "Universe Wonder"
+description = "Despite everything, the cosmos is beautiful. Stars born. Nebulae painted. Time's majesty on display. Awe survives."
+
+[[beauty amid darkness.entries]]
+name = "Small Joy"
+description = "Tea in a crisis. Laughter during fear. Human moments persist. The little things matter more when everything's at stake."
+
+[[beauty amid darkness.entries]]
+name = "Connection Formed"
+description = "New friendship born in adversity. Understanding between unlikely allies. Something good emerges from chaos."
+
+[[beauty amid darkness.entries]]
+name = "Kindness Chain"
+description = "Help you gave is passed forward. Goodness multiplies. The original act ripples outward, touching lives you'll never meet."
+
+[[beauty amid darkness.entries]]
+name = "Understanding Achieved"
+description = "Mysteries resolve. Questions answer. Knowledge replaces fear. The universe makes more sense than before."
+
+[[beauty amid darkness.entries]]
+name = "Growth Through Trial"
+description = "The challenge has strengthened everyone. Skills developed. Character revealed. They're better than they were."
+
+[[beauty amid darkness.entries]]
+name = "Hope Restored"
+description = "Someone who'd lost faith finds it again. The cynical believe. The despairing try. Possibility returns."
+
+[[beauty amid darkness.entries]]
+name = "Everybody Lives"
+description = "Just this once. Just this time. Everybody lives. The Doctor's delight when death is cheated. Precious moments."

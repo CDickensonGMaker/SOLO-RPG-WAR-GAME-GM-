@@ -1,0 +1,165 @@
+# Doctor Who Neutral Complications
+# Events that create tension and challenge without predetermined outcomes
+
+[communication_difficulties]
+description = "When understanding becomes the challenge"
+
+[[communication_difficulties.entries]]
+name = "TARDIS Translation Failure"
+description = "The TARDIS translation circuit isn't working. Alien language, historical dialect - communication requires effort, creativity, and patience."
+
+[[communication_difficulties.entries]]
+name = "Cultural Misunderstanding"
+description = "What you said was offensive. What they said was complimentary. Customs differ across time and space. Navigate carefully."
+
+[[communication_difficulties.entries]]
+name = "First Contact Protocol"
+description = "They've never met humans before. You've never met their species. No common reference points. Everything must be negotiated from nothing."
+
+[[communication_difficulties.entries]]
+name = "Telepathic Intrusion"
+description = "Communication without consent. They're in your mind. Thoughts are no longer private. Boundaries must be established."
+
+[[communication_difficulties.entries]]
+name = "Primitive Perception"
+description = "They can't comprehend what you're describing. Time travel? Space travel? Alien life? Their worldview has no framework for this."
+
+[[communication_difficulties.entries]]
+name = "Machine Translation"
+description = "The translator gets meaning but loses nuance. Sarcasm reads as literal. Urgency reads as panic. Diplomacy suffers."
+
+[[communication_difficulties.entries]]
+name = "Historical Language Barrier"
+description = "English, but not your English. Historical dialects, slang, formal registers. Understanding takes concentration."
+
+[technical_challenges]
+description = "When technology creates problems"
+
+[[technical_challenges.entries]]
+name = "Power Drain"
+description = "Energy resources depleting. The TARDIS. The sonic. The life support. Find a solution before everything goes dark."
+
+[[technical_challenges.entries]]
+name = "Incompatible Systems"
+description = "The technology doesn't interface. Different standards, different era, different dimension. Improvised adapters required."
+
+[[technical_challenges.entries]]
+name = "Countdown Timer"
+description = "Something is counting down. You don't know what happens at zero. You have limited time to find out and stop it."
+
+[[technical_challenges.entries]]
+name = "Environmental Hazard"
+description = "The atmosphere, the gravity, the radiation - something here is hostile to human biology. Survival requires accommodation."
+
+[[technical_challenges.entries]]
+name = "Encrypted Information"
+description = "The data you need is protected. Breaking the encryption takes time. Or the right key. Or both."
+
+[[technical_challenges.entries]]
+name = "Reverse Engineering"
+description = "Alien technology that must be understood before it can be used. Trial and error is dangerous. Logic must suffice."
+
+[[technical_challenges.entries]]
+name = "Limited Resources"
+description = "Not enough of something essential. Fuel. Medicine. Ammunition. Time. Rationing becomes necessary."
+
+[[technical_challenges.entries]]
+name = "Jury-Rigged Solution"
+description = "The proper fix isn't available. What you have will work. Probably. For a while. If you're lucky."
+
+[moral_dilemmas]
+description = "When the right choice isn't clear"
+
+[[moral_dilemmas.entries]]
+name = "Lesser Evil"
+description = "Both options are bad. One is slightly less terrible. The mathematics of suffering demands a choice."
+
+[[moral_dilemmas.entries]]
+name = "Prime Directive Conflict"
+description = "Should you interfere? The culture isn't ready. But people are dying. Non-intervention has a cost too."
+
+[[moral_dilemmas.entries]]
+name = "Trust or Safety"
+description = "The stranger claims to be an ally. Trusting them is risky. But you need help. What do you believe?"
+
+[[moral_dilemmas.entries]]
+name = "Truth or Kindness"
+description = "They deserve to know. But the knowledge will destroy them. Sometimes lies are mercy. Sometimes they're not."
+
+[[moral_dilemmas.entries]]
+name = "Individual vs Many"
+description = "Save one person or save the group. The mathematics say one thing. The heart says another. Time is running out."
+
+[[moral_dilemmas.entries]]
+name = "Justice vs Mercy"
+description = "They committed terrible acts. They're also pitiable. Do they deserve punishment or compassion? Both feel inadequate."
+
+[[moral_dilemmas.entries]]
+name = "Means and Ends"
+description = "The goal is righteous. The method is questionable. Does the outcome justify the approach? Where's the line?"
+
+[[moral_dilemmas.entries]]
+name = "Promise vs Necessity"
+description = "You gave your word. Keeping it will cause harm. Breaking it will save lives. Integrity versus pragmatism."
+
+[temporal complications]
+description = "Time travel creates unique challenges"
+
+[[temporal complications.entries]]
+name = "Out of Order"
+description = "You're meeting someone in the wrong sequence. You know their future; they don't know you yet. What can you say?"
+
+[[temporal complications.entries]]
+name = "Observation Only"
+description = "You can watch but not interact. Changing anything here has catastrophic consequences. History happens while you stand helpless."
+
+[[temporal complications.entries]]
+name = "Different Rules"
+description = "This era has customs that offend you. Historical attitudes about gender, class, race. You can't change a century in a day."
+
+[[temporal complications.entries]]
+name = "Knowledge Burden"
+description = "You know how this ends. The disaster. The death. The loss. You cannot warn them. You must let it happen."
+
+[[temporal complications.entries]]
+name = "Anachronism Management"
+description = "You've introduced something that shouldn't be here. Idea. Technology. Disease. Minimize the damage."
+
+[[temporal complications.entries]]
+name = "Time Pressure"
+description = "The window is closing. The event is about to happen. The opportunity is fleeting. Rush increases risk of error."
+
+[social situations]
+description = "Navigating relationships and politics"
+
+[[social situations.entries]]
+name = "Authority Challenge"
+description = "The people in charge want you gone. Arrested. Executed. Convince them you're helpful before they decide you're hostile."
+
+[[social situations.entries]]
+name = "Conflicting Interests"
+description = "Multiple parties want different outcomes. Allies have incompatible goals. Satisfying everyone is impossible."
+
+[[social situations.entries]]
+name = "Reputation Precedes"
+description = "They've heard of you. Or someone like you. The reputation may be helpful or harmful. It's definitely inaccurate."
+
+[[social situations.entries]]
+name = "Diplomatic Incident"
+description = "Your actions have political consequences. Species, nations, or factions are now involved. The stakes have escalated."
+
+[[social situations.entries]]
+name = "Hostile Witness"
+description = "Someone knows what you did. They're not friendly. They have influence. Managing the situation requires finesse."
+
+[[social situations.entries]]
+name = "Emergency Coalition"
+description = "Former enemies must work together against a greater threat. Trust is low. Cooperation is essential."
+
+[[social situations.entries]]
+name = "Competing Agendas"
+description = "Allies have secret goals that complicate the mission. Discovering and managing these requires attention."
+
+[[social situations.entries]]
+name = "Public Attention"
+description = "Witnesses. Cameras. Crowds. Whatever happens next will be observed. Discretion may no longer be possible."

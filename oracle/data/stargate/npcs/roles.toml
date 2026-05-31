@@ -1,0 +1,119 @@
+# Stargate SG-1 Character Roles
+# Roles and positions encountered throughout the Stargate universe
+
+[sgc_command]
+description = "Leadership positions within Stargate Command"
+roles = [
+    { name = "Base Commander", description = "Oversees all SGC operations from the mountain. Bears the weight of every team sent through the gate and every hard call that keeps Earth's secret safe." },
+    { name = "Chief Science Officer", description = "Coordinates all scientific research and artifact analysis. Lives at the intersection of impossible physics and military pragmatism." },
+    { name = "Gate Operations Chief", description = "Master of the dialing computer and iris control. The last line of defense when something hostile comes through." },
+    { name = "Chief Medical Officer", description = "Tends wounds that no Earth medical school could prepare for. Knows more about alien biology than anyone should." },
+    { name = "Intelligence Officer", description = "Maintains threat assessments on System Lords and coordinates with off-world allies. Trades in secrets that could topple empires." },
+]
+
+[sg_teams]
+description = "SG Team personnel specializations"
+roles = [
+    { name = "SG Team Leader", description = "Commands a four-person team through the stargate. First through the wormhole, last back to base." },
+    { name = "Combat Specialist", description = "Heavy weapons and tactical expertise. When negotiations fail, they're the reason the team comes home." },
+    { name = "Field Scientist", description = "Analyzes alien technology under fire. Can jerry-rig Ancient devices with chewing gum and P90 clips." },
+    { name = "Field Medic", description = "Treats staff weapon burns and alien diseases in hostile territory. Keeps teammates alive until the gate home." },
+    { name = "Linguist/Archaeologist", description = "Deciphers dead languages and recognizes cultural taboos before they become fatal. Opens doors that bullets cannot." },
+    { name = "Combat Engineer", description = "Breaches Goa'uld fortifications and rigs demolitions. Makes things explode, preferably on schedule." },
+    { name = "Reconnaissance Specialist", description = "Scouts ahead, maps terrain, identifies threats. Eyes of the team in unfamiliar territory." },
+    { name = "Diplomatic Liaison", description = "Negotiates treaties and smooths cultural misunderstandings. Words are their weapon of choice." },
+    { name = "Pilot", description = "Flies Tel'tak, Al'kesh, or Earth vessels. Gets the team in and out when the gate isn't an option." },
+    { name = "Technical Specialist", description = "Interfaces with alien computer systems and bypasses security protocols. Makes Ancient technology cooperate." },
+]
+
+[sgc_support]
+description = "Support personnel at Stargate Command"
+roles = [
+    { name = "Gate Technician", description = "Monitors incoming wormholes and runs diagnostics on the gate system. Knows the chevron sequences by heart." },
+    { name = "Infirmary Nurse", description = "Assists with post-mission medical care. Has seen things that would break civilian minds." },
+    { name = "Artifact Analyst", description = "Catalogs and studies recovered alien technology. Lives in fear of accidentally activating something catastrophic." },
+    { name = "Security Forces", description = "Guards the gate room and sensitive areas. Ready to engage hostiles at a moment's notice." },
+    { name = "Quartermaster", description = "Supplies teams with equipment and manages the armory. Makes sure nobody goes through the gate under-equipped." },
+    { name = "Communications Specialist", description = "Maintains contact with off-world teams and allied forces. The voice in the radio when things go wrong." },
+    { name = "Research Assistant", description = "Supports senior scientists in analyzing data and running experiments. Does the grunt work of saving the world." },
+    { name = "Maintenance Technician", description = "Keeps the mountain's systems running. The gate doesn't dial itself without a lot of infrastructure." },
+]
+
+[jaffa_roles]
+description = "Positions within Jaffa society"
+roles = [
+    { name = "First Prime", description = "Supreme warrior and personal enforcer of a System Lord. Gold brand marks decades of victories and absolute loyalty." },
+    { name = "Jaffa Warrior", description = "Carries a staff weapon and a symbiote. Raised from birth to serve false gods, but perhaps beginning to question." },
+    { name = "Jaffa Commander", description = "Leads warriors in battle for their god. Responsible for tactics and the honor of victory." },
+    { name = "Temple Priest", description = "Tends to the spiritual needs of Jaffa faithful. Performs the implantation ceremonies that bind children to service." },
+    { name = "Free Jaffa Leader", description = "Former servant who rejected the false gods. Now leads the rebellion to free their people from millennia of slavery." },
+    { name = "Jaffa Rebel", description = "Has turned against their god and joined the resistance. Marked for death, fighting for freedom." },
+    { name = "Jaffa Council Member", description = "Represents their faction in the Free Jaffa Nation's governing body. Navigating politics after lifetimes of servitude." },
+    { name = "Tretonin Researcher", description = "Works to free Jaffa from dependence on symbiotes. The key to true independence for their people." },
+    { name = "Jaffa Shipmaster", description = "Commands a Ha'tak or Al'kesh in service to their lord. Master of interstellar warfare." },
+    { name = "Hak'tyl Warrior", description = "Female Jaffa who rejected being sacrificed by Moloc. Fierce, independent, proving their worth in combat." },
+]
+
+[goauld_roles]
+description = "Positions within Goa'uld hierarchy"
+roles = [
+    { name = "System Lord", description = "Rules a domain of conquered worlds with absolute power. Views all others as servants or enemies. Megalomania incarnate." },
+    { name = "Underlord", description = "Serves a System Lord directly, governing territory in their name. Ambitious, always seeking opportunity to rise higher." },
+    { name = "Queen", description = "Produces larval symbiotes. Rare and precious, fiercely protected. The key to Goa'uld perpetuation." },
+    { name = "Lo'taur", description = "Human servant granted the 'honor' of attending a Goa'uld personally. Privy to secrets, but utterly expendable." },
+    { name = "Ashrak", description = "Elite assassin trained to hunt and kill specific targets. Relentless, patient, and utterly lethal." },
+    { name = "Goa'uld Scientist", description = "Develops weapons and technology to serve their lord's ambitions. Innovation stolen from others, refined through cruelty." },
+    { name = "Kull Warrior Commander", description = "Oversees the deployment of super-soldiers. Controls the deadliest troops in the Goa'uld arsenal." },
+    { name = "Minor Goa'uld", description = "Low-ranking symbiote seeking to gain power and territory. Treacherous by nature, serving until they can seize more." },
+    { name = "Goa'uld Diplomat", description = "Negotiates alliances and betrayals between System Lords. Every word is a weapon, every treaty a trap." },
+    { name = "Fleet Commander", description = "Commands a Goa'uld battle group. Delivers destruction upon their god's enemies from orbit." },
+]
+
+[tokra_roles]
+description = "Positions within the Tok'ra resistance"
+roles = [
+    { name = "Tok'ra Operative", description = "Infiltrates Goa'uld courts, gathering intelligence at constant risk of exposure. Living a lie to bring down tyrants." },
+    { name = "Tok'ra Council Member", description = "Guides the resistance's strategy. Weighs the lives of operatives against the chance of victory." },
+    { name = "Symbiote Scientist", description = "Researches ways to combat the Goa'uld and aid their hosts. Seeks cures rather than conquest." },
+    { name = "Extraction Specialist", description = "Rescues compromised operatives from deep cover. The last hope when covers are blown." },
+    { name = "Tok'ra Liaison", description = "Coordinates operations with Earth and other allies. Bridges the gap between cultures and methods." },
+    { name = "Memory Host", description = "Carries the memories and experiences of many blended lifetimes. A living repository of Tok'ra history." },
+    { name = "Tunnel Builder", description = "Creates and maintains the crystalline underground bases. The architecture of survival." },
+]
+
+[earth_politics]
+description = "Earth political and intelligence roles"
+roles = [
+    { name = "NID Agent", description = "Operates in the shadows of the Stargate program. Willing to cross lines the military won't." },
+    { name = "Trust Operative", description = "Member of the rogue organization pursuing its own alien agenda. Compromised in ways they may not even realize." },
+    { name = "IOA Representative", description = "International oversight of Stargate operations. Politicians who want control of technologies they don't understand." },
+    { name = "Pentagon Liaison", description = "Coordinates between SGC and military leadership. Translates impossible situations into budget requests." },
+    { name = "Presidential Advisor", description = "Briefs the Commander-in-Chief on threats from beyond the stars. Carries the heaviest secrets." },
+    { name = "Senator", description = "Oversees appropriations for 'deep space radar telemetry.' May or may not know what they're really funding." },
+    { name = "Area 51 Researcher", description = "Reverse-engineers alien technology in the Nevada desert. Dreams of breakthroughs and fears of failures." },
+]
+
+[ancient_roles]
+description = "Roles associated with the Ancients/Alterans"
+roles = [
+    { name = "Ascended Being", description = "Has transcended physical form to exist as pure energy. Bound by rules against interference, but sometimes tempted." },
+    { name = "Ancient Scientist", description = "Created technologies that shaped the galaxy. Their abandoned works remain both miracle and danger." },
+    { name = "Repository Guardian", description = "Protects a cache of Ancient knowledge. May be hologram, AI, or something stranger." },
+    { name = "Outpost Keeper", description = "Maintained Ancient facilities for millennia. Perhaps still active, perhaps long corrupted." },
+    { name = "Atlantis Expedition Leader", description = "Commands the lost city of the Ancients. Responsible for treasures beyond imagination and threats to match." },
+]
+
+[alien_specialists]
+description = "Specialized roles from various alien cultures"
+roles = [
+    { name = "Tollan Councilor", description = "Member of the advanced Tollan government. Arrogant in their superiority, blind to their vulnerability." },
+    { name = "Nox Elder", description = "Pacifist elder of an ancient race. Possesses power beyond measure but refuses to use it for war." },
+    { name = "Asgard Supreme Commander", description = "Leads the Asgard fleet against Replicator threats. Ancient, wise, and running out of time." },
+    { name = "Unas Tribal Leader", description = "Commands a band of the original Goa'uld hosts. Primitive but proud, seeking freedom for their kind." },
+    { name = "Replicator-Human", description = "Human-form Replicator mimicking organic life. Cold intelligence behind a familiar face." },
+    { name = "Prior of the Ori", description = "Spreads the word of Origin across the galaxy. Blessed with terrible powers, utterly devoted to false gods." },
+    { name = "Lucian Alliance Boss", description = "Controls a network of criminals filling the power vacuum left by fallen System Lords. Ruthless entrepreneur of the galaxy." },
+    { name = "Wraith Queen", description = "Rules a hive of life-draining predators. Ancient enemy of the Ancients themselves." },
+    { name = "Genii Commander", description = "Leads the military forces of a seemingly primitive world hiding nuclear ambitions. Paranoid and dangerous." },
+    { name = "Traveler Captain", description = "Commands a ship of nomads fleeing the Wraith. Practical, resourceful, trusting no one." },
+]

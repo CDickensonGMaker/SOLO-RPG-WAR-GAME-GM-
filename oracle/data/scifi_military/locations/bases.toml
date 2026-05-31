@@ -73,5 +73,55 @@ entries = [
   { text = "Rally point, designated meeting spot for scattered units", weight = 1 },
   { text = "Patrol base, small team operating behind enemy lines", weight = 1 },
   { text = "Sensor station, automated monitoring of approaches", weight = 1 },
-  { text = "Emergency bunker, hardened shelter for incoming bombardment", weight = 1 }
+  { text = "Emergency bunker, hardened shelter for incoming bombardment", weight = 1 },
+
+  # Command Facilities
+  { text = "War room, hololithic tables displaying entire sector battles", weight = 1 },
+  { text = "Signals intercept station, listening to enemy communications", weight = 1 },
+  { text = "Joint operations center, multiple service branches forced to cooperate", weight = 1 },
+  { text = "Casualty collection point, bodies awaiting identification and processing", weight = 2 },
+  { text = "Replacement depot, new soldiers waiting for unit assignments", weight = 1 },
+  { text = "Courts martial facility, military justice administered quickly", weight = 1 },
+  { text = "Execution grounds, where discipline is enforced permanently", weight = 1 },
+  { text = "Political officer's quarters, separate from military chain", weight = 1 },
+
+  # Training Areas
+  { text = "Kill house, close quarters combat practice facility", weight = 1 },
+  { text = "Live fire range, bullets flying as close to real as training allows", weight = 1 },
+  { text = "Obstacle course, punishing physical training area", weight = 1 },
+  { text = "Gas chamber, NBC training facility nobody wants to revisit", weight = 1 },
+  { text = "Simulator bay, virtual combat systems for vehicle crews", weight = 1 },
+  { text = "Unarmed combat pit, where grievances get settled unofficially", weight = 1 },
+  { text = "Drop training tower, practicing for orbital insertions", weight = 1 },
+  { text = "Survival training area, learn to live off hostile environment", weight = 1 },
+
+  # Logistics Facilities
+  { text = "Ammunition loading point, shells stacked higher than regulations allow", weight = 1 },
+  { text = "Ration distribution center, processing food that barely qualifies", weight = 1 },
+  { text = "Salvage yard, wrecked equipment stripped for parts", weight = 1 },
+  { text = "Decontamination station, chemical showers and burning contaminated gear", weight = 1 },
+  { text = "Graves registration, processing the dead for final disposition", weight = 2 },
+  { text = "Postal facility, letters to and from home", weight = 1 },
+  { text = "Pay office, soldiers collecting wages to send home", weight = 1 },
+  { text = "Equipment issue point, drawing gear before deployment", weight = 1 },
+
+  # Morale Facilities
+  { text = "Enlisted club, cheap alcohol and cheaper entertainment", weight = 1 },
+  { text = "Officers mess, pretending civilization still exists", weight = 1 },
+  { text = "Hololithic entertainment suite, escape from reality for hours", weight = 1 },
+  { text = "Library tent, dog-eared books passed between thousands", weight = 1 },
+  { text = "Gym facility, working out aggression constructively", weight = 1 },
+  { text = "Tattoo parlor, unofficial but tolerated morale service", weight = 1 },
+  { text = "Black market corner, everyone knows where to find it", weight = 1 },
+  { text = "Gambling den, unauthorized but impossible to stop", weight = 1 },
+
+  # Hardened Positions
+  { text = "Command bunker, meters of ferrocrete protecting brass", weight = 1 },
+  { text = "Ammunition magazine bunker, blast doors to contain accidents", weight = 1 },
+  { text = "Communications bunker, hardened against electromagnetic pulse", weight = 1 },
+  { text = "Medical bunker, surgery continuing during bombardment", weight = 1 },
+  { text = "Generator bunker, power supply protected at all costs", weight = 1 },
+  { text = "Water treatment bunker, life support for entire base", weight = 1 },
+  { text = "Food storage bunker, rations secured against raids", weight = 1 },
+  { text = "Emergency command post, backup facility if main is destroyed", weight = 1 }
 ]

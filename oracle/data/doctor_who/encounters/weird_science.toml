@@ -1,0 +1,182 @@
+# Doctor Who Weird Science Encounters
+# TARDIS malfunctions, sonic screwdriver situations, alien tech, and mad scientists
+
+[tardis_malfunctions]
+description = "When the old girl misbehaves"
+
+[[tardis_malfunctions.entries]]
+name = "Random Materialization"
+description = "The TARDIS lands where it wants, not where you wanted. It might be showing you something important. It might just be broken. Again."
+
+[[tardis_malfunctions.entries]]
+name = "Dimensional Instability"
+description = "The interior dimensions are fluctuating. Rooms shift. Corridors lead nowhere. The swimming pool has appeared in the library."
+
+[[tardis_malfunctions.entries]]
+name = "Time Rotor Failure"
+description = "The central column isn't moving. Power failing. Stuck in the vortex. Options are limited. Options are usually limited."
+
+[[tardis_malfunctions.entries]]
+name = "Hostile Architecture"
+description = "The TARDIS has been infected by something. The corridors become mazes. The rooms become traps. She's protecting herself. Or being controlled."
+
+[[tardis_malfunctions.entries]]
+name = "Temporal Grace Offline"
+description = "The safety systems fail. Weapons work inside. Time flows wrong. The impossible becomes possible - and dangerous."
+
+[[tardis_malfunctions.entries]]
+name = "Chameleon Circuit Glitch"
+description = "The exterior changes. No longer a police box. It might be anything. The disguise doesn't match the era. Find it before someone else does."
+
+[[tardis_malfunctions.entries]]
+name = "Emergency Protocol"
+description = "The TARDIS is taking autonomous action. Flying itself to safety. Ejecting passengers. Following ancient programming. What emergency does it perceive?"
+
+[[tardis_malfunctions.entries]]
+name = "Jettisoned Rooms"
+description = "Mass is being shed. Entire rooms vanishing to maintain power. The wardrobe. The garden. Hope it's not the bedroom. Or the zero room."
+
+[[tardis_malfunctions.entries]]
+name = "Paradox Machine Configuration"
+description = "Someone is trying to turn the TARDIS into a paradox machine. Reality would tear itself apart. The Master did it once. Others would try."
+
+[[tardis_malfunctions.entries]]
+name = "Sentience Crisis"
+description = "The TARDIS is more alive than usual. Idris showed what she's like with a voice. Something similar is happening. She has opinions."
+
+[sonic_screwdriver_situations]
+description = "The Doctor's favorite tool, and its limitations"
+
+[[sonic_screwdriver_situations.entries]]
+name = "Deadlock Seal"
+description = "The lock won't respond to sonic. Deadlock sealed. The Doctor's most useful tool is useless. Find another way in."
+
+[[sonic_screwdriver_situations.entries]]
+name = "Wood"
+description = "It doesn't work on wood. Never has. The wooden door, the wooden cage, the wooden weapon. Technology fails; improvise."
+
+[[sonic_screwdriver_situations.entries]]
+name = "Overloaded"
+description = "Too much power. Too much demand. The sonic sparks and dies. No replacement handy. Hope you don't need it."
+
+[[sonic_screwdriver_situations.entries]]
+name = "Wrong Setting"
+description = "It's set for the wrong frequency, the wrong density, the wrong dimension. Adjusting takes time. You don't have time."
+
+[[sonic_screwdriver_situations.entries]]
+name = "Clever Improvisation"
+description = "The sonic does something you didn't know it could do. The Doctor didn't know either. The screwdriver knows what's needed."
+
+[[sonic_screwdriver_situations.entries]]
+name = "Sonic Duel"
+description = "Two sonic devices in opposition. The interference patterns are dangerous. Stalemate until someone finds advantage."
+
+[[sonic_screwdriver_situations.entries]]
+name = "Makeshift Sonic"
+description = "The original is lost or destroyed. Building a new one from available materials. It won't be as good. It might explode."
+
+[[sonic_screwdriver_situations.entries]]
+name = "Sonic Upgrade"
+description = "The TARDIS provides a new screwdriver. Different design. Different capabilities. Learning what it does takes experimentation."
+
+[alien_technology]
+description = "Devices from across the universe"
+
+[[alien_technology.entries]]
+name = "Unidentified Device"
+description = "Alien technology of unknown origin. It does something. What, exactly, is unclear. The controls are incomprehensible. Trial and error."
+
+[[alien_technology.entries]]
+name = "Dimensional Portal"
+description = "A door to somewhere else. Another dimension. Another time. Another version of reality. What comes through might not be friendly."
+
+[[alien_technology.entries]]
+name = "Distress Beacon"
+description = "Something is calling for help. The signal is alien. The language is unknown. Following it leads to... something that needed help."
+
+[[alien_technology.entries]]
+name = "Perception Filter"
+description = "Technology that makes people ignore what's in plain sight. The aliens hide in public. The ship parks on the high street. No one notices."
+
+[[alien_technology.entries]]
+name = "Transmat Malfunction"
+description = "Teleportation technology going wrong. People arriving incomplete. Data corrupted. The destination might not exist anymore."
+
+[[alien_technology.entries]]
+name = "Genetic Manipulator"
+description = "Alien device that rewrites DNA. Upgrading. Adapting. Corrupting. The changes might be reversible. Might not be."
+
+[[alien_technology.entries]]
+name = "Temporal Manipulator"
+description = "Vortex manipulator or something similar. Personal time travel. Cheap and nasty. Makes you sick. Gets you there."
+
+[[alien_technology.entries]]
+name = "Psychic Interface"
+description = "Technology that reads minds. Or projects into them. Or links them. Thoughts become vulnerable. Secrets become visible."
+
+[[alien_technology.entries]]
+name = "Containment Breach"
+description = "Something that was contained is no longer contained. The prison, the bottle, the dimensional trap - failed. What's loose?"
+
+[[alien_technology.entries]]
+name = "Weapon Beyond Understanding"
+description = "Alien armament of staggering power. Reality bomb. De-mat gun. Something that shouldn't exist. Someone's going to use it."
+
+[[alien_technology.entries]]
+name = "Resurrection Technology"
+description = "Death is not permanent with the right equipment. The resurrection gloves. Genesis Arks. Miracles with terrible prices."
+
+[[alien_technology.entries]]
+name = "Reality Anchor"
+description = "Device that maintains local causality against paradox. Inside its field, time cannot be changed. Outside, anything goes."
+
+[mad_scientist_plots]
+description = "Brilliant minds making terrible choices"
+
+[[mad_scientist_plots.entries]]
+name = "Good Intentions"
+description = "They want to help. Cure disease. End war. Save humanity. Their method will destroy everything. They can't see it."
+
+[[mad_scientist_plots.entries]]
+name = "Personal Tragedy"
+description = "They lost someone. The experiments are attempts to bring them back. Reverse time. Cheat death. The universe has rules about this."
+
+[[mad_scientist_plots.entries]]
+name = "Corporate Sponsorship"
+description = "Someone's funding the research. The results will be weaponized, monetized, catastrophized. The scientist doesn't see the pattern."
+
+[[mad_scientist_plots.entries]]
+name = "Alien Technology Adaptation"
+description = "They found something and they're trying to use it. Human understanding of alien tech is incomplete. The failures are spectacular."
+
+[[mad_scientist_plots.entries]]
+name = "Playing God"
+description = "Creation of life. Modification of existence. The power to reshape reality. They didn't ask if they should, only if they could."
+
+[[mad_scientist_plots.entries]]
+name = "Revenge Through Science"
+description = "Someone wronged them. The invention is punishment. The experiment is retribution. Genius applied to destruction."
+
+[[mad_scientist_plots.entries]]
+name = "Government Project"
+description = "Officially authorized. Officially secret. The research serves national security. The research will doom the nation. Or the planet."
+
+[[mad_scientist_plots.entries]]
+name = "Alien Manipulation"
+description = "The scientist thinks they're independent. They're not. Something is feeding them ideas, accelerating their work, preparing for harvest."
+
+[[mad_scientist_plots.entries]]
+name = "Academic Rivalry"
+description = "They'll prove them wrong. Everyone who doubted, everyone who mocked. The experiment will vindicate them. The cost doesn't matter."
+
+[[mad_scientist_plots.entries]]
+name = "Children Involved"
+description = "The experiments involve children. Enhanced. Modified. Weaponized. The ethics committee was never consulted. The parents were never told."
+
+[[mad_scientist_plots.entries]]
+name = "Self-Experimentation"
+description = "They're their own test subject. The transformation is ongoing. They're becoming something else. They think it's improvement."
+
+[[mad_scientist_plots.entries]]
+name = "The Skasis Paradigm"
+description = "The universal equation. Whoever solves it controls reality. The children are computing. The answer approaches. Everything ends."

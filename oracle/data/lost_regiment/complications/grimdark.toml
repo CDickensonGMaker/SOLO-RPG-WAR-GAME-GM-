@@ -1,0 +1,65 @@
+# Lost Regiment Complications - Grimdark
+# The darkest outcomes in desperate circumstances
+
+[grimdark]
+entries = [
+    # Pyrrhic Victories
+    "The battle was won but irreplaceable specialists died",
+    "Victory cost the last ammunition reserves",
+    "The position was held but trusted allies were sacrificed",
+    "Success came only by becoming what they fought against",
+    "They survived by making a deal that will damn them later",
+    "Winning required knowledge that will haunt survivors",
+    "The enemy retreated but left nothing but ashes",
+    "Victory revealed the next threat is far worse",
+
+    # Betrayal and Treachery
+    "A trusted ally revealed as an enemy agent all along",
+    "Natives turned on the regiment when victory seemed close",
+    "Collaborators sold out their own people for enemy favor",
+    "Sworn brother chose personal survival over the unit",
+    "Intelligence source was feeding disinformation deliberately",
+    "Allied native leader negotiated separate peace with enemy",
+    "Refugees accepted contained enemy infiltrators",
+    "Technology shared was turned against them",
+
+    # Civilian Costs
+    "Civilian population punished for supporting regiment",
+    "Women and children caught in crossfire with no protection",
+    "Refugees created that cannot be fed or protected",
+    "Native allies' families taken as hostages",
+    "Famine in regiment territory from enemy scorched earth",
+    "Disease brought by regiment spreading to native population",
+    "Cultural destruction as native ways are overwhelmed",
+    "Economic collapse as war consumes all resources",
+
+    # Moral Compromise
+    "Survival required actions that violated every principle",
+    "Prisoners could not be taken; they were executed",
+    "Collaborators punished by methods indistinguishable from enemy",
+    "Necessary lie grew until truth became unrecoverable",
+    "Discipline maintained through terror rather than respect",
+    "Friendly fire covered up rather than acknowledged",
+    "War crimes committed and rationalized",
+    "Children recruited because adults were exhausted",
+
+    # Catastrophic Loss
+    "Entire unit wiped out to the last soldier",
+    "Irreplaceable knowledge died with the only person who had it",
+    "Years of building destroyed in a single day",
+    "Native population that trusted them exterminated",
+    "Supply depot fell, setting survival back years",
+    "Commander captured; leadership vacuum creates chaos",
+    "Critical fortification lost through negligence",
+    "Allied army destroyed, regiment now truly alone",
+
+    # Despair and Breakdown
+    "Mass suicide attempt among isolated unit",
+    "Commander's breakdown visible to all ranks",
+    "Religious crisis destroys unit cohesion",
+    "Realization that home is truly forever lost",
+    "Discovery that previous efforts were completely wasted",
+    "Knowledge that the enemy cannot be defeated",
+    "Understanding that survival means eternal war",
+    "Recognition that they have become what they hated"
+]

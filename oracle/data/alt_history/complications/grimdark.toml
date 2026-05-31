@@ -1,0 +1,56 @@
+# Alternate History Grimdark Complications
+# Dark and dire complications reflecting the worst of changed histories
+
+[grimdark]
+description = "Dark complications in alternate history scenarios - oppression, loss, existential dread"
+entries = [
+  # Existential Timeline Threats
+  { text = "The timeline is collapsing - reality itself is unwinding, and everyone in this history will simply cease to exist when it finishes", weight = 2 },
+  { text = "You never existed in the original timeline - restoring 'correct' history means erasing yourself completely", weight = 2 },
+  { text = "The divergence was caused by your actions - everything wrong in this timeline is ultimately your fault", weight = 1 },
+  { text = "Multiple timelines are merging destructively - incompatible histories are being forced together, billions will die in the contradictions", weight = 1 },
+  { text = "The original timeline was worse - what you remember as 'normal' was actually a nightmare, and someone changed it to save the world", weight = 1 },
+  { text = "Everyone you love only exists because of the change - restoring the original timeline kills them all", weight = 2 },
+  { text = "Your memories of the original timeline are fading - soon you'll forget there was ever another way, becoming truly native to this nightmare", weight = 1 },
+  { text = "The timeline is healing around you - the divergence is correcting itself, and you'll be erased as an anomaly", weight = 1 },
+
+  # Occupation and Oppression
+  { text = "The collaborator was protecting their family - they informed to the occupation to save loved ones who were then executed anyway", weight = 2 },
+  { text = "The resistance cell is compromised - everyone you've trusted is known to the authorities, you're being watched as bait for others", weight = 2 },
+  { text = "The occupation has lasted generations - no one alive remembers freedom, they've accepted tyranny as normal", weight = 1 },
+  { text = "The liberators are no better - those who would free this land from occupation plan their own atrocities in victory", weight = 1 },
+  { text = "The informant is a child - the occupation recruits the young, your betrayer is an innocent corrupted by circumstances", weight = 1 },
+  { text = "The resistance action will cause reprisals - success means dozens of innocent civilians will be executed in retaliation", weight = 2 },
+  { text = "The occupation's ideology has won hearts - many genuinely believe in the victor's cause now, they'll fight to preserve it", weight = 1 },
+  { text = "The safe house is a trap - the underground railroad delivers refugees directly to the authorities", weight = 1 },
+
+  # Personal Horror
+  { text = "Your alternate self committed atrocities - in this timeline, you are a monster, and everyone recognizes your face with terror", weight = 2 },
+  { text = "Your family sided with the victors - your loved ones are collaborators, benefiting from the suffering of others", weight = 1 },
+  { text = "Your child was never born - the divergence erased your descendants, the family line you remember ends with you", weight = 2 },
+  { text = "Your alternate self wants you dead - the version of you from this timeline sees you as a threat to their existence", weight = 1 },
+  { text = "Everyone you saved in the original timeline died here - the people whose lives you protected never received that protection", weight = 1 },
+  { text = "Your knowledge makes you complicit - you could have prevented atrocities but chose to protect yourself instead", weight = 1 },
+  { text = "The person you're searching for doesn't want to be found - they've built a life here and your arrival threatens to destroy it", weight = 1 },
+  { text = "Your escape route requires betraying others - the only way out is to sacrifice people who trusted you", weight = 2 },
+
+  # Moral Corruption
+  { text = "The only allies available are evil - defeating the greater threat requires working with monsters", weight = 2 },
+  { text = "The resistance has become what it fought - years of struggle have made them as brutal as the occupiers", weight = 1 },
+  { text = "The timeline manipulation technology requires atrocities - changing history is powered by human suffering", weight = 1 },
+  { text = "The hero of the resistance is a fraud - the symbol of hope is actually an agent of the occupation", weight = 1 },
+  { text = "Victory requires becoming a tyrant - the only way to restore freedom is to first become what you hate", weight = 1 },
+  { text = "The divergence point is a moral nightmare - fixing history requires allowing an atrocity to occur", weight = 2 },
+  { text = "The original timeline's 'goodness' was built on hidden evils - your remembered history was actually as corrupt as this one", weight = 1 },
+  { text = "The change benefits the many at the cost of the few - this timeline is objectively better for most, but terrible for specific groups", weight = 1 },
+
+  # Hopelessness and Despair
+  { text = "There is no going back - the original timeline was completely erased, there's nothing to restore", weight = 2 },
+  { text = "The powers that be know everything - all resistance is monitored, all hope of change is illusion", weight = 1 },
+  { text = "The timeline has been changed too many times - reality is fractured beyond repair, all histories are dying", weight = 1 },
+  { text = "The witnesses are dying of old age - soon no one will remember that things were ever different", weight = 1 },
+  { text = "The proof has been destroyed - all evidence of the original timeline has been eliminated, you can convince no one", weight = 1 },
+  { text = "The divergence is self-reinforcing - the changed timeline actively prevents any attempt to change it back", weight = 1 },
+  { text = "Every timeline is equally bad - you've seen multiple histories, and they're all nightmares in different ways", weight = 1 },
+  { text = "The enemy has cross-timeline resources - they can draw on infinite parallel worlds, you cannot possibly win", weight = 1 },
+]

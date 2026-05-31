@@ -1,0 +1,65 @@
+# Lost Regiment Locations - Hostile Territory
+# Enemy strongholds, dangerous wilderness, and contested areas
+
+[hostile_territory]
+entries = [
+    # Enemy Strongholds
+    "The Horde Camp - vast tent city of the nomadic enemy",
+    "Bone Pyramid - monument to enemy victories built from skulls",
+    "The Cattle Pens - where humans are kept for the harvest",
+    "War Chief's Yurt - mobile command center of enemy forces",
+    "Sacred Killing Ground - ritual slaughter site for prisoners",
+    "The Horse Lines - thousands of mounts for the enemy cavalry",
+    "Siege Camp - enemy forces massing for assault",
+    "Raider Base - launching point for attacks on regiment territory",
+    "The Flesh Market - where captured humans are traded",
+    "Enemy Forge Works - primitive but massive weapon production",
+
+    # Alien/Enemy Infrastructure
+    "The Grazing Lands - territory where the enemy raises their 'cattle'",
+    "Iron Mines - enemy-controlled ore extraction using slave labor",
+    "The Great Road - ancient highway the enemy uses for rapid movement",
+    "Signal Tower Chain - enemy communication network",
+    "Winter Camp Grounds - where the horde retreats in cold months",
+    "The Breeding Pens - where enemy maintains human stock",
+    "Tribute Collection Point - where subject peoples deliver resources",
+    "The Ancient Arena - where captured warriors fight for enemy sport",
+    "Slaver Route Station - waypoint on the human trafficking trail",
+    "The Bone Fields - mass graves from enemy conquests",
+
+    # Primitive Kingdoms (Not Allied)
+    "Kingdom of the Iron Duke - native realm refusing alliance",
+    "Free City of the River - independent trading post playing all sides",
+    "The Mountain Holds - isolated natives suspicious of strangers",
+    "Marsh Kingdom - fever-ridden realm controlling crucial waterways",
+    "The Disputed Marches - territory claimed by multiple native lords",
+    "Bandit King's Domain - lawless territory under criminal rule",
+    "The Theocracy - religious state hostile to foreign influence",
+    "Slaver Principality - native realm collaborating with the enemy",
+    "The Haunted Lands - territory depopulated and superstition-ridden",
+    "Border Lord's Territory - changing sides based on perceived advantage",
+
+    # Dangerous Wilderness
+    "The Endless Steppe - grassland where enemy cavalry dominates",
+    "Dark Forest - ancient woods full of unknown dangers",
+    "The Fever Swamps - disease-ridden but resource-rich wetlands",
+    "Mountain of Storms - pass blocked by weather most of year",
+    "The Burning Desert - wasteland between regiment and potential allies",
+    "Predator Valley - wildlife that hunts humans",
+    "The Frozen Reaches - northern territory of brutal winters",
+    "Volcanic Badlands - unstable terrain with toxic gases",
+    "The Drowned Coast - treacherous shoreline with no harbors",
+    "Windswept Plateau - exposed high ground with no cover",
+
+    # Ruins and Contested Sites
+    "Ancient City Ruins - evidence of previous advanced civilization",
+    "The Old Fortress - pre-existing fortification, strategic but haunted",
+    "Abandoned Mine Complex - resources but structurally dangerous",
+    "Temple of the Old Gods - religious site claimed by multiple factions",
+    "The Bridge - only crossing point, constantly contested",
+    "Ruined Aqueduct - could provide water if repaired and held",
+    "The Crossroads - strategic junction worth dying for",
+    "Burned Village - example of enemy methods, former regiment ally",
+    "The Iron Deposit - ore source worth the cost of taking",
+    "River Ford - seasonal crossing point enemy uses for raids"
+]

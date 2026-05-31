@@ -1,0 +1,127 @@
+# Weird War Experiments
+# Super soldier programs, resurrection attempts, dimensional gates, and chemical horrors
+
+[super_soldiers]
+description = "Programs to create enhanced warriors through science and sorcery"
+entries = [
+    { text = "The Ubermenschen Initiative - soldiers augmented with something harvested from the Eastern Front's mass graves. They're stronger, but they hunger", weight = 2 },
+    { text = "Project Siegfried - bonding human nervous systems with Vril energy. The subjects can shatter tank armor with their hands. Their minds shattered first", weight = 2 },
+    { text = "American 'Iron Men' program - soldiers surgically enhanced with experimental alloys. The metal has started thinking for itself", weight = 2 },
+    { text = "SS volunteers for the 'Wolf Program' return from the Black Forest changed. They only operate at night now. Full moons are problematic", weight = 2 },
+    { text = "Soviet penal battalion experiments - prisoners injected with something found beneath Tunguska. They feel no pain. They feel nothing at all", weight = 2 },
+    { text = "German 'Berserker Serum' drives subjects into unstoppable rage. The problem is stopping them when the battle ends", weight = 2 },
+    { text = "Project Valkyrie resurrects fallen soldiers with mechanical hearts. They follow orders, but their eyes are empty and they whisper in their sleep", weight = 3 },
+    { text = "British 'Merlin Programme' - soldiers trained in what the files call 'applied thaumaturgy.' They can do things. They pay prices", weight = 2 },
+    { text = "Japanese Unit 731's 'Oni Project' - POWs transformed into something that barely resembles humanity. They're deployed only at night", weight = 3 },
+    { text = "Nazi cold experiments at Dachau yielded unexpected results - subjects who survived the freezing returned... different. They don't feel cold anymore. They radiate it", weight = 2 },
+    { text = "American OSS 'Mercury Soldiers' - injected with exotic metals. They can see electromagnetic fields. They're going blind to everything else", weight = 2 },
+    { text = "SS-Ahnenerbe 'Blood Eagle' program - warriors bonded to runic tattoos that give them the strength of the Norse berserkers and the same madness", weight = 2 },
+    { text = "Soviet psychic conditioning - soldiers who can project fear into enemies' minds. They can't turn it off. Their families won't visit anymore", weight = 2 },
+    { text = "Project Prometheus - German soldiers exposed to artifacts from Greek archaeological sites. They heal from any wound. They can't die. They want to", weight = 3 },
+    { text = "British 'Golem Protocol' - clay-infused armor that bonds with the wearer. The armor eventually takes over. Operators are replaced monthly", weight = 2 },
+    { text = "Japanese 'Kitsune Unit' - soldiers trained in illusion techniques that aren't purely psychological. Reality bends to their deceptions", weight = 2 },
+    { text = "SS 'Totenkopf Variant' - soldiers clinically killed and revived with their fear response eliminated. They have no fear. They have no soul", weight = 3 },
+    { text = "American 'Minuteman Project' - soldiers given the ability to perceive time differently. They move faster, but age decades in days", weight = 2 },
+    { text = "Nazi 'Doppelganger Division' - soldiers who can wear other faces through forbidden surgery. They've replaced key Allied officers. Which ones?", weight = 2 },
+    { text = "Soviet 'Rasputin Legacy' - soldiers who cannot die by conventional means. Killing them requires specific rituals the Orthodox Church remembers", weight = 2 },
+]
+
+[resurrection_attempts]
+description = "Attempts to raise the dead for military purposes"
+entries = [
+    { text = "Mass graves at Treblinka show signs of movement. The SS-Ahnenerbe calls it 'successful reanimation.' The walking dead call it nothing - they don't speak", weight = 3 },
+    { text = "The 'Lazarus Protocol' achieved its goal - dead soldiers can be returned to action. They remember dying. They remember what came after. They scream when no one's listening", weight = 3 },
+    { text = "Nazi necromancers working at Auschwitz have discovered death isn't permanent - just a state change. The changed are soldiers again. Tireless. Unfeeling", weight = 3 },
+    { text = "Soviet experiments reviving fallen soldiers created something that follows orders but won't stop eating. They're deployed behind enemy lines with no extraction planned", weight = 3 },
+    { text = "The ritual requires seven freshly dead soldiers. What rises is one being with seven bodies, connected by invisible threads of cold fire", weight = 3 },
+    { text = "British attempts at resurrection using Egyptian texts succeeded - but what came back isn't the dead soldier. It's whatever was waiting in his body", weight = 3 },
+    { text = "Japanese resurrection techniques from the Shinto scrolls create soldiers who fight with ancestors' strength. The ancestors want something in return", weight = 2 },
+    { text = "Nazi 'ghost soldiers' - men kept between life and death through constant electrical stimulation. They can pass through walls. They're always screaming", weight = 3 },
+    { text = "The Totenschiff Program raises drowned sailors from sunken ships. They return to their vessels. German U-boats now fear more than depth charges", weight = 2 },
+    { text = "Partial resurrection leaves subjects aware but paralyzed - Nazi interrogators discovered the dead still feel pain, still have secrets, still break", weight = 2 },
+    { text = "Mass resurrection rituals at Katyn forest disturbed something that wasn't human. The Polish dead rose, but so did things buried deeper", weight = 3 },
+    { text = "American experiments with defibrillation went too far - soldiers brought back after too long retain memories of where they went. They don't want to go back", weight = 2 },
+    { text = "The 'Harvest' program collects life force from the dying to reanimate fallen SS officers. Each officer requires seventeen deaths to rise again", weight = 3 },
+    { text = "Resurrection through blood transfusion from 'special donors' - the donors aren't fully human anymore, and neither are the revived", weight = 2 },
+    { text = "Nazi occultists discovered consciousness can be transferred at death. SS officers can now jump to fresh bodies when killed. They plan carefully", weight = 3 },
+    { text = "Japanese Unit 731 achieved resurrection through vivisection - keeping subjects alive long past the point of death, then longer still", weight = 3 },
+    { text = "The revived soldiers remember orders, tactics, names. They don't remember being human. They don't understand why they should care", weight = 2 },
+    { text = "Resurrection sites must be consecrated - or unconsecrated - first. The wrong blessing brings back the wrong thing", weight = 2 },
+    { text = "Bodies preserved in certain salts rise on their own after three days. The problem is what else rises with them", weight = 2 },
+    { text = "Frankenstein's notes were found in a Swiss vault. Nazi scientists have improved on his methods. The results fight for the Reich", weight = 2 },
+]
+
+[dimensional_gates]
+description = "Experiments with portals, rifts, and doorways to other realms"
+entries = [
+    { text = "Die Glocke - 'The Bell' - generates a field that opens holes in reality. Test subjects returned changed. Some didn't return at all. Some returned from somewhere else", weight = 3 },
+    { text = "The gate beneath Castle Wewelsburg opens once yearly at the solstice. What comes through must be appeased. The appeasing gets harder each year", weight = 3 },
+    { text = "American experiments at Los Alamos accidentally opened a window to another Earth - one where the Nazis won, where something else rules now", weight = 3 },
+    { text = "Nazi submarines carry 'displacement devices' that shift them to a parallel ocean where Allied ships don't exist. Getting back is the hard part", weight = 2 },
+    { text = "The Karelia Gate Project tapped into dimensional energies the Soviets found in Finnish caves. The caves went somewhere. Things came back through", weight = 3 },
+    { text = "British intelligence has identified seven 'soft spots' in reality across Europe. Nazi operations cluster around them. They're trying to tear them open", weight = 2 },
+    { text = "V-3 wasn't a weapon - it was a delivery system for dimensional gate technology. The sites were bombed for reasons other than the official ones", weight = 2 },
+    { text = "The 'Bifrost Project' aims to open a permanent gate to Asgard. They've opened something. Norse mythology didn't quite get the details right", weight = 3 },
+    { text = "Teleportation experiments scatter subjects across dimensions. Parts arrive in different realities. Screaming can be heard from nowhere", weight = 3 },
+    { text = "The ritual circle in the salt mines can open a gate large enough for an army. The army on the other side has been waiting", weight = 3 },
+    { text = "Nazi expeditions through temporary gates bring back materials that don't exist in our periodic table - and occasionally bring back passengers", weight = 2 },
+    { text = "The gate in the bunker shows other worlds, other wars - ones where humanity lost, where something else inherited the Earth", weight = 2 },
+    { text = "Japanese experiments with 'spirit gates' open onto the realm of the dead. The dead want to come back. They're massing on the other side", weight = 3 },
+    { text = "Atomic research has unintended side effects - each test weakens the barriers between dimensions. Something is pushing from the other side", weight = 2 },
+    { text = "The Philadelphia Experiment wasn't about radar invisibility. The ship went somewhere. Most of the crew is still there", weight = 3 },
+    { text = "Nazi gate research discovered our reality is one of infinite layers. They're mining the other layers for weapons. The other layers have noticed", weight = 2 },
+    { text = "Portable gate devices allow infiltrators to step through walls by passing through another dimension. The journey takes seconds here, years there", weight = 2 },
+    { text = "The dimensional rift over Dresden wasn't caused by the bombing - it was the target. What came through in the fire's chaos escaped Allied tracking", weight = 3 },
+    { text = "Experiments prove that death opens a temporary gate. Mass death opens larger gates. The camps were always more than death factories", weight = 3 },
+    { text = "The gate at Ahnenerbe headquarters leads to a library. The library contains every book ever written. And books that should never be written. And librarians who aren't human", weight = 2 },
+]
+
+[chemical_horrors]
+description = "Weaponized chemicals, gases, and biological agents of supernatural origin"
+entries = [
+    { text = "The new gas doesn't just kill - it preserves consciousness in dying flesh. Victims experience every moment of decomposition, aware and screaming internally", weight = 3 },
+    { text = "Agent Nacht turns daylight lethal to those exposed. Survivors can only operate in darkness. They see better in the dark now. Too well", weight = 2 },
+    { text = "The serum grants night vision but requires regular doses of human optical fluid. Volunteers are no longer volunteers", weight = 2 },
+    { text = "Bioweapons derived from Deep One tissue create aquatic mutations in victims. The transformed seek water. They don't need to breathe anymore", weight = 3 },
+    { text = "The stimulant keeps soldiers awake indefinitely but slowly dissolves the barrier between waking and dreaming. They hallucinate, except it's not hallucination", weight = 2 },
+    { text = "Experimental truth serum works by temporarily killing subjects. They speak what they learned on the other side. The intelligence is always accurate", weight = 2 },
+    { text = "Agent Schwarz - black gas that shows victims their own death. The visions are prophetic. Survivors live in terror of what they saw", weight = 2 },
+    { text = "The rage compound works by releasing something already inside humans - a buried predator from evolutionary prehistory. It doesn't go back to sleep", weight = 2 },
+    { text = "Nazi fear gas triggers ancestral memories of being prey. Victims experience every death their bloodline suffered. Some don't recover", weight = 2 },
+    { text = "Biological agents grown from fungi found in Antarctic caves spread through populations, connecting infected minds into a single hostile consciousness", weight = 3 },
+    { text = "The loyalty compound rewrites brain chemistry, but the formula was found in a pre-human text. The loyalty it instills isn't to the Reich", weight = 3 },
+    { text = "Neurotoxins extracted from deep-sea organisms cause victims to hear the thoughts of the Dreaming Ones. The constant whispers drive them to specific actions", weight = 2 },
+    { text = "Corpse gas animates the recently dead for twelve hours. The animated don't follow orders - they seek out living relatives with terrible purpose", weight = 2 },
+    { text = "Japanese biological weapons using ancient Chinese formulas create diseases that medicine can't treat - because they're not entirely physical", weight = 2 },
+    { text = "The performance enhancer is distilled from something found in the Himalayas. It works. The price is paid in nightmares that bleed into reality", weight = 2 },
+    { text = "Memory-altering compounds can implant false recollections. Nazi agents don't know they're agents. Their real personalities are buried. Waiting", weight = 2 },
+    { text = "Healing accelerants derived from regenerating specimens knit wounds instantly but change the healed tissue at the cellular level. It's still healing. It won't stop", weight = 2 },
+    { text = "Sensory enhancement drugs let soldiers see infrared, hear ultrasonic, smell fear. They also see things that exist at those frequencies. Things that see back", weight = 2 },
+    { text = "The immortality serum works, but bodies eventually run out of spare parts. Subjects must take from others to maintain themselves. They do", weight = 2 },
+    { text = "Experimental preservation compounds prevent death but not pain, not consciousness, not the horror of a body that won't stop breaking down", weight = 3 },
+]
+
+[zombie_soldiers]
+description = "Undead troops and walking dead military programs"
+entries = [
+    { text = "The Totenkorps - SS division staffed entirely by the animated dead. They need no food, no sleep, no morale. They need direction. They need fresh bodies to replenish losses", weight = 3 },
+    { text = "Soviet 'Meat Shield' battalions - penal soldiers killed, reanimated, and sent against German lines. They don't stop advancing until dismembered", weight = 2 },
+    { text = "Nazi zombies retain combat training but lose self-preservation. They're deployed in human wave tactics that would break living soldiers", weight = 2 },
+    { text = "Japanese 'Jiangshi Protocol' - stiff, hopping undead that hunt by breath detection. Silent, relentless, terrifying in Pacific jungle warfare", weight = 2 },
+    { text = "The undead don't need supply lines. They don't need evacuation. Casualties become reinforcements. The logistics alone are winning battles", weight = 2 },
+    { text = "Animated corpses serve as mine clearance units. They walk forward until destroyed. Their silence as mines detonate is somehow worse than screaming", weight = 2 },
+    { text = "Zombie soldiers operate best at night - daylight slows their already deliberate movements. Dawn brings relief. Dusk brings terror", weight = 2 },
+    { text = "The undead can be controlled through specific frequencies. Allied jamming has turned Nazi zombie units against their masters. Briefly", weight = 2 },
+    { text = "Partially animated soldiers - only motor functions restored - are used as pack mules. They carry supplies through terrain no living porter would survive", weight = 2 },
+    { text = "Zombie infiltrators - reanimated POWs sent back to their lines. They remember enough to pass inspection. Until they don't need to pretend anymore", weight = 3 },
+    { text = "Naval vessels crewed by the undead don't need life support, don't fear drowning, don't break under pressure. Ghost ships hunt the Atlantic", weight = 2 },
+    { text = "The hunger can be suppressed, but not eliminated. Zombie soldiers must be fed. What they're fed is classified. Where it comes from is worse", weight = 3 },
+    { text = "Animated dead from different eras fight alongside Nazi forces - Roman legionnaires, medieval knights, Napoleonic soldiers. History's armies serve the Reich", weight = 3 },
+    { text = "Fast zombies require fresh bodies. The recently dead run. The long dead shuffle. Both bite. Both spread the animation contagion", weight = 2 },
+    { text = "Zombie artillery crews operate with mechanical precision, but they're loading something into the guns that isn't ammunition", weight = 2 },
+    { text = "The undead soldiers still wear their identification tags. Some still carry photographs of their families. Some still try to speak their names", weight = 2 },
+    { text = "Zombie disposal units are necessary - the destroyed must be burned completely. Incomplete burning creates crawlers. Pieces that still hunt", weight = 2 },
+    { text = "The animation formula degrades over time. Old zombies become increasingly erratic, eventually attacking anything that moves. Retirement is permanent", weight = 2 },
+    { text = "Intelligent zombies retain full cognition but lose free will. They know what they're doing. They can't stop. They can still scream internally", weight = 3 },
+    { text = "Mass graves across Europe are being quietly excavated. The bodies aren't being buried properly - they're being processed for the zombie program", weight = 2 },
+]

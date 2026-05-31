@@ -1,0 +1,243 @@
+# Doctor Who Alien Encounters
+# The monsters and marvels of the universe
+
+[dalek_attacks]
+description = "The most dangerous creatures in the universe"
+
+[[dalek_attacks.entries]]
+name = "Single Dalek"
+description = "Just one. That's all it takes. It's damaged but functional. It can kill everyone in the building before help arrives. One Dalek is a horror movie."
+
+[[dalek_attacks.entries]]
+name = "Dalek Patrol"
+description = "Three Daleks advancing in formation. SEEK AND LOCATE. EXTERMINATE ON SIGHT. They're methodical. Thorough. Inevitable."
+
+[[dalek_attacks.entries]]
+name = "Dalek Full Invasion"
+description = "The sky darkens with Dalek ships. The Supreme commands from orbit. This is conquest. Humanity has hours, not days."
+
+[[dalek_attacks.entries]]
+name = "Dalek Interrogation"
+description = "YOU WILL TELL US WHAT WE WISH TO KNOW. The Dalek doesn't understand why you resist. It will make you understand."
+
+[[dalek_attacks.entries]]
+name = "Cult of Skaro Operation"
+description = "Emergency Temporal Shift detected. The Cult has a plan. They always have a plan. Imagination makes them the most dangerous Daleks of all."
+
+[[dalek_attacks.entries]]
+name = "Davros Revelation"
+description = "The creator speaks. The Daleks' father, more machine than man, explaining why everything must die. His children surround him."
+
+[[dalek_attacks.entries]]
+name = "Dalek Civil War Caught"
+description = "Renegade Daleks vs Imperial Daleks. Both factions want you dead, but might use you first. Survive by playing them against each other."
+
+[[dalek_attacks.entries]]
+name = "Time War Bleedthrough"
+description = "Something from the Time War is manifesting. Daleks from the worst of the conflict. Weapons that should never exist. The war that ended everything."
+
+[cyberman_conversion]
+description = "Upgrade in progress"
+
+[[cyberman_conversion.entries]]
+name = "Conversion Facility"
+description = "The factory of nightmares. Humans go in. Cybermen come out. The screams are... educational. Upgrading is compulsory."
+
+[[cyberman_conversion.entries]]
+name = "Cyber-Scout"
+description = "Single Cyberman, assessing the area. Calculating. How many humans? What resources? The invasion begins with reconnaissance."
+
+[[cyberman_conversion.entries]]
+name = "Cyberman Awakening"
+description = "The tomb opens. They've been waiting centuries. Frozen, patient, now active. The original Cybermen. Mondas design. No less deadly."
+
+[[cyberman_conversion.entries]]
+name = "Partial Conversion"
+description = "Someone you know is partially converted. They're still in there, fighting, begging. The conversion is incomplete. It can be stopped. Maybe."
+
+[[cyberman_conversion.entries]]
+name = "Cyberman Logic"
+description = "The Cyberman presents its argument. Emotions cause pain. Upgrading ends pain. This is kindness. Mercy. Why do you resist mercy?"
+
+[[cyberman_conversion.entries]]
+name = "Cybermat Infestation"
+description = "Small, fast, metallic predators. They convert technology. They bite. The infection spreads from the wound. Find them. Destroy them."
+
+[[cyberman_conversion.entries]]
+name = "Cyber-Planner Emergence"
+description = "The hive mind coalesces. A Cyber-Planner forms. It's faster, smarter, and has a sense of humor. The Doctor defeated one. Can you?"
+
+[[cyberman_conversion.entries]]
+name = "Lone Cyberman"
+description = "Incomplete upgrade. Emotions barely suppressed. It wants the Cyberium. It will destroy worlds to get it. Rage and logic combined."
+
+[weeping_angels]
+description = "Don't blink"
+
+[[weeping_angels.entries]]
+name = "Single Angel"
+description = "Stone when you look. Lighting fast when you don't. It's between you and the exit. Your flashlight is dying."
+
+[[weeping_angels.entries]]
+name = "Angel Swarm"
+description = "They're everywhere. Every statue suspect. Keep watching. Take turns. Never sleep. The angels have the phone box."
+
+[[weeping_angels.entries]]
+name = "Angel Touch"
+description = "You feel stone-cold fingers on your shoulder. In the instant your eyes close, you're somewhere else. Somewhen else. Decades away. They fed."
+
+[[weeping_angels.entries]]
+name = "Image of an Angel"
+description = "You looked at the photograph too long. Now there's an angel in your mind. It's getting stronger. Soon it won't need the picture."
+
+[[weeping_angels.entries]]
+name = "Statue Uncertainty"
+description = "Is that statue an angel? It wasn't there before. Your eyes hurt from not blinking. But if you're wrong..."
+
+[[weeping_angels.entries]]
+name = "Angel Bob Communication"
+description = "The angels are speaking through someone. Past tense. They were Bob. Now they're just wearing his voice. They want you to know what's coming."
+
+[the_silence]
+description = "Look away and forget"
+
+[[the_silence.entries]]
+name = "Silence Presence"
+description = "You're looking at... what were you looking at? Tally marks appear on your arm. You don't remember making them. Keep looking at your arm."
+
+[[the_silence.entries]]
+name = "Silence Command"
+description = "Post-hypnotic suggestion. You will do something. When the trigger happens. You won't remember the order. You'll think it was your idea."
+
+[[the_silence.entries]]
+name = "Confessional"
+description = "The Silence listens to everything. Every secret. Every confession. Turn around and forget. They remember. They always remember."
+
+[[the_silence.entries]]
+name = "Silence Nest"
+description = "Dozens of them. Hanging from the ceiling. You saw them. For a moment. What were you looking at? The tally marks multiply."
+
+[[the_silence.entries]]
+name = "Recorded Evidence"
+description = "Someone filmed the Silence. The recording shows everything. Now everyone who sees it wants to kill. This is how the Silence fall."
+
+[sontaran_invasion]
+description = "The warrior race"
+
+[[sontaran_invasion.entries]]
+name = "Sontaran Scout"
+description = "Single Sontaran warrior. Proud. Eager. Considers you barely worth killing but will do so anyway. Sontar-HA!"
+
+[[sontaran_invasion.entries]]
+name = "Sontaran Battle Group"
+description = "A dozen warriors, perfect clone soldiers. They've established position. They're waiting for you to attack. They hope you will. Please attack."
+
+[[sontaran_invasion.entries]]
+name = "Sontaran Strategem"
+description = "The ATMOS devices. The poison air. Humanity choking on Sontaran genius. The perfect military operation."
+
+[[sontaran_invasion.entries]]
+name = "Sontaran Honor Duel"
+description = "Commander Strax challenges you to single combat. Refusal is cowardice. Acceptance might be fatal. Sontarans fight for fun."
+
+[[sontaran_invasion.entries]]
+name = "Probic Vent Opportunity"
+description = "A Sontaran has their back to you. The vent at the base of the skull - their one weakness. Do you take the dishonorable shot?"
+
+[zygon_infiltration]
+description = "They could be anyone"
+
+[[zygon_infiltration.entries]]
+name = "Impersonation Discovery"
+description = "Someone you trust is a Zygon. The original is alive, connected to them, providing the body print. Who else is compromised?"
+
+[[zygon_infiltration.entries]]
+name = "Zygon Reveal"
+description = "The Zygon drops its disguise. Sucker-covered nightmare revealed. It's been among you for months. It knows everything."
+
+[[zygon_infiltration.entries]]
+name = "Pod Chamber"
+description = "They keep the originals here. Alive, preserved, providing body prints. Friends, family, strangers - all waiting to be rescued or replaced."
+
+[[zygon_infiltration.entries]]
+name = "Zygon Civil War"
+description = "Splinter faction vs peace treaty. Both look human. Both claim to want peace. One is lying. Possibly both."
+
+[[zygon_infiltration.entries]]
+name = "Osgood Box Decision"
+description = "Two boxes. Two buttons. One kills all Zygons. One kills all humans. Or maybe neither does. The point is the choice."
+
+[other_aliens]
+description = "The wider universe"
+
+[[other_aliens.entries]]
+name = "Silurian Awakening"
+description = "The original inhabitants of Earth. They were here first. They want it back. Humans are the invaders from their perspective."
+
+[[other_aliens.entries]]
+name = "Ice Warrior Encounter"
+description = "Proud Martian warrior. Honor-bound. Dangerous. They could be ally or enemy depending on how you treat them. Respect matters."
+
+[[other_aliens.entries]]
+name = "Judoon Jurisdiction"
+description = "Platoon upon platoon. Intergalactic police. Brutally efficient. If you're guilty, you're dead. If you're not, prove it fast."
+
+[[other_aliens.entries]]
+name = "Ood Communication"
+description = "The song in their minds reaches you. They're trying to help. Their servitude was forced. Now free, they share warnings."
+
+[[other_aliens.entries]]
+name = "Slitheen Scheme"
+description = "The family of criminals. Profit is the only motive. Human skins stretched over bulk. The gas exchange is unfortunate."
+
+[[other_aliens.entries]]
+name = "Vashta Nerada Shadow"
+description = "Count the shadows. If you have two shadows, you're dead already. The swarm moves in darkness. Any darkness."
+
+[[other_aliens.entries]]
+name = "Headless Monk Pursuit"
+description = "The order that believes the head leads one astray. Faith without thought. Blades that sing. They don't negotiate."
+
+[[other_aliens.entries]]
+name = "Krillitane Conspiracy"
+description = "They take the best traits of the races they conquer. Teachers at the school. The oil in the food. The children are solving the Skasis Paradigm."
+
+[[other_aliens.entries]]
+name = "Auton Activation"
+description = "The shop window dummies move. The plastic awakens. The Nestene Consciousness controls everything made of polymer. Everything."
+
+[[other_aliens.entries]]
+name = "Pyrovile Emergence"
+description = "Stone giants from the core of the Earth. Fire and destruction. Pompeii burns around them. Or not - depending on choices."
+
+[[other_aliens.entries]]
+name = "Carrionite Words"
+description = "The right words reshape reality. They look like witches because perception shapes them. Shakespeare gave them power. Words can take it away."
+
+[[other_aliens.entries]]
+name = "Dream Crab Infiltration"
+description = "You don't know you're dreaming. The face-hugging creature feeds on your brain while you experience a fantasy. Wake up. If you can."
+
+[[other_aliens.entries]]
+name = "Mire Warrior"
+description = "Viking gods revealed as armored predators. They harvest adrenaline. They create legends. They don't expect resistance."
+
+[[other_aliens.entries]]
+name = "Boneless Intrusion"
+description = "Two-dimensional creatures reaching into three-dimensional space. They drain dimensions. People flatten. Walls become prisons."
+
+[[other_aliens.entries]]
+name = "Racnoss Revival"
+description = "The Empress hungry, her children beneath London. The star that made Earth is their meal. Christmas dinner with a billion spiders."
+
+[[other_aliens.entries]]
+name = "Prisoner Zero Escape"
+description = "Twelve years hiding in Amelia Pond's house. The crack let it through. Now the Atraxi are coming, and they don't care about collateral damage."
+
+[[other_aliens.entries]]
+name = "Stenza Hunt"
+description = "Tim Shaw and his trophy collection. Teeth embedded in face. The hunt is ritual. You're the prey."
+
+[[other_aliens.entries]]
+name = "The Beast Speaks"
+description = "Something older than the universe. Chained before time began. Its voice alone corrupts. Its name would destroy your mind."

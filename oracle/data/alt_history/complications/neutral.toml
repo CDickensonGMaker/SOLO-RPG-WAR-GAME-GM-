@@ -1,0 +1,64 @@
+# Alternate History Neutral Complications
+# Complications that add complexity without being purely good or bad
+
+[neutral]
+description = "Morally complex complications in alternate history scenarios - tradeoffs, dilemmas, unintended consequences"
+entries = [
+  # Timeline Tradeoffs
+  { text = "The divergence prevented one evil but enabled another - the historical change stopped one atrocity but made a different one possible", weight = 2 },
+  { text = "Both timelines have legitimate claims - there's no objectively 'correct' history, each has its own validity", weight = 1 },
+  { text = "The change was democratically chosen - people in the past knowingly voted to alter their future, is that their right?", weight = 1 },
+  { text = "Technology advanced faster but society didn't keep up - this timeline has wonders but no wisdom to use them well", weight = 1 },
+  { text = "The original timeline's problems were different, not fewer - trading one set of crises for another, neither better overall", weight = 1 },
+  { text = "Both versions of history have loving families, meaningful lives - who decides which reality's people deserve to exist?", weight = 2 },
+  { text = "The divergence was accidental but not unwelcome - the change wasn't intended, but many people prefer the result", weight = 1 },
+  { text = "Restoring the original timeline requires changing it anyway - going back means creating yet another alternate history", weight = 1 },
+
+  # Identity Complications
+  { text = "Your alternate self is a better person - the version of you from this timeline is more virtuous, more accomplished, more loved", weight = 2 },
+  { text = "Your skills don't exist here - your expertise was in a field that never developed, making you useless and obsolete", weight = 1 },
+  { text = "Your credentials are meaningless - your education, certifications, and experience don't transfer to this timeline's standards", weight = 1 },
+  { text = "Your family has different members - some siblings who existed in your timeline never were, others are entirely new to you", weight = 1 },
+  { text = "Your native language evolved differently - you speak the same words but idioms, grammar, and meanings have drifted", weight = 1 },
+  { text = "Your religious faith took a different path - the doctrines and practices you knew have diverged from what's here", weight = 1 },
+  { text = "Your cultural references are wrong - jokes, stories, and shared touchstones don't match this timeline's experience", weight = 1 },
+  { text = "Your body remembers injuries that never happened here - scars, aches, and disabilities with no cause in this history", weight = 1 },
+
+  # Political Complexity
+  { text = "The victors of this timeline genuinely believe they're righteous - they're not simply oppressors, they think they saved the world", weight = 2 },
+  { text = "The resistance includes factions with incompatible goals - even if they win, they'll fight each other immediately after", weight = 1 },
+  { text = "The occupation actually improved some things - infrastructure, medicine, education are better, even if freedom is gone", weight = 1 },
+  { text = "The border between nations divides ethnic and family groups - the artificial line separates people who belong together", weight = 1 },
+  { text = "The alliance against the victors includes your enemies - working with people you despise to defeat a common foe", weight = 1 },
+  { text = "The legitimate government is in exile and compromised - the authorities who should rule are themselves corrupt", weight = 1 },
+  { text = "Revolution would harm the most vulnerable - overthrowing the system would cause suffering for those least able to endure it", weight = 1 },
+  { text = "The status quo benefits from pretending to be worse than it is - exaggerated oppression justifies the powerful on all sides", weight = 1 },
+
+  # Information Complications
+  { text = "Multiple contradictory sources all seem equally valid - impossible to determine which account of history is accurate", weight = 2 },
+  { text = "Your key witness has their own agenda - the person with vital information is using it to manipulate you", weight = 1 },
+  { text = "The proof of the divergence would cause panic - revealing the truth might be worse than maintaining the lie", weight = 1 },
+  { text = "The records have been altered by multiple parties - layers of propaganda from different eras obscure the truth", weight = 1 },
+  { text = "Your own memories might be unreliable - perhaps you're the one with the altered recollection, not everyone else", weight = 2 },
+  { text = "The truth is partially known and misunderstood - people have pieces of the puzzle but assembled them wrong", weight = 1 },
+  { text = "Different crossing points show different versions - which parallel timeline is the 'real' original?", weight = 1 },
+  { text = "The historians are in conflict - experts disagree fundamentally on what happened and why", weight = 1 },
+
+  # Practical Complications
+  { text = "The currency is worthless or valuable unexpectedly - your money is either trash or treasure here", weight = 1 },
+  { text = "Transportation works completely differently - methods you know how to use don't exist or work differently", weight = 1 },
+  { text = "The legal system is alien - laws that were clear are now obscure, crimes and rights don't match your expectations", weight = 1 },
+  { text = "Social classes are organized differently - status markers you recognize are meaningless or reversed", weight = 1 },
+  { text = "Gender roles diverged - expectations for behavior based on gender don't match what you knew", weight = 1 },
+  { text = "The calendar is different - dates, holidays, and time-keeping don't align with your experience", weight = 1 },
+  { text = "Medicine follows different principles - treatments you'd expect don't exist, available cures seem impossible", weight = 1 },
+  { text = "Technology took a different path - familiar devices aren't here but unfamiliar ones fill similar roles", weight = 1 },
+
+  # Relationship Complications
+  { text = "Your ally here was your enemy in the original timeline - trusting someone you remember as a foe", weight = 2 },
+  { text = "Someone who died protecting you in the original timeline is alive here but doesn't know you - stranger wearing a loved one's face", weight = 1 },
+  { text = "The love of your life is with someone else here - your relationship never happened in this timeline", weight = 1 },
+  { text = "Your mentor became something different - the person who shaped you took a completely different path here", weight = 1 },
+  { text = "Your childhood friend is now a powerful enemy - growing up diverged, they're on the opposite side now", weight = 1 },
+  { text = "Your parents are younger than you remember - or older, the timeline change affected their ages", weight = 1 },
+]

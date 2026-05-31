@@ -1,0 +1,110 @@
+# WWII Combat Encounters
+# From beach assaults to jungle firefights, the sharp end of the war
+
+[infantry_combat]
+description = "Ground combat in all theaters"
+entries = [
+    "Machine gun nest covering the only approach, flanking seems impossible",
+    "Mortar barrage incoming, no cover visible, only shell holes",
+    "Sniper somewhere in the rubble, last man who moved is dead",
+    "Patrol walked into ambush, lead and rear elements pinned",
+    "House-to-house fighting, enemy could be in any room",
+    "Night attack, muzzle flashes the only light",
+    "River crossing under fire, boats sinking around you",
+    "Minefield discovered the hard way, medic working on point man",
+    "Artillery observer spotted, counter-battery fire incoming",
+    "Fixed bayonets for the assault, some things haven't changed",
+    "Trench line assault, grenades first then small arms",
+    "Fighting withdrawal, covering fire while others fall back",
+    "Counterattack hitting the position, ammunition running low"
+]
+
+[armor_combat]
+description = "Tank warfare across theaters"
+entries = [
+    "Tiger tank at the crossroads, Sherman is not going to cut it",
+    "Tank duel in the bocage, first shot wins",
+    "Panzerfaust team hiding in the rubble, infantry needed",
+    "Armor ambush in the treeline, turret traverse too slow",
+    "Tank recovery under fire, burning hulk needs to move",
+    "Combined arms assault, infantry riding the tanks",
+    "Breakout through enemy lines, fuel for one more kilometer",
+    "Street fighting with armor, buildings channeling death",
+    "Tiger hunting with a bazooka, prayers not optional",
+    "Armored column stalled, lead tank hit a mine"
+]
+
+[beach_assaults]
+description = "Amphibious operations"
+entries = [
+    "Landing craft ramp drops, machine guns waiting",
+    "Seawall provides only cover, engineers needed to blow gaps",
+    "Amtrac stuck on reef, wading through chest-deep water",
+    "Beach obstacles blocking the armor, demolitions under fire",
+    "Navy fire support lifting, assault wave going in",
+    "Wounded drowning in the surf, medics can't reach them",
+    "Pillbox covering the exit, direct assault necessary",
+    "Beach secured but engineers trapped, second wave delayed",
+    "Japanese counterattack from the treeline, banzai",
+    "Night landing gone wrong, units scattered"
+]
+
+[air_combat]
+description = "The war in the air"
+entries = [
+    "Messerschmitts at twelve o'clock, escort engaging",
+    "Flak corridor over the target, bombers boring in",
+    "Engine fire over enemy territory, bail out or ride it down",
+    "Formation broken up, bombers scattered and vulnerable",
+    "Dogfight spiraling down, losing altitude fast",
+    "Night fighters stalking the bomber stream",
+    "Zero on your tail, no way to shake him",
+    "Kamikaze diving on the carrier, AA blazing",
+    "Crash landing in occupied territory, evade or capture",
+    "Strafing run on enemy column, ground fire heavy"
+]
+
+[naval_combat]
+description = "Surface and submarine warfare"
+entries = [
+    "U-boat contact, depth charges readying",
+    "Surface engagement at night, searchlights and shells",
+    "Torpedo run on enemy battleship, destroyers screening",
+    "Submarine being depth charged, pressure hull groaning",
+    "PT boat attack on supply convoy",
+    "Kamikaze damage control, fires spreading",
+    "Merchant ship hit, abandon ship ordered",
+    "Naval gunfire support mission, adjusting fire",
+    "Destroyer duel at close range",
+    "Submarine surfaced for deck gun action"
+]
+
+[special_operations]
+description = "Commando and special forces actions"
+entries = [
+    "Radar station raid, in and out before dawn",
+    "Bridge demolition, timer set, extraction under fire",
+    "Prisoner snatch, high-value target in the compound",
+    "Airfield sabotage, aircraft burning on the ground",
+    "Beach reconnaissance, mapping obstacles for the invasion",
+    "Pathfinder drop, marking the DZ under fire",
+    "Partisan raid on supply convoy",
+    "Commando assault on coastal battery",
+    "Behind enemy lines, surrounded and out of ammunition",
+    "Agent extraction, Lysander landing in a field"
+]
+
+[defensive_combat]
+description = "Holding the line"
+entries = [
+    "Perimeter under night attack, illumination rounds revealing waves",
+    "Roadblock with scratch force, enemy armor approaching",
+    "Surrounded at the crossroads, relief force stalled",
+    "Artillery position being overrun, direct fire necessary",
+    "Last stand in the farmhouse, ammunition counted",
+    "Counterattack developing, reserves committed",
+    "Bunker complex holding, but supplies running out",
+    "Bridge defense, demolition charges set just in case",
+    "Fortress under siege, relief not coming",
+    "Banzai charge breaking on the wire"
+]

@@ -1,0 +1,69 @@
+# Lost Regiment Locations - Regiment Territory
+# Areas controlled and developed by the displaced military
+
+[regiment_territory]
+entries = [
+    # Fortified Positions
+    "The Bastion - central fortress with earthwork walls and rifle pits",
+    "Fort Necessity - first crude fortification, now expanded into headquarters",
+    "Redoubt Hill - artillery position overlooking the approach",
+    "The Stockade - prisoner holding and discipline facility",
+    "Watchtower Ridge - observation posts connected by signal flags",
+    "The Killing Ground - open field before walls designed for maximum fire",
+    "Trench Line Alpha - forward defensive position with interlocking fire",
+    "Battery Position Nine - heavy guns protecting the river crossing",
+    "The Star Fort - geometric fortification protecting the powder works",
+    "Bunker Complex - underground shelters against artillery and weather",
+
+    # Industrial Facilities
+    "The Foundry - primitive but growing metalworks producing tools and weapons",
+    "Steam Works - where the first engines are being assembled from scratch",
+    "The Powder Mill - guarded facility producing black powder",
+    "Cartridge Factory - assembly line for ammunition using native labor",
+    "The Rail Yard - center of the spreading railroad network",
+    "Textile Mill - producing uniforms and canvas from local materials",
+    "The Forge District - blacksmith shops producing everything from nails to bayonets",
+    "Machine Shop - precision work requiring irreplaceable skilled hands",
+    "Chemical Works - producing medicine, dyes, and industrial chemicals",
+    "Sawmill Complex - lumber production feeding construction needs",
+
+    # Training and Education
+    "The Drill Field - where natives learn to march, shoot, and fight",
+    "Officers' Academy - teaching military theory to promising natives",
+    "Technical School - training future engineers and machinists",
+    "The Firing Range - precious ammunition spent on marksmanship",
+    "Cavalry Training Ground - teaching mounted warfare to horsemen",
+    "Artillery School - mathematics and gunnery for native crews",
+    "The Schoolhouse - basic literacy spreading through native population",
+    "Medical College - training native healers in modern techniques",
+    "NCO Academy - creating the backbone of the new army",
+    "Signal Corps Training - flags, mirrors, and eventually telegraph",
+
+    # Medical Facilities
+    "Base Hospital - where future medicine meets primitive conditions",
+    "Quarantine Camp - isolating contagious cases to prevent outbreaks",
+    "The Surgery - where the chief surgeon performs miracles daily",
+    "Convalescent Ward - recovery area for wounded",
+    "Medical Supply Depot - carefully hoarded precious medicines",
+    "Sanitation Station - clean water and waste management",
+    "The Pharmacy - producing medicine from local herbs and chemistry",
+    "Field Hospital Forward - treating casualties near the front",
+
+    # Administrative and Command
+    "Regimental Headquarters - the Colonel's command post",
+    "The War Room - maps, intelligence, and strategic planning",
+    "Quartermaster Depot - supply distribution center",
+    "Telegraph Office - communication hub for the territory",
+    "The Archive - records of everything from the old world remembered",
+    "Provost Office - law enforcement and military justice",
+    "Civil Administration - governing the growing native population",
+    "Intelligence Section - gathering information on enemy and allies",
+
+    # Civilian Areas
+    "Settlers' Quarter - housing for camp followers and dependents",
+    "The Market - trading post where regiment meets native economy",
+    "New Church - where old faith adapts to new circumstances",
+    "The Commons - public gathering space for both peoples",
+    "Immigrant Housing - shelters for natives fleeing enemy territory",
+    "Craftsmen's Row - workshops serving military and civilian needs"
+]

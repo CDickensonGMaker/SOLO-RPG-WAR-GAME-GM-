@@ -1,0 +1,107 @@
+# Military Life Encounters
+# The Federation machinery that shapes every trooper's life
+
+[chain_of_command]
+description = "Conflicts with military hierarchy"
+entries = [
+  { text = "Lieutenant fresh from OCS contradicting a veteran sergeant's tactical advice, lives hang in the balance", weight = 2 },
+  { text = "Orders from command that make no tactical sense, someone far away making decisions with incomplete information", weight = 2 },
+  { text = "Senior NCO demanding obedience over objections, they're right about authority even if wrong about tactics", weight = 2 },
+  { text = "Captain caught falsifying casualty reports, confrontation means career end, silence means complicity", weight = 1 },
+  { text = "Battalion commander visiting the front, forcing parade protocols during a combat operation", weight = 1 },
+  { text = "Direct order that will get troopers killed, refuse and face court martial, comply and face dead friends", weight = 1 },
+  { text = "Two officers giving contradictory orders, both claim authority, clock ticking on the bug advance", weight = 1 },
+  { text = "Intelligence officer overriding combat commander, citing classified reasons", weight = 1 },
+  { text = "Fleet captain and MI major arguing over extraction priorities while bugs close in", weight = 2 },
+  { text = "Political officer accompanying the unit, reporting on morale, everyone choosing words carefully", weight = 1 },
+]
+
+[training_incidents]
+description = "Events during military preparation"
+entries = [
+  { text = "Live fire exercise gone wrong, bug specimens released, real casualties in training", weight = 2 },
+  { text = "Drill instructor pushing too hard, recruit about to break, intervention means attention", weight = 2 },
+  { text = "Power suit malfunction during training, trooper trapped, techs working frantically", weight = 1 },
+  { text = "Drop pod simulation failure, trainee experiencing real g-forces, medical emergency", weight = 1 },
+  { text = "Recruits forming an unofficial squad rivalry, about to turn physical", weight = 1 },
+  { text = "Psychic screening identifying latent talent, recruit about to be 'voluntold' for special training", weight = 1 },
+  { text = "Training accident being covered up, someone died from negligence, not combat", weight = 1 },
+  { text = "Bug encounter during field exercise, training bugs escaped containment, real fight with training weapons", weight = 1 },
+  { text = "Recruits caught sabotaging each other's equipment, potentially lethal prank", weight = 1 },
+  { text = "Former civilian life catching up to a recruit, past crime discovered, discharge or exposure?", weight = 1 },
+]
+
+[court_martial]
+description = "Military justice scenarios"
+entries = [
+  { text = "Court martial for cowardice, defendant claims they froze, prosecution says they ran, truth is complicated", weight = 2 },
+  { text = "Desertion trial, trooper tried to flee, family was threatened by criminal elements", weight = 1 },
+  { text = "Friendly fire incident under review, trigger puller was exhausted, was it negligence or tragedy?", weight = 2 },
+  { text = "Officer on trial for wasteful casualties, definitions of 'wasteful' vary by rank", weight = 1 },
+  { text = "Sedition charges, trooper spoke against the war, spoke truth that can't be spoken", weight = 1 },
+  { text = "Murder charges during combat, killed a trooper, claims it was bug-influenced", weight = 1 },
+  { text = "Theft of military equipment, sold on black market, money went to family back home", weight = 1 },
+  { text = "Insubordination trial, refused an order, order was illegal but proving it is difficult", weight = 2 },
+  { text = "Witness in a court martial, testimony will end a career, truth or loyalty?", weight = 1 },
+  { text = "Cover-up unraveling, command trying to suppress evidence, justice vs stability", weight = 1 },
+]
+
+[promotion_opportunities]
+description = "Career advancement scenarios"
+entries = [
+  { text = "Battlefield commission opportunity, accept it and lead the remnants, decline and someone less qualified steps up", weight = 2 },
+  { text = "Promotion board upcoming, service record reviewed, that incident from last year might come up", weight = 2 },
+  { text = "NCO slot open, two troopers equally qualified, decision time", weight = 1 },
+  { text = "Officer track selection, accept OCS nomination or stay enlisted with the squad", weight = 1 },
+  { text = "Specialist position available, requires transfer away from current unit", weight = 1 },
+  { text = "Mentor recommending for special assignment, career-making but dangerous", weight = 1 },
+  { text = "Passed over for promotion, someone less qualified advanced, politics in play", weight = 2 },
+  { text = "Promotion contingent on taking a politically sensitive assignment", weight = 1 },
+  { text = "Flag officer noticed your performance, invitation to staff assignment", weight = 1 },
+  { text = "Combat citation pending, approval would mean promotion, someone's disputing the account", weight = 1 },
+]
+
+[inter_unit_rivalries]
+description = "Conflicts between military units"
+entries = [
+  { text = "Roughnecks and Wildcats in the same bar, historic grudge between units, tension rising", weight = 2 },
+  { text = "Relief unit arriving late, current defenders blaming them for casualties during the wait", weight = 2 },
+  { text = "Fleet pilots looking down on MI, literal and figurative, confrontation brewing", weight = 2 },
+  { text = "Two squads claiming the same kill, bug body between them, pride on the line", weight = 1 },
+  { text = "Unit blamed for another's failure, scapegoated in reports, reputation destroyed", weight = 1 },
+  { text = "Competition for limited resources, ammunition, supplies, medical support", weight = 2 },
+  { text = "War stories contradicting each other, both units claiming credit for the same action", weight = 1 },
+  { text = "Transfer between rival units, loyalty questioned by both sides", weight = 1 },
+  { text = "Joint operation with fractured command, neither unit trusting the other's judgment", weight = 1 },
+  { text = "Romantic entanglement crossing unit lines, both commands disapproving", weight = 1 },
+]
+
+[propaganda_broadcasts]
+description = "FedNet and morale management"
+entries = [
+  { text = "FedNet crew filming the squad, staged combat footage, reality adjusted for civilian consumption", weight = 2 },
+  { text = "War correspondent asking questions, real answers would be sedition, lies are expected", weight = 2 },
+  { text = "Propaganda broadcast describing a battle you survived, nothing in the report happened that way", weight = 2 },
+  { text = "Morale officer distributing authorized entertainment, everything carefully curated", weight = 1 },
+  { text = "Unauthorized information source, real news from the front, possession is criminal", weight = 1 },
+  { text = "Request to record a message home, every word will be reviewed and edited", weight = 1 },
+  { text = "Briefing contradicting what troopers saw with their own eyes, gaslighting as policy", weight = 1 },
+  { text = "Recognition in propaganda, face used for recruitment, the dissonance of heroic framing", weight = 1 },
+  { text = "Civilian letter asking about the war, how to answer without breaking their world?", weight = 1 },
+  { text = "FedNet broadcast celebrating victory in a battle still being fought and lost", weight = 1 },
+]
+
+[military_bureaucracy]
+description = "The machine that manages war"
+entries = [
+  { text = "Supply requisition denied for critical equipment, forms filed incorrectly", weight = 2 },
+  { text = "Leave request pending for months, family emergency waiting", weight = 2 },
+  { text = "Orders assigning you to a unit that no longer exists, bureaucracy not updated for casualties", weight = 1 },
+  { text = "Pay discrepancy, combat bonus not processed, quartermaster unhelpful", weight = 1 },
+  { text = "Medical clearance required, doctor hasn't seen combat, doesn't understand the need", weight = 1 },
+  { text = "Service record error, someone else's court martial on your file", weight = 1 },
+  { text = "Transfer orders, no explanation, report to new unit immediately", weight = 1 },
+  { text = "Citizenship application stalled, paperwork lost, service time not counting", weight = 1 },
+  { text = "Next of kin notification sent to wrong family, their grief is not your fault", weight = 1 },
+  { text = "Equipment signed out under your name that you've never seen, accountability pending", weight = 1 },
+]

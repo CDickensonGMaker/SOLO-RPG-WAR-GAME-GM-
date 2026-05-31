@@ -1,0 +1,78 @@
+# Alternate History Conflict Encounters
+# Wars, resistance, timeline struggles, and battles between alternate powers
+
+[conflict]
+description = "Encounters involving conflict in changed worlds - wars between alternate powers, resistance, timeline preservation"
+entries = [
+  # War Between Alternate Powers
+  { text = "Border skirmish - soldiers from two nations that shouldn't both exist exchange fire across a frontier that was never drawn in your timeline", weight = 2 },
+  { text = "Naval engagement - warships flying flags of empires that fell centuries ago in your history maneuver for advantage", weight = 1 },
+  { text = "Air raid warning - bombers from a nation that never developed aviation in your timeline darken the sky", weight = 1 },
+  { text = "Tank battle - armored vehicles with unfamiliar designs clash in fields that were never battlegrounds", weight = 1 },
+  { text = "Siege of a city - forces surround a metropolis that your timeline knows as peaceful, demanding surrender", weight = 1 },
+  { text = "Trench warfare redux - the tactics of WWI never became obsolete here, soldiers still dig in for years-long stalemates", weight = 1 },
+  { text = "Submarine warfare - underwater vessels hunt shipping for nations with completely different borders", weight = 1 },
+  { text = "Cavalry charge - mounted troops are still viable in this timeline's military doctrine, thundering across modern battlefields", weight = 1 },
+  { text = "Chemical weapons deployment - banned or unused in your timeline, here they're standard warfare tools", weight = 1 },
+  { text = "Nuclear standoff - the powers that possess the bomb are completely different, their conflict threatens a new apocalypse", weight = 2 },
+
+  # Resistance Against Alternate Victors
+  { text = "Underground cell meeting - resistance fighters planning against whoever won in this timeline gather in a hidden basement", weight = 2 },
+  { text = "Clandestine radio broadcast - a forbidden voice speaks hope to the occupied, using equipment hidden from authorities", weight = 2 },
+  { text = "Sabotage mission - resistance members target infrastructure that supports the victor's occupation", weight = 2 },
+  { text = "Safe house network - following a chain of hidden refuges for those fleeing the powers that triumphed here", weight = 1 },
+  { text = "Assassination attempt - a resistance fighter takes aim at a leader who shouldn't be alive, or who should have died differently", weight = 1 },
+  { text = "Prison break - freeing political prisoners held by authorities whose legitimacy your timeline never recognized", weight = 1 },
+  { text = "Smuggling run - moving people, weapons, or information across borders that shouldn't exist", weight = 2 },
+  { text = "Propaganda printing - creating forbidden literature that remembers history as it should have been", weight = 1 },
+  { text = "Double agent revelation - discovering that a trusted ally works for the occupying power, or vice versa", weight = 1 },
+  { text = "Mass uprising coordination - resistance movements across regions preparing for simultaneous action", weight = 1 },
+
+  # Timeline Preservation vs Change
+  { text = "Timeline guardian confrontation - agents who protect this history from being changed identify you as a threat to their reality", weight = 2 },
+  { text = "Restoration mission briefing - allies explain that the original timeline must be restored, no matter the cost to those who live here", weight = 2 },
+  { text = "Divergence point protection - forces gather to prevent anyone from reaching the moment when history changed", weight = 1 },
+  { text = "Timeline war soldiers - combatants from multiple possible histories fight for their reality's survival", weight = 1 },
+  { text = "Paradox prevention squad - specialists try to stop actions that would collapse all timelines simultaneously", weight = 1 },
+  { text = "Reality anchor destruction - attempt to eliminate someone or something that stabilizes this timeline's existence", weight = 1 },
+  { text = "Timeline merger event - two histories are being forced to combine, factions fight over which elements survive", weight = 1 },
+  { text = "Chrono-assassin deployment - killers sent to eliminate key figures before they create or prevent divergences", weight = 1 },
+  { text = "Temporal refugee defense - protecting displaced persons from those who would erase them to 'fix' history", weight = 2 },
+  { text = "Preservation treaty negotiations - representatives from different timelines attempt to agree on which histories get to exist", weight = 1 },
+
+  # Cross-Timeline Intrusion
+  { text = "Invasion from another history - soldiers from a more militaristic timeline pour through a crossing point", weight = 2 },
+  { text = "Technology theft operation - agents from a less advanced timeline try to steal innovations from this one", weight = 1 },
+  { text = "Resource extraction raid - a timeline depleted of something valuable targets this world's supplies", weight = 1 },
+  { text = "Refugee flood - massive displacement of people from a collapsing timeline seeking survival here", weight = 2 },
+  { text = "Parallel history colonization - a powerful timeline treats this one as territory to be conquered and settled", weight = 1 },
+  { text = "Timeline quarantine enforcement - authorities try to prevent any contact with a dangerous alternate history", weight = 1 },
+  { text = "Cross-timeline pursuit - criminals or fugitives from one history chased by law enforcement from another", weight = 1 },
+  { text = "Diplomatic incident - actions here have consequences in connected timelines, retaliation is demanded", weight = 1 },
+  { text = "Portal defense - protecting a crossing point from those who would use it for invasion or escape", weight = 1 },
+  { text = "Timeline smuggling interdiction - stopping illegal trade in goods and people between parallel histories", weight = 1 },
+
+  # Occupation and Collaboration Conflicts
+  { text = "Collaboration tribunal - someone accused of helping the victors faces judgment from those who resisted", weight = 2 },
+  { text = "Occupier reprisal - authorities punish civilians for resistance actions, collective punishment", weight = 1 },
+  { text = "Collaborator assassination - resistance targets those who serve the powers that won", weight = 1 },
+  { text = "Occupation zone checkpoint - tension as authorities check papers and search for contraband or dissidents", weight = 2 },
+  { text = "Quisling exposure - a respected figure revealed to be working for the occupiers", weight = 1 },
+  { text = "Resistance cell betrayal - infiltrators have compromised the underground, mass arrests follow", weight = 1 },
+  { text = "Forced labor roundup - occupation authorities conscript workers for their projects", weight = 1 },
+  { text = "Cultural suppression enforcement - authorities destroy artifacts, books, or practices from the defeated culture", weight = 1 },
+  { text = "Liberation day uprising - coordinated action to throw off occupation when the moment is right", weight = 1 },
+  { text = "Occupation army mutiny - soldiers from the victorious power refuse to continue suppressing the conquered", weight = 1 },
+
+  # Alien/External Force Conflicts (Worldwar-style)
+  { text = "Human-alien skirmish - the uneasy coexistence breaks down into localized violence between species", weight = 2 },
+  { text = "Ginger trade war - conflict over the substance that affects alien psychology, humans exploit the weakness", weight = 1 },
+  { text = "Collaboration zone rebellion - humans under alien administration rise against their otherworldly rulers", weight = 1 },
+  { text = "Technology capture mission - attempt to seize alien equipment for human use or reverse engineering", weight = 1 },
+  { text = "Integration program resistance - opposing forced mixing of human and alien societies", weight = 1 },
+  { text = "Alien faction conflict - different groups among the extraterrestrials fight, humans caught in the middle", weight = 1 },
+  { text = "Human unity breaking down - the alliance forged against alien invasion fractures along old national lines", weight = 1 },
+  { text = "Alien reinforcement arrival - new forces from the homeworld change the balance of power", weight = 1 },
+  { text = "Nuclear standoff with aliens - humanity's ultimate weapon versus extraterrestrial technology", weight = 1 },
+  { text = "Species negotiation breakdown - peace talks between humans and aliens collapse into renewed conflict", weight = 1 },
+]

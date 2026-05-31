@@ -1,0 +1,174 @@
+# Sci-Fi Military Operations
+# Mission types, briefing elements, and complications
+# Tone: Aliens, Halo, Warhammer 40K grunts, The Expanse marines
+
+[operation_types]
+entries = [
+  # Emergency Operations
+  { text = "DUSTOFF - emergency casualty extraction under fire, no questions about the landing zone", weight = 2 },
+  { text = "REDCON ONE - full combat alert, all units to battle stations, this is not a drill", weight = 2 },
+  { text = "BROKEN ARROW - friendly position overrun, all available fire support to converge", weight = 2 },
+  { text = "CASEVAC - wounded need immediate extraction, every second counts", weight = 1 },
+  { text = "MEDEVAC - priority medical evacuation, hot LZ expected", weight = 1 },
+  { text = "BAILOUT - emergency ship evacuation, lifepods only, grab nothing", weight = 1 },
+  { text = "FIREBASE RELOCATION - pull back and dig in at secondary position", weight = 1 },
+  { text = "CRASH RETRIEVAL - recover downed bird and crew, hostiles converging", weight = 1 },
+
+  # Assault Operations
+  { text = "SPEARHEAD - armored breakthrough operation, punch through and keep moving", weight = 2 },
+  { text = "THUNDER RUN - high-speed armored push through hostile territory", weight = 1 },
+  { text = "HAMMER FALL - orbital drop assault, thirty seconds to dirt", weight = 2 },
+  { text = "STEEL RAIN - mass drop pod insertion, saturation landing pattern", weight = 2 },
+  { text = "BEACH HEAD - establish and hold landing zone for follow-on forces", weight = 1 },
+  { text = "BREACH AND CLEAR - close quarters assault, room by room, no survivors", weight = 1 },
+  { text = "LIGHTNING STRIKE - fast attack on high-value target, in and out", weight = 1 },
+  { text = "DECAPITATION - eliminate enemy command structure, we cut off the head", weight = 1 },
+
+  # Defensive Operations
+  { text = "ALAMO - last stand defensive, no retreat authorized, hold until relieved", weight = 2 },
+  { text = "CASTLE - fortify and defend, dig in deep, they don't get through", weight = 1 },
+  { text = "PORCUPINE - all-around defense, we're surrounded so every direction is front", weight = 1 },
+  { text = "BREAKWATER - stop enemy advance at designated line, bend but don't break", weight = 1 },
+  { text = "REARGUARD - cover main force withdrawal, you're the ones staying behind", weight = 2 },
+  { text = "HEDGEHOG - defensive perimeter in hostile territory, await extraction", weight = 1 },
+
+  # Reconnaissance Operations
+  { text = "LONG RANGE RECON - deep penetration patrol, observe and report, no contact", weight = 1 },
+  { text = "SNATCH AND GRAB - capture high-value target alive for interrogation", weight = 1 },
+  { text = "EYES ON - establish observation post on enemy position, report movements", weight = 1 },
+  { text = "PATHFINDER - advance recon for main force, mark LZs and routes", weight = 1 },
+  { text = "HUNTER-KILLER - locate and destroy enemy mobile assets", weight = 1 },
+  { text = "BUG HUNT - search and destroy mission in infested territory", weight = 2 },
+
+  # Special Operations
+  { text = "BLACK OPS - deniable operation, if captured you're on your own", weight = 2 },
+  { text = "SABOTAGE - destroy enemy infrastructure, make it look like accident if possible", weight = 1 },
+  { text = "RESCUE - extract friendlies from enemy captivity, no one left behind", weight = 1 },
+  { text = "TERMINAL GUIDANCE - laser designate for orbital strike, stay hidden until splash", weight = 1 },
+  { text = "EXFIL - extraction operation, get our people out by any means", weight = 1 },
+  { text = "QUIET PROFESSIONAL - assassination mission, clean kill, no witnesses", weight = 1 },
+
+  # Naval/Void Operations
+  { text = "BOARDING ACTION - assault and capture enemy vessel, prize crew ready", weight = 2 },
+  { text = "VOID WOLF - commerce raiding, hit supply lines and scatter", weight = 1 },
+  { text = "CONVOY ESCORT - protect supply ships, accept no losses", weight = 1 },
+  { text = "BLOCKADE RUNNER - get through enemy interdiction zone at all costs", weight = 1 },
+  { text = "TORPEDO RUN - close range attack on capital ship, this is a one-way trip", weight = 1 },
+  { text = "SCREEN DUTY - picket line against enemy approach, early warning", weight = 1 },
+
+  # Support Operations
+  { text = "FIRE MISSION - provide artillery support to engaged friendlies", weight = 1 },
+  { text = "RESUPPLY - get ammunition and supplies to cut-off unit", weight = 1 },
+  { text = "ENGINEER ASSAULT - breach fortifications for main force", weight = 1 },
+  { text = "COMBAT SEARCH AND RESCUE - recover downed pilots in hostile territory", weight = 1 },
+  { text = "HEARTS AND MINDS - pacification ops, win over local population", weight = 1 },
+  { text = "CLEANSING - area denial through systematic destruction", weight = 1 }
+]
+
+[briefing_elements]
+entries = [
+  # Situation
+  { text = "Intelligence is three days old, assume situation has changed", weight = 1 },
+  { text = "Satellite imagery shows extensive fortification of the objective", weight = 1 },
+  { text = "Enemy strength estimated at battalion level, could be more", weight = 1 },
+  { text = "Friendly forces in the area are combat ineffective, don't count on support", weight = 1 },
+  { text = "Civilians in the AO, rules of engagement restrict heavy weapons", weight = 1 },
+  { text = "Previous unit that attempted this objective went dark, no contact", weight = 2 },
+  { text = "Orbital surveillance is compromised, we're going in blind", weight = 1 },
+  { text = "Enemy has air superiority, expect strafing runs", weight = 1 },
+  { text = "Local resistance will provide guides, trustworthiness unknown", weight = 1 },
+  { text = "Weather window closes in six hours, extraction after that is problematic", weight = 1 },
+
+  # Mission Specifics
+  { text = "Primary objective must be secured intact, no demolitions", weight = 1 },
+  { text = "Zero electronic emissions, full EMCON until contact", weight = 1 },
+  { text = "Expect chemical or biological hazard, bring full NBC gear", weight = 1 },
+  { text = "High-value prisoner is priority, casualties acceptable to secure them", weight = 1 },
+  { text = "Hardcopy orders only, nothing about this goes on the net", weight = 1 },
+  { text = "Asset recovery is priority over personnel extraction", weight = 1 },
+  { text = "Command wants prisoners, command doesn't care how", weight = 1 },
+  { text = "Leave no evidence of our presence, ghost in ghost out", weight = 1 },
+  { text = "Any xenos encountered are to be terminated, no exceptions", weight = 1 },
+  { text = "Collateral damage is authorized, command accepts the consequences", weight = 1 },
+
+  # Support
+  { text = "Artillery on call but limited ammunition, make each fire mission count", weight = 1 },
+  { text = "Close air support available for first two hours only", weight = 1 },
+  { text = "Orbital strike is authorized but coordinate carefully", weight = 1 },
+  { text = "No fire support available, you're on your own out there", weight = 1 },
+  { text = "QRF is thirty minutes out if things go sideways", weight = 1 },
+  { text = "Medical evacuation will be delayed, prepare for field surgery", weight = 1 },
+  { text = "Resupply drop at rally point charlie, coordinates attached", weight = 1 },
+  { text = "Electronic warfare support will jam enemy comms at H-hour", weight = 1 },
+
+  # Warnings
+  { text = "Enemy has demonstrated night-fighting capability, stay sharp", weight = 1 },
+  { text = "Watch for IEDs, previous patrols reported extensive mining", weight = 1 },
+  { text = "Enemy snipers active in this sector, move tactically", weight = 1 },
+  { text = "Xenos spore contamination possible, keep respirators handy", weight = 1 },
+  { text = "Do not engage the locals, let them pass unless hostile", weight = 1 },
+  { text = "Friendly fire incidents have occurred in this AO, confirm targets", weight = 1 },
+  { text = "Enemy employs suicide tactics, watch for martyrs", weight = 1 },
+  { text = "Communications may be unreliable, use prearranged signals", weight = 1 }
+]
+
+[mission_complications]
+entries = [
+  # Intel Failures
+  { text = "Intel was wrong, enemy strength is three times what we expected", weight = 2 },
+  { text = "Objective location is incorrect, it's been moved two klicks north", weight = 1 },
+  { text = "Our guide is leading us into an ambush, or at least a very suspicious route", weight = 1 },
+  { text = "Maps are outdated, terrain doesn't match", weight = 1 },
+  { text = "The target we came for is already dead, mission is pointless", weight = 1 },
+  { text = "Enemy knew we were coming, this is a trap", weight = 2 },
+  { text = "Friendly forces marked as allies are actually hostiles", weight = 1 },
+  { text = "LZ is compromised, enemy has it zeroed", weight = 1 },
+
+  # Equipment Failures
+  { text = "Comms just went down, we're out of contact with command", weight = 2 },
+  { text = "Vehicle threw a track at the worst possible moment", weight = 1 },
+  { text = "Night vision just died, we're fighting in the dark", weight = 1 },
+  { text = "Ammunition count is lower than reported, someone screwed up logistics", weight = 1 },
+  { text = "Medical supplies are expired or wrong type, improvise", weight = 1 },
+  { text = "Encrypted comm gear is incompatible with local forces", weight = 1 },
+  { text = "Fuel contamination, vehicles operating at reduced capacity", weight = 1 },
+  { text = "Weapons malfunction in squad, multiple jams simultaneously", weight = 1 },
+
+  # Environmental
+  { text = "Sandstorm rolling in, visibility dropping to zero", weight = 1 },
+  { text = "Flash flood warning, low ground is death", weight = 1 },
+  { text = "Radiation spike, NBC gear required immediately", weight = 1 },
+  { text = "Temperature dropping fast, frostbite risk in hours", weight = 1 },
+  { text = "Atmospheric conditions preventing air support", weight = 1 },
+  { text = "Seismic activity detected, ground unstable", weight = 1 },
+  { text = "Local fauna drawn to our position by scent or heat", weight = 1 },
+  { text = "Toxic spore release in the area, seal up or die", weight = 1 },
+
+  # Tactical
+  { text = "Enemy reinforcements arriving faster than anticipated", weight = 1 },
+  { text = "Secondary enemy force flanking our position", weight = 1 },
+  { text = "Friendly fire incident, one of ours just went down to our own", weight = 2 },
+  { text = "Key personnel just became casualty, leadership vacuum", weight = 1 },
+  { text = "Extraction bird is not coming, crew refused the hot LZ", weight = 1 },
+  { text = "Artillery landed short, our own guns hit us", weight = 1 },
+  { text = "Mission parameters just changed mid-operation", weight = 1 },
+  { text = "Secondary objective is now primary, plans scrapped", weight = 1 },
+
+  # Human Factors
+  { text = "Squad member is frozen, won't respond, combat shock", weight = 1 },
+  { text = "Interpreter just ran, taking our intel with them", weight = 1 },
+  { text = "Civilian casualties will be blamed on us unless we act", weight = 1 },
+  { text = "One of ours is acting strange, possible compromise or breakdown", weight = 1 },
+  { text = "Local allies switching sides mid-fight", weight = 1 },
+  { text = "Command is micromanaging from orbit, conflicting orders", weight = 1 },
+  { text = "Press embedded with unit just got hit, political nightmare incoming", weight = 1 },
+  { text = "Prisoner we took is too valuable to move but too dangerous to keep", weight = 1 },
+
+  # Xenos Specific
+  { text = "Bug tunnel opens under our position, contacts inside perimeter", weight = 2 },
+  { text = "Xenos behavior doesn't match known patterns, something new", weight = 1 },
+  { text = "Soldier showing signs of parasitic infection", weight = 1 },
+  { text = "Hive mind is adapting to our tactics in real-time", weight = 1 },
+  { text = "Unknown xenos tech activated, effects unclear", weight = 1 },
+  { text = "Spore contamination in the unit, quarantine required", weight = 1 }
+]

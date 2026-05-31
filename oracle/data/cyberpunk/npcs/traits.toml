@@ -120,4 +120,56 @@ entries = [
   { text = "Split personality - different person in the net", weight = 1 },
   { text = "Prophetic dreams - sees things that sometimes come true", weight = 1 },
   { text = "Eidetic memory - remembers everything, forgives nothing", weight = 1 },
+
+  # Chrome-specific traits
+  { text = "Sandevistan twitch - reflex booster causes involuntary micro-movements", weight = 2 },
+  { text = "Chrome glow - subdermal LEDs always active, can't turn them off", weight = 1 },
+  { text = "Interface cables visible - neural ports obvious, always plugged into something", weight = 2 },
+  { text = "Synthetic voice modulation - speaks with inhuman harmonics, can't hide chrome", weight = 2 },
+  { text = "Mantis blade nervous habit - blades extend and retract unconsciously", weight = 1 },
+  { text = "Gorilla arm strength flex - constantly demonstrating hydraulic power", weight = 2 },
+  { text = "Thermal vision active - eyes glow when analyzing heat signatures", weight = 1 },
+  { text = "Smart gun linked - weapon always connected, targeting reticle in vision", weight = 2 },
+  { text = "Pain editor dependence - can't function without it, doesn't feel injuries", weight = 1 },
+  { text = "Memory chip overload - too much stored, random recall episodes", weight = 1 },
+
+  # Gang-culture traits
+  { text = "Maelstrom chrome obsession - sees flesh as weakness, judges by metal", weight = 2 },
+  { text = "Valentino honor code - old school respect, handshake deals, blood debts", weight = 2 },
+  { text = "Tyger Claw discipline - yakuza formality, hierarchy rigid, insult is death", weight = 2 },
+  { text = "Animals aggression - chemical enhancement, always ready to fight", weight = 2 },
+  { text = "Voodoo Boys mysticism - sees the net as spiritual realm, speaks in riddles", weight = 1 },
+  { text = "6th Street patriotism - American exceptionalism, veteran worship, flag everything", weight = 2 },
+  { text = "Mox solidarity - sex worker advocacy, protective instinct, rainbow pride", weight = 2 },
+  { text = "Nomad road code - family above all, vehicle as home, freedom as religion", weight = 2 },
+
+  # Corporate culture traits
+  { text = "Corporate speak fluency - synergy, actionable, pivot, leverage, circling back", weight = 2 },
+  { text = "Hierarchy obsession - rank determines worth, titles matter more than names", weight = 2 },
+  { text = "NDA paranoia - assumes everything is confidential, speaks in vague terms", weight = 2 },
+  { text = "Performance metrics focus - quantifies everything, people are numbers", weight = 2 },
+  { text = "Corporate branding - logo everything, company colors, walking advertisement", weight = 2 },
+  { text = "Golden cage comfort - luxury addiction, terrified of street poverty", weight = 1 },
+  { text = "Expense account abuse - corps pay for everything, lavish taste", weight = 2 },
+  { text = "Meeting addiction - solves everything through scheduled discussion", weight = 1 },
+
+  # Street-level traits
+  { text = "Street slang heavy - gonk, preem, nova, delta, choom, barely understandable", weight = 2 },
+  { text = "Survival instinct honed - always knows exits, threat assessment constant", weight = 2 },
+  { text = "Scrounger mentality - everything has value, nothing wasted, pack rat", weight = 2 },
+  { text = "Underground navigation - knows the tunnels, the shortcuts, the hidden paths", weight = 2 },
+  { text = "Street food loyalty - specific vendor, won't eat elsewhere, trust in the chef", weight = 2 },
+  { text = "Fixer network awareness - knows who to call for what, connections everywhere", weight = 2 },
+  { text = "NCPD avoidance instinct - spots badges, knows patrol routes, disappears quickly", weight = 2 },
+  { text = "Gang border awareness - knows territories, crossing points, safe passages", weight = 2 },
+
+  # Night City specific traits
+  { text = "Afterlife regular - known at the bar, reputation among mercs", weight = 2 },
+  { text = "Kabuki market expert - knows every vendor, negotiates hard, finds anything", weight = 2 },
+  { text = "Pacifica survivor - lived through the abandonment, trust issues, self-reliant", weight = 1 },
+  { text = "Heywood pride - Valentino adjacent, community loyalty, gold appreciation", weight = 2 },
+  { text = "Watson roots - immigrant story, community bonds, hard work ethic", weight = 2 },
+  { text = "Badlands wanderer - nomad experience, road wisdom, vehicle expertise", weight = 2 },
+  { text = "City Center aspirations - dreams of corpo life, studies their manners", weight = 1 },
+  { text = "Japantown regular - Tyger Claw aware, cultural respect, neon comfort", weight = 2 },
 ]

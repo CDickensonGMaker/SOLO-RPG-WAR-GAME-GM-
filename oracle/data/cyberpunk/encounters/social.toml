@@ -74,4 +74,84 @@ entries = [
   { text = "Memorial service - paying respects, networking, old wounds", weight = 1 },
   { text = "Street court - community judging a dispute, your input requested", weight = 1 },
   { text = "Block party politics - community event with underlying tensions", weight = 1 },
+
+  # Fixer meet scenarios
+  { text = "Afterlife meeting - legend's bar, mercs everywhere, Rogue watching from her booth", weight = 2 },
+  { text = "Fixer ambush - supposed meet is a setup, kill team waiting", weight = 2 },
+  { text = "Competing crews present - same job offered to multiple parties, tension rising", weight = 2 },
+  { text = "Fixer under duress - someone's forcing them to set you up, subtle warning given", weight = 2 },
+  { text = "Test job offer - fixer wants to see you work before the real gig", weight = 2 },
+  { text = "Payment renegotiation - fixer's cut increased, take it or leave it", weight = 2 },
+  { text = "Fixer retirement - old contact leaving the game, passing you to someone new", weight = 1 },
+  { text = "Fixer war - two fixers fighting, you're caught in the middle", weight = 1 },
+  { text = "Ghost fixer - contact works entirely through intermediaries, never seen", weight = 1 },
+  { text = "Fixer favor called - they helped you once, now it's payback time", weight = 2 },
+
+  # Club encounters - Afterlife
+  { text = "Afterlife legend sighting - famous merc at the bar, reputation opportunity", weight = 2 },
+  { text = "Afterlife crew recruitment - someone building a team, looking at you", weight = 2 },
+  { text = "Afterlife celebration - job completed, drinks flowing, guards down", weight = 2 },
+  { text = "Afterlife wake - merc died on a run, friends drinking to their memory", weight = 1 },
+  { text = "Afterlife confrontation - old enemy spotted, unfinished business", weight = 2 },
+  { text = "Afterlife intel exchange - information broker working the room", weight = 2 },
+  { text = "Afterlife newcomer - fresh face asking questions, scout or mark?", weight = 2 },
+  { text = "Afterlife VIP - major fixer hosting in back room, invitation possible", weight = 1 },
+
+  # Club encounters - Lizzie's
+  { text = "Lizzie's performer contact - braindance editor with information, price is a favor", weight = 2 },
+  { text = "Lizzie's Mox protection - gang keeping peace, someone testing boundaries", weight = 2 },
+  { text = "Lizzie's private session - VIP client with secrets, information for sale", weight = 2 },
+  { text = "Lizzie's recruitment - Moxes want you for a job, sex worker protection run", weight = 2 },
+  { text = "Lizzie's stalker - someone obsessed with a performer, violence brewing", weight = 2 },
+  { text = "Lizzie's corporate slumming - exec looking for thrills, vulnerability", weight = 2 },
+
+  # Club encounters - Totentanz
+  { text = "Totentanz initiation - Maelstrom testing potential recruits, chrome required", weight = 2 },
+  { text = "Totentanz sermon - robopriest preaching machine gospel, true believers everywhere", weight = 1 },
+  { text = "Totentanz deal - black market chrome changing hands, Maelstrom taking cut", weight = 2 },
+  { text = "Totentanz challenge - chromed-up ganger wants to test your metal", weight = 2 },
+  { text = "Totentanz information - someone here knows something, extracting it is the problem", weight = 2 },
+  { text = "Totentanz asylum - someone seeking Maelstrom protection, desperate enough", weight = 1 },
+
+  # Street dealer interactions
+  { text = "Dealer knows something - regular supplier has information, wants something extra", weight = 2 },
+  { text = "Bad product - last batch was cut wrong, dealer deflecting blame", weight = 2 },
+  { text = "Dealer territory dispute - someone muscling in, violence imminent", weight = 2 },
+  { text = "New supplier introduction - better product, suspicious timing", weight = 2 },
+  { text = "Dealer turned informant - working for NCPD, offering to forget they saw you", weight = 2 },
+  { text = "Dealer death - regular contact found dead, who takes over?", weight = 1 },
+  { text = "Dealer emergency - needs help hiding from someone, owes you big", weight = 2 },
+  { text = "Exclusive product - dealer has something special, very limited, very expensive", weight = 2 },
+
+  # Corporate party infiltrations
+  { text = "Charity gala - corp executives showing off, security discrete but present", weight = 2 },
+  { text = "Product launch party - new tech reveal, prototypes on display", weight = 2 },
+  { text = "Executive retirement - golden parachute celebration, old secrets in drunk mouths", weight = 1 },
+  { text = "Merger announcement - two corps becoming one, targets gathering in one place", weight = 1 },
+  { text = "Award ceremony - corporate recognition, egos and vulnerabilities exposed", weight = 2 },
+  { text = "Holiday party - corporate forced fun, security relaxed, opportunities everywhere", weight = 2 },
+  { text = "Investor reception - money people meeting, financial intelligence available", weight = 2 },
+  { text = "Black tie assassination - someone's dying tonight, are you the killer or the witness?", weight = 1 },
+
+  # Joytoy encounters with secrets
+  { text = "Joytoy confession - client told them something dangerous, afraid to know it", weight = 2 },
+  { text = "Joytoy escape - wants out of the life, has information to trade for freedom", weight = 2 },
+  { text = "Joytoy revenge - client hurt them, wants payback, has access", weight = 2 },
+  { text = "Joytoy witness - saw something they shouldn't, being hunted", weight = 2 },
+  { text = "Joytoy blackmail - recorded a client, dangerous game they're playing", weight = 2 },
+  { text = "Joytoy spy - working for someone, gathering pillow talk intel", weight = 1 },
+  { text = "Joytoy identity - not who they appear to be, deep cover operative", weight = 1 },
+  { text = "Joytoy connection - knows someone you need to find, price is protection", weight = 2 },
+
+  # Ripperdoc negotiations
+  { text = "Viktor's special - legendary ripperdoc has prototype, friendship required", weight = 2 },
+  { text = "Discount chrome - quality questionable, price right, gambling with your body", weight = 2 },
+  { text = "Ripperdoc debt - previous work unpaid, refusing service until settled", weight = 2 },
+  { text = "Ripperdoc favor - needs something done, payment in chrome", weight = 2 },
+  { text = "Ripperdoc intelligence - sees everyone, knows wounds tell stories, information for sale", weight = 2 },
+  { text = "Ripperdoc emergency - middle of the night, someone dying, can you help carry?", weight = 2 },
+  { text = "Ripperdoc warning - chrome you want has problems, ethical doc telling truth", weight = 2 },
+  { text = "Ripperdoc competition - new doc in neighborhood, starting price war", weight = 1 },
+  { text = "Ripperdoc black market - wants organs, pays well, asks no questions", weight = 1 },
+  { text = "Ripperdoc referral - specialist for what you need, introduction possible", weight = 2 },
 ]

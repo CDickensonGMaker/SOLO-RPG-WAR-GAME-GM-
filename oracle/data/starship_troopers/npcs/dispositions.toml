@@ -1,0 +1,80 @@
+# Military Dispositions - How NPCs relate to the player trooper
+# Attitudes shaped by the Bug War and Federation military culture
+
+[hostile]
+description = "Active opposition or danger"
+entries = [
+  { text = "Blames you for a squadmate's death - eyes promise violence", weight = 2 },
+  { text = "Sees you as competition for promotion - will sabotage to advance", weight = 1 },
+  { text = "Believes you're a coward who got others killed - spreading rumors", weight = 2 },
+  { text = "Suspects you of sedition - watching for evidence to report", weight = 1 },
+  { text = "Holds a grudge from training - has waited years for payback", weight = 1 },
+  { text = "Thinks you're bug-touched - contaminated by brain bug contact", weight = 1 },
+  { text = "Views you as a threat to unit cohesion - wants you transferred or dead", weight = 1 },
+  { text = "Lost someone close because of your actions - hatred is personal", weight = 2 },
+]
+
+[suspicious]
+description = "Distrust and wariness"
+entries = [
+  { text = "Too new to trust - boots get people killed", weight = 2 },
+  { text = "You survived when others didn't - that's suspicious", weight = 2 },
+  { text = "Heard rumors about your past - keeping distance", weight = 1 },
+  { text = "Doesn't trust anyone not from their original unit", weight = 2 },
+  { text = "Thinks you're military intelligence pretending to be MI", weight = 1 },
+  { text = "Wary of your psychic potential - sees you as a weapon, not a person", weight = 1 },
+  { text = "You remind them of someone who betrayed them - guilt by association", weight = 1 },
+  { text = "Believes you're hiding something - right, but doesn't know what", weight = 2 },
+]
+
+[neutral_professional]
+description = "Strictly business military relationships"
+entries = [
+  { text = "Treats you as a cog in the machine - neither more nor less", weight = 2 },
+  { text = "Assesses your combat value clinically - what can you do for the unit?", weight = 2 },
+  { text = "Professional courtesy, nothing more - doesn't have friends, has colleagues", weight = 2 },
+  { text = "Waiting to see how you perform before forming opinions", weight = 2 },
+  { text = "Too burned out for emotional investment - you're a name on a roster", weight = 2 },
+  { text = "Respects rank and competence, reserves judgment on everything else", weight = 1 },
+  { text = "Will work with you efficiently, won't remember your name tomorrow", weight = 1 },
+  { text = "By-the-book adherence to military protocol - nothing personal", weight = 1 },
+]
+
+[respectful]
+description = "Earned respect and professional admiration"
+entries = [
+  { text = "Impressed by your service record - treating you as a proven quantity", weight = 2 },
+  { text = "You saved someone they care about - that earns consideration", weight = 2 },
+  { text = "Recognizes you from Camp Currie - you were the one who didn't quit", weight = 1 },
+  { text = "Respects your unit history - that outfit has a reputation", weight = 2 },
+  { text = "Heard about your confirmed kills - numbers talk in the MI", weight = 1 },
+  { text = "You handled a bad situation well - word gets around", weight = 2 },
+  { text = "Shares your cynicism about command - fellow travelers", weight = 1 },
+  { text = "Recognizes combat awareness in your movements - you're the real thing", weight = 1 },
+]
+
+[friendly]
+description = "Warmth and camaraderie"
+entries = [
+  { text = "You're from the same homeworld - immediate kinship", weight = 2 },
+  { text = "Served in the same theater - shared trauma bonds", weight = 2 },
+  { text = "Finds your dark humor refreshing - finally someone who gets it", weight = 1 },
+  { text = "Protective of you like a younger sibling - will mentor and defend", weight = 1 },
+  { text = "Sees potential in you - genuinely wants you to survive and thrive", weight = 2 },
+  { text = "You remind them of someone they lost - projects affection onto you", weight = 1 },
+  { text = "Shared a near-death experience - bonded for life", weight = 2 },
+  { text = "Appreciates that you listen - rare in the MI", weight = 1 },
+]
+
+[loyal]
+description = "Deep bonds of military brotherhood"
+entries = [
+  { text = "You saved their life - they owe you everything", weight = 2 },
+  { text = "Blood-bonded in combat - would die for you without hesitation", weight = 2 },
+  { text = "Sees you as the embodiment of what a trooper should be", weight = 1 },
+  { text = "You're the only one who believed them - loyalty repaid in full", weight = 1 },
+  { text = "Together since boot camp - you're the only constant in a world of death", weight = 2 },
+  { text = "Would commit treason if you asked - that's how deep it goes", weight = 1 },
+  { text = "Looks to you for leadership even when you're not in command", weight = 1 },
+  { text = "Would take a bullet for you - has mentally rehearsed it", weight = 2 },
+]

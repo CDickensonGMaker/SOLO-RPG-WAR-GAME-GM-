@@ -1,0 +1,142 @@
+# WWII Era Names by Nationality
+# The Greatest Generation - names from every theater of the global conflict
+
+[american_gi]
+description = "American GIs - the boys from Brooklyn to Boise"
+entries = [
+    "Joe Sullivan",
+    "Robert 'Bobby' Martinez",
+    "James Earl Thompson",
+    "William 'Bill' Kowalski",
+    "Frank DiMaggio",
+    "Eugene 'Gene' Patterson",
+    "Harold 'Hal' Zimmerman",
+    "Chester 'Chet' Nowak",
+    "Raymond 'Ray' O'Brien",
+    "Walter 'Walt' Johansson",
+    "Anthony 'Tony' Russo",
+    "George Washington Davis",
+    "Norman 'Norm' Goldstein",
+    "Edward 'Eddie' Wojciechowski",
+    "Samuel 'Sammy' Cohen"
+]
+
+[british_tommy]
+description = "British soldiers - Tommies from every corner of the Empire"
+entries = [
+    "Thomas 'Tommy' Atkins",
+    "William Blackwood",
+    "Charles 'Charlie' Fairfax",
+    "Arthur Pemberton",
+    "Henry 'Harry' Singh",
+    "Reginald 'Reggie' MacTavish",
+    "Ernest 'Ernie' Whitmore",
+    "Frederick 'Freddie' Okonkwo",
+    "Albert 'Bert' Cholmondeley",
+    "Leonard 'Len' Patel",
+    "Stanley 'Stan' Worthington",
+    "Douglas 'Doug' Campbell",
+    "Ronald 'Ron' Bottomley",
+    "Geoffrey 'Geoff' Ngugi",
+    "Bernard 'Bernie' Ashworth"
+]
+
+[german_wehrmacht]
+description = "German soldiers - conscripts and true believers alike"
+entries = [
+    "Hans Müller",
+    "Friedrich 'Fritz' Schneider",
+    "Wilhelm Weber",
+    "Heinrich 'Heini' Becker",
+    "Karl-Heinz Hoffmann",
+    "Werner Schulze",
+    "Günther Fischer",
+    "Helmut Braun",
+    "Erich Zimmermann",
+    "Otto Schwarz",
+    "Rolf Neumann",
+    "Dieter Lange",
+    "Manfred Kraus",
+    "Joachim 'Achim' Hartmann",
+    "Klaus Richter"
+]
+
+[soviet_soldier]
+description = "Red Army soldiers - defenders of the Motherland"
+entries = [
+    "Ivan Petrovich Sokolov",
+    "Nikolai Sergeevich Volkov",
+    "Alexei Mikhailovich Kuznetsov",
+    "Sergei Ivanovich Popov",
+    "Viktor Alexandrovich Morozov",
+    "Dmitri Nikolaevich Kozlov",
+    "Yuri Vladimirovich Novikov",
+    "Boris Pavlovich Fedorov",
+    "Andrei Ilyich Smirnov",
+    "Vasily Timofeyevich Orlov",
+    "Pavel Fyodorovich Lebedev",
+    "Grigori Antonovich Zhukov",
+    "Mikhail Borisovich Petrov",
+    "Leonid Stepanovich Ivanov",
+    "Anatoli Grigorievich Volodya"
+]
+
+[french_resistance]
+description = "French partisans and Maquis fighters"
+entries = [
+    "Jean-Pierre Moreau",
+    "Marcel Dubois",
+    "Henri 'René' Lefebvre",
+    "Pierre Fontaine",
+    "François Beaumont",
+    "Claude Bernard",
+    "Marie-Claire Dupont",
+    "Simone Rousseau",
+    "Gabrielle 'Gaby' Martin",
+    "Jacques Laurent",
+    "Lucien Girard",
+    "Antoine Mercier",
+    "Yvonne Blanc",
+    "Colette Renard",
+    "Michel Arnaud"
+]
+
+[japanese_soldier]
+description = "Imperial Japanese soldiers - from Manchuria to the Pacific"
+entries = [
+    "Takeshi Yamamoto",
+    "Hiroshi Tanaka",
+    "Kenji Nakamura",
+    "Yoshio Suzuki",
+    "Masao Watanabe",
+    "Taro Ito",
+    "Shigeru Sato",
+    "Akira Kobayashi",
+    "Nobuo Kato",
+    "Ichiro Yamada",
+    "Jiro Matsumoto",
+    "Saburo Hashimoto",
+    "Toshio Mori",
+    "Hideo Kimura",
+    "Kazuo Hayashi"
+]
+
+[partisan_names]
+description = "Resistance fighters across occupied Europe"
+entries = [
+    "Stanisław 'Wilk' Kowalczyk",
+    "Zofia Nowak",
+    "Miroslav Dvořák",
+    "Elena Popescu",
+    "Josip Horvat",
+    "Dragomir 'Drago' Petrović",
+    "Katerina Papadopoulos",
+    "Willem van der Berg",
+    "Hendrik 'Hein' Jansen",
+    "Olga Andersen",
+    "Lars Lindqvist",
+    "Ingrid Sørensen",
+    "Giovanni 'Gino' Bianchi",
+    "Rosa Esposito",
+    "Tadeusz 'Tadek' Wiśniewski"
+]

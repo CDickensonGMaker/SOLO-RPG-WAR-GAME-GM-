@@ -1,0 +1,97 @@
+# WWI Rear Area Locations
+# Behind the lines, where men rest, recover, and remember
+
+[medical]
+description = "Where the wounded go"
+entries = [
+    { location = "Regimental Aid Post", description = "First stop, just behind the line, sorting the living from the dying" },
+    { location = "Advanced Dressing Station", description = "Tents and sandbagged walls, still in artillery range" },
+    { location = "Casualty Clearing Station", description = "Tented hospital compound, surgery around the clock, smell of ether and gangrene" },
+    { location = "Base Hospital", description = "Converted chateau or school, proper beds, nurses, something like civilization" },
+    { location = "Shell Shock Ward", description = "Where the mind-broken go, screaming men and experimental treatments" },
+    { location = "Ambulance Train", description = "Converted railway carriages, swaying journey to the rear" },
+    { location = "Convalescent Camp", description = "Recovery depot, not yet fit enough to return to the line" },
+    { location = "Prosthetic Fitting Center", description = "Where they measure what's left and build what's missing" }
+]
+
+[billets]
+description = "Where soldiers rest out of the line"
+entries = [
+    { location = "Farm outbuilding billet", description = "Sleeping in barns among the hay, better than the trenches" },
+    { location = "Ruined village cellar", description = "Underground shelter in a destroyed town, rain-proof at least" },
+    { location = "Requisitioned cottage", description = "French or Belgian home, family displaced, resentful hospitality" },
+    { location = "Officers' chateau quarters", description = "Commandeered manor house, servants still in attendance" },
+    { location = "Church billet", description = "Sleeping in the nave, pews pushed aside, stained glass intact somehow" },
+    { location = "Nissen hut camp", description = "Corrugated iron semicircles, cold but dry" },
+    { location = "Bell tent lines", description = "Canvas city behind the reserve trenches, muddy streets between" }
+]
+
+[recreation]
+description = "Brief escapes from horror"
+entries = [
+    { location = "Estaminet", description = "French bar serving watered wine and egg and chips, the universal soldier's refuge" },
+    { location = "YMCA hut", description = "Tea, cocoa, writing paper, gramophones, a touch of home" },
+    { location = "Divisional cinema", description = "Flickering silent films in a barn, men laughing at Chaplin" },
+    { location = "Battalion sports field", description = "Football pitches marked in chalk, officers versus men" },
+    { location = "Officers' mess", description = "White tablecloths, silver service, pretending this is normal" },
+    { location = "Concert party stage", description = "Soldiers in drag, comedy sketches, singing the old songs" },
+    { location = "Maison toleree", description = "Licensed brothel, queues around the block, medical inspections" },
+    { location = "Church services field", description = "Padre conducting mass in an orchard, men kneeling in grass" }
+]
+
+[military_facilities]
+description = "The machinery of war"
+entries = [
+    { location = "Divisional headquarters", description = "Where generals plan the next offensive from safe distance" },
+    { location = "Corps headquarters", description = "The big picture, maps with pins representing thousands of lives" },
+    { location = "Artillery battery position", description = "Howitzers dug in, endless supply of shells, constant noise" },
+    { location = "Ammunition dump", description = "Mountains of shells and bullets, one spark and it's Armageddon" },
+    { location = "Royal Engineers depot", description = "Bridge-building equipment, wire, timber, tools of construction" },
+    { location = "Transport lines", description = "Horses, mules, lorries, the supply chain in constant motion" },
+    { location = "Remount depot", description = "Where fresh horses arrive and wounded ones are treated or shot" },
+    { location = "Prisoner of war cage", description = "Wire enclosure for captured Germans, waiting for transport" },
+    { location = "Military prison", description = "Where deserters and cowards wait for their fate" },
+    { location = "Execution yard", description = "The wall, the post, the blindfold, dawn appointments" }
+]
+
+[supply]
+description = "Keeping the army fed and equipped"
+entries = [
+    { location = "Railhead supply depot", description = "Where trains bring everything the army needs" },
+    { location = "Field bakery", description = "Brick ovens producing bread for thousands, smell of flour and hope" },
+    { location = "Quartermaster's stores", description = "Mountains of uniforms, boots, equipment, forms in triplicate" },
+    { location = "Field post office", description = "Sorting thousands of letters daily, the lifeline home" },
+    { location = "Water point", description = "Chlorinated tanks, soldiers filling water bottles" },
+    { location = "Petrol dump", description = "Fuel for the lorries and aeroplanes, fire hazard enormous" },
+    { location = "Cold storage facility", description = "Meat kept fresh, luxury items for officers' messes" }
+]
+
+[training]
+description = "Preparing men for the line"
+entries = [
+    { location = "Bull ring training camp", description = "Notorious harsh training facility, screaming sergeants, exhausted men" },
+    { location = "Bombing school", description = "Learning grenade handling, fake trenches for practice" },
+    { location = "Gas training facility", description = "Tents of tear gas, getting used to the mask, controlled panic" },
+    { location = "Musketry range", description = "Rifle practice behind the lines, stationary targets unlike real war" },
+    { location = "Tank training ground", description = "Rhomboid monsters practicing over practice trenches" },
+    { location = "Draft reception camp", description = "Where replacements arrive, still clean and naive" }
+]
+
+[aviation]
+description = "The airfields"
+entries = [
+    { location = "RFC aerodrome", description = "Grass field with canvas hangars, Sopwiths and SE5s waiting" },
+    { location = "Aircraft hangar", description = "Canvas and wood structure housing the machines" },
+    { location = "Pilots' quarters", description = "Comfortable huts, men who might not return from tomorrow's patrol" },
+    { location = "Balloon section field", description = "Hydrogen-filled observation balloons, winches, ground crews" },
+    { location = "Aircraft repair depot", description = "Mechanics patching bullet holes and replacing engines" }
+]
+
+[graves]
+description = "Where they bury the dead"
+entries = [
+    { location = "Field cemetery", description = "Wooden crosses in rows, fresh earth daily" },
+    { location = "Graves registration office", description = "Clerks recording the dead, effects catalogued, letters written" },
+    { location = "Mass burial site", description = "When individual graves became impossible, after the big attacks" },
+    { location = "Church cemetery overflow", description = "French churchyard expanded with military dead" }
+]

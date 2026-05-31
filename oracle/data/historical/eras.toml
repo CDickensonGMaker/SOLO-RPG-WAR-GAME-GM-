@@ -1,0 +1,91 @@
+# Historical Eras - Period-Specific Setting Hooks
+# 65+ entries across 5 major historical eras
+# Each entry establishes tone, stakes, and period authenticity
+
+[eras]
+
+# Ancient Rome (27 BC - 476 AD)
+ancient_rome = [
+  { text = "The Forum buzzes with senators plotting Caesar's downfall - whispers carry death sentences", weight = 2 },
+  { text = "Gladiators await the games in the hypogeum beneath the Colosseum, the roar of crowds above", weight = 2 },
+  { text = "The Praetorian Guard grows restless - emperors are made and unmade at their whim", weight = 1 },
+  { text = "Legions on the Rhine receive word of a new emperor - will they swear allegiance or declare their own?", weight = 1 },
+  { text = "The grain ships from Egypt are late - Rome's mob grows hungry and dangerous", weight = 2 },
+  { text = "Christians hide in the catacombs while informers hunt them for Nero's spectacles", weight = 1 },
+  { text = "A triumph winds through Rome - the conquered general walks in chains before the victor's chariot", weight = 1 },
+  { text = "The Senate debates while the real power brokers meet in private baths and gardens", weight = 2 },
+  { text = "Vestal Virgins guard the sacred flame - to let it die means burial alive", weight = 1 },
+  { text = "Provincial governors squeeze their territories dry before their term ends", weight = 2 },
+  { text = "Poisoners ply their trade among the patrician families - inheritance is a bloody business", weight = 1 },
+  { text = "The limes grows thin - barbarian tribes probe for weakness along the frontier", weight = 2 },
+  { text = "A new cult from the East gains adherents - the old gods seem distant and cold", weight = 2 },
+]
+
+# Medieval Period (500 - 1500 AD)
+medieval = [
+  { text = "The lord's banner flies from the keep - a call to arms for the coming crusade", weight = 2 },
+  { text = "Plague carts roll through the streets at dawn, collectors crying 'Bring out your dead'", weight = 1 },
+  { text = "The Church's interdict closes every temple - no baptisms, no marriages, no burials with rites", weight = 1 },
+  { text = "A peasant uprising has seized the manor house - the lord's family taken hostage", weight = 1 },
+  { text = "Two popes claim the Holy See - kingdoms must choose and face excommunication either way", weight = 1 },
+  { text = "The harvest failed and winter comes - starvation stalks the village", weight = 2 },
+  { text = "Knights gather for tournament - glory, gold, and political marriages at stake", weight = 2 },
+  { text = "The monastery's scriptorium hides forbidden texts the Inquisition would burn", weight = 1 },
+  { text = "A blood feud between noble houses has claimed three generations with no end in sight", weight = 2 },
+  { text = "The king lies dying with no clear heir - succession will be decided by swords", weight = 1 },
+  { text = "Leper colonies ring the city - the afflicted cast out to live or die together", weight = 2 },
+  { text = "The guild controls all trade in the city - outsiders find doors closed and prices doubled", weight = 2 },
+  { text = "Serfs flee to the free city - if they survive a year and a day, they earn freedom", weight = 2 },
+  { text = "The bishop's court tries a witch - the pyre is already being built in the square", weight = 1 },
+]
+
+# Age of Sail / Golden Age of Piracy (1650 - 1730)
+age_of_sail = [
+  { text = "The Golden Age of Piracy - Nassau rules itself, the Royal Navy be damned", weight = 2 },
+  { text = "Letters of marque turn pirates into privateers - legal plunder for the Crown's enemies", weight = 2 },
+  { text = "The Spanish treasure fleet makes its annual voyage - every freebooter in the Caribbean hunts", weight = 1 },
+  { text = "Port Royal sinks into the sea during an earthquake - divine judgment, some say", weight = 1 },
+  { text = "A mutiny brewing below decks - the captain's tyranny has gone too far", weight = 2 },
+  { text = "The black flag rises on the horizon - no quarter asked, none given", weight = 2 },
+  { text = "Marooned on a sandbar with a pistol and one shot - the pirate's court has spoken", weight = 1 },
+  { text = "The trading company holds a monopoly enforced by cannon and counting house alike", weight = 2 },
+  { text = "Sailors press-ganged from waterfront taverns wake in chains, bound for the King's ships", weight = 2 },
+  { text = "The slave trade triangle runs rum, humans, and sugar in endless bloody profit", weight = 1 },
+  { text = "Colonial governors grow rich on bribes while turning blind eyes to pirate harbors", weight = 2 },
+  { text = "A ship of the line founders in a hurricane - salvage rights worth a fortune", weight = 2 },
+  { text = "The articles are read aloud - equal shares, democratic votes, death for betrayal", weight = 2 },
+]
+
+# Renaissance (1400 - 1600)
+renaissance = [
+  { text = "Florence burns with artistic revolution while the Medicis count their gold", weight = 2 },
+  { text = "The printing press spreads forbidden ideas faster than the Church can burn books", weight = 2 },
+  { text = "Borgia poison is legend - every cup might be the last at their table", weight = 1 },
+  { text = "Machiavelli writes by candlelight - the Prince will shock or inspire for centuries", weight = 1 },
+  { text = "Mercenary condottieri sell their swords to the highest bidder, then switch sides mid-battle", weight = 2 },
+  { text = "The New World yields gold beyond imagining - and the native peoples pay in blood", weight = 1 },
+  { text = "Luther nails his theses to the church door - Europe will burn for a century over it", weight = 1 },
+  { text = "Galileo's telescope reveals truths the Inquisition cannot allow", weight = 1 },
+  { text = "The great banking families hold more power than kings - and their ledgers decide wars", weight = 2 },
+  { text = "Courtesans wield influence in every court - lovers hear secrets pillow talk reveals", weight = 2 },
+  { text = "Artists compete for patronage - a Michelangelo commission means immortality", weight = 2 },
+  { text = "Religious wars tear the German states apart - Catholic and Protestant slaughter alike", weight = 1 },
+  { text = "The Ottoman siege threatens Vienna - if it falls, nothing stops them until Rome", weight = 1 },
+]
+
+# Victorian Era (1837 - 1901)
+victorian = [
+  { text = "London fog thick enough to hide murder - gaslight barely penetrates", weight = 2 },
+  { text = "The Great Exhibition showcases empire and industry - but the workhouses overflow", weight = 2 },
+  { text = "Jack the Ripper stalks Whitechapel - Scotland Yard baffled, the press sensationalizes", weight = 1 },
+  { text = "The Empire spans the globe - the sun never sets on British interests or British cruelty", weight = 2 },
+  { text = "Opium dens cluster in Limehouse - fortunes made destroying Chinese lives", weight = 2 },
+  { text = "Darwin's theories shake faith to its foundations - man descended from apes?", weight = 1 },
+  { text = "The Great Game plays out in Afghan passes - British and Russian spies dance toward war", weight = 1 },
+  { text = "Spiritualist mediums hold seances for grieving widows - fraud or genuine contact?", weight = 2 },
+  { text = "Child laborers tend the machines that make Britain wealthy and powerful", weight = 2 },
+  { text = "The Temperance movement rails against gin palaces while the gentry sip brandy", weight = 2 },
+  { text = "Colonial administrators impose 'civilization' at gunpoint on ancient cultures", weight = 2 },
+  { text = "The Irish starve while English landlords export grain for profit", weight = 1 },
+  { text = "Suffragettes chain themselves to Parliament gates - votes for women or prison", weight = 1 },
+]

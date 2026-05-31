@@ -1,0 +1,79 @@
+# Alternate History Crossover Points
+# Locations where timelines bleed, connect, or diverge
+
+[crossover_points]
+description = "Thin places where timelines touch, bleed through, or can be crossed"
+entries = [
+  # Natural Anomaly Sites
+  { text = "The Bermuda Triangle's true nature - a perpetual temporal storm where timelines constantly intersect and merge", weight = 2 },
+  { text = "Stonehenge as timeline anchor - the stones mark a point where all possible histories converge briefly at solstice", weight = 1 },
+  { text = "The Zone of Silence in Mexico - electromagnetic anomalies hide temporal instabilities, radio signals from other timelines bleed through", weight = 1 },
+  { text = "Lake Baikal's depths - the oldest lake contains water from multiple timelines, diving too deep risks crossing over", weight = 1 },
+  { text = "Ringing Rocks of Pennsylvania - strike them and sometimes hear echoes from divergent histories", weight = 1 },
+  { text = "Magnetic Hill anomalies - in several locations worldwide, gravity seems wrong because space-time is twisted", weight = 1 },
+  { text = "The Mariana Trench crossing point - at maximum depth, pressure warps reality enough to slip between worlds", weight = 1 },
+  { text = "Northern Lights viewing zones - under certain aurora conditions, see glimpses of alternate skies", weight = 1 },
+
+  # Historical Pivot Locations
+  { text = "The Gettysburg field - walk the battlefield at dawn and sometimes hear both possible outcomes of the fighting", weight = 2 },
+  { text = "Dealey Plaza in Dallas - the grassy knoll marks where timelines forever diverged, reality is thin there", weight = 1 },
+  { text = "Sarajevo's assassination corner - the shot heard round the world tore holes in time itself", weight = 1 },
+  { text = "The Berlin Wall remnants - even torn down, the barrier between worlds remains partially intact", weight = 1 },
+  { text = "Hiroshima's hypocenter - the atomic fire burned through to other timelines, the wound never fully healed", weight = 1 },
+  { text = "The Field of Waterloo - Napoleon's final gamble left reality unsettled, both victory and defeat echo there", weight = 1 },
+  { text = "The HMS Victory at Portsmouth - preserved ship occasionally sails in waters where Trafalgar was lost", weight = 1 },
+  { text = "Ford's Theatre in Washington - Lincoln's death created a divergence visible to those who know how to look", weight = 1 },
+
+  # Constructed Crossing Points
+  { text = "Abandoned CERN tunnel section - early experiments tore holes that were never properly sealed", weight = 2 },
+  { text = "The Philadelphia Navy Yard - whatever happened to the Eldridge left permanent scars in local space-time", weight = 1 },
+  { text = "Montauk Air Force Station ruins - the real experiments were about reaching other timelines, some doors stay open", weight = 1 },
+  { text = "Nevada's Groom Lake facility - aliens or time travelers, something there connects to elsewhere and elsewhen", weight = 1 },
+  { text = "The Tower of Babel site in Iraq - ancient attempt to reach heaven actually reached other realities", weight = 1 },
+  { text = "Göbekli Tepe in Turkey - the oldest temple was built by refugees from a collapsed timeline, it still resonates", weight = 1 },
+  { text = "The Great Pyramid's hidden chamber - Egyptian engineers encoded a crossing point, never activated until now", weight = 1 },
+  { text = "The London Underground's abandoned stations - some tunnels connect to trains that run in other histories", weight = 2 },
+
+  # Temporal Anomaly Zones
+  { text = "The Skinwalker Ranch - not aliens or ghosts, but bleed-through from divergent timelines where different entities evolved", weight = 1 },
+  { text = "The Bridgewater Triangle - concentrated American timeline instability, multiple divergences overlap here", weight = 1 },
+  { text = "Transylvania's forests - the folklore about vampires actually describes timeline-displaced persons", weight = 1 },
+  { text = "The San Luis Valley - cattle mutilations are actually failed cross-timeline transfers of livestock", weight = 1 },
+  { text = "Japan's Aokigahara Forest - people drawn there sense the thin barrier between their life and other versions of it", weight = 1 },
+  { text = "Point Pleasant, West Virginia - the Mothman was a warning about timeline convergence, the bridge collapse was bleed-through", weight = 1 },
+  { text = "The Superstition Mountains - Spanish gold prospectors found a crossing point, the Lost Dutchman went to another timeline", weight = 1 },
+  { text = "The Hoia Baciu Forest in Romania - people disappear there by accidentally stepping into parallel histories", weight = 1 },
+
+  # Urban Crossing Points
+  { text = "The Winchester Mystery House - Sarah Winchester understood, the strange architecture is timeline navigation", weight = 1 },
+  { text = "The Paris Catacombs' unmapped sections - some tunnels lead to other versions of the city above", weight = 2 },
+  { text = "Prague's astronomical clock - at certain times, its rotation aligns with timeline junctions", weight = 1 },
+  { text = "Edinburgh's underground vaults - sealed plague victims still live in a timeline where they recovered", weight = 1 },
+  { text = "The Stanley Hotel in Colorado - the 'ghosts' are temporal echoes of people in divergent histories", weight = 1 },
+  { text = "Venice's Bridge of Sighs - prisoners' last looks sometimes caught glimpses of timelines where they were free", weight = 1 },
+  { text = "The Hoover Dam's base - the massive structure stabilizes local space-time, but not perfectly", weight = 1 },
+  { text = "Grand Central Terminal's lower levels - the deepest basements connect to stations in other New Yorks", weight = 1 },
+
+  # Religious and Mystical Sites
+  { text = "The Dome of the Rock - three religions fight over it because all three access different timeline versions of divine revelation", weight = 1 },
+  { text = "The Oracle at Delphi - the priestesses inhaled fumes that let them see across timeline possibilities", weight = 1 },
+  { text = "Glastonbury Tor - Arthurian legends are true in some timelines, the Tor is where they bleed through", weight = 1 },
+  { text = "The Ganges at Varanasi - the sacred river flows through multiple realities, the dead sometimes swim to other lives", weight = 1 },
+  { text = "Mount Sinai - Moses received commandments from a future where they'd already been followed for millennia", weight = 1 },
+  { text = "The Cave of the Patriarchs - Abraham's burial site marks where the timelines of three faiths diverged", weight = 1 },
+  { text = "Lourdes healing spring - the miracles are actually healing by briefly existing in a timeline where the illness never occurred", weight = 1 },
+  { text = "The Bodhi Tree's descendants - Buddha achieved enlightenment by perceiving all possible timelines simultaneously", weight = 1 },
+]
+
+[crossing_phenomena]
+description = "What happens at crossover points and how to recognize them"
+entries = [
+  { text = "Radio signals from other timelines - tune to certain frequencies near crossing points and hear broadcasts that never existed", weight = 1 },
+  { text = "Temporal déjà vu - experiencing memories of events that haven't happened yet because your other self already lived them", weight = 2 },
+  { text = "Reflection displacement - mirrors at crossing points sometimes show your alternate self instead", weight = 1 },
+  { text = "Object substitution - leave an item at a crossing point, sometimes find a different version of it when you return", weight = 1 },
+  { text = "Conversation bleed - hear people speaking nearby in languages that don't exist in this timeline", weight = 1 },
+  { text = "Newspaper from tomorrow - at certain points, print media from other timelines manifests briefly", weight = 1 },
+  { text = "Shadow misalignment - near crossing points, shadows sometimes fall in directions that match other timelines' sun positions", weight = 1 },
+  { text = "Time-slip experiences - at crossing points, sometimes briefly exist in another era entirely before snapping back", weight = 2 },
+]

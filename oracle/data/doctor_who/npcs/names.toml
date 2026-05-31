@@ -1,0 +1,158 @@
+# Doctor Who NPC Names
+# Names spanning companions, historical figures, aliens, and Time Lords
+
+[british_companions]
+description = "Names for potential companions - ordinary people who become extraordinary"
+entries = [
+    "Rose Tyler",
+    "Martha Jones",
+    "Donna Noble",
+    "Amy Pond",
+    "Clara Oswald",
+    "Bill Potts",
+    "Yasmin Khan",
+    "Graham O'Brien",
+    "Ryan Sinclair",
+    "Dan Lewis",
+    "Tegan Jovanka",
+    "Nyssa",
+    "Adric",
+    "Vicki Pallister",
+    "Jamie McCrimmon",
+    "Zoe Heriot",
+    "Sarah Jane Smith",
+    "Leela",
+    "Romana",
+    "Ace McShane",
+    "Peri Brown",
+    "Mel Bush",
+    "Jo Grant",
+    "Liz Shaw",
+    "Barbara Wright",
+    "Ian Chesterton",
+    "Susan Foreman",
+    "Victoria Waterfield",
+    "Harry Sullivan",
+    "K9",
+]
+
+[modern_british]
+description = "Contemporary British names for NPCs"
+entries = [
+    "Oliver Pemberton",
+    "Sophie Blackwood",
+    "Marcus Chen-Williams",
+    "Priya Sharma",
+    "Thomas Nightingale",
+    "Eleanor Frost",
+    "Benjamin Okonkwo",
+    "Charlotte Singh",
+    "William Harper",
+    "Amelia Stone",
+    "James Oduya",
+    "Victoria Cross",
+    "Alexander Patel",
+    "Isabella Ahmed",
+    "Henry Kowalski",
+]
+
+[historical_figures]
+description = "Historical personages for time travel adventures"
+entries = [
+    "Queen Victoria",
+    "Winston Churchill",
+    "William Shakespeare",
+    "Charles Dickens",
+    "Agatha Christie",
+    "Vincent van Gogh",
+    "Richard Nixon",
+    "Queen Elizabeth I",
+    "Queen Elizabeth II",
+    "Marco Polo",
+    "Madame de Pompadour",
+    "Robin Hood",
+    "King John",
+    "Nero",
+    "Cleopatra",
+    "Isaac Newton",
+    "Albert Einstein",
+    "Nikola Tesla",
+    "Thomas Edison",
+    "Rosa Parks",
+    "Mary Shelley",
+    "Ada Lovelace",
+    "Florence Nightingale",
+    "Queen Nefertiti",
+]
+
+[time_lords]
+description = "Gallifreyan names - the ancient and powerful"
+entries = [
+    "Romanadvoratrelundar",
+    "Borusa",
+    "Rassilon",
+    "Omega",
+    "The Rani",
+    "The Master",
+    "The Valeyard",
+    "Drax",
+    "The Corsair",
+    "Tecteun",
+    "The Timeless Child",
+    "Koschei",
+    "Thessalia",
+    "Andred",
+    "Maxil",
+    "Castellan Spandrell",
+    "Lord President Flavia",
+    "Cardinal Zorac",
+    "Hedin",
+    "Morbius",
+]
+
+[alien_names]
+description = "Names from across the universe"
+entries = [
+    "Strax",
+    "Vastra",
+    "Jenny Flint",
+    "Ashildr",
+    "Captain Jack Harkness",
+    "Davros",
+    "Sec",
+    "Caan",
+    "Thay",
+    "Jast",
+    "Cyber-Controller",
+    "Cyber-Leader",
+    "General Staal",
+    "Commander Skorr",
+    "Linx",
+    "Stor",
+    "Eldrad",
+    "Sutekh",
+    "Fenric",
+    "The Beast",
+    "Cassandra O'Brien",
+    "Face of Boe",
+    "Novice Hame",
+    "Sister Jatt",
+    "Bannakaffalatta",
+]
+
+[unit_torchwood]
+description = "Military and organization personnel"
+entries = [
+    "Brigadier Alistair Lethbridge-Stewart",
+    "Kate Stewart",
+    "Osgood",
+    "Colonel Mace",
+    "Sergeant Benton",
+    "Captain Mike Yates",
+    "Gwen Cooper",
+    "Ianto Jones",
+    "Owen Harper",
+    "Toshiko Sato",
+    "Rex Matheson",
+    "Esther Drummond",
+]

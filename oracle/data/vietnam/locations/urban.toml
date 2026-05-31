@@ -1,0 +1,71 @@
+# Vietnam War Urban Locations
+# Cities, bases, civilization's edge
+
+[locations]
+
+# Saigon
+saigon = [
+    { id = "saigon_bar", name = "Tu Do Street Bar", desc = "Neon, cigarette smoke, bar girls pushing overpriced tea. Seagram's Seven and Coca-Cola. Forget the war for an hour, for a price." },
+    { id = "saigon_brothel", name = "Saigon Brothel", desc = "Second floor, curtained rooms, mama-san at the door. What you pay for, what you catch. The economy of bodies." },
+    { id = "saigon_hotel", name = "Continental Hotel", desc = "French colonial elegance, journalists on the terrace. 'Continental Shelf' where reporters drink and share rumors. The war is stories here." },
+    { id = "saigon_embassy", name = "U.S. Embassy Compound", desc = "Fortress America in the heart of the city. Marines at the gate, bureaucrats inside. The illusion of security." },
+    { id = "saigon_black_market", name = "Saigon Black Market", desc = "American PX goods at three times the price. Stolen, diverted, or just sold twice. Everything is for sale." },
+    { id = "saigon_restaurant", name = "Vietnamese Restaurant", desc = "Pho, banh mi, things you can't identify. Cheap, delicious, possibly dangerous. Not the mess hall." },
+    { id = "cholon", name = "Cholon District", desc = "Chinese Saigon - markets, opium, business. Different rules, different loyalties. The city within the city." },
+    { id = "tan_son_nhut", name = "Tan Son Nhut Air Base", desc = "Saigon's airport, America's logistics hub. Freedom birds going home, fresh meat coming in. The rotation point." },
+]
+
+# Da Nang
+da_nang = [
+    { id = "da_nang_airbase", name = "Da Nang Air Base", desc = "Largest in-country. F-4s screaming off runways, cargo everywhere. Marines call it home. First in, last out." },
+    { id = "da_nang_beach", name = "China Beach", desc = "R&R for the grunts. Surf, sand, nurses. Almost like the World. The war is audible but not visible. Today." },
+    { id = "da_nang_nsa", name = "Da Nang NSA Hospital", desc = "Naval Support Activity medical facility. Where the wounded go first. Triage, surgery, the smell of blood and antiseptic." },
+    { id = "da_nang_bridge", name = "Da Nang Bridge", desc = "Vital crossing, constant target. Sappers love bridges. Engineers hate sappers. The cycle of destruction and repair." },
+    { id = "marble_mountain", name = "Marble Mountain", desc = "Buddhist caves, VC tunnels, helicopter pad. Sacred ground turned staging area. The war respects nothing." },
+]
+
+# Combat Bases
+bases = [
+    { id = "khe_sanh", name = "Khe Sanh Combat Base", desc = "Surrounded, shelled daily, the siege that wasn't Dien Bien Phu. 77 days of incoming. The Marines held. Nobody knows why it mattered." },
+    { id = "con_thien", name = "Con Thien Firebase", desc = "'Hill of Angels' - arty magnet, infantry meat grinder. The DMZ is right there. So is the NVA." },
+    { id = "firebase_ripcord", name = "Firebase Ripcord", desc = "The base that had to be abandoned. NVA owned the high ground, owned the situation. Extraction under fire." },
+    { id = "camp_eagle", name = "Camp Eagle", desc = "101st Airborne home base. Screaming Eagles. Tent cities, artillery pits, the machine of air cavalry." },
+    { id = "camp_carroll", name = "Camp Carroll", desc = "Heavy artillery position near the DMZ. 175mm guns that reach into North Vietnam. Return fire guaranteed." },
+    { id = "forward_operating_base", name = "Forward Operating Base", desc = "Temporary, exposed, necessary. Sandbags and wire, arty within range. Sleep with boots on." },
+    { id = "special_forces_camp", name = "Special Forces A-Camp", desc = "Green Beret outpost, indigenous forces, the edge of control. Hearts and minds at gunpoint." },
+    { id = "long_binh", name = "Long Binh", desc = "Largest Army base in Vietnam. REMFs paradise, grunts' hatred. Air conditioning, clubs, the World without being home." },
+]
+
+# Hue
+hue = [
+    { id = "hue_citadel", name = "Hue Citadel", desc = "Imperial palace, massive walls, Tet '68 battlefield. House to house, room to room. Bodies in every courtyard." },
+    { id = "hue_university", name = "Hue University", desc = "Education interrupted by war. Students as soldiers, classrooms as bunkers. What knowledge survives this?" },
+    { id = "perfume_river", name = "Perfume River Bridge", desc = "The crossing into the Citadel. Every step exposed. Snipers from the walls. The approach that cost lives." },
+    { id = "hue_ruins", name = "Hue Ruins (Post-Tet)", desc = "What's left after the battle. Rubble, mass graves, the smell. We saved the city by destroying it." },
+]
+
+# Northern Bases
+north = [
+    { id = "dong_ha", name = "Dong Ha Combat Base", desc = "Gateway to the DMZ. Everything funnels through here. Rocket Alley, mortar magnet." },
+    { id = "phu_bai", name = "Phu Bai", desc = "Army and Marine base south of Hue. Staging area for Tet. The place they came from." },
+    { id = "quang_tri", name = "Quang Tri", desc = "Provincial capital, frontline city. Changed hands in '72. The Easter Offensive's target." },
+    { id = "dmz", name = "DMZ Observation Post", desc = "The line that divides nothing. North is right there. Watch them watch you." },
+]
+
+# Support Facilities
+support = [
+    { id = "px", name = "PX (Post Exchange)", desc = "America in miniature. Stereos, magazines, candy. Stateside prices, combat zone. The taste of home for sale." },
+    { id = "officers_club", name = "Officers' Club", desc = "Air conditioning, tablecloths, pretense. Where decisions are made over bourbon. The gulf between ranks." },
+    { id = "enlisted_club", name = "Enlisted Men's Club", desc = "Beer, loud music, controlled anger. Let off steam before something explodes. The fights start around midnight." },
+    { id = "mess_hall", name = "Mess Hall", desc = "Hot food, cold reception. Better than C-rats. The gathering place, the rumor mill." },
+    { id = "chapel", name = "Base Chapel", desc = "All faiths, all fears. Prayers before patrol, memorial services after. The chaplain has seen things." },
+    { id = "stockade", name = "Long Binh Jail (LBJ)", desc = "Military prison. AWOL, fragging, refusal. The war's criminals or its consciences. Depends who you ask." },
+]
+
+# Mekong Delta
+delta = [
+    { id = "can_tho", name = "Can Tho", desc = "Delta hub, river city. Navy riverine forces, SEAL operations. The water war's capital." },
+    { id = "my_tho", name = "My Tho", desc = "Gateway to the delta. River traffic, sampans, suspicion. Everyone has a boat, anyone could be VC." },
+    { id = "riverine_base", name = "Riverine Base", desc = "PBRs, Swift boats, monitors. The brown water navy's home. Mosquitoes big enough to shoot down." },
+    { id = "floating_market", name = "Floating Market", desc = "Commerce on the water. Produce, goods, intelligence. VC tax collectors and government tax collectors. Same boats." },
+]

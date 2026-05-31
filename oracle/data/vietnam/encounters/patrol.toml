@@ -1,0 +1,84 @@
+# Vietnam War Patrol Encounters
+# Search and destroy, the infantry's daily grind
+
+[encounters]
+
+# Trail Discoveries
+trails = [
+    { id = "fresh_tracks", name = "Fresh Trail Sign", desc = "Boot prints in mud, still filling with water. Recent - hours at most. Follow or avoid? The tracks go both ways." },
+    { id = "abandoned_camp", name = "Abandoned Base Camp", desc = "Cooking fires cold, rice scattered, bunkers empty. They left in a hurry. Why? Where did they go? Are they watching?" },
+    { id = "supply_cache", name = "Supply Cache Discovery", desc = "Rice, ammunition, medical supplies - enough for a company. Hidden but not hidden enough. Destroy or stake out?" },
+    { id = "bike_trails", name = "Bicycle Trail Evidence", desc = "Modified bikes carry artillery shells. The Ho Chi Minh Trail runs through here. Porters by night, jungle by day." },
+    { id = "communication_wire", name = "Communication Wire", desc = "Field telephone line running through jungle. Follow it to find them. Cut it and they know you're here." },
+    { id = "trail_marker", name = "Enemy Trail Markers", desc = "Subtle signs - bent branches, arranged rocks. They're navigating through here. We just learned their language." },
+]
+
+# Booby Trap Encounters
+booby_traps = [
+    { id = "booby_trap_spotted", name = "Booby Trap Spotted", desc = "Point man's hand goes up. Everyone freezes. Trip wire, six inches from his boot. Today isn't the day. This time." },
+    { id = "booby_trap_triggered", name = "Booby Trap Triggered", desc = "The pop, the scream, the chaos. Someone's down. Medevac needed. The patrol stops. The enemy knows where you are." },
+    { id = "tunnel_entrance", name = "Tunnel Entrance Found", desc = "Concealed under cooking fire ashes. The hole goes down into darkness. Someone has to check. Tunnel rats get hazard pay." },
+    { id = "minefield_edge", name = "Minefield Edge", desc = "One toe-popper found means more. The safe path is behind you. The mission is ahead. Map it, mark it, move around." },
+    { id = "suspicious_object", name = "Suspicious Object", desc = "That canteen, that ration tin, that anything shouldn't be there. Touch it or go around? Curiosity kills." },
+]
+
+# Village Encounters
+villages = [
+    { id = "silent_village", name = "Village That Won't Talk", desc = "No one saw anything. No one knows anything. No one will meet your eyes. The fear is visible. Fear of you or fear of what comes after you leave?" },
+    { id = "cooperative_village", name = "Suspiciously Cooperative Village", desc = "Too helpful, too welcoming. Tea offered, information volunteered. What's the angle? Why aren't they afraid?" },
+    { id = "hidden_wounded", name = "Hidden Wounded VC", desc = "Blood trail to a hooch. Inside, a man who isn't a farmer. His wounds say AK round. His eyes say nothing." },
+    { id = "rice_cache", name = "Excessive Rice Storage", desc = "More rice than this village could eat in a year. 'Saving for festival.' The tax to VC or the supply cache?" },
+    { id = "military_age_males_gone", name = "Village Without Young Men", desc = "Only old men, women, children. Where did the young men go? Drafted by ARVN? Recruited by VC? Dead?" },
+    { id = "child_warning", name = "Children's Behavior Change", desc = "Playing, then suddenly gone. Inside huts, watching. Children know when to hide. What did they see coming?" },
+]
+
+# Body Count Pressure
+body_count = [
+    { id = "body_count_demand", name = "Body Count Pressure from Above", desc = "Command wants numbers. Any numbers. The dead VC that might be farmers. The count that doesn't add up. 'Probable' becomes 'confirmed.'" },
+    { id = "false_report", name = "Pressure to Falsify Report", desc = "LT knows the numbers are wrong. Captain wants them higher. Where does truth stop and survival start?" },
+    { id = "water_buffalo_count", name = "Water Buffalo Dilemma", desc = "Dead water buffalo, no enemy. Count it or admit the fire mission hit nothing? The paperwork wants bodies." },
+    { id = "weapons_dont_match", name = "Weapons Don't Match Bodies", desc = "Three corpses, one rifle. Farmers or fighters? The answer determines everything. The answer is whatever command wants." },
+]
+
+# Medevac Situations
+medevac = [
+    { id = "medevac_under_fire", name = "Medevac Requested Under Fire", desc = "Dustoff called, LZ too hot. The bird can't land. The wounded can't wait. Try again or carry them out?" },
+    { id = "lz_selection", name = "No Good LZ", desc = "Casualties mounting, no clearing in sight. Make one with explosives? Wait? The jungle is killing by the minute." },
+    { id = "multiple_casualties", name = "Multiple Simultaneous Casualties", desc = "Booby trap or ambush - half the squad is down. Triage in the field. Who gets priority? Who waits to die?" },
+    { id = "expectant_classification", name = "Expectant Casualty", desc = "He's not going to make it. Everyone knows. Does he know? The morphine is mercy. The lie is mercy. Nothing is mercy." },
+    { id = "night_medevac", name = "Night Medevac Decision", desc = "Wounded critical, helicopter suicide after dark. Wait for dawn? Call it anyway? Live with the choice." },
+]
+
+# Weather and Terrain
+environment = [
+    { id = "monsoon_movement", name = "Monsoon Patrol", desc = "Rain so thick breathing is drowning. Every step is mud. Weapons need constant attention. Movement measured in yards per hour." },
+    { id = "heat_casualties", name = "Heat Casualties", desc = "Soldier down, overheated. Salt tablets and water aren't enough. Slow the patrol or leave him? The mission says move." },
+    { id = "river_crossing", name = "Dangerous River Crossing", desc = "Current stronger than expected. Full packs drag men under. Everyone makes it. Everyone doesn't always." },
+    { id = "jungle_navigation", name = "Lost in Triple Canopy", desc = "Map says one thing, jungle says another. The LT's compass is spinning. Are we circling? Are they circling us?" },
+    { id = "night_movement", name = "Night Jungle Movement", desc = "Can't see the man in front of you. Every sound is enemy. Every step could be trap. The darkness has weight." },
+]
+
+# Contact Decisions
+contact = [
+    { id = "break_contact", name = "Break Contact Decision", desc = "Fight through or pull back? Casualties mounting, objective unclear. Discretion or cowardice? The call that defines leadership." },
+    { id = "pursuit_dilemma", name = "Pursuit Into Unknown", desc = "Enemy retreating, blood trail clear. Follow into possible ambush? Let them go, lose the initiative? The jungle swallows both answers." },
+    { id = "fire_discipline", name = "Fire Discipline Test", desc = "Movement in the bush. Visual unclear. Shoot first or confirm? Friendlies are in the area. So is everyone else." },
+    { id = "prisoners", name = "Prisoner Handling", desc = "VC captured, can't carry them, can't release them. The rules say one thing. The situation says another. What happens in the bush..." },
+    { id = "intel_opportunity", name = "Intelligence Opportunity", desc = "Wounded enemy, talking. Information flowing. More aggressive questioning gets more. Where's the line? Does it matter?" },
+]
+
+# Equipment and Supply
+equipment = [
+    { id = "ammunition_low", name = "Ammunition Running Low", desc = "Contact consumed more than planned. Combat load depleted. Resupply when? Conservation mode until then." },
+    { id = "radio_dead", name = "Radio Dead", desc = "PRC-25 stopped working. Jungle, humidity, bad luck. No artillery, no air support, no medevac. Alone now." },
+    { id = "water_out", name = "Water Exhausted", desc = "Canteens empty, stream contaminated, resupply delayed. Dehydration is killing slower than bullets but just as sure." },
+    { id = "equipment_malfunction", name = "Weapon Malfunction", desc = "M16 jammed again. The jungle eats these rifles. Clean it, clear it, pray it fires when needed." },
+]
+
+# Morale Events
+morale = [
+    { id = "mail_call", name = "Mail Call in the Field", desc = "Letters from the World. Good news or Dear John? The paper from home changes everything or destroys everything." },
+    { id = "short_timer_conflict", name = "Short-Timer Refuses Patrol", desc = "30 days and a wake-up. He's not going out again. Can't make him, can't leave him. The tension spreads." },
+    { id = "fng_mistake", name = "FNG Almost Gets Everyone Killed", desc = "Cherry didn't follow noise discipline. Cherry silhouetted himself. Cherry almost died and took the squad with him. Learning curve is steep here." },
+    { id = "leadership_crack", name = "Lieutenant Losing It", desc = "The stress is showing. Decisions slower, mistakes more frequent. When does someone say something? Who?" },
+]

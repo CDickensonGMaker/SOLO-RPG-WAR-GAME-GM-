@@ -1,0 +1,137 @@
+# Bug War Veteran Traits
+# The marks left by the war against the Arachnids
+
+[combat_trauma]
+description = "The psychological scars of fighting bugs"
+entries = [
+  { text = "Flinches at chittering sounds - any insect noise sends their hand to their sidearm", weight = 2 },
+  { text = "Thousand-yard stare - eyes that have seen Klendathu and never quite came back", weight = 2 },
+  { text = "Can't sleep without a weapon within reach - learned the hard way on Planet P", weight = 2 },
+  { text = "Counts bodies compulsively - needs to know kill counts, needs the numbers", weight = 1 },
+  { text = "Wakes screaming about warriors in the wire", weight = 2 },
+  { text = "Can't eat anything that looks like bug meat - protein rations make them gag", weight = 1 },
+  { text = "Hypervigilant in tunnels and confined spaces - bugs come from below", weight = 2 },
+  { text = "Talks to dead squadmates - holds conversations when they think no one's listening", weight = 1 },
+  { text = "Refuses to be the last one through a door - saw what happens to rearguards", weight = 1 },
+  { text = "Obsessively checks ammunition - was caught empty once, never again", weight = 2 },
+  { text = "Can't stand the smell of plasma discharge - too many burned friends", weight = 1 },
+  { text = "Freezes when they see tanker bugs - nearly drowned in one's acid spray", weight = 1 },
+  { text = "Hears the bugs even in silence - phantom psionic echoes", weight = 1 },
+  { text = "Survivor's guilt carved into every interaction - why them, not me?", weight = 2 },
+  { text = "Dissociates during combat briefings - mind goes somewhere safer", weight = 1 },
+]
+
+[unit_loyalty]
+description = "Bonds forged in the crucible of bug war"
+entries = [
+  { text = "Roughneck to the bone - will die for anyone who wore the unit patch", weight = 2 },
+  { text = "Suspicious of replacements - too many fresh faces became bug food", weight = 2 },
+  { text = "Fiercely protective of their fire team - those four are all that matter", weight = 2 },
+  { text = "Still wears their original unit's insignia - that unit no longer exists", weight = 1 },
+  { text = "Blood-bonded to a battle buddy - saved each other's lives, now inseparable", weight = 2 },
+  { text = "Carries mementos from fallen squadmates - dog tags, patches, a photo", weight = 2 },
+  { text = "Hostile to other units - believes only their squad knows how to fight", weight = 1 },
+  { text = "Mentors every boot like their life depends on it - because it does", weight = 2 },
+  { text = "Remembers every name from the original roster - recites them like prayer", weight = 1 },
+  { text = "Has adopted the unit's unofficial traditions religiously", weight = 1 },
+  { text = "Will not leave anyone behind - carried a corpse ten klicks under fire to prove it", weight = 1 },
+  { text = "Distrustful of officers not from MI - Fleet doesn't understand", weight = 2 },
+]
+
+[survival_instincts]
+description = "Adaptations to stay alive in the Bug War"
+entries = [
+  { text = "Sleeps light, wakes armed - two seconds from REM to rifle up", weight = 2 },
+  { text = "Always knows the nearest exit - has mapped escape routes instinctively", weight = 2 },
+  { text = "Eats fast, like it might be the last meal - learned in the mess hall of war", weight = 1 },
+  { text = "Never stands in the open - cover is life, exposure is death", weight = 2 },
+  { text = "Trusts their gut absolutely - that tingling has saved them three times", weight = 2 },
+  { text = "Moves in tactical patterns even off-duty - heel-toe, checking corners", weight = 1 },
+  { text = "Hoards supplies obsessively - water, ammo, ration bars, everything", weight = 1 },
+  { text = "Studies every new environment for defensive positions", weight = 1 },
+  { text = "Has a personal escape kit always on their person", weight = 1 },
+  { text = "Knows exactly how many rounds in their magazine at all times", weight = 2 },
+  { text = "Can smell bugs on the wind - or thinks they can", weight = 1 },
+  { text = "Maintains their gear with religious devotion - equipment failures kill", weight = 2 },
+]
+
+[federation_believers]
+description = "True believers in the Federation cause"
+entries = [
+  { text = "Quotes citizenship theory like scripture - Dubois would be proud", weight = 2 },
+  { text = "Genuinely believes service guarantees citizenship means something", weight = 2 },
+  { text = "Sees the war as humanity's crucible - we'll emerge stronger", weight = 1 },
+  { text = "Watches FedNet propaganda and nods along - needs to believe", weight = 2 },
+  { text = "Volunteers for every dangerous mission - duty above self", weight = 1 },
+  { text = "Lectures civilians about their obligations to society", weight = 1 },
+  { text = "Has the Federation oath memorized and recites it before drops", weight = 1 },
+  { text = "Named their weapon after a fallen hero of the Federation", weight = 1 },
+  { text = "Dreams of citizenship for their family - this suffering has to mean something", weight = 2 },
+  { text = "Hatred of bugs is ideological - they threaten humanity's destiny", weight = 1 },
+]
+
+[federation_cynics]
+description = "Those who've seen behind the curtain"
+entries = [
+  { text = "Knows the body counts are lies - has done the real math", weight = 2 },
+  { text = "Sees citizenship as a cage wrapped in a flag", weight = 1 },
+  { text = "Believes Sky Marshal Command sacrifices MI for political victories", weight = 2 },
+  { text = "Watches FedNet with bitter amusement - spot the propaganda", weight = 2 },
+  { text = "Questions why bugs attacked first - or if they really did", weight = 1 },
+  { text = "Serves because there's no other option, not because they believe", weight = 2 },
+  { text = "Has seen intelligence buried because it didn't fit the narrative", weight = 1 },
+  { text = "Knows the Federation creates the enemies it needs", weight = 1 },
+  { text = "Fights for the trooper beside them, not the Federation above", weight = 2 },
+  { text = "Keeps their cynicism hidden - sedition charges are real", weight = 2 },
+]
+
+[physical_marks]
+description = "Bodies marked by the Bug War"
+entries = [
+  { text = "Missing limb replaced with obvious prosthetic - MI chrome", weight = 2 },
+  { text = "Bug acid scars covering half their face - wears them proudly", weight = 2 },
+  { text = "Walks with a powered-suit limp - servo injury never healed right", weight = 2 },
+  { text = "Deaf in one ear from plasma concussion - always turns their good ear toward you", weight = 1 },
+  { text = "Eyes replaced with military optics - unsettling glow in low light", weight = 1 },
+  { text = "Warrior bug claw scar from throat to hip - should have died", weight = 1 },
+  { text = "Fingers missing on one hand - tanker bug nearly got all of them", weight = 1 },
+  { text = "Skin grafts visible at collar and cuffs - plasma burns healed ugly", weight = 2 },
+  { text = "Moves stiffly - spinal injury from a bad drop", weight = 1 },
+  { text = "Tremor in their hands - nerve damage or trauma, does it matter?", weight = 2 },
+  { text = "Breathing apparatus scars on their chest - lungs compromised by bug atmosphere", weight = 1 },
+  { text = "Tattoos covering bug-war scars - turning wounds into war stories", weight = 2 },
+]
+
+[psychological_marks]
+description = "Minds changed by contact with the Arachnids"
+entries = [
+  { text = "Speaks in clipped military shorthand even in casual conversation", weight = 2 },
+  { text = "Uncomfortable with civilian softness - everything feels fake", weight = 2 },
+  { text = "Gallows humor about death that makes others uncomfortable", weight = 2 },
+  { text = "Difficulty forming attachments - loss is inevitable", weight = 2 },
+  { text = "Hyperfocused on mission completion - can't see past the objective", weight = 1 },
+  { text = "Numb to violence - has to remember that normal people aren't", weight = 2 },
+  { text = "Paranoid about brain bug influence - how would you know if you were compromised?", weight = 1 },
+  { text = "Dreams in battle footage - wakes unsure what's memory and what's nightmare", weight = 2 },
+  { text = "Addicted to combat stimulants - can't function without them now", weight = 1 },
+  { text = "Finds peace only in combat - everything else is just waiting", weight = 1 },
+  { text = "Has accepted their own death - just waiting for it to catch up", weight = 2 },
+  { text = "Protective of information - loose lips sink ships and kill troopers", weight = 1 },
+]
+
+[veteran_quirks]
+description = "Specific behaviors developed in the Bug War"
+entries = [
+  { text = "Taps their rifle three times before every engagement - started as superstition, now ritual", weight = 1 },
+  { text = "Never takes off their boots - bugs attack at night", weight = 1 },
+  { text = "Keeps a bug mandible as a trophy - first confirmed kill", weight = 2 },
+  { text = "Writes letters to family before every drop - just in case", weight = 2 },
+  { text = "Has named their power suit - she's kept them alive this long", weight = 1 },
+  { text = "Refuses to shower alone - learned about warrior bugs in the latrine", weight = 1 },
+  { text = "Checks the ground obsessively for tunneling signs", weight = 2 },
+  { text = "Always sits with back to the wall and eyes on exits", weight = 2 },
+  { text = "Carries a personal sidearm everywhere, even to mess", weight = 2 },
+  { text = "Has a lucky charm - a button, a coin, a fragment of bug shell", weight = 1 },
+  { text = "Fasts before drops - can't fight on a full stomach, won't die on one", weight = 1 },
+  { text = "Maintains a kill journal with methodical precision", weight = 1 },
+]

@@ -1,0 +1,105 @@
+# Alternate History NPC Roles
+# Occupations and positions reflecting divergent timelines and changed power structures
+
+[roles]
+entries = [
+  # Confederate Victory Roles
+  { text = "Confederate States Ambassador - represents the CSA in diplomatic matters with foreign powers", weight = 2 },
+  { text = "Freedmen's Bureau Administrator - manages the complex post-gradual-emancipation transition", weight = 1 },
+  { text = "Border Patrol Agent (Mason-Dixon) - monitors the militarized USA-CSA border", weight = 2 },
+  { text = "Underground Railroad Archivist - preserves history of the pre-war escape networks", weight = 1 },
+  { text = "Southern Industrial Baron - oversees the CSA's late-blooming manufacturing sector", weight = 1 },
+  { text = "Reunion Conspiracy Theorist - believes the two Americas will one day reunite", weight = 1 },
+
+  # Nazi Victory Roles
+  { text = "Reich Colonial Administrator - governs territories in the Greater German Reich", weight = 1 },
+  { text = "Resistance Cell Leader - coordinates underground opposition to Nazi rule", weight = 2 },
+  { text = "Aryan Science Officer - enforces ideological purity in scientific research", weight = 1 },
+  { text = "Atlantic Wall Engineer - maintains the fortifications against American invasion", weight = 1 },
+  { text = "Memory Keeper - secretly preserves true history of the pre-Reich world", weight = 2 },
+  { text = "Collaboration Tribunal Judge - prosecutes those who resist the new order", weight = 1 },
+
+  # Worldwar/Alien Contact Roles
+  { text = "Race Liaison Officer - official human representative to alien authorities", weight = 2 },
+  { text = "Ginger Smuggler - traffics the substance that affects alien psychology", weight = 2 },
+  { text = "Human Resistance Coordinator - organizes multi-national opposition to alien rule", weight = 2 },
+  { text = "Alien Technology Analyst - reverse-engineers captured Race equipment", weight = 1 },
+  { text = "Collaboration Zone Administrator - governs human territories under alien oversight", weight = 1 },
+  { text = "Species Integration Specialist - manages human-alien coexistence programs", weight = 1 },
+
+  # Timeline Investigation Roles
+  { text = "Timeline Investigator - tracks anomalies and divergence points across history", weight = 3 },
+  { text = "Chronological Auditor - verifies historical accuracy against baseline timelines", weight = 2 },
+  { text = "Paradox Prevention Agent - intervenes to prevent catastrophic timeline damage", weight = 2 },
+  { text = "Historical Restoration Specialist - attempts to correct divergences from the 'true' timeline", weight = 1 },
+  { text = "Temporal Archaeologist - excavates artifacts from erased or altered timelines", weight = 2 },
+  { text = "Divergence Point Cartographer - maps where and when timelines split", weight = 1 },
+
+  # Cross-Timeline Roles
+  { text = "Cross-Timeline Refugee - displaced person from an erased or radically altered timeline", weight = 2 },
+  { text = "Timeline Smuggler - moves people and goods between parallel histories", weight = 2 },
+  { text = "Alternate Self Tracker - searches for their counterparts in other timelines", weight = 1 },
+  { text = "Reality Anchor - individual whose existence stabilizes a divergent timeline", weight = 1 },
+  { text = "Timeline Merger Witness - remembers two incompatible histories as both true", weight = 1 },
+  { text = "Parallel History Diplomat - negotiates between aware timeline factions", weight = 1 },
+
+  # Changed History Scholars
+  { text = "Changed History Historian - studies how this timeline differs from others", weight = 2 },
+  { text = "Counterfactual Analyst - models what would have happened if history went differently", weight = 1 },
+  { text = "Divergence Point Witness - was present when history changed and remembers both versions", weight = 2 },
+  { text = "Oral History Collector - gathers accounts from those who remember 'before'", weight = 1 },
+  { text = "Propaganda Archaeologist - uncovers how history was rewritten after the change", weight = 1 },
+  { text = "Lost Culture Preservationist - maintains traditions from the original timeline", weight = 1 },
+
+  # Alternate Technology Roles
+  { text = "Alternate Technology Scientist - develops tech along paths different from our timeline", weight = 2 },
+  { text = "Anachronistic Device Engineer - builds machines that shouldn't exist yet (or ever)", weight = 2 },
+  { text = "Technology Suppression Agent - prevents dangerous alternate-path innovations", weight = 1 },
+  { text = "Divergent Physics Researcher - studies laws of nature that work differently here", weight = 1 },
+  { text = "Cross-Timeline Patent Agent - tracks which inventions exist in which timelines", weight = 1 },
+  { text = "Retrograde Tech Specialist - expert in technology that this timeline never developed", weight = 1 },
+
+  # Rome Never Fell Roles
+  { text = "Imperial Provincial Governor - administers Roman territory in the modern era", weight = 1 },
+  { text = "Legionary Commander - leads military forces in the eternal Roman army", weight = 1 },
+  { text = "Senate Intelligence Officer - gathers information for the ancient deliberative body", weight = 1 },
+  { text = "Gladiatorial Sports Manager - runs the still-popular arena entertainment", weight = 1 },
+  { text = "Roman Steam Engineer - develops the Empire's advanced mechanical technology", weight = 1 },
+  { text = "Pagan Priest/Priestess - serves the still-dominant traditional Roman gods", weight = 1 },
+
+  # Islamic Europe Roles
+  { text = "Caliph's European Vizier - advises on governance of the former Christian lands", weight = 1 },
+  { text = "Al-Andalus University Scholar - teaches at the continent's premiere centers of learning", weight = 1 },
+  { text = "Christian Dhimmi Community Leader - represents protected non-Muslim populations", weight = 1 },
+  { text = "Islamic Architecture Master - designs the great mosques of Paris and London", weight = 1 },
+  { text = "Trans-Saharan Trade Magnate - controls commerce between Europe and Africa", weight = 1 },
+  { text = "Reconquista Conspiracy Member - secretly works to restore Christian rule", weight = 1 },
+
+  # Chinese America Roles
+  { text = "Ming Dynasty Colonial Governor - administers territories in Yingzhou (America)", weight = 1 },
+  { text = "Confucian Academy Headmaster - runs schools teaching proper social order", weight = 1 },
+  { text = "Imperial Treasure Fleet Captain - commands ships of the great Chinese navy", weight = 1 },
+  { text = "Native Integration Official - manages relations with indigenous populations", weight = 1 },
+  { text = "Silk Road Extension Trader - moves goods along the Pacific trade routes", weight = 1 },
+  { text = "Mandate of Heaven Interpreter - advises on cosmic legitimacy of colonial rule", weight = 1 },
+
+  # Spanish Armada Success Roles
+  { text = "Inquisition Officer (English Branch) - enforces Catholic orthodoxy in Britain", weight = 1 },
+  { text = "Hispano-English Noble - member of the merged aristocracy", weight = 1 },
+  { text = "Protestant Underground Leader - coordinates secret worship and resistance", weight = 1 },
+  { text = "Spanish Colonial Administrator (India) - governs territories never reached by British", weight = 1 },
+  { text = "Anglo-Spanish Trade Factor - manages commerce in this merged empire", weight = 1 },
+  { text = "Counter-Reformation Theologian - shapes religious doctrine in Catholic England", weight = 1 },
+
+  # General Alternate History Roles
+  { text = "Resistance Fighter against the Victors - opposes whoever won in this timeline", weight = 3 },
+  { text = "Collaboration Government Official - administers territory for the conquering power", weight = 2 },
+  { text = "Black Market Historian - trades in forbidden knowledge of how things 'should' be", weight = 2 },
+  { text = "Alternative Victory Propagandist - promotes the ruling narrative of history", weight = 1 },
+  { text = "Defeated Nation Expatriate - lives in exile from their conquered homeland", weight = 2 },
+  { text = "Treaty Enforcement Inspector - ensures compliance with the alternate peace terms", weight = 1 },
+  { text = "Refugee Camp Administrator - manages displaced peoples from the changed war", weight = 1 },
+  { text = "War Crimes Tribunal Investigator - prosecutes losers under victor's justice", weight = 1 },
+  { text = "Alternate History Tour Guide - shows visitors how things are 'different here'", weight = 1 },
+  { text = "Reality Stability Monitor - watches for signs of timeline instability", weight = 1 },
+]

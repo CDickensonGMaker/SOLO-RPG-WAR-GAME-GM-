@@ -1,0 +1,121 @@
+# WWI Trench Life Encounters
+# The daily existence in the labyrinth of mud
+
+[daily_routine]
+description = "The rhythm of trench existence"
+entries = [
+    { encounter = "Stand-to at dawn", description = "Everyone on the fire step, watching for attack in the grey light" },
+    { encounter = "Stand-down and breakfast", description = "Rum ration, tea, hard biscuit, survived another night" },
+    { encounter = "Morning hate", description = "Both sides trading shots and shells, the daily ritual" },
+    { encounter = "Trench maintenance detail", description = "Shoring up walls, draining water, endless Sisyphean labor" },
+    { encounter = "Sentry duty", description = "Two hours watching through a periscope, alone with your thoughts" },
+    { encounter = "Evening stand-to", description = "Same ritual at dusk, same fear of twilight attacks" },
+    { encounter = "Night wiring party", description = "Out in no man's land in darkness, improving the wire" },
+    { encounter = "Ration party arrival", description = "Hot food gone cold on the journey, but food nonetheless" }
+]
+
+[vermin]
+description = "The constant companions"
+entries = [
+    { encounter = "Rats eating the dead", description = "Fat brown horrors everywhere, eyes gleaming in candlelight" },
+    { encounter = "Rat runs across your face while sleeping", description = "Wake screaming, they're everywhere, they're unstoppable" },
+    { encounter = "Lice infestation", description = "Crawling in every seam, impossible to eliminate" },
+    { encounter = "Delousing parade", description = "Running candles along seams, popping the eggs" },
+    { encounter = "Chatting session", description = "Reading lice caught in seams, comparing kills" },
+    { encounter = "Flies on the bodies", description = "Clouds of them, the buzzing never stops" }
+]
+
+[medical]
+description = "Health in the trenches"
+entries = [
+    { encounter = "Trench foot inspection", description = "Whale oil on the feet, rotate socks, check for rot" },
+    { encounter = "Symptoms of trench foot", description = "Feet swollen, painful, possibly gangrenous" },
+    { encounter = "Sick parade", description = "Lined up for the medical officer, real illness or malingering?" },
+    { encounter = "Self-inflicted wound suspicion", description = "Wound at suspicious angle, powder burns, investigation" },
+    { encounter = "Dysentery symptoms", description = "Can't leave the latrine, weakening fast" },
+    { encounter = "Fever in the trench", description = "Shaking with illness, nowhere to rest properly" },
+    { encounter = "Wound festering", description = "Minor injury turning septic, need to see the MO" }
+]
+
+[weather]
+description = "The elements make war on everyone"
+entries = [
+    { encounter = "Trench flooding after rain", description = "Water up to knees, pumps can't keep up" },
+    { encounter = "Mud claiming a man", description = "Stepped off duckboards, sinking, others pulling frantically" },
+    { encounter = "Freezing night watch", description = "Cold so deep it aches in your bones" },
+    { encounter = "Summer heat baking the trenches", description = "Stench of the dead unbearable, flies everywhere" },
+    { encounter = "Mist providing cover", description = "Fog rolls in, can't see, could hide anything" },
+    { encounter = "Rain collapsing dugout entrance", description = "Earth slides, men trapped inside, digging frantically" },
+    { encounter = "Snow drifting into the trench", description = "White camouflage, frozen fingers, deadly cold" }
+]
+
+[food_and_supply]
+description = "Sustenance in the line"
+entries = [
+    { encounter = "Bully beef again", description = "Canned meat, same meal for weeks, sick of it" },
+    { encounter = "Hard tack biscuit", description = "So hard you could stop a bullet, soak in tea to eat" },
+    { encounter = "Rum ration distribution", description = "The daily measure, SRD jar, mixed blessing" },
+    { encounter = "Water tastes of chlorine and petrol", description = "Brought up in repurposed fuel cans" },
+    { encounter = "Hot meal made it up cold", description = "Stew congealed, but better than nothing" },
+    { encounter = "Food parcel from home", description = "Cake crumbled, chocolate melted, cigarettes intact, heaven" },
+    { encounter = "Cigarette shortage", description = "The real currency of the trenches, men desperate" },
+    { encounter = "Scrounging for extras", description = "What can you trade, what can you find" }
+]
+
+[mail]
+description = "The lifeline to the world beyond"
+entries = [
+    { encounter = "Mail call", description = "Letters from home, the best moment of any day" },
+    { encounter = "Dear John letter", description = "She's found someone else, you're stuck here dying" },
+    { encounter = "News from home of a death", description = "Mother sick, brother killed in another sector" },
+    { encounter = "No mail for weeks", description = "Is anyone still writing? Do they remember?" },
+    { encounter = "Writing a letter home", description = "What can you say that the censor won't black out?" },
+    { encounter = "Writing for an illiterate mate", description = "His words to his sweetheart, through your hand" },
+    { encounter = "Censoring letters for the men", description = "Officer's duty, reading their private thoughts" }
+]
+
+[equipment]
+description = "The tools of survival"
+entries = [
+    { encounter = "Rifle cleaning", description = "Pull-through and oil, keep it working, your life depends on it" },
+    { encounter = "Gas mask drill", description = "Six seconds to get it on, practice until it's automatic" },
+    { encounter = "Kit inspection", description = "Everything laid out, officer checking, woe betide you" },
+    { encounter = "Helmet saved your life", description = "Shrapnel dented it, would have been your skull" },
+    { encounter = "Equipment failure at worst moment", description = "Something breaks when you need it most" },
+    { encounter = "Scavenging from the dead", description = "He doesn't need that rifle anymore, you do" }
+]
+
+[fatigue_parties]
+description = "The endless labor"
+entries = [
+    { encounter = "Carrying ammunition forward", description = "Heavy boxes through communication trenches, hours of slog" },
+    { encounter = "Sandbag filling detail", description = "Shovel, fill, tie, stack, repeat forever" },
+    { encounter = "Digging new trench extension", description = "Creating the maze deeper, wider, endless expansion" },
+    { encounter = "Repairing wire entanglements", description = "Night work in no man's land, wire cuts and fear" },
+    { encounter = "Burying the dead", description = "Hasty graves in trench walls, say a prayer if there's time" },
+    { encounter = "Pump duty", description = "Operating the pumps to keep the trench drained" },
+    { encounter = "Carrying stretchers", description = "Wounded man through the twisting trenches to the rear" }
+]
+
+[discipline]
+description = "Military order in chaos"
+entries = [
+    { encounter = "Caught sleeping on sentry", description = "Capital offense, mercy of the officer" },
+    { encounter = "Kit inspection failure", description = "Something missing, something dirty, punishment follows" },
+    { encounter = "Drunkenness charge", description = "More than the rum ration, where did he get it?" },
+    { encounter = "Argument with NCO", description = "Insubordination, field punishment, spread-eagled on a wheel" },
+    { encounter = "Witnessing field punishment", description = "Man tied to post or wheel, hours in the open" },
+    { encounter = "Court martial proceedings", description = "Serious charge, officers judging, fate in the balance" }
+]
+
+[quiet_moments]
+description = "Rare peace in the trenches"
+entries = [
+    { encounter = "Dawn birdsong", description = "Somehow birds still sing, absurd and beautiful" },
+    { encounter = "Letter from a child", description = "Crayon drawing, simple words, heart-breaking hope" },
+    { encounter = "Sharing photographs", description = "Sweethearts, wives, children, the world they're fighting for" },
+    { encounter = "Mouth organ in the evening", description = "Someone playing, sentimental songs, men humming along" },
+    { encounter = "Unexpected sunset beauty", description = "Sky painted red and gold over the destruction" },
+    { encounter = "Tea brewed properly", description = "Small miracle of hot, sweet tea" },
+    { encounter = "Brief sleep without nightmares", description = "Rare rest, undisturbed, precious" }
+]

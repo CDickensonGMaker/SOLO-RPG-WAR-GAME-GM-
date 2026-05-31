@@ -1,0 +1,74 @@
+# Lost Regiment NPC Traits
+# Fish out of water characteristics and adaptations
+
+[traits]
+entries = [
+    # Homesickness and Loss
+    "Carries a photograph from a world that no longer exists",
+    "Speaks of home as if they'll return tomorrow",
+    "Has completely stopped talking about the old world",
+    "Names everything after places left behind",
+    "Keeps meticulous calendar counting days since arrival",
+    "Dreams every night of people they'll never see again",
+    "Refuses to learn the local language as denial",
+    "Celebrates old world holidays with desperate intensity",
+
+    # Complete Adaptation
+    "Has taken a native name and local spouse",
+    "Speaks the local tongue better than English now",
+    "Prefers local food to remembered recipes",
+    "Has adopted local religious practices alongside old faith",
+    "Considers this world home and the old one a fading dream",
+    "Mentors natives as if they were always their people",
+    "Thinks in the local language, translates to speak to regiment",
+    "Has forgotten the faces of family left behind",
+
+    # Knowledge as Weapon
+    "Uses future historical knowledge to predict enemy moves",
+    "Teaches mathematics as if teaching magic",
+    "Reveals scientific knowledge strategically for maximum effect",
+    "Hoards technical knowledge for personal power",
+    "Shares freely everything remembered, holding nothing back",
+    "Uses medical knowledge as political leverage",
+    "Introduces innovations slowly to avoid dependence",
+    "Rushes technology forward regardless of consequences",
+
+    # Protective Instincts
+    "Shields natives from harsh truths about their world",
+    "Treats locals like children who need guidance",
+    "Respects native wisdom while sharing foreign knowledge",
+    "Died saving locals they once would have dismissed",
+    "Adopted native orphans as their own children",
+    "Teaches self-sufficiency rather than dependency",
+    "Protects native culture while introducing change",
+    "Sacrificed personal comfort to improve native conditions",
+
+    # Trauma and Shell Shock
+    "Jumps at sounds that remind them of the crossing",
+    "Cannot sleep without a weapon within reach",
+    "Survived by doing terrible things during the early days",
+    "Blank eyes that have seen too much death",
+    "Functions only in crisis, falls apart in peace",
+    "Speaks to dead comrades as if they're present",
+    "Cannot form new attachments after losing everyone",
+    "Found purpose in this world after having none in the old",
+
+    # Thriving in Chaos
+    "Always knew they were born in the wrong era",
+    "Skills that were obsolete at home are invaluable here",
+    "Rose from enlisted to officer through pure necessity",
+    "Criminal past in old world, hero in new one",
+    "Former failure now essential to survival",
+    "Found meaning in building something from nothing",
+    "Leadership abilities that never had outlet before",
+    "Finally living the life they always imagined",
+
+    # Moral Adaptation
+    "Maintains old world ethics despite circumstances",
+    "Pragmatically abandoned morality for survival",
+    "Created new ethical code for new circumstances",
+    "Judges others by old standards they can't meet",
+    "Struggles daily with what they've become",
+    "Made peace with necessary cruelty",
+    "Uses civilization-building as redemption"
+]

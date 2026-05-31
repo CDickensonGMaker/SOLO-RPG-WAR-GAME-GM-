@@ -1,0 +1,72 @@
+# Stargate SG-1 Spacecraft
+# Vessels encountered throughout the Stargate universe
+
+[goauld_vessels]
+description = "Goa'uld spacecraft"
+ships = [
+    { name = "Ha'tak Mothership 'Divine Vengeance'", description = "Massive pyramid-shaped warship, flagship of a minor System Lord. Golden hull scarred by countless battles. Carries legions of Jaffa and squadrons of death gliders." },
+    { name = "Ha'tak 'Serpent's Coil'", description = "Apophis-era vessel now in rebel Jaffa hands. Systems jury-rigged and upgraded. The crew maintain it through will as much as skill." },
+    { name = "Ha'tak 'Throne of Heaven'", description = "Ostentatiously decorated vessel serving a Goa'uld queen. The interior is designed to intimidate with opulence. Combat capability secondary to impression." },
+    { name = "Tel'tak 'Shadow Runner'", description = "Cargo ship converted for covert operations. Modified for stealth, stripped for speed. Tok'ra operatives have used this vessel for decades." },
+    { name = "Tel'tak 'Honest Trader'", description = "Battered cargo ship working Goa'uld trade routes. The captain claims independence. The cargo hold hides more than goods." },
+    { name = "Tel'tak 'Recovery'", description = "SGC salvage of a crashed cargo ship. Human-modified with Earth instruments. Uncomfortable but functional." },
+    { name = "Al'kesh Bomber 'Storm Herald'", description = "Mid-range attack craft with bombing capability. Currently serves Free Jaffa patrol duties. The crew dream of larger ships." },
+    { name = "Al'kesh 'Silent Death'", description = "Modified for troop insertion rather than bombing. Ring transporters enhanced for rapid deployment. Surgical strike capability." },
+    { name = "Al'kesh 'Borrowed Time'", description = "Captured vessel pressed into SGC service. Earth engineers struggle with Goa'uld interfaces. It works, barely, when it matters." },
+    { name = "Death Glider Wing", description = "Squadron of nimble fighters operating from a mothership. Two-person crews bond as brothers. Life expectancy is measured in missions." },
+    { name = "Cheops-class Warship", description = "Larger and older than standard Ha'tak. Ra-era construction, rare and prestigious. Whoever commands this commands respect." },
+    { name = "Osiris' Yacht", description = "Elegant personal vessel designed for a System Lord's comfort. Small but luxurious. Defense systems belie its pleasure-craft appearance." },
+]
+
+[earth_vessels]
+description = "Earth-built spacecraft"
+ships = [
+    { name = "Prometheus (BC-303)", description = "Earth's first true starship. Hybrid of human engineering and alien technology. Battle-scarred but unbowed, she's proven Earth belongs among the stars." },
+    { name = "Daedalus (BC-304)", description = "Second-generation battlecruiser with Asgard upgrades. Beams and hyperdrive courtesy of Earth's diminutive allies. Protects Earth and Atlantis both." },
+    { name = "Odyssey (BC-304)", description = "Flagship of the Earth fleet, equipped with Asgard core. After the Asgard's gift, she carries their entire legacy. The weight shows in her crew's eyes." },
+    { name = "Apollo (BC-304)", description = "Warship focused on combat capability. Less science, more firepower. When diplomacy fails, Apollo arrives." },
+    { name = "Sun Tzu (BC-304)", description = "Chinese-crewed vessel of the IOA fleet. Political complications affect every mission. The crew prove their worth regardless." },
+    { name = "George Hammond (BC-304)", description = "Named for SGC's founding commander. Her crew carry that legacy with pride. Every mission honors his memory." },
+    { name = "F-302 Interceptor Squadron", description = "Space-capable fighters operating from carrier ships. Two-person crews push human reflexes to the limit. Against death gliders, skill matters more than technology." },
+    { name = "X-301 Interceptor", description = "Early hybrid fighter combining Goa'uld and Earth technology. Prone to catastrophic failure. The test pilots earned their hazard pay." },
+    { name = "X-302 Prototype", description = "Experimental fighter that paved the way for the F-302 program. Museum piece now, but veterans remember the risks they took proving the concept." },
+]
+
+[asgard_vessels]
+description = "Asgard spacecraft"
+ships = [
+    { name = "Beliskner-class Vessel", description = "Standard Asgard warship, elegant and powerful. Minimalist bridge contrasts with devastating capability. One vessel could hold a Goa'uld fleet." },
+    { name = "O'Neill-class Battleship", description = "Named for Earth's unlikely champion. Larger and more powerful than standard Asgard ships. Built specifically to fight Replicators." },
+    { name = "Daniel Jackson (Science Vessel)", description = "Research ship named for another SGC legend. Configured for exploration rather than combat. Still capable of defending itself when required." },
+    { name = "Asgard Transport", description = "Small vessel for personnel movement. Often ferries advisors to allied worlds. Unassuming but equipped with Asgard technology throughout." },
+    { name = "Valhalla-class Cruiser", description = "Ancient Asgard design, rarely seen. Larger than standard vessels, with unknown capabilities. The Asgard don't discuss why they stopped building them." },
+]
+
+[ancient_vessels]
+description = "Ancient/Lantean spacecraft"
+ships = [
+    { name = "Aurora-class Battleship", description = "Ancient warship of immense power. Drone weapons can devastate fleets. Most were destroyed fighting the Wraith. Finding one intact would change everything." },
+    { name = "Puddle Jumper", description = "Small Ancient shuttle designed for gate travel. Cloaking capability standard. Fits through the stargate, making it invaluable for reconnaissance." },
+    { name = "Destiny", description = "Seed ship launched before the Ancients ascended. Travels faster than Atlantis could ever reach. Her mission: to unlock creation's secrets." },
+    { name = "Ancient Shuttle", description = "Utility vessel found in Ancient outposts. Basic but reliable. Uses technology the Ancients considered mundane but that would revolutionize Earth engineering." },
+    { name = "Ancient Warship Wreckage", description = "Debris field of a destroyed Ancient vessel. Salvage operations are dangerous but rewarding. Even scraps of their technology have value." },
+    { name = "City-Ship (Atlantis-class)", description = "Not merely a ship but a flying city. Atlantis herself proved they could travel. Others may exist, lost among the stars." },
+    { name = "The Tria", description = "Damaged Aurora-class attempting to return to Atlantis. Her crew are ten thousand years out of time. Their knowledge is invaluable, their culture shock immense." },
+]
+
+[other_vessels]
+description = "Spacecraft from other civilizations"
+ships = [
+    { name = "Ori Warship", description = "Massive vessel of the Ori crusade. Prior-commanded, powered by Origin's faithful. Standard weapons are nearly useless against it." },
+    { name = "Ori Fighter Escort", description = "Small craft deployed from Ori warships. Piloted by devoted converts. They welcome death in Origin's service." },
+    { name = "Replicator Ship", description = "Vessel assembled from technological components by the mechanical plague. Constantly evolving, adapting. No two encounters are the same." },
+    { name = "Human-form Replicator Cruiser", description = "A ship built by the more advanced Replicators. Sleek, dangerous, and intelligent. It thinks and plans, not just consumes." },
+    { name = "Wraith Hive Ship", description = "Massive organic vessel that carries thousands of life-draining predators. Part ship, part organism. It may be aware in ways we don't understand." },
+    { name = "Wraith Cruiser", description = "Smaller Wraith vessel for hunting and culling operations. Dart bays launch the abduction craft. Where it goes, populations vanish." },
+    { name = "Traveler Generational Ship", description = "Vessel carrying a population of nomads through space. Home and transport combined. Every system is critical; nothing is wasted." },
+    { name = "Genii Attack Cruiser", description = "Nuclear-powered vessel from the deceptively primitive Genii. Hidden technological capability that surprises enemies. And sometimes allies." },
+    { name = "Lucian Alliance Carrier", description = "Former Goa'uld vessel now serving criminal enterprise. Modified for smuggling and piracy. The crew are ruthless entrepreneurs." },
+    { name = "Tollan Cruiser (Wreckage)", description = "Remains of a once-proud Tollan vessel. Their arrogance destroyed them. Salvage crews pick through the reminder of what pride costs." },
+    { name = "Nox Transport", description = "Rarely seen vessel used by the pacifist Nox. Technology beyond anything else encountered. They choose not to use it for war." },
+    { name = "Serrakin Vessel", description = "Ship from the race that shares Hebridan with humans. Fast and maneuverable, designed for their racing culture. Form and function balance perfectly." },
+]

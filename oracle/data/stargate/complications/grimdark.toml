@@ -1,0 +1,73 @@
+# Stargate SG-1 Grimdark Complications
+# Dark twists and dire circumstances in the Stargate universe
+
+[betrayal_and_deception]
+description = "Trust broken and lies revealed"
+complications = [
+    { name = "Allied Tok'ra Is Actually Goa'uld", description = "The operative who provided crucial intelligence serves a System Lord. Everything shared has been reported. The trap was set long before the team arrived." },
+    { name = "Trusted Contact Sold Them Out", description = "Someone they relied on took payment from enemies. The betrayal wasn't personal - just profitable. Now the team is surrounded with no good options." },
+    { name = "The Rescue Was a Setup", description = "The distress call was fabricated. The 'victims' are bait. Somewhere, someone is watching the trap close." },
+    { name = "Team Member Is Za'tarc", description = "Programming they didn't know about activates. A friend becomes an assassin mid-mission. Stopping them without killing them may be impossible." },
+    { name = "Information Was Planted", description = "The intelligence that led them here was deliberately false. Someone wanted them in this exact situation. The question is why." },
+    { name = "The Ally Has Their Own Agenda", description = "Cooperation was never the point. They used the team to accomplish something else entirely. The real purpose only becomes clear too late." },
+    { name = "NID Has Been Shadowing the Mission", description = "Everything done was observed and recorded. The rogue agency will use the information for their own purposes. Nothing said was private." },
+]
+
+[terrible_choices]
+description = "No good options, only bad ones"
+complications = [
+    { name = "Save One Group or Another", description = "Two sets of people need rescue simultaneously. Resources allow saving one. The other will die knowing help was available." },
+    { name = "Sacrifice the Village to Save the World", description = "Destroying the settlement kills hundreds but stops a galactic threat. The math is clear. The faces of the people are clearer." },
+    { name = "Leave Someone Behind", description = "Extraction window closes soon. A team member is too far away. Staying means everyone dies. Leaving means they do." },
+    { name = "Let the War Criminal Go", description = "The person who committed atrocities has information that saves lives. Justice demands punishment. Pragmatism demands release. Neither satisfies." },
+    { name = "Destroy the Only Cure", description = "The technology that could heal thousands would also enable terrible weapons. Others will misuse it. Destroying it condemns the sick." },
+    { name = "Truth Would Cause More Harm", description = "Revealing what really happened would destroy an alliance or a person. The lie protects something important. Living with it is the cost." },
+    { name = "Child Soldier Decision", description = "Young Jaffa were raised as weapons. They'll kill without hesitation. Treating them as enemies means killing children. Treating them as children means dying." },
+]
+
+[body_horror]
+description = "Physical violation and transformation"
+complications = [
+    { name = "Symbiote Forced Entry", description = "A Goa'uld takes a team member as host. Their consciousness is suppressed but aware. They experience everything the parasite does with their body." },
+    { name = "Naquadah Poisoning Advances", description = "Former hosts feel the mineral in their blood turning toxic. Each symptom progression is agony. There may not be enough time for treatment." },
+    { name = "Replicator Nanite Infection", description = "Microscopic machines multiply inside someone. They can feel the changes beginning. How long until they stop being human?" },
+    { name = "Sarcophagus Damage", description = "Too many resurrections have taken their toll. Personality degrades, aggression increases. The person they were is dying inside the body that won't." },
+    { name = "Transformation Begins", description = "Contact with alien technology starts changing someone. The alterations may be beneficial or horrific. They progress regardless of consent." },
+    { name = "Memory Extraction Leaves Damage", description = "A device pulled information from someone's mind. It wasn't gentle. Parts of who they were came out too." },
+    { name = "Wraith Feeding Partial", description = "Life was drained but the process was interrupted. Years are gone, decades maybe. The victim is aged but alive, changed forever." },
+]
+
+[loss_and_death]
+description = "When people don't come home"
+complications = [
+    { name = "Team Member Dies on Mission", description = "Staff weapon fire, environmental hazard, or enemy blade. Someone who was alive minutes ago is not anymore. The body must be recovered or left behind." },
+    { name = "Population Couldn't Be Saved", description = "Despite best efforts, the people died. Disease, bombardment, or something worse. The gate address will be remembered as a tomb." },
+    { name = "Ally Dies in Their Place", description = "Someone else took the hit meant for the team. Their sacrifice was deliberate and successful. Living with the debt is the payment." },
+    { name = "Entire Outpost Lost", description = "Communication cut off, no survivors answer hails. When the team arrives, they find only the dead. The cause may or may not be apparent." },
+    { name = "Had to Execute the Mission", description = "Circumstances forced lethal action against someone who didn't deserve it. The necessity doesn't ease the weight. Faces appear in dreams." },
+    { name = "Child Casualty", description = "A young person died as a consequence of the mission. Directly or indirectly, their death connects to decisions made. No rationalization helps." },
+    { name = "Could Have Been Prevented", description = "Looking back, the death was avoidable. A different choice would have saved them. That choice wasn't made. Time doesn't reverse." },
+]
+
+[corruption_and_compromise]
+description = "Moral decay and ethical failure"
+complications = [
+    { name = "Made a Deal with a Goa'uld", description = "Survival or success required agreement with evil. The terms were met, the debt exists. Pretending otherwise doesn't make it untrue." },
+    { name = "Tortured for Information", description = "A prisoner had knowledge that saved lives. Getting it required methods that leave marks on everyone involved. The screams don't fade." },
+    { name = "Let Atrocity Happen", description = "Stopping it would have compromised the mission. Standing by while horror occurred was the tactical choice. Tactical wisdom feels like cowardice now." },
+    { name = "Used Prohibited Technology", description = "A Goa'uld device or worse was employed because nothing else would work. Regulations exist for reasons. Those reasons now include personal experience." },
+    { name = "Covered Up What Really Happened", description = "The official report doesn't match reality. The lie protects careers, alliances, or something else. It also corrupts everyone who knows." },
+    { name = "Became What They Fought", description = "Looking at their actions objectively, the difference from the enemy blurs. When did the line move? Was it still there?" },
+]
+
+[cosmic_horror]
+description = "Facing the incomprehensible"
+complications = [
+    { name = "Ancient Warning Was Right", description = "The builders fled this place for reasons now apparent. What they sealed away is loose. Ancient technology couldn't stop it. Nothing will." },
+    { name = "Glimpsed What the Ori Really Are", description = "The Priors worship beings that exist beyond normal comprehension. Seeing even a fraction of that existence breaks something in the mind." },
+    { name = "Time Loop Awareness", description = "They remember iterations others don't. Deaths that were undone still feel real. How many times has this happened? Will it end?" },
+    { name = "Downloaded Knowledge Overwhelming", description = "Ancient repository contents flood the mind. Information density beyond human capacity. Identity dissolves in the data stream." },
+    { name = "Something Noticed Them", description = "An entity of immense power has become aware of the team's existence. Its attention is unwanted and inescapable. What does a god's curiosity feel like?" },
+    { name = "Parallel Universe Bleeding Through", description = "Reality flickers between versions. Other selves appear briefly, living different lives. Which version is real? Are any of them?" },
+    { name = "The Replicators Won Somewhere", description = "In a possible timeline, the mechanical plague consumed everything. That future bleeds through. Prevention may already be too late." },
+]

@@ -1,0 +1,117 @@
+# WWI Combat Encounters
+# The face of industrial slaughter
+
+[going_over]
+description = "Leaving the trench for no man's land"
+entries = [
+    { encounter = "Going over the top at zero hour", description = "Whistle blows. Ladders up. Into the fire." },
+    { encounter = "Caught in wire during advance", description = "Tangled in the uncut wire, machine guns finding range" },
+    { encounter = "Reaching the first enemy trench", description = "Leaping down into the surprised defenders" },
+    { encounter = "Pinned in a shell crater mid-attack", description = "Can't go forward, can't go back, wait for dark" },
+    { encounter = "Lost direction in smoke and chaos", description = "Which way is the objective? Which way is safety?" },
+    { encounter = "Officer killed, taking command", description = "Everyone senior is dead, now it's your call" },
+    { encounter = "Making it to the objective alone", description = "Everyone else is dead or wounded, you're holding a stretch of enemy trench" }
+]
+
+[artillery]
+description = "The killing steel from the sky"
+entries = [
+    { encounter = "Under a creeping barrage", description = "Shells marching toward you, nowhere to hide" },
+    { encounter = "Direct hit on your bay", description = "World goes white and then red and then screaming" },
+    { encounter = "Counter-battery fire incoming", description = "Enemy shells seeking your guns, mathematics of death" },
+    { encounter = "Buried by shell explosion", description = "Earth and sandbags collapse, darkness, can't breathe" },
+    { encounter = "Whizzbang near miss", description = "The small ones give no warning, shrapnel everywhere" },
+    { encounter = "Dud shell at your feet", description = "It didn't explode. This time. Don't touch it." },
+    { encounter = "Observing fire for the guns", description = "Telephone to the battery, adjusting fall of shot onto targets" },
+    { encounter = "Caught in friendly fire", description = "Our shells falling short, killing our own men" }
+]
+
+[gas]
+description = "The yellow-green death"
+entries = [
+    { encounter = "Gas alarm sounding", description = "The gong clanging, fumbling for your mask" },
+    { encounter = "Mask fails during attack", description = "Filter's damaged, poison seeping in, lungs burning" },
+    { encounter = "Mustard gas contamination", description = "Blisters forming hours later, didn't even know you were hit" },
+    { encounter = "Treating gas casualties", description = "Blind men stumbling, drowning in their own lungs" },
+    { encounter = "Wind shifts during own gas attack", description = "Our gas blowing back on our own trenches" },
+    { encounter = "Low-lying gas in shell crater", description = "Heavier than air, filled the holes, death waiting" },
+    { encounter = "Night gas shelling", description = "Can't see the color, rely on smell, often too late" }
+]
+
+[machine_guns]
+description = "The weapons that defined the war"
+entries = [
+    { encounter = "Caught in enfilade fire", description = "Machine gun sweeping across the line, men dropping like wheat" },
+    { encounter = "Hunting an enemy machine gun nest", description = "Work around the flanks, grenades ready" },
+    { encounter = "Your gun jams during attack", description = "Stoppage at the worst moment, frantically clearing" },
+    { encounter = "Crossing a beaten zone", description = "The ground the guns cover, bodies mark the path" },
+    { encounter = "Last man standing at the gun", description = "Rest of the crew dead, keep firing until relieved or killed" },
+    { encounter = "Enemy gun has your trench zeroed", description = "Can't raise your head, pinned for hours" }
+]
+
+[raids]
+description = "Night attacks into enemy lines"
+entries = [
+    { encounter = "Night trench raid", description = "Blackened faces, clubs and knives, into their wire" },
+    { encounter = "Capturing prisoners for intelligence", description = "Need one alive, harder than killing them all" },
+    { encounter = "Raid goes wrong, trapped in enemy trench", description = "They've sealed the exits, no way back" },
+    { encounter = "Hand-to-hand in the dark", description = "Bayonets and entrenching tools, can't tell friend from foe" },
+    { encounter = "Cutting through enemy wire silently", description = "Patrol task, snip by snip, praying no flare goes up" },
+    { encounter = "Counter-raid, enemy in our trench", description = "They're attacking us, everyone fighting everywhere" },
+    { encounter = "Bringing back a wounded raider", description = "Carrying your mate through the wire, he's bleeding out" }
+]
+
+[new_weapons]
+description = "The terrible innovations"
+entries = [
+    { encounter = "Tank attack", description = "Iron monsters crushing wire, terrifying until they break down" },
+    { encounter = "First time facing tanks", description = "What is that? Bullets do nothing. Run or die." },
+    { encounter = "Flamethrower attack", description = "Liquid fire spraying into the trench, screaming men ablaze" },
+    { encounter = "Strafing by aircraft", description = "Fighter planes diving on the trenches, machine guns blazing" },
+    { encounter = "Bombed by enemy aircraft", description = "Explosions falling from the sky, new kind of horror" },
+    { encounter = "Mine explosion beneath your position", description = "Ground heaves upward, world turns inside out" },
+    { encounter = "Counter-mining, break into enemy tunnel", description = "Underground battle in candlelight, pistols and picks" }
+]
+
+[snipers]
+description = "The patient death"
+entries = [
+    { encounter = "Sniper has your trench zeroed", description = "Three men dead from the same loophole, where is he?" },
+    { encounter = "Hunting an enemy sniper", description = "Dummy heads, observation, counter-sniping duel" },
+    { encounter = "Sniper shot near miss", description = "Bullet cracks past your ear, freeze, don't move" },
+    { encounter = "Watching the line through scope", description = "Hours of patience for one shot, one kill" },
+    { encounter = "Periscope shot out", description = "He saw you watching, mirror shattered" }
+]
+
+[defensive]
+description = "Holding the line"
+entries = [
+    { encounter = "Repelling an enemy attack", description = "They're coming, rapid fire, hold the line" },
+    { encounter = "Enemy in the trench, bombing fight", description = "Grenades down the traverses, yard by yard" },
+    { encounter = "Position overrun, last stand", description = "Surrounded, ammunition low, bayonets fixed" },
+    { encounter = "Ordered to hold at all costs", description = "No retreat, no reinforcements, die in place" },
+    { encounter = "Counter-attack to retake lost ground", description = "Going forward to take back what we lost this morning" },
+    { encounter = "Fighting withdrawal", description = "Pulling back under fire, covering each other" }
+]
+
+[specialized_combat]
+description = "Particular forms of fighting"
+entries = [
+    { encounter = "Cavalry charge against machine guns", description = "Galloping into the fire, magnificent and doomed" },
+    { encounter = "Bayonet charge", description = "No ammunition left, steel and screaming" },
+    { encounter = "Street fighting in ruined village", description = "House to house, cellar to cellar" },
+    { encounter = "Fighting in a mine crater", description = "Both sides claim the lip, mud and blood at the bottom" },
+    { encounter = "Battle for a strongpoint", description = "Concrete bunker, grenades down the firing slits" },
+    { encounter = "River crossing under fire", description = "Boats sinking, men drowning, far bank seems impossible" }
+]
+
+[aftermath]
+description = "What comes after the fighting"
+entries = [
+    { encounter = "Searching for wounded after attack", description = "Listening for cries in the dark of no man's land" },
+    { encounter = "Consolidating captured position", description = "Reversing the trench, sandbags on the other side now" },
+    { encounter = "Counting survivors after battle", description = "Roll call, each unanswered name a death" },
+    { encounter = "Burying the dead under fire", description = "Hasty graves, shells still falling, say a quick word" },
+    { encounter = "Salvaging equipment from the battlefield", description = "Rifles, ammunition, water bottles from the fallen" },
+    { encounter = "Evacuating wounded under fire", description = "Stretcher bearers in the open, praying for luck" }
+]

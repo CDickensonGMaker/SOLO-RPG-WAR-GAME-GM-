@@ -1,0 +1,67 @@
+# Vietnam War Grimdark Complications
+# The darkness that swallows everything
+
+[complications]
+
+# Combat Disasters
+combat_disasters = [
+    { id = "friendly_fire", name = "Friendly Fire Incident", desc = "The rounds came from behind. Artillery short, air strike off target, or just confusion. American bullets in American bodies. The paperwork will say 'enemy action.'" },
+    { id = "medevac_shot_down", name = "Medevac Shot Down", desc = "Dustoff took rounds on approach. The bird's burning. The wounded inside. The wounded you were trying to save. The crew. All of them." },
+    { id = "unit_overrun", name = "Position Overrun", desc = "They broke through. Hand-to-hand in the bunkers. The screaming doesn't stop until everyone's dead or they move on. Survivors live with what they did to survive." },
+    { id = "mass_casualties", name = "Mass Casualty Event", desc = "Booby-trapped 105 round, command-detonated mine. Bodies and parts everywhere. Not enough medics, not enough morphine, not enough anything." },
+    { id = "failed_extraction", name = "Failed Extraction", desc = "The birds couldn't land. Fire too heavy, LZ too hot. Listened on the radio as they died. The silence after the last transmission." },
+    { id = "wrong_village", name = "Wrong Village", desc = "Intelligence said VC stronghold. Intelligence was wrong. The people weren't combatants. Weren't until you were done." },
+]
+
+# Psychological Horror
+psychological = [
+    { id = "complete_breakdown", name = "Complete Psychological Breakdown", desc = "He stopped making sense. Won't respond, won't move, won't stop screaming. The mind broke. Section 8 if he survives." },
+    { id = "fragging_aftermath", name = "Fragging Aftermath", desc = "The lieutenant's dead. Grenade in his hooch. Everyone knows who did it. No one will say. No one disagrees. What does that make everyone?" },
+    { id = "suicide", name = "Soldier Suicide", desc = "Found in the morning, rifle under chin. The note, if there was one. The letters home that have to be written. 'Cleaning accident.'" },
+    { id = "addiction_spiral", name = "Addiction Destruction", desc = "Started as recreation, now the monkey runs everything. Stealing from squad mates, missing formations, the decline everyone watches and no one stops." },
+    { id = "paranoid_episode", name = "Paranoid Violent Episode", desc = "He snapped. Saw VC everywhere. Shot at shadows, at friends, at nothing. The casualties are real even if the enemy wasn't." },
+    { id = "letters_home", name = "Reading Dead Man's Letters", desc = "His personal effects. The letters from his girl, his mother, his kid. The last one asks when he's coming home. Someone has to write back." },
+]
+
+# War Crimes
+war_crimes = [
+    { id = "massacre_participation", name = "Massacre Participation", desc = "It happened. Everyone participated or everyone watched. The village isn't there anymore. The people aren't there anymore. No one will talk about it. Ever." },
+    { id = "torture_escalation", name = "Torture for Information", desc = "Interrogation became something else. The methods worked. The information saved lives. The price was everything you believed about yourself." },
+    { id = "execution_order", name = "Execution Order", desc = "'No prisoners.' The order wasn't ambiguous. The men on their knees weren't soldiers anymore. Following orders is what they said at Nuremberg." },
+    { id = "body_mutilation", name = "Systematic Body Mutilation", desc = "It became normal. Ears, teeth, fingers. Trophies that prove nothing except what everyone became. The jar in someone's rucksack." },
+    { id = "civilian_shield", name = "Civilians Used as Shields", desc = "Put villagers in front of the column. VC won't fire at their own people. The calculation that works until it doesn't. The mathematics of the damned." },
+]
+
+# Betrayal
+betrayal = [
+    { id = "arvn_betrayal", name = "ARVN Unit Turns", desc = "The allies opened fire. The coordinated ambush included them. Every Vietnamese is suspect now. Trust dies." },
+    { id = "kit_carson_betrayal", name = "Kit Carson Scout Betrayal", desc = "He led you into it. Knew exactly where. Never stopped being VC, just wore a different uniform for a while." },
+    { id = "informant_double", name = "Double Agent Informant", desc = "The intelligence was real - led straight into the kill zone. Everything reported went straight to Hanoi. How many died from his 'help'?" },
+    { id = "officer_sacrifice", name = "Sacrificed by Command", desc = "The mission was the distraction. The real operation was elsewhere. Your unit was the acceptable loss that made something else possible." },
+    { id = "abandoned_by_support", name = "Support Denied", desc = "Artillery wouldn't fire, air support 'unavailable.' Someone decided you weren't worth the resources. Fight without help or die without witness." },
+]
+
+# Moral Corruption
+corruption = [
+    { id = "numbness_complete", name = "Complete Moral Numbness", desc = "The body doesn't register anymore. Enemy, civilian, doesn't matter. The eyes are dead before the person is. What looks back from the mirror?" },
+    { id = "enjoyed_it", name = "Realized Enjoyment", desc = "The horror isn't what happened. The horror is that part of you liked it. The killing felt good. What does that make you?" },
+    { id = "child_casualty", name = "Child Casualty Caused", desc = "The grenade came from the kid. Self-defense. The body is small and still. The face could be anyone's child. Yours." },
+    { id = "mercy_killing", name = "Mercy Killing", desc = "He wasn't going to make it. The pain was absolute. The morphine was gone. The act of kindness that was murder. The relief that was horror." },
+    { id = "silence_complicity", name = "Silence as Complicity", desc = "You saw it. Didn't participate, didn't stop it, didn't report it. The doing nothing that is doing something. Guilt without action." },
+]
+
+# Survival Horror
+survival = [
+    { id = "cannibal_survival", name = "Starvation Desperation", desc = "Cut off too long. The supplies exhausted. The dead don't need to eat. The living do. No one will ever speak of what kept them alive." },
+    { id = "left_behind", name = "Left Behind Enemy Lines", desc = "The extraction left without you. Alone in Indian country. The radio's dead. The map's useless. Survive or don't. No one's coming." },
+    { id = "tunnel_nightmare", name = "Trapped in Tunnels", desc = "The entrance collapsed. The tunnel rats are buried. Somewhere down there. In the dark. Running out of air. The digging is too slow." },
+    { id = "watching_die", name = "Watching Them Die", desc = "Can't reach them. Can't help them. They're calling your name. The shooting doesn't stop. Watch them bleed out. Remember every second." },
+]
+
+# Institutional Horror
+institutional = [
+    { id = "body_count_murder", name = "Body Count Pressure Kills", desc = "Command needs numbers. This village will provide numbers. 'VC sympathizers.' The count goes up. The humanity goes away." },
+    { id = "phoenix_involvement", name = "Phoenix Program Deep End", desc = "The assassination list has names. Some of them are 'suspected.' Some of them aren't even that. The program doesn't care. Neither do you anymore." },
+    { id = "heroin_complicity", name = "Drug Trade Complicity", desc = "The supply lines carry more than ammunition. Someone's getting rich. Americans are getting addicted. The system feeds itself." },
+    { id = "tiger_cages", name = "Tiger Cage Knowledge", desc = "You've seen where prisoners go. The cages, the conditions, the things that happen. Official ally. Official torture. Official silence." },
+]

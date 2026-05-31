@@ -1,0 +1,147 @@
+# Cyberpunk Gang Factions
+# The tribes of the streets, chrome and blood
+
+[gangs]
+# Major gangs with distinct identities
+entries = [
+  # The Heavy Hitters
+  { text = "Maelstrom - chrome-obsessed cyberpsychos, worship the machine god, operate out of Totentanz club in Watson, more metal than meat", weight = 3 },
+  { text = "Valentinos - Latino gang with honor codes, control Heywood, gold-plated everything, respect and family above all", weight = 3 },
+  { text = "Tyger Claws - Japanese gang, Arasaka adjacent, control Japantown with katanas and smart guns, tattoos tell their stories", weight = 3 },
+  { text = "Animals - combat drug addicts, animal-themed chrome, ultraviolent, operate fighting rings and protection rackets", weight = 2 },
+  { text = "Voodoo Boys - Haitian netrunner collective, control Pacifica, diving deep into the old net, hunting rogue AIs", weight = 2 },
+  { text = "6th Street - patriot gang, veterans and wannabes, control Arroyo, militia mentality, American flags everywhere", weight = 2 },
+  { text = "Moxes - sex worker protection gang, operate out of Lizzie's Bar, rainbow aesthetic, surprisingly well-armed", weight = 2 },
+  { text = "Wraiths - nomad raiders, Badlands scavengers, vehicular warfare specialists, take everything, leave nothing", weight = 2 },
+  { text = "Scavengers - organ harvesters, cyberware thieves, will kidnap you for parts, lowest of the low", weight = 2 },
+  { text = "Aldecaldos - nomad family, Badlands territory, smuggling and transport, honor among outcasts", weight = 2 },
+
+  # Secondary Gangs
+  { text = "Razor Boyz - combat cyberware specialists, arena fighters, chrome gladiators for hire", weight = 2 },
+  { text = "Steel Dragons - corporate-backed gang, maintain order in exchange for territory, uniformed thugs", weight = 1 },
+  { text = "The Inquisitors - religious fanatics, hunting cyberpsychos, believe chrome corrupts the soul", weight = 1 },
+  { text = "Chrome Hearts - body modification cult, extreme cosmetic cyberware, beauty through surgery", weight = 1 },
+  { text = "Night Terrors - nocturnal predators, operate only after dark, photosensitive optics, ambush specialists", weight = 1 },
+  { text = "Iron Sights - gun runners, weapons trafficking, supply half the gangs in the city", weight = 2 },
+  { text = "Data Ghosts - information brokers, surveillance specialists, know everyone's secrets", weight = 1 },
+  { text = "Gutterpunks - youth gang, street kids grown up, fiercely protective of their own", weight = 2 },
+  { text = "The Faceless - identity thieves, biometric spoofing specialists, anyone could be them", weight = 1 },
+  { text = "Blood Legion - blood sport enthusiasts, organize underground death matches, betting empires", weight = 1 },
+
+  # Boostergangs
+  { text = "Chrome Jockeys - speed freaks, vehicle-mounted warfare, hit and run tactics", weight = 2 },
+  { text = "Red Chrome Legion - full chrome conversion fanatics, cyberlimb specialists, inhuman strength", weight = 1 },
+  { text = "Neon Samurai - street samurai code, mono-katanas and mantis blades, honorable combat", weight = 1 },
+  { text = "Static - netrunner gang, matrix warriors, fight in cyberspace and meatspace", weight = 1 },
+  { text = "The Grinders - industrial workers turned gang, factory floor tactics, union muscle", weight = 2 },
+  { text = "Pit Bulls - territorial gang, hold ground at any cost, never retreat, never surrender", weight = 2 },
+  { text = "Toxic Shock - chemical weapons enthusiasts, poison specialists, environmental terrorists", weight = 1 },
+  { text = "Meat Puppets - joytoy protectors gone violent, revenge on abusive clients, brutal justice", weight = 1 },
+  { text = "Code Black - paramedic gang, trauma team rejects, will save your life for a price", weight = 1 },
+  { text = "The Forgotten - corporate casualties, burned employees, know where bodies are buried", weight = 1 },
+]
+
+[gang_territory]
+# Where gangs hold power
+entries = [
+  # Maelstrom
+  { text = "Totentanz - Maelstrom's cathedral, industrial nightclub, bass drops and chrome worship", weight = 2 },
+  { text = "All Foods Plant - Maelstrom stronghold, meat processing cover, human parts too", weight = 2 },
+  { text = "Watson docks - Maelstrom smuggling operation, shipping containers full of black market chrome", weight = 2 },
+
+  # Valentinos
+  { text = "Heywood streets - Valentino parade ground, lowriders and gold chains, everyone knows who runs this", weight = 2 },
+  { text = "El Coyote Cojo - Valentino owned bar, neutral ground for meets, Jackie's old haunt", weight = 2 },
+  { text = "Glen cemeteries - Valentino sacred ground, memorial walls, crosses and candles for the fallen", weight = 1 },
+
+  # Tyger Claws
+  { text = "Japantown - Tyger Claw empire, neon and kanji, tourists and yakuza traditions", weight = 2 },
+  { text = "Clouds - Tyger Claw operated dollhouse, high-end braindance prostitution, dangerous desires", weight = 2 },
+  { text = "Cherry Blossom Market - Tyger Claw business front, legal goods upstairs, weapons downstairs", weight = 2 },
+
+  # Animals
+  { text = "Grand Imperial Mall - Animals nest, abandoned shopping center, fighting pits in the food court", weight = 2 },
+  { text = "Pacifica gyms - Animals training grounds, combat drugs and weight rooms, breeding killers", weight = 2 },
+  { text = "Beach warehouses - Animals storage, stolen goods and kidnap victims, screams from inside", weight = 1 },
+
+  # Voodoo Boys
+  { text = "Pacifica ruins - Voodoo Boys sanctuary, abandoned resort, Haitian flags and net access points", weight = 2 },
+  { text = "Chapel - Voodoo Boys netrunning hub, former church, spirits and servers", weight = 2 },
+  { text = "Coastview - Voodoo Boys outer territory, tourist traps turned death traps", weight = 1 },
+
+  # 6th Street
+  { text = "Arroyo - 6th Street heartland, American flags on every corner, veteran memorials", weight = 2 },
+  { text = "Red Dirt bar - 6th Street headquarters, country music and combat stories", weight = 2 },
+  { text = "Municipal Stadium - 6th Street rally point, patriotic gatherings turn to riots", weight = 1 },
+
+  # General Territory
+  { text = "Combat Zone perimeter - multiple gangs fighting, no-mans-land, corpses in the streets", weight = 2 },
+  { text = "Megabuilding neutral floors - gang truces, shared territory, violence forbidden here", weight = 1 },
+  { text = "Underground markets - gang-run bazaars, everything available, prices set by firepower", weight = 2 },
+]
+
+[gang_activities]
+# What gangs do
+entries = [
+  # Criminal Enterprise
+  { text = "Protection racket - pay or burn, regular collections, violence for non-payment", weight = 3 },
+  { text = "Drug distribution - synthetic highs, designer chems, street corner dealers", weight = 3 },
+  { text = "Weapons trafficking - guns for anyone, stolen military hardware, no questions", weight = 2 },
+  { text = "Cyberware theft - scav operations, harvest chrome from victims, sell to ripperdocs", weight = 2 },
+  { text = "Vehicle boosting - steal cars, chop shops, export operation", weight = 2 },
+  { text = "Human trafficking - joytoys against their will, labor slaves, organ farms", weight = 1 },
+  { text = "Kidnapping for ransom - corporate executives, rich kids, anyone with money", weight = 2 },
+  { text = "Underground gambling - fighting rings, card games, sports betting", weight = 2 },
+  { text = "Smuggling operations - goods across borders, people past checkpoints", weight = 2 },
+  { text = "Identity theft - fake SINs, clean records, new lives for sale", weight = 2 },
+
+  # Violence
+  { text = "Drive-by shooting - message sending, territory marking, rival elimination", weight = 2 },
+  { text = "Gang war offensive - coordinated attack, seize territory, show of force", weight = 2 },
+  { text = "Assassination contract - taking wetwork jobs, eliminating problems for pay", weight = 2 },
+  { text = "Retaliation strike - they hit us, we hit back harder, escalation cycle", weight = 2 },
+  { text = "Initiation violence - new members proving themselves through blood", weight = 2 },
+  { text = "Street justice - handling problems internally, bodies disappear", weight = 2 },
+  { text = "Intimidation campaign - threatening witnesses, scaring competitors", weight = 2 },
+  { text = "Turf defense - holding the line, repelling invaders, dying for the colors", weight = 2 },
+
+  # Community
+  { text = "Neighborhood watch - protecting their people from outside threats", weight = 2 },
+  { text = "Community kitchen - feeding the hungry, buying loyalty with food", weight = 1 },
+  { text = "Youth recruitment - getting kids young, raising the next generation", weight = 2 },
+  { text = "Medical services - gang ripperdoc, treating members free, loyalty medicine", weight = 1 },
+  { text = "Justice arbitration - settling disputes, community court, gang law", weight = 1 },
+  { text = "Holiday celebrations - festivals, parades, showing the flag", weight = 1 },
+  { text = "Education programs - training the young, skills for survival", weight = 1 },
+  { text = "Elder care - taking care of retired members, loyalty until death", weight = 1 },
+]
+
+[gang_ranks]
+# Hierarchy within gangs
+entries = [
+  { text = "Boss - absolute authority, life and death power, answers to no one", weight = 1 },
+  { text = "Underboss - second in command, runs daily operations, heir apparent", weight = 1 },
+  { text = "Lieutenant - territory commander, manages crews, reports to leadership", weight = 2 },
+  { text = "Enforcer - violence specialist, handles problems, feared by all", weight = 2 },
+  { text = "Soldier - full member, proven loyalty, gets a cut of everything", weight = 3 },
+  { text = "Runner - errand runner, moving product, proving themselves", weight = 2 },
+  { text = "Prospect - trial member, doing dirty work, hoping to be made", weight = 2 },
+  { text = "Associate - outside contractor, works with gang, not of gang", weight = 2 },
+  { text = "Corner boy - lowest level, watching territory, first line of defense", weight = 2 },
+  { text = "OG - retired veteran, adviser status, respected elder", weight = 1 },
+]
+
+[gang_colors]
+# Visual identifiers
+entries = [
+  { text = "Maelstrom - industrial chrome, red optics, visible cyberware, inhuman modifications", weight = 2 },
+  { text = "Valentinos - gold jewelry, religious imagery, ornate chrome, red accents", weight = 2 },
+  { text = "Tyger Claws - neon tattoos, luminous implants, Japanese iconography, smart weapons", weight = 2 },
+  { text = "Animals - minimal clothes, maximum muscle, animal-themed chrome, combat stims", weight = 2 },
+  { text = "Voodoo Boys - Haitian colors, occult symbols, netrunning gear, trance-state eyes", weight = 2 },
+  { text = "6th Street - military surplus, American flags, veteran patches, tactical gear", weight = 2 },
+  { text = "Moxes - rainbow aesthetic, reclaimed slurs, protective chrome, defiant fashion", weight = 2 },
+  { text = "Wraiths - desert camo, vehicle insignia, road warrior aesthetic, scavenged gear", weight = 2 },
+  { text = "Scavengers - surgical masks, disposable clothes, blood stains, tools of the trade", weight = 2 },
+  { text = "Aldecaldos - family crests, vehicle names, nomad traditions, road-worn leather", weight = 2 },
+]

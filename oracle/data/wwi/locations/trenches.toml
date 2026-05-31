@@ -1,0 +1,97 @@
+# WWI Trench Locations
+# The labyrinth of mud and death
+
+[front_line]
+description = "The fire trench, closest to the enemy"
+entries = [
+    { location = "Fire step position", description = "Raised platform for shooting over the parapet, splinter-scarred sandbags" },
+    { location = "Sniper's loophole", description = "Armored plate with slit for observation, painted to match surroundings" },
+    { location = "Periscope post", description = "Trench periscope station, mirrors cracked and replaced a dozen times" },
+    { location = "Machine gun emplacement", description = "Sandbagged nest with overlapping fields of fire into no man's land" },
+    { location = "Bombing post", description = "Grenade station at a trench junction, buckets of Mills bombs ready" },
+    { location = "Sentry bay", description = "Recessed alcove where a man watches, alone with his thoughts and fears" },
+    { location = "Gas alarm post", description = "Shell casing and striker to warn of attack, the most important duty" },
+    { location = "Lewis gun position", description = "Spot for the light machine gun, good angles, easy withdrawal route" },
+    { location = "Officer's station", description = "Where the subaltern stands during stand-to, first to go over" },
+    { location = "Trench mortar pit", description = "Dug-out position for the Stokes gun, always drawing counter-fire" }
+]
+
+[support_trenches]
+description = "Second line positions"
+entries = [
+    { location = "Communication trench junction", description = "Where the zigzag trenches meet, traffic jam of men and supplies" },
+    { location = "Regimental aid post", description = "Sandbagged medical station, stretchers stacked, bloody bandages everywhere" },
+    { location = "Ammunition store", description = "Underground bunker with shells and bullets, one hit and it's over" },
+    { location = "Signal station", description = "Telephone exchange, wires running everywhere, signallers splicing frantically" },
+    { location = "Battalion headquarters dugout", description = "Deep shelter where the Colonel plans, maps on the wall" },
+    { location = "Ration distribution point", description = "Where the hot food arrives cold and the rum is measured precisely" },
+    { location = "Reserve trench bay", description = "Where men wait their turn to go forward and die" },
+    { location = "Latrines", description = "The stinking pits, quicklime and horror, still better than using the trench" }
+]
+
+[dugouts]
+description = "Underground shelters"
+entries = [
+    { location = "Officer's dugout", description = "Deep shelter with bunks, candles, perhaps a table, almost civilized" },
+    { location = "German concrete bunker (captured)", description = "Enemy construction, deeper and stronger than ours, treasured" },
+    { location = "Funk hole", description = "Shallow scrape in trench wall, barely room for one man" },
+    { location = "Command dugout", description = "Thirty feet deep, telephone, maps, the illusion of control" },
+    { location = "Medical bunker", description = "Underground aid station, low ceiling, smell of blood and ether" },
+    { location = "Sleeping gallery", description = "Underground room with chicken wire bunks, men packed like sardines" },
+    { location = "Mining entrance", description = "Tunnel mouth leading beneath no man's land, sounds of digging" },
+    { location = "Emergency shelter", description = "Hastily dug refuge, shored with whatever was available" }
+]
+
+[no_mans_land]
+description = "The killing ground between the lines"
+entries = [
+    { location = "Shell crater", description = "Water-filled pit, may contain bodies, offers temporary cover" },
+    { location = "Barbed wire entanglement", description = "Rusting coils stretching endlessly, hung with debris and worse" },
+    { location = "Listening post", description = "Shallow scrape beyond our wire, manned at night, terrifying duty" },
+    { location = "Sap head", description = "End of a trench pushed into no man's land, closest point" },
+    { location = "Mine crater", description = "Massive pit from underground explosion, lip offers cover" },
+    { location = "Wrecked tank", description = "Iron coffin that didn't make it, bodies still inside" },
+    { location = "Corpse field", description = "Where an attack failed, bodies rotting in the sun and rain" },
+    { location = "Communication gap", description = "Dead ground between wire belts, crossing point if you're lucky" },
+    { location = "Observation point (ruined tree)", description = "Single shattered trunk, sniper or observer territory" },
+    { location = "Abandoned position", description = "Old trench now in no man's land, dangerous shelter" }
+]
+
+[specialized]
+description = "Purpose-built positions"
+entries = [
+    { location = "Artillery observation post", description = "Forward position with telephone, calling in the guns" },
+    { location = "Trench mortar position", description = "Dug-out pit for the stovepipe launchers, always targeted" },
+    { location = "Sniper hide", description = "Camouflaged position, patient death watching through scope" },
+    { location = "Bombing school practice trench", description = "Training area behind the lines, mock attacks" },
+    { location = "Tunneler's forward gallery", description = "Underground passage approaching enemy lines, listening for counter-miners" },
+    { location = "Flame thrower position", description = "Fortified spot for the liquid fire projectors, priority target" },
+    { location = "Anti-aircraft position", description = "Elevated platform for shooting at observation balloons and aircraft" },
+    { location = "Carrier pigeon loft", description = "Cages for the messenger birds, last resort communication" }
+]
+
+[features]
+description = "Trench elements and details"
+entries = [
+    { location = "Duck boards over mud", description = "Wooden slats keeping feet above the water, mostly" },
+    { location = "Parapet with sandbags", description = "The wall facing the enemy, packed with earth and fabric" },
+    { location = "Parados", description = "Rear wall protecting against shells exploding behind" },
+    { location = "Fire bay", description = "Zigzag section allowing firing positions" },
+    { location = "Traverse", description = "Right-angle turn limiting blast damage from shells" },
+    { location = "A-frame shelter", description = "Corrugated iron roof over a section of trench" },
+    { location = "Pump station", description = "Constant battle against flooding, pumps running always" },
+    { location = "Revetting boards", description = "Wooden walls holding back the earth, rotting and failing" },
+    { location = "Wire knife-rest", description = "Portable barbed wire obstacle ready to deploy in gaps" },
+    { location = "Trench sign", description = "Painted board naming the trench after a London street or joke" }
+]
+
+[captured_enemy]
+description = "Former enemy positions"
+entries = [
+    { location = "Captured German first line", description = "Deeper, better built, we're jealous even as we hold it" },
+    { location = "Destroyed enemy bunker", description = "Smashed concrete, our shells finally got through" },
+    { location = "Overrun machine gun nest", description = "German bodies still here, the gun turned around to face them" },
+    { location = "Former enemy observation post", description = "Now we watch them from where they watched us" },
+    { location = "Abandoned German tunnel entrance", description = "Dark mouth leading somewhere, no one wants to explore" },
+    { location = "Wrecked enemy trench section", description = "Our artillery did this, or their demolition charges" }
+]

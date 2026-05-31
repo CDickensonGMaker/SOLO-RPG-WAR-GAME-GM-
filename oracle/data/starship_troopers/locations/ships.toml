@@ -1,0 +1,94 @@
+# Fleet Vessels of the Federation Navy
+# The ships that carry the Mobile Infantry to war
+
+[troop_carriers]
+description = "Ships designed to deliver MI to the fight"
+entries = [
+  { text = "TCS Rodger Young - Corvette transport, legendary for its drops on Klendathu, crew has turned over three times, name carries weight", weight = 2 },
+  { text = "TCS Valley Forge - Heavy carrier, holds three full battalions, nicknamed 'The Coffin Factory' by its cargo", weight = 2 },
+  { text = "TCS Guadalcanal - Assault transport, specialized in hot-zone insertions, hull scarred by plasma scoring", weight = 2 },
+  { text = "TCS Iwo Jima - Landing ship, designed for extended ground support operations, practically a mobile firebase", weight = 1 },
+  { text = "TCS Normandy - First-wave assault ship, drop pod bays fill the entire lower hull, always first into the fire", weight = 1 },
+  { text = "TCS Belleau Wood - Marine tradition ship, crew and MI have unusual camaraderie, fights as a unit", weight = 1 },
+  { text = "TCS Chosin - Cold-weather operations specialist, carries equipment for ice world drops, crew are volunteers only", weight = 1 },
+  { text = "TCS Anzio - Beach assault specialist, modified for water-world drops, rarely used, crews dread the assignment", weight = 1 },
+  { text = "TCS Bataan - POW recovery vessel, drops teams to retrieve captured MI, success rate is classified", weight = 1 },
+  { text = "TCS Inchon - Rapid deployment transport, can drop a full company in under ten minutes, record is eight", weight = 1 },
+  { text = "TCS Khe Sanh - Firebase support ship, carries prefab defensive structures for drop zone fortification", weight = 1 },
+  { text = "TCS Tarawa - Heavy assault carrier, triple armored, designed to survive long enough to complete the drop", weight = 1 },
+]
+
+[corvettes]
+description = "Fast patrol and escort vessels"
+entries = [
+  { text = "FCS Defiant - Patrol corvette, interdicts bug scouts at the system edge, crew rotates monthly to prevent fatigue", weight = 2 },
+  { text = "FCS Resolute - Escort vessel, lost four sister ships protecting convoys, earned battle honors in blood", weight = 2 },
+  { text = "FCS Vigilant - Early warning ship, detects bug fleet movements, crew are all nervous wrecks", weight = 1 },
+  { text = "FCS Dauntless - Fast attack corvette, hit-and-run specialist, captain is either brilliant or suicidal", weight = 1 },
+  { text = "FCS Stalwart - Convoy guardian, unremarkable but reliable, exactly what escorts should be", weight = 1 },
+  { text = "FCS Intrepid - Scout corvette, ventures into bug space alone, crews are special volunteers", weight = 1 },
+  { text = "FCS Relentless - Pursuit vessel, tracks bug ships until they can be engaged, sometimes for weeks", weight = 1 },
+  { text = "FCS Vanguard - Point ship for battle groups, detects threats, dies first", weight = 1 },
+  { text = "FCS Pathfinder - Navigation specialist, charts safe routes through contested space", weight = 1 },
+  { text = "FCS Outrider - Deep patrol, longest deployments in the fleet, crews develop strange habits", weight = 1 },
+]
+
+[battleships]
+description = "Capital ships of the line"
+entries = [
+  { text = "FNS Yamato - Dreadnought, flagship of Third Fleet, bristles with weapons, bugs have learned to fear its silhouette", weight = 2 },
+  { text = "FNS Missouri - Battleship, veteran of Klendathu, hull bears scars from a tanker bug that somehow got aboard", weight = 2 },
+  { text = "FNS Bismarck - Heavy cruiser, specializes in orbital bombardment, has glassed more bug positions than any other ship", weight = 1 },
+  { text = "FNS Victory - Ancient name for a ship on its third hull, tradition demands it remain in service", weight = 1 },
+  { text = "FNS Lexington - Fleet carrier, deploys fighter wings that provide ground support for MI operations", weight = 1 },
+  { text = "FNS Nemesis - Assault battleship, designed specifically to engage plasma bugs in atmosphere", weight = 1 },
+  { text = "FNS Devastator - Siege ship, carries planet-cracker weapons, authorization to fire requires Sky Marshal approval", weight = 1 },
+  { text = "FNS Thunderchild - Destroyer leader, coordinates wolfpack tactics against bug capital ships", weight = 1 },
+  { text = "FNS Retribution - Battle carrier, angry name for a ship launched after Buenos Aires, crews share the sentiment", weight = 2 },
+  { text = "FNS Imperator - Mobile command ship, Sky Marshal can direct a campaign from her flag bridge", weight = 1 },
+  { text = "FNS Constitution - Ceremonial flagship, used for major announcements, sees combat rarely", weight = 1 },
+  { text = "FNS Olympus - Super-dreadnought, largest ship in the fleet, takes a small fleet just to protect her", weight = 1 },
+]
+
+[drop_ships]
+description = "The boats that deliver MI to the surface"
+entries = [
+  { text = "Retrieval Boat 'Lifeline' - Extraction specialist, pilot has pulled troopers out of eighteen hot zones, considered a saint", weight = 2 },
+  { text = "Drop Ship 'Perdition Express' - Standard troop shuttle, the name painted by troopers, officially discouraged", weight = 2 },
+  { text = "Assault Boat 'Hammer' - Heavy drop ship, carries two full squads plus equipment, armored like a tank", weight = 1 },
+  { text = "Drop Ship 'Lucky Break' - Survived eleven crashes, kept getting rebuilt, crews compete to serve on her", weight = 1 },
+  { text = "Retrieval Boat 'Last Chance' - Medical evacuation specialist, staffed by corpsmen, always arrives under fire", weight = 2 },
+  { text = "Drop Ship 'Bug Bait' - Oldest boat in the wing, held together by patches, somehow keeps flying", weight = 1 },
+  { text = "Assault Boat 'Hellraiser' - Ground attack variant, carries extra weapons pods, MI loves the firepower", weight = 1 },
+  { text = "Drop Ship 'Coffin Nail' - Troop humor at its finest, crews maintain a kill board on the hull", weight = 1 },
+  { text = "Retrieval Boat 'Angel of Mercy' - Hospital configuration, can stabilize wounded in flight", weight = 1 },
+  { text = "Drop Ship 'Terminal Velocity' - Combat drop specialist, dives harder than regulations allow, pilots are chosen for nerve", weight = 1 },
+]
+
+[medical_vessels]
+description = "Ships that heal the broken"
+entries = [
+  { text = "FNHS Sanctuary - Hospital ship, the largest in the fleet, never enough beds, triage happens in the corridors", weight = 2 },
+  { text = "FNHS Mercy - Trauma specialist, deploys close to combat zones, takes fire regularly, Geneva conventions are ancient history", weight = 2 },
+  { text = "FNHS Comfort - Long-term care vessel, where troopers go when they won't recover quickly, or ever", weight = 1 },
+  { text = "FNHS Hope - Burn ward specialist, plasma victims fill her decks, screaming is constant", weight = 1 },
+  { text = "FNHS Lazarus - Experimental medicine ship, new treatments are tested, some work, some don't", weight = 1 },
+  { text = "FNHS Redemption - Psychiatric care vessel, for those broken in the mind, quiet and heavily medicated", weight = 1 },
+  { text = "FNHS Florence - Named for an ancient healer, training ship for combat medics, every lesson drawn from real casualties", weight = 1 },
+  { text = "FNHS Asclepius - Rehabilitation ship, where prosthetics are fitted and troopers learn to walk again", weight = 1 },
+]
+
+[support_vessels]
+description = "Ships that keep the fleet fighting"
+entries = [
+  { text = "FAS Supply Runner - Fast cargo ship, runs ammunition and supplies to forward bases, unarmored and nervous", weight = 2 },
+  { text = "FAS Vulcan - Repair ship, can rebuild a corvette from wreckage, crews are engineering geniuses", weight = 1 },
+  { text = "FAS Prometheus - Fuel tender, carries reactor mass, one lucky hit means a small sun", weight = 1 },
+  { text = "FAS Mercury - Communications relay ship, keeps the network running, primary target for bugs", weight = 1 },
+  { text = "FAS Carpenter - Construction ship, builds orbital platforms, crews are combat engineers", weight = 1 },
+  { text = "FAS Salvage King - Recovery vessel, strips wrecks for usable material, sometimes finds survivors", weight = 1 },
+  { text = "FAS Pack Mule - Heavy cargo transport, carries everything from rations to replacement power suits", weight = 1 },
+  { text = "FAS Oracle - Intelligence ship, carries signals equipment and analysts, knows more than it tells", weight = 1 },
+  { text = "FAS Shepherd - Colony evacuation ship, modified for rapid civilian loading, always arrives too late", weight = 2 },
+  { text = "FAS Ferryman - Mortuary ship, collects the dead for processing, crew rarely speaks", weight = 1 },
+]

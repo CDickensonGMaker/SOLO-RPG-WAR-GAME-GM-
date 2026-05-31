@@ -1,0 +1,79 @@
+# Pacific Theater Locations
+# Island hopping through hell, from Pearl Harbor to Tokyo Bay
+
+[island_combat]
+description = "The island-hopping campaign"
+entries = [
+    "Guadalcanal, Henderson Field, first offensive",
+    "Tarawa, reef that stopped the amtracs",
+    "Peleliu, coral ridges and Japanese caves",
+    "Saipan, civilians jumping from cliffs",
+    "Iwo Jima, black sand beach, Suribachi rising above",
+    "Okinawa, kamikazes and civilians in crossfire",
+    "Tinian, runways for the B-29s",
+    "Wake Island, last stand before capture",
+    "Corregidor, tunnel fortress under siege",
+    "Bataan, death march starting point",
+    "New Guinea jungle, green hell of disease and combat",
+    "Bougainville, airfield carved from jungle"
+]
+
+[naval]
+description = "The Pacific naval war"
+entries = [
+    "Pearl Harbor, battleship row still smoking",
+    "Midway, turning point on the open ocean",
+    "Coral Sea, carriers trading blows over the horizon",
+    "Leyte Gulf, largest naval battle in history",
+    "Aircraft carrier flight deck, controlled chaos",
+    "Destroyer bridge, submarine contact incoming",
+    "PT boat hidden in island cove",
+    "Submarine conning tower, watching convoy",
+    "Transport ship packed with Marines",
+    "Hospital ship, red crosses meaning nothing to kamikazes"
+]
+
+[air_war_pacific]
+description = "The air campaign over the Pacific"
+entries = [
+    "B-29 over Japan, firebombing below",
+    "Fighter strip on jungle island, constant alerts",
+    "Flying Fortress returning on two engines",
+    "Zero dogfight over the fleet",
+    "Doolittle Raiders launching from Hornet",
+    "Hiroshima, August 6, 1945",
+    "Nagasaki, August 9, 1945",
+    "Night fighter patrol over the task force",
+    "Aviation fuel dump, highest priority target",
+    "Crashed aircraft in jungle, crew missing"
+]
+
+[japanese_held]
+description = "Locations under Japanese control"
+entries = [
+    "POW camp, bamboo cages, starvation rations",
+    "Railway construction camp, death railway",
+    "Manila under occupation, resistance brewing",
+    "Japanese fortress island, honeycomb tunnels",
+    "Comfort station, war crime institutionalized",
+    "Japanese headquarters, samurai sword on wall",
+    "Supply depot, captured equipment American",
+    "Hidden airfield, kamikazes waiting",
+    "Civilian internment camp, slow starvation",
+    "Cave hospital, Japanese wounded abandoned"
+]
+
+[china_burma_india]
+description = "The CBI theater, forgotten war"
+entries = [
+    "Burma Road, lifeline to China",
+    "Hump flight route, crashed planes marking the way",
+    "Merrill's Marauders camp, jungle exhaustion",
+    "Stilwell Road, engineers cutting through mountains",
+    "Chindits behind Japanese lines",
+    "Chinese nationalist headquarters, complex loyalties",
+    "Burmese village, uncertain which side to support",
+    "Imphal, siege and relief",
+    "Kunming airfield, Flying Tigers home",
+    "Monsoon jungle, water everywhere, dry feet a memory"
+]

@@ -1,0 +1,69 @@
+# WWI Grimdark Complications
+# When things go from bad to worse in the trenches
+
+[death]
+description = "The ever-present end"
+entries = [
+    { complication = "Random shell kills key person", twist = "No warning, no meaning, just gone mid-sentence" },
+    { complication = "Sniper takes someone just as hope appeared", twist = "The man with the answer, the plan, the way out - dead" },
+    { complication = "Gas catches someone without mask", twist = "Screaming, drowning in their own lungs, you watch" },
+    { complication = "Friendly fire claims lives", twist = "Our own artillery, our own men, paperwork will call it enemy action" },
+    { complication = "Man survives battle, dies of infection", twist = "Survived the wire, the guns, the gas - killed by a scratch gone septic" },
+    { complication = "Suicide in the trenches", twist = "Found with his own rifle, can't take anymore" },
+    { complication = "Execution at dawn", twist = "Shot for cowardice, shell shock, sleeping on duty - military justice" }
+]
+
+[futility]
+description = "The meaninglessness of it all"
+entries = [
+    { complication = "Ground gained is ordered abandoned", twist = "Died for a hundred yards, now give it back for tactical reasons" },
+    { complication = "Attack called off after you've already gone", twist = "Runner didn't make it, you went over, no support coming" },
+    { complication = "Intelligence was wrong", twist = "Wire isn't cut, guns aren't silenced, it's a slaughter" },
+    { complication = "Victory renders objective meaningless", twist = "Fought for the crossroads, war moved on, doesn't matter now" },
+    { complication = "Replaced before mission complete", twist = "New unit takes over, takes credit, you get nothing" },
+    { complication = "Orders come from men who've never seen a trench", twist = "Château generals moving pins, spending lives" }
+]
+
+[betrayal]
+description = "Trust broken"
+entries = [
+    { complication = "Ally forces retreat without warning", twist = "French on your flank pull back, you're surrounded" },
+    { complication = "Trusted man is informer", twist = "He's been reporting to the military police, men punished" },
+    { complication = "Officer sacrifices men for career", twist = "Sent you to die for a commendation, knew it was hopeless" },
+    { complication = "Supplies diverted by corruption", twist = "Your ammunition went to black market, you're short" },
+    { complication = "Medical evacuation denied", twist = "Wound not bad enough, back to the line, die there instead" },
+    { complication = "Home front has forgotten you", twist = "Letters stop, newspapers full of other news, you don't exist" }
+]
+
+[horror]
+description = "The things that break minds"
+entries = [
+    { complication = "Body recovery reveals something terrible", twist = "What they did to him, what he did to himself, can't unsee" },
+    { complication = "Must use corpse for cover", twist = "Only shelter available, pressing against the dead" },
+    { complication = "Recognize enemy as someone known", twist = "School friend, exchange student, met him before the war" },
+    { complication = "Ordered to commit war crime", twist = "No prisoners, no mercy, refuse and be shot yourself" },
+    { complication = "Shell shock breaks someone essential", twist = "The steady one, the one everyone relied on, now screaming" },
+    { complication = "Mercy killing request", twist = "He's dying slowly, in agony, asks you to end it" }
+]
+
+[collapse]
+description = "Systems failing"
+entries = [
+    { complication = "Supply line cut", twist = "No food, no ammunition, no relief coming" },
+    { complication = "Communication completely lost", twist = "Wires cut, runners dead, pigeons gone, alone and blind" },
+    { complication = "Medical system overwhelmed", twist = "Too many wounded, triage means most die waiting" },
+    { complication = "Unit cohesion shatters", twist = "Men refusing orders, every man for himself" },
+    { complication = "Command structure decapitated", twist = "Every officer dead or wounded, who's in charge?" },
+    { complication = "Weather makes everything impossible", twist = "Rain fills trenches, mud claims equipment, nothing works" }
+]
+
+[personal]
+description = "Individual catastrophes"
+entries = [
+    { complication = "Wound that won't get you sent home", twist = "Bad enough to hurt, not bad enough to leave, back to duty" },
+    { complication = "Accused of cowardice unjustly", twist = "Shell shock symptoms, malingering charge, your word means nothing" },
+    { complication = "Everything precious is destroyed", twist = "Letters, photographs, the small things that kept you human - gone" },
+    { complication = "News from home is devastating", twist = "Wife dead, house bombed, children orphaned while you're stuck here" },
+    { complication = "Realize you've become monster", twist = "Things you've done, ease of killing, not the same man anymore" },
+    { complication = "Physical collapse at worst moment", twist = "Body gives out, fever, injury, can't go on when needed most" }
+]

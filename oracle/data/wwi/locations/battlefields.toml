@@ -1,0 +1,95 @@
+# WWI Battlefields
+# The landscapes of industrial slaughter
+
+[western_front_major]
+description = "The great killing grounds of France and Belgium"
+entries = [
+    { location = "The Somme wasteland", description = "Miles of churned earth, every crater a grave, the bloodiest day in British history happened here" },
+    { location = "Verdun meat grinder", description = "They shall not pass. Neither did they. Hundreds of thousands dead for miles of nothing" },
+    { location = "Ypres salient", description = "The bulge in the line, surrounded on three sides, poison gas first used here" },
+    { location = "Passchendaele", description = "Men drowned in mud, swallowed by shell craters, advance measured in yards of corpses" },
+    { location = "Vimy Ridge", description = "The Canadians took it, thousands died for a commanding view of more death" },
+    { location = "Arras tunnels", description = "Underground city carved from chalk, whole battalions hidden beneath" },
+    { location = "Cambrai", description = "First mass tank attack, breakthrough and then failure, hope and despair" },
+    { location = "Belleau Wood", description = "Marines in the wheat fields, German nickname: Devil Dogs" },
+    { location = "Chemin des Dames", description = "The Ladies' Road became a charnel house, mutinies followed" },
+    { location = "Loos", description = "Gas drifted back on British trenches, machine guns did the rest" }
+]
+
+[ypres_salient]
+description = "The Belgian bulge, bloodiest sector"
+entries = [
+    { location = "Hill 60", description = "Fought over constantly, tunneled beneath, blown up repeatedly" },
+    { location = "Sanctuary Wood", description = "No sanctuary here, craters and broken trees" },
+    { location = "Messines Ridge", description = "Nineteen mines detonated simultaneously, heard in London" },
+    { location = "Polygon Wood", description = "Geometric forest reduced to matchsticks and graves" },
+    { location = "Langemarck", description = "German students attacked singing, cut down by machine guns" },
+    { location = "Pilckem Ridge", description = "First objective of Third Ypres, taken and held at cost" },
+    { location = "Tyne Cot", description = "German bunkers, now the largest Commonwealth cemetery" },
+    { location = "Menin Gate approach", description = "Every night the Last Post still sounds for the missing" }
+]
+
+[somme_region]
+description = "The 1916 offensive, bloodiest day"
+entries = [
+    { location = "Lochnagar Crater", description = "Mine explosion at 7:28 AM, seventy feet deep, still there" },
+    { location = "Thiepval Wood", description = "Fortified village, held for months, memorial now stands" },
+    { location = "Mametz Wood", description = "Welsh Division bled white taking it, tree by tree" },
+    { location = "Delville Wood", description = "Devil's Wood, South Africans went in, few came out" },
+    { location = "Pozieres Ridge", description = "Australians fought here, highest casualties per day they ever suffered" },
+    { location = "High Wood", description = "Tanks first used in combat here, broke down immediately" },
+    { location = "Beaumont Hamel", description = "Newfoundland Regiment destroyed in thirty minutes" },
+    { location = "Serre", description = "The Pals battalions from the north died together here" }
+]
+
+[other_fronts]
+description = "Beyond the Western Front"
+entries = [
+    { location = "Gallipoli beaches", description = "ANZAC Cove, Suvla Bay, slaughter on the sand" },
+    { location = "Tannenberg forests", description = "Russian armies encircled and destroyed in East Prussia" },
+    { location = "Isonzo River", description = "Twelve battles on the same river, Italian mountains soaked in blood" },
+    { location = "Caporetto", description = "Italian collapse, poison gas in the valleys" },
+    { location = "Mesopotamian desert", description = "Siege of Kut, surrender, death march" },
+    { location = "Palestine hills", description = "Lawrence's desert, Allenby's advance" },
+    { location = "Salonika front", description = "Malaria killed more than bullets in the Balkans" },
+    { location = "East African bush", description = "Von Lettow-Vorbeck's guerrilla war, never surrendered" }
+]
+
+[generic_battlefield]
+description = "Any sector of any front"
+entries = [
+    { location = "Cratered hillside", description = "No vegetation survives, just holes and bodies and mud" },
+    { location = "Destroyed village", description = "Only cellars remain, church spire a sniper's perch" },
+    { location = "Blasted orchard", description = "Fruit trees shattered to stumps, twisted wire in the branches" },
+    { location = "Flooded lowland", description = "Deliberate inundation, water weaponized" },
+    { location = "Railway embankment", description = "Raised ground worth dying for, observation advantage" },
+    { location = "Sunken lane", description = "Natural trench, fought over repeatedly" },
+    { location = "Brick factory ruins", description = "Strong point, cellars for defense, fought room by room" },
+    { location = "Canal crossing", description = "Water obstacle, bridges destroyed and rebuilt constantly" },
+    { location = "Slag heap position", description = "Industrial waste pile, commanding height" },
+    { location = "Cemetery strongpoint", description = "Tombstones for cover, dead defending the dead" }
+]
+
+[terrain_features]
+description = "The landscape of trench warfare"
+entries = [
+    { location = "Chalk downland", description = "White earth, good for tunneling, easy to dig" },
+    { location = "Flanders clay", description = "Water table at surface, trenches flood constantly" },
+    { location = "Dense woodland", description = "Reduced to shattered stumps within weeks" },
+    { location = "River valley", description = "Natural defense line, overlooked by heights" },
+    { location = "Rolling farmland", description = "Fields that grew wheat now grow crosses" },
+    { location = "Coal mining region", description = "Pitheads and slag heaps, civilian miners become tunnelers" },
+    { location = "Limestone plateau", description = "Caves and quarries repurposed as shelters" },
+    { location = "Coastal dunes", description = "Belgian sector, sand and sea spray" }
+]
+
+[aftermath]
+description = "The scarred landscape after battle"
+entries = [
+    { location = "Corpse field (uncleared)", description = "Bodies impossible to retrieve, rotting in the sun" },
+    { location = "Gas-contaminated zone", description = "Mustard gas persists, vegetation dead, ground poisoned" },
+    { location = "Unexploded ordnance area", description = "Shells everywhere, farmers still die yearly" },
+    { location = "Provisional cemetery", description = "Hasty burials, wooden crosses, temporary markers" },
+    { location = "Salvage collection point", description = "Mountains of recovered equipment, rifles, helmets, boots" },
+    { location = "Burning wreckage", description = "Tanks, aircraft, supply wagons, all ablaze" }
+]

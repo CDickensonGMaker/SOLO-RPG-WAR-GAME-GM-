@@ -1,0 +1,113 @@
+# Arachnid Encounters
+# The enemy in all its terrible variety
+
+[warrior_bugs]
+description = "The standard infantry of the Arachnid hive"
+entries = [
+  { text = "Warrior bug, freshly molted, chitin still soft but mandibles fully developed, aggressive and uncoordinated", weight = 2 },
+  { text = "Veteran warrior, chitin scarred from previous battles, moves with disturbing economy, has killed before", weight = 2 },
+  { text = "Giant warrior variant, twice normal size, requires concentrated fire to bring down", weight = 1 },
+  { text = "Wounded warrior, missing limbs but still attacking, bugs don't surrender, don't retreat", weight = 2 },
+  { text = "Warrior using terrain, taking cover, flanking, the disturbing evidence of bug tactical adaptation", weight = 1 },
+  { text = "Pack of juveniles, smaller and faster, learning to hunt together, terrifying coordination", weight = 1 },
+  { text = "Burrowing warrior, specialized for tunnel combat, segmented body navigating spaces too tight for humans", weight = 1 },
+  { text = "Warrior playing dead, perfect stillness, strikes when the patrol passes", weight = 1 },
+  { text = "Color variant warrior, camouflaged for this specific environment, nearly invisible until it moves", weight = 1 },
+  { text = "Warrior with trophy - carrying a piece of MI equipment, or worse, a piece of MI", weight = 1 },
+]
+
+[tanker_bugs]
+description = "The acid-spewing heavy units"
+entries = [
+  { text = "Young tanker, acid sac not fully developed, spray range shorter but still lethal", weight = 2 },
+  { text = "Bull tanker, massive specimen, acid spray can melt through power armor in seconds", weight = 1 },
+  { text = "Wounded tanker leaking acid, creating hazard zones as it moves", weight = 1 },
+  { text = "Tanker in defensive posture, guarding a hive entrance, acid sac swollen and ready", weight = 2 },
+  { text = "Tanker advancing on a fixed position, methodical, each spray reducing the defenders", weight = 2 },
+  { text = "Dead tanker, acid sac intact, unstable, wrong move triggers rupture", weight = 1 },
+  { text = "Tanker with warrior escort, the bugs protecting their artillery", weight = 1 },
+  { text = "Tanker modified by the hive, extra acid sacs, experimental evolution in real time", weight = 1 },
+]
+
+[hopper_bugs]
+description = "The aerial menace"
+entries = [
+  { text = "Scout hopper, circling at altitude, reporting position to the hive mind", weight = 2 },
+  { text = "Attack hopper, dive-bombing, using momentum to punch through armor", weight = 2 },
+  { text = "Hopper swarm, coordinated aerial assault, dozens moving as one", weight = 1 },
+  { text = "Grounded hopper, wings damaged, still deadly with its slashing limbs", weight = 1 },
+  { text = "Nesting hoppers, disturbed from roost, explosive dispersal in all directions", weight = 1 },
+  { text = "Hopper carrying something, dropping it into the compound, could be explosive, could be worse", weight = 1 },
+  { text = "Night hopper, silent glider, adapted for darkness", weight = 1 },
+  { text = "Giant hopper, capable of carrying warriors, airborne troop transport", weight = 1 },
+]
+
+[brain_bugs]
+description = "The commanders of the hive"
+entries = [
+  { text = "Brain bug presence felt, psionic pressure, a presence touching your thoughts", weight = 2 },
+  { text = "Brain bug visible, bloated and obscene, surrounded by warrior bodyguards", weight = 1 },
+  { text = "Brain bug feeding, captured trooper held in its tentacles, the screaming audible", weight = 1 },
+  { text = "Brain bug communicating, the hive mind coordinating through it, feel the orders pulsing", weight = 1 },
+  { text = "Juvenile brain bug, smaller but with potential, valuable capture target", weight = 1 },
+  { text = "Brain bug dying, psychic death scream affecting everyone nearby, bugs going berserk", weight = 1 },
+  { text = "Brain bug memories, touching its mind reveals images - human cities, troop movements, plans", weight = 1 },
+  { text = "Brain bug offering communication, something unprecedented, an attempt at contact", weight = 1 },
+]
+
+[plasma_bugs]
+description = "The living artillery"
+entries = [
+  { text = "Plasma bug charging, the glow visible from kilometers away, incoming", weight = 2 },
+  { text = "Plasma bug nest, multiple specimens, coordinated battery fire", weight = 1 },
+  { text = "Close range plasma bug, sac overcharged, about to fire at point blank", weight = 1 },
+  { text = "Wounded plasma bug, sac ruptured, plasma leaking, creating fire hazards", weight = 1 },
+  { text = "Juvenile plasma bug, still developing, weaker but mobile", weight = 1 },
+  { text = "Plasma bug targeting ships, the horizon lit with orbital fire", weight = 1 },
+  { text = "Dead plasma bug, sac intact, could be harvested, could be trapped", weight = 1 },
+]
+
+[specialized_bugs]
+description = "Rare and terrifying variants"
+entries = [
+  { text = "Infiltrator bug, mimicking human form badly but enough to cause hesitation", weight = 1 },
+  { text = "Acid spitter variant, smaller than tanker, more mobile, accurate at range", weight = 1 },
+  { text = "Burrower queen, massive tunnel-maker, her passage creates new invasion routes", weight = 1 },
+  { text = "Control bug, attached to a human corpse, making it move, wearing dead friends", weight = 1 },
+  { text = "Transport bug, enormous beetle carrying warriors in cavity, living APC", weight = 1 },
+  { text = "Bomber bug, packed with explosive compounds, suicide attacker", weight = 1 },
+  { text = "Water bug, adapted for aquatic environments, nowhere is safe", weight = 1 },
+  { text = "Ice bug, thriving in sub-zero environments, cold worlds are no refuge", weight = 1 },
+  { text = "Sensor bug, massive eyes and antennae, early warning system for the hive", weight = 1 },
+  { text = "Healer bug, observed repairing wounded warriors, evidence of bug medicine", weight = 1 },
+]
+
+[hive_discoveries]
+description = "Finding bug structures and nests"
+entries = [
+  { text = "Tunnel entrance, fresh-dug, the dirt still damp, bugs have been here recently", weight = 2 },
+  { text = "Egg chamber, thousands of eggs, pulsing, ready to hatch, decision point", weight = 2 },
+  { text = "Warrior nursery, juvenile bugs in various stages of development, vulnerable", weight = 1 },
+  { text = "Brain bug chamber, the walls coated with organic resin, psychic emanations intense", weight = 1 },
+  { text = "Food storage, human remains stacked like cordwood, the smell overwhelming", weight = 1 },
+  { text = "Tanker bug breeding pit, the acid pooling, queens visible", weight = 1 },
+  { text = "Plasma bug formation site, the bugs modified by the hive, grown into artillery", weight = 1 },
+  { text = "Royal chamber, a queen bug, massive beyond comprehension, the heart of this hive", weight = 1 },
+  { text = "Communication node, bugs entering and leaving, orders flowing through", weight = 1 },
+  { text = "Captured humans alive, cocooned in resin, brain bug feeding chamber", weight = 2 },
+]
+
+[bug_tactics]
+description = "The hive mind's strategies"
+entries = [
+  { text = "Probing attack, testing defenses, the real assault hasn't started", weight = 2 },
+  { text = "Flanking maneuver, bugs appearing on multiple sides, coordinated encirclement", weight = 2 },
+  { text = "Feigned retreat, drawing forces out of position, ambush waiting", weight = 1 },
+  { text = "Tunnel bypass, bugs appearing behind the lines, logistics under attack", weight = 1 },
+  { text = "Night infiltration, bugs in the wire at 0300, guards killed silently", weight = 1 },
+  { text = "Human bait, captives used to draw rescue attempts into kill zones", weight = 1 },
+  { text = "Weather exploitation, bugs attacking during storms when sensors fail", weight = 1 },
+  { text = "Simultaneous multi-point attack, every position hit at once, reserves committed everywhere", weight = 1 },
+  { text = "Attrition strategy, endless waves, wearing down ammunition and morale", weight = 2 },
+  { text = "Targeted leadership strike, officers and NCOs specifically hunted", weight = 1 },
+]

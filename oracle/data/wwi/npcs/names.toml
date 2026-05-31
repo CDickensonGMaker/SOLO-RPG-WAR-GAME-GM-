@@ -1,0 +1,414 @@
+# WWI Era Names by Nationality
+# The roll calls of the lost generation
+
+[british]
+description = "Tommy Atkins - the British soldier"
+entries = [
+    "Albert",
+    "Alfred",
+    "Arthur",
+    "Charles",
+    "Edward",
+    "Ernest",
+    "Frederick",
+    "George",
+    "Harold",
+    "Henry",
+    "Herbert",
+    "James",
+    "John",
+    "Joseph",
+    "Percy",
+    "Reginald",
+    "Robert",
+    "Sidney",
+    "Thomas",
+    "Walter",
+    "William",
+    "Wilfred"
+]
+
+[british_surnames]
+description = "Common British surnames"
+entries = [
+    "Adams",
+    "Baker",
+    "Brown",
+    "Clarke",
+    "Davies",
+    "Edwards",
+    "Evans",
+    "Green",
+    "Harris",
+    "Hill",
+    "Hughes",
+    "Jackson",
+    "Johnson",
+    "Jones",
+    "Lewis",
+    "Martin",
+    "Moore",
+    "Morris",
+    "Owen",
+    "Roberts",
+    "Robinson",
+    "Smith",
+    "Taylor",
+    "Thomas",
+    "Thompson",
+    "Turner",
+    "Walker",
+    "White",
+    "Williams",
+    "Wilson",
+    "Wood",
+    "Wright"
+]
+
+[french]
+description = "Poilu - the hairy one, the French soldier"
+entries = [
+    "Achille",
+    "Alphonse",
+    "Antoine",
+    "Auguste",
+    "Baptiste",
+    "Charles",
+    "Claude",
+    "Edmond",
+    "Emile",
+    "Etienne",
+    "Eugene",
+    "Fernand",
+    "Francois",
+    "Gaston",
+    "Georges",
+    "Henri",
+    "Jacques",
+    "Jean",
+    "Joseph",
+    "Jules",
+    "Leon",
+    "Louis",
+    "Lucien",
+    "Marcel",
+    "Maurice",
+    "Paul",
+    "Pierre",
+    "Rene",
+    "Victor"
+]
+
+[french_surnames]
+description = "Common French surnames"
+entries = [
+    "Bernard",
+    "Bertrand",
+    "Blanc",
+    "Bonnet",
+    "Dubois",
+    "Dumont",
+    "Dupont",
+    "Durand",
+    "Faure",
+    "Fontaine",
+    "Fournier",
+    "Garnier",
+    "Gauthier",
+    "Girard",
+    "Lambert",
+    "Laurent",
+    "Leroy",
+    "Martin",
+    "Michel",
+    "Moreau",
+    "Morel",
+    "Petit",
+    "Richard",
+    "Robert",
+    "Roux",
+    "Simon",
+    "Thomas",
+    "Vincent"
+]
+
+[german]
+description = "Fritz - the German soldier"
+entries = [
+    "Adolf",
+    "Albert",
+    "August",
+    "Bruno",
+    "Carl",
+    "Dietrich",
+    "Emil",
+    "Ernst",
+    "Franz",
+    "Friedrich",
+    "Georg",
+    "Gustav",
+    "Hans",
+    "Heinrich",
+    "Hermann",
+    "Johann",
+    "Josef",
+    "Karl",
+    "Klaus",
+    "Kurt",
+    "Ludwig",
+    "Max",
+    "Otto",
+    "Paul",
+    "Peter",
+    "Rudolf",
+    "Walter",
+    "Werner",
+    "Wilhelm",
+    "Wolfgang"
+]
+
+[german_surnames]
+description = "Common German surnames"
+entries = [
+    "Bauer",
+    "Becker",
+    "Braun",
+    "Fischer",
+    "Hartmann",
+    "Hoffmann",
+    "Klein",
+    "Koch",
+    "Kruger",
+    "Lang",
+    "Lehmann",
+    "Meyer",
+    "Muller",
+    "Neumann",
+    "Richter",
+    "Schafer",
+    "Schmidt",
+    "Schneider",
+    "Scholz",
+    "Schulz",
+    "Schwarz",
+    "Wagner",
+    "Weber",
+    "Werner",
+    "Wolf",
+    "Zimmermann"
+]
+
+[american]
+description = "Doughboy - the American soldier"
+entries = [
+    "Benjamin",
+    "Carl",
+    "Charles",
+    "Chester",
+    "Clarence",
+    "Earl",
+    "Edgar",
+    "Edwin",
+    "Floyd",
+    "Frank",
+    "George",
+    "Harold",
+    "Harry",
+    "Howard",
+    "Jack",
+    "James",
+    "John",
+    "Joseph",
+    "Lawrence",
+    "Leo",
+    "Lloyd",
+    "Louis",
+    "Oscar",
+    "Raymond",
+    "Robert",
+    "Roy",
+    "Samuel",
+    "Theodore",
+    "Walter",
+    "William"
+]
+
+[american_surnames]
+description = "Common American surnames of the era"
+entries = [
+    "Anderson",
+    "Brown",
+    "Campbell",
+    "Clark",
+    "Davis",
+    "Garcia",
+    "Hall",
+    "Harris",
+    "Jackson",
+    "Johnson",
+    "Jones",
+    "King",
+    "Lee",
+    "Lewis",
+    "Martin",
+    "Martinez",
+    "Miller",
+    "Mitchell",
+    "Moore",
+    "Nelson",
+    "Robinson",
+    "Rodriguez",
+    "Smith",
+    "Taylor",
+    "Thomas",
+    "Thompson",
+    "White",
+    "Williams",
+    "Wilson",
+    "Wright"
+]
+
+[austrian]
+description = "Austro-Hungarian soldier"
+entries = [
+    "Anton",
+    "Engelbert",
+    "Ferdinand",
+    "Franz",
+    "Friedrich",
+    "Georg",
+    "Gottfried",
+    "Heinrich",
+    "Hugo",
+    "Johann",
+    "Josef",
+    "Karl",
+    "Leopold",
+    "Maximilian",
+    "Ottokar",
+    "Rudolf",
+    "Stefan",
+    "Wilhelm"
+]
+
+[russian]
+description = "Imperial Russian soldier"
+entries = [
+    "Aleksandr",
+    "Alexei",
+    "Anatoly",
+    "Andrei",
+    "Boris",
+    "Dmitri",
+    "Fyodor",
+    "Grigori",
+    "Igor",
+    "Ivan",
+    "Konstantin",
+    "Mikhail",
+    "Nikolai",
+    "Pavel",
+    "Pyotr",
+    "Sergei",
+    "Vasily",
+    "Viktor",
+    "Vladimir",
+    "Yuri"
+]
+
+[canadian]
+description = "Canadian Expeditionary Force"
+entries = [
+    "Alexander",
+    "Andrew",
+    "Angus",
+    "Bruce",
+    "Cameron",
+    "Donald",
+    "Douglas",
+    "Duncan",
+    "Gordon",
+    "Hugh",
+    "Ian",
+    "Kenneth",
+    "Malcolm",
+    "Neil",
+    "Norman",
+    "Ross",
+    "Stewart"
+]
+
+[australian]
+description = "ANZAC - Australian soldier"
+entries = [
+    "Allan",
+    "Bruce",
+    "Colin",
+    "Cyril",
+    "Douglas",
+    "Francis",
+    "Gordon",
+    "Graham",
+    "Keith",
+    "Kevin",
+    "Leslie",
+    "Lindsay",
+    "Murray",
+    "Neil",
+    "Neville",
+    "Ronald",
+    "Stanley",
+    "Trevor",
+    "Vernon",
+    "Warren"
+]
+
+[turkish]
+description = "Ottoman soldier - Mehmetcik"
+entries = [
+    "Abdullah",
+    "Ahmet",
+    "Ali",
+    "Cemal",
+    "Cem",
+    "Emir",
+    "Halil",
+    "Hasan",
+    "Husein",
+    "Ibrahim",
+    "Ismail",
+    "Kemal",
+    "Mahmut",
+    "Mehmet",
+    "Mustafa",
+    "Nuri",
+    "Osman",
+    "Recep",
+    "Selim",
+    "Yusuf"
+]
+
+[italian]
+description = "Italian soldier"
+entries = [
+    "Alberto",
+    "Alessandro",
+    "Angelo",
+    "Antonio",
+    "Carlo",
+    "Domenico",
+    "Emilio",
+    "Enrico",
+    "Francesco",
+    "Giovanni",
+    "Giuseppe",
+    "Luigi",
+    "Marco",
+    "Mario",
+    "Paolo",
+    "Pietro",
+    "Roberto",
+    "Salvatore",
+    "Stefano",
+    "Vincenzo"
+]

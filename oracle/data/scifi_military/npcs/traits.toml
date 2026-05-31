@@ -117,5 +117,75 @@ entries = [
   { text = "Refuses to remove their helmet around others", weight = 1 },
   { text = "Memorizes the faces and names of every fallen comrade", weight = 1 },
   { text = "Maintains correspondence with dozens of war widows", weight = 1 },
-  { text = "Secretly an artist, sketches everything they see", weight = 1 }
+  { text = "Secretly an artist, sketches everything they see", weight = 1 },
+
+  # Combat Trauma
+  { text = "Thousand-yard stare that never quite goes away", weight = 2 },
+  { text = "Startles at loud noises despite years of exposure", weight = 1 },
+  { text = "Cannot sleep without weapon within arm's reach", weight = 1 },
+  { text = "Nightmares so vivid they wake the whole barracks", weight = 1 },
+  { text = "Hypervigilant to the point of exhaustion, always scanning", weight = 1 },
+  { text = "Emotionally flat, reactions muted to everything", weight = 1 },
+  { text = "Rage simmering just below surface, triggered by small things", weight = 2 },
+  { text = "Survivor's guilt manifesting as reckless behavior", weight = 1 },
+
+  # Shell Shock Manifestations
+  { text = "Hands tremor only stops when holding a weapon", weight = 1 },
+  { text = "Facial tic developed after near-death experience", weight = 1 },
+  { text = "Stammer appears only when discussing certain topics", weight = 1 },
+  { text = "Dissociates during stress, seems to leave body", weight = 1 },
+  { text = "Compulsive cleaning of weapons, hours spent daily", weight = 1 },
+  { text = "Cannot eat certain foods that remind of battlefield smells", weight = 1 },
+  { text = "Avoids enclosed spaces after being trapped in rubble", weight = 1 },
+  { text = "Refuses to form attachments, everyone dies eventually", weight = 2 },
+
+  # Coping Mechanisms
+  { text = "Humor so dark it makes others uncomfortable", weight = 1 },
+  { text = "Religious devotion intensified by proximity to death", weight = 1 },
+  { text = "Writing poetry or letters that are never sent", weight = 1 },
+  { text = "Substance dependence that's barely controlled", weight = 1 },
+  { text = "Obsessive routine that provides sense of control", weight = 1 },
+  { text = "Collects trophies from kills, keeps them hidden", weight = 1 },
+  { text = "Talks to dead comrades, answers for them", weight = 1 },
+  { text = "Volunteers for danger rather than wait for it", weight = 2 },
+
+  # Veteran Bearing
+  { text = "Economy of movement from years of combat efficiency", weight = 1 },
+  { text = "Eyes always tracking exits and threats", weight = 1 },
+  { text = "Speaks in clipped military jargon even off duty", weight = 1 },
+  { text = "Positions themselves with back to wall instinctively", weight = 1 },
+  { text = "Sleeps light, wakes combat-ready in seconds", weight = 1 },
+  { text = "Maintains gear obsessively, survival habit", weight = 1 },
+  { text = "Walks point even in friendly territory", weight = 1 },
+  { text = "Knows exactly how many rounds in current magazine", weight = 1 },
+
+  # Combat Addictions
+  { text = "Addicted to adrenaline, peace feels wrong", weight = 1 },
+  { text = "Cannot function without combat stims anymore", weight = 1 },
+  { text = "Seeks out danger to feel alive", weight = 2 },
+  { text = "Bored by everything except combat operations", weight = 1 },
+  { text = "Extends tours repeatedly, doesn't know civilian life", weight = 1 },
+  { text = "Depression between engagements, only happy in action", weight = 1 },
+  { text = "Takes unnecessary risks for the rush", weight = 1 },
+  { text = "Volunteers for the most dangerous missions eagerly", weight = 1 },
+
+  # Moral Injuries
+  { text = "Haunted by order followed that shouldn't have been", weight = 2 },
+  { text = "Carries guilt for surviving when better soldiers died", weight = 1 },
+  { text = "Tormented by mercy shown that led to more deaths", weight = 1 },
+  { text = "Cannot forgive self for civilian casualties", weight = 1 },
+  { text = "Questions if any of it was worth the cost", weight = 1 },
+  { text = "Lost faith in cause but keeps fighting anyway", weight = 1 },
+  { text = "Knows they've become the thing they fought against", weight = 1 },
+  { text = "Believes they deserve the death that keeps missing them", weight = 1 },
+
+  # Physical Adaptations
+  { text = "Hearing permanently damaged, pretends to hear fine", weight = 1 },
+  { text = "Scars mapped like a history of the war across their body", weight = 1 },
+  { text = "Chronic pain from old wounds, never mentions it", weight = 1 },
+  { text = "Augmetics replacing parts lost in combat", weight = 1 },
+  { text = "Moves stiffly from joints damaged by powered armor", weight = 1 },
+  { text = "Vision problems from flash burns, compensates", weight = 1 },
+  { text = "Respiratory issues from chemical exposure", weight = 1 },
+  { text = "Radiation damage showing in premature aging", weight = 1 }
 ]

@@ -68,5 +68,65 @@ entries = [
   { text = "Siege defense, holding fortification against assault", weight = 1 },
   { text = "Rearguard action, covering main force retreat", weight = 1 },
   { text = "Bridge defense, holding chokepoint against attack", weight = 1 },
-  { text = "Perimeter breach response, counterattacking enemy penetration", weight = 1 }
+  { text = "Perimeter breach response, counterattacking enemy penetration", weight = 1 },
+
+  # Drop Pod Operations
+  { text = "Drop pod scatters wide, unit lands across three klicks of hostile territory", weight = 2 },
+  { text = "Pod door jammed, breaching from inside while enemy converges", weight = 1 },
+  { text = "Hot insertion, weapons free before feet touch dirt", weight = 1 },
+  { text = "Pod lands in middle of enemy encampment, surprise works both ways", weight = 2 },
+  { text = "Retro-rockets fail, hard landing casualties before fighting starts", weight = 1 },
+  { text = "Combat drop into urban canyon, buildings on all sides", weight = 1 },
+  { text = "Night drop, navigation error puts unit behind own lines but thinks they're in enemy territory", weight = 1 },
+  { text = "Drop zone compromised, enemy knew trajectory and time", weight = 1 },
+
+  # Orbital Bombardment Scenarios
+  { text = "Calling orbital strike danger close, trusting coordinates are accurate", weight = 2 },
+  { text = "Enemy orbital bombardment incoming, thirty seconds to find hard cover", weight = 2 },
+  { text = "Surviving in bombardment crater field, terrain turned to moonscape", weight = 1 },
+  { text = "Orbital strike misfired, friendly positions hit, chaos in the aftermath", weight = 1 },
+  { text = "Racing to target before enemy can call their own orbital support", weight = 1 },
+  { text = "Bombardment targeting beacon damaged, must hold position for visual confirmation", weight = 1 },
+  { text = "Enemy jamming orbital targeting, ground forces must close distance to mark targets", weight = 1 },
+  { text = "Debris rain from orbital strike on station above, surviving the fallout", weight = 1 },
+
+  # Urban Combat Specifics
+  { text = "Fighting floor to floor in hab-spire, enemy above and below", weight = 1 },
+  { text = "Sewer insertion, emerging behind enemy lines through meters of filth", weight = 1 },
+  { text = "Rooftop assault, grav-chuting between buildings under fire", weight = 1 },
+  { text = "Industrial sector fighting, hazardous materials everywhere", weight = 1 },
+  { text = "Market district ambush, civilians in crossfire complicate everything", weight = 1 },
+  { text = "Underground transit fighting, narrow tunnels and third rail dangers", weight = 1 },
+  { text = "Vertical combat in construction site, unfinished floors and no rails", weight = 1 },
+  { text = "Fighting in reactor district, any stray shot could cause meltdown", weight = 2 },
+
+  # Void Combat / Ship Boarding
+  { text = "Breach pod punches through hull, vacuum roaring past until sealant deploys", weight = 2 },
+  { text = "Zero-G combat in depressurized section, physics is different here", weight = 1 },
+  { text = "Fighting to engine room, ship shaking from ongoing space battle", weight = 1 },
+  { text = "Corridor-to-corridor fighting in capital ship, every junction a killzone", weight = 1 },
+  { text = "Boarding action while ship is maneuvering, gravity keeps shifting", weight = 1 },
+  { text = "Shuttle bay assault, fighting between parked craft and fuel lines", weight = 1 },
+  { text = "Life support section battle, damage here kills everyone eventually", weight = 2 },
+  { text = "Fighting through wounded ship, fires and radiation leaks everywhere", weight = 1 },
+
+  # Mechanized/Armor Operations
+  { text = "Tank duel at three hundred meters, first accurate shot wins", weight = 1 },
+  { text = "Infantry supporting armor in urban terrain, protecting each other's blind spots", weight = 1 },
+  { text = "Vehicle disabled in kill zone, crew must dismount or burn", weight = 2 },
+  { text = "Armor breakthrough exploitation, racing past burning wrecks", weight = 1 },
+  { text = "Anti-armor ambush, infantry hunting enemy vehicles with rockets", weight = 1 },
+  { text = "Walker combat in forest, giant machines dueling between trees", weight = 1 },
+  { text = "Convoy fighting through ambush, cannot stop, must keep moving", weight = 1 },
+  { text = "Vehicle crew bailing out under fire, infantry action by armor soldiers", weight = 1 },
+
+  # Desperate Situations
+  { text = "Ammunition almost gone, fixing bayonets for what comes next", weight = 2 },
+  { text = "Last mag, making every shot count", weight = 1 },
+  { text = "Cut off and surrounded, only option is to break out", weight = 1 },
+  { text = "Wounded outnumber combat effective, still have to fight", weight = 1 },
+  { text = "No extraction possible, fighting through to friendly lines", weight = 1 },
+  { text = "Enemy has numbers, we have nothing left to lose", weight = 2 },
+  { text = "Position overrun, fighting to retake it before they consolidate", weight = 1 },
+  { text = "Leadership all casualties, lowest rank soldier assumes command mid-fight", weight = 1 }
 ]

@@ -1,8 +1,18 @@
 # Historical Names
-# 150+ names spanning Medieval, Renaissance, Colonial, Victorian, and WWII eras
+# 250+ names spanning Ancient Rome, Medieval, Renaissance, Colonial, Victorian, and World War eras
 # Includes European, American, and period-appropriate international names
 
 [names]
+
+# Ancient Rome (Republican and Imperial)
+ancient_rome = [
+  "Gaius", "Marcus", "Lucius", "Quintus", "Publius",
+  "Titus", "Gnaeus", "Decimus", "Aulus", "Sextus",
+  "Livia", "Cornelia", "Julia", "Octavia", "Claudia",
+  "Faustina", "Agrippina", "Messalina", "Lucilla", "Flavia",
+  "Cassius", "Brutus", "Cicero", "Cato", "Pompey",
+  "Spurius", "Servius", "Manius", "Appius", "Numerius"
+]
 
 # Medieval Era (English, French, German, Italian)
 medieval = [
@@ -106,4 +116,50 @@ surnames_world_war = [
   "Mueller", "Schmidt", "Schneider", "Fischer", "Weber",
   "Dubois", "Martin", "Bernard", "Moreau", "Laurent",
   "Petrov", "Volkov", "Sokolov", "Kuznetsov", "Popov"
+]
+
+# Roman Names (Gens/Family Names)
+surnames_roman = [
+  "Julius", "Claudius", "Cornelius", "Aemilius", "Fabius",
+  "Valerius", "Antonius", "Aurelius", "Caecilius", "Domitius",
+  "Flavius", "Licinius", "Marcius", "Sempronius", "Sergius",
+  "Sulpicius", "Tullius", "Cassius", "Junius", "Porcius"
+]
+
+# Cognomina (Third Names/Nicknames)
+cognomina_roman = [
+  "Africanus", "Germanicus", "Britannicus", "Magnus", "Felix",
+  "Pius", "Augustus", "Maximus", "Severus", "Nero",
+  "Caligula", "Longus", "Crassus", "Pulcher", "Rufus"
+]
+
+# Age of Sail Pirate Names
+pirates_age_of_sail = [
+  "Blackbeard", "Calico Jack", "Anne Bonny", "Mary Read", "Black Bart",
+  "Long Ben", "Red Legs", "Bloody Mary", "One-Eyed Jack", "Pegleg Pete",
+  "Cutlass Kate", "Dead-Eye Dick", "Hook Hand Harry", "Scarface Sam", "Gentleman George"
+]
+
+# Spanish/Portuguese Colonial
+colonial_spanish = [
+  "Hernando", "Gonzalo", "Alonso", "Rodrigo", "Cristobal",
+  "Francisco", "Juan", "Pedro", "Diego", "Bartolome",
+  "Ines", "Beatriz", "Catalina", "Leonor", "Maria",
+  "Joao", "Manuel", "Antonio", "Fernando", "Duarte"
+]
+
+# Arabic/Ottoman Names
+ottoman_era = [
+  "Suleiman", "Mehmed", "Selim", "Bayezid", "Murad",
+  "Osman", "Ibrahim", "Ahmed", "Mustafa", "Mahmud",
+  "Roxelana", "Safiye", "Kosem", "Hafsa", "Hurrem",
+  "Hassan", "Hussein", "Ali", "Omar", "Khalid"
+]
+
+# Viking/Norse Names
+norse = [
+  "Ragnar", "Bjorn", "Ivar", "Harald", "Erik",
+  "Leif", "Olaf", "Sigurd", "Gunnar", "Thorstein",
+  "Freya", "Astrid", "Sigrid", "Ingrid", "Helga",
+  "Lagertha", "Thyra", "Ragnhild", "Gunnhild", "Brynhild"
 ]

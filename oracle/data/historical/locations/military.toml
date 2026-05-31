@@ -1,5 +1,5 @@
 # Historical Military Locations
-# 50+ military camps, battlefields, and fortifications
+# 105+ military camps, battlefields, and fortifications across eras
 
 [locations]
 entries = [
@@ -64,5 +64,61 @@ entries = [
   { text = "Dead drop location known only to handlers and agents", weight = 1 },
   { text = "Code room where encrypted messages are created and broken", weight = 1 },
   { text = "Partisan camp hidden deep in the wilderness", weight = 1 },
-  { text = "Airfield used for covert insertions and extractions", weight = 1 }
+  { text = "Airfield used for covert insertions and extractions", weight = 1 },
+
+  # Roman Military
+  { text = "The legionary camp (castra) - standardized layout wherever Rome marches", weight = 2 },
+  { text = "The Principia - headquarters where the eagle standards are kept sacred", weight = 1 },
+  { text = "Hadrian's Wall - milecastles and turrets watching the barbarian north", weight = 1 },
+  { text = "The valetudinarium - military hospital where wounded legionaries recover or die", weight = 2 },
+  { text = "Auxiliary fort on the frontier, non-citizens earning citizenship through blood", weight = 2 },
+  { text = "The triumph route through Rome, awaiting victorious legions", weight = 1 },
+
+  # Medieval Military
+  { text = "The motte and bailey - wooden fortification that will become stone in time", weight = 2 },
+  { text = "The great hall of a castle, where the lord dispenses justice and plots war", weight = 2 },
+  { text = "The oubliette - a forgetting place where prisoners vanish", weight = 1 },
+  { text = "The tiltyard where knights train and squires dream of glory", weight = 2 },
+  { text = "Siege camp surrounding a stubborn castle, catapults under construction", weight = 1 },
+  { text = "The armory where a lord's wealth is measured in steel and leather", weight = 2 },
+
+  # Renaissance Military
+  { text = "The trace italienne - new-style star fort designed to resist cannon", weight = 1 },
+  { text = "Mercenary camp where condottieri await payment before marching", weight = 2 },
+  { text = "The foundry where bronze cannons are cast and named", weight = 1 },
+  { text = "Arsenal where Venice maintains the weapons that protect the republic", weight = 1 },
+  { text = "Landsknecht encampment - colorful, brutal, and utterly mercenary", weight = 2 },
+
+  # Age of Sail Military
+  { text = "Coastal battery commanding the harbor approach, guns ready", weight = 2 },
+  { text = "Colonial fort on the frontier, surrounded by hostile wilderness", weight = 2 },
+  { text = "The powder magazine built away from everything else, for obvious reasons", weight = 2 },
+  { text = "Marines barracks near the docks, ready for boarding actions", weight = 2 },
+  { text = "The prison hulk - rotting ship turned floating dungeon in harbor", weight = 1 },
+
+  # Napoleonic Military
+  { text = "The Grande Armee's camp stretching to the horizon - hundreds of thousands strong", weight = 1 },
+  { text = "The Imperial Guard bivouac - the elite await the Emperor's orders", weight = 1 },
+  { text = "Hospital tent after battle - surgeons work without anesthesia", weight = 1 },
+  { text = "Pontoon bridge allowing the army to cross where nature said no", weight = 2 },
+  { text = "The telegraph station sending semaphore signals across mountains", weight = 1 },
+
+  # Victorian Colonial Military
+  { text = "The hill station where officers escape the heat and plot campaigns", weight = 2 },
+  { text = "Zulu kraal-style camp adopted by British forces in South Africa", weight = 2 },
+  { text = "The Khyber Pass fort watching for Pathan raiders", weight = 1 },
+  { text = "Supply depot on the long road into the interior", weight = 2 },
+  { text = "Field punishment post where discipline is administered publicly", weight = 2 },
+
+  # Ancient Battlefields
+  { text = "The hot gates at Thermopylae - where three hundred held the line", weight = 1 },
+  { text = "Cannae's killing ground where Hannibal perfected double envelopment", weight = 1 },
+  { text = "The Teutoburg Forest where three legions vanished forever", weight = 1 },
+  { text = "Alexander's crossing of the Granicus - the beginning of conquest", weight = 1 },
+
+  # Famous Siege Sites
+  { text = "Masada's plateau - the last stand of the Zealots", weight = 1 },
+  { text = "Constantinople's walls that held for a thousand years until they didn't", weight = 1 },
+  { text = "Orleans where the Maid turned back the English tide", weight = 1 },
+  { text = "The breach at Badajoz - bought with a forlorn hope's blood", weight = 1 }
 ]

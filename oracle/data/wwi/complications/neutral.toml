@@ -1,0 +1,70 @@
+# WWI Neutral Complications
+# Changes that could go either way
+
+[tactical]
+description = "Battlefield developments"
+entries = [
+    { complication = "Enemy position is stronger than expected", twist = "More men, better fortified, but also means they're concentrated" },
+    { complication = "Weather changes suddenly", twist = "Rain, fog, or clearing - changes everything for both sides" },
+    { complication = "Both sides digging toward same point", twist = "Tunnels will meet, who gets there first decides who dies" },
+    { complication = "New unit rotates in adjacent", twist = "Unknown quality, might be elite, might be green" },
+    { complication = "Enemy changes their routine", twist = "Something's different, attack coming or just new commander?" },
+    { complication = "Artillery support redirected", twist = "Guns assigned elsewhere, you're on your own but so is priority" },
+    { complication = "Ground conditions shift", twist = "Mud hardens or softens, changes what's possible" },
+    { complication = "Supply route changed", twist = "New path, longer or shorter, different risks" }
+]
+
+[intelligence]
+description = "Information emerges"
+entries = [
+    { complication = "Prisoner reveals something unexpected", twist = "Could be truth, could be planted disinformation" },
+    { complication = "Aerial photograph shows new detail", twist = "Something's there that wasn't, but what does it mean?" },
+    { complication = "Intercepted message partially decoded", twist = "Some words clear, context uncertain, partial picture" },
+    { complication = "Deserter comes over from enemy lines", twist = "Valuable source or deliberate plant?" },
+    { complication = "Pattern in enemy activity noticed", twist = "Predictable behavior, could be exploited or could be trap" },
+    { complication = "Document found on enemy body", twist = "Maps, orders, letters - authentic or deception?" }
+]
+
+[personnel]
+description = "People changes"
+entries = [
+    { complication = "Key person transferred", twist = "Could be promotion, punishment, or needed elsewhere" },
+    { complication = "Specialist attached to unit", twist = "Brings expertise but also outside authority" },
+    { complication = "Someone from your past appears", twist = "Shared history, unclear if help or hindrance" },
+    { complication = "Wound sends man to hospital", twist = "Relief from duty but also loss of capability" },
+    { complication = "Promotion opportunity appears", twist = "More responsibility, more risk, better position" },
+    { complication = "Someone volunteers for dangerous mission", twist = "Brave or suicidal? Either way, changes the plan" }
+]
+
+[orders]
+description = "Commands from above"
+entries = [
+    { complication = "Conflicting orders received", twist = "Two commands, can't do both, whose do you follow?" },
+    { complication = "Discretionary orders given", twist = "If you think best - freedom and responsibility both" },
+    { complication = "Orders delayed in transmission", twist = "Information out of date, situation changed, adapt" },
+    { complication = "Adjacent unit has different objectives", twist = "Might help, might hinder, need to coordinate" },
+    { complication = "New doctrine imposed from above", twist = "Different tactics required, unfamiliar but possibly better" },
+    { complication = "Inspection scheduled", twist = "Disruption but also chance to impress" }
+]
+
+[resources]
+description = "Material circumstances"
+entries = [
+    { complication = "Unexpected supply arrives", twist = "Something you didn't request, useful or burden?" },
+    { complication = "Equipment requisitioned for elsewhere", twist = "Taken for priority need, improvise" },
+    { complication = "New weapon type available", twist = "Untested but potentially powerful" },
+    { complication = "Transport arranged unexpectedly", twist = "Moving somewhere, opportunity or exile?" },
+    { complication = "Salvage opportunity presents", twist = "Equipment available from battlefield, risks to retrieve" },
+    { complication = "Local resources discovered", twist = "Water, shelter, supplies - can exploit but might compromise" }
+]
+
+[timing]
+description = "When things happen"
+entries = [
+    { complication = "Action delayed by circumstances", twist = "Time to prepare or time for enemy to prepare" },
+    { complication = "Deadline moved forward", twist = "Less time, more pressure, but also faster resolution" },
+    { complication = "Window of opportunity appears", twist = "Brief chance, act now or lose it" },
+    { complication = "Routine disrupted", twist = "Can't count on normal patterns, improvise" },
+    { complication = "Simultaneous demands", twist = "Multiple things need attention, can't do all at once" },
+    { complication = "Unexpected lull in activity", twist = "Calm before storm or genuine pause? Use wisely." }
+]

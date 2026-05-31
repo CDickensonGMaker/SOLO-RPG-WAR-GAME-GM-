@@ -101,5 +101,55 @@ entries = [
   { text = "Torpedo Master", weight = 1 },
   { text = "Shield Technician", weight = 1 },
   { text = "Reactor Engineer", weight = 1 },
-  { text = "Boarding Party Leader", weight = 1 }
+  { text = "Boarding Party Leader", weight = 1 },
+
+  # Combat Veterans with Rank Flavor
+  { text = "Grizzled Sergeant Major - three wars, two wives, one cause left", weight = 2 },
+  { text = "Mustang Lieutenant - former NCO now commissioned, speaks both languages", weight = 1 },
+  { text = "Company First Sergeant - mother hen with a machine gun", weight = 1 },
+  { text = "Point Corporal - leads patrols, expected to die first, refuses to", weight = 1 },
+  { text = "Battalion Surgeon - saved thousands, drinks to forget the ones lost", weight = 1 },
+  { text = "Regimental Chaplain - prays with them fights with them buries them", weight = 1 },
+  { text = "Division Intel Officer - knows where the enemy is rarely tells why", weight = 1 },
+  { text = "Corps Artillery Commander - rains death from beyond the horizon", weight = 1 },
+
+  # Specialist NCOs
+  { text = "Master Gunner - knows every weapon ever made better than designers did", weight = 1 },
+  { text = "Drill Sergeant - breaks recruits remakes them sends them to die prepared", weight = 1 },
+  { text = "Supply Sergeant - hoards everything, somehow always has what you need", weight = 1 },
+  { text = "Communications Chief - keeps unit connected when everything else fails", weight = 1 },
+  { text = "Motor Pool Sergeant - vehicles run because they're more scared of them than enemy", weight = 1 },
+  { text = "Field First Sergeant - runs the unit while officer pretends to", weight = 2 },
+  { text = "Medical NCOIC - stretcher bearer turned surgeon out of necessity", weight = 1 },
+  { text = "Ordnance Disposal Tech - calm hands and an acceptance of mortality", weight = 1 },
+
+  # Junior Enlisted with Character
+  { text = "Private Fresh From Training - scared but hiding it badly", weight = 1 },
+  { text = "PFC On Second Tour - knows enough to be dangerous, not enough to be wise", weight = 1 },
+  { text = "Specialist Riding Deployment - doing minimum to get home alive", weight = 1 },
+  { text = "Lance Corporal With Chip - passed over for promotion, knows why", weight = 1 },
+  { text = "Terminal Private - will never promote, doesn't care, does the job", weight = 1 },
+  { text = "Combat Replacement - arrived yesterday, expected to fill dead man's boots", weight = 2 },
+  { text = "Short-Timer - days from rotation, won't take any risks", weight = 1 },
+  { text = "Lifer Private - decade in service, still lowest rank, has reasons", weight = 1 },
+
+  # Attached Specialists
+  { text = "Forward Air Controller - calls in the thunder from above", weight = 1 },
+  { text = "Artillery Observer - walks with infantry, brings battalion guns", weight = 1 },
+  { text = "Combat Correspondent - tells the war's story, not always the true one", weight = 1 },
+  { text = "Military Police Investigator - finds the crimes war creates", weight = 1 },
+  { text = "Political Officer Attachee - watches for disloyalty, reports to other chain", weight = 1 },
+  { text = "Contract Security Operator - paid more than soldiers, worth it or not", weight = 1 },
+  { text = "War Artist - captures the horror in sketch and paint", weight = 1 },
+  { text = "Unit Mascot Handler - keeps regimental pet, surprisingly important job", weight = 1 },
+
+  # Void-Specific Roles
+  { text = "Master Helmsman - flies the ship through situations that should kill everyone", weight = 1 },
+  { text = "Chief Bosun - maintains ship through tradition and terror", weight = 1 },
+  { text = "Weapons Rating First Class - loads the guns that kill other ships", weight = 1 },
+  { text = "Void Hardened Marine - infantry who fight in vacuum", weight = 1 },
+  { text = "Ship's Confessor - hears sins before sailors die", weight = 1 },
+  { text = "Navigator's Aide - assists warp navigation, sanity a concern", weight = 1 },
+  { text = "Reactor Technician - works in radiation that will kill them eventually", weight = 1 },
+  { text = "Damage Control Team Lead - keeps ship from dying when it's trying to", weight = 1 }
 ]

@@ -1,0 +1,124 @@
+# Bug War Combat Encounters
+# The many ways the Arachnids try to kill you
+
+[warrior_swarms]
+description = "Standard bug infantry attacks"
+entries = [
+  { text = "Warriors boiling up from a previously undetected tunnel, mandibles scything through the first troopers before anyone can react", weight = 2 },
+  { text = "A coordinated bug wave, hundreds of warriors advancing in perfect sync, the hive mind directing every pincer", weight = 2 },
+  { text = "Lone warrior ambush from a hidden crevice, gets one trooper before the squad cuts it down, but there's never just one", weight = 2 },
+  { text = "Warriors using trooper corpses as cover, learning, adapting, that terrifying bug intelligence at work", weight = 1 },
+  { text = "Night assault, warriors coating themselves in bioluminescent suppressor, invisible until they're in melee range", weight = 1 },
+  { text = "Feigned retreat drawing the squad into a tunnel entrance where three more warriors wait in ambush", weight = 2 },
+  { text = "Warriors breaching the firebase perimeter in three places simultaneously, too coordinated to be coincidence", weight = 2 },
+  { text = "A single warrior playing dead, waiting until a trooper gets close enough to identify, then the strike", weight = 1 },
+  { text = "Warriors emerging from the ground directly under the squad's position, the earth opening like a wound", weight = 2 },
+  { text = "Relentless wave assault, bugs dying by the dozen but more always coming, ammunition becoming a concern", weight = 2 },
+  { text = "Warriors attacking during a sandstorm, using the visibility reduction, approaching to close range before detection", weight = 1 },
+  { text = "Coordinated attack on the wounded, bugs prioritizing troopers who can't flee, cruel alien logic", weight = 1 },
+]
+
+[tanker_attacks]
+description = "Encounters with the acid-spraying tanks of the Arachnid army"
+entries = [
+  { text = "Tanker bug cresting the ridge, spraying acid in a wide arc, three troopers dissolving before they can scatter", weight = 2 },
+  { text = "Ambush tanker in a narrow canyon, no room to dodge, acid filling the passage like water", weight = 1 },
+  { text = "Wounded tanker, still dangerous, acid sac ruptured and leaking, creating an impassable zone", weight = 1 },
+  { text = "Two tankers advancing in formation, overlapping acid fields, cutting off retreat routes", weight = 1 },
+  { text = "Tanker guarding a tunnel entrance, won't move, won't be baited, has to be killed to advance", weight = 2 },
+  { text = "Suicidal tanker charge, it knows it's dying, trying to take as many troopers with it as possible", weight = 1 },
+  { text = "Tanker bug spraying into a bunker, the screams from inside audible over the hissing acid", weight = 1 },
+  { text = "Young tanker, smaller than normal, but the acid is just as deadly, and it's faster", weight = 1 },
+  { text = "Tanker erupting from underground directly into the squad's position, acid spray in all directions", weight = 2 },
+  { text = "Dead tanker, acid sac intact, one wrong shot and it ruptures, covering everything nearby", weight = 1 },
+]
+
+[hopper_ambushes]
+description = "Attacks from the flying Arachnid variant"
+entries = [
+  { text = "Hoppers diving from the sun, using the glare to mask their approach, first warning is screaming from above", weight = 2 },
+  { text = "Single hopper harassment, swooping and retreating, keeping the squad pinned while ground bugs flank", weight = 2 },
+  { text = "Hopper swarm darkening the sky, hundreds of them, dropping into the firebase like lethal rain", weight = 1 },
+  { text = "Hoppers targeting officers specifically, someone marked command structure, decapitation strike", weight = 1 },
+  { text = "Night hopper attack, silent gliding approach, first trooper dies without making a sound", weight = 1 },
+  { text = "Hoppers roosting in a ruined building, disturbed when the squad seeks cover, suddenly surrounded", weight = 2 },
+  { text = "Aerial dueling with drop ships, hoppers swarming retrieval boats, extraction under attack", weight = 2 },
+  { text = "Hopper carrying a warrior bug, drops it into the middle of the squad, terrifying tactic never seen before", weight = 1 },
+  { text = "Wounded hopper can't fly, still slashing with its limbs, cornered and desperate", weight = 1 },
+  { text = "Hoppers using thermal currents to gain altitude, then diving at terminal velocity, living missiles", weight = 1 },
+]
+
+[brain_bug_operations]
+description = "Encounters with the commanders of the hive"
+entries = [
+  { text = "Brain bug detected nearby, psionic pressure building, thoughts becoming sluggish, it's looking for you", weight = 2 },
+  { text = "Mission to capture a brain bug, it knows you're coming, every warrior in the hive converging on your position", weight = 1 },
+  { text = "Brain bug interrogation going wrong, the captured specimen is fighting back, psychics screaming", weight = 1 },
+  { text = "Brain bug influencing a trooper, they're acting wrong, subtle at first, then violent", weight = 1 },
+  { text = "Dead brain bug, bugs nearby going berserk, no coordination, but feral aggression is still lethal", weight = 1 },
+  { text = "Brain bug retreat, the hive pulling back, protecting its commander at the cost of everything else", weight = 1 },
+  { text = "Two brain bugs coordinating, tactics more sophisticated than anything encountered before", weight = 1 },
+  { text = "Brain bug using human captives as shields, forcing terrible choices on the assault team", weight = 1 },
+  { text = "Wounded brain bug, desperate, psychic assault intensifying as its physical form fails", weight = 1 },
+  { text = "Brain bug chamber discovered, vast and terrible, hundreds of drained human bodies lining the walls", weight = 1 },
+]
+
+[plasma_bombardment]
+description = "Encounters with the bug artillery"
+entries = [
+  { text = "Plasma bug opening fire from extreme range, the sky turning orange, firebase perimeter taking direct hits", weight = 2 },
+  { text = "Counter-battery operation, hunting plasma bugs before they can fire again, racing against the reload", weight = 2 },
+  { text = "Plasma trajectory identified, ground team vectoring air support, one chance to hit before the next salvo", weight = 1 },
+  { text = "Multiple plasma bugs in a fire pattern, overlapping bombardment zones, nowhere safe to retreat", weight = 1 },
+  { text = "Plasma bug targeting the landing zone, drop ships aborting, squad stranded until air clears", weight = 2 },
+  { text = "Close range plasma bug, found in a tunnel, the glow of its charging sac the only warning", weight = 1 },
+  { text = "Plasma bug eggs discovered, destroying them before they mature, time sensitive mission", weight = 1 },
+  { text = "Orbital plasma fire, bugs targeting ships in low orbit, the sky full of burning debris", weight = 1 },
+  { text = "Plasma bug wounded but not dead, charging randomly, bolts arcing in all directions", weight = 1 },
+  { text = "Walking plasma barrage, bugs walking fire across the position, tightening the kill zone methodically", weight = 2 },
+]
+
+[urban_warfare]
+description = "Combat in ruined human settlements"
+entries = [
+  { text = "Bugs in the colony buildings, using human infrastructure against the squad, firing through windows, doors", weight = 2 },
+  { text = "Street by street fighting, warriors emerging from storm drains, every intersection an ambush point", weight = 2 },
+  { text = "Civilians still present, bugs using them as cover, impossible shot selection", weight = 1 },
+  { text = "Colony power plant infested, clearing it without destroying the reactor, tight spaces and bug close combat", weight = 1 },
+  { text = "Underground transit tunnels, perfect bug territory, light and noise giving away position", weight = 2 },
+  { text = "Hospital building, wounded colonists and bugs, triage under fire", weight = 1 },
+  { text = "Shopping district turned killing ground, bugs using mannequins and displays for cover, surreal", weight = 1 },
+  { text = "Apartment block clearance, door to door, room to room, warrior behind every corner", weight = 2 },
+  { text = "Factory floor engagement, machinery providing cover and hazards for both sides", weight = 1 },
+  { text = "Colony communications tower, bugs on the upper levels, have to fight upward floor by floor", weight = 1 },
+]
+
+[drop_zone_landings]
+description = "The chaos of arriving on hostile ground"
+entries = [
+  { text = "Hot LZ, bugs already waiting, fire coming in before the pod doors even open", weight = 2 },
+  { text = "Scattered drop, squad members landing kilometers apart, bugs between them and rally point", weight = 2 },
+  { text = "Pod malfunction, crash landing, dazed and disoriented with bugs closing on the impact", weight = 1 },
+  { text = "Drop into a tunnel entrance, immediately in close quarters with warriors in the dark", weight = 1 },
+  { text = "Landing on a plasma bug position, point blank engagement, chaos and screaming", weight = 1 },
+  { text = "Perfect drop, but the intel was wrong, twice the expected bug presence, adaptation required", weight = 2 },
+  { text = "Drop ship hit during approach, rough landing, checking for survivors while bugs approach", weight = 2 },
+  { text = "Night drop, bugs navigating by other senses, troopers fighting blind", weight = 1 },
+  { text = "Contested extraction point, fighting to reach the boat, bugs between you and survival", weight = 2 },
+  { text = "Drop into acid-soaked terrain, tanker bugs have been here, limited mobility and cover", weight = 1 },
+]
+
+[defensive_actions]
+description = "Holding ground against bug assault"
+entries = [
+  { text = "Firebase perimeter breach, bugs inside the wire, hand to hand in the trenches", weight = 2 },
+  { text = "Ammunition running low, bugs know it, pressure increasing, resupply uncertain", weight = 2 },
+  { text = "Last stand, extraction impossible, making the bugs pay for every inch", weight = 1 },
+  { text = "Tunnel opening inside the perimeter, sealing it while bugs pour through", weight = 2 },
+  { text = "Night watch, bugs probing the line, testing for weakness, the real assault hasn't started", weight = 2 },
+  { text = "Wounded heavy, can't retreat, defending their position until medivac arrives", weight = 1 },
+  { text = "Relief force incoming, just have to hold until they arrive, bugs know about them too", weight = 1 },
+  { text = "Reactor about to go critical, bugs attacking, can't retreat, can't stop fighting", weight = 1 },
+  { text = "VIP protection, brain bug wants this psychic dead, throwing everything at the bunker", weight = 1 },
+  { text = "Retreat under fire, disciplined withdrawal becoming a rout, someone has to be rearguard", weight = 2 },
+]

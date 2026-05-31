@@ -32,6 +32,7 @@ from oracle.dice import DiceRoller
 from oracle.wargame import WargameAI, Doctrine, Aggression
 from oracle.tables import TableLoader
 from oracle.mood import MoodManager, Setting, Tone, Mode
+from oracle.gui.models.wargame_data import get_wargame_data
 
 
 # =============================================================================
@@ -94,7 +95,7 @@ class SessionConfig:
 class WargameState:
     """State tracking for wargame mode."""
     turn: int = 1
-    phase: str = "deployment"  # deployment, movement, shooting, combat, morale, end
+    phase: str = "Deployment"  # Deployment, movement, shooting, combat, morale, end
     player_casualties: int = 0
     enemy_casualties: int = 0
     player_units: List[str] = field(default_factory=list)
@@ -462,6 +463,9 @@ class OracleApp:
             }
             self.wargame_ai.aggression = aggression_map.get(self.config.aggression, Aggression.BALANCED)
 
+            # Initialize wargame state
+            self.wargame_state = WargameState()
+
         self.session_started = True
 
     # =========================================================================
@@ -526,6 +530,11 @@ class OracleApp:
 
     def _build_sidebar(self):
         """Build the session info sidebar (read-only, auto-updates)."""
+        # Branch based on game type
+        if self.config.game_type == "wargame":
+            self._build_wargame_sidebar()
+            return
+
         dpg.add_text("SESSION", color=COLORS["header"])
         dpg.add_separator()
 
@@ -575,6 +584,72 @@ class OracleApp:
             dpg.add_button(label="Load", callback=self._load_session, width=60)
             dpg.add_button(label="History", callback=self._show_history, width=70)
 
+    def _build_wargame_sidebar(self):
+        """Build wargame-specific sidebar with battle status."""
+        dpg.add_text("BATTLE STATUS", color=COLORS["header"])
+        dpg.add_separator()
+
+        # Turn and Phase section
+        dpg.add_text("TURN INFO", color=COLORS["subheader"])
+        with dpg.group(tag="sidebar_turn_info"):
+            turn = self.wargame_state.turn if self.wargame_state else 1
+            phase = self.wargame_state.phase if self.wargame_state else "Deployment"
+            dpg.add_text(f"Turn: {turn} | Phase: {phase}", color=COLORS["user"])
+        dpg.add_spacer(height=10)
+
+        # AI Doctrine section
+        dpg.add_text("AI DOCTRINE", color=COLORS["subheader"])
+        with dpg.group(tag="sidebar_doctrine"):
+            doctrine = self.wargame_ai.doctrine.display if self.wargame_ai else "Unknown"
+            aggression = self.wargame_ai.aggression.display if self.wargame_ai else "Unknown"
+            dpg.add_text(f"Doctrine: {doctrine}", color=COLORS["gm"])
+            dpg.add_text(f"Stance: {aggression}", color=COLORS["gm"])
+        dpg.add_spacer(height=10)
+
+        # Your Force section
+        dpg.add_text("YOUR FORCE", color=COLORS["subheader"])
+        with dpg.group(tag="sidebar_player_force"):
+            casualties = self.wargame_state.player_casualties if self.wargame_state else 0
+            dpg.add_text(f"Casualties: {casualties}", color=(100, 180, 100))
+        dpg.add_spacer(height=10)
+
+        # Enemy Force section
+        dpg.add_text("ENEMY FORCE", color=COLORS["subheader"])
+        with dpg.group(tag="sidebar_enemy_force"):
+            casualties = self.wargame_state.enemy_casualties if self.wargame_state else 0
+            dpg.add_text(f"Casualties: {casualties}", color=(180, 100, 100))
+        dpg.add_spacer(height=10)
+
+        # Objectives section
+        dpg.add_text("OBJECTIVES", color=COLORS["subheader"])
+        with dpg.group(tag="sidebar_objectives"):
+            dpg.add_text("No objectives set", color=COLORS["muted"])
+        dpg.add_spacer(height=10)
+
+        dpg.add_separator()
+
+        # Chaos slider (still useful for random events in wargame)
+        dpg.add_text("CHAOS", color=COLORS["subheader"])
+        with dpg.group(horizontal=True):
+            dpg.add_slider_int(
+                tag="sidebar_chaos_slider",
+                default_value=self.config.chaos,
+                min_value=1,
+                max_value=9,
+                width=-40,
+                callback=self._on_sidebar_chaos_change,
+            )
+            dpg.add_text(str(self.config.chaos), tag="sidebar_chaos_label")
+        dpg.add_spacer(height=10)
+
+        dpg.add_separator()
+
+        # Session controls
+        with dpg.group(horizontal=True):
+            dpg.add_button(label="Save", callback=self._save_session, width=60)
+            dpg.add_button(label="Load", callback=self._load_session, width=60)
+            dpg.add_button(label="History", callback=self._show_history, width=70)
+
     # =========================================================================
     # CAMPAIGN GENERATION
     # =========================================================================
@@ -584,6 +659,11 @@ class OracleApp:
         # Remove loading text
         if dpg.does_item_exist("chat_loading"):
             dpg.delete_item("chat_loading")
+
+        # Branch based on game type
+        if self.config.game_type == "wargame":
+            self._generate_wargame_opening()
+            return
 
         # Setting-specific location types
         setting_location_types = {
@@ -709,6 +789,82 @@ class OracleApp:
         # Refresh sidebar
         self._refresh_sidebar()
 
+    def _generate_wargame_opening(self):
+        """Generate tactical opening content for wargame mode."""
+        # Get doctrine and aggression display names
+        doctrine_display = self.wargame_ai.doctrine.display if self.wargame_ai else "Unknown"
+        aggression_display = self.wargame_ai.aggression.display if self.wargame_ai else "Unknown"
+        game_system = self.config.game_system or "Generic"
+
+        # Setting-specific tactical scenarios
+        setting_scenarios = {
+            "fantasy": [
+                "The enemy warhost assembles on the field before you",
+                "Your scouts report enemy forces moving to intercept",
+                "The opposing army has taken position on the high ground",
+            ],
+            "scifi_military": [
+                "Enemy contacts detected on long-range auspex",
+                "Intelligence reports hostile forces in the sector",
+                "Your strike force has made planetfall - engage at will",
+            ],
+            "historical": [
+                "The opposing force has been sighted across the valley",
+                "Battle lines are drawn - the enemy awaits your move",
+                "Your army faces the foe on the field of honor",
+            ],
+            "weird_war": [
+                "Unnatural fog covers the battlefield as the enemy approaches",
+                "The enemy masses under an ill-omened sky",
+                "Both armies prepare to clash in this cursed land",
+            ],
+        }
+
+        scenarios = setting_scenarios.get(self.config.setting, [
+            "The battlefield awaits. Your opponent fields their force."
+        ])
+        scenario = random.choice(scenarios)
+
+        # Build the tactical opening
+        opening_parts = []
+
+        # Header block
+        opening_parts.append("=" * 45)
+        opening_parts.append(f"TACTICAL ENGAGEMENT - TURN {self.wargame_state.turn}")
+        opening_parts.append("=" * 45)
+        opening_parts.append(f"Game System: {game_system}")
+        opening_parts.append(f"AI Doctrine: {doctrine_display} | Stance: {aggression_display}")
+        opening_parts.append("-" * 45)
+        opening_parts.append(f"**{self.wargame_state.phase.upper()} PHASE**")
+        opening_parts.append("")
+
+        # Tactical flavor text
+        opening_parts.append(scenario)
+        opening_parts.append("")
+
+        # Deployment guidance based on doctrine
+        doctrine_guidance = {
+            "Horde": "The enemy favors overwhelming numbers - expect aggressive swarm tactics.",
+            "Elite": "Quality troops oppose you - expect measured, precise strikes.",
+            "Defensive": "The enemy digs in - they will make you come to them.",
+            "Alpha Strike": "Maximum firepower incoming - the enemy will hit hard and fast.",
+            "Guerrilla": "Hit and run tactics expected - they will avoid direct engagement.",
+        }
+        guidance = doctrine_guidance.get(doctrine_display, "Expect flexible, adaptive tactics.")
+        opening_parts.append(f"*{guidance}*")
+        opening_parts.append("")
+
+        # Call to action
+        opening_parts.append("Deploy your forces and declare your battle plan.")
+        opening_parts.append("**What is your opening strategy?**")
+
+        # Add opening as GM message
+        opening_text = "\n".join(opening_parts)
+        self._add_message("gm", opening_text, "scene")
+
+        # Refresh sidebar (will show wargame content)
+        self._refresh_sidebar()
+
     # =========================================================================
     # CHAT & INPUT HANDLING
     # =========================================================================
@@ -733,6 +889,27 @@ class OracleApp:
         if text_lower.startswith("/roll ") or text_lower.startswith("/r "):
             self._handle_dice_command(text)
             return
+
+        # Wargame-specific commands
+        if self.config.game_type == "wargame":
+            if text_lower.startswith("/situation ") or text_lower.startswith("/sit "):
+                self._handle_situation_command(text)
+                return
+            if text_lower.startswith("/target "):
+                self._handle_target_command(text)
+                return
+            if text_lower.startswith("/morale "):
+                self._handle_morale_command(text)
+                return
+            if text_lower == "/event":
+                self._handle_event_command()
+                return
+            if text_lower.startswith("/phase"):
+                self._handle_phase_command(text)
+                return
+            if text_lower.startswith("/casualties ") or text_lower.startswith("/cas "):
+                self._handle_casualties_command(text)
+                return
 
         # Check for oracle question (ends with ?)
         if text.endswith("?"):
@@ -901,6 +1078,252 @@ class OracleApp:
         self._add_message("gm", response)
 
         self._refresh_sidebar()
+
+    # =========================================================================
+    # WARGAME COMMAND HANDLERS
+    # =========================================================================
+
+    def _handle_situation_command(self, text: str):
+        """AI analyzes situation and decides action."""
+        if not self.wargame_ai:
+            self._add_message("system", "Wargame AI not initialized. Start a wargame session first.")
+            return
+
+        # Extract situation description after /situation or /sit
+        parts = text.split(" ", 1)
+        situation = parts[1] if len(parts) > 1 else ""
+
+        if not situation.strip():
+            self._add_message("system", "Usage: /situation <description of battlefield>")
+            return
+
+        self._add_message("user", f"*Situation: {situation}*")
+
+        decision = self.wargame_ai.decide(situation)
+        rendered = self.wargame_ai.render_decision(decision)
+        self._add_message("gm", rendered, "event")
+
+    def _handle_target_command(self, text: str):
+        """AI prioritizes targets from list."""
+        if not self.wargame_ai:
+            self._add_message("system", "Wargame AI not initialized. Start a wargame session first.")
+            return
+
+        # Parse comma-separated targets after /target
+        parts = text.split(" ", 1)
+        target_text = parts[1] if len(parts) > 1 else ""
+
+        if not target_text.strip():
+            self._add_message("system", "Usage: /target <target1>, <target2>, ...")
+            return
+
+        targets = [t.strip() for t in target_text.split(",")]
+        self._add_message("user", f"*Evaluating targets: {', '.join(targets)}*")
+
+        selected = self.wargame_ai.roll_priority(targets)
+        self._add_message("gm", f"**Target Priority:** {selected}", "event")
+
+    def _handle_morale_command(self, text: str):
+        """Check morale at given casualty percentage."""
+        if not self.wargame_ai:
+            self._add_message("system", "Wargame AI not initialized. Start a wargame session first.")
+            return
+
+        parts = text.split()
+
+        if len(parts) < 2:
+            self._add_message("system", "Usage: /morale <casualty_percent>")
+            return
+
+        try:
+            # Accept both "25" and "25%" formats
+            pct_str = parts[1].rstrip("%")
+            pct = float(pct_str) / 100.0
+        except ValueError:
+            self._add_message("system", "Invalid percentage. Use: /morale 25")
+            return
+
+        self._add_message("user", f"*Morale check at {int(pct * 100)}% casualties*")
+        result = self.wargame_ai.roll_morale(pct)
+        self._add_message("gm", f"**Morale Result:** {result}", "event")
+
+    def _handle_event_command(self):
+        """Roll random battle event."""
+        if not self.wargame_ai:
+            self._add_message("system", "Wargame AI not initialized. Start a wargame session first.")
+            return
+
+        self._add_message("user", "*Rolling battle event...*")
+        event = self.wargame_ai.roll_event()
+        self._add_message("gm", f"**Battle Event:** {event}", "event")
+
+    def _handle_phase_command(self, text: str):
+        """Advance or set the current phase."""
+        # Initialize wargame state if needed
+        if not self.wargame_state:
+            self.wargame_state = WargameState()
+
+        # Get phases from TOML instead of hardcoded list
+        phases = None
+        try:
+            wargame_data = get_wargame_data()
+            if self.config.game_system:
+                # Map display name to system ID for TOML lookup
+                system_map = {
+                    "Generic": "generic",
+                    "Oldhammer 2E": "oldhammer_2e",
+                    "40K 10th Edition": "40k_10e",
+                    "Kill Team": "kill_team",
+                    "The Old World": "old_world",
+                    "Grimdark Future": "grimdark_future",
+                    "Trench Crusade": "trench_crusade",
+                    "Age of Fantasy": "age_of_fantasy",
+                }
+                system_id = system_map.get(self.config.game_system, "generic")
+                wargame_data.set_system(system_id)
+            phases = wargame_data.get_phases()
+        except Exception:
+            pass  # Fall through to use default phases
+
+        # Fallback if no phases loaded
+        if not phases:
+            phases = ["Deployment", "Movement", "Shooting", "Combat", "Morale"]
+
+        # Find current phase index (case-insensitive match)
+        current_idx = 0
+        current_phase_lower = self.wargame_state.phase.lower()
+        for i, phase in enumerate(phases):
+            if phase.lower() == current_phase_lower:
+                current_idx = i
+                break
+
+        # Advance to next phase
+        next_idx = (current_idx + 1) % len(phases)
+
+        # Wrap to new turn when we cycle back to first phase
+        if next_idx == 0:
+            self.wargame_state.turn += 1
+
+        self.wargame_state.phase = phases[next_idx]
+
+        self._add_message(
+            "gm",
+            f"**Turn {self.wargame_state.turn} - {self.wargame_state.phase} Phase**",
+            "event"
+        )
+
+        # Update sidebar to reflect new phase
+        self._refresh_sidebar()
+
+        # Check if this is an AI phase and trigger AI turn
+        phase_lower = self.wargame_state.phase.lower()
+        ai_phase_keywords = ["ai", "enemy turn", "opponent", "enemy phase"]
+        if any(kw in phase_lower for kw in ai_phase_keywords):
+            self._trigger_ai_turn()
+
+    def _trigger_ai_turn(self):
+        """Trigger automatic AI tactical analysis for the current phase."""
+        if not self.wargame_ai:
+            return
+
+        # Build situation context from current state
+        situation_parts = []
+
+        # Add phase context
+        phase = self.wargame_state.phase if self.wargame_state else "Unknown"
+        situation_parts.append(f"Phase: {phase}")
+
+        # Add casualty context
+        if self.wargame_state:
+            player_cas = self.wargame_state.player_casualties
+            enemy_cas = self.wargame_state.enemy_casualties
+
+            if player_cas > 30:
+                situation_parts.append("Enemy has taken heavy casualties")
+            elif player_cas > 10:
+                situation_parts.append("Enemy is bloodied")
+
+            if enemy_cas > 30:
+                situation_parts.append("Own forces heavily depleted")
+            elif enemy_cas > 10:
+                situation_parts.append("Own forces have taken losses")
+
+        # Create a generic tactical situation for the AI to analyze
+        situation_parts.append("Battlefield engagement in progress")
+
+        situation = ". ".join(situation_parts)
+
+        # Get AI decision
+        decision = self.wargame_ai.decide(situation)
+
+        # Build the response
+        response_parts = []
+        response_parts.append("=" * 40)
+        response_parts.append("**AI TURN - TACTICAL ANALYSIS**")
+        response_parts.append("=" * 40)
+        response_parts.append("")
+        response_parts.append(f"*The enemy ({self.wargame_ai.doctrine.display}) considers their options...*")
+        response_parts.append("")
+
+        # Show top threat assessment
+        if decision.threats:
+            response_parts.append("**Threat Assessment:**")
+            for threat in decision.threats[:3]:
+                icon = {"HIGH": "!!!", "MEDIUM": " ! ", "LOW": "   "}.get(threat.level.value, " ? ")
+                response_parts.append(f"  [{icon}] {threat.target}: {threat.reason}")
+            response_parts.append("")
+
+        # Show the decision
+        response_parts.append(f"**DECISION:** {decision.selected.description}")
+        response_parts.append("")
+        response_parts.append("*The enemy acts on their plan.*")
+
+        response_text = "\n".join(response_parts)
+        self._add_message("gm", response_text, "event")
+
+    def _handle_casualties_command(self, text: str):
+        """Track casualties for player or enemy."""
+        # Initialize wargame state if needed
+        if not self.wargame_state:
+            self.wargame_state = WargameState()
+
+        # Parse: /casualties player +5 or /casualties enemy +10
+        parts = text.split()
+
+        if len(parts) < 3:
+            self._add_message("system", "Usage: /casualties <player|enemy> <+/-amount>")
+            return
+
+        side = parts[1].lower()
+        try:
+            amount = int(parts[2])
+        except ValueError:
+            self._add_message("system", "Invalid amount. Use: /casualties player +5")
+            return
+
+        if side == "player":
+            new_value = self.wargame_state.player_casualties + amount
+            if new_value < 0:
+                self._add_message("system", "Cannot set casualties below 0")
+                return
+            self.wargame_state.player_casualties = new_value
+            current = new_value
+        elif side == "enemy":
+            new_value = self.wargame_state.enemy_casualties + amount
+            if new_value < 0:
+                self._add_message("system", "Cannot set casualties below 0")
+                return
+            self.wargame_state.enemy_casualties = new_value
+            current = new_value
+        else:
+            self._add_message("system", "Invalid side. Use 'player' or 'enemy'.")
+            return
+
+        self._add_message(
+            "gm",
+            f"**Casualties Updated:** {side.title()} now at {current}",
+            "event"
+        )
 
     def _generate_random_event(self) -> str:
         """Generate a substantial random event appropriate to the setting."""
@@ -1169,6 +1592,11 @@ class OracleApp:
 
     def _refresh_sidebar(self):
         """Refresh all sidebar sections."""
+        # Branch based on game type
+        if self.config.game_type == "wargame":
+            self._refresh_wargame_sidebar()
+            return
+
         if not self.gm:
             return
 
@@ -1234,6 +1662,79 @@ class OracleApp:
         dpg.set_value("sidebar_chaos_label", str(self.gm.memory.chaos_factor))
         if dpg.does_item_exist("header_chaos"):
             dpg.set_value("header_chaos", str(self.gm.memory.chaos_factor))
+
+    def _refresh_wargame_sidebar(self):
+        """Refresh wargame-specific sidebar sections."""
+        # Update turn info
+        if dpg.does_item_exist("sidebar_turn_info"):
+            dpg.delete_item("sidebar_turn_info", children_only=True)
+            with dpg.group(parent="sidebar_turn_info"):
+                turn = self.wargame_state.turn if self.wargame_state else 1
+                phase = self.wargame_state.phase if self.wargame_state else "Deployment"
+                dpg.add_text(f"Turn: {turn} | Phase: {phase}", color=COLORS["user"])
+
+        # Update doctrine info
+        if dpg.does_item_exist("sidebar_doctrine"):
+            dpg.delete_item("sidebar_doctrine", children_only=True)
+            with dpg.group(parent="sidebar_doctrine"):
+                doctrine = self.wargame_ai.doctrine.display if self.wargame_ai else "Unknown"
+                aggression = self.wargame_ai.aggression.display if self.wargame_ai else "Unknown"
+                dpg.add_text(f"Doctrine: {doctrine}", color=COLORS["gm"])
+                dpg.add_text(f"Stance: {aggression}", color=COLORS["gm"])
+
+        # Update player force
+        if dpg.does_item_exist("sidebar_player_force"):
+            dpg.delete_item("sidebar_player_force", children_only=True)
+            with dpg.group(parent="sidebar_player_force"):
+                casualties = self.wargame_state.player_casualties if self.wargame_state else 0
+                # Color based on casualties
+                if casualties < 10:
+                    color = (100, 200, 100)  # Green - fresh
+                elif casualties < 30:
+                    color = (180, 180, 100)  # Yellow - bloodied
+                else:
+                    color = (200, 100, 100)  # Red - heavy losses
+                dpg.add_text(f"Casualties: {casualties}", color=color)
+
+        # Update enemy force
+        if dpg.does_item_exist("sidebar_enemy_force"):
+            dpg.delete_item("sidebar_enemy_force", children_only=True)
+            with dpg.group(parent="sidebar_enemy_force"):
+                casualties = self.wargame_state.enemy_casualties if self.wargame_state else 0
+                # Color based on casualties (inverted - enemy losses are good for player)
+                if casualties < 10:
+                    color = (200, 100, 100)  # Red - enemy is fresh
+                elif casualties < 30:
+                    color = (180, 180, 100)  # Yellow - enemy is bloodied
+                else:
+                    color = (100, 200, 100)  # Green - heavy enemy losses
+                dpg.add_text(f"Casualties: {casualties}", color=color)
+
+        # Update objectives
+        if dpg.does_item_exist("sidebar_objectives"):
+            dpg.delete_item("sidebar_objectives", children_only=True)
+            with dpg.group(parent="sidebar_objectives"):
+                if self.wargame_state and self.wargame_state.objectives:
+                    for obj in self.wargame_state.objectives[:3]:
+                        obj_name = obj.get("name", "Unknown")
+                        obj_status = obj.get("status", "contested")
+                        if obj_status == "held":
+                            color = (100, 200, 100)
+                        elif obj_status == "lost":
+                            color = (200, 100, 100)
+                        else:
+                            color = COLORS["muted"]
+                        dpg.add_text(f"- {obj_name} ({obj_status})", color=color)
+                else:
+                    dpg.add_text("No objectives set", color=COLORS["muted"])
+
+        # Update chaos display
+        if dpg.does_item_exist("sidebar_chaos_slider"):
+            dpg.set_value("sidebar_chaos_slider", self.config.chaos)
+        if dpg.does_item_exist("sidebar_chaos_label"):
+            dpg.set_value("sidebar_chaos_label", str(self.config.chaos))
+        if dpg.does_item_exist("header_chaos"):
+            dpg.set_value("header_chaos", str(self.config.chaos))
 
     # =========================================================================
     # DIALOGS

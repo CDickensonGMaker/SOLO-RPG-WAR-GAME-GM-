@@ -1,0 +1,93 @@
+# WWII Character Traits
+# The marks that total war leaves on soldiers and civilians
+
+[combat_veteran]
+description = "Traits forged in the crucible of war"
+entries = [
+    "Thousand-yard stare, eyes that have seen too much",
+    "Flinches at sudden noises, even years later",
+    "Sleeps light and never with back to door",
+    "Counts ammunition obsessively, always knows the number",
+    "Never wastes food, remembers hunger",
+    "Checks exits in every room automatically",
+    "Maintains weapons with religious devotion",
+    "Distrusts anyone who hasn't been there",
+    "Calm under fire, panics in peace",
+    "Smells death before seeing it",
+    "Hyperaware of terrain and cover",
+    "Talks to dead friends when alone"
+]
+
+[survivor]
+description = "Those who endured occupation, camps, and bombing"
+entries = [
+    "Hoards food even when plenty exists",
+    "Speaks carefully, words once meant death",
+    "Startles at uniforms of any kind",
+    "Numbers tattooed on forearm",
+    "Refuses to speak of the camps",
+    "Prays in a language thought extinct",
+    "Flinches at German being spoken",
+    "Survivor guilt that never fades",
+    "Searches every crowd for lost family",
+    "Sleeps with shoes on, ready to run"
+]
+
+[partisan_fighter]
+description = "Resistance and underground traits"
+entries = [
+    "Trusts no one completely, not even comrades",
+    "Multiple identities memorized perfectly",
+    "Expert at reading people's loyalties",
+    "Knows every safe house in the region",
+    "Sleeps in a different place each night",
+    "Carries cyanide pill, just in case",
+    "Recognizes collaborators by their behavior",
+    "Patient, waits months for right moment",
+    "Ruthless when necessary, haunted by it",
+    "Never writes anything down"
+]
+
+[homefront]
+description = "Civilians in total war"
+entries = [
+    "Rations everything, even affection",
+    "Waits for telegrams with dread",
+    "Works double shifts without complaint",
+    "Gold star in the window, son not coming home",
+    "Victory garden tender, fighting with tomatoes",
+    "Writes letters that never say what's really felt",
+    "Prays for strangers' children too",
+    "Suspects neighbors of insufficient patriotism",
+    "Sees spies everywhere, usually wrong"
+]
+
+[enemy_complexity]
+description = "Not all Germans were Nazis, not all Allies were saints"
+entries = [
+    "Wehrmacht soldier, follows orders, questions nothing",
+    "Nazi true believer, ideology as identity",
+    "German who hid Jewish neighbors",
+    "Allied soldier who committed war crimes",
+    "Collaborator for survival, not belief",
+    "Enemy medic who saved American lives",
+    "Japanese soldier who showed mercy",
+    "American guard who was cruel to prisoners",
+    "German deserter, conscience over country",
+    "Italian officer who defied execution orders"
+]
+
+[psychological]
+description = "The mental toll of war"
+entries = [
+    "Battle fatigue, called shell shock last time",
+    "Guilt over surviving when friends didn't",
+    "Nightmares every night since Kasserine",
+    "Anger that never quite goes away",
+    "Emotional numbness, can't feel joy",
+    "Hypervigilance exhausting body and mind",
+    "Drinks to forget, remembers anyway",
+    "Shakes hands that once were steady",
+    "Laughs at inappropriate moments",
+    "Cries without warning or reason"
+]

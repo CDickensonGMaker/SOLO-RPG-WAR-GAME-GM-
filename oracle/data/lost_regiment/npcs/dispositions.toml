@@ -1,0 +1,45 @@
+# Lost Regiment NPC Dispositions
+# Attitudes toward the displaced, natives, and current situation
+
+[dispositions]
+entries = [
+    # Toward the Regiment/Displaced
+    "Fanatically loyal to regiment as only family left",
+    "Growing resentment at sacrifices demanded by leadership",
+    "Professional dedication without emotional attachment",
+    "Nostalgic for regiment's past glory in the old world",
+    "Views regiment's mission as sacred civilizing duty",
+    "Privately doubts leadership but serves faithfully",
+    "Waiting for opportunity to take command",
+    "Sees regiment as temporary until return home becomes possible",
+
+    # Toward Natives/Locals
+    "Genuine respect and affection for local people",
+    "Condescending paternalism toward 'primitives'",
+    "Married into native community, torn loyalties",
+    "Views natives as tools for survival, nothing more",
+    "Became more native than the natives themselves",
+    "Frustrated by native resistance to change",
+    "Protective to the point of sacrificing regiment's interests",
+    "Suspicious of all natives after betrayal",
+
+    # Toward the Enemy
+    "Burning hatred that allows no quarter",
+    "Professional respect for worthy adversary",
+    "Secret admiration for enemy's certainty",
+    "Terror masked as aggression",
+    "Sees enemy as humans in the end",
+    "Obsessive need to understand enemy thinking",
+    "Vengeful after personal loss to enemy action",
+    "Pragmatic willingness to negotiate",
+
+    # Toward Current Situation
+    "Grimly determined to survive at any cost",
+    "Found unexpected meaning and purpose",
+    "Barely functional, operating on routine alone",
+    "Optimistic about building something lasting",
+    "Nihilistic acceptance of eventual doom",
+    "Active hope through constant action",
+    "Philosophical peace with circumstances",
+    "Desperate search for any way out"
+]

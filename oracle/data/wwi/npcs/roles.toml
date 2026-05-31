@@ -1,0 +1,148 @@
+# WWI Military and Civilian Roles
+# The machinery of industrial warfare
+
+[infantry]
+description = "The poor bloody infantry"
+entries = [
+    { name = "Private", description = "The anonymous thousands, numbered and expendable" },
+    { name = "Lance Corporal", description = "One stripe and double the responsibility" },
+    { name = "Corporal", description = "Commands a section, knows every man will die" },
+    { name = "Sergeant", description = "The backbone of the army, keeps order in chaos" },
+    { name = "Company Sergeant Major", description = "Terror of privates, pillar of the company" },
+    { name = "Platoon Commander", description = "Young subaltern, three months to live on average" },
+    { name = "Company Commander", description = "Captain watching his company dwindle" },
+    { name = "Battalion Commander", description = "Colonel who must send men to certain death" },
+    { name = "Bomber", description = "Grenade specialist, clears trenches in raids" },
+    { name = "Lewis Gunner", description = "Carries the squad's portable firepower" },
+    { name = "Sniper", description = "Patient killer, one shot one death" },
+    { name = "Scout", description = "Crawls through no man's land, mapping the enemy" },
+    { name = "Runner", description = "Carries messages when wires are cut, shortest lifespan" },
+    { name = "Stretcher Bearer", description = "Unarmed, retrieves wounded under fire" },
+    { name = "Wiring Party Member", description = "Night work putting up barbed wire" },
+    { name = "Sentry", description = "Watches the periscope, never blinks" },
+    { name = "Trench Raider", description = "Night attacks with clubs and knives" }
+]
+
+[specialists]
+description = "Technical and support roles"
+entries = [
+    { name = "Machine Gunner", description = "Operates the killing machines, hated by both sides" },
+    { name = "Artillery Observer", description = "Forward observer calling in the guns" },
+    { name = "Artillery Gunner", description = "Serves the howitzers miles behind the line" },
+    { name = "Signaller", description = "Maintains telephone lines under bombardment" },
+    { name = "Tunneler", description = "Digs beneath no man's land, listens for counter-miners" },
+    { name = "Pioneer", description = "Combat engineer, builds and destroys" },
+    { name = "Sapper", description = "Plants mines, defuses enemy explosives" },
+    { name = "Gas Sentry", description = "Watches for the yellow-green cloud" },
+    { name = "Flame Thrower Operator", description = "Living target carrying liquid fire" },
+    { name = "Trench Mortar Crew", description = "Lobs Stokes bombs into enemy trenches" },
+    { name = "Tank Crewman", description = "Pioneers of armored warfare, cooking in iron boxes" },
+    { name = "Motorcycle Dispatch Rider", description = "Carries orders through shellfire" },
+    { name = "Carrier Pigeon Handler", description = "Last resort communication" }
+]
+
+[cavalry]
+description = "The obsolete aristocracy of war"
+entries = [
+    { name = "Cavalry Trooper", description = "Mounted soldier waiting for breakthrough that never comes" },
+    { name = "Lancer", description = "Still carries a lance in the age of machine guns" },
+    { name = "Hussar", description = "Light cavalry, flashy uniforms, useless against wire" },
+    { name = "Dragoon", description = "Mounted infantry, at least can dismount" },
+    { name = "Horse Holder", description = "Watches the mounts while others fight" }
+]
+
+[aviation]
+description = "Knights of the air"
+entries = [
+    { name = "Scout Pilot", description = "Fighter pilot, life expectancy eleven days" },
+    { name = "Reconnaissance Pilot", description = "Photographs enemy lines, essential target" },
+    { name = "Bomber Pilot", description = "Drops ordnance on strategic targets" },
+    { name = "Observer", description = "Rear gunner and photographer, watches the tail" },
+    { name = "Balloon Observer", description = "Sits in hydrogen death trap spotting artillery" },
+    { name = "Ground Crew Chief", description = "Keeps the crates flying" },
+    { name = "Rigger", description = "Maintains the fabric and wire" },
+    { name = "Fitter", description = "Keeps the engines running" },
+    { name = "Armorer", description = "Loads the synchronized guns" }
+]
+
+[medical]
+description = "Those who try to undo the damage"
+entries = [
+    { name = "Regimental Medical Officer", description = "Doctor in the front line aid post" },
+    { name = "Field Surgeon", description = "Operates in casualty clearing stations" },
+    { name = "Nursing Sister", description = "Trained nurse in military hospital" },
+    { name = "VAD Nurse", description = "Voluntary Aid Detachment, volunteers learning fast" },
+    { name = "Orderly", description = "Carries, cleans, assists, sees everything" },
+    { name = "Ambulance Driver", description = "Navigates shell-cratered roads with wounded" },
+    { name = "Chaplain", description = "Offers last rites more often than sermons" },
+    { name = "Shell Shock Ward Attendant", description = "Cares for the mentally broken" }
+]
+
+[navy]
+description = "The silent service"
+entries = [
+    { name = "Able Seaman", description = "Trained sailor of the Grand Fleet" },
+    { name = "Stoker", description = "Feeds the coal furnaces in hell's heat" },
+    { name = "Gunnery Officer", description = "Directs the great guns of the dreadnoughts" },
+    { name = "Submarine Commander", description = "U-boat captain, hunter of convoys" },
+    { name = "Destroyer Captain", description = "Commands the greyhounds of the fleet" },
+    { name = "Naval Aviator", description = "Flies from ships or coastal stations" },
+    { name = "Q-Ship Sailor", description = "Disguised merchantman, surprise for submarines" }
+]
+
+[staff_and_command]
+description = "Those who decide, miles from the guns"
+entries = [
+    { name = "Staff Officer", description = "Red tabs, clean uniform, moves pins on maps" },
+    { name = "Intelligence Officer", description = "Interrogates prisoners, reads aerial photos" },
+    { name = "Divisional General", description = "Commands fifteen thousand men he'll never see" },
+    { name = "Corps Commander", description = "Responsible for a section of the line" },
+    { name = "Army Commander", description = "The butcher's bill comes to his desk" },
+    { name = "Liaison Officer", description = "Coordinates between allied armies" },
+    { name = "Provost Marshal", description = "Military police commander" }
+]
+
+[support]
+description = "The vast tail behind the tooth"
+entries = [
+    { name = "Quartermaster", description = "Supplies everything from bullets to bully beef" },
+    { name = "Cook", description = "Produces meals from nothing, never thanked" },
+    { name = "Farrier", description = "Keeps the horses and mules shod" },
+    { name = "Transport Driver", description = "Brings supplies forward on rutted roads" },
+    { name = "Railway Operating Division", description = "Runs the vital supply trains" },
+    { name = "Veterinary Officer", description = "Treats the thousands of wounded animals" },
+    { name = "Graves Registration", description = "Identifies and buries the dead" },
+    { name = "Postal Clerk", description = "Sorts mail, the lifeline to home" },
+    { name = "Censor", description = "Reads letters, blacks out truth" },
+    { name = "Interpreter", description = "Bridges language gaps with allies and prisoners" }
+]
+
+[civilians]
+description = "Those caught in the war's wake"
+entries = [
+    { name = "War Correspondent", description = "Writes sanitized lies for home consumption" },
+    { name = "Munitions Worker", description = "Woman making shells, yellow with TNT" },
+    { name = "Land Girl", description = "Woman farming while men fight" },
+    { name = "Refugee", description = "Fled the advancing armies, lost everything" },
+    { name = "Belgian Civilian", description = "Occupied, starving, watching" },
+    { name = "French Farmer", description = "Tries to work land between the trenches" },
+    { name = "Estaminet Owner", description = "Runs a bar near the front, waters the wine" },
+    { name = "Prostitute", description = "Serves the soldiers in rear areas" },
+    { name = "Profiteer", description = "Makes money from others' suffering" },
+    { name = "Conscientious Objector", description = "Refuses to kill, faces contempt and prison" },
+    { name = "War Widow", description = "Received the telegram, wears black forever" },
+    { name = "Factory Owner", description = "Contracts for war materials, never sees the mud" }
+]
+
+[specialized_units]
+description = "Unique formations of the war"
+entries = [
+    { name = "Harlem Hellfighter", description = "African American soldier fighting for a country that doesn't want him" },
+    { name = "Foreign Legionnaire", description = "Fighting for France, running from something" },
+    { name = "Gurkha", description = "Nepalese soldier with kukri, feared by all" },
+    { name = "Stormtrooper", description = "German elite, new infiltration tactics" },
+    { name = "Anzac", description = "Australian or New Zealander, far from home" },
+    { name = "Chinese Labour Corps", description = "Digs trenches, buries dead, invisible to history" },
+    { name = "Indian Sepoy", description = "Colonial soldier fighting Europe's war" },
+    { name = "Senegalese Tirailleur", description = "African colonial troops, used as shock troops" }
+]

@@ -1,0 +1,69 @@
+# Alternate History NPC Traits
+# Characteristics reflecting how people relate to divergent timelines and changed histories
+
+[traits]
+entries = [
+  # Timeline Memory Traits
+  { text = "Remembers the original timeline - carries vivid memories of how history 'should' have gone, causing constant cognitive dissonance", weight = 3 },
+  { text = "Complete adaptation to changed history - has no memory of any other timeline and finds claims of alternatives delusional", weight = 2 },
+  { text = "Questions what's real - caught between conflicting memories, unsure which history is the 'true' one", weight = 2 },
+  { text = "Dual memory syndrome - remembers two incompatible timelines equally vividly, both feeling completely authentic", weight = 2 },
+  { text = "Fading original memories - once remembered the other timeline but those memories are slowly disappearing", weight = 1 },
+  { text = "Implanted timeline memories - has memories of events they never experienced, possibly from another version of themselves", weight = 1 },
+  { text = "Timeline blind - completely unable to perceive or comprehend alternate history concepts", weight = 1 },
+  { text = "Hyper-sensitive to divergences - notices tiny details that reveal this timeline is 'wrong'", weight = 2 },
+
+  # Relationship to the Change
+  { text = "Benefits enormously from the divergence - their family rose to power because history changed as it did", weight = 2 },
+  { text = "Lost everything when history changed - in the original timeline they were wealthy/powerful/happy", weight = 2 },
+  { text = "Caused the change deliberately - their actions at the divergence point created this timeline", weight = 1 },
+  { text = "Accidental divergence catalyst - unknowingly did something that changed history forever", weight = 1 },
+  { text = "Would have never existed - only born because of the timeline change, has no counterpart elsewhere", weight = 1 },
+  { text = "Displaced by their alternate self - their other-timeline version took their place, identity, life", weight = 1 },
+  { text = "Merged with alternate self - contains memories and personality fragments from multiple versions", weight = 1 },
+  { text = "Hunted by timeline preservers - marked for elimination to 'restore' the original history", weight = 1 },
+
+  # Psychological Responses
+  { text = "Desperate to restore original timeline - will do anything to undo the divergence and return to 'correct' history", weight = 2 },
+  { text = "Fiercely protective of changed timeline - any attempt to alter this history is an existential threat", weight = 2 },
+  { text = "Timeline nihilist - believes no version of history is more 'real' than another, all equally meaningless", weight = 1 },
+  { text = "Obsessive divergence researcher - catalogues every difference between timelines with manic precision", weight = 1 },
+  { text = "Denial of change - insists the 'official' history is correct despite overwhelming evidence", weight = 1 },
+  { text = "Change addiction - craves the rush of experiencing timeline shifts, seeks them out", weight = 1 },
+  { text = "Paralyzing awareness - knowing how fragile reality is makes them afraid to act, lest they cause more changes", weight = 1 },
+  { text = "Comfortable with uncertainty - accepts that multiple histories can all be equally valid", weight = 1 },
+
+  # Adaptation Traits
+  { text = "Perfect cultural mimicry - has completely adopted the customs of the changed timeline, no traces of 'before'", weight = 1 },
+  { text = "Cultural mismatch - constantly makes references and uses phrases that don't exist in this timeline", weight = 2 },
+  { text = "Language drift confusion - speaks a version of the language with subtle differences from this timeline's usage", weight = 1 },
+  { text = "Technology dissonance - expects devices that don't exist, confused by tech that developed differently here", weight = 2 },
+  { text = "Historical reference errors - keeps mentioning events, people, places that never existed in this timeline", weight = 2 },
+  { text = "Religious practice anomalies - follows a faith tradition that evolved differently in the original timeline", weight = 1 },
+  { text = "Monetary confusion - keeps expecting currency, prices, economic systems from another history", weight = 1 },
+  { text = "Political naivety - doesn't understand the power structures because they're so different from what they knew", weight = 1 },
+
+  # Knowledge and Skills
+  { text = "Knows the divergence point exactly - understands precisely when and why history changed", weight = 2 },
+  { text = "Has artifacts from another timeline - possesses objects that shouldn't exist in this history", weight = 2 },
+  { text = "Anachronistic knowledge - knows things that haven't been discovered yet in this timeline", weight = 2 },
+  { text = "Lost knowledge keeper - remembers technologies, arts, or sciences that this timeline never developed", weight = 1 },
+  { text = "Cross-timeline skills - trained in methods and techniques from another history's traditions", weight = 1 },
+  { text = "Historical prediction accuracy - knows what 'would' have happened, useful for understanding cause/effect", weight = 1 },
+  { text = "Alternate language fluency - speaks languages that evolved differently or don't exist here", weight = 1 },
+  { text = "Timeline navigation intuition - has a sense for finding crossing points and weak spots between histories", weight = 1 },
+
+  # Social Position
+  { text = "Displaced noble - aristocrat from a timeline where their family had power, now a nobody", weight = 1 },
+  { text = "Accidental elite - ordinary person whose alternate self's accomplishments benefit them here", weight = 1 },
+  { text = "Stateless in all timelines - belongs nowhere, recognized by no nation in any history", weight = 1 },
+  { text = "Timeline refugee community leader - organizes and speaks for displaced persons from other histories", weight = 1 },
+  { text = "Cross-timeline family ties - has relatives who exist in both timelines but are very different people", weight = 1 },
+  { text = "Collaborator stigma - known for working with whoever won in this timeline, trusted by no one", weight = 1 },
+  { text = "Resistance hero status - famous for opposing the victors, though they remember no such actions", weight = 1 },
+  { text = "Historical figure descendant - their ancestor was important, but only in one timeline's version of events", weight = 1 },
+
+  # Physical and Biological Traits
+  { text = "Timeline scar - carries physical marks from wounds that never happened in this history", weight = 1 },
+  { text = "Genetic impossibility - their DNA shows heritage that couldn't exist given this timeline's history", weight = 1 },
+]

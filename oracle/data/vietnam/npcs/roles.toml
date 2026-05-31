@@ -1,0 +1,88 @@
+# Vietnam War Roles
+# The jobs that defined the war
+
+[roles]
+
+# Ground Pounders (Infantry)
+infantry = [
+    { id = "fng", name = "FNG (Fucking New Guy)", desc = "Fresh from the World, still believes in something. Clean boots, unfaded fatigues, eyes too wide. Hasn't learned to sleep through mortar attacks yet." },
+    { id = "grunt", name = "Grunt", desc = "Infantry rifleman humping the boonies. Carries too much, sleeps too little, doesn't ask why anymore. Knows which sounds mean incoming." },
+    { id = "short_timer", name = "Short-Timer", desc = "Counting days on a calendar drawn on helmet liner. Less than 30 and a wake-up. Getting superstitious, won't go outside the wire." },
+    { id = "point_man", name = "Point Man", desc = "Walks first into everything. Either has supernatural instincts or a death wish. Average lifespan in contact: seconds." },
+    { id = "rto", name = "RTO (Radio Telephone Operator)", desc = "Humps the PRC-25 radio. First target for enemy snipers. The LT's shadow and lifeline to artillery." },
+    { id = "grenadier", name = "M79 Grenadier", desc = "Carries the 'Thumper' or 'Blooper'. Lobs 40mm rounds with Kentucky windage. Devastating in the right hands." },
+    { id = "machine_gunner", name = "M60 Gunner", desc = "Carries 'The Pig' - 23 pounds of belt-fed persuasion. Walks heavy, shoots heavier. Burns through barrel and ammo." },
+    { id = "tunnel_rat", name = "Tunnel Rat", desc = "Small, crazy, volunteers for the worst job. Goes into Cu Chi tunnels with a flashlight, pistol, and prayer. Claustrophobia is a luxury." },
+    { id = "squad_leader", name = "Squad Leader", desc = "E-5 or E-6 keeping 9-12 men alive. Makes decisions that get people killed. Can't show doubt." },
+    { id = "platoon_sergeant", name = "Platoon Sergeant", desc = "The actual leader - LTs rotate, sergeants endure. Knows which orders to ignore and how to write letters home." },
+]
+
+# Special Operations
+special_ops = [
+    { id = "lrrp", name = "LRRP Team Leader", desc = "Long Range Reconnaissance Patrol. Five men who walk where divisions fear to tread. Eyes and ears operating alone in Indian country." },
+    { id = "lrrp_member", name = "LRRP Team Member", desc = "Specialist in silence. Can sit motionless for hours watching trails. Extraction is never guaranteed." },
+    { id = "sog", name = "SOG Operator", desc = "Studies and Observations Group - the blackest of ops. Cross-border missions that don't exist. Plausible deniability walking." },
+    { id = "phoenix", name = "Phoenix Program Operator", desc = "CIA's assassination and 'neutralization' program. Targets VC infrastructure. The body count that matters most, counted differently." },
+    { id = "green_beret", name = "Green Beret (SF)", desc = "Special Forces. Training indigenous forces, winning hearts and minds with a rifle in one hand. Fluent in local dialects and ultraviolence." },
+    { id = "seal", name = "Navy SEAL", desc = "Water insertion specialists. Mekong Delta operations. Comes from the river, disappears into the river. Leaves only bodies." },
+    { id = "force_recon", name = "Force Recon Marine", desc = "Deep reconnaissance, direct action. First in, information out. Swift, silent, deadly - and they mean it." },
+    { id = "kit_carson", name = "Kit Carson Scout", desc = "Former VC turned guide. Knows the trails, the tactics, the tunnels. Trusted by necessity, watched always." },
+]
+
+# Aviation
+aviation = [
+    { id = "huey_pilot", name = "Huey Pilot", desc = "UH-1 'Slick' driver. Inserts troops into hell and extracts what's left. Hovers under fire because someone's bleeding." },
+    { id = "door_gunner", name = "Door Gunner", desc = "M60 hanging out the side at 100 knots. 'Get some!' is the prayer. Sees everything from above, sleeps badly." },
+    { id = "crew_chief", name = "Crew Chief", desc = "Keeps the bird flying. Knows every sound the Huey makes. Mother hen to the aircraft and her crew." },
+    { id = "cobra_pilot", name = "Cobra Pilot", desc = "AH-1 gunship jockey. Brings the hurt with rockets and minigun. Guardian angel for troops in contact." },
+    { id = "loach_pilot", name = "Loach Pilot", desc = "OH-6 'Loach' scout. Flying low and slow to draw fire. Bait that shoots back." },
+    { id = "medevac_pilot", name = "Dustoff Pilot", desc = "Medevac pilot. Unarmed, flies into hot LZs marked with smoke. When you hear rotors, you might live." },
+    { id = "chinook_pilot", name = "Chinook Pilot", desc = "CH-47 heavy lift. Resupply, artillery positioning, mass casualty evacuation. The war's logistics backbone." },
+    { id = "fac", name = "FAC (Forward Air Controller)", desc = "O-1 Bird Dog pilot marking targets for fast movers. Low and slow over the canopy, painting death with Willie Pete." },
+]
+
+# Support
+support = [
+    { id = "medic", name = "Combat Medic (Doc)", desc = "Saves lives with morphine, pressure, and miracles. No weapon heavier than a .45. Most respected man in the platoon." },
+    { id = "corpsman", name = "Navy Corpsman", desc = "Marine's medic. 'Doc' runs toward the screaming. FMF combat medicine under fire." },
+    { id = "artillery_fdc", name = "Artillery FDC", desc = "Fire Direction Center. Turns grid coordinates into steel rain. The math that kills at distance." },
+    { id = "forward_observer", name = "Forward Observer", desc = "Walks with infantry, calls in artillery. 'Shot, over. Splash, over.' The voice of the big guns." },
+    { id = "combat_engineer", name = "Combat Engineer", desc = "Builds firebases, clears mines, demolishes bunkers. Construction worker with explosives clearance." },
+    { id = "dog_handler", name = "Scout Dog Handler", desc = "German Shepherd partner finds what men miss. The dog's nose saves lives. The dog doesn't come home." },
+]
+
+# Rear Echelon
+rear_echelon = [
+    { id = "remf", name = "REMF (Rear Echelon MF)", desc = "Support troop who's never seen bush. Clean uniforms, hot chow, air conditioning. Grunts' favorite target for scorn." },
+    { id = "clerk", name = "Company Clerk", desc = "Typewriter warrior processing paperwork. Knows everyone's status, rotation date, and who's getting Article 15'd." },
+    { id = "supply_sergeant", name = "Supply Sergeant", desc = "Master of the black market and 'midnight requisition'. Can get anything for the right trade." },
+    { id = "mp", name = "Military Police", desc = "Law enforcement in a lawless place. Breaking up fights, guarding prisoners, convoys, and Saigon's chaos." },
+    { id = "mess_sergeant", name = "Mess Sergeant", desc = "Keeps the rear fed. C-rations are what grunts get; mess hall is civilization's last outpost." },
+    { id = "motor_pool", name = "Motor Pool Sergeant", desc = "Keeps vehicles running on prayers and scrounged parts. Grease monkey for the green machine." },
+]
+
+# Medical
+medical = [
+    { id = "nurse", name = "Army Nurse", desc = "12-hour shifts in the OR. Young men die holding her hand. The smell of blood never washes off." },
+    { id = "surgeon", name = "Combat Surgeon", desc = "Meatball surgery - save who you can. Triage decisions that haunt. 'Expectant' means you're out of miracles." },
+    { id = "psychiatrist", name = "Division Psychiatrist", desc = "Treating combat fatigue, drug addiction, and men who've seen too much. R&R is a band-aid on amputation." },
+    { id = "graves_registration", name = "Graves Registration", desc = "Processing the dead. Identifying remains, personal effects, notification. The war's final accountant." },
+]
+
+# Intelligence
+intelligence = [
+    { id = "intel_officer", name = "S-2 Intelligence Officer", desc = "Analyzes reports, interrogation results, and signal intercepts. Knows more than he can tell. Wrong sometimes, deadly when right." },
+    { id = "interrogator", name = "Interrogator", desc = "Extracts information by various means. Some within regs, some not. 'Enhanced' is a euphemism." },
+    { id = "cia_operative", name = "CIA Case Officer", desc = "Runs agents, funds programs, denies everything. The war behind the war. 'Other Government Agency' on paper." },
+    { id = "analyst", name = "Intelligence Analyst", desc = "Maps enemy movements, order of battle, infrastructure. The big picture from fragments." },
+]
+
+# Civilians and Press
+civilians = [
+    { id = "correspondent", name = "War Correspondent", desc = "Journalist with camera or typewriter. Seeking truth, selling papers. Some embed, some judge from Saigon." },
+    { id = "photographer", name = "Combat Photographer", desc = "Captures the war frame by frame. Eddie Adams, Larry Burrows. The pictures that changed minds." },
+    { id = "contractor", name = "Civilian Contractor", desc = "Brown & Root, Pacific Architects. Building the war's infrastructure. Paid better than any soldier." },
+    { id = "missionary", name = "Missionary", desc = "Still trying to save souls in a killing field. Runs orphanages, hospitals. Faith tested daily." },
+    { id = "bar_girl", name = "Bar Girl", desc = "Saigon's service industry. Tea and company at inflated prices. Sometimes VC, always surviving." },
+    { id = "mama_san", name = "Mama-San", desc = "Runs things - laundry, hooch cleaning, information. Knows more than she tells. The economy of occupation." },
+]

@@ -1,0 +1,62 @@
+# Neutral Complications
+# The unexpected - neither clearly good nor bad
+
+[tactical_changes]
+description = "Situations that require adaptation"
+entries = [
+  { text = "Bug behavior changes mid-battle. Something's different. They're retreating when they should be pressing. Why?", weight = 2 },
+  { text = "New orders redirect the mission. Original objective abandoned. New target is across hostile territory.", weight = 2 },
+  { text = "Unknown unit requesting support. Frequency authentic but unit designation doesn't match any in the sector.", weight = 1 },
+  { text = "Terrain is different than maps indicated. Natural disaster or bug modification? Either way, plans change.", weight = 2 },
+  { text = "Weather turning. Dust storm, electrical disturbance, something. Limited visibility, communications degraded.", weight = 2 },
+  { text = "Bug patrol changes route. They're coming this way, but they haven't detected you. Yet.", weight = 2 },
+  { text = "Supply cache discovered. Someone stashed equipment here. Recently. Who and why?", weight = 1 },
+  { text = "Reinforcements arriving. Different unit than expected. Their sergeant outranks yours.", weight = 2 },
+  { text = "The bugs have stopped attacking. Complete silence. No movement detected. Unnerving.", weight = 2 },
+  { text = "Psychic gets a reading. Something big is happening nearby. Can't tell if it's opportunity or threat.", weight = 1 },
+]
+
+[personnel_matters]
+description = "Human factors that complicate"
+entries = [
+  { text = "Replacement troops arrive mid-mission. Green. Untested. Integrating them is your problem now.", weight = 2 },
+  { text = "Senior officer wounded. Chain of command passes to someone unexpected. Unit dynamics shift.", weight = 2 },
+  { text = "Two troopers have unresolved conflict. Not affecting combat yet, but the tension is palpable.", weight = 2 },
+  { text = "A trooper confides they're hiding an injury. Can't afford to lose them. Can't afford compromised performance.", weight = 1 },
+  { text = "VIP attached to the unit. Civilian specialist. Not combat trained. Your responsibility now.", weight = 1 },
+  { text = "Trooper requesting transfer to another unit. Paperwork is pending. Morale hit either way.", weight = 1 },
+  { text = "Message from home reaches a trooper. Contents unknown. They're distracted. Need to know if it affects mission.", weight = 2 },
+  { text = "Religious observance conflict with mission timeline. Accommodation vs military necessity.", weight = 1 },
+  { text = "A trooper suspects they're manifesting psychic abilities. Unregistered. Required to report. The consequences are severe.", weight = 1 },
+  { text = "Romantic relationship discovered between troopers. Against regs. Good soldiers otherwise.", weight = 1 },
+]
+
+[resource_challenges]
+description = "Material complications"
+entries = [
+  { text = "Equipment malfunction at a critical moment. Not catastrophic, but requires improvisation.", weight = 2 },
+  { text = "Wrong supplies delivered. Useful, but not what was ordered. Make it work or wait for correction.", weight = 2 },
+  { text = "Power suit compatibility issue. New firmware doesn't work with older models. Some troopers affected.", weight = 1 },
+  { text = "Communications equipment can reach one channel or the other, not both. Command or artillery support?", weight = 1 },
+  { text = "Medical supplies running low. Rationing decisions need to be made.", weight = 2 },
+  { text = "Vehicle breakdown. Repairable, but requires time you may not have.", weight = 2 },
+  { text = "Food contamination discovered. Some rations are bad. Unknown which ones without testing.", weight = 1 },
+  { text = "Captured bug equipment. Intelligence wants it. Taking it means carrying extra weight through hostile territory.", weight = 1 },
+  { text = "Ammunition types mixed up. Some of what you're carrying doesn't fit your weapons.", weight = 1 },
+  { text = "Water purification system failing. Bug planet water is not safe. Supply situation becoming urgent.", weight = 2 },
+]
+
+[information_problems]
+description = "When you don't know what you need to know"
+entries = [
+  { text = "Conflicting reports about bug strength. Two sources, two numbers. Both supposedly reliable.", weight = 2 },
+  { text = "Intelligence flagged as uncertain. The mission proceeds on 'maybe'. Command doesn't have better.", weight = 2 },
+  { text = "Enemy pattern doesn't match any known variant. Either new bug type or significant behavioral adaptation.", weight = 1 },
+  { text = "Psychic impressions contradicting scanner data. Which to trust?", weight = 1 },
+  { text = "A trooper claims to have seen something. Others saw nothing. Equipment confirms neither.", weight = 2 },
+  { text = "Orders incomplete. The critical detail is missing. Can't reach command for clarification.", weight = 2 },
+  { text = "Map shows a structure that isn't there. Or isn't visible. Underground? Destroyed? Bug camouflage?", weight = 1 },
+  { text = "Informant's information was accurate before. This time feels different. Trust or verify?", weight = 1 },
+  { text = "Bug body count doesn't match engagement intensity. Where did the others go?", weight = 2 },
+  { text = "Recovered data is encrypted. Federation encryption. Someone on our side was here. Doing what?", weight = 1 },
+]

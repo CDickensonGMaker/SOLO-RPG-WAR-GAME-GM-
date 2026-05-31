@@ -1,5 +1,5 @@
 # Historical Roles
-# 60+ roles spanning military, civilian, religious, and political spheres
+# 130+ roles spanning military, civilian, religious, and political spheres across all eras
 
 [roles]
 entries = [
@@ -87,5 +87,77 @@ entries = [
   { text = "Camp follower", weight = 2 },
   { text = "Refugee", weight = 2 },
   { text = "Prisoner of war", weight = 1 },
-  { text = "Gravedigger", weight = 2 }
+  { text = "Gravedigger", weight = 2 },
+
+  # Ancient Roman Roles
+  { text = "Centurion - backbone of the legion", weight = 1 },
+  { text = "Senator - voice in the curia, knife in the toga", weight = 1 },
+  { text = "Gladiator - slave, entertainer, potential celebrity", weight = 1 },
+  { text = "Vestal Virgin - keeper of the sacred flame", weight = 1 },
+  { text = "Legionary - citizen soldier of Rome", weight = 2 },
+  { text = "Praetorian Guardsman - emperor's protector and potential kingmaker", weight = 1 },
+  { text = "Tax farmer (Publicanus) - collector of tribute, universally despised", weight = 2 },
+  { text = "Lictor - bearer of the fasces, symbol of authority", weight = 2 },
+  { text = "Freedman - former slave with ambitions and connections", weight = 2 },
+  { text = "Lanista - owner and trainer of gladiators", weight = 1 },
+
+  # Medieval Specific Roles
+  { text = "Knight errant - landless warrior seeking fortune and fame", weight = 2 },
+  { text = "Herald - announcer of tournaments, reader of coats of arms", weight = 2 },
+  { text = "Reeve - manager of the lord's estate, hated by peasants", weight = 2 },
+  { text = "Pardoner - seller of indulgences, questionable credentials", weight = 2 },
+  { text = "Minstrel - singer of songs, carrier of news", weight = 2 },
+  { text = "Cellarer - monastery's provisioner, key to the wine stores", weight = 2 },
+  { text = "Almoner - distributor of charity, gatekeeper of the poor", weight = 2 },
+  { text = "Leper - outcast required to announce their presence", weight = 1 },
+  { text = "Serf - bound to the land, not quite property", weight = 2 },
+  { text = "Castellan - keeper of the castle in the lord's absence", weight = 1 },
+
+  # Renaissance Specific Roles
+  { text = "Condottiero - mercenary captain selling military services", weight = 1 },
+  { text = "Courtier - professional flatterer and intriguer", weight = 2 },
+  { text = "Alchemist - seeker of the philosopher's stone", weight = 1 },
+  { text = "Painter's apprentice - grinding pigments, dreaming of mastery", weight = 2 },
+  { text = "Doge - elected ruler of the Venetian Republic", weight = 1 },
+  { text = "Poisoner - specialist in the subtle arts", weight = 1 },
+  { text = "Courtesan - educated companion and political player", weight = 1 },
+  { text = "Landsknecht - flamboyant German mercenary pikeman", weight = 2 },
+  { text = "Printer's devil - apprentice in the revolutionary new trade", weight = 2 },
+  { text = "Banker - controller of credit, king of princes", weight = 1 },
+
+  # Age of Sail Specific Roles
+  { text = "Ship's captain - master under God", weight = 1 },
+  { text = "First mate - commander's right hand, crew's voice", weight = 2 },
+  { text = "Powder monkey - child running ammunition through battle", weight = 2 },
+  { text = "Sailing master - navigator and shiphandler", weight = 1 },
+  { text = "Pirate quartermaster - divider of spoils, keeper of discipline", weight = 1 },
+  { text = "Press officer - hunter of reluctant sailors", weight = 2 },
+  { text = "Prize court judge - decider of legal plunder", weight = 1 },
+  { text = "Sugar planter - master of enslaved labor", weight = 1 },
+  { text = "Colonial factor - trading company representative", weight = 2 },
+  { text = "Buccaneer - cattle hunter turned pirate", weight = 2 },
+
+  # Victorian Specific Roles
+  { text = "Mill owner - captain of industry, exploiter of labor", weight = 1 },
+  { text = "Chimney sweep - child labor at its most brutal", weight = 2 },
+  { text = "Pinkerton detective - private eye for hire", weight = 1 },
+  { text = "Music hall performer - entertainer for the masses", weight = 2 },
+  { text = "Colonial administrator - bringing civilization at gunpoint", weight = 1 },
+  { text = "Suffragette - fighting for the vote by any means", weight = 1 },
+  { text = "Resurrectionist - body snatcher for medical schools", weight = 1 },
+  { text = "Workhouse master - keeper of the desperate poor", weight = 2 },
+  { text = "Penny dreadful writer - purveyor of sensational fiction", weight = 2 },
+  { text = "Railway baron - builder of empires in iron", weight = 1 },
+
+  # Criminal and Underworld Roles
+  { text = "Cutpurse - pickpocket and petty thief", weight = 2 },
+  { text = "Fence - buyer and seller of stolen goods", weight = 2 },
+  { text = "Highwayman - mounted robber of coaches", weight = 1 },
+  { text = "Footpad - urban mugger of dark alleys", weight = 2 },
+  { text = "Coiner - maker of counterfeit currency", weight = 1 },
+  { text = "Crimp - supplier of sailors by force or trickery", weight = 2 },
+  { text = "Resurrection man - stealer of fresh corpses", weight = 1 },
+  { text = "Pimp - exploiter of prostitutes", weight = 2 },
+  { text = "Gang boss - criminal leader of territory", weight = 1 },
+  { text = "Confidence trickster - artist of deception", weight = 1 }
 ]

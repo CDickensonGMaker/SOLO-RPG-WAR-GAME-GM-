@@ -1,0 +1,77 @@
+# Hopeful Complications
+# Moments of light in the Bug War darkness
+
+[unexpected_allies]
+description = "Help from unexpected sources"
+entries = [
+  { text = "The cut-off unit is still alive. Their beacon just activated. They're close, holding out, and they have supplies.", weight = 2 },
+  { text = "Veteran sergeant from another unit stumbles into position. Wounded but experienced. Leadership reinforced.", weight = 2 },
+  { text = "Fleet managed to reposition faster than expected. Air support available. The cavalry is coming.", weight = 2 },
+  { text = "Psychic makes contact with friendly assets. They know where you are. Help is being coordinated.", weight = 1 },
+  { text = "The colonists who were supposed to evacuate stayed. They've been fighting. They know the terrain.", weight = 1 },
+  { text = "Marauder unit assigned to your sector. Heavy support where it's needed.", weight = 1 },
+  { text = "Intelligence operative reveals themselves. They've been tracking the same objective. Resources combined.", weight = 1 },
+  { text = "Drop pod lands nearby. Supplies, ammunition, and a single volunteer who refused to let the mission fail.", weight = 2 },
+  { text = "The rival unit commander sends support without being asked. Grudges set aside for survival.", weight = 1 },
+  { text = "Fleet pilot volunteers for a dangerous extraction. They lost squadmates here. This is personal. They'll make it work.", weight = 2 },
+]
+
+[tactical_opportunities]
+description = "Chances to turn the tide"
+entries = [
+  { text = "Bug tunnel discovered leading behind enemy lines. Risky, but offers a flanking opportunity.", weight = 2 },
+  { text = "Plasma bug position is exposed. Clear shot from this position. The artillery can be silenced.", weight = 2 },
+  { text = "Brain bug is moving. If it's repositioning, there's a window. The hive coordination could be disrupted.", weight = 1 },
+  { text = "Bug formation has a gap. They're not as coordinated as usual. Something's affecting the hive mind.", weight = 2 },
+  { text = "High ground available. Defensible position that covers the approach. Reaching it is doable.", weight = 2 },
+  { text = "Bug supply route identified. Cutting it would weaken their assault capability.", weight = 1 },
+  { text = "Captured equipment includes something useful. Bug acid neutralizer. Power cell compatible with suits.", weight = 1 },
+  { text = "Weather is clearing. Sensors will work. Air support can see targets. Visibility becomes an advantage.", weight = 2 },
+  { text = "The bugs are ignoring this sector. Whatever's drawing their attention, it's an opportunity to move.", weight = 2 },
+  { text = "Abandoned bunker from a previous campaign. Still structurally sound. Defensible fallback position.", weight = 2 },
+]
+
+[personal_triumphs]
+description = "Individual moments of grace"
+entries = [
+  { text = "The wounded trooper stabilizes. Against all odds, they're going to make it. Medic worked a miracle.", weight = 2 },
+  { text = "The boot who everyone worried about steps up. They find their courage when it matters. Squad has another veteran.", weight = 2 },
+  { text = "Message from home reaches you. Everyone is safe. They're proud. There's something to survive for.", weight = 2 },
+  { text = "The trooper you saved on the last mission saves you on this one. Karma. Loyalty. Squad.", weight = 2 },
+  { text = "Promotion comes through. Field commission. The trust means something. The responsibility is earned.", weight = 1 },
+  { text = "Citizenship granted to a squadmate. The service meant something. The system worked for once.", weight = 1 },
+  { text = "Lost squadmate found alive. Captured but escaped. Wounded but walking. The squad is whole again.", weight = 1 },
+  { text = "Fear conquered. The moment when terror could have frozen you passes, and you act instead.", weight = 2 },
+  { text = "Old enemy becomes ally. The trooper you had conflict with covers your flank without being asked.", weight = 1 },
+  { text = "Letter from home reaches someone who needed it. They're smiling. First time in weeks.", weight = 2 },
+]
+
+[system_success]
+description = "When the military machine works"
+entries = [
+  { text = "Supply drop lands on target. Exactly what was requested. Someone in logistics deserves recognition.", weight = 2 },
+  { text = "Intelligence was accurate. Bug strength exactly as briefed. The plan is working.", weight = 2 },
+  { text = "Reinforcements arrive early. Fresh troops, full ammunition loads, and good morale.", weight = 2 },
+  { text = "Command adjusts strategy based on ground reports. Someone is listening. The new orders make sense.", weight = 1 },
+  { text = "Medical evac arrives despite the hot zone. Pilots risking everything. The wounded will live.", weight = 2 },
+  { text = "Fire support lands where it should. The bugs die. You don't. Artillery doing their job.", weight = 2 },
+  { text = "Communication established with all elements. Everyone knows the plan. Coordination is possible.", weight = 1 },
+  { text = "Equipment works perfectly when it matters. Power suits responding, weapons firing, systems green.", weight = 2 },
+  { text = "The order makes tactical sense. Command understands the situation. Trust in leadership restored.", weight = 1 },
+  { text = "Extraction goes smooth. Everyone boards. No one left behind. The mission ends with all hands.", weight = 2 },
+]
+
+[war_turning]
+description = "Signs that the Federation might win"
+entries = [
+  { text = "Brain bug captured successfully. Intelligence breakthrough. The hive mind has vulnerabilities.", weight = 1 },
+  { text = "New weapon effective against tanker bugs. Field test successful. The acid sprayers can be stopped.", weight = 1 },
+  { text = "Bug retreat confirmed. Not tactical, panicked. Something hurt the hive mind. They're afraid.", weight = 1 },
+  { text = "Colony successfully defended. Civilians evacuated. The line held. Victory is possible.", weight = 2 },
+  { text = "Offensive launched. Multiple systems. Coordinated. The Federation is pushing back.", weight = 1 },
+  { text = "New trooper class graduating in record numbers. The pipeline is full. Reinforcements are coming.", weight = 1 },
+  { text = "Alliance with former neutral world. New resources, new bases, new fronts against the bugs.", weight = 1 },
+  { text = "Bug planet glassed. One less hive. The stars have fewer enemies tonight.", weight = 1 },
+  { text = "Psychic breakthrough in bug communication. We might be able to negotiate. Or better target.", weight = 1 },
+  { text = "Bug queen killed. Hive collapse in progress. This sector is won.", weight = 1 },
+]

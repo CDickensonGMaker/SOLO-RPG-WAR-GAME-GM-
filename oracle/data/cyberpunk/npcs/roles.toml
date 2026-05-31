@@ -62,4 +62,54 @@ entries = [
   { text = "Memory dealer - trading in edited and stolen experiences", weight = 1 },
   { text = "Body sculptor - extreme cosmetic modification artist", weight = 1 },
   { text = "Clone technician - maintaining corporate backup bodies", weight = 1 },
+
+  # Additional Netrunner types
+  { text = "Netrunner - Voodoo Boys deep diver, seeking rogue AIs, barely human anymore", weight = 1 },
+  { text = "Netrunner - corporate payroll, hunting intruders, lethal authority", weight = 2 },
+  { text = "Netrunner - black market specialist, stealing and selling data", weight = 2 },
+  { text = "Netrunner - hacktivist, exposing corporate crimes, true believer", weight = 1 },
+  { text = "Netrunner - memory editor, changing people's pasts, moral flexibility", weight = 1 },
+
+  # Additional Solo types
+  { text = "Solo - Arasaka-trained assassin, corporate leash, perfect weapon", weight = 1 },
+  { text = "Solo - Militech veteran, military discipline, heavy weapons preference", weight = 2 },
+  { text = "Solo - gang enforcer, street violence, territory protection", weight = 2 },
+  { text = "Solo - executive protection specialist, kept alive by paranoia", weight = 2 },
+  { text = "Solo - nomad raider, Badlands terror, no rules of engagement", weight = 1 },
+
+  # Gang-specific roles
+  { text = "Maelstrom tech priest - chrome worship leader, installing illegal cyberware", weight = 1 },
+  { text = "Maelstrom recruiter - finding chrome candidates, judging metal potential", weight = 2 },
+  { text = "Valentino community elder - respect earned, counsel given, honor maintained", weight = 1 },
+  { text = "Valentino street captain - territory commander, gold and violence", weight = 2 },
+  { text = "Tyger Claw enforcer - yakuza discipline, blade expertise, Arasaka adjacent", weight = 2 },
+  { text = "Tyger Claw businessman - legitimate front, underground connections", weight = 2 },
+  { text = "Animals pit boss - fighting ring operator, combat drug supplier", weight = 2 },
+  { text = "Animals gym owner - strength worship, recruitment center, steroid distribution", weight = 2 },
+  { text = "6th Street quartermaster - militia supplier, weapons cache manager", weight = 2 },
+  { text = "6th Street drill instructor - training new recruits, military discipline", weight = 1 },
+  { text = "Mox protector - sex worker guardian, violence when necessary", weight = 2 },
+  { text = "Voodoo Boys deep diver - netrunner going places others fear", weight = 1 },
+
+  # Corporate-specific roles
+  { text = "Arasaka security director - protecting assets, eliminating threats", weight = 1 },
+  { text = "Arasaka counter-intel operative - hunting spies, paranoid professional", weight = 1 },
+  { text = "Militech weapons tester - field evaluation, combat experience required", weight = 2 },
+  { text = "Biotechnica researcher - genetic engineering, ethical flexibility", weight = 1 },
+  { text = "Kang Tao industrial spy - stealing competitor secrets, smart gun expertise", weight = 2 },
+  { text = "Trauma Team platinum responder - elite medic, combat trained, clients only", weight = 1 },
+  { text = "Night Corp infrastructure manager - city services, essential controls", weight = 1 },
+  { text = "Zetatech firmware engineer - cyberware programming, backdoor installation", weight = 1 },
+
+  # Specialist roles
+  { text = "Braindance editor - creating experiences, editing memories, psychological power", weight = 2 },
+  { text = "Braindance actress - living recorded experiences, vulnerable to exploitation", weight = 2 },
+  { text = "Combat cab driver - armored vehicle, hazard pay, stories to tell", weight = 2 },
+  { text = "Chrome junkie - addiction to upgrades, always need more, lost humanity", weight = 2 },
+  { text = "MaxTac operative - cyberpsycho hunter, heavy chrome, thin line", weight = 1 },
+  { text = "Scavenger harvester - organ thief, cyberware stripper, nocturnal predator", weight = 2 },
+  { text = "Memory dealer - trading in experiences, collecting interesting lives", weight = 1 },
+  { text = "Clone rights activist - fighting for created people, dangerous position", weight = 1 },
+  { text = "AI sympathizer - believes in machine rights, corporate target", weight = 1 },
+  { text = "Cyberpsychosis counselor - helping the chrome-lost, dangerous clients", weight = 1 },
 ]

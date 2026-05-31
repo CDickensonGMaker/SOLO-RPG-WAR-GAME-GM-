@@ -1,0 +1,87 @@
+# Weird War Special Units
+# Military formations that deal with the supernatural
+
+[ss_paranormal]
+description = "SS divisions and units dealing with occult matters"
+entries = [
+    { text = "SS-Ahnenerbe Division 'Karotechia' - the inner circle of Nazi occultists, answering only to Himmler, operating outside normal command structures", weight = 2 },
+    { text = "SS-Sonderkommando Thule - field operatives who retrieve artifacts and eliminate witnesses. Their kill count includes Allied occultists and Nazi doubters alike", weight = 2 },
+    { text = "SS-Werwolf Brigade - not guerrillas, not metaphor. They operate only during full moons. Casualties among their own support staff run high", weight = 2 },
+    { text = "SS-Nachtjager ('Night Hunters') - soldiers modified for nocturnal operations. They don't just prefer darkness - they require it now", weight = 2 },
+    { text = "SS-Totenkopf Geist Kompanie ('Death's Head Ghost Company') - soldiers killed and revived through ritual. They feel no fear. They feel nothing", weight = 3 },
+    { text = "SS-Ahnenerbe Archaeological Battalion - archaeologists with guns and shovels, digging for power in ancient sites across Europe and beyond", weight = 2 },
+    { text = "SS-Blutorden ('Blood Order') - personal guard for high-ranking occultists, bound by blood ritual. They cannot disobey. They cannot betray. They cannot die easily", weight = 2 },
+    { text = "SS-Hexenbrigade ('Witch Brigade') - female operatives trained in genuine witchcraft recovered from Inquisition archives. Their curses have tactical applications", weight = 2 },
+    { text = "SS-Schwarze Sonne Division - bearers of the Black Sun emblem, practitioners of its power. Normal SS troops fear them", weight = 3 },
+    { text = "SS-Fliegende Untertassen Einheit ('Flying Saucer Unit') - pilots of craft developed from recovered artifacts. The craft fly. The destinations aren't always on this Earth", weight = 2 },
+    { text = "SS-Lebensborn Specialis - breeding program for occult bloodlines. The children show abilities. The children are weapons being grown", weight = 2 },
+    { text = "SS-Ahnenerbe Sprachforscher ('Language Researchers') - linguists who decode pre-human texts. Several have gone mad. Several have gained abilities", weight = 2 },
+    { text = "SS-Schattenkrieger ('Shadow Warriors') - assassins trained to move through darkness as a medium. They step between shadows. Distance means nothing in the dark", weight = 2 },
+    { text = "SS-Glockenkommando ('Bell Command') - technicians who operate Die Glocke. The turnover rate is extreme. The secrecy is absolute", weight = 2 },
+    { text = "SS-Blutstrom ('Bloodstream') - units whose members share blood transfusions from 'special donors.' They're telepathically linked now. And to something else", weight = 3 },
+]
+
+[allied_special]
+description = "Allied units formed to counter Nazi occultism"
+entries = [
+    { text = "SOE Section M ('Merlin Section') - British occult operations, recruiting from spiritualist societies and Cambridge classics departments", weight = 2 },
+    { text = "OSS X-Department - American supernatural intelligence, staffed by academics who know too much and soldiers who've seen too much", weight = 2 },
+    { text = "MI6 Department XIII - the unlucky number isn't coincidental. They handle threats other departments won't acknowledge exist", weight = 2 },
+    { text = "SHAEF Paranormal Containment Unit - multinational force that secures and contains captured German occult materials", weight = 2 },
+    { text = "Royal Marine Commando 'Excalibur' - trained by SOE Section M in 'applied mythology.' They carry more than guns", weight = 2 },
+    { text = "US Army Ranger 'Hellhound' Company - specialists in werewolf elimination. Silver bullets standard issue. Survival rate: classified", weight = 2 },
+    { text = "Free French 'Chevaliers de la Lumiere' ('Knights of Light') - drawing on Templar traditions to fight Nazi darkness", weight = 2 },
+    { text = "British 'Weird War Observers' - scientific and mystical experts attached to regular units, identifying and reporting paranormal activity", weight = 2 },
+    { text = "OSS 'Monster Squad' - teams equipped and trained specifically to combat undead, lycanthropes, and other classified threats", weight = 2 },
+    { text = "Royal Navy 'Deep Watch' - sailors trained to handle things from beneath the waves that aren't submarines", weight = 2 },
+    { text = "Canadian 'Wendigo Hunters' - specialists in cold-climate supernatural threats. They know the northern forests hide more than winter", weight = 2 },
+    { text = "Polish 'Husaria Mroku' ('Hussars of Darkness') - exile cavalry unit armed with blessed weapons and unbreakable faith", weight = 2 },
+    { text = "British 'Ghostbusters' - unofficial name for units that clear haunted battlefields so regular troops can advance", weight = 2 },
+    { text = "American 'Atomic Priests' - chaplains trained in nuclear physics and exorcism. Manhattan Project's spiritual security", weight = 2 },
+    { text = "Australian 'Dreamtime Scouts' - Aboriginal trackers who can see into spirit realms and track entities others can't perceive", weight = 2 },
+]
+
+[soviet_special]
+description = "Soviet units dealing with the occult and paranormal"
+entries = [
+    { text = "NKVD Otdel X ('Department X') - Stalin's paranormal investigators, hunting enemies of the state who happen to be inhuman", weight = 2 },
+    { text = "Red Army 'Koldun' ('Sorcerer') Battalions - soldiers trained in Russian folk magic, calling on spirits of Mother Russia", weight = 2 },
+    { text = "Soviet Psychic Warfare Division - telepaths and telekinetics weaponized for military application. Their handlers fear them", weight = 2 },
+    { text = "NKVD Vampire Eradication Squads - they learned the hard way that Eastern European vampire legends are real", weight = 2 },
+    { text = "Red Army 'Tunguska Battalion' - soldiers exposed to energies from the 1908 event. They have abilities. They don't live long", weight = 2 },
+    { text = "Soviet 'Baba Yaga' Network - old women in villages across Russia who see things and report to Moscow. Their intelligence is supernaturally accurate", weight = 2 },
+    { text = "SMERSH Supernatural Section - counterintelligence against Nazi occult infiltrators. They interrogate the dead when necessary", weight = 2 },
+    { text = "Red Fleet 'Vodyanoy' ('Water Spirit') - sailors who've made pacts with things in the deep. Their ships don't sink. Their souls aren't their own", weight = 2 },
+    { text = "Soviet 'Leshy' ('Forest Spirit') Rangers - wilderness fighters who've learned to bargain with nature spirits for advantage", weight = 2 },
+    { text = "NKVD 'Grave Detail' - units that ensure the enemy dead stay dead. Stakes, silver, fire. Every night behind the lines", weight = 2 },
+]
+
+[axis_special]
+description = "Non-German Axis forces with paranormal elements"
+entries = [
+    { text = "Japanese Unit 731-Oni - biological warfare meets Japanese folklore. Their subjects become something from peasant nightmares", weight = 3 },
+    { text = "Italian Blackshirt 'Strega' ('Witch') Company - Mussolini's occult shock troops, drawing on Roman mystery cults", weight = 2 },
+    { text = "Romanian 'Strigoi' Regiment - soldiers from Transylvanian villages who know the old ways of dealing with the undead. And becoming them", weight = 2 },
+    { text = "Japanese 'Kami-kaze' ('Divine Wind') Special Attack Unit - pilots infused with spirits of ancestors for their final missions", weight = 2 },
+    { text = "Hungarian 'Táltos' Corps - cavalry shamans from the Magyar tradition, calling storms and speaking with horses' spirits", weight = 2 },
+    { text = "Croatian Ustasha 'Mora' ('Nightmare') Unit - killers who've learned to walk in dreams and murder sleeping enemies", weight = 2 },
+    { text = "Finnish 'Hiisi' Patrol - forest fighters allied with dark spirits. Neither German nor Russian, serving older powers", weight = 2 },
+    { text = "Italian 'Benandanti' Counter-Occult - fighting witches as they have for centuries, now wearing fascist uniforms over traditional garb", weight = 2 },
+    { text = "Japanese 'Tengu' Mountain Infantry - trained by practitioners who claim lineage to the bird-demons of Japanese myth", weight = 2 },
+    { text = "Bulgarian 'Karakondjul' Night Battalion - soldiers who've bound themselves to demons of Turkish folklore for power in darkness", weight = 2 },
+]
+
+[irregular_forces]
+description = "Resistance and partisan forces with occult capabilities"
+entries = [
+    { text = "Romani 'Chovihani' Network - Gypsy witches and wise ones coordinating resistance across Europe through means the Nazis can't intercept", weight = 2 },
+    { text = "Norwegian 'Hulder' Resistance - mountain partisans aided by things that live in the hills. The Germans send no more patrols into certain valleys", weight = 2 },
+    { text = "Greek 'Empusa' Partisans - women warriors channeling ancient goddesses of war. Their rage is divine, literally", weight = 2 },
+    { text = "Serbian 'Vampir' Hunters - village defenders who've maintained stakes and garlic since Ottoman times. They know the signs", weight = 2 },
+    { text = "French 'Loup-Garou' Cell - resistance fighters who've made pacts with forest powers. They run with wolves. They've become wolves", weight = 2 },
+    { text = "Dutch 'Witte Wieven' ('White Women') Network - female resistance aided by spectral beings from bog and mist", weight = 2 },
+    { text = "Belgian 'Kludde' Fighters - shape-shifters from Flemish tradition, never appearing the same way twice", weight = 2 },
+    { text = "Polish 'Południca' ('Lady Midday') Cell - women who strike at noon when demons are abroad and guards are drowsy", weight = 2 },
+    { text = "Ukrainian 'Mavka' Scouts - forest spirits given human hosts to fight invaders of their woodland homes", weight = 2 },
+    { text = "Czech 'Vodník' ('Water Sprite') Saboteurs - resistance fighters with power over rivers and locks. Drowning accidents plague German units", weight = 2 },
+]

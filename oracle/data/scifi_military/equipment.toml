@@ -1,0 +1,158 @@
+# Sci-Fi Military Equipment
+# Weapons, armor, support gear, and field modifications
+# Tone: Aliens, Halo, Warhammer 40K grunts, The Expanse marines
+
+[weapons]
+entries = [
+  # Standard Issue
+  { text = "M41A Pulse Rifle - 10mm caseless, 95 rounds, the reliable ugly workhorse everyone loves to complain about", weight = 2 },
+  { text = "Lasgun - one trillion shots or a million battles, whichever comes first, never runs out never stops firing", weight = 2 },
+  { text = "MA5 Assault Rifle - 32 rounds 7.62mm, kicks like a mule hits like a freight train", weight = 1 },
+  { text = "Gauss Rifle - magnetically accelerated steel rods, punches through armor and the wall behind it", weight = 1 },
+  { text = "Auto-Carbine - compact full-auto, spray and pray at close range", weight = 1 },
+  { text = "Bolter - .75 caliber rocket-propelled explosive rounds, overkill is the point", weight = 2 },
+  { text = "Needle Rifle - crystalline flechettes that shatter inside the target, nasty way to go", weight = 1 },
+  { text = "Plasma Rifle - one shot can vaporize a man but might vaporize you too if it overheats", weight = 2 },
+
+  # Heavy Weapons
+  { text = "Smart Gun - motion tracking auto-targeting, point in direction of enemy and pull trigger", weight = 2 },
+  { text = "Heavy Stubber - belt-fed full auto, ancient design still killing effectively", weight = 1 },
+  { text = "Autocannon - 30mm shells shredding everything they touch, suppression through annihilation", weight = 1 },
+  { text = "Missile Launcher - versatile death dealer, anti-armor anti-air anti-everything", weight = 1 },
+  { text = "Meltagun - microwave fusion beam that turns tanks into slag and men into vapor", weight = 2 },
+  { text = "Heavy Flamer - promethium projector, everything burns even things that shouldn't", weight = 2 },
+  { text = "Lascannon - coherent light beam cutting through meters of armor, recharge time is agony under fire", weight = 1 },
+  { text = "Railgun - hypersonic projectile leaving vacuum trails, one shot one kill one kilometer", weight = 1 },
+
+  # Close Quarters
+  { text = "Combat Shotgun - 12 gauge automatic, hallway cleaner and morale destroyer", weight = 1 },
+  { text = "Chainsword - monomolecular teeth spinning at 3000 RPM, melee weapon for people who mean it", weight = 2 },
+  { text = "Power Fist - armored gauntlet with disruption field, one punch liquefies organs", weight = 1 },
+  { text = "Combat Knife - vibroblade standard issue, backup weapon that's saved more lives than medals", weight = 1 },
+  { text = "Shock Maul - electrical discharge on impact, non-lethal is relative term", weight = 1 },
+  { text = "Boarding Shield - ballistic protection with integrated stunner, corridor fighting necessity", weight = 1 },
+
+  # Sniper Systems
+  { text = "Long-Las - extended barrel lasgun with precision optics, clean kills at distance", weight = 1 },
+  { text = "Anti-Materiel Rifle - 20mm rounds for vehicles people and buildings, multipurpose destruction", weight = 1 },
+  { text = "Needle Sniper - silent toxin delivery, target dead before they know they've been hit", weight = 1 },
+  { text = "Stalker Pattern Bolter - silenced explosive rounds, assassination tool of the faithful", weight = 1 },
+
+  # Support Weapons
+  { text = "Grenade Launcher - 40mm variable payload, fragmentation incendiary smoke or worse", weight = 1 },
+  { text = "Mortar Tube - portable indirect fire, drop death over walls and hills", weight = 1 },
+  { text = "Demo Charge - shaped explosive, for when doors or walls become inconvenient", weight = 1 },
+  { text = "Krak Grenade - anti-armor shaped charge, tanks hate this one simple trick", weight = 1 },
+  { text = "Frag Grenade - antipersonnel standard, three-second fuse feels like eternity", weight = 1 },
+  { text = "Smoke Grenade - concealment in a can, visibility zero salvation possible", weight = 1 },
+  { text = "Flashbang - sensory overload device, disorient before the kill", weight = 1 },
+  { text = "Melta Bomb - magnetic thermite, stick it to armor and run", weight = 1 }
+]
+
+[armor]
+entries = [
+  # Light Armor
+  { text = "Flak Jacket - basic ballistic protection, stops shrapnel barely slows bullets", weight = 1 },
+  { text = "Scout Armor - lightweight composite, mobility over protection", weight = 1 },
+  { text = "Combat Vest - load-bearing with minimal plates, enough to maybe survive", weight = 1 },
+  { text = "Void Suit - sealed environment protection, not combat armor but keeps you breathing", weight = 1 },
+  { text = "Mesh Armor - flexible armor weave, better than nothing worse than everything else", weight = 1 },
+
+  # Medium Armor
+  { text = "Carapace Armor - hard plates over key areas, the good stuff for valued troops", weight = 1 },
+  { text = "Combat Exoskeleton - powered frame increasing strength and protection", weight = 1 },
+  { text = "Tactical Armor - modular plate carrier, configure for mission requirements", weight = 1 },
+  { text = "Storm Suit - environmentally sealed carapace, hostile world ready", weight = 1 },
+  { text = "Boarding Armor - heavy plates for void combat, magnetic boots included", weight = 1 },
+
+  # Heavy Armor
+  { text = "Power Armor - fully sealed servo-assisted battle plate, walking tank in human shape", weight = 2 },
+  { text = "Terminator Plate - tactical dreadnought armor, nothing stops you nothing escapes you", weight = 2 },
+  { text = "Heavy Combat Exo - industrial loader converted for war, crude but effective", weight = 1 },
+  { text = "Siege Armor - maximum protection mobility be damned, for holding ground", weight = 1 },
+  { text = "Centurion Suit - heavy weapons platform worn like armor, walking fire support", weight = 1 },
+
+  # Specialized
+  { text = "NBC Suit - chemical biological radiological protection, survive what kills others", weight = 1 },
+  { text = "Stealth Suit - sensor baffling coating and signature reduction, invisible to machines", weight = 1 },
+  { text = "Drop Armor - ablative heat shielding for orbital insertion, parachute not included", weight = 1 },
+  { text = "Xeno-Adapted Suit - modified for specific alien environments, breathing someone else's air", weight = 1 },
+  { text = "Medical Armor - integrated trauma response and drug delivery, keeps you fighting wounded", weight = 1 }
+]
+
+[support_equipment]
+entries = [
+  # Communications
+  { text = "Squad Vox - encrypted short-range radio, lifeline to command and fire support", weight = 1 },
+  { text = "Long-Range Vox - backpack comm unit, talk to orbit talk to command", weight = 1 },
+  { text = "Uplink Terminal - satellite connection for data and targeting", weight = 1 },
+  { text = "Translation Module - basic xenos language interpretation, accuracy varies", weight = 1 },
+  { text = "Signal Jammer - electronic warfare in a box, blind their comms before assault", weight = 1 },
+
+  # Detection
+  { text = "Auspex Scanner - motion detection lifeform detection radiation detection, do-it-all sensor", weight = 2 },
+  { text = "Thermal Imager - see heat signatures through walls and darkness", weight = 1 },
+  { text = "Drone Controller - manage reconnaissance drones from behind cover", weight = 1 },
+  { text = "Bio-Scanner - detect xenos presence through organic traces", weight = 1 },
+  { text = "Ground-Penetrating Radar - find tunnels bunkers and buried surprises", weight = 1 },
+
+  # Medical
+  { text = "Medikit - trauma supplies and drugs, keep them alive until medevac", weight = 1 },
+  { text = "Stimulant Injectors - combat drugs for when you need to ignore wounds", weight = 1 },
+  { text = "Narthecium - advanced medical suite, field surgery capability", weight = 1 },
+  { text = "Anti-Toxin Kit - countermeasures for chemical and biological weapons", weight = 1 },
+  { text = "Cryo-Stabilization Unit - freeze wounded for transport to real medical care", weight = 1 },
+
+  # Field Gear
+  { text = "Entrenching Tool - dig in or dig out, most versatile tool in kit", weight = 1 },
+  { text = "Rappelling Gear - fast rope descent kit, get off the bird quick", weight = 1 },
+  { text = "Breaching Charge - door or wall removal system, make your own entrance", weight = 1 },
+  { text = "Claymore Mine - directional antipersonnel, point toward enemy", weight = 1 },
+  { text = "Grav-Chute - controlled descent system, survive the fall fight on landing", weight = 1 },
+  { text = "Jump Pack - short-range flight, death from above death from behind", weight = 1 },
+  { text = "Photo-Visor - night vision flash compensation threat highlight, see everything", weight = 1 },
+  { text = "Rebreather - filter atmospheric contaminants, breathe where you shouldn't", weight = 1 }
+]
+
+[field_modifications]
+entries = [
+  # Weapon Mods
+  { text = "Sawed-off barrel for close quarters, accuracy be damned in a hallway", weight = 1 },
+  { text = "Scratched-in kill tallies covering the stock, this rifle has stories", weight = 1 },
+  { text = "Handgrip wrapped in xenos hide, trophy and improvement", weight = 1 },
+  { text = "Sight zeroed by a master marksman, hits exactly where aimed", weight = 1 },
+  { text = "Maintenance ritual blessing marks, the machine spirit is appeased", weight = 1 },
+  { text = "Extended magazine jury-rigged from salvage, reload less often", weight = 1 },
+  { text = "Bayonet lug added, always have a knife option", weight = 1 },
+  { text = "Suppressor field-manufactured, not regulation but it works", weight = 1 },
+
+  # Armor Mods
+  { text = "Extra plates welded on from wrecked vehicle, heavy but alive", weight = 1 },
+  { text = "Camouflage netting draped and tied, blend into terrain", weight = 1 },
+  { text = "Enemy trophies hung from pauldrons, psychological warfare", weight = 1 },
+  { text = "Unit insignia hand-painted, personalization despite regulations", weight = 1 },
+  { text = "Lucky charm welded to chestplate, faith or superstition or both", weight = 1 },
+  { text = "Replacement parts from three different armor marks, Frankenstein kit", weight = 1 },
+  { text = "Blood stains never fully cleaned, reminder and warning", weight = 1 },
+  { text = "Padding added inside, comfort matters in long operations", weight = 1 },
+
+  # Field Expedients
+  { text = "Canteen converted to hold something stronger than water", weight = 1 },
+  { text = "Helmet liner replaced with local material, cooler in heat", weight = 1 },
+  { text = "Bootlaces replaced with cord from parachute, stronger", weight = 1 },
+  { text = "Map case waterproofed with xenos secretions, it works", weight = 1 },
+  { text = "Ration heating element repurposed for brewing, priorities", weight = 1 },
+  { text = "Backpack frame modified for local carrying style", weight = 1 },
+  { text = "Gloves reinforced with metal strips, better grip better punch", weight = 1 },
+  { text = "Knee pads scavenged from vehicle interior, urban warfare necessity", weight = 1 },
+
+  # Unauthorized Additions
+  { text = "Personal sidearm not on manifest, backup nobody knows about", weight = 1 },
+  { text = "Non-standard knife hidden in boot, last resort option", weight = 1 },
+  { text = "Stimulants beyond medical authorization, edge when needed", weight = 1 },
+  { text = "Civilian comfort item concealed, morale maintenance", weight = 1 },
+  { text = "Smuggled alcohol in water container, occasional necessity", weight = 1 },
+  { text = "Unauthorized ammunition type, incendiary or tracer or worse", weight = 1 },
+  { text = "Trophy xenos artifact, dangerous but too valuable to report", weight = 2 },
+  { text = "Field-modified explosive with increased yield, breach anything", weight = 1 }
+]

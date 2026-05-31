@@ -1,0 +1,221 @@
+# Doctor Who Historical Encounters
+# Adventures in Earth's past - famous events, mysteries, and alien interference
+
+[famous_events]
+description = "Moments that shaped history"
+
+[[famous_events.entries]]
+name = "The Great Fire of London (1666)"
+description = "The flames spread faster than they should. The Terileptils' weapon. Their plague plan failed, so they burned the evidence. All of Pudding Lane goes up."
+
+[[famous_events.entries]]
+name = "The Titanic Sinking (1912)"
+description = "The unsinkable ship meets the iceberg. A fixed point, probably. But strange things happen in the water. Distress calls reach the wrong ears."
+
+[[famous_events.entries]]
+name = "The Moon Landing (1969)"
+description = "One small step - and the Silence were there. The footage that the whole world watched contained a command. No one remembers seeing them."
+
+[[famous_events.entries]]
+name = "The Gunpowder Plot (1605)"
+description = "Remember, remember. Guy Fawkes in the cellar. But who put him up to it? The Terileptils again, perhaps, or something older in Parliament's foundations."
+
+[[famous_events.entries]]
+name = "The Pompeii Eruption (79 AD)"
+description = "Fixed point. Everyone dies. The Doctor can save some - Caecilius's family. But the choice of who lives when thousands burn is impossible."
+
+[[famous_events.entries]]
+name = "The Kennedy Assassination (1963)"
+description = "Dallas. The grassy knoll. Multiple theories, multiple shooters, multiple timelines. The Silence were watching. They always are."
+
+[[famous_events.entries]]
+name = "The Hindenburg Disaster (1937)"
+description = "The great airship burns in New Jersey. Thirty-six die. Some say sabotage. Some say accident. Some say something in the hydrogen wasn't hydrogen."
+
+[[famous_events.entries]]
+name = "The Black Death (1348)"
+description = "One third of Europe dies. The plague came from the East - or from crashed ships? The Terileptils bred disease. Perhaps others did too."
+
+[[famous_events.entries]]
+name = "The French Revolution (1789)"
+description = "The guillotine falls. Aristocrats die. Robespierre rises. The Doctor has been here before. Some events seem to attract him."
+
+[[famous_events.entries]]
+name = "The Blitz (1940-1941)"
+description = "London burns. Evacuees flee. Nanogenes repair a dead child incorrectly. 'Are you my mummy?' echoes through the bombing raids."
+
+[[famous_events.entries]]
+name = "The Coronation (1953)"
+description = "Elizabeth II is crowned. Every television in Britain is watching. The Wire is feeding. Faceless bodies accumulate."
+
+[[famous_events.entries]]
+name = "Rosa Parks' Stand (1955)"
+description = "Montgomery, Alabama. One woman refuses to move. History turns on her decision. Protect this moment at all costs."
+
+[[famous_events.entries]]
+name = "The First World War Armistice (1918)"
+description = "The eleventh hour of the eleventh day. Silence falls across the trenches. Some soldiers glimpse things in no man's land. Things not from this war."
+
+[[famous_events.entries]]
+name = "The Salem Witch Trials (1692)"
+description = "Innocent people hang. Hysteria rules. But the Carrionites were real, once. Did echoes of their words reach Salem?"
+
+[historical_mysteries]
+description = "Unsolved events with possible explanations"
+
+[[historical_mysteries.entries]]
+name = "The Mary Celeste (1872)"
+description = "A ship found drifting. Crew vanished. Food on plates. No explanation ever found. Unless the Daleks removed them. Or something else."
+
+[[historical_mysteries.entries]]
+name = "The Roanoke Colony (1590)"
+description = "CROATOAN carved in a tree. 115 colonists gone. No bodies. No explanation. The Weeping Angels were old even then."
+
+[[historical_mysteries.entries]]
+name = "The Voynich Manuscript"
+description = "Undecipherable text. Strange illustrations. No one knows who wrote it or what it means. The language looks almost Gallifreyan."
+
+[[historical_mysteries.entries]]
+name = "The Princes in the Tower (1483)"
+description = "Two boys vanished. Their uncle Richard takes the throne. Murder or escape? Time travelers have tried to find out. None report back."
+
+[[historical_mysteries.entries]]
+name = "Agatha Christie's Disappearance (1926)"
+description = "Eleven days missing. Found at a hotel. Memory gone. The Doctor was there. And a giant wasp. It's complicated."
+
+[[historical_mysteries.entries]]
+name = "The Tunguska Event (1908)"
+description = "Massive explosion over Siberia. No crater. Forest flattened. Something fell from space. Something that didn't want to be found."
+
+[[historical_mysteries.entries]]
+name = "The Amber Room (1941)"
+description = "Nazi theft. Priceless treasure vanished. Never recovered. Some say it was destroyed. Some say it was moved - elsewhere. Elsewhen."
+
+[[historical_mysteries.entries]]
+name = "The Lighthouse Keepers (1900)"
+description = "Three men vanished from Eilean Mor lighthouse. Clocks stopped. Meal uneaten. The light still burning. Nothing but the sea and the dark."
+
+[[historical_mysteries.entries]]
+name = "Spring-Heeled Jack (1837-1904)"
+description = "Devil-like figure terrorizing London. Jumping over walls. Breathing fire. Too fast to catch. Not human. Not entirely alien either."
+
+[[historical_mysteries.entries]]
+name = "The Lead Masks of Vintem Hill (1966)"
+description = "Two men dead. Lead masks on their faces. Notes about ingesting capsules. Seeking contact with something. Contact found them first."
+
+[time_traveler_interference]
+description = "When visitors from the future meddle"
+
+[[time_traveler_interference.entries]]
+name = "Someone's Changed This"
+description = "History doesn't match the records. Someone has been here before you, altering events. The original timeline bleeds through in dreams."
+
+[[time_traveler_interference.entries]]
+name = "Anachronistic Technology"
+description = "A machine that shouldn't exist for centuries. Hidden in a church, in a castle, in a grave. Someone left it here. Someone with a plan."
+
+[[time_traveler_interference.entries]]
+name = "The Other Time Traveler"
+description = "You're not alone in this era. Someone else is here, manipulating events. Are they the Doctor's enemy? Or something new?"
+
+[[time_traveler_interference.entries]]
+name = "Time Agent Operation"
+description = "51st century operatives running a mission in this era. Professional. Ruthless. They want something here. You're in their way."
+
+[[time_traveler_interference.entries]]
+name = "Faction Paradox Ritual"
+description = "The cult of paradox has seeded this era with contradictions. They're growing a new timeline in history's shadow. Reality blisters."
+
+[[time_traveler_interference.entries]]
+name = "Future Knowledge Leak"
+description = "Someone in this era knows things they shouldn't. Prophecies that are too accurate. Inventions appearing too early. The timeline strain shows."
+
+[[time_traveler_interference.entries]]
+name = "Temporal Salvage Operation"
+description = "Time travelers from the future, harvesting from the past. Artifacts. Technology. People. They don't care what their collection disrupts."
+
+[[time_traveler_interference.entries]]
+name = "Bootstrap Artifact"
+description = "This object's origin is impossible to trace. It came from the future, was used in the past, arrived here. It makes itself necessary."
+
+[alien_presence_historical]
+description = "Extraterrestrial influence throughout history"
+
+[[alien_presence_historical.entries]]
+name = "The Gods Were Aliens"
+description = "Local deities turn out to be alien visitors. The Osirans in Egypt. The Daemons in Devil's End. Their worship was real. Their divinity was not."
+
+[[alien_presence_historical.entries]]
+name = "Hidden Invasion"
+description = "An alien presence has infiltrated this era. Shapeshifters in the court. Psychic influence on the king. History was shaped by their agenda."
+
+[[alien_presence_historical.entries]]
+name = "Crashed Ship"
+description = "Something fell from the sky and the locals found it. They've interpreted it through their worldview. Demon? Angel? Miracle? Alien."
+
+[[alien_presence_historical.entries]]
+name = "Stranded Alien"
+description = "A being not of this Earth, stuck in this era. Perhaps hostile, perhaps desperate. They're trying to get home. Or they're trying to conquer."
+
+[[alien_presence_historical.entries]]
+name = "Silurian Emergence"
+description = "The underground civilization stirs. In any era. They were here first. They wake periodically. Humanity calls them dragons. Or demons."
+
+[[alien_presence_historical.entries]]
+name = "Alien Artifact Discovered"
+description = "Someone has found alien technology. They don't understand it, but they're using it. The results reshape this era's history."
+
+[[alien_presence_historical.entries]]
+name = "Harvest Operation"
+description = "Aliens are quietly taking humans from this era. Abduction, experimentation, return. Most don't remember. Those who do are called mad."
+
+[[alien_presence_historical.entries]]
+name = "Observer Species"
+description = "An alien race watches from concealment. Studying. Recording. Not interfering - until something threatens their observations."
+
+[[alien_presence_historical.entries]]
+name = "Underground Empire"
+description = "Beneath the cities of this era, something built tunnels. Not human. Not gone. They still watch from below. They have their own agenda."
+
+[personal_encounters]
+description = "Intimate moments with historical figures"
+
+[[personal_encounters.entries]]
+name = "Artist's Vision"
+description = "They see something others can't. Van Gogh's universe. Leonardo's machines. Their art captures truth their era cannot accept."
+
+[[personal_encounters.entries]]
+name = "Ruler's Burden"
+description = "The crown weighs heavy. Elizabeth, Victoria, Louis - they make decisions that doom thousands. Sometimes they make decisions that save millions."
+
+[[personal_encounters.entries]]
+name = "Scientist's Breakthrough"
+description = "They're on the verge of discovery. Newton's apple. Darwin's finches. But understanding brings danger. Some want their work suppressed."
+
+[[personal_encounters.entries]]
+name = "Rebel's Stand"
+description = "Against tyranny, against empire, against the accepted order. They'll probably die. But their example outlasts their enemies."
+
+[[personal_encounters.entries]]
+name = "Writer's Block"
+description = "Shakespeare, Dickens, Shelley - struggling with the work that defines them. Sometimes inspiration comes from the strangest sources."
+
+[[personal_encounters.entries]]
+name = "Explorer's Discovery"
+description = "They've found something. A new land, a new species, a new world. They don't realize what they've found is older than their civilization."
+
+[[personal_encounters.entries]]
+name = "Saint or Charlatan"
+description = "History calls them divine. Or mad. Or both. Their visions might be spiritual. Or temporal. Or alien. Does it matter what the source is?"
+
+[[personal_encounters.entries]]
+name = "Villain's Perspective"
+description = "History's monsters were human once. Understanding them is not forgiving them. But it might prevent the next one."
+
+[[personal_encounters.entries]]
+name = "Forgotten Hero"
+description = "They did something magnificent. History forgot. You know. Should you remind the world, or protect them from fame?"
+
+[[personal_encounters.entries]]
+name = "Final Moments"
+description = "Their death approaches. They know it. You know it. What comfort can you offer? What truth can you share? These hours matter."

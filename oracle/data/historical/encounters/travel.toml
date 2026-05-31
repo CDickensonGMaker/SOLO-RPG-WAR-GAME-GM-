@@ -1,5 +1,5 @@
 # Historical Travel Encounters
-# 40+ journey and road encounters
+# 90+ journey and road encounters across eras
 
 [encounters]
 entries = [
@@ -57,5 +57,69 @@ entries = [
   { text = "Papers are scrutinized and questions asked at the border", weight = 2 },
   { text = "A bribe is expected to smooth passage through checkpoints", weight = 2 },
   { text = "Smuggling operation offers a way past closed borders", weight = 1 },
-  { text = "A guide who knows the secret paths offers services for a price", weight = 2 }
+  { text = "A guide who knows the secret paths offers services for a price", weight = 2 },
+
+  # Roman Roads
+  { text = "The milestone marks distance to Rome - all roads lead there eventually", weight = 2 },
+  { text = "Legionaries march past in formation, their boots wearing grooves in the stone", weight = 2 },
+  { text = "The mansio offers official lodging - but space depends on one's documents", weight = 2 },
+  { text = "Tax farmers intercept travelers to collect duties on goods", weight = 2 },
+  { text = "A slave coffles trudges toward the auction blocks of the city", weight = 1 },
+
+  # Medieval Pilgrimage
+  { text = "Fellow pilgrims share the road to Canterbury, Rome, or Compostela", weight = 2 },
+  { text = "The hospice offers shelter to travelers - charity for pilgrims, fees for others", weight = 2 },
+  { text = "Relics are displayed at a waypoint shrine - miracles happen here, supposedly", weight = 2 },
+  { text = "Pardoners sell indulgences along the road - salvation at a price", weight = 2 },
+  { text = "A fellow traveler tells tales to pass the time - truth optional", weight = 2 },
+
+  # Age of Sail Voyages
+  { text = "The doldrums stretch sails limp for weeks - water rationing begins", weight = 1 },
+  { text = "Scurvy claims another sailor - fresh citrus is worth gold now", weight = 1 },
+  { text = "The crossing of the equator brings King Neptune's court aboard", weight = 2 },
+  { text = "Land ahoy after weeks at sea - but is it the expected landfall?", weight = 2 },
+  { text = "The cabin shares are contested between passengers of different status", weight = 2 },
+  { text = "A tropical storm separates the convoy - each ship alone now", weight = 1 },
+
+  # Stagecoach Era
+  { text = "The coach lurches through ruts deep enough to break axles", weight = 2 },
+  { text = "Highwaymen's territory - the coachman knows the dangerous stretches", weight = 1 },
+  { text = "Fellow passengers include a suspicious character keeping their face hidden", weight = 2 },
+  { text = "The coaching inn is full - sleep in the common room or the stable", weight = 2 },
+  { text = "Mail coach arrives with news and newspapers from the capital", weight = 2 },
+
+  # Victorian Rail Travel
+  { text = "The railway station is a cathedral of iron and steam - the modern age", weight = 2 },
+  { text = "First, second, and third class - each carriage tells a story of society", weight = 2 },
+  { text = "The express makes no stops - but the passenger compartment has other occupants", weight = 2 },
+  { text = "A railway accident ahead delays all traffic - bodies are still being recovered", weight = 1 },
+  { text = "The telegraph office at the station receives urgent news", weight = 2 },
+
+  # Caravan and Trade Routes
+  { text = "The caravanserai offers safety in numbers - and opportunity for thieves", weight = 2 },
+  { text = "Desert crossing requires strict water discipline and trust in the guide", weight = 1 },
+  { text = "Mountain passes close with the first snows - the timing is everything", weight = 2 },
+  { text = "Trade goods must be declared and taxed at every territorial boundary", weight = 2 },
+  { text = "The oasis is controlled by those who demand payment for water", weight = 2 },
+
+  # River Travel
+  { text = "The barge moves slowly but safely - rapids and shallows the only danger", weight = 2 },
+  { text = "Locks require fees and sometimes days of waiting in queue", weight = 2 },
+  { text = "The riverboat gambler offers a friendly game - stakes mount quickly", weight = 2 },
+  { text = "Portage around falls requires hiring locals and their knowledge", weight = 2 },
+  { text = "The ferry crossing at flood stage is hazardous but necessary", weight = 2 },
+
+  # Hostile Territories
+  { text = "Safe conduct papers must be presented at every checkpoint", weight = 2 },
+  { text = "The neutral zone between armies is lawless and dangerous", weight = 1 },
+  { text = "Disguise is necessary to pass through enemy-held areas", weight = 1 },
+  { text = "Sympathizers offer shelter but discovery means death for all", weight = 1 },
+  { text = "The underground railroad moves fugitives from station to station", weight = 1 },
+
+  # Travel Misfortunes
+  { text = "The horse throws a shoe miles from the nearest blacksmith", weight = 2 },
+  { text = "Food supplies spoil in the heat - foraging becomes necessary", weight = 2 },
+  { text = "A traveling companion falls ill - press on or stay and risk infection?", weight = 2 },
+  { text = "The map is wrong or outdated - the bridge no longer exists", weight = 2 },
+  { text = "Locals give contradictory directions - deliberately or through ignorance?", weight = 2 }
 ]

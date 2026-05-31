@@ -73,5 +73,65 @@ entries = [
   { text = "Refugee trail, paths of displaced civilians fleeing combat", weight = 1 },
   { text = "No-man's-land, cratered hell between opposing trenches", weight = 1 },
   { text = "Quarantine zone, plague outbreak contained by force", weight = 1 },
-  { text = "Razed farmland, food production destroyed to deny enemy", weight = 1 }
+  { text = "Razed farmland, food production destroyed to deny enemy", weight = 1 },
+
+  # Death Worlds
+  { text = "Carnivorous forest, every plant a potential threat", weight = 1 },
+  { text = "Acid rain world, exposed skin burns within minutes", weight = 1 },
+  { text = "Electrical storm planet, lightning strikes constant threat", weight = 1 },
+  { text = "Predator moon, every species evolved to hunt", weight = 2 },
+  { text = "Toxic atmosphere world, one breath unfiltered is death", weight = 1 },
+  { text = "Extreme temperature zone, survival suit mandatory at all times", weight = 1 },
+  { text = "Quickite terrain, ground that swallows the unwary", weight = 1 },
+  { text = "Razor grass plains, vegetation that cuts to bone", weight = 1 },
+
+  # Industrial Zones
+  { text = "Refinery complex, flames and chemical hazards everywhere", weight = 1 },
+  { text = "Mining pit, massive excavation going kilometers deep", weight = 1 },
+  { text = "Processing plant ruins, equipment still running despite evacuation", weight = 1 },
+  { text = "Waste disposal site, centuries of industrial pollution", weight = 1 },
+  { text = "Automated factory still producing, no workers for decades", weight = 1 },
+  { text = "Power generation complex, radiation hazard zone", weight = 1 },
+  { text = "Shipbreaking yard, hulks of vessels being dismantled", weight = 1 },
+  { text = "Mass driver facility, electromagnetic launcher for cargo", weight = 1 },
+
+  # Underground Environments
+  { text = "Natural cave system, unstable and uncharted", weight = 1 },
+  { text = "Abandoned mine network, tunnels extending for kilometers", weight = 1 },
+  { text = "Underground bunker complex, Cold War-era construction", weight = 1 },
+  { text = "Subterranean city, entire civilization lived below surface", weight = 1 },
+  { text = "Lava tube network, volcanic tunnels still warm", weight = 1 },
+  { text = "Flooded tunnel system, partial submersion throughout", weight = 1 },
+  { text = "Collapsed section, unstable debris creating maze", weight = 1 },
+  { text = "Deep drilling station, accessing underground resources", weight = 1 },
+
+  # Contaminated Zones
+  { text = "Nuclear blast crater, still radioactive after decades", weight = 1 },
+  { text = "Chemical spill zone, ground poisoned permanently", weight = 1 },
+  { text = "Biological weapon test site, pathogens still active", weight = 2 },
+  { text = "Failed terraforming zone, atmosphere partially converted", weight = 1 },
+  { text = "Gravity anomaly region, physics unreliable", weight = 1 },
+  { text = "Warp incursion site, reality thin and strange", weight = 1 },
+  { text = "Mass grave field, millions buried in shallow pits", weight = 1 },
+  { text = "Burned forest, fire-cleared land still smoldering", weight = 1 },
+
+  # Specific Military Positions
+  { text = "Forward operating base ruins, previous occupants eliminated", weight = 1 },
+  { text = "Artillery firebase, gun pits and magazine bunkers", weight = 1 },
+  { text = "Air defense site, radar arrays and missile launchers", weight = 1 },
+  { text = "Combat outpost, small team in isolated position", weight = 1 },
+  { text = "Supply depot, warehouses of military material", weight = 1 },
+  { text = "Communications relay, antenna farm on high ground", weight = 1 },
+  { text = "Medical evacuation point, helicopters and ambulances", weight = 1 },
+  { text = "Prisoner collection facility, temporary holding before transport", weight = 1 },
+
+  # Special Terrain
+  { text = "Magnetic anomaly zone, electronics unreliable", weight = 1 },
+  { text = "Perpetual storm region, visibility always compromised", weight = 1 },
+  { text = "Geothermal vent field, scalding steam eruptions", weight = 1 },
+  { text = "Tidal zone, water level changes dramatically", weight = 1 },
+  { text = "Bioluminescent jungle, glowing organisms everywhere", weight = 1 },
+  { text = "Petrified forest, stone trees providing strange cover", weight = 1 },
+  { text = "Salt flat, endless white expanse with no cover", weight = 1 },
+  { text = "Floating islands, gravity-defying terrain chunks", weight = 1 }
 ]

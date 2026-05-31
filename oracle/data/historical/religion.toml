@@ -1,0 +1,70 @@
+# Historical Religious Elements - Faith, Conflict, and Power
+# 45+ entries covering church politics, heresy, and spiritual conflict
+
+[church_politics]
+entries = [
+  { text = "The bishop sells indulgences while the parish church roof leaks on the congregation", weight = 2 },
+  { text = "Monastery lands grow while tenant farmers are evicted for more profitable sheep", weight = 2 },
+  { text = "The cardinal's mistress is an open secret - his piety is for public consumption only", weight = 2 },
+  { text = "Church courts claim jurisdiction over crimes the civil authorities want to prosecute", weight = 2 },
+  { text = "The interdict closes all churches - no masses, no sacraments until the ruler yields", weight = 1 },
+  { text = "Simony runs rampant - ecclesiastical positions go to the highest bidder", weight = 2 },
+  { text = "The papal legate arrives with demands that will cost the kingdom dearly", weight = 1 },
+  { text = "Rival abbeys dispute land boundaries, their monks coming to blows in the fields", weight = 2 },
+  { text = "The archbishop's excommunication renders a nobleman legally dead - contracts void, marriage dissolved", weight = 1 },
+  { text = "Crusade preaching whips up religious fervor - and provides cover for settling local scores", weight = 2 },
+  { text = "The Church shelters fugitives in sanctuary - forty days of protection from civil law", weight = 2 },
+  { text = "Benefit of clergy lets literate criminals escape secular punishment", weight = 2 },
+]
+
+[inquisition]
+entries = [
+  { text = "The Inquisitor arrives with his notaries and torturers - no one is above suspicion", weight = 1 },
+  { text = "Anonymous denunciations fill the Inquisition's boxes - settling grudges with heresy charges", weight = 1 },
+  { text = "The strappado extracts confessions, arms dislocating as the body drops", weight = 1 },
+  { text = "Auto-da-fe in the plaza - the condemned in their sanbenitos march to the stake", weight = 1 },
+  { text = "Converso families live in fear - their Jewish ancestry never truly forgotten", weight = 1 },
+  { text = "Forbidden books are catalogued and burned - possession means investigation", weight = 2 },
+  { text = "The familiar reports to the Holy Office on his neighbors' suspicious behavior", weight = 2 },
+  { text = "Witchcraft accusations spread through the village like plague itself", weight = 1 },
+  { text = "The question ordinary and extraordinary - euphemisms for torture by degrees", weight = 1 },
+  { text = "Reconciliation or relaxation to the secular arm - the Church never executes, technically", weight = 1 },
+]
+
+[reformation_conflicts]
+entries = [
+  { text = "Protestant iconoclasts smash the cathedral's stained glass and statuary", weight = 1 },
+  { text = "Catholic and Protestant neighbors eye each other with suspicion after the latest massacre", weight = 2 },
+  { text = "The prince's conversion means the entire territory must convert - or flee", weight = 1 },
+  { text = "Huguenots worship in secret, lookouts posted against dragoons", weight = 2 },
+  { text = "Priests hide in priest holes as pursuivants search the Catholic manor house", weight = 1 },
+  { text = "The Peace of Augsburg settles nothing - each side prepares for the next war", weight = 1 },
+  { text = "Anabaptists face persecution from Catholics and mainstream Protestants alike", weight = 1 },
+  { text = "The martyrologies list names of those burned for their faith - recruitment tools for both sides", weight = 2 },
+  { text = "Jesuit missionaries infiltrate hostile territories - caught means execution", weight = 1 },
+  { text = "Lutheran princes seize Church lands - piety and profit conveniently aligned", weight = 2 },
+]
+
+[pagan_survivals]
+entries = [
+  { text = "The village wise woman knows cures the priest cannot match - and charms he forbids", weight = 2 },
+  { text = "Midsummer fires burn on the hilltops despite the Church's disapproval", weight = 2 },
+  { text = "The standing stones still receive offerings on certain nights, ancient customs persisting", weight = 2 },
+  { text = "Harvest rituals blend Christianity with something older and darker", weight = 2 },
+  { text = "The green man peers from church carvings - the masons knew things they couldn't say", weight = 2 },
+  { text = "Fairy offerings left at certain trees - folk know to keep the good neighbors happy", weight = 2 },
+  { text = "The cunning man sells charms against witchcraft the priest says don't exist", weight = 2 },
+  { text = "Holy wells still visited for healing, their saints suspiciously similar to old gods", weight = 2 },
+  { text = "The wild hunt rides on storm nights - close the shutters and don't look out", weight = 1 },
+  { text = "The village idiot speaks in tongues - mad prophet or touched by something else?", weight = 2 },
+]
+
+[faith_and_doubt]
+entries = [
+  { text = "The priest who has lost his faith still performs the sacraments - what choice has he?", weight = 2 },
+  { text = "A genuine mystic's visions disturb the Church hierarchy - control or martyrdom?", weight = 1 },
+  { text = "The dying penitent's confession reveals sins that implicate the powerful", weight = 1 },
+  { text = "Pilgrimage offers escape from daily life - and opportunity for those who prey on travelers", weight = 2 },
+  { text = "The relic may be fraudulent but the miracles attributed to it are convenient", weight = 2 },
+  { text = "A crisis of conscience - obey orders or follow the moral law they violate?", weight = 2 },
+]

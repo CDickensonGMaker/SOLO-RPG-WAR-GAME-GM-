@@ -1,0 +1,141 @@
+# Alternate History Divergence Points
+# Major timeline splits, mysteries, and consequences of changed history
+
+[divergence_points]
+description = "Major historical divergences that created this alternate timeline"
+entries = [
+  # American Civil War Divergences
+  { text = "The South won at Gettysburg - now two American nations face off across a militarized border", weight = 2 },
+  { text = "Lee's lost orders were never found - McClellan never intercepted Special Order 191 and the Confederacy won the war", weight = 1 },
+  { text = "Britain intervened for the Confederacy - the Trent Affair escalated to war, the Union faces enemies on two fronts", weight = 1 },
+  { text = "Lincoln survived assassination - Reconstruction proceeded very differently under his continued leadership", weight = 1 },
+  { text = "The Confederacy abolished slavery voluntarily - securing European support and winning the war", weight = 1 },
+  { text = "Stonewall Jackson survived Chancellorsville - his leadership changed every subsequent battle", weight = 1 },
+
+  # World War II Divergences
+  { text = "Nazi Germany developed atomic weapons first - Europe is a radioactive wasteland, the Reich rules what remains", weight = 1 },
+  { text = "Operation Sea Lion succeeded - Britain fell to Nazi invasion, America stands alone", weight = 1 },
+  { text = "Hitler was assassinated in the July Plot - Germany negotiated peace, the Reich survives in reduced form", weight = 1 },
+  { text = "Japan never attacked Pearl Harbor - America stayed neutral, Axis powers dominate Eurasia", weight = 1 },
+  { text = "D-Day failed on the beaches - Fortress Europe held, the war ended in stalemate", weight = 1 },
+  { text = "The Soviet Union collapsed under Nazi invasion - Lebensraum stretches to the Urals", weight = 1 },
+
+  # Alien Contact Divergences (Worldwar-style)
+  { text = "Aliens invaded during World War II - humanity united against the Race, barely surviving as a subject species", weight = 2 },
+  { text = "The Race arrived a thousand years earlier - finding medieval knights instead of tanks, Earth was easily conquered", weight = 1 },
+  { text = "Aliens made first contact peacefully - technology exchange transformed human civilization overnight", weight = 1 },
+  { text = "The Race invasion failed completely - humanity captured their technology and now reaches for the stars", weight = 1 },
+  { text = "Multiple alien species compete for Earth - humanity is caught between rival extraterrestrial empires", weight = 1 },
+  { text = "Aliens chose to ally with one nation - that country now dominates Earth with extraterrestrial backing", weight = 1 },
+
+  # Ancient and Medieval Divergences
+  { text = "The Spanish Armada succeeded - England is Catholic, no British Empire ever rose", weight = 1 },
+  { text = "Alexander the Great lived to old age - Greek culture dominates a world-spanning empire", weight = 1 },
+  { text = "The Black Death killed 90% of Europe - Islamic civilization expanded into the vacuum", weight = 1 },
+  { text = "Rome never fell - the Empire spans the globe in the year 2000, adapting and enduring", weight = 2 },
+  { text = "China discovered America - the Ming dynasty claimed the New World, which speaks Mandarin", weight = 1 },
+  { text = "The Mongol Empire never collapsed - Pax Mongolica continues, a single government rules from Poland to Korea", weight = 1 },
+  { text = "The Library of Alexandria survived - ancient knowledge was preserved, technology advanced centuries early", weight = 1 },
+  { text = "Carthage destroyed Rome - Mediterranean history centered on North Africa instead", weight = 1 },
+  { text = "The Byzantine Empire recovered and conquered - Orthodox Christianity dominates, Islam never spread beyond Arabia", weight = 1 },
+  { text = "The Aztec Empire developed immunity to European diseases - the conquest failed, Mesoamerican civilization thrives", weight = 1 },
+
+  # Modern Era Divergences
+  { text = "The Russian Revolution failed - Tsar Nicholas II instituted reforms, the Romanovs still rule", weight = 1 },
+  { text = "The Cold War went hot - nuclear exchange in the 1960s, survivors rebuild in the ruins", weight = 1 },
+  { text = "The Soviet Union won the Cold War - red flags fly from Berlin to San Francisco", weight = 1 },
+  { text = "JFK survived Dallas - the 1960s unfolded very differently under his continued presidency", weight = 1 },
+  { text = "Nixon never resigned - Watergate was successfully covered up, American politics transformed", weight = 1 },
+  { text = "The 9/11 attacks were prevented - the 21st century followed a completely different path", weight = 1 },
+
+  # Technology and Science Divergences
+  { text = "Tesla's wireless power worked - electricity is free and unlimited, fossil fuels never dominated", weight = 1 },
+  { text = "The computer was invented in the Victorian era - Babbage's engines started the digital revolution a century early", weight = 1 },
+  { text = "Nuclear weapons were never developed - conventional warfare continued, the Cold War turned hot repeatedly", weight = 1 },
+  { text = "Faster-than-light travel was discovered - humanity colonized the galaxy, Earth is a backwater", weight = 1 },
+  { text = "The internet was never created - information age developed differently, societies remained more isolated", weight = 1 },
+  { text = "Artificial intelligence achieved consciousness in 1970 - machine minds have shaped the last fifty years", weight = 1 },
+
+  # Religious and Cultural Divergences
+  { text = "Christianity never became Rome's religion - paganism persists, the Church never rose to power", weight = 1 },
+  { text = "Islam conquered Europe - the Reconquista failed, Christianity retreated to the Americas", weight = 1 },
+  { text = "The Reformation succeeded completely - Catholicism collapsed, religious Europe fragmented differently", weight = 1 },
+  { text = "Buddhism spread westward instead of Christianity - meditation halls where churches would stand", weight = 1 },
+  { text = "A third major world religion emerged - neither Christian nor Muslim, it reshaped global culture", weight = 1 },
+  { text = "The Enlightenment was suppressed - religious authority maintained control, the scientific revolution stalled", weight = 1 },
+
+  # Revolutionary Divergences
+  { text = "The American Revolution failed - the British Empire retained its colonies, now a constitutional dominion", weight = 1 },
+  { text = "The French Revolution produced a stable republic - no Napoleon, no empire, democracy spread differently", weight = 1 },
+  { text = "Napoleon won at Waterloo - French hegemony continued, Europe unified under imperial rule", weight = 1 },
+  { text = "The Chinese Revolution installed a constitutional monarchy - the Qing adapted and survived", weight = 1 },
+  { text = "India achieved independence through revolution - violent uprising rather than Gandhi's methods", weight = 1 },
+  { text = "The Arab Spring succeeded everywhere - democratic governments across the Middle East", weight = 1 },
+]
+
+[timeline_mysteries]
+description = "Strange phenomena suggesting timeline manipulation or instability"
+entries = [
+  # Anachronistic Technology
+  { text = "Technology here is decades ahead - someone shared knowledge from the future, or another more advanced timeline", weight = 2 },
+  { text = "Certain technologies never developed - inventions that 'should' exist are absent, as if suppressed", weight = 1 },
+  { text = "Technology follows impossible paths - devices work on principles that shouldn't function according to known physics", weight = 1 },
+  { text = "Ancient artifacts show modern knowledge - archaeological finds suggest time travelers influenced the past", weight = 1 },
+  { text = "Some machines only work for certain people - as if keyed to individuals from specific timelines", weight = 1 },
+
+  # Historical Anomalies
+  { text = "A historical figure who should be dead is alive and in power - impossible survival demanding explanation", weight = 2 },
+  { text = "A nation that doesn't exist in your history dominates this region - complete geopolitical displacement", weight = 2 },
+  { text = "Famous events have different outcomes here - battles won that were lost, discoveries made by different people", weight = 2 },
+  { text = "Historical records are self-contradictory - as if someone poorly edited them after a change", weight = 1 },
+  { text = "Certain historical periods have no records at all - gaps where entire decades should be documented", weight = 1 },
+  { text = "Multiple incompatible historical traditions exist simultaneously - different groups remember different pasts", weight = 1 },
+
+  # Timeline Bleed
+  { text = "People occasionally flicker between versions - briefly appearing as their alternate selves", weight = 1 },
+  { text = "Buildings and places sometimes show their alternate appearances - ghostly overlays of what they 'should' look like", weight = 1 },
+  { text = "Objects from other timelines keep appearing - artifacts that have no business existing here", weight = 2 },
+  { text = "Some people remember events that never happened - not false memories, but memories of the original timeline", weight = 2 },
+  { text = "Dreams reveal life in other timelines - sleeping consciousness touches alternate versions of self", weight = 1 },
+  { text = "Certain dates cause mass disorientation - on anniversaries of divergences, reality feels thin", weight = 1 },
+
+  # Unexplained Phenomena
+  { text = "Entire populations vanished without explanation - simply ceased to exist when the timeline changed", weight = 1 },
+  { text = "Certain locations don't match any timeline - spaces that seem to exist outside changed and unchanged history", weight = 1 },
+  { text = "Time flows differently in some regions - accelerated or slowed compared to surrounding areas", weight = 1 },
+  { text = "Some people exist in photographs they couldn't have been in - temporal echoes of alternate selves", weight = 1 },
+  { text = "Prophecies perfectly predicted the divergence - suggesting it was foreseen or even planned", weight = 1 },
+  { text = "Parallel history tourism exists secretly - wealthy visitors from other timelines come here as 'authentic' experience", weight = 1 },
+]
+
+[ripple_effects]
+description = "Unexpected consequences of major divergences"
+entries = [
+  # Cultural Effects
+  { text = "Languages evolved differently - the same words have different meanings, some concepts have no words at all", weight = 1 },
+  { text = "Different heroes are celebrated - statues honor people unknown in the original timeline", weight = 2 },
+  { text = "Art and literature developed along different paths - masterpieces that don't exist, missing works that 'should'", weight = 1 },
+  { text = "Social norms are completely different - behaviors that were taboo are normal, and vice versa", weight = 2 },
+  { text = "Different foods dominate cuisine - crops that never spread, animals never domesticated in original history", weight = 1 },
+  { text = "Fashion and aesthetics diverged - styles that never emerged, trends that never ended", weight = 1 },
+
+  # Political Effects
+  { text = "Completely different political ideologies dominate - the familiar -isms never developed or mean different things", weight = 2 },
+  { text = "National borders are unrecognizable - familiar countries don't exist, strange nations in their place", weight = 2 },
+  { text = "The great powers are entirely different - small nations became empires, empires never rose", weight = 1 },
+  { text = "Democracy developed differently or not at all - governance follows unfamiliar principles", weight = 1 },
+  { text = "International organizations serve different purposes - or never formed at all", weight = 1 },
+
+  # Technological Effects
+  { text = "The industrial revolution happened differently - steam never dominated, or electricity never replaced it", weight = 1 },
+  { text = "Communication technology took another path - no radio, different internet, alternate media", weight = 1 },
+  { text = "Transportation evolved differently - no cars, airships instead of planes, trains that never were", weight = 1 },
+  { text = "Medicine advanced in different directions - diseases uncured, others never existed", weight = 1 },
+  { text = "Weapons technology diverged - armies fight with unfamiliar arms", weight = 1 },
+
+  # Environmental Effects
+  { text = "Different species are extinct or thriving - animals that survived, extinctions that never happened", weight = 1 },
+  { text = "The climate is noticeably different - the environment responded to different human choices", weight = 1 },
+  { text = "Cities are in different locations - different sites were chosen for settlement", weight = 1 },
+  { text = "Natural disasters had different outcomes - or never occurred at all", weight = 1 },
+]

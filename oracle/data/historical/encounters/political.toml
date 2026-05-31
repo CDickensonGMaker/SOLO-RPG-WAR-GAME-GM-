@@ -1,5 +1,5 @@
 # Historical Political Encounters
-# 40+ political intrigue and power struggles
+# 90+ political intrigue and power struggles across eras
 
 [encounters]
 entries = [
@@ -57,5 +57,61 @@ entries = [
   { text = "Occupation authorities demand collaboration from local leaders", weight = 1 },
   { text = "Question of whether to resist or accommodate the conquerors", weight = 1 },
   { text = "Trials of collaborators after liberation raise difficult questions", weight = 1 },
-  { text = "Competing resistance factions fight each other as much as the enemy", weight = 1 }
+  { text = "Competing resistance factions fight each other as much as the enemy", weight = 1 },
+
+  # Roman Senate Intrigue
+  { text = "Senators debate while their clients fill the galleries - votes are already bought", weight = 1 },
+  { text = "A tribune threatens veto unless concessions are made to the plebeians", weight = 1 },
+  { text = "The Cursus Honorum demands patronage - who will sponsor the ambitious young man?", weight = 2 },
+  { text = "Accusations of treason (maiestas) are wielded as political weapons", weight = 1 },
+  { text = "The Praetorian Prefect whispers in the Emperor's ear - his word is law in practice", weight = 1 },
+
+  # Medieval Feudal Politics
+  { text = "The lord demands knight service - but the vassal claims exemption through charter", weight = 2 },
+  { text = "A disputed succession splits the realm - both claimants gather armies", weight = 1 },
+  { text = "The guild master's daughter will marry the merchant's son - alliances forged in commerce", weight = 2 },
+  { text = "The bishop claims a village belongs to the Church, the baron's records disagree", weight = 2 },
+  { text = "A peasant petition reaches the king - will he champion them against his own nobles?", weight = 1 },
+
+  # Renaissance Power Politics
+  { text = "The Doge's election requires bribing the right electors - and eliminating rivals", weight = 1 },
+  { text = "Medici bankers call in loans at politically convenient moments", weight = 1 },
+  { text = "The artist's patronage comes with expectations - the painting must flatter", weight = 2 },
+  { text = "Papal bulls and imperial decrees contradict each other - who obeys whom?", weight = 1 },
+  { text = "The condottiero holds the city's fate - does he stay bought or seek better terms?", weight = 1 },
+
+  # Age of Sail Politics
+  { text = "The colonial assembly defies the governor - taxation without representation festers", weight = 1 },
+  { text = "Naval prize courts divide loot and create bitter disputes over shares", weight = 2 },
+  { text = "The trading company charter grants monopoly - competitors must be crushed or co-opted", weight = 2 },
+  { text = "Plantation owners and abolitionists clash in Parliament - economics versus morality", weight = 1 },
+  { text = "The pirate republic votes on its captain - democracy among thieves", weight = 2 },
+
+  # Victorian Era Politics
+  { text = "The Reform Bill threatens aristocratic power - the Lords must be convinced or overwhelmed", weight = 1 },
+  { text = "Factory owners and labor organizers negotiate under threat of strike or lockout", weight = 2 },
+  { text = "The secret ballot ends open voting - but new forms of corruption emerge", weight = 2 },
+  { text = "Imperial administrators balance native rulers' pride against metropolitan demands", weight = 2 },
+  { text = "The Irish Question dominates Parliament - Home Rule or continued Union?", weight = 1 },
+
+  # Church and State Conflicts
+  { text = "The king claims right to appoint bishops - Rome says otherwise", weight = 1 },
+  { text = "Church courts try clergy for crimes the state wants to punish", weight = 2 },
+  { text = "A cardinal sits on the royal council - servant of God or of the crown?", weight = 2 },
+  { text = "Monastic lands are confiscated - the crown grows rich on centuries of pious donation", weight = 1 },
+  { text = "The papal nuncio delivers demands that would spark war if made public", weight = 1 },
+
+  # Succession Crises
+  { text = "The heir is a minor - regency council members vie for dominance", weight = 1 },
+  { text = "The queen is barren - whispers of divorce or replacement grow louder", weight = 1 },
+  { text = "Legitimacy questioned - documents are forged or destroyed to prove claims", weight = 1 },
+  { text = "A pretender emerges claiming to be the lost prince - who knows the truth?", weight = 1 },
+  { text = "Death of the patriarch leaves the family business vulnerable to rivals", weight = 2 },
+
+  # Espionage and Information
+  { text = "The spymaster reports only what his patron wants to hear - truth is dangerous", weight = 1 },
+  { text = "Diplomatic pouches carry more than official correspondence", weight = 2 },
+  { text = "The code has been broken but the enemy must not know it", weight = 1 },
+  { text = "A defector offers secrets - but is it a genuine betrayal or an enemy plant?", weight = 1 },
+  { text = "The newspaper editor is offered a bribe or a threat - the story must be killed", weight = 2 }
 ]

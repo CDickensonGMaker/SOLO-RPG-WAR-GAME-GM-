@@ -1,0 +1,79 @@
+# WWII Social Encounters
+# Human moments in the midst of total war
+
+[military_social]
+description = "Interactions within the armed forces"
+entries = [
+    "New replacement arrives, nobody wants to learn his name yet",
+    "Mail call, some get letters, some get nothing",
+    "Chaplain making rounds, faith tested by what he's seen",
+    "Sergeant dressing down soldier, lesson or bullying?",
+    "Officers planning operation, disagreement about approach",
+    "Medic refusing to abandon wounded man",
+    "Veteran teaching replacement how to survive",
+    "Soldier cracking under pressure, friends intervening",
+    "Last drink before shipping out, promises made",
+    "Friend found dead, grief pushed down for later",
+    "Fraternization with local civilians, against orders",
+    "Tension between units over perceived slight"
+]
+
+[resistance_social]
+description = "Underground relationships and tensions"
+entries = [
+    "New recruit being vetted, trust takes time",
+    "Suspected informer in the cell, evidence circumstantial",
+    "Romance between fighters, dangerous distraction or human need",
+    "Family member demanding loved one quit the resistance",
+    "Collaborator relative, loyalty divided",
+    "Priest hiding people, faith demanding action",
+    "Arguments over targeting, military vs civilian impact",
+    "Leadership dispute, London's orders vs local knowledge",
+    "Farewell before dangerous mission, words unsaid",
+    "Betrayal discovered, what to do with the traitor"
+]
+
+[civilian_encounters]
+description = "War's impact on ordinary people"
+entries = [
+    "Refugees on the road, carrying everything they own",
+    "Farmer whose field is now a battlefield",
+    "Mother searching for child lost in bombing",
+    "Shop owner deciding whether to serve occupiers",
+    "Doctor treating wounded from both sides",
+    "Teacher keeping school open despite the war",
+    "Factory worker sabotaging production, risking death",
+    "Child who has never known peacetime",
+    "Elderly couple refusing to leave ancestral home",
+    "Black marketeer, profiting from suffering"
+]
+
+[enemy_human]
+description = "The enemy as human beings"
+entries = [
+    "German medic treating American wounded",
+    "Japanese officer allowing surrender, against orders",
+    "Enemy soldier sharing food during informal truce",
+    "Wehrmacht deserter seeking Allied protection",
+    "Captured enemy recognizing shared humanity",
+    "Former friends now on opposite sides",
+    "Enemy civilian showing kindness to POW",
+    "German grandmother hiding Allied airman",
+    "Enemy officer requesting honorable surrender terms",
+    "Moment of mutual respect between combatants"
+]
+
+[homefront_drama]
+description = "Social tensions on the home front"
+entries = [
+    "War widow receiving the telegram, neighbors watching",
+    "Conscientious objector facing judgment",
+    "Japanese-American family being relocated",
+    "War bride waiting for husband who won't come home",
+    "Factory conflict between workers, old grudges meet new stress",
+    "Returning wounded veteran, community doesn't know how to help",
+    "Rationing cheater discovered, community response",
+    "Young woman working job previously denied to her",
+    "Shell-shocked veteran struggling to readjust",
+    "Child finding out father died, months ago"
+]

@@ -1,0 +1,68 @@
+# Vietnam War Hopeful Complications
+# The light that sometimes breaks through
+
+[complications]
+
+# Survival Against Odds
+survival = [
+    { id = "unexpected_survival", name = "Unexpected Survival", desc = "Should have died. The round went through the rucksack instead. The grenade was a dud. The sniper missed. Alive without reason. Grateful doesn't cover it." },
+    { id = "successful_medevac", name = "Successful Emergency Medevac", desc = "Dustoff made it. Under fire, impossible LZ, they landed anyway. The wounded are on the bird. Flying to survival. The system worked." },
+    { id = "patrol_returns_complete", name = "Patrol Returns Complete", desc = "Everyone came back. No contact, no casualties, mission accomplished. A good day. They exist. Remember them." },
+    { id = "enemy_retreats", name = "Enemy Withdraws", desc = "They broke contact first. Superior position, breaking off. Why doesn't matter - pressure relieved. Breathe again." },
+    { id = "discovered_not_detected", name = "Found But Not Engaged", desc = "They saw you. Could have ambushed. Didn't. VC passing through, priorities elsewhere. Today, ghosts pass ghosts." },
+]
+
+# Human Connection
+connection = [
+    { id = "mail_from_home", name = "Good News From Home", desc = "The letter is good. She still loves you. The kid is healthy. Mom's doing better. The World remembers you exist. Something to live for, real and warm." },
+    { id = "unexpected_kindness", name = "Unexpected Kindness", desc = "Villager shares rice. Child brings water. The humanity that survives war. Not everyone is enemy. Not everything is hate." },
+    { id = "squad_bond_deepens", name = "Squad Bond Solidifies", desc = "The shared experience forges something. Brothers now. The loyalty that transcends everything else. These men, this trust, forever." },
+    { id = "veteran_guidance", name = "Veteran Passes Knowledge", desc = "Old-timer shares what keeps people alive. Not in the manual, not from training. Real wisdom. The gift that might save." },
+    { id = "forgiveness_received", name = "Forgiveness Received", desc = "The wrong was real. The apology was honest. Someone accepted it. Not forgotten, but forgiven. Move forward a little lighter." },
+    { id = "civilian_thanks", name = "Genuine Civilian Gratitude", desc = "The medcap helped. The well got dug. The village says thank you and means it. Something good happened. Because of you." },
+]
+
+# Military Success
+success = [
+    { id = "perfect_ambush", name = "Ambush Executed Perfectly", desc = "Sprung the trap, maximum effect. Enemy neutralized, friendly casualties zero. The war worked the way it's supposed to. This time." },
+    { id = "cache_destruction", name = "Major Cache Destroyed", desc = "Weapons, ammunition, supplies - tons of it gone. Months of their work, erased. Something real accomplished." },
+    { id = "rescue_success", name = "Rescue Mission Success", desc = "Got them out. POWs, downed pilots, cut-off patrol - doesn't matter. Americans recovered. Left no one behind. The promise kept." },
+    { id = "intelligence_jackpot", name = "Intelligence Jackpot", desc = "The documents reveal everything. Locations, plans, leadership. Operations will succeed because of this. Knowledge is power, and you just got powerful." },
+    { id = "air_strike_perfect", name = "Perfect Fire Support", desc = "Danger close was accurate. Enemy destroyed, friendlies untouched. The system worked precisely when lives depended on it." },
+    { id = "defector_valuable", name = "Valuable Defector", desc = "He's real, his information is real. Lives will be saved. The enemy becomes the ally becomes the asset." },
+]
+
+# Personal Growth
+growth = [
+    { id = "fear_overcome", name = "Fear Overcome", desc = "The thing that terrified yesterday, faced today. Not gone, but managed. Courage isn't absence of fear - it's going anyway. You went." },
+    { id = "skill_demonstrated", name = "Critical Skill Demonstrated", desc = "Under pressure, training held. The right response at the right moment. You can do this. You know you can now." },
+    { id = "respect_earned", name = "Respect Earned", desc = "The squad sees you differently. Something you did. You belong now. The probation ended. You're one of them." },
+    { id = "leadership_moment", name = "Leadership Moment", desc = "Decision required, no one else making it. You stepped up. People followed. It worked. Maybe you can do this." },
+    { id = "moral_stand", name = "Moral Stand Taken", desc = "The wrong thing was happening. You said no. Cost something, maybe a lot. But you know who you are. Still." },
+]
+
+# Institutional Help
+institutional = [
+    { id = "competent_command", name = "Competent Command Decision", desc = "Orders make sense. Resources allocated properly. Someone up there actually understands. The system can work." },
+    { id = "support_arrives", name = "Promised Support Arrives", desc = "The reinforcements, the resupply, the assets - they came when promised. Reliability in unreliable times. The machine functions." },
+    { id = "meritorious_recognition", name = "Deserved Recognition", desc = "The medal is for real. What happened actually happened. Someone noticed, someone cared. The good action acknowledged." },
+    { id = "justified_removal", name = "Incompetent Leader Removed", desc = "The officer who was getting people killed is gone. Someone saw, someone acted. The system self-corrected. Rare and beautiful." },
+    { id = "rotation_confirmed", name = "Rotation Date Confirmed", desc = "DEROS locked in, orders cut. Going home is real now. Just have to survive until then. The calendar counts down to salvation." },
+]
+
+# Vietnamese Hope
+vietnamese = [
+    { id = "arvn_stand", name = "ARVN Unit Stands", desc = "They held when it mattered. South Vietnamese troops fighting for their own country. The war makes sense when they believe." },
+    { id = "village_defended", name = "Village Defends Itself", desc = "The people fought back. Against VC, against whoever threatened them. Agency, ownership, hope for them and for the strategy." },
+    { id = "kit_carson_saves", name = "Kit Carson Scout Proves Himself", desc = "Former enemy turned ally proves loyalty under fire. The redemption narrative works sometimes. Trust validated." },
+    { id = "interpreter_friendship", name = "Genuine Interpreter Friendship", desc = "More than working relationship. Understanding across the divide. What the war could be, if there was a World after it." },
+    { id = "child_succeeds", name = "Helped Child Succeeds", desc = "The kid from the orphanage, the school built, the medical care given - it mattered. One life changed. Something good persists." },
+]
+
+# Return Home
+going_home = [
+    { id = "deros_day", name = "DEROS Arrives", desc = "The day is here. Freedom bird waiting. Jungle for the last time. Going home. Survived. Alive. Home." },
+    { id = "reunion_anticipated", name = "Reunion Waiting", desc = "Someone at the airport. Someone who waited. The homecoming will happen. The love survived the distance." },
+    { id = "medical_recovery", name = "Full Medical Recovery", desc = "The wound heals clean. Full function, minimal scars. The war marked the body but didn't break it. Lucky." },
+    { id = "clean_discharge", name = "Honorable Discharge", desc = "Papers clean, record good. The exit with head high. The service means something on paper even if memory complicates it." },
+]

@@ -1,0 +1,212 @@
+# Doctor Who Alien Worlds
+# Planets, space stations, and locations beyond Earth
+
+[gallifrey]
+description = "The Doctor's homeworld - lost, found, lost again"
+
+[[gallifrey.entries]]
+name = "The Capitol"
+description = "Citadel of the Time Lords, enclosed in a great glass dome. The Panopticon where presidents are inaugurated and assassinated. Corridors of power spanning millennia."
+
+[[gallifrey.entries]]
+name = "The Eye of Harmony"
+description = "A black hole suspended in eternal collapse, source of all Time Lord power. Deep beneath the Capitol. The heart of the TARDIS, the heart of Gallifrey."
+
+[[gallifrey.entries]]
+name = "The Citadel of Rassilon"
+description = "The founder's tomb and prison. The Death Zone surrounds it. Only the worthy may enter. Only the foolish try."
+
+[[gallifrey.entries]]
+name = "The Academy"
+description = "Where Time Lords are made. Eight years of staring into the Untempered Schism. Some are inspired. Some go mad. Some run."
+
+[[gallifrey.entries]]
+name = "Arcadia"
+description = "Gallifrey's second city. Beautiful. Peaceful. The Daleks broke through here during the Time War. The Doctor destroyed them. And everything else."
+
+[[gallifrey.entries]]
+name = "The Drylands"
+description = "Beyond the Capitol, harsh wilderness where outcasts live. The Doctor's childhood was spent here. Some things are better forgotten."
+
+[[gallifrey.entries]]
+name = "Gallifrey Falls"
+description = "The moment of destruction, frozen. A painting. A warning. A possibility. No more."
+
+[[gallifrey.entries]]
+name = "The Matrix"
+description = "Repository of all Time Lord consciousness. The dead speak here. The future can be glimpsed. Reality is negotiable."
+
+[dalek_locations]
+description = "The empire of hatred"
+
+[[dalek_locations.entries]]
+name = "Skaro"
+description = "Devastated homeworld of the Daleks. Ruined cities, toxic wastelands, endless war. The Kaled bunker where Davros first created his children."
+
+[[dalek_locations.entries]]
+name = "The Dalek Asylum"
+description = "Prison for Daleks too insane even for the Dalek concept of sanity. Millions of damaged, malfunctioning, utterly unpredictable killing machines."
+
+[[dalek_locations.entries]]
+name = "The Crucible"
+description = "Davros's station at the heart of the Medusa Cascade. 27 planets stolen for the Reality Bomb. Every universe would have died."
+
+[[dalek_locations.entries]]
+name = "Dalek Parliament"
+description = "The Dalek government, such as it is. Thousands of Daleks in vast chamber. Democracy expressed through unanimous hatred."
+
+[[dalek_locations.entries]]
+name = "The Genesis Ark"
+description = "Time Lord prison ship stolen by Daleks. Contains millions of Daleks in temporal stasis. The Cult of Skaro's secret weapon."
+
+[[dalek_locations.entries]]
+name = "Davros's Laboratory"
+description = "Where the first Dalek was created. Radiation, mutation, mad genius. The birth of the universe's greatest threat."
+
+[cyberman_locations]
+description = "The empire of upgrade"
+
+[[cyberman_locations.entries]]
+name = "Mondas"
+description = "Earth's twin planet, drifted into deep space. The original Cybermen evolved here, replacing flesh with machine to survive the cold."
+
+[[cyberman_locations.entries]]
+name = "Telos"
+description = "Adopted Cyberman homeworld after Mondas's destruction. The tombs hold thousands in frozen sleep, waiting for awakening."
+
+[[cyberman_locations.entries]]
+name = "Pete's World"
+description = "Parallel Earth where Cybus Industries created a new breed of Cybermen. John Lumic's upgrade program. Everyone's getting an upgrade."
+
+[[cyberman_locations.entries]]
+name = "Cyber-Conversion Factory"
+description = "Assembly line of horror. Humans enter. Cybermen emerge. The screams are removed with the emotions."
+
+[[cyberman_locations.entries]]
+name = "The Cyber-Fleet"
+description = "Vast armada of Cyberships, dormant and waiting. One percent of one percent of the Cyber-Army. Cold metal patience."
+
+[space_stations]
+description = "Constructed habitats across the cosmos"
+
+[[space_stations.entries]]
+name = "Space Station Nerva"
+description = "The Ark in Space. Humanity's survivors in cryogenic sleep, waiting for Earth to heal. The Wirrn found them first."
+
+[[space_stations.entries]]
+name = "Demons Run"
+description = "Asteroid converted to military base by the Church. Where Melody Pond was born. Where the Doctor's greatest victory became his greatest loss."
+
+[[space_stations.entries]]
+name = "Satellite Five / Game Station"
+description = "Broadcasting hub for Earth's Fourth Great and Bountiful Empire. News. Entertainment. Death. The Bad Wolf was here."
+
+[[space_stations.entries]]
+name = "Platform One"
+description = "Orbiting station for Earth's destruction viewing party. The richest beings in the universe, watching the end. Murder among the celebrities."
+
+[[space_stations.entries]]
+name = "The Cruciform"
+description = "Vast Time Lord station, fell to the Daleks during the Time War. The Master ran when he saw what happened there."
+
+[[space_stations.entries]]
+name = "Kerblam Distribution Center"
+description = "Automated warehouse moon. 10,000 workers doing the jobs robots couldn't. The system is not the problem. The system is not the problem."
+
+[[space_stations.entries]]
+name = "Starship UK"
+description = "Great Britain in space. Every city block a ship component. The beast below keeps it moving. Don't ask how."
+
+[alien_civilizations]
+description = "Worlds with their own complex societies"
+
+[[alien_civilizations.entries]]
+name = "New Earth"
+description = "Humanity's new home after Earth's destruction. New New York under the Senate's rule. Cat nurses, mysterious plagues, and the Face of Boe."
+
+[[alien_civilizations.entries]]
+name = "Raxacoricofallapatorius"
+description = "Homeworld of the Slitheen family - one criminal clan among many. Calcium-based life, skin suits for disguise, and endless schemes for profit."
+
+[[alien_civilizations.entries]]
+name = "Sontar"
+description = "Clone world of the Sontarans. Hatcheries produce ten million warriors every four minutes. War is not just life - war is worship."
+
+[[alien_civilizations.entries]]
+name = "Mars (Ice Warrior)"
+description = "Ancient and noble Martian civilization. The Flood imprisoned beneath the ice. The Ice Warriors' honor preserved even as their world died."
+
+[[alien_civilizations.entries]]
+name = "Trenzalore"
+description = "Where the Doctor would die. The question burned in the sky. The siege lasted centuries. Christmas was defended to the last."
+
+[[alien_civilizations.entries]]
+name = "Krop Tor"
+description = "Impossible planet orbiting a black hole. The Beast imprisoned beneath. The Ood enslaved above. Some things should stay buried."
+
+[[alien_civilizations.entries]]
+name = "Midnight"
+description = "Diamond planet with deadly surface. Something outside the shuttle. Something that steals voices, copies words, takes over minds. Unknown. Unknowable."
+
+[[alien_civilizations.entries]]
+name = "Messaline"
+description = "Human colony where war became the only purpose. Clones bred for combat, fighting forever. The Doctor's daughter was born here."
+
+[[alien_civilizations.entries]]
+name = "San Helios"
+description = "Desert world stripped of all life by the Swarm. Metal stingrays devouring everything. Beautiful desolation."
+
+[[alien_civilizations.entries]]
+name = "Apalapucia"
+description = "Planet under quarantine. Kindness facility for the dying. Time moves differently in different streams. Amy waited 36 years."
+
+[[alien_civilizations.entries]]
+name = "Akhaten"
+description = "Rings of Akhaten, market of a thousand worlds. The Mummy awakes. Songs and memories are currency. The Long Song never stops."
+
+[mysterious_locations]
+description = "Places of power and strangeness"
+
+[[mysterious_locations.entries]]
+name = "The Medusa Cascade"
+description = "Rift in space-time, the Doctor's favorite place. 27 planets were hidden here. The Reality Bomb would have detonated here."
+
+[[mysterious_locations.entries]]
+name = "The Void"
+description = "The space between dimensions. Nothing exists here. Void stuff clings to those who pass through. The Daleks and Cybermen fell here."
+
+[[mysterious_locations.entries]]
+name = "The Untempered Schism"
+description = "Gap in the fabric of reality. Young Time Lords stare into it. They see eternity. They're never quite the same."
+
+[[mysterious_locations.entries]]
+name = "The Time Vortex"
+description = "The space between times. The TARDIS swims through it. Raw temporal energy. To look at it directly is to become something else."
+
+[[mysterious_locations.entries]]
+name = "The Impossible Planet"
+description = "Krop Tor, orbiting a black hole. The Beast below. The pit opens. The darkness speaks."
+
+[[mysterious_locations.entries]]
+name = "Pete's World Parallel Earth"
+description = "Similar but different. Zeppelins in the sky. Rose's father lives. The Cybermen are born differently here."
+
+[[mysterious_locations.entries]]
+name = "House"
+description = "Entity in a bubble universe, feeding on TARDISes. Patchwork people, corridors that change, a living asteroid with terrible hunger."
+
+[[mysterious_locations.entries]]
+name = "The Pandorica Chamber"
+description = "Beneath Stonehenge, the perfect prison. Built to hold the most dangerous creature in the universe. They built it for the Doctor."
+
+[[mysterious_locations.entries]]
+name = "The Time Fracture"
+description = "Reality split open. All times visible at once. Step through to anywhere, anywhen. No map, no guide, no safety."
+
+[[mysterious_locations.entries]]
+name = "The Celestial Temple"
+description = "Hidden temple where Rassilon's secrets were kept. Time Lord technology beyond comprehension. Death is a revolving door."
+
+[[mysterious_locations.entries]]
+name = "Woman Wept"
+description = "Planet with frozen waves a hundred feet high. Silent beauty. The Doctor brought Rose here once. Just to see."

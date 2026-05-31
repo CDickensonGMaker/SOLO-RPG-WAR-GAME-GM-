@@ -1,0 +1,91 @@
+# Lost Regiment NPC Names
+# Displaced military personnel, native inhabitants, enemy forces, and converts
+
+[names]
+entries = [
+    # Displaced Military - Officers (American Civil War era inspired)
+    "Colonel Andrew Lawrence Keane",
+    "Major Hans Schuder",
+    "Captain Tobias Fletcher",
+    "Lieutenant Marcus Hawkins",
+    "Captain Emil Kindred",
+    "Major Vincent O'Donald",
+    "Lieutenant Gregory Timokin",
+    "Captain William Cromwell",
+    "Major Patrick Ferguson",
+    "Lieutenant Johann Weiss",
+
+    # Displaced Military - NCOs and Enlisted
+    "Sergeant Major Dmitri Baskov",
+    "Sergeant Angus MacTavish",
+    "Corporal Pietro Mancini",
+    "Private First Class Samuel Abrams",
+    "Sergeant Chen Wei-Lin",
+    "Corporal Hans Gruber",
+    "Private Mikhail Denisov",
+    "Sergeant Major Thomas Blackwood",
+    "Corporal Jean-Pierre Dubois",
+    "Private Seamus O'Brien",
+    "Sergeant Yuri Petrov",
+    "Corporal Wilhelm Brandt",
+
+    # Displaced Specialists/Civilians
+    "Doctor Kathleen Murphy",
+    "Engineer Frederick Hinsen",
+    "Chaplain Father Casimir Rasputin",
+    "Nurse Clara Whitfield",
+    "Blacksmith Heinrich Dunlevy",
+    "Quartermaster Solomon Greene",
+    "Surveyor Theodore Mace",
+    "Professor Adelaide Thornton",
+    "Machinist Gustav Lindstrom",
+    "Chemist Natasha Volkov",
+
+    # Native/Local Inhabitants - Leaders
+    "Boyar Ivor Romanovitch",
+    "Chief Tarkhan of the Horse People",
+    "Elder Matriarch Zora",
+    "Prince Yaroslav the Younger",
+    "Warlord Kal Tuzak",
+    "High Priestess Meridia",
+    "Khan Muzta Qar Qarth",
+    "Duke Aleksander Suzdal",
+    "Lady Tamara of the River Keep",
+    "Chieftain Batu Ironmane",
+
+    # Native/Local - Common Folk
+    "Nikolai the Smith",
+    "Peasant Girl Anya",
+    "Farmer Ivan Gregorvitch",
+    "Hunter Vasili Silent-Step",
+    "Healer Woman Baba Marta",
+    "Stable Master Pyotr",
+    "Miller's Son Alexei",
+    "Weaver Katya Three-Fingers",
+    "Woodcutter Boris the Strong",
+    "Fisher Oleg of the Lake",
+
+    # Enemy/Alien Forces
+    "Qar Qarth Hulagar the Devourer",
+    "Zan Vushka Blooddrinker",
+    "Pet Sark of the Merki Horde",
+    "Tamuka the Slayer",
+    "Qar Qarth Jubadi of the Bantag",
+    "Shield Bearer Karga",
+    "Flesh Priest Ha'ark",
+    "Namer of the Dead Skulak",
+    "Horde Master Vuka Breath-of-Fire",
+    "Blood Khan Subagai",
+
+    # Converts and Allied Natives
+    "Captain Gregorvitch Tulak (converted warrior)",
+    "Lieutenant Dimitri Boyarson",
+    "Sergeant Karlov of the Rifles",
+    "Scout Batu who-walks-between",
+    "Interpreter Mira Twotongues",
+    "Engineer Apprentice Yakov",
+    "Medical Student Sonya",
+    "Artillery Corporal Fyodor",
+    "Cavalry Scout Temujin",
+    "Quartermaster Assistant Pavel"
+]

@@ -1,0 +1,125 @@
+# Mobile Infantry and Federation Military Roles
+# "Service guarantees citizenship"
+
+[mobile_infantry_enlisted]
+description = "The grunts who drop from orbit and kill bugs"
+entries = [
+  { text = "Private - Fresh from Camp Currie, still flinches at bug screeches, uniform crisp and untested", weight = 3 },
+  { text = "Private First Class - Survived their first drop, eyes older now, moves with the jerky caution of the blooded", weight = 2 },
+  { text = "Corporal - Fire team leader, voice hoarse from screaming orders over plasma fire, responsible for four lives", weight = 2 },
+  { text = "Sergeant - Career MI, face a roadmap of plasma burns and claw scars, the one who keeps the squad breathing", weight = 2 },
+  { text = "Staff Sergeant - Platoon sergeant, walks with a powered-suit limp, knows every trooper's name and next of kin", weight = 1 },
+  { text = "Sergeant Major - Company's senior enlisted, twenty drops without dying, unofficial advisor to greenhorn officers", weight = 1 },
+  { text = "Recruit - Pre-citizenship trainee, still in Camp Currie grays, hasn't earned the right to wear MI black", weight = 2 },
+  { text = "Boot - Just finished basic, heading to their first unit assignment, terrified and trying not to show it", weight = 2 },
+  { text = "Cap Trooper - Specialized capsule drop technician, the first boots on hostile ground", weight = 1 },
+  { text = "Heavy Weapons Specialist - Carries the Y-rack, walks slower but hits harder, beloved by their squad", weight = 1 },
+]
+
+[mobile_infantry_officers]
+description = "The officers who lead from the front - MI officers drop with their troops"
+entries = [
+  { text = "Second Lieutenant - Fresh from OCS, eager to prove themselves, smart enough to listen to their sergeant", weight = 2 },
+  { text = "First Lieutenant - Platoon leader, has written letters to parents back home, carries that weight visibly", weight = 2 },
+  { text = "Captain - Company commander, makes the hard calls on who drops where, still drops with the first wave", weight = 2 },
+  { text = "Major - Battalion XO, last officer rank that regularly sees bug guts on their boots", weight = 1 },
+  { text = "Lieutenant Colonel - Battalion commander, plans the drops from the war room but drops for the big ones", weight = 1 },
+  { text = "Colonel - Regimental commander, hasn't touched dirt in years, haunted by casualty reports", weight = 1 },
+  { text = "Brigadier General - Division level, more politician than soldier now, still wears MI jump wings", weight = 1 },
+  { text = "Major General - Corps commander, makes decisions that spend thousands of lives", weight = 1 },
+  { text = "Lieutenant General - Army commander, face known from FedNet broadcasts", weight = 1 },
+  { text = "General - Theater commander, one of the few who could end or escalate the Bug War", weight = 1 },
+  { text = "Sky Marshal - Supreme military authority, answerable only to the Federation Council", weight = 1 },
+]
+
+[fleet_personnel]
+description = "Navy personnel who get the MI to the fight"
+entries = [
+  { text = "Ensign - Junior bridge officer, manages launch bay operations, dreams of command", weight = 2 },
+  { text = "Lieutenant JG - Weapons officer, responsible for orbital bombardment coordinates", weight = 2 },
+  { text = "Lieutenant - Navigation officer, plots the jumps that bring troopers home", weight = 2 },
+  { text = "Lieutenant Commander - Department head, runs their section with tired efficiency", weight = 1 },
+  { text = "Commander - Executive officer, the captain's right hand, knows every system on the ship", weight = 1 },
+  { text = "Captain - Starship commander, carries the lives of crew and MI complement in every decision", weight = 1 },
+  { text = "Commodore - Squadron commander, coordinates multiple ship actions", weight = 1 },
+  { text = "Rear Admiral - Fleet tactical commander, directs battle groups from a flag bridge", weight = 1 },
+  { text = "Vice Admiral - Fleet operations, strategic-level decisions", weight = 1 },
+  { text = "Admiral - Theater naval commander, controls the space around entire sectors", weight = 1 },
+  { text = "Fleet Pilot - Drop ship jockey, flies into plasma fire to deliver troops, crazy brave", weight = 2 },
+  { text = "TAC Fighter Pilot - Provides air support, lone wolf mentality, looks down on Fleet pukes", weight = 1 },
+  { text = "Retrieval Boat Pilot - Picks up survivors, has seen things, drinks heavily on leave", weight = 1 },
+  { text = "Shuttle Crew Chief - Maintains the boats, knows every rattle and hum that means trouble", weight = 1 },
+]
+
+[intelligence_personnel]
+description = "Military Intelligence - they know more than they'll ever tell you"
+entries = [
+  { text = "Intel Analyst - Pores over bug movement data, looks for patterns in the swarm", weight = 2 },
+  { text = "Field Intelligence Officer - Accompanies MI units, collects bug specimens mid-battle", weight = 1 },
+  { text = "SIGINT Specialist - Listens to bug psionic emissions, slowly going mad from the noise", weight = 1 },
+  { text = "Strategic Intelligence Coordinator - Tracks bug fleet movements across sectors", weight = 1 },
+  { text = "Counter-Intelligence Agent - Hunts bug sympathizers and Federation traitors", weight = 1 },
+  { text = "Bug Behavioral Analyst - Studies captured specimens, understands bugs better than humans now", weight = 1 },
+  { text = "Sky Marshal Intelligence Aide - Briefs the highest command, knows classified deployment orders", weight = 1 },
+  { text = "Propaganda Officer - Crafts the FedNet narratives, believes what they write, mostly", weight = 1 },
+  { text = "Combat Correspondent - Embedded with MI, captures footage for the net, expendable", weight = 2 },
+  { text = "Interrogation Specialist - Works with psychics to crack captured brain bugs", weight = 1 },
+]
+
+[psychic_corps]
+description = "Military telepaths - weapons in human form"
+entries = [
+  { text = "Psi-Talent Recruit - Newly identified psychic, undergoing conditioning, afraid of their own mind", weight = 2 },
+  { text = "Tactical Telepath - Embedded with MI units, provides early warning of bug ambushes", weight = 2 },
+  { text = "Strategic Psych - High-powered telepath, works on brain bug interrogation", weight = 1 },
+  { text = "Psi-Ops Commander - Leads psychic units, burned out from contact with alien minds", weight = 1 },
+  { text = "Bug-Listener - Specialized in intercepting bug psionic communications, fragmented personality", weight = 1 },
+  { text = "Combat Precog - Predicts bug attack patterns, seizures between visions, vital asset", weight = 1 },
+  { text = "Psi-Screening Officer - Tests recruits for latent abilities, coldly clinical", weight = 1 },
+  { text = "Mind-Shield Specialist - Protects command staff from brain bug influence", weight = 1 },
+]
+
+[technical_specialists]
+description = "The people who keep the MI fighting"
+entries = [
+  { text = "Power Suit Technician - Maintains the powered armor, knows every servo and joint", weight = 2 },
+  { text = "Weapons Tech - Keeps the Morita rifles firing, Bugs killed is their metric", weight = 2 },
+  { text = "Nuke Specialist - Handles the tactical nuclear devices, calm under pressure, has to be", weight = 1 },
+  { text = "Drop Pod Technician - Maintains the capsules, a loose seal means a dead trooper", weight = 1 },
+  { text = "Field Engineer - Builds fortifications under fire, creative with explosives", weight = 1 },
+  { text = "Communications Tech - Keeps the comms working through bug interference", weight = 2 },
+  { text = "Vehicle Mechanic - Maintains the Marauder suits and heavy equipment", weight = 1 },
+  { text = "Jump Jet Specialist - Tunes the thruster packs, obsessed with fuel efficiency", weight = 1 },
+  { text = "Sensor Technician - Operates bug-detection equipment, paranoid by profession", weight = 1 },
+  { text = "Quartermaster - Manages supplies, has what you need for the right price", weight = 1 },
+]
+
+[medical_corps]
+description = "Those who put the MI back together"
+entries = [
+  { text = "Combat Medic - Drops with the MI, patches holes under fire, carries the guilt of triage", weight = 2 },
+  { text = "Flight Surgeon - Ship's doctor, handles everything from bug acid burns to vacuum exposure", weight = 1 },
+  { text = "Trauma Surgeon - Works the field hospitals, sees the worst the bugs can do", weight = 1 },
+  { text = "Prosthetics Specialist - Fits replacement limbs, knows every trooper by their stumps", weight = 1 },
+  { text = "Psych Evaluator - Determines who's fit for duty, hated and needed", weight = 1 },
+  { text = "Bug Biology Specialist - Studies captured specimens, develops anti-bug weapons", weight = 1 },
+  { text = "Corpsman - Navy medical enlisted attached to MI, crawls through bug guts to reach wounded", weight = 2 },
+  { text = "Hospital Ship Commander - Runs a floating house of horrors, triage on an industrial scale", weight = 1 },
+  { text = "Rehabilitation Therapist - Helps wounded troopers walk again, or accept that they won't", weight = 1 },
+  { text = "Medical Examiner - Identifies remains, writes the letters when there's enough left to identify", weight = 1 },
+]
+
+[support_personnel]
+description = "The Federation machine behind the front lines"
+entries = [
+  { text = "Drill Instructor - Forges civilians into MI, cruel because kindness kills recruits", weight = 2 },
+  { text = "Recruiter - Sells the dream of citizenship, knows exactly what they're not telling kids", weight = 1 },
+  { text = "JAG Officer - Military lawyer, handles courts martial, seen too many desertion cases", weight = 1 },
+  { text = "Chaplain - Provides spiritual comfort, buries more troops than they save, faith tested daily", weight = 1 },
+  { text = "Morale Officer - Arranges entertainment, manages FedNet access, keeps spirits up somehow", weight = 1 },
+  { text = "Federation Liaison - Civilian oversight, deeply uncomfortable around actual combat veterans", weight = 1 },
+  { text = "War Correspondent - Creates propaganda, some still believe in truth", weight = 1 },
+  { text = "Colonial Administrator - Manages liberated/conquered territories, bug-paranoid", weight = 1 },
+  { text = "Veteran Affairs Officer - Helps discharged MI transition, swimming against bureaucracy", weight = 1 },
+  { text = "Citizenship Clerk - Processes service records, stamps the papers that make civilians into citizens", weight = 1 },
+]

@@ -1,0 +1,47 @@
+# Stargate SG-1 Character Dispositions
+# Attitudes and current states of characters in the Stargate universe
+
+[cooperative]
+description = "Generally helpful and allied dispositions"
+dispositions = [
+    { name = "Eager to Help", description = "Actively wants to assist. Perhaps hopes for technology, protection, or alliance with Earth in return." },
+    { name = "Cautiously Friendly", description = "Willing to talk and cooperate but watches for signs of betrayal. Trust must be earned slowly." },
+    { name = "Indebted", description = "Owes a debt to the team or SGC. Will help repay what they owe, then reassess the relationship." },
+    { name = "Shared Enemy", description = "Has the same foe. Cooperation is logical, even if friendship is not. Enemy of my enemy calculations." },
+    { name = "Curious About Earth", description = "Fascinated by tales of the Tau'ri. Will cooperate partly to learn more about this strange world." },
+    { name = "Religious Reverence", description = "Views the team as fulfillment of prophecy or sent by their gods. Cooperation is devotion." },
+    { name = "Professional Alliance", description = "Maintains strictly professional cooperation. Personal feelings don't enter the equation." },
+    { name = "Desperate for Aid", description = "Needs help badly enough to overlook reservations. Will agree to almost anything for assistance." },
+]
+
+[neutral]
+description = "Uncertain or balanced dispositions"
+dispositions = [
+    { name = "Evaluating", description = "Watching, testing, gathering information. Hasn't decided whether to help or hinder yet." },
+    { name = "Bureaucratic Obstruction", description = "Neither helps nor hinders directly, but processes, procedures, and forms slow everything down." },
+    { name = "Mercenary Interest", description = "Will cooperate for the right price. Loyalty lasts exactly as long as payment does." },
+    { name = "Cultural Incomprehension", description = "Can't understand what the team wants or why. Not hostile, just utterly confused by alien values." },
+    { name = "Waiting for Orders", description = "Will not act without direction from superiors. Follows the chain of command, whoever that serves." },
+    { name = "Internal Conflict", description = "Part of them wants to help, part doesn't. Visibly struggling with their own divided loyalties." },
+    { name = "Isolationist", description = "Wants nothing to do with outsiders. Not aggressive, just wishes the team would leave them alone." },
+    { name = "Skeptical Observer", description = "Doubts the team's stated intentions. Will watch carefully for any sign of deception or threat." },
+]
+
+[hostile]
+description = "Antagonistic dispositions"
+dispositions = [
+    { name = "Religious Zealotry", description = "Devoted utterly to their god, whether Goa'uld, Ori, or other. The team are heretics to be destroyed." },
+    { name = "Vengeance Seeking", description = "The team or SGC wronged them, or they believe so. Nothing will satisfy but retribution." },
+    { name = "Territorial Aggression", description = "Views the team as invaders. This world/space/resource belongs to them, and trespassers will suffer." },
+    { name = "Ordered to Kill", description = "Has been commanded to eliminate the team. Personal feelings are irrelevant; orders are orders." },
+    { name = "Paranoid Hostility", description = "Sees threat everywhere. The team's very presence confirms their worst fears about outsiders." },
+    { name = "Predatory Interest", description = "Sees the team as resources to be exploited - hosts, slaves, food, or experimental subjects." },
+    { name = "Ideological Opposition", description = "Believes the team represents everything wrong with the galaxy. Opposes them on principle." },
+    { name = "Corrupted Friendship", description = "Once an ally, now turned against the team through manipulation, possession, or betrayal. The worst kind of enemy." },
+    { name = "Competitive Elimination", description = "Views the team as rivals for something they want. Only one side can have it; the other must be removed." },
+    { name = "Contemptuous Dismissal", description = "Doesn't consider the team worthy of real attention. Swatting them is mere housekeeping." },
+    { name = "Blood Feud", description = "Their people and the team's are ancient enemies. Personal innocence is irrelevant to generations of hate." },
+    { name = "Goa'uld Superiority", description = "Humans are cattle, tools, or toys. The very idea of treating with them as equals is offensive." },
+    { name = "Fear-Driven Aggression", description = "Terrified of what the team represents. Attacks because they believe it's fight or die." },
+    { name = "Prior Certainty", description = "Knows with Ori-granted certainty that the team must be converted or destroyed. There is no doubt, only Origin." },
+]

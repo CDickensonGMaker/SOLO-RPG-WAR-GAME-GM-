@@ -1,0 +1,150 @@
+# Doctor Who Grimdark Complications
+# The darkness that makes the light meaningful - the cost of adventure
+
+[death_and_sacrifice]
+description = "Some prices cannot be avoided"
+
+[[death_and_sacrifice.entries]]
+name = "Fixed Death"
+description = "Someone has to die. It's a fixed point. Their death makes everything else possible. You can watch. You cannot intervene."
+
+[[death_and_sacrifice.entries]]
+name = "Heroic Sacrifice"
+description = "Only one person can do what needs doing, and they won't survive. They know. They go anyway. Remember them."
+
+[[death_and_sacrifice.entries]]
+name = "Innocent Casualties"
+description = "Despite everything, despite the victory, innocents died. The bad guys are stopped but the cost is written in bodies."
+
+[[death_and_sacrifice.entries]]
+name = "Mercy Kill"
+description = "They're suffering. The conversion is irreversible. The possession is complete. The kindest thing - the hardest thing - is ending it."
+
+[[death_and_sacrifice.entries]]
+name = "Child in Danger"
+description = "The threat specifically targets children. Conversion. Experimentation. Sacrifice. Childhood innocence corrupted."
+
+[[death_and_sacrifice.entries]]
+name = "Family Destroyed"
+description = "A family torn apart by events. Parents dead. Children orphaned. Home destroyed. The adventure's aftermath is grief."
+
+[[death_and_sacrifice.entries]]
+name = "Companion Death"
+description = "Someone who traveled with you, believed in the cause, dies. Not a stranger. A friend. The TARDIS feels emptier."
+
+[[death_and_sacrifice.entries]]
+name = "Planet Lost"
+description = "Not a building, not a city. A world. Billions die. The rescue saves thousands. The mathematics are obscene but accurate."
+
+[corruption_and_betrayal]
+description = "Trust broken, faith shattered"
+
+[[corruption_and_betrayal.entries]]
+name = "The Traitor Revealed"
+description = "Someone you trusted was working against you. From the beginning. Everything they said and did was manipulation."
+
+[[corruption_and_betrayal.entries]]
+name = "Conversion Complete"
+description = "The ally who was captured is now the enemy. Cyberman. Dalek puppet. Silence agent. They remember you. They're using it."
+
+[[corruption_and_betrayal.entries]]
+name = "Government Complicity"
+description = "The authorities aren't helping because they're part of it. Cover-ups, collaboration, conscious choice to let people die."
+
+[[corruption_and_betrayal.entries]]
+name = "Good Intentions Gone Wrong"
+description = "They started trying to help. The mission corrupted them. Now they're the monster, and they still think they're right."
+
+[[corruption_and_betrayal.entries]]
+name = "The Doctor's Shadow"
+description = "Something dark the Doctor did. A secret kept. An action that betrayed their principles. Heroes have terrible moments too."
+
+[[corruption_and_betrayal.entries]]
+name = "Memory Wiped"
+description = "To protect you, they took your memories. The choice was made without consent. What else did they take? Who were you?"
+
+[[corruption_and_betrayal.entries]]
+name = "Organization Corrupt"
+description = "UNIT, Torchwood, the government - compromised from within. The people you called for help are part of the problem."
+
+[[corruption_and_betrayal.entries]]
+name = "Historical Hero Fallen"
+description = "A figure you admired turns out to be complicit in horrors. History lies. The truth is darker than the legends."
+
+[loss_and_grief]
+description = "The emotional toll of the impossible"
+
+[[loss_and_grief.entries]]
+name = "Survivor's Guilt"
+description = "Everyone else is dead. You survived. The question 'why me?' has no good answer. The weight is permanent."
+
+[[loss_and_grief.entries]]
+name = "Lost to Time"
+description = "Someone you love is displaced in time. Not dead - worse. Living out their life decades or centuries from you. Unreachable."
+
+[[loss_and_grief.entries]]
+name = "Can't Go Home"
+description = "Home is destroyed. Changed beyond recognition. Or you've changed so much it wouldn't accept you. The door is closed."
+
+[[loss_and_grief.entries]]
+name = "Memory of Loss"
+description = "You remember someone the universe forgot. The crack erased them. No one else remembers. Were they even real?"
+
+[[loss_and_grief.entries]]
+name = "Love Lost to Conversion"
+description = "They're still alive. Technically. But everything you loved is gone. The Cyberman wearing their face doesn't remember you."
+
+[[loss_and_grief.entries]]
+name = "Companion Left Behind"
+description = "Separated from the Doctor. From the TARDIS. From the life you knew. Ordinary existence after cosmic adventure."
+
+[[loss_and_grief.entries]]
+name = "Cost of Victory"
+description = "You won. The enemy is defeated. The price was everything else. Standing in the ruins, victory tastes like ash."
+
+[[loss_and_grief.entries]]
+name = "Outlived Everyone"
+description = "Time travelers meet people across eras. Watch them age. Watch them die. Everyone you meet is already dead in some timeline."
+
+[horror_elements]
+description = "The terror that lurks in the shadows"
+
+[[horror_elements.entries]]
+name = "Body Horror"
+description = "The transformation is visceral. Parts replaced with metal. Flesh becoming something else. The mirror shows a monster in progress."
+
+[[horror_elements.entries]]
+name = "Mind Control"
+description = "Your actions aren't your own. Something else moves your body, uses your voice. You watch helplessly from inside."
+
+[[horror_elements.entries]]
+name = "Endless Death"
+description = "Dying repeatedly. Time loop. Immortality curse. Coming back each time. Death loses meaning. Living loses meaning."
+
+[[horror_elements.entries]]
+name = "Identity Loss"
+description = "Forgetting who you are. Memories erased or overwritten. The person you were dies while the body continues."
+
+[[horror_elements.entries]]
+name = "Cosmic Insignificance"
+description = "The universe doesn't care. Vast entities treat worlds as toys. Human concerns are meaningless at this scale."
+
+[[horror_elements.entries]]
+name = "Something Wearing Friends"
+description = "They look like your allies. Sound like them. But something is wrong. They're masks. The real ones are... elsewhere."
+
+[[horror_elements.entries]]
+name = "Isolation"
+description = "Completely alone. No help coming. The silence is total. The darkness is complete. No one knows you're here."
+
+[[horror_elements.entries]]
+name = "Uncanny Valley"
+description = "Almost human. Almost right. But wrong enough that instinct screams. The smile is too wide. The eyes don't track properly."
+
+[[horror_elements.entries]]
+name = "Time Alone"
+description = "Centuries pass. Everyone you knew dies while you persist. The world changes around you. Loneliness beyond comprehension."
+
+[[horror_elements.entries]]
+name = "The Wrongness"
+description = "Reality feels broken. Colors are off. Sounds don't match. Something fundamental has shifted. The universe is sick."

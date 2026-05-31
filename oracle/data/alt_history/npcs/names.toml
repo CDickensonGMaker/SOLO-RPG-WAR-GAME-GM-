@@ -1,0 +1,130 @@
+# Alternate History NPC Names
+# Names from various divergent timelines - reflecting changed cultures, merged histories, and altered naming conventions
+
+[male_names]
+entries = [
+  # Confederate/Southern Victory Timeline Names
+  { text = "Jefferson Davis III", weight = 2 },
+  { text = "Beauregard Stone", weight = 2 },
+  { text = "Stonewall Calhoun", weight = 1 },
+  { text = "Robert Edmund Lee", weight = 1 },
+  { text = "Braxton Forrest", weight = 1 },
+
+  # Nazi Victory Timeline Names
+  { text = "Heinrich Speer", weight = 1 },
+  { text = "Wilhelm Heydrich", weight = 1 },
+  { text = "Oskar von Reichmann", weight = 1 },
+  { text = "Friedrich Goering", weight = 1 },
+  { text = "Klaus Dietrich", weight = 1 },
+
+  # British Empire Never Rose (Spanish Armada Success)
+  { text = "Carlos de Inglaterra", weight = 1 },
+  { text = "Felipe Londrino", weight = 1 },
+  { text = "Diego Estuardo", weight = 1 },
+  { text = "Rodrigo Plantagenet", weight = 1 },
+  { text = "Alejandro Tudor", weight = 1 },
+
+  # Rome Never Fell
+  { text = "Marcus Aurelius XXIII", weight = 1 },
+  { text = "Gaius Americanus", weight = 1 },
+  { text = "Lucius Britannicus", weight = 1 },
+  { text = "Titus Germanicus", weight = 1 },
+  { text = "Quintus Pacificus", weight = 1 },
+
+  # Chinese America
+  { text = "Li Wei-ming", weight = 1 },
+  { text = "Chen Dazhou", weight = 1 },
+  { text = "Wang Xinlu", weight = 1 },
+  { text = "Zhang Haiyang", weight = 1 },
+  { text = "Liu Tianming", weight = 1 },
+
+  # Islamic Europe (Black Death Altered)
+  { text = "Tariq al-Parisii", weight = 1 },
+  { text = "Yusuf ibn London", weight = 1 },
+  { text = "Khalid al-Germani", weight = 1 },
+  { text = "Omar al-Scandinavi", weight = 1 },
+  { text = "Hassan al-Roma", weight = 1 },
+
+  # Worldwar/Alien Contact Names (Human Collaborators)
+  { text = "Vassily Molotov Jr.", weight = 1 },
+  { text = "Thomas Race-Friend", weight = 1 },
+  { text = "Hiroshi Liaison", weight = 1 },
+  { text = "Pierre Scaletongue", weight = 1 },
+  { text = "Wolfgang Fleetlord", weight = 1 },
+]
+
+[female_names]
+entries = [
+  # Confederate/Southern Victory Timeline Names
+  { text = "Magnolia Beaumont", weight = 2 },
+  { text = "Scarlett Davis", weight = 2 },
+  { text = "Virginia Belle Jackson", weight = 1 },
+  { text = "Carolina Ashworth", weight = 1 },
+  { text = "Savannah Pickett", weight = 1 },
+
+  # Nazi Victory Timeline Names
+  { text = "Brunhilde Speer", weight = 1 },
+  { text = "Ingrid von Reichmann", weight = 1 },
+  { text = "Helga Dietrich", weight = 1 },
+  { text = "Liesel Heydrich", weight = 1 },
+  { text = "Gretchen Goering", weight = 1 },
+
+  # British Empire Never Rose (Spanish Armada Success)
+  { text = "Isabella de Londres", weight = 1 },
+  { text = "Maria Estuardo", weight = 1 },
+  { text = "Catalina Plantagenet", weight = 1 },
+  { text = "Elena Tudor", weight = 1 },
+  { text = "Lucia Anglicana", weight = 1 },
+
+  # Rome Never Fell
+  { text = "Julia Americana", weight = 1 },
+  { text = "Livia Britannica", weight = 1 },
+  { text = "Cornelia Germanica", weight = 1 },
+  { text = "Claudia Pacifica", weight = 1 },
+  { text = "Agrippina Nova", weight = 1 },
+
+  # Chinese America
+  { text = "Mei Xiu-lan", weight = 1 },
+  { text = "Lin Xiaomei", weight = 1 },
+  { text = "Chen Yue-ying", weight = 1 },
+  { text = "Wang Chunhua", weight = 1 },
+  { text = "Zhang Mingzhu", weight = 1 },
+
+  # Islamic Europe (Black Death Altered)
+  { text = "Fatima al-Parisii", weight = 1 },
+  { text = "Aisha bint London", weight = 1 },
+  { text = "Zahra al-Germani", weight = 1 },
+  { text = "Leila al-Scandinavi", weight = 1 },
+  { text = "Mariam al-Roma", weight = 1 },
+
+  # Worldwar/Alien Contact Names
+  { text = "Natalya Liaison", weight = 1 },
+  { text = "Dorothy Race-Friend", weight = 1 },
+  { text = "Akiko Scaletongue", weight = 1 },
+  { text = "Sophie Fleetlord", weight = 1 },
+  { text = "Elena Resistance", weight = 1 },
+]
+
+[surnames]
+entries = [
+  # Timeline-Specific Surnames
+  { text = "Divergence", weight = 1 },
+  { text = "Timeline", weight = 1 },
+  { text = "Crossover", weight = 1 },
+  { text = "Paradox", weight = 1 },
+  { text = "Schism", weight = 1 },
+
+  # Victory/Defeat Surnames
+  { text = "Victorson", weight = 1 },
+  { text = "Defiance", weight = 1 },
+  { text = "Surrender", weight = 1 },
+  { text = "Resistance", weight = 1 },
+  { text = "Occupation", weight = 1 },
+
+  # Mixed Heritage (Timeline Bleed)
+  { text = "Romano-Germanic", weight = 1 },
+  { text = "Sino-American", weight = 1 },
+  { text = "Anglo-Spanish", weight = 1 },
+  { text = "Russo-German", weight = 1 },
+  { text = "Franco-Islamic", weight = 1 },
+]

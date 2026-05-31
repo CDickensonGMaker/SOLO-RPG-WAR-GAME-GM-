@@ -1,0 +1,80 @@
+# Stargate SG-1 Combat Encounters
+# Battle situations and military engagements in the Stargate universe
+
+[ground_combat]
+description = "Infantry engagements and firefights"
+encounters = [
+    { name = "Staff Weapon Ambush", description = "Golden plasma bolts streak from concealed positions. Jaffa warriors have the advantage of cover and numbers. Return fire while finding better ground." },
+    { name = "Gate Room Incursion", description = "Hostiles pour through an open stargate. The iris failed or was bypassed. Hold the room or lose the mountain." },
+    { name = "Clearing a Goa'uld Facility", description = "Room by room, corridor by corridor. Jaffa defenders know the layout. Death gliders provide air cover the team lacks." },
+    { name = "Village Defense", description = "Locals can't protect themselves from approaching Jaffa. Fight alongside them, evacuate them, or abandon them - time forces a choice." },
+    { name = "Kull Warrior Assault", description = "Anubis's super-soldiers advance through conventional fire. Standard weapons barely slow them. The prototype disruptor is the only hope." },
+    { name = "Running Firefight", description = "Retreating while maintaining suppressive fire. Ammunition is limited, enemies are not. The gate is the objective now." },
+    { name = "Sniper Duel", description = "Long-range engagement across difficult terrain. Patience and precision versus enemy marksmanship. Moving means exposure." },
+    { name = "Zat Gun Close Quarters", description = "Fighting in confined spaces where P90s would hit friendlies. Zat'nik'tel discharges in narrow corridors. First shot stuns, second kills." },
+    { name = "Hand-to-Hand Combat", description = "Weapons lost or impractical. Military training against Jaffa strength. Every advantage counts when fists decide outcomes." },
+    { name = "Night Assault", description = "Darkness provides cover for both sides. Night vision against Jaffa experience. Sound and light discipline determine survival." },
+    { name = "Defensive Position", description = "Holding ground while reinforcements or evacuation arranges. Limited ammunition, fixed location. Every minute matters." },
+    { name = "Hostage Extraction", description = "Friendlies held by hostiles. Firepower risks the people being rescued. Precision, timing, and luck required." },
+    { name = "Cross-Fire Situation", description = "Multiple factions engage simultaneously. Everyone shoots everyone. Finding allies in the chaos is the first challenge." },
+]
+
+[ship_combat]
+description = "Space and aerial engagements"
+encounters = [
+    { name = "Death Glider Strafing Run", description = "Goa'uld fighters sweep in low, plasma fire scorching the ground. Anti-aircraft weapons are unavailable. Cover and evasion are the only options." },
+    { name = "Ha'tak Orbital Bombardment", description = "A mothership targets the surface. The gate provides escape, but the bombardment might hit it first. Timing the dial-out is critical." },
+    { name = "F-302 Dogfight", description = "Earth fighters engage death gliders in close combat. Missiles and railguns against staff cannons. Skill matters more than numbers." },
+    { name = "Ship Boarding Action", description = "Crossing vacuum to breach an enemy vessel. Cutting through hull plating. Fighting in corridors designed for alien bodies." },
+    { name = "Bridge Defense", description = "Hostiles attempting to take control of the ship. The peltak or bridge is the objective. Lose it, lose everything." },
+    { name = "Al'kesh Attack Run", description = "Bomber variant approaching with destructive intent. Interception required before payload delivery. The target cannot survive a direct hit." },
+    { name = "Hyperdrive Failure in Combat", description = "Escape is impossible - the ship must fight. Damage control while engaging enemies. Victory or destruction are the only outcomes." },
+    { name = "Fleet Engagement", description = "Multiple capital ships exchange fire. Strategic coordination across the formation. Individual vessel survival depends on the larger battle." },
+    { name = "Puddle Jumper Pursuit", description = "Cloaked Ancient shuttle evading detection. Cloak failure means discovery. One ship against a patrol is poor odds." },
+    { name = "Asgard Intervention", description = "A small gray ship arrives to turn the tide. Overwhelming firepower resolves the immediate crisis. The favor will eventually require repayment." },
+]
+
+[base_assault]
+description = "Attacks on facilities and installations"
+encounters = [
+    { name = "SGC Lockdown", description = "The mountain is sealed with hostiles inside. Internal security protocols activate. Clearing level by level in familiar corridors." },
+    { name = "Off-World Base Attack", description = "Alpha Site or research outpost under assault. Reinforcement or evacuation decision. The personnel's lives depend on the choice." },
+    { name = "Goa'uld Palace Infiltration", description = "Sneaking through a System Lord's stronghold. Discovery means facing the full garrison. Stealth is survival." },
+    { name = "Ancient Facility Defense", description = "Holding an Ancient installation against those who want its technology. The systems might be weaponized for defense. If they can be figured out in time." },
+    { name = "Prison Break", description = "Extracting prisoners from Goa'uld detention. Guards, locks, and transport to coordinate. Getting out is harder than getting in." },
+    { name = "Sabotage Mission", description = "Destroying a critical enemy facility. Demolition charges placed under fire. Extraction before detonation is preferred." },
+    { name = "Gate Destruction", description = "The stargate itself must be destroyed or buried. Denial of access to enemies willing to use it. Heavy weapons required for Ancient alloys." },
+    { name = "Tok'ra Base Evacuation", description = "The tunnels are collapsing or enemies are coming. Crystal structures dissolve to prevent technology capture. Time is measured in minutes." },
+    { name = "Replicator Infestation", description = "The mechanical bugs have taken a facility. Conventional weapons slow them; they adapt and overcome. ARG weapons are the only reliable answer." },
+    { name = "Ha'tak Seizure", description = "Taking control of a Goa'uld mothership. Kill the god, convince or kill the Jaffa. Flying it out requires learning the controls fast." },
+]
+
+[rescue_operations]
+description = "Combat situations focused on recovery and rescue"
+encounters = [
+    { name = "Downed Pilot Recovery", description = "F-302 or jumper crew down in hostile territory. Location known, extraction required. Enemy forces converging on the crash site." },
+    { name = "Captured Team Extraction", description = "SG personnel held by enemy forces. Intelligence on location is imperfect. Assault planning with incomplete information." },
+    { name = "Civilian Protection", description = "Non-combatants caught in crossfire. Protecting them limits tactical options. Evacuation through hostile ground." },
+    { name = "Medical Evacuation Under Fire", description = "Wounded personnel need extraction. Suppressive fire while others carry the injured. Every movement exposes someone." },
+    { name = "VIP Extraction", description = "A high-value individual must be retrieved. Political complications add to tactical challenges. Failure has consequences beyond the immediate." },
+    { name = "Ship Rescue", description = "Vessel in distress, crew needing extraction. Enemy forces also responding to the emergency. Race to reach survivors first." },
+    { name = "Za'tarc Situation", description = "Someone in the group is programmed to kill. Identifying and neutralizing without lethal force. Trust is impossible, necessary regardless." },
+    { name = "Goa'uld Possession Emergency", description = "A team member has been taken as host. The person they were is still in there. Rescue means finding a way to remove the symbiote." },
+    { name = "Clone Recovery", description = "A duplicate exists, and both claim to be original. Combat complication when identity is uncertain. Hesitation could be fatal." },
+    { name = "Time-Critical Medical", description = "Someone is dying from alien cause. The cure exists but is held by enemies. Negotiation impossible, combat required, time running out." },
+]
+
+[special_threats]
+description = "Combat against unusual enemy types"
+encounters = [
+    { name = "Replicator Swarm", description = "Individual bugs seem manageable. The swarm is overwhelming. ARG weapons and disciplined fire are the only defense." },
+    { name = "Human-Form Replicator", description = "Looks human, thinks faster, heals instantly. Conventional weapons buy seconds at best. The ARG must hit, and it must hit enough times." },
+    { name = "Prior Combat", description = "Ori priest with telekinetic abilities. Bullets stop in midair. Only unconventional tactics or Ancient technology offer hope." },
+    { name = "Anubis Avatar", description = "Semi-ascended being wearing a host body. Immense power constrained only partially by physical form. Fighting a god with guns." },
+    { name = "Wraith Feeding", description = "The life-drainer has grabbed someone. Rescue requires breaking the contact. Every second costs years of life." },
+    { name = "Unas Pack", description = "Primitive but powerful original hosts. Strength and ferocity against technology. Negotiation might be possible; survival first." },
+    { name = "Energy Being Confrontation", description = "Something incorporeal threatens the team. Conventional weapons pass through. Ancient technology or trickery required." },
+    { name = "Nanite Infection Outbreak", description = "Replicator nanites spreading through personnel. Quarantine and treatment racing infection rate. One infected person could doom everyone." },
+    { name = "Android Duplicate", description = "Perfect copy indistinguishable from original. Fighting someone with all your skills and knowledge. Or is the real person already dead?" },
+    { name = "Memory Device Victim", description = "Someone believes team members are enemies due to implanted memories. Disabling without killing while they try sincerely to murder you." },
+]

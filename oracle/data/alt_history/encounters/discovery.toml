@@ -1,0 +1,78 @@
+# Alternate History Discovery Encounters
+# Moments of realizing history is different, finding proof, confronting the changed world
+
+[discovery]
+description = "Encounters involving the discovery that history is not what you remember"
+entries = [
+  # Realizing History is Wrong
+  { text = "The statue in the square - you recognize the face, but the name on the plaque is someone who died young in your history, here they lived to triumph", weight = 2 },
+  { text = "The history textbook - casually mentions events that never happened, wars with different outcomes, heroes you never heard of", weight = 2 },
+  { text = "The museum exhibit - 'Famous Artifacts of the [Nation that Doesn't Exist]' displays treasures from a culture erased in your timeline", weight = 1 },
+  { text = "The newspaper archives - researching familiar events but finding completely different accounts of how they unfolded", weight = 2 },
+  { text = "The language difference - a word you use means something offensive here, a phrase makes no sense, grammar rules you know are wrong", weight = 1 },
+  { text = "The currency in your pocket - suddenly worthless because the nation that minted it doesn't exist in this timeline", weight = 2 },
+  { text = "The map on the wall - borders are wrong, cities are missing, a ocean where there should be land", weight = 1 },
+  { text = "The religious symbol - the faith you recognize has a different emblem, different holy days, different saints", weight = 1 },
+  { text = "The fashion shock - everyone dresses in styles that never existed in your timeline, or wear things decades out of date that are current here", weight = 1 },
+  { text = "The food you can't find - your favorite dish doesn't exist because the cuisine never developed, the ingredients never spread here", weight = 1 },
+
+  # Finding Proof of Divergence
+  { text = "The artifact that shouldn't exist - a device, document, or object that proves technology or events developed differently here", weight = 2 },
+  { text = "The photograph from before - an old image showing buildings, people, or technology that couldn't have existed when dated", weight = 2 },
+  { text = "The newspaper from the wrong day - a headline about an event that happened differently, or a day that should have been historic but wasn't", weight = 1 },
+  { text = "The family Bible with wrong names - genealogical records showing ancestors who died as children, or never existed at all", weight = 1 },
+  { text = "The scientific paper on impossible physics - research into principles that don't work in your timeline, but function perfectly here", weight = 1 },
+  { text = "The commemorative coin - celebrating an anniversary of something that never happened, or never would have been celebrated", weight = 1 },
+  { text = "The old diary found in the walls - personal account of living through events that unfolded completely differently than you learned", weight = 2 },
+  { text = "The military medal - awarded for battles in wars that never occurred, or occurred with opposite outcomes", weight = 1 },
+  { text = "The street sign - named after a person famous here but unknown in your history, or missing someone who should be honored", weight = 1 },
+  { text = "The patent record - inventions credited to different people, or technologies that were never developed in your timeline", weight = 1 },
+
+  # Meeting 'Historical' Figures
+  { text = "The face in the crowd - someone who died decades ago in your history, alive and aged appropriately for continued life", weight = 2 },
+  { text = "The political rally - a leader who was assassinated gives a speech, their survival changed everything", weight = 1 },
+  { text = "The professor's lecture - a scientist who never achieved fame in your timeline, here they're a celebrated genius", weight = 1 },
+  { text = "The street performer - an artist who became world famous in your timeline, here they're unknown, unrecognized talent", weight = 1 },
+  { text = "The war veteran - soldier who fought for a nation that doesn't exist in your history, wearing medals you don't recognize", weight = 1 },
+  { text = "The religious leader - representing a faith that developed differently, preaching doctrines that diverged from your timeline's version", weight = 1 },
+  { text = "The corporate executive - running a company that never existed, in an industry that developed differently here", weight = 1 },
+  { text = "The resistance hero - famous for fighting against powers that won in this timeline, revered in ways that don't match your history", weight = 2 },
+  { text = "The ancestor who shouldn't exist - meeting a family member who died before having children in your timeline", weight = 1 },
+  { text = "The double life - encountering yourself, the version of you that lived in this timeline's history", weight = 2 },
+
+  # Alternate Technology Encounters
+  { text = "The vehicle that can't exist - transportation using technology that was never developed, or developed differently, in your timeline", weight = 2 },
+  { text = "The communication device - phones, radios, or systems that work on principles unknown to your science", weight = 1 },
+  { text = "The medical treatment - cures for diseases that are incurable in your timeline, using methods you don't recognize", weight = 1 },
+  { text = "The power source - energy generated by methods that shouldn't work, or work far better than possible", weight = 1 },
+  { text = "The weapon - arms using technology that was theoretical in your timeline, here it's battlefield-proven", weight = 1 },
+  { text = "The entertainment - media formats, recording methods, or display technologies that don't exist in your history", weight = 1 },
+  { text = "The construction method - buildings made with techniques or materials unknown to your timeline's engineering", weight = 1 },
+  { text = "The obsolete technology still dominant - things that were replaced in your timeline are still state-of-the-art here", weight = 1 },
+  { text = "The completely absent technology - something ubiquitous in your timeline never developed here at all", weight = 1 },
+  { text = "The impossible hybrid - technology combining elements that couldn't work together in your timeline's physics", weight = 1 },
+
+  # Timeline Inconsistency Encounters
+  { text = "The contradictory memories - two people remember the same event completely differently, both accounts equally vivid and sincere", weight = 2 },
+  { text = "The impossible grave - a tombstone for someone who is still alive, or who died at a different age, in a different way", weight = 1 },
+  { text = "The building that changed - a structure you entered yesterday now has a completely different interior, different purpose", weight = 2 },
+  { text = "The missing person - someone everyone else remembers perfectly, but who you've never seen or heard of despite sharing the same community", weight = 1 },
+  { text = "The extra person - someone you remember clearly, but no one else has ever heard of, no records show they existed", weight = 1 },
+  { text = "The changed relationship - people who were enemies are friends here, families that were close are strangers, marriages that never happened did", weight = 1 },
+  { text = "The reversed reputation - someone vilified in your timeline is celebrated here, or vice versa", weight = 1 },
+  { text = "The temporal stutter - briefly experiencing a moment twice, once as it happened here, once as it happened elsewhere", weight = 1 },
+  { text = "The shifted geography - a building, river, or mountain that's in a different location than it should be", weight = 1 },
+  { text = "The wrong stars - the night sky has constellations in slightly different positions, or stars that shouldn't be visible", weight = 1 },
+
+  # Cultural Discovery
+  { text = "The holiday you don't recognize - everyone celebrating something that makes no sense to you, commemorating events from this timeline", weight = 2 },
+  { text = "The forbidden topic - asking about something normal in your timeline, receiving horrified reactions for mentioning something taboo here", weight = 1 },
+  { text = "The national anthem - different lyrics, different tune, celebrating a different founding moment", weight = 1 },
+  { text = "The children's rhyme - kids reciting a version with completely different words, referencing events from this history", weight = 1 },
+  { text = "The social custom - expected to participate in a ritual or courtesy that doesn't exist in your timeline", weight = 1 },
+  { text = "The legal difference - something perfectly legal in your timeline is a serious crime here, or vice versa", weight = 1 },
+  { text = "The professional difference - a job that exists here has no equivalent in your timeline, or your profession makes no sense to them", weight = 1 },
+  { text = "The generational reference - jokes and cultural touchstones that everyone your age should know, but you've never heard of", weight = 1 },
+  { text = "The religious practice - a faith you know follows different rituals, observes different holy days, venerates different figures", weight = 1 },
+  { text = "The complete reversal - something fundamental about society is the opposite of what you knew, and always has been", weight = 1 },
+]

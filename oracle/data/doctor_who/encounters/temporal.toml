@@ -1,0 +1,184 @@
+# Doctor Who Temporal Encounters
+# Time travel complications, paradoxes, and anomalies
+
+[paradox_situations]
+description = "When cause and effect get tangled"
+
+[[paradox_situations.entries]]
+name = "Bootstrap Loop"
+description = "The information you received came from you. In the future. Which you only knew because you gave it to yourself. Which you only knew because... Who wrote it first?"
+
+[[paradox_situations.entries]]
+name = "Grandfather Paradox Imminent"
+description = "Your actions are about to prevent your own existence. You can feel reality getting... thinner. Something has to give. It might be you."
+
+[[paradox_situations.entries]]
+name = "Causal Nexus Collapse"
+description = "Too many changes. Too many contradictions. The timeline is fracturing. Multiple versions of events try to exist simultaneously. None can."
+
+[[paradox_situations.entries]]
+name = "Temporal Feedback Loop"
+description = "The same moment keeps repeating. Small differences accumulate. Something is trying to break through. Something is trying to break free."
+
+[[paradox_situations.entries]]
+name = "Memory Paradox"
+description = "You remember two different versions of events. Both feel real. Both can't be. The universe is forcing a resolution - one memory must become false."
+
+[[paradox_situations.entries]]
+name = "Object Without Origin"
+description = "This device, this note, this key - it came from the future, was used in the past, arrived in the present. It has no point of creation. It simply IS."
+
+[[paradox_situations.entries]]
+name = "Predestination Trap"
+description = "Everything you do to prevent the future fulfills it. Every choice leads to the same outcome. Free will collides with fixed time."
+
+[[paradox_situations.entries]]
+name = "Closed Timelike Curve"
+description = "You are inside the effect of your own future cause. The loop is sealed. The only way out is through - forward, to the moment you started."
+
+[fixed_points]
+description = "Events that must happen - the universe insists"
+
+[[fixed_points.entries]]
+name = "Fixed Point Collision"
+description = "You're about to change a fixed point. Reality rebels. Time itself pushes back. The universe will not allow this. But you might try anyway."
+
+[[fixed_points.entries]]
+name = "Fixed Point Witness"
+description = "This moment is fixed. You can only watch. Someone dies. Something happens. The best you can do is understand why it had to be this way."
+
+[[fixed_points.entries]]
+name = "Fixed Point Discovery"
+description = "You've learned which moment is fixed. The death. The disaster. The victory. Now you carry that weight. What do you do with the knowledge?"
+
+[[fixed_points.entries]]
+name = "Fixed Point Challenge"
+description = "The Doctor says it's fixed. History says it happened. But you're here, and you have a chance. Is the universe's law really unbreakable?"
+
+[[fixed_points.entries]]
+name = "Fixed Point Consequence"
+description = "Someone tried to change a fixed point. Time is hemorrhaging. Reality fractures. The Reapers are coming to sterilize the wound."
+
+[[fixed_points.entries]]
+name = "Living Fixed Point"
+description = "You've become a fixed point yourself. Time flows around you. You cannot die, cannot change, cannot truly live. What now?"
+
+[temporal_anomalies]
+description = "Time behaving strangely"
+
+[[temporal_anomalies.entries]]
+name = "Time Storm"
+description = "Different eras crashing together. Victorian streets meet far future tech meets prehistoric creatures. Survival requires navigating centuries."
+
+[[temporal_anomalies.entries]]
+name = "Temporal Grace Failing"
+description = "The TARDIS's safety systems offline. Weapons work inside. Time flows wrong. The impossible becomes dangerously possible."
+
+[[temporal_anomalies.entries]]
+name = "Time Fissure"
+description = "A crack in reality. Reach through and touch another era. Things come through from elsewhen. Both ways."
+
+[[temporal_anomalies.entries]]
+name = "Accelerated Timeline"
+description = "Time moves faster here. An hour becomes a decade. People age before your eyes. Civilizations rise and fall in minutes."
+
+[[temporal_anomalies.entries]]
+name = "Decelerated Pocket"
+description = "Frozen moment stretched infinitely. Everyone trapped in the space between seconds. The bullet hangs in the air forever."
+
+[[temporal_anomalies.entries]]
+name = "Blinovitch Limitation Warning"
+description = "Your past self is nearby. Touch and the discharge could be catastrophic. Avoid at all costs. But they're walking right toward you."
+
+[[temporal_anomalies.entries]]
+name = "Time Lock Breach"
+description = "Something from a time-locked event is escaping. The Time War. The Medusa Cascade. Gallifrey's destruction. What should be sealed is bleeding through."
+
+[[temporal_anomalies.entries]]
+name = "Retrocausality Wave"
+description = "Effects precede causes. The wound appears before the weapon strikes. You know the outcome before making the choice."
+
+[meeting_history]
+description = "Encounters with historical figures and events"
+
+[[meeting_history.entries]]
+name = "Historical Figure Recognition"
+description = "This person is important. Famous. Their portrait hangs in museums. And they're asking you to explain your strange clothes."
+
+[[meeting_history.entries]]
+name = "Influence the Famous"
+description = "Your words inspire someone. Shakespeare. Einstein. Churchill. That idea they're famous for - did you just give it to them?"
+
+[[meeting_history.entries]]
+name = "Witness the Moment"
+description = "You're at the exact point where history happens. The signing. The discovery. The death. You could reach out and touch it."
+
+[[meeting_history.entries]]
+name = "Historical Mystery Solved"
+description = "This is what really happened. The truth behind the legend. The disappeared person. The locked room. Now you know."
+
+[[meeting_history.entries]]
+name = "Wrong Person Saved"
+description = "You saved someone who was supposed to die. History expected their death. What happens now that they live?"
+
+[[meeting_history.entries]]
+name = "Historical Accusation"
+description = "You've been identified as the stranger who appears in historical records. The witch. The spy. The prophet. They've been expecting you."
+
+[[meeting_history.entries]]
+name = "Anachronism Discovery"
+description = "Something here doesn't belong in this era. Technology. Knowledge. A person. Someone has been meddling before you arrived."
+
+[future_echoes]
+description = "Glimpses of what's to come"
+
+[[future_echoes.entries]]
+name = "Future Self Warning"
+description = "A message from yourself. Older, damaged, desperate. Don't do what you're about to do. But if you don't, would they have sent the message?"
+
+[[future_echoes.entries]]
+name = "Grave Encounter"
+description = "You've found your own grave. The date is specific. The epitaph raises questions. Now you know when. If you believe it."
+
+[[future_echoes.entries]]
+name = "Prophecy Recognition"
+description = "The ancient prophecy describes you. Specifically. Impossible knowledge of your arrival, your purpose, your fate. Who wrote this?"
+
+[[future_echoes.entries]]
+name = "Technology Premonition"
+description = "You recognize this device. You shouldn't - it won't exist for centuries. But you know how it works. How do you know?"
+
+[[future_echoes.entries]]
+name = "Descendant Meeting"
+description = "This person has your eyes. Your mannerisms. Your family name. You're meeting your own future lineage. Don't tell them."
+
+[[future_echoes.entries]]
+name = "Temporal Ghost"
+description = "You see yourself. In the distance. Doing something you haven't done yet. Now you have to catch up to that moment."
+
+[time_loops]
+description = "The same moment, again and again"
+
+[[time_loops.entries]]
+name = "Groundhog Protocol"
+description = "The day keeps resetting. Only you remember. Everyone else starts fresh each morning. Something has to change to break the loop."
+
+[[time_loops.entries]]
+name = "Death Loop"
+description = "You keep dying. Same moment, same death, waking up at the same point. The universe wants you dead. Can you figure out why before it succeeds?"
+
+[[time_loops.entries]]
+name = "Loop Aware"
+description = "Someone else in the loop remembers too. They've been here longer than you. Thousands of iterations. They know things."
+
+[[time_loops.entries]]
+name = "Decay Loop"
+description = "Each iteration, the loop degrades. Details change. People disappear. The loop is collapsing, and you're still inside it."
+
+[[time_loops.entries]]
+name = "Voluntary Reset"
+description = "You have the power to reset time. A device, a choice, a sacrifice. But every reset costs something. How many times can you afford?"
+
+[[time_loops.entries]]
+name = "Loop Exit Found"
+description = "The way out is clear. But breaking the loop means accepting consequences. Living with the version you chose. Everyone else gets one chance."

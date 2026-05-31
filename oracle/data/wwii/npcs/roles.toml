@@ -1,0 +1,136 @@
+# WWII Roles Across All Theaters
+# From beach landings to bomber runs, from resistance cells to the home front
+
+[infantry]
+description = "Ground pounders in every theater"
+entries = [
+    "Rifle platoon sergeant, three campaigns worth of stripes",
+    "BAR man, carrying twenty pounds of automatic fire",
+    "Mortar crew chief, walking artillery support",
+    "Scout sniper, patience measured in hours not minutes",
+    "Medic, red cross on helmet that means nothing to some",
+    "Radio operator, lifeline to artillery and air support",
+    "Flamethrower operator, worst job in the war",
+    "Machine gun team leader, setting up the killing ground",
+    "Replacement private, green as summer grass",
+    "Combat engineer, bridges and minefields",
+    "Forward observer, calling in the thunder",
+    "Company first sergeant, mother hen with a .45"
+]
+
+[airborne]
+description = "Paratroopers and glider infantry"
+entries = [
+    "Pathfinder jumping ahead to mark the drop zone",
+    "Stick leader, responsible for twelve men in the dark",
+    "Glider pilot, one-way ticket to a crash landing",
+    "Demolitions specialist, bridges and railroads",
+    "Jumpmaster, last face you see before the door",
+    "Paratrooper medic, aid bag and carbine",
+    "Airborne artillery officer, pack howitzers in pieces",
+    "Leg bag rigger, making sure weapons survive the drop"
+]
+
+[armor]
+description = "Tank crews and armored units"
+entries = [
+    "Sherman tank commander, standing in the hatch despite orders",
+    "Bow gunner, worst seat in a steel coffin",
+    "Tank driver, feeling for mines with your tracks",
+    "Loader, fourteen rounds a minute keeps you alive",
+    "Tank destroyer commander, hunting Tigers",
+    "Half-track driver, infantry taxi in the mud",
+    "M8 armored car scout, eyes of the column",
+    "Tank recovery crew, dragging burning hulks to safety",
+    "Maintenance sergeant, keeping Ronsons from burning"
+]
+
+[naval]
+description = "Sailors and naval personnel"
+entries = [
+    "U-boat captain, hunter of convoys",
+    "Destroyer escort commander, shepherding merchantmen",
+    "PT boat skipper, mahogany torpedo boat",
+    "Submarine sonar operator, listening for depth charges",
+    "Battleship gunnery officer, sixteen-inch diplomacy",
+    "Landing craft coxswain, driving boats onto hostile beaches",
+    "Navy corpsman, medic for the Marines",
+    "Aircraft carrier deck officer, orchestrating controlled chaos",
+    "Merchant marine sailor, unarmed in submarine waters",
+    "Torpedo bomber pilot, low and slow over the fleet"
+]
+
+[air_force]
+description = "Army Air Forces and RAF personnel"
+entries = [
+    "B-17 pilot, ten hours over Germany",
+    "Ball turret gunner, curled in a glass bubble",
+    "Bomber navigator, calculating winds and flak",
+    "Tail gunner, watching fighters come in at six o'clock",
+    "Fighter pilot, one-on-one over the Channel",
+    "Spitfire squadron leader, the few",
+    "Photo reconnaissance pilot, unarmed and alone",
+    "Flight engineer, keeping engines running",
+    "Ground crew chief, putting birds back together",
+    "Control tower operator, counting planes returning"
+]
+
+[intelligence]
+description = "Spies, codebreakers, and intelligence operatives"
+entries = [
+    "OSS operative, behind enemy lines",
+    "SOE agent, organizing resistance",
+    "Bletchley Park codebreaker, reading enemy mail",
+    "Resistance radio operator, tapping out messages to London",
+    "Double agent, trust no one including yourself",
+    "Interrogator, extracting intelligence from prisoners",
+    "Counter-intelligence officer, hunting enemy spies",
+    "Aerial photo interpreter, reading bomb damage",
+    "Language specialist, translating intercepts",
+    "Safe house keeper, hiding those who hide"
+]
+
+[resistance]
+description = "Partisan fighters across occupied Europe"
+entries = [
+    "Maquis cell leader, organizing sabotage",
+    "Underground railroad guide, moving downed airmen",
+    "Resistance courier, memorized messages",
+    "Forger, creating papers that fool the Gestapo",
+    "Safe house operator, hiding Jews and airmen",
+    "Saboteur, railway lines and factories",
+    "Partisan sniper, hunting collaborators",
+    "Underground newspaper editor, truth against propaganda",
+    "Weapons cache guardian, buried arsenal",
+    "Recruitment officer, vetting potential fighters"
+]
+
+[support]
+description = "The logistics that win wars"
+entries = [
+    "Quartermaster sergeant, beans and bullets",
+    "Field surgeon, meatball surgery",
+    "Nurse, twelve-hour shifts in canvas hospitals",
+    "Chaplain, last rites and letters home",
+    "Graves registration, counting the cost",
+    "Red Ball Express driver, racing supplies to the front",
+    "Signal corps lineman, stringing wire under fire",
+    "Military police, traffic and prisoners",
+    "War correspondent, writing home about hell",
+    "USO entertainer, morale in a foxhole"
+]
+
+[axis_roles]
+description = "Enemy forces - human beings in wrong uniforms"
+entries = [
+    "Wehrmacht feldwebel, twenty years in uniform",
+    "Panzer ace, killing Americans from a steel box",
+    "Luftwaffe pilot, last of the fighter pilots",
+    "German medic, helping anyone who bleeds",
+    "Kriegsmarine officer, surface raider captain",
+    "Japanese sergeant, veteran of China",
+    "Zero pilot, no parachute needed",
+    "Italian partisan, switched sides after armistice",
+    "Volkssturm conscript, too old or too young",
+    "Japanese medic, serving despite bushido"
+]

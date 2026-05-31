@@ -1,0 +1,58 @@
+# WWI NPC Dispositions
+# How they regard you in this crucible
+
+[hostile]
+description = "Antagonistic reactions"
+entries = [
+    { disposition = "Suspicious of outsiders", tells = "Eyes narrow, hand moves toward weapon, doesn't turn his back" },
+    { disposition = "Bitter about losses", tells = "Blames everyone, especially newcomers who didn't share the suffering" },
+    { disposition = "Resentful of rank", tells = "Barely concealed contempt for officers and their clean boots" },
+    { disposition = "Protective of unit secrets", tells = "Clams up when certain topics arise, warns you off" },
+    { disposition = "Shell-shocked aggression", tells = "Sudden violent outbursts, then confusion" },
+    { disposition = "Thinks you're a spy", tells = "Questions your orders, papers, motives, everything" },
+    { disposition = "Blames you specifically", tells = "You remind him of someone, or you were there when it happened" }
+]
+
+[wary]
+description = "Cautious and guarded"
+entries = [
+    { disposition = "Watching and waiting", tells = "Measures every word, reveals nothing, gathers information" },
+    { disposition = "Testing your competence", tells = "Small challenges, seeing if you know what you're doing" },
+    { disposition = "Doesn't trust authority", tells = "Follows orders precisely to the letter, no more" },
+    { disposition = "Burned before", tells = "References past betrayals, won't be fooled again" },
+    { disposition = "Protecting someone", tells = "Keeps steering you away from certain men or topics" },
+    { disposition = "Sizing you up for usefulness", tells = "What can you do for him, what do you have" }
+]
+
+[neutral]
+description = "Professional detachment"
+entries = [
+    { disposition = "Just doing the job", tells = "No emotion either way, you're another task to complete" },
+    { disposition = "Professionally distant", tells = "Correct, formal, impersonal, by the book" },
+    { disposition = "Conserving emotional energy", tells = "Too tired to care about you one way or another" },
+    { disposition = "Waiting to see which way the wind blows", tells = "Will adapt his attitude to match the group" },
+    { disposition = "Focused on survival", tells = "You matter only if you affect his chances" },
+    { disposition = "War-weary indifference", tells = "Seen too much to be moved by anything" }
+]
+
+[friendly]
+description = "Welcoming despite everything"
+entries = [
+    { disposition = "Remembers shared experience", tells = "You were at the same battle, same unit, same hell" },
+    { disposition = "Sees himself in you", tells = "You remind him of who he was, or someone he lost" },
+    { disposition = "Genuine compassion survivor", tells = "Hasn't lost his humanity somehow, helps everyone" },
+    { disposition = "Looking for connection", tells = "Desperate for human contact, latches on" },
+    { disposition = "Mentor seeking student", tells = "Wants to pass on knowledge, keep someone alive" },
+    { disposition = "Grateful for past kindness", tells = "You did something once, may not remember, he does" }
+]
+
+[bonded]
+description = "Deep connection forged in fire"
+entries = [
+    { disposition = "Combat brotherhood", tells = "Would die for you, has proved it" },
+    { disposition = "Shared trauma survivor", tells = "Both of you know what happened, no one else can" },
+    { disposition = "Owes you his life", tells = "You saved him, he can never repay it" },
+    { disposition = "Comrades from before", tells = "Knew each other as civilians, the only link to the old world" },
+    { disposition = "Unspoken understanding", tells = "No words needed, you both know" },
+    { disposition = "Last of the original unit", tells = "Everyone else is dead or gone, you're all that's left" }
+]

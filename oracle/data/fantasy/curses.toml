@@ -1,0 +1,173 @@
+# Fantasy Curses, Hexes, and Dark Magic
+# Afflictions, maledictions, and supernatural punishments
+
+[curses]
+entries = [
+  # Physical Curses
+  { text = "the Withering Touch - flesh rots where loved ones contact the cursed", weight = 1 },
+  { text = "the Glass Bones - skeleton becomes increasingly fragile until it shatters", weight = 1 },
+  { text = "the Hungry Shadow - the cursed's shadow devours anything it falls upon", weight = 1 },
+  { text = "the Stone Sleep - the cursed turns to stone for increasingly long periods", weight = 1 },
+  { text = "the Bleeding Eyes - weeping blood tears that reveal hidden truths", weight = 1 },
+  { text = "the Hollow Stomach - no food satisfies, the cursed wastes away while feasting", weight = 1 },
+  { text = "the Crawling Skin - flesh tries to leave the body, crawling toward the curser", weight = 1 },
+  { text = "the Iron Weight - the cursed grows heavier each day until they sink through stone", weight = 1 },
+  { text = "the Rotting Tongue - speech causes the mouth to decay, regenerating only in silence", weight = 1 },
+  { text = "the Backward Aging - de-aging until the cursed is never born", weight = 1 },
+
+  # Mental Curses
+  { text = "the Stolen Voice - can only speak in another person's voice, chosen at random", weight = 1 },
+  { text = "the Forgotten Name - no one can remember meeting the cursed once they leave sight", weight = 1 },
+  { text = "the Waking Nightmare - cannot distinguish dreams from reality", weight = 1 },
+  { text = "the Echo Mind - experiences everything twice, a moment apart", weight = 1 },
+  { text = "the Backward Memory - remembers the future but forgets the past", weight = 1 },
+  { text = "the Truthseer's Burden - sees through all lies, including comfortable ones", weight = 1 },
+  { text = "the Repeated Day - lives the same day until they fix something, but doesn't know what", weight = 1 },
+  { text = "the Stolen Sleep - cannot rest, stays awake until madness or death", weight = 1 },
+  { text = "the Paranoid Heart - knows someone is plotting against them, but never knows who", weight = 1 },
+  { text = "the Lost Purpose - forgets why they're doing anything the moment they start", weight = 1 },
+
+  # Social Curses
+  { text = "the Mark of Cain - visible sign brands the cursed as a kin-slayer", weight = 1 },
+  { text = "the Outcast's Shroud - those nearby feel instinctive distrust and disgust", weight = 1 },
+  { text = "the Twisted Tongue - every truth spoken sounds like an obvious lie", weight = 1 },
+  { text = "the Jealous Heart - everyone the cursed loves will betray them", weight = 1 },
+  { text = "the Lonely Road - the cursed can never stay in one place twice", weight = 1 },
+  { text = "the Inheritance of Shame - the cursed's descendants bear their sins visibly", weight = 1 },
+  { text = "the Forgotten Friend - anyone who befriends the cursed forgets them within a year", weight = 1 },
+  { text = "the Magnified Flaw - one character flaw becomes overwhelming and obvious", weight = 1 },
+
+  # Transformative Curses
+  { text = "the Beast Within - slow transformation into a monster during times of stress", weight = 1 },
+  { text = "the Reflected Self - becomes whatever others fear them to be", weight = 1 },
+  { text = "the Green Curse - slowly transforms into a tree, rooted and immobile", weight = 1 },
+  { text = "the Serpent's Blood - cold-blooded and increasingly reptilian", weight = 1 },
+  { text = "the Moth-Eaten Soul - becomes increasingly incorporeal", weight = 1 },
+  { text = "the Puppet Strings - body moves against will when certain music plays", weight = 1 },
+  { text = "the Mirror Twin - an evil duplicate grows stronger as the cursed weakens", weight = 1 },
+  { text = "the Stolen Face - features slowly morph into the curser's visage", weight = 1 },
+
+  # Supernatural Curses
+  { text = "the Doom-Draw - the cursed attracts disaster and catastrophe", weight = 1 },
+  { text = "the Death's Doorstep - can see when and how everyone around them will die", weight = 1 },
+  { text = "the Hungering Grave - the earth itself tries to swallow the cursed", weight = 1 },
+  { text = "the Anchor of Souls - ghosts are drawn to and trapped near the cursed", weight = 1 },
+  { text = "the Burning Brand - holy ground causes agony, sacred symbols repel", weight = 1 },
+  { text = "the Moonchild's Bane - full moons trigger uncontrollable transformation", weight = 1 },
+  { text = "the Unquiet Rest - unable to find peace in death, returns as undead if killed", weight = 1 },
+  { text = "the Demon's Interest - something from the lower planes has marked them as property", weight = 1 },
+]
+
+[curse_origins]
+entries = [
+  # Divine Punishment
+  { text = "broke a sacred oath sworn on a god's altar", weight = 2 },
+  { text = "desecrated a holy site and was cursed by dying priest", weight = 1 },
+  { text = "received the curse as divine punishment for blasphemy", weight = 1 },
+  { text = "killed a holy person who pronounced the curse with their final breath", weight = 1 },
+  { text = "refused a god's command and bears the mark of their displeasure", weight = 1 },
+
+  # Magical Accident
+  { text = "a spell went wrong and the backlash became permanent", weight = 1 },
+  { text = "opened a cursed book and read what should never be spoken", weight = 1 },
+  { text = "touched an artifact that was better left alone", weight = 1 },
+  { text = "interrupted a ritual at the worst possible moment", weight = 1 },
+  { text = "became collateral damage from a wizard's duel", weight = 1 },
+
+  # Vengeful Curse
+  { text = "a dying enemy spent their last breath on the malediction", weight = 2 },
+  { text = "wronged a hag who specialized in creative vengeance", weight = 1 },
+  { text = "scorned a witch's offer of love", weight = 1 },
+  { text = "betrayed a warlock who had friends in low places", weight = 1 },
+  { text = "killed a mother whose grief transcended death", weight = 1 },
+
+  # Inherited
+  { text = "born under ill stars that marked them from first breath", weight = 1 },
+  { text = "inherited the curse from an ancestor who couldn't break it", weight = 2 },
+  { text = "the seventh child of a seventh child, marked by old powers", weight = 1 },
+  { text = "cursed in the womb by a deal their parent made", weight = 1 },
+  { text = "born at the moment a great evil entered the world", weight = 1 },
+
+  # Self-Inflicted
+  { text = "traded something vital for power without understanding the cost", weight = 1 },
+  { text = "made a bargain with something inhuman that twisted the terms", weight = 1 },
+  { text = "sought forbidden knowledge and found it, along with its price", weight = 1 },
+  { text = "broke taboo knowingly, believing themselves immune to consequence", weight = 1 },
+  { text = "used dark magic carelessly and it remembered them", weight = 1 },
+]
+
+[curse_conditions]
+entries = [
+  # Breaking Conditions
+  { text = "can only be broken by true love's kiss, but love is now impossible", weight = 1 },
+  { text = "ends when the curser forgives, but they died still hating", weight = 1 },
+  { text = "breaks when a specific riddle is answered, but the riddle changes", weight = 1 },
+  { text = "lifted when the cursed completes an impossible task", weight = 1 },
+  { text = "ends only if passed to someone who accepts it willingly", weight = 1 },
+  { text = "breaks at the moment of the cursed's greatest triumph", weight = 1 },
+  { text = "requires the tears of someone who has never cried", weight = 1 },
+  { text = "can be broken only by the one who cast it, but they are dead", weight = 1 },
+
+  # Triggering Conditions
+  { text = "the curse activates only during specific lunar phases", weight = 1 },
+  { text = "triggered by a specific emotional state - anger, love, fear", weight = 1 },
+  { text = "worsens each time the cursed lies", weight = 1 },
+  { text = "flares when the cursed is within sight of their homeland", weight = 1 },
+  { text = "grows stronger with each person who learns of it", weight = 1 },
+  { text = "dormant unless the cursed breaks certain rules", weight = 1 },
+
+  # Spreading Conditions
+  { text = "passes to anyone who kills the cursed", weight = 1 },
+  { text = "spreads through bloodline to all descendants", weight = 1 },
+  { text = "transfers through touch to those who show pity", weight = 1 },
+  { text = "infects those who love the cursed", weight = 1 },
+  { text = "jumps to whoever the cursed most hates", weight = 1 },
+]
+
+[hexes]
+entries = [
+  # Minor Hexes
+  { text = "milk curdles in the hexed's presence, babies cry, dogs growl", weight = 2 },
+  { text = "small misfortunes plague daily life - broken shoelaces, lost keys, stubbed toes", weight = 2 },
+  { text = "food loses all flavor when the hexed tries to eat it", weight = 1 },
+  { text = "the hexed can never get truly clean, always feels grimy", weight = 1 },
+  { text = "plants wilt in the hexed's shadow", weight = 1 },
+  { text = "fire refuses to warm the hexed, always feels cold", weight = 1 },
+  { text = "wounds refuse to heal naturally, even minor cuts linger", weight = 1 },
+  { text = "the hexed cannot cross running water", weight = 1 },
+  { text = "birds follow the hexed, watching with too-intelligent eyes", weight = 1 },
+  { text = "the hexed's reflection is always slightly wrong", weight = 1 },
+
+  # Moderate Hexes
+  { text = "cannot enter any dwelling uninvited, invisible barrier blocks entry", weight = 1 },
+  { text = "silver burns the hexed's touch like hot iron", weight = 1 },
+  { text = "sunlight causes pain but no lasting damage", weight = 1 },
+  { text = "the hexed's word against another's is never believed", weight = 1 },
+  { text = "money spent by the hexed turns to worthless lead", weight = 1 },
+  { text = "the hexed cannot be captured in paintings or mirrors", weight = 1 },
+  { text = "every door the hexed opens reveals something unwanted", weight = 1 },
+  { text = "the hexed's shadow moves independently, mocking them", weight = 1 },
+]
+
+[dark_bargains]
+entries = [
+  # Offered Powers
+  { text = "immortality - but each year a loved one must die", weight = 1 },
+  { text = "strength beyond mortal limits - but berserker rage on the new moon", weight = 1 },
+  { text = "knowledge of all languages - but can never again speak their mother tongue", weight = 1 },
+  { text = "the ability to see the future - but cannot change it, only watch", weight = 1 },
+  { text = "wealth beyond measure - but every coin spent takes a day from life", weight = 1 },
+  { text = "irresistible charm - but those who love them suffer misfortune", weight = 1 },
+  { text = "immunity to disease and poison - but healing magic no longer works", weight = 1 },
+  { text = "the power to return from death - but return wrong each time", weight = 1 },
+
+  # Required Payments
+  { text = "must collect a soul each month or forfeit their own", weight = 1 },
+  { text = "their firstborn is already promised to something patient", weight = 1 },
+  { text = "must speak nothing but truth until they betray someone who trusts them", weight = 1 },
+  { text = "their reflection now belongs to another, and it wants out", weight = 1 },
+  { text = "can never refuse an offered gift, no matter how suspicious", weight = 1 },
+  { text = "must answer any question asked three times truthfully", weight = 1 },
+  { text = "one sense is forfeit - chosen by the bargain-maker", weight = 1 },
+  { text = "their name is no longer truly theirs, and names have power", weight = 1 },
+]

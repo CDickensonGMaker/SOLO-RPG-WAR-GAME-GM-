@@ -1,0 +1,77 @@
+# Homefront and Rear Area Locations
+# The war behind the lines, where victory was manufactured and mourned
+
+[war_production]
+description = "The arsenal of democracy"
+entries = [
+    "Detroit tank factory, Rosie on the rivet line",
+    "Kaiser shipyard, liberty ships in weeks not months",
+    "Aircraft assembly plant, B-24s rolling off daily",
+    "Ammunition factory, women handling explosives",
+    "Steel mill running three shifts, slag lighting the night",
+    "Rubber rationing center, synthetic or nothing",
+    "Textile mill, uniforms by the million",
+    "Oak Ridge, secret city making something secret",
+    "Los Alamos mesa, physicists playing God",
+    "Boeing assembly line, Fortress after Fortress"
+]
+
+[british_homefront]
+description = "Britain under siege"
+entries = [
+    "London Underground shelter, sleeping on platforms",
+    "Coventry cathedral, bombed shell of faith",
+    "RAF fighter station, scramble alarm at dawn",
+    "Bletchley Park mansion, secret listeners",
+    "Rationing queue, hours for basics",
+    "Evacuee reception center, children with labels",
+    "ARP warden post, watching for incendiaries",
+    "Bomb site, yesterday's home, today's rubble",
+    "Pub still standing, dark beer and darker humor",
+    "Dover cliffs, watching France across the Channel"
+]
+
+[military_installations]
+description = "Camps, bases, and headquarters"
+entries = [
+    "Basic training camp, civilians becoming soldiers",
+    "Embarkation port, ships loading for overseas",
+    "Military hospital, wards full of wounded",
+    "Intelligence headquarters, maps covering walls",
+    "Prisoner of war camp, Germans in American custody",
+    "Air base control tower, counting returning planes",
+    "Supply depot, mountains of material",
+    "Officer training school, ninety-day wonders",
+    "Rehabilitation center, rebuilding broken men",
+    "Coastal defense battery, watching for invasion"
+]
+
+[occupied_europe]
+description = "Life under Nazi occupation"
+entries = [
+    "Gestapo headquarters, screams from the basement",
+    "Black market café, everything available at a price",
+    "Curfew streets, empty after dark",
+    "Labor bureau, deportation waiting",
+    "Resistance safe house, radio in the attic",
+    "Collaborator's restaurant, Germans dining well",
+    "Ration card office, papers meaning life or death",
+    "Jewish hiding place, secret room behind bookshelf",
+    "Railway station, transports east departing",
+    "Town square, reprisal executions at dawn"
+]
+
+[social_spaces]
+description = "Where people found humanity in total war"
+entries = [
+    "USO canteen, dancing before shipping out",
+    "Red Cross station, coffee and donuts near the front",
+    "Base chapel, prayers before combat",
+    "Officer's club, whiskey and war stories",
+    "Movie theater showing newsreels",
+    "V-mail station, censored letters home",
+    "Service club, segregated but serving",
+    "British pub near the airbase",
+    "Parisian café, liberation celebration",
+    "Italian village square, first night of peace"
+]

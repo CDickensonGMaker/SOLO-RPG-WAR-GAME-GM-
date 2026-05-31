@@ -1,0 +1,156 @@
+# Sci-Fi Military Units
+# Unit types, nicknames, and traditions
+# Tone: Aliens, Halo, Warhammer 40K grunts, The Expanse marines
+
+[unit_types]
+entries = [
+  # Elite Infantry
+  { text = "Drop Shock Infantry - orbital insertion specialists, 40% casualty rate considered acceptable", weight = 2 },
+  { text = "Powered Armor Marines - walking tanks, each suit costs more than a corvette", weight = 2 },
+  { text = "Storm Troopers - elite deep strike units, always first in last out", weight = 1 },
+  { text = "Void Commandos - zero-G combat specialists, breach and clear in vacuum", weight = 1 },
+  { text = "Pathfinders - advance recon elite, go where no one else can", weight = 1 },
+  { text = "Heavy Assault Infantry - breaching specialists in carapace armor, they kick down doors", weight = 1 },
+  { text = "Jump Infantry - grav-chute equipped, death from above at 200 meters", weight = 1 },
+  { text = "Tunnel Rats - close-quarters specialists for hive clearing, the volunteers nobody envies", weight = 2 },
+
+  # Line Infantry
+  { text = "Mechanized Infantry - mounted in IFVs, dismount under fire and like it", weight = 1 },
+  { text = "Light Infantry - leg infantry for rough terrain, humping everything on their backs", weight = 1 },
+  { text = "Garrison Troops - PDF quality, barely trained but warm bodies with guns", weight = 1 },
+  { text = "Penal Legion - convicts with explosive collars, first into the breach or last to breathe", weight = 2 },
+  { text = "Conscript Battalions - pressed into service, three months training if lucky", weight = 1 },
+  { text = "Veterans Company - survivors of three campaigns minimum, unkillable or lucky", weight = 1 },
+  { text = "Rifle Regiment - basic line troops, the backbone nobody appreciates until they're gone", weight = 1 },
+  { text = "Urban Assault Platoon - hab-block specialists, every room is a potential grave", weight = 1 },
+
+  # Specialized Infantry
+  { text = "Xeno-Hunters - bug specialists, they've seen things that would break normal grunts", weight = 2 },
+  { text = "Hostile Environment Company - death world veterans, they find normal gravity luxurious", weight = 1 },
+  { text = "Chemical Warfare Platoon - flamer and gas specialists, Geneva convention what?", weight = 1 },
+  { text = "Scout-Sniper Section - one shot one kill from two klicks, ghosts with rifles", weight = 1 },
+  { text = "Demolitions Platoon - if it stands, they can drop it, if it doesn't they can crater it", weight = 1 },
+  { text = "Anti-Armor Section - tank hunters with shoulder-fired death, brave or crazy", weight = 1 },
+  { text = "Mortar Section - indirect fire specialists, they never see who they kill", weight = 1 },
+  { text = "Combat Engineers - they build it break it or blow it up depending on orders", weight = 1 },
+
+  # Armor
+  { text = "Main Battle Tank Squadron - steel beasts crewed by three, destroyers of everything", weight = 1 },
+  { text = "Heavy Tank Company - superheavies that crack foundations, overkill incarnate", weight = 1 },
+  { text = "Light Cavalry Squadron - fast attack vehicles, hit and fade", weight = 1 },
+  { text = "Walker Platoon - bipedal assault platforms, infantry support that terrifies both sides", weight = 1 },
+  { text = "Assault Gun Battery - mobile artillery in tank chassis, direct fire devastation", weight = 1 },
+  { text = "Self-Propelled Artillery - mobile guns that relocate before counter-battery finds them", weight = 1 },
+
+  # Air/Void
+  { text = "Dropship Squadron - the taxi drivers nobody thanks until extraction goes hot", weight = 1 },
+  { text = "Gunship Wing - flying fire support, angels of death on rotor blades", weight = 2 },
+  { text = "Close Air Support Flight - ground attack aircraft, danger close is their specialty", weight = 1 },
+  { text = "Fighter Squadron - void superiority pilots, knights of the black", weight = 1 },
+  { text = "Bomber Wing - strategic delivery systems, they make planets burn", weight = 1 },
+  { text = "Aerospace Defense Battery - protecting the sky, shooting down anything that enters", weight = 1 },
+
+  # Support
+  { text = "Field Hospital Company - surgical teams under fire, saving lives amid the dying", weight = 1 },
+  { text = "Logistics Battalion - supply chain that keeps the war machine fed", weight = 1 },
+  { text = "Military Police Platoon - discipline enforcers, everyone hates them until needed", weight = 1 },
+  { text = "Signals Company - communications specialists, keeping everyone connected", weight = 1 },
+  { text = "Intelligence Section - spooks and analysts, they know things that would terrify you", weight = 1 },
+  { text = "Maintenance Company - tech specialists keeping everything running with spit and prayers", weight = 1 }
+]
+
+[unit_nicknames]
+entries = [
+  # Honorifics
+  { text = "The Immortals - unit with impossibly low casualty rate, luck or skill or both", weight = 1 },
+  { text = "The Old Guard - veterans who've served together since the beginning", weight = 1 },
+  { text = "Iron Wolves - aggressive pursuit specialists, they never let prey escape", weight = 1 },
+  { text = "Death's Head Company - skull insignia earned through massacre", weight = 1 },
+  { text = "The Bloodhounds - tracking specialists, they find what you're hiding", weight = 1 },
+  { text = "Widowmakers - highest kill count in the regiment, proud of it", weight = 1 },
+  { text = "The Last Wall - defensive specialists, never broken never retreated", weight = 1 },
+  { text = "Storm Crows - harbingers of destruction, where they go death follows", weight = 1 },
+
+  # Derogatory
+  { text = "Meat Shields - first wave assault troops, expendable by design", weight = 2 },
+  { text = "The Damned - assigned impossible missions, expected to die trying", weight = 2 },
+  { text = "Coffin Stuffers - casualties so high the graves crew knows them by name", weight = 1 },
+  { text = "The Forlorn Hope - breach assault volunteers, glory or grave", weight = 1 },
+  { text = "Bug Food - xeno-hunters with terrible survival rate", weight = 1 },
+  { text = "Crater Makers - unit known for friendly fire incidents", weight = 1 },
+  { text = "Walking Dead - unit under investigation, everyone waiting for the axe", weight = 1 },
+  { text = "Cannon Fodder Company - conscripts nobody expects to survive", weight = 1 },
+
+  # Regional/Origin
+  { text = "The Frost Born - from ice world, cold doesn't bother them", weight = 1 },
+  { text = "Jungle Ghosts - death world specialists, invisible in foliage", weight = 1 },
+  { text = "Void Born - ship-bred soldiers, never touched real dirt before deployment", weight = 1 },
+  { text = "Hive Rats - recruited from underhive, urban warfare instinct", weight = 1 },
+  { text = "Sand Vipers - desert world troops, thrive where others die of thirst", weight = 1 },
+  { text = "The Undertakers - from mining world, comfortable in tunnels", weight = 1 },
+  { text = "Zero-G Aces - space station raised, perfect in vacuum", weight = 1 },
+  { text = "Gravity Dogs - high-G world veterans, everything feels light to them", weight = 1 },
+
+  # Combat Style
+  { text = "Night Stalkers - darkness is their friend, terror is their weapon", weight = 1 },
+  { text = "Fire Breathers - flamer specialists, they solve problems with promethium", weight = 1 },
+  { text = "Headhunters - assassination specialists, they collect proof", weight = 1 },
+  { text = "Wall Breakers - siege specialists, fortifications are suggestions", weight = 1 },
+  { text = "Silent Ones - reconnaissance unit that never speaks on mission", weight = 1 },
+  { text = "Thunder Gods - artillery battery with legendary accuracy", weight = 1 },
+  { text = "Screaming Eagles - drop troops famous for their war cry", weight = 1 },
+  { text = "The Reapers - devastatingly effective fire team, nothing survives contact", weight = 1 }
+]
+
+[unit_traditions]
+entries = [
+  # Pre-Battle
+  { text = "Paint death mask on face before combat, wash it off with enemy blood or not at all", weight = 2 },
+  { text = "Last man to the dropship buys drinks for entire squad after mission", weight = 1 },
+  { text = "Sergeant recites names of unit dead before every engagement", weight = 1 },
+  { text = "Share a ritual drink from the unit's ancestral flask, passed down through generations", weight = 1 },
+  { text = "Chaplain blesses weapons individually, each by name and service history", weight = 1 },
+  { text = "Exchange personal effects with battle buddy, ensure return to families if one falls", weight = 2 },
+  { text = "Unit sings traditional war hymn before drop, voices echo through the bay", weight = 1 },
+  { text = "Officer eats last, from the same pot as the lowest private", weight = 1 },
+
+  # Combat Traditions
+  { text = "First kill of engagement belongs to the newest member, blooding the rookie", weight = 1 },
+  { text = "Never leave a weapon behind, bring back iron even if you can't bring back the bearer", weight = 2 },
+  { text = "Unit banner goes forward first, falls last, carried by the bravest or most cursed", weight = 1 },
+  { text = "Officer leads from front in assault, from rear in defense, visible to all", weight = 1 },
+  { text = "Grenades are named and the name is shouted when thrown", weight = 1 },
+  { text = "Wounded who can still fight stay in the line, only unconscious leave", weight = 1 },
+  { text = "Enemy officers are priority targets, decapitate the snake first", weight = 1 },
+  { text = "No prisoners taken, no prisoners given, both sides know the score", weight = 2 },
+
+  # Post-Battle
+  { text = "Collect dog tags from fallen, entire squad present for the gathering", weight = 1 },
+  { text = "Toast to the dead before drinking, their names spoken aloud", weight = 1 },
+  { text = "Burn fallen comrades' personal effects if no family, keep nothing", weight = 1 },
+  { text = "Mark kill tallies on armor in enemy blood, wash off is cowardice", weight = 1 },
+  { text = "Write letters to families of fallen personally, no form letters", weight = 2 },
+  { text = "Salvage one piece from each fallen enemy's gear as trophy", weight = 1 },
+  { text = "Silence for sixty seconds after securing objective, respect the cost", weight = 1 },
+  { text = "Youngest survivor reports the action to command, learning to speak of death", weight = 1 },
+
+  # Unit Culture
+  { text = "New members not addressed by name until first combat, they're 'fresh meat' until then", weight = 1 },
+  { text = "Officers promoted from within the unit only, outsiders never fully trusted", weight = 1 },
+  { text = "Unit maintains shrine to fallen, candles lit for each name", weight = 1 },
+  { text = "Gear is passed down when soldier falls, their spirit rides with equipment", weight = 1 },
+  { text = "Unit has its own language, slang incomprehensible to outsiders", weight = 1 },
+  { text = "Tattoo ritual marks major campaigns, body becomes battle record", weight = 1 },
+  { text = "Mock courts martial for minor infractions, punishments creative not cruel", weight = 1 },
+  { text = "Annual remembrance day where no fighting occurs if possible", weight = 1 },
+
+  # Superstitions
+  { text = "Never speak of home before a drop, tempting fate", weight = 1 },
+  { text = "First round from new ammo box goes into the dirt, appeasing the machine spirit", weight = 1 },
+  { text = "Specific seat in dropship for soldier who's about to die, everyone knows which one", weight = 2 },
+  { text = "Touch the unit's lucky charm before combat, anyone who forgets is watched nervously", weight = 1 },
+  { text = "Never say the number of days until rotation, counting down invites death", weight = 1 },
+  { text = "Remove helmet only when truly safe, keep face hidden from death", weight = 1 },
+  { text = "Write final letter before every mission, burn it if you survive", weight = 1 },
+  { text = "If someone says 'this should be easy' everyone else prepares for disaster", weight = 1 }
+]

@@ -1,0 +1,109 @@
+# WWI Social Encounters
+# The human moments amid the mechanized slaughter
+
+[comradeship]
+description = "Bonds forged in the trenches"
+entries = [
+    { encounter = "Sharing last cigarette", description = "Down to one, split it, the gift that matters" },
+    { encounter = "Mate covers for your mistake", description = "Lies to the sergeant, takes the blame, owes him" },
+    { encounter = "Writing dead friend's letter home", description = "What do you tell his mother? Not the truth." },
+    { encounter = "Recognizing a face from home", description = "Someone from your village, your factory, your school" },
+    { encounter = "Holding a dying man's hand", description = "Nothing else to do, just be there at the end" },
+    { encounter = "Pooling resources for a mate in trouble", description = "Everyone chips in, covers his debts, no questions" },
+    { encounter = "New man attached to your section", description = "Green and scared, your responsibility to keep him alive" },
+    { encounter = "Veteran teaching a replacement", description = "Passing on the survival wisdom, hoping it sticks" }
+]
+
+[officers]
+description = "Relations between ranks"
+entries = [
+    { encounter = "New subaltern arrives", description = "Fresh from England, clean uniform, three months to live" },
+    { encounter = "Officer shares his rations", description = "Good egg, treats the men fairly, won't last" },
+    { encounter = "Martinet officer inspection", description = "Everything wrong, punishment for everyone, hatred earned" },
+    { encounter = "Officer breaks down", description = "Shell shock takes even the gentlemen, what now?" },
+    { encounter = "Colonel's visit to front line", description = "Rare appearance of higher brass, dog and pony show" },
+    { encounter = "Staff officer lost in trenches", description = "Red tabs and no idea, contempt barely concealed" },
+    { encounter = "Officer asks impossible", description = "Orders that make no sense, must be obeyed anyway" },
+    { encounter = "Beloved officer killed", description = "One of the good ones gone, men grieving openly" }
+]
+
+[truces]
+description = "Moments when the killing pauses"
+entries = [
+    { encounter = "Unofficial ceasefire to collect wounded", description = "Both sides stop shooting, stretcher parties in no man's land" },
+    { encounter = "Christmas truce memories", description = "Someone remembers 1914, football in no man's land, never again" },
+    { encounter = "Live and let live arrangement", description = "Unspoken agreement, we don't shoot at mealtimes, neither do they" },
+    { encounter = "Shouted conversations with enemy", description = "Insults or jokes across no man's land, shared humanity" },
+    { encounter = "Trading with the enemy", description = "Throwing across cigarettes, food, forbidden but done" },
+    { encounter = "Respecting a brave enemy", description = "He died well, bury him properly, salute his courage" }
+]
+
+[civilians]
+description = "Encounters with non-combatants"
+entries = [
+    { encounter = "French farmer demanding payment", description = "You broke his fence, drank his well, owes him, can't pay" },
+    { encounter = "Belgian refugees passing", description = "Carts piled high, children walking, nowhere to go" },
+    { encounter = "Estaminet evening", description = "Watered wine and fried eggs, almost normal" },
+    { encounter = "Meeting a war correspondent", description = "Writes lies for the papers, never gets muddy" },
+    { encounter = "Encounter with local woman", description = "Brief connection, language barrier, loneliness and desire" },
+    { encounter = "Civilian child in war zone", description = "Playing in ruins, has never known peace" },
+    { encounter = "Angry shopkeeper", description = "Prices jacked up for soldiers, resentment both ways" }
+]
+
+[religion]
+description = "Faith in the trenches"
+entries = [
+    { encounter = "Chaplain's service before attack", description = "Communion in a dugout, last rites in advance" },
+    { encounter = "Debate about God in the trenches", description = "How can He allow this? Maybe He doesn't exist." },
+    { encounter = "Man finds religion suddenly", description = "Conversion in crisis, praying who never prayed" },
+    { encounter = "Chaplain carrying stretchers", description = "Padre doing real work, earning respect" },
+    { encounter = "Funeral service under fire", description = "Quick words, quick burial, shells still falling" },
+    { encounter = "Religious artifact as good luck charm", description = "Cross, medal, prayer card, clutched tightly" },
+    { encounter = "Crisis of faith after witnessing horror", description = "Can't believe anymore, can't pray, empty" }
+]
+
+[conflict]
+description = "Tensions within the ranks"
+entries = [
+    { encounter = "Accusation of theft", description = "Something missing from a pack, suspicion and anger" },
+    { encounter = "Fight over perceived cowardice", description = "You left him, you ran, fists flying" },
+    { encounter = "Rivalry between units", description = "Our battalion versus theirs, pride and prejudice" },
+    { encounter = "Tensions between regulars and conscripts", description = "Old contemptibles versus Kitchener's men" },
+    { encounter = "Class resentment surfacing", description = "Why should he give orders? Born rich, nothing more." },
+    { encounter = "Suspected informer", description = "Someone's talking to the officers, who?" },
+    { encounter = "Gambling debt unpaid", description = "Crown and anchor fortunes, violence threatened" }
+]
+
+[morale]
+description = "The spirit of the men"
+entries = [
+    { encounter = "News of victory elsewhere", description = "Somewhere we're winning, doesn't feel like it here" },
+    { encounter = "News of disaster elsewhere", description = "Another front collapsed, war lasting forever" },
+    { encounter = "Rumors of armistice", description = "Whispers of peace, don't believe it, can't hope" },
+    { encounter = "Concert party entertainment", description = "Soldiers in drag, jokes, songs, brief forgetting" },
+    { encounter = "Sports day behind the lines", description = "Football match, egg and spoon race, forced normality" },
+    { encounter = "Anniversary of something", description = "Year since landing, since the big attack, since he died" },
+    { encounter = "Collective bitter humor", description = "Laughing at the horror, only way to survive it" }
+]
+
+[communication]
+description = "Keeping in touch"
+entries = [
+    { encounter = "Runner arrives with orders", description = "Exhausted man, vital message, what now?" },
+    { encounter = "Telephone line cut by shells", description = "Communication lost, runner must go out" },
+    { encounter = "Carrier pigeon released", description = "Last hope, message attached, will it arrive?" },
+    { encounter = "Signal lamp flashing", description = "Morse code in the dark, hoping enemy doesn't see" },
+    { encounter = "Receiving news from home front", description = "Newspapers from England, full of lies and cheerfulness" },
+    { encounter = "Writing in the trench newspaper", description = "The Wipers Times, gallows humor in print" }
+]
+
+[replacement_shock]
+description = "New men and old truths"
+entries = [
+    { encounter = "Replacements arrive, so young", description = "Fresh faces, clean kit, they have no idea" },
+    { encounter = "New man's first death witnessed", description = "Seeing the horror up close for the first time" },
+    { encounter = "Veteran refusing to learn new names", description = "Why bother, they'll be dead in a week" },
+    { encounter = "New officer trying to bond", description = "Awkward attempts at connection, men wary" },
+    { encounter = "First time over the top for a new man", description = "Terror and adrenaline, will he make it?" },
+    { encounter = "New man from same hometown", description = "News from home, connection to the real world" }
+]

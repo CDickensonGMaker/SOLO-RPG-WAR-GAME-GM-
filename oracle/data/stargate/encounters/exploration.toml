@@ -1,0 +1,92 @@
+# Stargate SG-1 Exploration Encounters
+# Events and situations during gate travel and world exploration
+
+[first_contact]
+description = "Encounters with new civilizations and peoples"
+encounters = [
+    { name = "Primitive Village Greeting", description = "A pre-industrial village gathers around the gate. Elders argue whether the visitors are gods, demons, or simply strangers. Children watch with undisguised curiosity." },
+    { name = "Armed Reception Committee", description = "Weapons trained on the gate as the team emerges. Someone hurt these people before. Trust must be earned before questions can even be asked." },
+    { name = "Language Barrier", description = "These people speak no known Earth language or Goa'uld dialect. Communication starts with gestures and drawings. Misunderstandings could be fatal." },
+    { name = "Mistaken for Gods", description = "The locals fall to their knees in worship. Team gear resembles ancient prophecy symbols. Explaining the misunderstanding without causing cultural collapse is delicate work." },
+    { name = "Trade Proposition", description = "Merchants approach immediately, eager to deal. They have something valuable; they want something specific. Fair exchange or exploitation requires careful navigation." },
+    { name = "Religious Test", description = "Local priests demand the team prove their intentions through ritual. Participating might earn trust. Refusing might earn arrows." },
+    { name = "Cultural Taboo Violation", description = "An innocent gesture causes gasps of horror. The team has violated something sacred without knowing. Apology must be made before sunset, or consequences follow." },
+    { name = "Hidden Advanced Society", description = "What appears primitive is carefully maintained facade. The true civilization watches from hidden vantage points, evaluating whether to reveal themselves." },
+    { name = "Refugee Camp", description = "Displaced people cluster around the gate, hoping each activation brings rescue. They fled Goa'uld conquest. Help them, recruit them, or leave them?" },
+    { name = "Divided Factions", description = "Two groups immediately compete for the team's attention. Alliance with one means enmity with the other. Neutrality may not be an option." },
+]
+
+[ancient_technology]
+description = "Encounters with Ancient/Lantean technology"
+encounters = [
+    { name = "Repository Interface", description = "The headpiece descends from the Ancient console. It contains knowledge that could save Earth. It also killed the last person who used it." },
+    { name = "Dormant Defense System", description = "The team's presence awakens something. Automated weapons track movement. Passwords or gene activation might deactivate it. Running is definitely an option." },
+    { name = "Holographic Archive", description = "An Ancient figure appears, speaking a dialect of Latin. It offers to answer questions - but only specific ones, and only once. Choose queries carefully." },
+    { name = "Power Source Discovery", description = "A ZPM sits in its cradle, glowing with power. Taking it seems simple. The facility it powers might collapse without it. The Wraith might have left it as bait." },
+    { name = "Ascension Chamber", description = "A room designed to facilitate the transformation to pure energy. The process is outlined in carved instructions. Some team members find it tempting." },
+    { name = "Genetic Laboratory", description = "Ancient research into genetics and evolution. Data on the Plague that killed the Ancients. Samples that might still be dangerous after millions of years." },
+    { name = "Weapons Platform Control", description = "A console that commands orbital weapons. Operational status uncertain. Testing it would reveal whether it works - and might reveal the team's location to enemies." },
+    { name = "Stargate Research Notes", description = "Ancient documentation on the gate network. Includes addresses no modern database contains. Some are marked with warnings in urgent script." },
+    { name = "Time Manipulation Device", description = "Technology that affects temporal flow. The Ancients were experimenting with time itself. The notes stop mid-sentence, never completed." },
+    { name = "Communications Stone Pedestal", description = "A device for mind-transfer communication across galaxies. Using it means leaving your body vulnerable. But the intelligence on the other end might be invaluable." },
+]
+
+[environmental_hazards]
+description = "Natural dangers and world conditions"
+encounters = [
+    { name = "Atmospheric Contamination", description = "MALP readings were wrong. The air isn't breathable here. Suits have limited supply. Getting back to the gate is urgent." },
+    { name = "Seismic Activity", description = "The ground shakes violently. Structures collapse. The gate area might become unstable. Evacuation or shelter - choose quickly." },
+    { name = "Extreme Temperature", description = "The planet is hotter or colder than expected. Equipment malfunctions. The gate is the only controlled environment available." },
+    { name = "Radiation Zone", description = "Radiation levels climb the further from the gate. Something ahead is dangerously radioactive. The mission objective lies past the danger zone." },
+    { name = "Predatory Wildlife", description = "Something large and hungry considers the team food. Local fauna didn't make the MALP survey. Standard weapons may not be sufficient." },
+    { name = "Toxic Flora", description = "The beautiful plants release spores or contact poison. Exposure occurs before the danger is recognized. Medical attention is needed, and time is short." },
+    { name = "Flooding Danger", description = "Water levels rise rapidly. Flash flood, tidal surge, or dam break - the source matters less than survival. High ground or the gate." },
+    { name = "Darkness Falls", description = "The sun sets and something changes. Nocturnal threats emerge. The locals hide at night for good reason. Find shelter or find the gate." },
+    { name = "Electrical Storm", description = "Energy discharges threaten electronics and personnel. The gate might not function during the storm. Wait it out or risk activation." },
+    { name = "Temporal Distortion", description = "Time flows differently here. An hour at the gate might be days elsewhere. Finding objective and returning requires accounting for the difference." },
+]
+
+[archaeological_discovery]
+description = "Finds and discoveries of historical significance"
+encounters = [
+    { name = "Goa'uld Tomb", description = "A buried chamber holds a sarcophagus and treasures. The occupant was entombed alive, waiting for revival. Disturbing the rest might wake them." },
+    { name = "Written Records", description = "Tablets or scrolls in Ancient script. They document events not in Earth's history. Translation reveals disturbing parallels to current situations." },
+    { name = "Battlefield Remains", description = "Ancient combat left its mark here. Weapon scoring and skeletal remains. What were the Ancients fighting that required such force?" },
+    { name = "Cultural Artifacts", description = "Objects of clear ceremonial significance. Their purpose can only be guessed. Taking them might offend local spirits - or local inhabitants." },
+    { name = "Mass Grave", description = "Remains of hundreds, perhaps thousands. Goa'uld culling or something worse. The cause of death raises questions about current dangers." },
+    { name = "Evacuated Settlement", description = "A town left suddenly, possessions abandoned. Food still on tables, fires long cold. What made everyone leave at once?" },
+    { name = "Warning Monument", description = "An obelisk covered in text repeating the same message in multiple languages. WARNING. DANGER. DO NOT PROCEED. The team is already past it." },
+    { name = "Hidden Chamber", description = "A secret room reveals itself through accident or search. Someone hid something here specifically. The seals were meant to last forever." },
+    { name = "Star Map", description = "A ceiling or wall displays constellations and gate addresses. Some match known locations. Others point to unexplored coordinates." },
+    { name = "Personal Effects", description = "Belongings of someone from Earth, impossibly old. Someone was here before, thousands of years before the program began. How? Why?" },
+]
+
+[gate_complications]
+description = "Problems with Stargate operation and travel"
+encounters = [
+    { name = "Gate Won't Dial Home", description = "The DHD fails or the address doesn't connect. Something blocks the wormhole - physical obstacle, power failure, or deliberate interference." },
+    { name = "Incoming Wormhole", description = "The gate activates from the other side. Someone else is coming through. Enemy, ally, or unknown - prepare for anything." },
+    { name = "DHD Damage", description = "The dial-home device is broken or missing entirely. Manual dialing requires a power source and careful calculation. Both are in short supply." },
+    { name = "Wrong Destination", description = "The wormhole deposited the team somewhere other than intended. Stellar drift, interference, or sabotage. Establishing current location is the first problem." },
+    { name = "Gate Buried", description = "The exit is underground or blocked by debris. Digging out while air lasts. The other end might not know to come looking." },
+    { name = "Power Surge", description = "Something unusual happened during transit. Equipment malfunctioning, personnel affected. The cause might follow through the gate." },
+    { name = "Gate Sharing", description = "The wormhole connects, but others are already using it. Traffic through active gates is complicated. Timing and coordination required." },
+    { name = "Iris Closed on Return", description = "SGC signals received, but the iris stays shut. Communication clarifies the problem - or doesn't. Something prevents them from opening it." },
+    { name = "Kawoosh Hazard", description = "The gate's activation splash threatens nearby objects or people. Warning those in danger means revealing presence. Staying silent means watching harm occur." },
+    { name = "Duplicate Gate", description = "A second stargate exists nearby, causing interference. Both cannot operate simultaneously. Choosing which to use requires information about both." },
+]
+
+[hostile_contact]
+description = "Encounters with enemy forces"
+encounters = [
+    { name = "Jaffa Patrol", description = "Warriors in service to a System Lord cross the team's path. Numbers favor the enemy. Engage, evade, or negotiate - each has risks." },
+    { name = "Goa'uld Overseer", description = "A minor Goa'uld rules this world with casual cruelty. The team's presence hasn't been noticed yet. Taking action would draw attention." },
+    { name = "Ashrak Pursuit", description = "An assassin has been tracking the team. Signs of pursuit noticed too late. The hunter is close, patient, and skilled." },
+    { name = "Replicator Activity", description = "The mechanical plague has reached this world. Individual bugs scatter at approach. The main mass is somewhere nearby, growing." },
+    { name = "Prior's Arrival", description = "An Ori priest comes to spread the word of Origin. Powers beyond normal challenge awaited. Resistance meets biblical force." },
+    { name = "Trust Operation", description = "Human operatives working against SGC interests. They know protocols, they know weaknesses. The enemy wears a familiar face." },
+    { name = "Lucian Alliance Crew", description = "Criminals exploring the same world for profit. Competition or cooperation possible. Their moral flexibility is both useful and dangerous." },
+    { name = "Wraith Scouting Party", description = "Life-draining predators far from their usual territory. What drew them here? Being fed upon means death or worse." },
+    { name = "Free Jaffa Radicals", description = "Not all former slaves embrace peace. These warriors want vengeance, and Earth's caution frustrates them. Allies or obstacles depends on the approach." },
+    { name = "Bounty Hunters", description = "Mercenaries with a contract on someone in the team. Money motivates them, and someone paid well. Negotiation might be cheaper than combat." },
+]

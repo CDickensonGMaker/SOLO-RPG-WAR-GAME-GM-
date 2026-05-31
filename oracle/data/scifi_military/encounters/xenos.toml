@@ -73,5 +73,65 @@ entries = [
   { text = "Psychic scream, dying xenos projecting death to all nearby minds", weight = 1 },
   { text = "Ancestor memory, xenos knows everything its lineage experienced", weight = 1 },
   { text = "Xenos worshippers, humans who have turned traitor to serve aliens", weight = 1 },
-  { text = "Thing from the void, xenos that should not exist in normal space", weight = 1 }
+  { text = "Thing from the void, xenos that should not exist in normal space", weight = 1 },
+
+  # First Contact Gone Wrong
+  { text = "Translation error triggers hostilities, shooting starts before anyone understands why", weight = 2 },
+  { text = "Xenos interprets standard military greeting as challenge to combat", weight = 1 },
+  { text = "Gift exchange goes wrong, offered item is culturally offensive", weight = 1 },
+  { text = "Accidental trespass into sacred xenos ground, death sentence for ignorance", weight = 1 },
+  { text = "Food shared causes allergic reaction, xenos thinks we poisoned them", weight = 1 },
+  { text = "Camera flash triggers photosensitive species' defensive rage", weight = 1 },
+  { text = "Radio frequency matches xenos distress call, they think we're mocking their dead", weight = 1 },
+  { text = "Standard surveying accidentally disturbs hibernating xenos colony", weight = 2 },
+
+  # Xenos Ambush Tactics
+  { text = "Ground opens up, xenos emerging from burrows in every direction", weight = 2 },
+  { text = "Ceiling crawlers, xenos dropping from above in coordinated attack", weight = 1 },
+  { text = "Chameleon predators, visible only when attacking from arm's length", weight = 2 },
+  { text = "Xenos using bait, injured one drawing squad into kill zone", weight = 1 },
+  { text = "False surrender, xenos playing dead until surrounded by curious soldiers", weight = 1 },
+  { text = "Tunnel ambush, floor collapses dropping soldiers into waiting claws", weight = 1 },
+  { text = "Pack hunters working in coordination, herding prey into trap", weight = 1 },
+  { text = "Xenos mimicking radio chatter, luring patrol into ambush", weight = 1 },
+
+  # Alien Wildlife
+  { text = "Territorial megafauna attracted by weapons fire, attacking everyone", weight = 1 },
+  { text = "Swarm of venomous small xenos, individually harmless in thousands deadly", weight = 1 },
+  { text = "Apex predator treating combat zone as hunting ground", weight = 1 },
+  { text = "Alien equivalent of parasitic insects, burrowing into exposed skin", weight = 1 },
+  { text = "Pack of opportunistic scavengers attracted by blood and death", weight = 1 },
+  { text = "Massive filter-feeder mistaking soldiers for food organisms", weight = 1 },
+  { text = "Bioluminescent lure predator in darkness, beautiful and deadly", weight = 1 },
+  { text = "Herd animal stampede, xenos equivalent of cattle spooked by gunfire", weight = 1 },
+
+  # Unknown Pathogen Exposure
+  { text = "Spore cloud penetrated respirator seals, waiting to see what happens", weight = 2 },
+  { text = "Soldier cut by xenos claw, wound won't stop bleeding shows strange coloring", weight = 1 },
+  { text = "Water source was contaminated with xenos biological agent", weight = 1 },
+  { text = "Eating local fauna causes violent reaction, uncertain if poisoning or infection", weight = 1 },
+  { text = "Xenos blood splatter during melee, burns on contact with skin", weight = 1 },
+  { text = "Breathing unfiltered air for minutes, feeling strange now", weight = 1 },
+  { text = "Stepping in xenos egg mass, something might have gotten through boot seams", weight = 1 },
+  { text = "Bitten by xenos, teeth marks showing unusual pattern of infection", weight = 2 },
+
+  # Hive Behavior
+  { text = "Hive defending brood chamber, ferocity intensifies near eggs", weight = 2 },
+  { text = "Workers converting dead soldiers into hive building material", weight = 1 },
+  { text = "Warrior caste protecting queen's retreat, fighting to the last", weight = 1 },
+  { text = "Hive reorganizing in response to threat, behavior patterns changing mid-fight", weight = 1 },
+  { text = "Pheromone trail leading more warriors to combat location", weight = 1 },
+  { text = "Hive cutting losses, sealing off infested section with soldiers inside", weight = 1 },
+  { text = "Young brood emerging for first time, imprinting on soldiers as enemies for life", weight = 1 },
+  { text = "Damaged hive releasing defensive organisms, chemical warfare response", weight = 1 },
+
+  # Psychological Horror
+  { text = "Xenos wearing the face of fallen comrade, imperfect but recognizable", weight = 2 },
+  { text = "Soldier starts responding to xenos vocalizations as if they're words", weight = 1 },
+  { text = "Finding human remains partially transformed into xenos anatomy", weight = 1 },
+  { text = "Xenos nursery using human captives as living incubators", weight = 2 },
+  { text = "Soldier reports dreams of xenos hive, knows layouts they've never seen", weight = 1 },
+  { text = "Recovered squadmate acting strange, responding to sounds no one else hears", weight = 1 },
+  { text = "Xenos keeps one soldier alive to watch others die, seems to enjoy fear", weight = 1 },
+  { text = "Finding recording of last unit to enter this zone, hearing their final moments", weight = 1 }
 ]

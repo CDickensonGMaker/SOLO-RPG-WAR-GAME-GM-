@@ -1,0 +1,77 @@
+# Stargate SG-1 Diplomatic Encounters
+# Political, social, and negotiation situations in the Stargate universe
+
+[treaty_negotiations]
+description = "Formal diplomatic agreements and alliances"
+encounters = [
+    { name = "Technology Exchange Terms", description = "An advanced civilization offers knowledge for something in return. The cost seems reasonable until examined closely. What are they really asking for?" },
+    { name = "Protected Planets Amendment", description = "Asgard-mediated negotiation with Goa'uld representatives. Each word carries the weight of worlds. Failure means populations lose protection." },
+    { name = "Free Jaffa Alliance Terms", description = "Rebel Jaffa want Earth's support but resist Earth's conditions. Pride and practicality conflict. Finding common ground requires understanding their perspective." },
+    { name = "Tok'ra Intelligence Sharing", description = "The resistance offers information but demands operational authority. Trust is limited on both sides. What they know could save lives - if they'll share it." },
+    { name = "Trade Agreement Dispute", description = "An existing deal is challenged by one party. Terms that seemed fair no longer satisfy. Renegotiation or enforcement of original terms?" },
+    { name = "Mutual Defense Pact", description = "A civilization wants protection Earth may not be able to provide. Promising more than can be delivered is dangerous. Honest limitations might end negotiations." },
+    { name = "Resource Rights Negotiation", description = "Multiple parties claim the same naquadah deposits. Legal frameworks from different worlds don't align. Someone leaves unhappy, possibly hostile." },
+    { name = "Prisoner Exchange", description = "Both sides hold captives the other wants returned. Trust during exchange is minimal. Betrayal by either side collapses future negotiations." },
+    { name = "Territorial Boundary Agreement", description = "Gate-accessible space must be divided somehow. Historical claims conflict with current capabilities. The map will shape politics for generations." },
+    { name = "Non-Aggression Treaty", description = "Former enemies consider peace. Old wounds make trust difficult. Is this genuine change or tactical pause?" },
+]
+
+[system_lord_politics]
+description = "Navigating Goa'uld power dynamics"
+encounters = [
+    { name = "Court of a System Lord", description = "Attending audience with a god-king. Every word and gesture scrutinized. The wrong answer means death; the right answer might mean worse." },
+    { name = "Playing Goa'uld Against Each Other", description = "Manipulating System Lord rivalries. Information fed carefully to maximize conflict. Discovery means becoming a shared target." },
+    { name = "Minor Goa'uld Proposition", description = "A lesser snake offers alliance against their master. Their ambition could be useful. Their betrayal is nearly certain." },
+    { name = "Succession Crisis Involvement", description = "A System Lord has fallen and factions vie for the domain. Each side wants outside support. Backing the winner brings rewards; backing the loser brings vengeance." },
+    { name = "Tribute Negotiation", description = "A Goa'uld demands offerings to spare a population. The resources requested would cripple the people. Refusal invites destruction." },
+    { name = "False Worship Requirement", description = "Survival requires pretending to acknowledge a Goa'uld's divinity. The moral compromise burns. The alternative is immediate execution." },
+    { name = "Queen's Audience", description = "Rare meeting with a Goa'uld queen. She controls symbiote production, making her uniquely valuable. What she wants in return for cooperation is disturbing." },
+    { name = "System Lord Summit Invitation", description = "Multiple Goa'uld gather, and outside representatives are invited. The opportunity for intelligence is immense. So is the danger of being caught." },
+    { name = "Betrayal Offer", description = "A Goa'uld proposes turning on their ally in exchange for certain considerations. Their treachery is reliable; their new loyalty is not." },
+    { name = "Divine Challenge", description = "A Goa'uld demands proof of Earth's worthiness to negotiate. Tests designed to humiliate or kill. Passing might earn respect; failing definitely earns contempt." },
+]
+
+[free_jaffa_politics]
+description = "Dealings within the Free Jaffa movement"
+encounters = [
+    { name = "Council Faction Dispute", description = "Free Jaffa council members disagree on fundamental direction. Tradition versus adaptation creates bitter division. Outsiders are drawn into choosing sides." },
+    { name = "Warrior Honor Challenge", description = "A Jaffa leader's honor has been questioned. Ritual combat may be required to resolve the matter. Intervention could make things worse or better." },
+    { name = "Tretonin Distribution Debate", description = "The drug that frees Jaffa from symbiote dependence is limited. Who receives it, who waits? Medical decisions become political conflicts." },
+    { name = "Former Enemies, New Allies", description = "Jaffa who served rival Goa'uld must work together. Centuries of conflict don't disappear easily. Finding common cause requires patient diplomacy." },
+    { name = "Traditionalist Opposition", description = "Some Jaffa reject the rebellion's direction. They want freedom but not change. Accommodating them without betraying principles is delicate." },
+    { name = "Military Authority Questions", description = "Who commands the Free Jaffa forces? Merit-based or status-based hierarchy? The answer shapes what kind of nation they become." },
+    { name = "Revenge Versus Justice", description = "A Jaffa leader wants to execute former oppressors. Others advocate trials or mercy. The decision defines the rebellion's soul." },
+    { name = "Resource Allocation", description = "Limited ships and weapons must be distributed among Jaffa factions. Every decision creates winners and losers. Fairness is impossible; perception of fairness might be achievable." },
+    { name = "Dakara Control", description = "The symbolic heart of Jaffa freedom is contested. Multiple factions want control of the sacred site. Compromise seems unlikely." },
+    { name = "Earth Relationship Terms", description = "What does the Free Jaffa Nation owe Earth? What does Earth owe them? Defining the alliance requires acknowledging uncomfortable truths." },
+]
+
+[earth_politics]
+description = "Dealing with Earth governments and agencies"
+encounters = [
+    { name = "IOA Oversight Hearing", description = "International committee demands accountability. They want control without understanding. Satisfying them risks operational security." },
+    { name = "Pentagon Budget Review", description = "Justifying expenses for 'deep space radar telemetry.' The cover story strains credibility. Funding depends on vague assurances." },
+    { name = "Congressional Pressure", description = "A senator with partial knowledge demands more information. Full disclosure is impossible. Partial disclosure might be worse than none." },
+    { name = "Allied Nation Demands", description = "Countries not fully briefed want participation. Their contributions could help. Their security might leak." },
+    { name = "NID Interference", description = "The intelligence agency acts on different priorities. Officially they support the program. Unofficially they pursue separate agendas." },
+    { name = "Disclosure Debate", description = "Pressure mounts to tell the world about the Stargate. The implications of public knowledge are unpredictable. Keeping the secret forever seems impossible." },
+    { name = "Area 51 Jurisdiction", description = "Disputes over who controls recovered technology. Research priorities conflict between agencies. Turf wars waste resources needed elsewhere." },
+    { name = "Civilian Leadership Change", description = "New administration means new people to brief. Trust built over years must start over. Policy continuity is not guaranteed." },
+    { name = "Media Exposure Threat", description = "A journalist has pieces of the truth. Cover stories are prepared, but they're thin. Discrediting without destroying careers is preferable." },
+    { name = "International Incident", description = "Off-world activity has consequences on Earth. Diplomatic explanations for the inexplicable. The cover story needs to satisfy multiple audiences." },
+]
+
+[cultural_navigation]
+description = "Understanding and adapting to alien societies"
+encounters = [
+    { name = "Religious Ceremony Participation", description = "Local custom requires participation in their rituals. Refusal offends; participation may conflict with personal beliefs. The diplomatic necessity is clear." },
+    { name = "Marriage Custom Complication", description = "A team member has inadvertently become betrothed. Local custom considers it binding. Extraction without insulting an ally requires creativity." },
+    { name = "Gender Role Challenges", description = "The local society has expectations that conflict with team composition. Adapting might be seen as weakness. Refusing might end communication." },
+    { name = "Death Custom Observation", description = "A local has died and proper observance is expected. The rituals are lengthy, strange, or disturbing. Participation honors the alliance." },
+    { name = "Leadership Recognition", description = "The locals don't accept the team's designated leader. Their criteria for authority differ. Working within their expectations or changing them?" },
+    { name = "Hospitality Obligations", description = "Accepting local hospitality creates reciprocal obligations. The expectations are unclear until later. Promises were made without knowing what was promised." },
+    { name = "Taboo Navigation", description = "Normal behavior violates local prohibition. The offense occurred before anyone knew. Repair requires understanding what was actually wrong." },
+    { name = "Truth-Telling Culture", description = "These people cannot comprehend deliberate falsehood. Diplomatic ambiguity reads as lies to them. Absolute honesty has uncomfortable implications." },
+    { name = "Collective Decision-Making", description = "No individual can agree to anything. The whole community must consensus. Progress requires patience measured in days." },
+    { name = "Ancestor Consultation", description = "Important decisions require consulting the dead. Whether this is ritual or actual communication is unclear. The delay serves purposes beyond the supernatural." },
+]

@@ -1,0 +1,74 @@
+# Alternate History Changed Places
+# Familiar locations made strange by divergent history
+
+[changed_places]
+description = "Familiar places transformed by alternate history - what the world looks like when history went differently"
+entries = [
+  # Capital Cities Transformed
+  { text = "Washington D.C. as Confederate capital - the Capitol dome flies a different flag, monuments honor Southern heroes", weight = 2 },
+  { text = "London under Nazi occupation - swastikas hang from Buckingham Palace, German is the language of power", weight = 1 },
+  { text = "Paris as an Islamic holy city - Notre Dame converted to a great mosque, minarets on the Eiffel Tower", weight = 1 },
+  { text = "Moscow as a German colonial city - Slavic culture suppressed, the Kremlin houses Reich administrators", weight = 1 },
+  { text = "Tokyo as an American territory - Stars and Stripes over the Imperial Palace, English on every sign", weight = 1 },
+  { text = "Jerusalem under alien administration - the old city partitioned between human religions and Race zones", weight = 1 },
+  { text = "Rome in the year 2000 - still the center of a globe-spanning empire, ancient and modern fused seamlessly", weight = 1 },
+  { text = "Beijing as capital of the American territories - Ming dynasty bureaucrats administer the western continents", weight = 1 },
+
+  # American Locations Changed
+  { text = "New York divided between two Americas - a wall runs through Manhattan, checkpoints and papers to cross", weight = 2 },
+  { text = "Atlanta as a Confederate metropolis - the city Sherman never burned, Southern industrial heart", weight = 1 },
+  { text = "New Orleans as a Caribbean cultural capital - French and Spanish influence never diminished", weight = 1 },
+  { text = "San Francisco's Chinatown is the whole city - Chinese California, Ming architecture and Confucian courts", weight = 1 },
+  { text = "Boston under British administration - loyal colonial capital, never rebelled, Union Jack still flies", weight = 1 },
+  { text = "Philadelphia's Independence Hall as collaborator administration center - irony cuts deep", weight = 1 },
+  { text = "Los Angeles in the Free American Zone - refugee city for those fleeing occupied territories", weight = 1 },
+  { text = "Chicago as the neutral meeting ground - where the two Americas negotiate across no-man's-land", weight = 1 },
+
+  # European Locations Changed
+  { text = "Berlin as the capital of a thousand-year Reich - Albert Speer's Germania made real, impossible architecture", weight = 1 },
+  { text = "Vienna at the heart of a surviving Habsburg Empire - the Dual Monarchy never fell, still rules central Europe", weight = 1 },
+  { text = "Madrid as center of global Spanish Empire - the Armada's victory preserved Spanish dominance", weight = 1 },
+  { text = "Constantinople still Byzantine - Orthodox Christianity's heart, the Empire endured and evolved", weight = 1 },
+  { text = "Edinburgh as capital of independent Scotland - never joined England, ally of European powers", weight = 1 },
+  { text = "Venice as an independent power - the Republic never fell, still a trading city-state", weight = 1 },
+  { text = "Amsterdam as world financial center - Dutch Empire never declined, guilders still the global currency", weight = 1 },
+  { text = "St. Petersburg still imperial - Romanov capital, the Revolution never happened here", weight = 1 },
+
+  # Asian Locations Changed
+  { text = "Hong Kong still British in 2050 - the handover never happened, colonial administration continues", weight = 1 },
+  { text = "Nanjing as eternal Ming capital - the dynasty never fell, Chinese empire unbroken", weight = 1 },
+  { text = "Singapore as center of Japanese sphere - the Co-Prosperity Zone survived, Asian empire thrives", weight = 1 },
+  { text = "Mumbai as Portuguese Goa - the British never took it, Catholic South Asian metropolis", weight = 1 },
+  { text = "Manila as Spanish colonial jewel - the Philippines never changed hands, centuries of Spanish rule", weight = 1 },
+  { text = "Saigon untouched by war - France kept Indochina, Parisian cafes and colonial architecture pristine", weight = 1 },
+  { text = "Kyoto as Japan's modern capital - Tokyo was never built, ancient city grew to megacity", weight = 1 },
+  { text = "Shanghai as international neutral zone - no nation claims it, the ultimate free port", weight = 1 },
+
+  # Middle Eastern and African Locations Changed
+  { text = "Cairo as capital of renewed caliphate - Islamic golden age continued, the city of a thousand minarets", weight = 1 },
+  { text = "Baghdad's House of Wisdom still standing - never destroyed, center of world learning for a millennium", weight = 1 },
+  { text = "Johannesburg in a South Africa that never had apartheid - early colonial collapse led to different development", weight = 1 },
+  { text = "Ethiopian Addis Ababa as seat of Christian African empire - Italy's invasion failed, empire expanded", weight = 1 },
+  { text = "Carthage rebuilt and thriving - Hannibal won, North Africa remained the Mediterranean power center", weight = 1 },
+  { text = "Mecca administered by secular authorities - Islam developed differently, the holy city is a museum", weight = 1 },
+  { text = "Timbuktu as world university center - Mali Empire persisted, African scholarship leads globally", weight = 1 },
+  { text = "Alexandria's library never burned - the ancient city is still humanity's repository of knowledge", weight = 1 },
+
+  # Technology-Changed Places
+  { text = "Detroit that never built cars - the automobile was never invented here, the city developed differently", weight = 1 },
+  { text = "Silicon Valley that developed vacuum tubes - no transistor revolution, massive computer centers instead", weight = 1 },
+  { text = "Houston without NASA - space race went differently, the city is just another oil town", weight = 1 },
+  { text = "Hiroshima untouched - nuclear weapons never used, a normal Japanese city with no memorial", weight = 1 },
+  { text = "Chernobyl as thriving Soviet city - the disaster prevented, nuclear power dominates", weight = 1 },
+  { text = "Cape Canaveral as alien landing site - the Race arrived here, now their primary Earth base", weight = 1 },
+  { text = "Pittsburgh still steel center - the industry never left, smokestacks and foundries dominate", weight = 1 },
+  { text = "Manchester as workshop of the world - industrial revolution never spread, Britain still manufactures everything", weight = 1 },
+
+  # Religiously Changed Places
+  { text = "Canterbury as seat of Catholic England - the Reformation never happened, Archbishop serves Rome", weight = 1 },
+  { text = "Salt Lake City that was never Mormon - different settlers claimed the valley, conventional American city", weight = 1 },
+  { text = "Lhasa under Chinese imperial protection - Tibet as Ming vassal state, Buddhism flourishes differently", weight = 1 },
+  { text = "Mecca and Medina under different Islamic tradition - the faith developed along another path", weight = 1 },
+  { text = "Benares as center of Hindu empire - India unified under religious rule, holy city as capital", weight = 1 },
+  { text = "Geneva as theocratic city-state - Calvin's vision fully implemented, Protestant Vatican", weight = 1 },
+]

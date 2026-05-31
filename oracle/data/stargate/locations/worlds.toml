@@ -1,0 +1,104 @@
+# Stargate SG-1 World Locations
+# Planets and worlds accessible through the Stargate network
+
+[desert_worlds]
+description = "Arid planets reminiscent of Abydos"
+worlds = [
+    { name = "P3X-421 'Sethara'", description = "Endless dunes beneath twin suns. Scattered oases host refugees who fled Goa'uld rule generations ago. Ancient ruins lie buried beneath the shifting sands." },
+    { name = "P5C-768 'Khenem'", description = "Wind-carved canyons and mesa settlements. The locals mine naquadah in dangerous shaft operations. A buried temple complex awaits discovery." },
+    { name = "P2X-338 'Abydos Echo'", description = "So similar to Abydos it unnerves visitors. The people here claim their ancestors fled Ra's wrath long ago. They guard secrets of the old dynasty." },
+    { name = "P7J-445 'Dustfall'", description = "Perpetual sandstorms rage across the surface. Underground cavern networks shelter a hardy population. Something massive moves beneath the dunes." },
+    { name = "P4X-639 'The Anvil'", description = "Scorching heat and minimal water. An Ancient obelisk marks the gate, its purpose unknown. Those who touch it dream of fire." },
+    { name = "P8R-217 'Sarapis'", description = "Salt flats stretch to every horizon. The gate stands in the only structure for miles - a Goa'uld waystation long abandoned. Or so it seems." },
+]
+
+[forest_worlds]
+description = "Densely vegetated planets"
+worlds = [
+    { name = "P3X-774 'Verdance'", description = "Towering trees form a canopy miles overhead. Bioluminescent plants light the eternal twilight below. The locals have never seen the sky." },
+    { name = "P6Y-325 'The Grove'", description = "Ancient forest covering the entire landmass. Tree-dwelling civilization builds among branches. They worship the Nox, who occasionally visit." },
+    { name = "P4M-328 'Fernholt'", description = "Prehistoric vegetation dominates - fern forests and primitive conifers. Dinosaur-like creatures roam freely. An Ancient research station monitors the ecosystem." },
+    { name = "P9C-882 'Whisperwood'", description = "The trees here seem almost aware. Locals speak of forest spirits that test visitors. Those who fail the test are never seen again." },
+    { name = "P2R-776 'Thornwall'", description = "Aggressive plant life makes travel dangerous. Thorned vines seem to move with intent. At the heart of the deepest grove lies a Goa'uld laboratory." },
+    { name = "P5X-447 'Canopy'", description = "The ground is toxic - all civilization exists in the trees. Elaborate rope bridges connect communities. They've developed flight technology to compensate." },
+]
+
+[ancient_ruin_sites]
+description = "Worlds with significant Ancient remains"
+worlds = [
+    { name = "P3Y-229 'Repository'", description = "An Ancient outpost containing a knowledge repository. The headpiece interface is intact. Activating it could save Earth or destroy the user's mind." },
+    { name = "P4X-650 'Celestis Minor'", description = "Ruins in the Ancient architectural style but corrupted. Ori influence touched here before the Ancients departed. Both powers left their mark." },
+    { name = "P8T-474 'The Observatory'", description = "An Ancient facility designed to monitor an entire galactic sector. Most systems are dark, but some still function. What are they watching for?" },
+    { name = "P6X-437 'Atlantis Echo'", description = "A small Ancient city, abandoned before Atlantis fled. Their research notes reference something that frightened even them into leaving." },
+    { name = "P2M-903 'The Armory'", description = "Ancient weapons storage, mostly depleted. But the deeper levels were never catalogued. Defense systems remain very much active." },
+    { name = "P9R-762 'Ascension Temple'", description = "A site where Ancients practiced the meditation techniques of Ascension. The enlightened energy here affects visitors' dreams - and sometimes their bodies." },
+    { name = "P3X-298 'The Shipyard'", description = "Orbital construction facilities around a barren moon. One incomplete vessel remains in the dock. Its design doesn't match any known Ancient ship class." },
+]
+
+[goauld_strongholds]
+description = "Worlds dominated by Goa'uld presence"
+worlds = [
+    { name = "P3X-888 'Origin'", description = "The Goa'uld homeworld itself. Primordial symbiotes still swim in the waters. Unas populations maintain primitive existence. A pilgrimage site for System Lords." },
+    { name = "P5S-117 'Sokar's Shadow'", description = "A prison world once ruled by Sokar, designed to resemble Hell. The new administration is barely better. Inmates still die in the fire pits." },
+    { name = "P7X-377 'Throne of Ra'", description = "One of Ra's primary worlds, now contested by lesser Goa'uld. The palace remains, filled with treasures and traps. Multiple factions vie for control." },
+    { name = "P4C-970 'Cronus' Fist'", description = "A fortress world bristling with defenses. Jaffa armies train in brutal conditions. The new rebel council debates whether to claim or destroy it." },
+    { name = "P8X-412 'The Breeding Grounds'", description = "A Goa'uld queen maintains her spawning pools here. Thousands of larval symbiotes await hosts. The Jaffa stationed here guard their future." },
+    { name = "P2X-374 'Anubis' Laboratory'", description = "A hidden research facility where Anubis developed his most terrible weapons. Officially destroyed, but the sublevels were never confirmed clear." },
+    { name = "P6S-221 'The Pleasure Palace'", description = "A System Lord's retreat world. Opulent architecture masks deadly politics. Assassination and intrigue occur between lavish entertainments." },
+]
+
+[primitive_cultures]
+description = "Worlds with less technologically advanced civilizations"
+worlds = [
+    { name = "P3X-972 'Land of Light'", description = "Peaceful Bronze Age civilization freed from Goa'uld rule. They struggle to understand the technology left behind. Some worship the Stargate itself." },
+    { name = "P5C-353 'Ironhold'", description = "Medieval society with strict feudal hierarchy. The gate is forbidden, guarded by knights. Legends speak of sky demons who once claimed tribute." },
+    { name = "P7M-219 'First Steps'", description = "Early agricultural society just developing writing. First contact protocols are critical here. Their potential is unlimited, their vulnerability absolute." },
+    { name = "P4X-347 'Cimmeria'", description = "Viking-descended culture under Asgard protection. Thor's Hammer guards the gate. They preserve traditions their ancestors brought through millennia ago." },
+    { name = "P9G-844 'The Gatherers'", description = "Hunter-gatherer tribes who migrate with the seasons. They tell oral histories of the 'sky gods' who haven't visited in generations." },
+    { name = "P3R-118 'Beneath the Ice'", description = "Dome cities protect against a world locked in ice age. The inhabitants have no memory of how they arrived or who built their home." },
+]
+
+[advanced_civilizations]
+description = "Worlds with technology comparable to or exceeding Earth"
+worlds = [
+    { name = "P3X-7763 'Tollana'", description = "Ruins of the once-great Tollan civilization. Their arrogance killed them. Scavengers pick through technology that could change Earth forever." },
+    { name = "P5R-357 'Hebridan'", description = "Human civilization that developed independently. They run the Loop of Kon Garat races. Trade and sports coexist with a troubling corporate culture." },
+    { name = "P4M-399 'The Collective'", description = "Hive-mind civilization achieved through technology. Individual consciousness is optional. They don't understand why anyone would choose isolation." },
+    { name = "P6X-887 'Langara'", description = "Three nations perpetually on the brink of war. Naquadria deposits make them strategically vital and devastatingly dangerous." },
+    { name = "P2C-257 'Orbita'", description = "Civilization that exists entirely in orbital platforms. The surface is abandoned, poisoned by ancient industry. They've forgotten how to walk on ground." },
+    { name = "P8M-743 'The Synthesists'", description = "Culture that has merged organic and mechanical. Cybernetic enhancement is universal. They view unaugmented beings with a mix of pity and curiosity." },
+]
+
+[quarantined_worlds]
+description = "Worlds designated as too dangerous for standard operations"
+worlds = [
+    { name = "P3X-513 'Plague World'", description = "A civilization wiped out by engineered disease. The pathogen remains active. Decontamination failed to eliminate all samples." },
+    { name = "P6Y-227 'Machine Uprising'", description = "Robots turned on their creators. Automated defenses destroy anything that comes through the gate. Attempts at recovery have all failed." },
+    { name = "P4X-884 'The Leviathan'", description = "Something massive lives in the ocean. It destroyed every expedition. Orbital scans show it circling, waiting for the gate to activate." },
+    { name = "P7R-934 'Timeloop'", description = "Caught in a temporal recursion. Any visitor experiences the same day repeatedly. Some have been trapped for subjective centuries." },
+    { name = "P3M-562 'Psychic Storm'", description = "Electromagnetic phenomena cause uncontrolled telepathy. Visitors experience everyone's thoughts simultaneously. Madness follows quickly." },
+    { name = "P2X-416 'Replicator Staging Ground'", description = "The mechanical plague established a foothold here. The gate should have been buried. Instead, it's monitored constantly for any sign of activity." },
+    { name = "P5X-692 'Prior Ground Zero'", description = "The first world to fall to the Ori in this galaxy. Now a shrine to their terrible power. Pilgrims come to witness. Few leave unconverted." },
+]
+
+[ice_worlds]
+description = "Frozen planets and moons"
+worlds = [
+    { name = "P4X-650 'Glacius'", description = "Permanent ice age with temperatures lethal to unprotected humans. An Ancient outpost lies beneath the ice sheet. Something important enough to build here." },
+    { name = "P6C-883 'Frost Haven'", description = "Geothermal vents create livable zones amid the ice. Underground hot springs support a small population. They trade rare minerals for survival necessities." },
+    { name = "P3X-744 'The White'", description = "Featureless ice plain extending in all directions. Navigation is nearly impossible. Ancient markers dot the landscape, leading somewhere specific." },
+    { name = "P8R-509 'Permafreeze'", description = "A Goa'uld storage facility, naturally refrigerated. What they kept frozen here required such measures. The inventory was never fully catalogued." },
+]
+
+[unique_environments]
+description = "Worlds with unusual characteristics"
+worlds = [
+    { name = "P3X-562 'The Binary'", description = "Binary star system creates extreme temperature variations. Civilization migrates between day and night sides constantly. Timing is everything." },
+    { name = "P4C-796 'Waterworld'", description = "No landmass exists - the gate sits on an artificial platform. Aquatic civilization lives in the depths. They rarely acknowledge surface visitors." },
+    { name = "P7X-009 'Low Gravity'", description = "Significantly reduced gravity allows massive growth. Plants tower hundreds of feet. The locals bound rather than walk, finding Earth visitors amusingly clumsy." },
+    { name = "P5M-421 'The Rings'", description = "Habitable moons orbit a gas giant. Each moon holds different peoples, different politics. Shuttle travel between them is common, gate travel is not." },
+    { name = "P2R-866 'Perpetual Twilight'", description = "Tidally locked world. One side burns, one freezes. The narrow habitable band hosts a linear civilization stretching around the planet." },
+    { name = "P9X-738 'Floating Isles'", description = "Magnetic anomalies cause landmasses to float. Civilization adapts to three-dimensional geography. Falling is the greatest fear and punishment." },
+    { name = "P3X-421 'The Hollow'", description = "The civilization lives inside the planet, not on it. The inner surface is habitable, lit by a miniature artificial sun. Definitely Ancient engineering." },
+    { name = "P6R-199 'Phase World'", description = "Reality phases between two states. Solid becomes passable, empty becomes blocked. The rhythm is predictable but demanding." },
+]

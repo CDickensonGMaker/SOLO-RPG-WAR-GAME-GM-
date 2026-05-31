@@ -1,0 +1,62 @@
+# Grimdark Complications
+# The Bug War's darkest twists - things get worse
+
+[catastrophic]
+description = "When everything falls apart"
+entries = [
+  { text = "The extraction is cancelled. Command has written off this position. You're on your own until further notice that will never come.", weight = 2 },
+  { text = "Brain bug psychic assault hits the squad. One trooper turns their weapon on their squadmates before they can be stopped.", weight = 1 },
+  { text = "The tanker bug's death spray catches the medic. No one else knows how to treat plasma burns. The wounded are screaming.", weight = 2 },
+  { text = "Friendly fire from orbit. Someone gave wrong coordinates. The artillery that was supposed to save you is killing you.", weight = 1 },
+  { text = "The drop ship crashes on approach. Survivors scattered across bug territory. Rescue beacon damaged. No one knows you're alive.", weight = 2 },
+  { text = "Ammunition exhausted. Bugs still coming. Only bayonets and hope remain, and hope fled hours ago.", weight = 2 },
+  { text = "The bunker's power fails. Bugs can see in the dark. You can't.", weight = 2 },
+  { text = "Communication blackout. Can't call for support, can't report position. The Federation doesn't know where you are.", weight = 2 },
+  { text = "The sergeant just stepped on a tunneler mine. The squad leader is in pieces. Chain of command falls to the most junior.", weight = 1 },
+  { text = "Brain bug found your psychic. They're catatonic. Intel extraction is now impossible.", weight = 1 },
+]
+
+[personal_horror]
+description = "Individual tragedies"
+entries = [
+  { text = "You find your friend from boot camp - what's left of them, cocooned in resin, still alive, begging for death.", weight = 1 },
+  { text = "The 'missing' trooper returns, walking wrong. Something is piloting them. They're smiling.", weight = 1 },
+  { text = "The enemy you just killed had a Federation ID chip. Human brain, bug body. Someone's experiment escaped.", weight = 1 },
+  { text = "Your power suit seizes in combat. Trapped in immobile armor while bugs approach. Screaming doesn't help.", weight = 2 },
+  { text = "The intel was a trap. The brain bug wanted you here. Wanted you specifically. It knows your name.", weight = 1 },
+  { text = "You were the last one to see them alive. Now command wants to know what happened. You can't tell them the truth.", weight = 2 },
+  { text = "Acid splash. Minor exposure. Should be fine. Except it's not stopping. It's eating through the suit.", weight = 2 },
+  { text = "The medevac prioritizes others. You're ambulatory, they say. Walk to the next LZ. Alone. Through bug territory.", weight = 2 },
+  { text = "Discharge papers came through. You're going home. Tomorrow's drop goes forward without you. They're all going to die.", weight = 1 },
+  { text = "The photo in your pocket is from a city that no longer exists. Buenos Aires. Home. Gone.", weight = 2 },
+]
+
+[systemic_failures]
+description = "When the system works against you"
+entries = [
+  { text = "Command's intelligence was wrong. The 'light resistance' is a full hive complex. No reinforcements available.", weight = 2 },
+  { text = "The supply drop was for another unit. Wrong coordinates. You now have ammunition you can't use.", weight = 2 },
+  { text = "Medical evac is grounded. Weather. Storms. The wounded will have to wait. Some won't make it.", weight = 2 },
+  { text = "The relief force was ambushed en route. They're not coming. Dig in. Pray.", weight = 1 },
+  { text = "Political officer countermands tactical orders. Morale concerns. The bugs don't care about morale.", weight = 1 },
+  { text = "Fleet is repositioning. No orbital support for 72 hours. Plasma bugs spotted.", weight = 2 },
+  { text = "The maps are outdated. The terrain you're navigating doesn't exist anymore. Bug tunnels changed it.", weight = 2 },
+  { text = "Friendly unit mistook you for bugs. Fired first. Casualties before the error was realized.", weight = 1 },
+  { text = "Authorization for tactical nuclear option denied. Political considerations. Hold your position with conventional weapons.", weight = 1 },
+  { text = "The retreat route is through a civilian zone. Bug contamination confirmed. Orders are to go through anyway.", weight = 1 },
+]
+
+[moral_corruption]
+description = "When doing the right thing is impossible"
+entries = [
+  { text = "The captured trooper knows the rally point. Brain bug will extract it. You have to choose between rescue and security.", weight = 1 },
+  { text = "Wounded bug sympathizer offering information in exchange for medical treatment. Help the traitor to save loyal troops?", weight = 1 },
+  { text = "The coward who ran saved themselves and the intelligence they carried. Decorate them or court martial them?", weight = 1 },
+  { text = "Orders to destroy a bug nest. Civilian scientists are inside, studying. They know the risk. So do you.", weight = 1 },
+  { text = "The only route to victory requires using captured troopers as bait. Command approves. You have to give the order.", weight = 1 },
+  { text = "Evidence that command sacrificed this unit deliberately. Strategically sound. Morally monstrous.", weight = 1 },
+  { text = "A trooper is going to talk about the war crime. Silence them or let the truth destroy unit cohesion?", weight = 1 },
+  { text = "The psychic can save the squad by doing something to the captured brain bug that isn't interrogation. It's torture. It's necessary.", weight = 1 },
+  { text = "Taking the easy route means letting bugs escape to threaten another colony. The hard route means probable casualties.", weight = 2 },
+  { text = "The spy in your unit fed information that killed friends. You found them. Justice or report them for proper trial?", weight = 1 },
+]

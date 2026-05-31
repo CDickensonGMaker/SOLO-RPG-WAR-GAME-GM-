@@ -1,0 +1,40 @@
+# Alternate History NPC Dispositions
+# Attitudes and initial stances reflecting life in divergent timelines
+
+[dispositions]
+entries = [
+  # Timeline-Aware Dispositions
+  { text = "Desperate to talk to someone who remembers - overwhelmed with relief at meeting another person who knows history changed", weight = 2 },
+  { text = "Suspicious you're testing their loyalty - assumes discussion of 'alternate history' is a trap set by the authorities", weight = 2 },
+  { text = "Terrified of timeline instability - any discussion of changes makes them panic about reality unraveling", weight = 1 },
+  { text = "Aggressively normal - overcompensates by insisting everything is fine and history is exactly as it should be", weight = 1 },
+  { text = "Manic timeline researcher - ecstatically shares their theories and observations about the divergence", weight = 1 },
+  { text = "Weary acceptance - has lived with the change so long they're exhausted by hope of restoration", weight = 2 },
+
+  # Power Dynamic Dispositions
+  { text = "Collaborator guilt manifesting as hostility - lashes out at others to avoid confronting their own complicity", weight = 1 },
+  { text = "Victor's confidence - treats outsiders with the casual superiority of someone whose 'side' won", weight = 2 },
+  { text = "Defeated resentment - barely concealed bitterness toward representatives of the powers that triumphed", weight = 2 },
+  { text = "Occupied territory wariness - cautious and indirect, never knowing who might be informing to the authorities", weight = 2 },
+  { text = "Resistance recruitment probing - testing whether you might be sympathetic to the cause", weight = 1 },
+  { text = "Informant watchfulness - evaluating whether reporting you might earn favor with those in power", weight = 1 },
+
+  # Adaptation Dispositions
+  { text = "Cultural displacement showing - trying hard to fit in but constantly making mistakes that reveal them as 'other'", weight = 1 },
+  { text = "Perfect assimilation mask - so well adapted that only extreme stress might reveal their true origin", weight = 1 },
+  { text = "Nostalgic for original timeline - speaks wistfully of places, customs, foods that don't exist here", weight = 2 },
+  { text = "Contemptuous of this timeline - considers this branch of history inferior to the one they knew", weight = 1 },
+  { text = "Genuinely prefers this timeline - has found this changed world better than their origin", weight = 1 },
+  { text = "Confused by differences - keeps being surprised by how things work differently here", weight = 2 },
+
+  # Survival Dispositions
+  { text = "Refugee desperation - has lost everything to the timeline change and is clinging to survival", weight = 2 },
+  { text = "Opportunistic adaptation - sees changed history as a chance for personal advancement", weight = 1 },
+  { text = "Protective secrecy - guards knowledge of their timeline origins to avoid persecution", weight = 2 },
+  { text = "Seeking others like them - looking for fellow displaced persons, potential allies", weight = 1 },
+  { text = "Underground network contact - approaching you as a potential asset for timeline-aware resistance", weight = 1 },
+
+  # Emotional Dispositions
+  { text = "Grief for the erased - mourning people and places that never existed in this timeline", weight = 1 },
+  { text = "Joyful at second chances - thrilled that this timeline offers opportunities their original didn't", weight = 1 },
+]

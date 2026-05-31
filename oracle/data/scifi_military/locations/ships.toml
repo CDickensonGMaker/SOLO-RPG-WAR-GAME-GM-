@@ -68,5 +68,55 @@ entries = [
   { text = "Viewing gallery, massive windows showing the void", weight = 1 },
   { text = "Captain's cabin, surprisingly spartan for the commander", weight = 1 },
   { text = "Admiral's strategium, hololithic displays of the entire warzone", weight = 1 },
-  { text = "Recycling deck, where the dead become ration material", weight = 1 }
+  { text = "Recycling deck, where the dead become ration material", weight = 1 },
+
+  # Combat Stations
+  { text = "Point defense control, tracking incoming missiles and fighters", weight = 1 },
+  { text = "Targeting cogitator array, calculating firing solutions", weight = 1 },
+  { text = "Magazine loading mechanism, shells moving on conveyor to guns", weight = 1 },
+  { text = "Damage control station, monitoring hull integrity", weight = 1 },
+  { text = "Emergency bridge, backup command in case primary is destroyed", weight = 1 },
+  { text = "Fighter scramble bay, pilots running to craft during alert", weight = 1 },
+  { text = "Boarding defense chokepoint, designed to funnel attackers into kill zones", weight = 1 },
+  { text = "Citadel, armored last-stand position deep in the ship", weight = 1 },
+
+  # Living Quarters
+  { text = "Rating's bunk space, hundreds of hammocks in one chamber", weight = 1 },
+  { text = "Senior enlisted quarters, slightly more privacy still cramped", weight = 1 },
+  { text = "Junior officer staterooms, tiny cubicles but doors that close", weight = 1 },
+  { text = "Marine barracks, infantry quarters separate from ship's crew", weight = 1 },
+  { text = "Isolation quarters, for those suspected of infection or corruption", weight = 1 },
+  { text = "Veteran's corner, longest-serving crew claiming best hammock spots", weight = 1 },
+  { text = "Punishment detail bunks, separated from general population", weight = 1 },
+  { text = "Guest quarters, for dignitaries and inspectors", weight = 1 },
+
+  # Technical Spaces
+  { text = "Main plasma conduit junction, lethal if ruptured", weight = 1 },
+  { text = "Coolant circulation hub, keeping reactors from melting", weight = 1 },
+  { text = "Artificial gravity generator, strange sensation when it fluctuates", weight = 1 },
+  { text = "Backup life support, emergency atmosphere generation", weight = 1 },
+  { text = "Hull repair bay, damage control teams staging area", weight = 1 },
+  { text = "Maintenance crawler tube, accessing hard-to-reach systems", weight = 1 },
+  { text = "Sensor array access, calibrating ship's eyes and ears", weight = 1 },
+  { text = "Waste processing, the job nobody talks about", weight = 1 },
+
+  # Cargo and Storage
+  { text = "Main cargo hold, massive space filled with war materiel", weight = 1 },
+  { text = "Armory antechamber, security checkpoint before weapons access", weight = 1 },
+  { text = "Promethium storage, fuel tanks that could doom the ship", weight = 1 },
+  { text = "Perishable stores, food that won't last the deployment", weight = 1 },
+  { text = "Confiscated goods locker, contraband awaiting disposal or theft", weight = 1 },
+  { text = "Personal effects storage, belongings of the dead awaiting return", weight = 1 },
+  { text = "Spare parts warehouse, components for everything that breaks", weight = 1 },
+  { text = "Classified cargo bay, sealed containers nobody asks about", weight = 2 },
+
+  # Specialized Compartments
+  { text = "Brig isolation cell, solitary confinement in the void", weight = 1 },
+  { text = "Interrogation room, questions asked without oversight", weight = 1 },
+  { text = "Trophy room, captured enemy standards and artifacts", weight = 1 },
+  { text = "Memorial wall, names of all who died aboard", weight = 1 },
+  { text = "Observation lounge, rare windows looking into the void", weight = 1 },
+  { text = "Shrine to fallen ship, absorbed remains of vessel that merged during repairs", weight = 1 },
+  { text = "Classified research lab, experiments better not questioned", weight = 1 },
+  { text = "Xenos containment, captured aliens held for study or interrogation", weight = 1 }
 ]

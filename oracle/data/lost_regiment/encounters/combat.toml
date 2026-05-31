@@ -1,0 +1,77 @@
+# Lost Regiment Encounters - Combat
+# Fighting overwhelming odds with superior knowledge
+
+[combat]
+entries = [
+    # Defensive Actions
+    "Horde assault on main fortifications - thousands against hundreds",
+    "Night infiltration attempt on the powder magazine",
+    "Siege begins with enemy surrounding all positions",
+    "Probing attacks testing defensive weaknesses",
+    "Human wave assault requiring every available rifle",
+    "Enemy breach of outer defenses requires counterattack",
+    "Sortie needed to destroy enemy siege works",
+    "Relief of surrounded outpost through enemy lines",
+    "Defense of civilians during evacuation",
+    "Last stand at the final defensive position",
+
+    # Offensive Operations
+    "Raid on enemy supply depot deep in hostile territory",
+    "Punitive expedition against raider base",
+    "Assault on strategic bridge or crossing",
+    "Liberation of human captives from enemy camp",
+    "Strike against enemy leadership gathering",
+    "Destruction of enemy siege equipment",
+    "Cutting enemy communication lines",
+    "Spoiling attack to disrupt enemy preparations",
+    "Commando action to assassinate war chief",
+    "Seizure of critical terrain before enemy",
+
+    # Technological Advantage Engagements
+    "Rifles against cavalry charge at extreme range",
+    "Artillery devastating enemy concentration",
+    "Gatling gun (if built) mowing down assault",
+    "Entrenched position destroying traditional assault",
+    "Night action using superior discipline",
+    "Railroad enabling rapid reinforcement",
+    "Telegraph-coordinated converging attack",
+    "Steam-powered gunboat on river",
+    "Armored train breaking enemy roadblock",
+    "Balloon observation directing artillery",
+
+    # Desperate Situations
+    "Ammunition nearly exhausted, bayonets fixed",
+    "Outnumbered ten to one with no retreat",
+    "Wounded must be abandoned or everyone dies",
+    "Commander down, chain of command broken",
+    "Friendly fire incident in confusion",
+    "Enemy inside the wire, hand-to-hand combat",
+    "Retreat turning into rout must be stopped",
+    "Surrounded patrol must break out or die",
+    "Critical position overrun, retaking required",
+    "Bridge must be held until demolition charges set",
+
+    # Allied Operations
+    "Combined action with native cavalry",
+    "Native infantry in their first rifle battle",
+    "Alliance nearly breaking under pressure",
+    "Native unit routing, regiment must cover",
+    "Coordinating with allied force of different capability",
+    "Native allies achieving victory with regiment support",
+    "Joint siege of enemy stronghold",
+    "Combined arms operation testing new organization",
+    "Allied natives proving they've learned the lessons",
+    "Regiment dependent on native guides through enemy territory",
+
+    # Enemy Adaptation
+    "Enemy using captured rifles effectively",
+    "New enemy tactics countering regiment advantages",
+    "Enemy fortifications resisting regiment methods",
+    "Enemy night attack negating fire superiority",
+    "Enemy dispersed formations limiting artillery effect",
+    "Enemy targeting officers and specialists",
+    "Enemy learning from previous defeats",
+    "Enemy using human shields from captured allies",
+    "Enemy employing scorched earth against advance",
+    "Enemy terror tactics against native allies"
+]

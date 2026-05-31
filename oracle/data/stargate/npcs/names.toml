@@ -1,0 +1,175 @@
+# Stargate SG-1 Character Names
+# Names evocative of the various cultures encountered through the Stargate
+
+[sgc_military]
+# Earth military personnel - American military naming conventions
+names = [
+    "Col. Marcus Hayes",
+    "Maj. Sarah Whitfield",
+    "Capt. Derek Novak",
+    "Lt. Col. James Harmon",
+    "Sgt. Elena Vasquez",
+    "Dr. Nathan Forrester",
+    "Maj. Rachel Kim",
+    "Col. Thomas Bridger",
+    "Capt. Amanda Sterling",
+    "Lt. David Chen",
+    "MSgt. William Hawkins",
+    "Dr. Patricia Keane",
+    "Maj. Robert Caldwell",
+    "Sgt. First Class Maria Santos",
+    "Col. Elizabeth Warren",
+]
+
+[sgc_scientists]
+# Civilian scientists attached to Stargate Command
+names = [
+    "Dr. Helena Ashworth",
+    "Dr. Marcus Webb",
+    "Dr. Ingrid Sorenson",
+    "Dr. Benjamin Cho",
+    "Dr. Carolyn Fitzgerald",
+    "Dr. Pavel Mikhailov",
+    "Dr. Diane Okoro",
+    "Dr. Stephen Hargrove",
+    "Dr. Yuki Tanaka",
+    "Dr. Lawrence Brennan",
+]
+
+[jaffa]
+# Jaffa warriors and priests - strong consonants, apostrophes common
+names = [
+    "Ry'ac",
+    "Kar'tok",
+    "Vol'nak",
+    "Sha'uri",
+    "Dak'nor",
+    "Keln'tar",
+    "Ma'kar",
+    "Tor'ak",
+    "Bel'ran",
+    "Cha'ka",
+    "Rya'kor",
+    "T'lok",
+    "Va'lar",
+    "Kel'mar",
+    "Shak'ra",
+    "Mol'dak",
+    "Fal'nor",
+    "Kro'tak",
+    "Ish'ta",
+    "Nok'tar",
+]
+
+[goauld]
+# System Lords and Goa'uld - Egyptian/Babylonian/ancient deity inspired
+names = [
+    "Sobek",
+    "Morrigan",
+    "Camulus",
+    "Olokun",
+    "Bastet",
+    "Kali",
+    "Mot",
+    "Thoth",
+    "Svarog",
+    "Ares",
+    "Amaterasu",
+    "Pelops",
+    "Nirrti",
+    "Moloc",
+    "Marduk",
+    "Astarte",
+    "Ishkur",
+    "Nephthys",
+    "Sekhmet",
+    "Ptah",
+]
+
+[tokra]
+# Tok'ra operatives - blended names reflecting symbiote/host duality
+names = [
+    "Malek",
+    "Aldwin",
+    "Anise/Freya",
+    "Garshaw",
+    "Per'sus",
+    "Korra",
+    "Zarin",
+    "Thoran",
+    "Ren'al",
+    "Delek",
+    "Sina",
+    "Ocker",
+    "Jolinar",
+    "Selmak",
+    "Lantash",
+]
+
+[ancients]
+# Alteran/Ancient names - Latin/classical inspiration
+names = [
+    "Moros",
+    "Ganos Lal",
+    "Amelius",
+    "Janus",
+    "Ayiana",
+    "Orlin",
+    "Merlin",
+    "Morgan Le Fay",
+    "Oma Desala",
+    "Chaya Sar",
+    "Athar",
+    "Melia",
+    "Trebal",
+    "Helia",
+    "Moros",
+]
+
+[alien_cultures]
+# Various alien civilizations encountered
+names = [
+    "Narim",
+    "Omac",
+    "Travell",
+    "Tuplo",
+    "Kasuf",
+    "Skaara",
+    "Sha're",
+    "Kendra",
+    "Nem",
+    "Pyrus",
+    "Tonane",
+    "Kynthia",
+    "Harlan",
+    "Linea",
+    "Ke'ra",
+    "Maybourne",
+    "Kinsey",
+    "Woolsey",
+    "Simmons",
+    "Barrett",
+]
+
+[asgard]
+# Asgard names - Norse mythology inspired
+names = [
+    "Heimdall",
+    "Freyr",
+    "Penegal",
+    "Aegir",
+    "Kvasir",
+    "Hermiod",
+    "Loki",
+]
+
+[ori_priors]
+# Priors and Ori followers
+names = [
+    "Prior Damaris",
+    "Prior Haikon",
+    "Adria",
+    "Tomin",
+    "Vala Mal Doran",
+    "Prior Telak",
+]

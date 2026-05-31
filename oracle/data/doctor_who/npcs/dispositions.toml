@@ -1,0 +1,134 @@
+# Doctor Who NPC Dispositions
+# Immediate attitudes toward the situation and the player character
+
+[friendly]
+description = "Positive and welcoming dispositions"
+
+[[friendly.entries]]
+name = "Enthusiastic Ally"
+description = "Delighted to help, practically bouncing with excitement. Finally, someone else who understands! The universe is amazing, isn't it?"
+
+[[friendly.entries]]
+name = "Professional Courtesy"
+description = "Treats the situation with calm competence. They've seen strange things before. This is just another Tuesday."
+
+[[friendly.entries]]
+name = "Grateful Survivor"
+description = "You helped them, or someone like them helped them once. That debt of gratitude colors everything."
+
+[[friendly.entries]]
+name = "Kindred Spirit"
+description = "Recognizes something of themselves in you. A fellow traveler, a fellow questioner, a fellow survivor of impossible things."
+
+[[friendly.entries]]
+name = "UNIT Protocol Friendly"
+description = "Identifies you as an ally or associate of the Doctor. Opens doors, provides resources, asks few questions."
+
+[[friendly.entries]]
+name = "Curious Welcome"
+description = "Fascinated by you - your clothes, your technology, your perspective. Questions tumble out faster than answers."
+
+[[friendly.entries]]
+name = "Protective Hospitality"
+description = "Takes you under their wing. You clearly need tea, a sit down, and someone to explain how things work around here."
+
+[neutral]
+description = "Neither hostile nor welcoming"
+
+[[neutral.entries]]
+name = "Careful Assessment"
+description = "Watching, weighing, not yet decided. Could go either way depending on the next few minutes."
+
+[[neutral.entries]]
+name = "Preoccupied"
+description = "Has bigger problems than you. Alien invasion, approaching deadline, missing family member. You're secondary at best."
+
+[[neutral.entries]]
+name = "Professionally Detached"
+description = "Here to do a job. Personal feelings are irrelevant. What do you want and how does it affect the mission?"
+
+[[neutral.entries]]
+name = "Weary Tolerance"
+description = "Another stranger with impossible claims. Fine. What now? The bizarre is just Tuesday."
+
+[[neutral.entries]]
+name = "Historical Suspicion"
+description = "You don't fit this era. Your clothes, your manner, your words are all wrong. What are you really?"
+
+[[neutral.entries]]
+name = "Wait and See"
+description = "Reserves judgment. Actions speak louder than words. Prove yourself one way or another."
+
+[[neutral.entries]]
+name = "Bureaucratic Processing"
+description = "You're a case file, a form to complete, a procedure to follow. Personal connection not included."
+
+[[neutral.entries]]
+name = "Alien Indifference"
+description = "Humans are irrelevant to their concerns. You exist. They acknowledge this. What do you want?"
+
+[unfriendly]
+description = "Negative and potentially hostile"
+
+[[unfriendly.entries]]
+name = "Deep Suspicion"
+description = "Something's wrong with you. They can feel it. Maybe you're a spy, an infiltrator, a threat wearing a friendly face."
+
+[[unfriendly.entries]]
+name = "Territorial Hostility"
+description = "This is their place, their time, their domain. You don't belong. Leave or face consequences."
+
+[[unfriendly.entries]]
+name = "Fearful Aggression"
+description = "Terrified and lashing out. The universe has become too strange and you're part of the strangeness."
+
+[[unfriendly.entries]]
+name = "Old Enemy Recognition"
+description = "Knows what you are, or thinks they do. Your kind caused suffering before. No forgiveness, no quarter."
+
+[[unfriendly.entries]]
+name = "Religious Condemnation"
+description = "You are heresy, blasphemy, an affront to everything they believe. Their faith demands opposition."
+
+[[unfriendly.entries]]
+name = "Dalek Protocol"
+description = "IDENTIFY. EXPLAIN. EXTERMINATE IF NON-COMPLIANT. You have five seconds."
+
+[[unfriendly.entries]]
+name = "Cyberman Assessment"
+description = "You are unsuitable for immediate conversion but represent potential threat. Contain for processing."
+
+[[unfriendly.entries]]
+name = "Sontaran Contempt"
+description = "You are weak, pacifistic, dishonorable. Not worth killing in combat. Barely worth acknowledging."
+
+[[unfriendly.entries]]
+name = "Ice Warrior Protocol"
+description = "You have trespassed on Martian honor. Explain yourself or face the cold justice of Mars."
+
+[special]
+description = "Complex or unusual dispositions"
+
+[[special.entries]]
+name = "Temporal Confusion"
+description = "Met you before. Or will meet you. Or you're the wrong version. Time travel makes relationships complicated."
+
+[[special.entries]]
+name = "The Doctor's Warning"
+description = "Was told about you by the Doctor. The message could have been 'trust completely' or 'destroy on sight.'"
+
+[[special.entries]]
+name = "Prophetic Significance"
+description = "You match a prophecy, a vision, a warning from the ancients. They're not sure if you're savior or destroyer."
+
+[[special.entries]]
+name = "Fixed Point Recognition"
+description = "Can sense you're important somehow. A fixed point. Events revolve around you. Unsettling."
+
+[[special.entries]]
+name = "Silence Influence"
+description = "Acting on orders they can't remember receiving. Will help or hinder based on post-hypnotic suggestion."
+
+[[special.entries]]
+name = "Paradox Protection"
+description = "Timeline requires them to assist you, regardless of personal feelings. History must proceed as written."

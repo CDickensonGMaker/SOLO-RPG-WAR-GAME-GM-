@@ -1,0 +1,236 @@
+# Doctor Who NPC Traits
+# Character qualities across time, space, and species
+
+[companion_traits]
+description = "The qualities that make someone worthy of traveling with the Doctor"
+
+[[companion_traits.entries]]
+name = "Curious Beyond Caution"
+description = "Opens doors they shouldn't, asks questions that have teeth, follows the strange sound into the dark. This is how you find wonders. Also monsters."
+
+[[companion_traits.entries]]
+name = "Refuses to Be Impressed"
+description = "Meets Time Lords, Daleks, and the end of the universe with dry wit and raised eyebrow. Nothing is too big to be mocked."
+
+[[companion_traits.entries]]
+name = "Fierce Loyalty"
+description = "Will face Cybermen, cross time streams, or defy the Doctor's direct orders to protect those they love."
+
+[[companion_traits.entries]]
+name = "Working Class Wisdom"
+description = "Cuts through Time Lord pomposity with common sense. Sometimes the simple answer is the right one."
+
+[[companion_traits.entries]]
+name = "Emotional Intelligence"
+description = "Sees what the Doctor's massive intellect misses - the human cost, the quiet suffering, the need for kindness over cleverness."
+
+[[companion_traits.entries]]
+name = "Adaptability"
+description = "Victorian London? Alien planet? Middle of an invasion? Give them five minutes, they'll find their footing."
+
+[[companion_traits.entries]]
+name = "Questions Authority"
+description = "The Doctor says run. They ask why. Sometimes that saves everyone. Sometimes it doesn't. Always necessary."
+
+[[companion_traits.entries]]
+name = "Carries Earth With Them"
+description = "No matter how far they travel, they bring home in their heart. Beans on toast. Proper tea. Basic human decency."
+
+[[companion_traits.entries]]
+name = "Brave Beyond Training"
+description = "Not a soldier, not a hero by trade. Just someone who sees what needs doing and does it despite the terror."
+
+[[companion_traits.entries]]
+name = "Calls Out the Doctor"
+description = "Unafraid to name when the Time Lord goes too far, becomes too cold, or forgets why they travel with humans."
+
+[time_lord_traits]
+description = "Qualities of the ancient masters of time"
+
+[[time_lord_traits.entries]]
+name = "Ancient and Weary"
+description = "Has seen civilizations rise and fall like tides. Everything echoes. Every crisis is a rhyme with one before."
+
+[[time_lord_traits.entries]]
+name = "Eccentric Genius"
+description = "Brilliance expressed through bizarre behavior. The bow tie matters. The fez is essential. Don't ask why."
+
+[[time_lord_traits.entries]]
+name = "Burden of Knowledge"
+description = "Knows what's fixed and what can change. Knows who dies. Carries that weight in every smile."
+
+[[time_lord_traits.entries]]
+name = "Manipulative for Good"
+description = "Plays long games across centuries. Uses people like chess pieces. Hates themselves for it. Does it anyway."
+
+[[time_lord_traits.entries]]
+name = "Detached Superiority"
+description = "Looks at other species the way humans look at mayflies. Struggles to remember why individuals matter."
+
+[[time_lord_traits.entries]]
+name = "Running From Themselves"
+description = "Twelve regenerations of trying to escape who they are. The universe is big enough to hide in. Almost."
+
+[[time_lord_traits.entries]]
+name = "Violently Protective"
+description = "Threatens entire species when companions are endangered. The fury of a Time Lord is terrible to behold."
+
+[[time_lord_traits.entries]]
+name = "Names Have Power"
+description = "Chose their name as a promise. Doctor. Master. Rani. The name shapes the Time Lord or the Time Lord shapes the name."
+
+[[time_lord_traits.entries]]
+name = "Time Sense"
+description = "Feels the flow of causality, knows when events are in flux. Fixed points ache like old wounds."
+
+[[time_lord_traits.entries]]
+name = "Survivor's Guilt"
+description = "Gallifrey burned. Everyone burned. Why did they survive? The question never stops."
+
+[human_resilience_traits]
+description = "What makes humanity special"
+
+[[human_resilience_traits.entries]]
+name = "Stubborn Survival"
+description = "Empires rise and fall. Apocalypses come and go. Humans keep making tea and carrying on. Indomitable."
+
+[[human_resilience_traits.entries]]
+name = "Capacity for Change"
+description = "Can grow, adapt, become better. What other species in the universe has such potential locked in such brief lives?"
+
+[[human_resilience_traits.entries]]
+name = "Love Despite Logic"
+description = "Knows they'll die, loves anyway. Knows they'll be hurt, opens their heart anyway. Illogical. Beautiful."
+
+[[human_resilience_traits.entries]]
+name = "Creativity Under Pressure"
+description = "Alien technology fails? Build something from string and hope. Human ingenuity knows no proper limits."
+
+[[human_resilience_traits.entries]]
+name = "Forgiveness"
+description = "Can choose to let go of hatred, to break cycles of violence. This baffles most alien species."
+
+[[human_resilience_traits.entries]]
+name = "Hope Against Evidence"
+description = "Everything says it's impossible. Humans try anyway. Sometimes, impossibly, they succeed."
+
+[[human_resilience_traits.entries]]
+name = "Protective of Family"
+description = "Will face down Daleks for their children. Will cross time for their loved ones. Blood or chosen, family is everything."
+
+[[human_resilience_traits.entries]]
+name = "Practical Heroism"
+description = "Not seeking glory. Just doing what needs doing. The quiet courage of ordinary people."
+
+[alien_perspective_traits]
+description = "How non-humans see the universe"
+
+[[alien_perspective_traits.entries]]
+name = "Emotionless Logic"
+description = "Feelings are inefficient. Decisions are calculations. This makes them predictable. Also terrifying."
+
+[[alien_perspective_traits.entries]]
+name = "Hive Mind"
+description = "Individual is meaningless. The collective is all. Loneliness is literally incomprehensible."
+
+[[alien_perspective_traits.entries]]
+name = "Predator Instinct"
+description = "Sees other species as prey, resources, or threats. Cooperation is weakness unless it serves survival."
+
+[[alien_perspective_traits.entries]]
+name = "Warrior Honor"
+description = "Death in battle is glorious. Retreat is shame worse than death. Victory is the only virtue."
+
+[[alien_perspective_traits.entries]]
+name = "Shapeshifter Identity"
+description = "Has worn so many faces, been so many people. Which is real? Are any? Does it matter?"
+
+[[alien_perspective_traits.entries]]
+name = "Long-Lived Patience"
+description = "Time means nothing when you live millennia. Can wait centuries for plans to ripen."
+
+[[alien_perspective_traits.entries]]
+name = "Silicon Consciousness"
+description = "Thinks in patterns humans can't comprehend. Digital mind, quantum perception. Meat is strange to them."
+
+[[alien_perspective_traits.entries]]
+name = "Telepathic Awareness"
+description = "Hears thoughts as easily as words. Privacy is a human concept. Everything is shared."
+
+[[alien_perspective_traits.entries]]
+name = "Extreme Environment Biology"
+description = "What humans call hostile, they call home. Cold, heat, radiation, vacuum - comfort is relative."
+
+[[alien_perspective_traits.entries]]
+name = "Time Sense Difference"
+description = "Experiences time differently - all at once, backwards, in loops. Linear causality is a human limitation."
+
+[historical_attitudes]
+description = "How people from the past see their world"
+
+[[historical_attitudes.entries]]
+name = "Unshakeable Faith"
+description = "God orders the universe. Everything is His plan. Aliens are angels or demons. What else could they be?"
+
+[[historical_attitudes.entries]]
+name = "Rational Enlightenment"
+description = "Science will explain everything given time. The impossible is merely the not-yet-understood."
+
+[[historical_attitudes.entries]]
+name = "Imperial Certainty"
+description = "Their nation is the pinnacle of civilization. Other cultures are primitive. Alien contact shatters this utterly."
+
+[[historical_attitudes.entries]]
+name = "Peasant Pragmatism"
+description = "Crops need tending. Taxes need paying. Strange lights in the sky don't change the harvest schedule."
+
+[[historical_attitudes.entries]]
+name = "Artistic Vision"
+description = "Sees beauty in everything, including the terrible. Wants to capture the alien, the impossible, in art."
+
+[[historical_attitudes.entries]]
+name = "Revolutionary Spirit"
+description = "The old order is wrong. Change must come. Even if the catalyst is a blue box from the stars."
+
+[[historical_attitudes.entries]]
+name = "Scholarly Curiosity"
+description = "Must understand, must document, must learn. Fear is overcome by the need to know."
+
+[[historical_attitudes.entries]]
+name = "Superstitious Dread"
+description = "The old stories are true. The fair folk are real. The stranger with the blue box is dangerous."
+
+[unit_professionalism]
+description = "Military discipline meets the impossible"
+
+[[unit_professionalism.entries]]
+name = "Adaptive Tactics"
+description = "Standard military doctrine doesn't cover Cybermen. Improvise, adapt, overcome - with bigger guns."
+
+[[unit_professionalism.entries]]
+name = "Classified Knowledge"
+description = "Knows truths that would shatter civilian minds. Carries that burden with professional detachment."
+
+[[unit_professionalism.entries]]
+name = "Protocol Adherence"
+description = "There are procedures for everything, including alien invasion. Following them provides structure in chaos."
+
+[[unit_professionalism.entries]]
+name = "Diplomatic Balance"
+description = "Must negotiate with aliens while governments demand they don't exist. The paperwork is nightmarish."
+
+[[unit_professionalism.entries]]
+name = "Scientific Discipline"
+description = "UNIT scientists approach the impossible with rigorous method. Hypothesis, test, survive, revise."
+
+[[unit_professionalism.entries]]
+name = "Calm Under Fire"
+description = "Dalek weapons vapourize soldiers. Response is to take cover and return fire. Terror is for civilians."
+
+[[unit_professionalism.entries]]
+name = "Five Rounds Rapid"
+description = "When in doubt, apply conventional firepower. Sometimes it even works."
+
+[[unit_professionalism.entries]]
+name = "Trust in the Doctor"
+description = "The scientific advisor is strange, frustrating, and always right when it matters most."

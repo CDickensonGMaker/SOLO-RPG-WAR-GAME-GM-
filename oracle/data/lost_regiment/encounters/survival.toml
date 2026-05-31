@@ -1,0 +1,77 @@
+# Lost Regiment Encounters - Survival
+# Staying alive against overwhelming odds
+
+[survival]
+entries = [
+    # Supply Crises
+    "Ammunition reserves drop below critical threshold for one major engagement",
+    "Medical supplies exhausted; must choose who receives last doses",
+    "Food stores contaminated; regiment faces week of starvation",
+    "Powder magazine damaged by weather; production must restart",
+    "Irreplaceable machine part breaks; entire industry halts",
+    "Fuel shortage stops steam engines at worst possible moment",
+    "Uniforms wearing out; troops face winter without proper clothing",
+    "Horses dying of disease; cavalry and transport crippled",
+    "Salt supplies exhausted; food preservation failing",
+    "Writing materials gone; orders must be verbal only",
+
+    # Disease and Health
+    "Fever outbreak spreads through the camp",
+    "Contaminated water source identified too late",
+    "Native illness regiment has no immunity against",
+    "Infected wound turns septic in key officer",
+    "Exhaustion reducing effectiveness across all units",
+    "Mental breakdowns increasing as stress accumulates",
+    "Malnutrition weakening the garrison",
+    "Parasites from local food afflicting troops",
+    "Winter illness spreading through inadequate shelters",
+    "Venereal disease outbreak threatening unit cohesion",
+
+    # Desertion and Discipline
+    "Deserters fled with weapons and ammunition",
+    "Native recruits abandon posts during crisis",
+    "Mutinous talk spreading through exhausted units",
+    "Soldiers caught hoarding personal food supplies",
+    "NCO caught selling equipment to natives",
+    "Officer's authority openly challenged",
+    "Unit refuses dangerous assignment",
+    "Mass desertion attempt during night watch",
+    "Discipline breakdown in rear-echelon units",
+    "Execution of deserter required to maintain order",
+
+    # Morale Collapse
+    "News of impossible odds reaches the troops",
+    "Soldiers demanding to know the plan for survival",
+    "Religious crisis among the faithful",
+    "Anniversary of the displacement hits hard",
+    "Letters from home that will never arrive mourned",
+    "Suicide among isolated soldiers",
+    "Troops losing faith in leadership",
+    "Native allies questioning the regiment's power",
+    "Victory seems impossible; despair spreading",
+    "Even officers wondering if resistance is pointless",
+
+    # Environmental Disasters
+    "Flooding destroys supplies and fortifications",
+    "Wildfire approaches the main camp",
+    "Earthquake damages critical infrastructure",
+    "Drought threatens water supply",
+    "Blizzard traps exposed units",
+    "Tornado devastates industrial district",
+    "Volcanic activity threatens entire region",
+    "Plague of insects destroys food crops",
+    "Lightning strike ignites powder storage",
+    "Mudslide blocks only supply route",
+
+    # Equipment Failure
+    "Last working lathe breaks down",
+    "Artillery piece explodes during firing",
+    "Bridge collapse traps forces on wrong side",
+    "Telegraph line fails at critical moment",
+    "Steam engine boiler explosion kills workers",
+    "Rifles failing due to poor maintenance conditions",
+    "Railroad track warped by weather",
+    "Fortification wall collapses from poor construction",
+    "Water pumps failing in the mines",
+    "Medical equipment sterilization compromised"
+]

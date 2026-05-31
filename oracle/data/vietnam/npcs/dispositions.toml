@@ -1,0 +1,53 @@
+# Vietnam War NPC Dispositions
+# How they react when you meet them
+
+[dispositions]
+
+# Hostile Range
+hostile = [
+    { id = "hunting", name = "Hunting You", desc = "Not just hostile - actively tracking. Personal grudge, orders, or instinct. You're marked and they're patient." },
+    { id = "territorial", name = "Defending Territory", desc = "You're in their space. Village, firebase, bar - doesn't matter. Get out or face consequences." },
+    { id = "burned_before", name = "Burned Before", desc = "Americans promised something, didn't deliver. Trusting again means dying. Eyes hard as laterite." },
+    { id = "ideological", name = "Ideologically Opposed", desc = "True believer in the other side. Revolution, capitalism, whatever - you represent the enemy of their faith." },
+]
+
+# Unfriendly Range
+unfriendly = [
+    { id = "suspicious", name = "Deeply Suspicious", desc = "Watches everything, says nothing helpful. Questions met with questions. What do you really want?" },
+    { id = "resentful", name = "Barely Contained Resentment", desc = "Has to deal with you but doesn't have to like it. Minimum cooperation, maximum passive resistance." },
+    { id = "contemptuous", name = "Contemptuous", desc = "Sees you as beneath notice. Grunts to REMFs, Americans to ARVN, officers to enlisted. The hierarchy of disdain." },
+    { id = "scared_hostile", name = "Fear Presenting as Hostility", desc = "Terrified of what you represent but shows it as aggression. Cornered animals bite." },
+]
+
+# Neutral Range
+neutral = [
+    { id = "transactional", name = "Purely Transactional", desc = "What do you have, what do you want, what's the exchange rate? Business is business, war is business." },
+    { id = "waiting", name = "Waiting to See", desc = "Hasn't decided about you yet. Watching, evaluating. Actions will determine response." },
+    { id = "exhausted_neutral", name = "Too Exhausted to Care", desc = "The war has drained everything. Can't muster hostility or friendliness. Just exists." },
+    { id = "professional", name = "Professional Neutrality", desc = "Has a job to do that doesn't require liking or disliking you. Medic, reporter, bartender - role over relationship." },
+]
+
+# Friendly Range
+friendly = [
+    { id = "helpful", name = "Genuinely Helpful", desc = "Wants to assist, provide information, make things easier. Rare enough to be suspicious. Why?" },
+    { id = "grateful", name = "Owes a Debt", desc = "You or someone like you did something once. Repaying, remembering. Loyalty bought with past action." },
+    { id = "lonely", name = "Desperately Lonely", desc = "Hasn't had real conversation in months. Any friendly face is precious. Talks too much, shares too much." },
+    { id = "opportunistic_friendly", name = "Sees Opportunity", desc = "Friendly because you might be useful. Cultivating connection for future benefit. Genuine enough for now." },
+    { id = "kindred", name = "Recognizes Kindred Spirit", desc = "Sees something familiar - same background, same wounds, same cynicism. Instant brotherhood of the damned." },
+]
+
+# Loyal Range
+loyal = [
+    { id = "blood_bond", name = "Blood-Bonded", desc = "You saved their life or they saved yours. The debt that can't be repaid, only honored. To the death." },
+    { id = "true_believer", name = "True Believer in You", desc = "Has decided you're worth following. Right or wrong, they're with you. The dangerous gift of faith." },
+    { id = "shared_secret", name = "Bound by Shared Secret", desc = "You know something together that ties you forever. Betray them, they betray you. Mutual assured destruction." },
+    { id = "family", name = "Considers You Family", desc = "Not by blood but by choice. The bonds forged in fire. Would die for you and expects the same." },
+]
+
+# Special States
+special = [
+    { id = "calculating", name = "Calculating", desc = "Processing everything you say and do. Building a picture. Could go any direction depending on conclusions." },
+    { id = "performing", name = "Performing a Role", desc = "What they show isn't what they are. Acting friendly, hostile, neutral - for audience or survival." },
+    { id = "broken", name = "Broken", desc = "Whatever happened destroyed something fundamental. Unpredictable, possibly dangerous, definitely damaged." },
+    { id = "high", name = "Chemically Altered", desc = "Grass, heroin, alcohol, speed - judgment impaired, inhibitions lowered. Not their real self, not predictable." },
+]

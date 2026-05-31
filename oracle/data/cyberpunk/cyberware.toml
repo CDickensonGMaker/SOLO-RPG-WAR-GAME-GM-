@@ -1,0 +1,132 @@
+# Cyberpunk Cyberware
+# Chrome, metal, the future in your flesh
+
+[cyberware_neural]
+# Brain and nervous system augmentation
+entries = [
+  { text = "Sandevistan - military-grade reflex booster, slows perceived time, burns out nervous system with overuse", weight = 2 },
+  { text = "Kerenzikov - budget sandy, twitchy combat reflexes, popular with solos, occasional glitches", weight = 2 },
+  { text = "Neural processor - baseline interface, allows cyberware integration, everyone needs one", weight = 3 },
+  { text = "Cybermodem - netrunner essential, jack into the net, ride the data streams", weight = 2 },
+  { text = "Memory chip - expandable storage, perfect recall, personality backup possible", weight = 2 },
+  { text = "Skill chip socket - instant expertise, slot in knowledge, temporary competence", weight = 2 },
+  { text = "Pain editor - turn off suffering, dangerous during injury, addictive numbness", weight = 2 },
+  { text = "Behavioral modification chip - mood control, impulse suppression, corporate compliance", weight = 1 },
+  { text = "Empathy regulator - control emotional response, cold when needed, sociopath optional", weight = 1 },
+  { text = "Reflex coprocessor - faster reactions, twitchy movements, inhuman response times", weight = 2 },
+  { text = "Combat sense - tactical awareness boost, see threats before they happen, expensive paranoia", weight = 1 },
+  { text = "Braindance wreath - experience recording, memory playback, voyeur technology", weight = 2 },
+  { text = "Language chip - instant fluency, accent perfect, cultural context missing", weight = 2 },
+  { text = "Math coprocessor - calculations in real-time, gambling advantage, hacking aid", weight = 1 },
+  { text = "Sensory filter - block unwanted input, focus enhancement, miss important warnings", weight = 1 },
+]
+
+[cyberware_optics]
+# Eye replacements and enhancements
+entries = [
+  { text = "Kiroshi Mk.1 - basic cybereyes, zoom and recording, everyone's watching through them", weight = 3 },
+  { text = "Kiroshi Mk.3 - premium optics, threat detection, facial recognition, corporate standard", weight = 2 },
+  { text = "Thermographic vision - see heat signatures, through walls partially, hunters love it", weight = 2 },
+  { text = "Low-light enhancement - see in darkness, cat-eye glow, night shift essential", weight = 2 },
+  { text = "Tactical overlay - HUD display, ammo count, target tracking, soldier vision", weight = 2 },
+  { text = "Smart link optics - weapon integration, targeting assistance, aim bot in your head", weight = 2 },
+  { text = "Recording implant - always watching, perfect evidence, blackmail ready", weight = 2 },
+  { text = "Scan resistance - defeat facial recognition, privacy option, paranoid choice", weight = 1 },
+  { text = "Microscopic vision - see the tiny, medical use, drug testing, forensics", weight = 1 },
+  { text = "Anti-dazzle coating - flashbang resistance, bright light filter, tactical advantage", weight = 2 },
+  { text = "Target acquisition system - lock on enemies, calculate trajectories, sniper essential", weight = 1 },
+  { text = "Emotional reader - detect micro-expressions, lie detection, interrogator tool", weight = 1 },
+  { text = "UV/IR spectrum - see beyond visible light, hidden messages, heat tracking", weight = 1 },
+  { text = "Cosmetic eyes - unnatural colors, patterns, advertising displays, fashion statement", weight = 2 },
+  { text = "Data display - constant information feed, market tickers, news scroll, distraction risk", weight = 2 },
+]
+
+[cyberware_limbs]
+# Arms, legs, and full body mods
+entries = [
+  { text = "Gorilla arms - hydraulic strength, crush anything, subtle as a sledgehammer", weight = 2 },
+  { text = "Mantis blades - forearm katanas, slice through armor, retractable murder", weight = 2 },
+  { text = "Monowire - monofilament whip in wrist, invisible cuts, decapitation standard", weight = 2 },
+  { text = "Projectile launcher - arm-mounted rocket pod, explosive arguments, messy but effective", weight = 1 },
+  { text = "Cyberdeck arm - netrunning hardware built in, always connected, hack anywhere", weight = 1 },
+  { text = "Reinforced legs - jump boost, fall damage negation, parkour chrome", weight = 2 },
+  { text = "Speed legs - sprint enhancement, chase down anything, escape from everything", weight = 2 },
+  { text = "Grip hand - crush strength, hold anything, never let go", weight = 2 },
+  { text = "Tool hand - built-in equipment, Swiss army chrome, utility before combat", weight = 2 },
+  { text = "Hidden compartment - storage in limbs, smuggle anything, search-resistant", weight = 2 },
+  { text = "Weapon mount - gun in arm, concealed carry, always armed", weight = 2 },
+  { text = "Magnetic grip - climb metal surfaces, hold ferrous objects, industrial use", weight = 1 },
+  { text = "Full cyberlimb conversion - entire limb replaced, stronger than meat, visible chrome", weight = 2 },
+  { text = "Synthetic covering - realistic skin over chrome, pass for organic, expensive deception", weight = 1 },
+  { text = "Combat chassis legs - armored, weapon mounts, mobile weapons platform", weight = 1 },
+]
+
+[cyberware_internal]
+# Inside the body, unseen augmentation
+entries = [
+  { text = "Subdermal armor - skin stops bullets, obvious sheen, constant protection", weight = 2 },
+  { text = "Bone lacing - titanium skeleton, break-resistant, heavy as hell", weight = 2 },
+  { text = "Synthetic heart - tireless endurance, drug resistance, emotional flatness", weight = 2 },
+  { text = "Toxin binders - poison resistance, party drug filtering, survival upgrade", weight = 2 },
+  { text = "Oxygen reserve - hold breath forever, drowning resistance, vacuum survival", weight = 1 },
+  { text = "Adrenaline booster - combat surge on demand, fight or flight amplified", weight = 2 },
+  { text = "Metabolic accelerator - faster healing, calorie demanding, hungry always", weight = 2 },
+  { text = "Voice modulator - change your voice, mimic others, identity concealment", weight = 2 },
+  { text = "Synthetic lungs - breathe anything, filter toxins, survive pollution", weight = 2 },
+  { text = "Nasal filter - smell enhancement, drug detection, track by scent", weight = 1 },
+  { text = "Enhanced hearing - ultrasonic range, directional focus, never miss a whisper", weight = 2 },
+  { text = "Chemical analyzer - taste test anything, poison detection, drug identification", weight = 1 },
+  { text = "Subdermal communicator - radio in your head, team coordination, untraceable", weight = 2 },
+  { text = "GPS implant - always know where you are, others might too", weight = 2 },
+  { text = "Emergency beacon - distress signal on flatline, Trauma Team subscription required", weight = 1 },
+]
+
+[cyberware_exotic]
+# Rare, experimental, dangerous modifications
+entries = [
+  { text = "Full body conversion - more machine than human, lost most of themselves, walking tank", weight = 1 },
+  { text = "Gemini frame - two personalities, one body, shared hardware, identity crisis", weight = 1 },
+  { text = "AI symbiont - digital entity sharing your skull, voice in your head, helpful or hostile", weight = 1 },
+  { text = "Experimental Sandevistan - prototype speed, dangerous side effects, time distortion", weight = 1 },
+  { text = "Neural bypass - ignore cyberpsychosis symptoms, delay the inevitable, borrowed time", weight = 1 },
+  { text = "Optical camo - thermoptic camouflage, near invisibility, power hungry", weight = 1 },
+  { text = "Threat detection system - 360 degree awareness, never surprised, paranoid readings", weight = 1 },
+  { text = "Trauma dermal - bleeding stops automatically, wound sealing, survive anything once", weight = 1 },
+  { text = "Combat stim injector - drugs on demand, performance enhancement, addiction guaranteed", weight = 2 },
+  { text = "Relic implant - consciousness storage, backup your mind, immortality attempt", weight = 1 },
+]
+
+[cyberpsychosis_signs]
+# The price of too much chrome
+entries = [
+  { text = "Subject refers to organics as 'meat' with visible disgust, doesn't identify with humanity anymore", weight = 2 },
+  { text = "Twitching involuntarily, cyberware fighting nervous system, integration failing", weight = 2 },
+  { text = "Emotional flatness - nothing reaches them, jokes fall flat, tragedy means nothing", weight = 2 },
+  { text = "Violence over minor provocations - someone looked wrong, someone's dying", weight = 2 },
+  { text = "Obsessive chrome checking - polishing, examining, talking to implants", weight = 2 },
+  { text = "Dissociation episodes - staring at nothing, lost in internal systems, unresponsive", weight = 2 },
+  { text = "Paranoid delusions - everyone's a threat, everything's surveillance, trust nobody", weight = 2 },
+  { text = "Identity confusion - who am I, what's real, are these my memories", weight = 1 },
+  { text = "Empathy complete shutdown - others are objects, suffering is data, morality error", weight = 1 },
+  { text = "Cyberware compulsion - need more chrome, can't stop upgrading, never enough", weight = 2 },
+  { text = "Mirror avoidance - can't look at own reflection, what looks back isn't them", weight = 1 },
+  { text = "Sleep impossible - systems won't shut down, exhaustion without rest", weight = 2 },
+  { text = "Sensory overload - too much input, can't filter, everything at once", weight = 2 },
+  { text = "Memory fragmentation - past breaking apart, false memories inserting, timeline blur", weight = 1 },
+  { text = "Phantom limb - feels meat that isn't there, mourning lost flesh", weight = 1 },
+]
+
+[ripperdoc_services]
+# What the chrome doctors offer
+entries = [
+  { text = "Basic installation - standard cyberware, clean work, fair prices, wait time", weight = 3 },
+  { text = "Combat chrome specialists - military-grade implants, no questions, premium service", weight = 2 },
+  { text = "Budget operations - cheap chrome, questionable parts, infections likely", weight = 2 },
+  { text = "Maintenance and repair - tuning, updates, malfunction fixes, regular visits", weight = 3 },
+  { text = "Black market special - stolen prototypes, no warranty, cutting edge risk", weight = 2 },
+  { text = "Cyberpsychosis treatment - delay the inevitable, suppress symptoms, expensive subscription", weight = 2 },
+  { text = "Identity modification - change biometrics, new face, disappear service", weight = 1 },
+  { text = "Emergency extraction - remove compromised chrome, fast and dirty, no anesthetic", weight = 2 },
+  { text = "Upgrade consultation - what you need, what you can afford, what you can survive", weight = 2 },
+  { text = "After-hours service - no questions, no records, cash only, discrete entrance", weight = 2 },
+]

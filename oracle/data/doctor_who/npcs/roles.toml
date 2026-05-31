@@ -1,0 +1,310 @@
+# Doctor Who NPC Roles
+# The people, aliens, and entities you might encounter across time and space
+
+[companion_types]
+description = "Those who travel with the Doctor"
+
+[[companion_types.entries]]
+name = "Shop Girl Companion"
+description = "Working class, resourceful, brings humanity and common sense to cosmic problems. Sees what the Doctor misses."
+
+[[companion_types.entries]]
+name = "Medical Professional Companion"
+description = "Keeps everyone alive when things go wrong. Clinical eye cuts through technobabble to what matters: saving lives."
+
+[[companion_types.entries]]
+name = "Temp Worker Companion"
+description = "Underestimated by everyone including themselves. Sharp tongue, sharper wit, heart bigger than galaxies."
+
+[[companion_types.entries]]
+name = "Kissogram Companion"
+description = "Waited too long, grew up strange. Sees the universe differently, unafraid to challenge even the Doctor."
+
+[[companion_types.entries]]
+name = "Impossible Girl"
+description = "Echoes through time, appearing when and where the Doctor needs her most. Mystery wrapped in determination."
+
+[[companion_types.entries]]
+name = "Student Companion"
+description = "Intellectual curiosity meets real-world courage. Asks the questions others are afraid to ask."
+
+[[companion_types.entries]]
+name = "Police Officer Companion"
+description = "Trained to investigate, protect, and serve. Those skills apply whether the criminal is human or Slitheen."
+
+[[companion_types.entries]]
+name = "History Teacher Companion"
+description = "Actually knows what year it is and why it matters. The Doctor's walking Wikipedia for Earth history."
+
+[[companion_types.entries]]
+name = "Science Teacher Companion"
+description = "Can figure out the alien tech when the sonic screwdriver fails. Practical application beats Time Lord theory."
+
+[[companion_types.entries]]
+name = "Orphan of War"
+description = "Lost everything to conflict - Daleks, Cybermen, or good old human cruelty. Fights so others won't share that fate."
+
+[unit_personnel]
+description = "Unified Intelligence Taskforce - defending Earth from the impossible"
+
+[[unit_personnel.entries]]
+name = "UNIT Scientific Advisor"
+description = "The person they call when physics breaks down. Usually eccentric, always brilliant, never follows protocol."
+
+[[unit_personnel.entries]]
+name = "UNIT Brigadier"
+description = "Commands impossible operations with British calm. Has seen everything, still reaches for conventional weapons first."
+
+[[unit_personnel.entries]]
+name = "UNIT Sergeant"
+description = "Makes the Brigadier's orders happen. Steady, reliable, utterly unflappable when facing tentacled horrors."
+
+[[unit_personnel.entries]]
+name = "UNIT Greyhound Leader"
+description = "Mobile response team commander. First boots on the ground when something crashes or emerges."
+
+[[unit_personnel.entries]]
+name = "UNIT Black Archive Curator"
+description = "Maintains the collection of alien artifacts too dangerous to destroy. Knows where everything is. Mostly."
+
+[[unit_personnel.entries]]
+name = "UNIT Medical Officer"
+description = "Treats laser burns, psychic trauma, and partial conversion. Medical school didn't prepare them for this."
+
+[[unit_personnel.entries]]
+name = "UNIT Intelligence Analyst"
+description = "Tracks alien activity patterns, predicts invasion windows. Their charts and graphs keep everyone alive."
+
+[[unit_personnel.entries]]
+name = "UNIT Tower Commander"
+description = "Runs UNIT's presence from the Tower of London. Balances alien threats with keeping tourists oblivious."
+
+[torchwood_agents]
+description = "Outside the government, beyond the police - Torchwood protects the 21st century"
+
+[[torchwood_agents.entries]]
+name = "Torchwood Field Agent"
+description = "Investigates Rift activity, handles first contact gone wrong. Armed with alien tech and gallows humor."
+
+[[torchwood_agents.entries]]
+name = "Torchwood Tech Specialist"
+description = "Reverse-engineers alien technology for human use. Every device they build could save the world or end it."
+
+[[torchwood_agents.entries]]
+name = "Torchwood Medic"
+description = "Autopsy specialist for things that shouldn't exist. Keeps the team patched up between apocalypses."
+
+[[torchwood_agents.entries]]
+name = "Torchwood Archivist"
+description = "Maintains centuries of Torchwood records. Knows which alien species humanity has offended before."
+
+[[torchwood_agents.entries]]
+name = "Torchwood Rift Manipulator Operator"
+description = "Controls Cardiff's connection to the space-time Rift. One wrong setting could swallow Wales."
+
+[[torchwood_agents.entries]]
+name = "Torchwood Hub Administrator"
+description = "Keeps the paperwork flowing, the coffee brewing, and the secrets buried. The real power at Torchwood."
+
+[time_lords]
+description = "The ancient civilization that mastered time itself"
+
+[[time_lords.entries]]
+name = "Time Lord President"
+description = "Rules Gallifrey with ancient authority. Every decision affects all of time. The weight shows in their eyes."
+
+[[time_lords.entries]]
+name = "Time Lord Cardinal"
+description = "High Council member, keeper of arcane temporal law. Tradition matters more than innovation."
+
+[[time_lords.entries]]
+name = "Time Lord Castellan"
+description = "Security chief of the Capitol. Investigates temporal crimes, hunts renegades, trusts no one - especially the Doctor."
+
+[[time_lords.entries]]
+name = "Time Academy Instructor"
+description = "Teaches young Time Lords to see all of time and space. Still remembers when the Doctor was a student. Barely."
+
+[[time_lords.entries]]
+name = "Celestial Intervention Agency Operative"
+description = "The CIA's dirty work - manipulating events, erasing timelines, denying everything. Officially doesn't exist."
+
+[[time_lords.entries]]
+name = "Renegade Time Lord"
+description = "Fled Gallifrey to pursue their own agenda. Could be brilliant inventor, mad scientist, or reluctant hero."
+
+[[time_lords.entries]]
+name = "Time Lord Hermit"
+description = "Lives outside the Capitol, beyond Time Lord society. Ancient wisdom, strange perspective. Speaks in riddles."
+
+[[time_lords.entries]]
+name = "Time Lord Matrix Keeper"
+description = "Guards the repository of all Time Lord consciousness. The dead speak through them."
+
+[alien_species_representatives]
+description = "Beings from across the universe"
+
+[[alien_species_representatives.entries]]
+name = "Dalek Supreme"
+description = "Commands Dalek forces with absolute authority. Purity is survival. All other life is contamination to be exterminated."
+
+[[alien_species_representatives.entries]]
+name = "Cyberman Controller"
+description = "Directs conversion operations. Emotion is weakness. Upgrading is salvation. You will become like us."
+
+[[alien_species_representatives.entries]]
+name = "Sontaran Commander"
+description = "Bred for war, lives for battle, dies with honor. Peace is an insult. Combat is worship."
+
+[[alien_species_representatives.entries]]
+name = "Silurian Elder"
+description = "Awoken from ancient sleep to find apes ruling their world. Seethes with righteous anger or seeks coexistence."
+
+[[alien_species_representatives.entries]]
+name = "Ice Warrior Lord"
+description = "Proud Martian aristocrat. Honor binds them more than treaties. Cold logic, colder environment."
+
+[[alien_species_representatives.entries]]
+name = "Zygon Commander"
+description = "Shape-shifting infiltrator leading invasion or seeking asylum. Trust nothing, verify everything."
+
+[[alien_species_representatives.entries]]
+name = "Judoon Captain"
+description = "Intergalactic police, absolute letter of the law. Justice is binary. Guilt is death. Bo Sho Fo Ro."
+
+[[alien_species_representatives.entries]]
+name = "Ood Elder"
+description = "Telepathic servant species, gentle and wise. Their song connects them. Slavery made them silent."
+
+[[alien_species_representatives.entries]]
+name = "Slitheen Family Member"
+description = "Criminal from Raxacoricofallapatorius. Wears human skins, seeks profit, laughs at death. Family is everything."
+
+[[alien_species_representatives.entries]]
+name = "Weeping Angel"
+description = "Quantum-locked predator. Don't blink. Don't look away. That which holds the image of an angel becomes itself an angel."
+
+[[alien_species_representatives.entries]]
+name = "The Silence Priest"
+description = "You've already forgotten seeing them. Confess your sins. They're always listening."
+
+[[alien_species_representatives.entries]]
+name = "Headless Monk"
+description = "Faith without questioning. Devotion beyond death. Their swords sing with righteous purpose."
+
+[[alien_species_representatives.entries]]
+name = "Saturnyn Matriarch"
+description = "Vampire-like species seeking to convert a new world. Desperate to save her children. Monstrous but understandable."
+
+[[alien_species_representatives.entries]]
+name = "Vashta Nerada Swarm"
+description = "Shadows that eat. Count the shadows. The piranhas of the air have come for you."
+
+[historical_roles]
+description = "People from Earth's past"
+
+[[historical_roles.entries]]
+name = "Victorian Detective"
+description = "Investigates the impossible with logic and determination. Science explains everything - even the monsters."
+
+[[historical_roles.entries]]
+name = "Medieval Peasant"
+description = "Struggles to survive while strange lights appear and demons walk. Faith and fear in equal measure."
+
+[[historical_roles.entries]]
+name = "Roman Centurion"
+description = "Commands legions, serves the Empire. But what serves the Empire when the sky tears open?"
+
+[[historical_roles.entries]]
+name = "Renaissance Artist"
+description = "Sees beyond the world into truth and beauty. Madness and genius intertwined. What did they really paint?"
+
+[[historical_roles.entries]]
+name = "WWII Soldier"
+description = "Fighting one war while another, stranger conflict unfolds. Courage against impossible odds."
+
+[[historical_roles.entries]]
+name = "1960s Flower Child"
+description = "Seeking peace and love while the universe reveals its teeth. Expanded consciousness meets cosmic horror."
+
+[[historical_roles.entries]]
+name = "Viking Raider"
+description = "Warrior from the north, unafraid of death. Valhalla awaits - but what if the gods are actually aliens?"
+
+[[historical_roles.entries]]
+name = "Egyptian Priest"
+description = "Serves the gods, tends the dead, guards the mysteries. The Osirans were real. The pyramids hide more."
+
+[[historical_roles.entries]]
+name = "Plague Doctor"
+description = "Fights death with herbs and superstition. The real cause of the plague might be far stranger."
+
+[[historical_roles.entries]]
+name = "Georgian Gentleman"
+description = "Educated, refined, utterly unprepared for the revelation that humanity is not alone."
+
+[scientists_inventors]
+description = "Those who push the boundaries of knowledge"
+
+[[scientists_inventors.entries]]
+name = "Mad Scientist"
+description = "Brilliant but broken. Their invention will save or doom humanity. They can't tell the difference anymore."
+
+[[scientists_inventors.entries]]
+name = "Misguided Researcher"
+description = "Good intentions, terrible results. They didn't mean to open a portal to the void."
+
+[[scientists_inventors.entries]]
+name = "Genius Child"
+description = "Understands technology intuitively, builds impossible devices from scrap. Adults dismiss them at their peril."
+
+[[scientists_inventors.entries]]
+name = "Corporate Scientist"
+description = "Brilliant mind owned by profit motive. Knows the experiments are wrong but the funding is too good."
+
+[[scientists_inventors.entries]]
+name = "Alien Technology Expert"
+description = "Studies crashed ships, reverse-engineers weapons. Everything they learn makes humanity a bigger target."
+
+[[scientists_inventors.entries]]
+name = "Quantum Physicist"
+description = "Theories become dangerous when they start working. Reality is more flexible than anyone wanted."
+
+[everyday_people]
+description = "Ordinary humans caught in extraordinary events"
+
+[[everyday_people.entries]]
+name = "Skeptical Journalist"
+description = "Investigates the truth, dismisses the impossible - until the impossible swallows their life whole."
+
+[[everyday_people.entries]]
+name = "Worried Parent"
+description = "Their child saw something. The authorities say it's imagination. It's not imagination."
+
+[[everyday_people.entries]]
+name = "Night Shift Worker"
+description = "Sees things during the quiet hours that daylight would dismiss. Keeps working. Keeps watching."
+
+[[everyday_people.entries]]
+name = "Conspiracy Theorist"
+description = "Everyone thought they were crazy. They were right about everything. Now they're terrified."
+
+[[everyday_people.entries]]
+name = "Bus Driver"
+description = "Just driving their route when the sky changed color. Still has passengers to get home."
+
+[[everyday_people.entries]]
+name = "Shop Owner"
+description = "Their small business stands at ground zero. Aliens, time travelers, or the government - someone's paying for damages."
+
+[[everyday_people.entries]]
+name = "Homeless Witness"
+description = "Society ignores them. They've seen everything that happens in the shadows. No one believes them."
+
+[[everyday_people.entries]]
+name = "Emergency Services Operator"
+description = "Answers calls about the impossible with professional calm. Dispatches help for situations that have no protocol."
+
+[[everyday_people.entries]]
+name = "Vicar"
+description = "Faith confronts the existence of aliens. Are they God's creatures too? What does the Bible say about Daleks?"

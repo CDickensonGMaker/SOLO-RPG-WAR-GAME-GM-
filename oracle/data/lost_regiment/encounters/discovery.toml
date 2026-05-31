@@ -1,0 +1,77 @@
+# Lost Regiment Encounters - Discovery
+# Learning the new world and its secrets
+
+[discovery]
+entries = [
+    # First Contacts
+    "Initial encounter with isolated native community",
+    "Discovery of friendly faction within enemy territory",
+    "Contact with survivors from another displaced group",
+    "Meeting traders from distant unknown lands",
+    "Finding escaped slaves willing to share enemy secrets",
+    "Encountering natives who remember previous strangers",
+    "First peaceful exchange with suspicious tribe",
+    "Discovery that enemy has human collaborators",
+    "Contact with religious community preserving old knowledge",
+    "Meeting a native who traveled farther than anyone knew possible",
+
+    # Resource Discovery
+    "Coal seam discovered accessible from regiment territory",
+    "Iron deposit located through geological knowledge",
+    "Oil spring found with industrial potential",
+    "Medicinal plants identified matching old world knowledge",
+    "Fertile valley suitable for agriculture expansion",
+    "Strategic material located in contested territory",
+    "Water source solving chronic shortage",
+    "Building material deposits enabling construction",
+    "Precious metals complicating native relations",
+    "Critical chemical resource identified in unlikely location",
+
+    # Political Intelligence
+    "Learning the true power structure of native kingdoms",
+    "Discovering faction within enemy ready to defect",
+    "Understanding why previous alliances failed",
+    "Finding leverage against hostile native leader",
+    "Learning enemy's internal political divisions",
+    "Discovering native prophecy that could be exploited",
+    "Understanding the economy of the enemy system",
+    "Learning the history of native resistance to enemy",
+    "Discovering allies the regiment didn't know existed",
+    "Understanding the enemy's ultimate strategic goals",
+
+    # World History
+    "Evidence of previous advanced civilization",
+    "Learning the enemy was once different",
+    "Discovering the enemy's origin and nature",
+    "Finding records of previous displaced groups",
+    "Understanding the cycle that brought the regiment here",
+    "Learning what happened to the world's previous powers",
+    "Discovering the enemy has weaknesses no one knew",
+    "Finding evidence of other displaced groups elsewhere",
+    "Learning the true age and nature of this world",
+    "Understanding why technology never advanced here",
+
+    # Tactical Intelligence
+    "Learning enemy order of battle",
+    "Discovering enemy logistics weaknesses",
+    "Finding enemy communication methods",
+    "Learning enemy leadership's personal weaknesses",
+    "Discovering terrain features not on any map",
+    "Finding secret routes through enemy territory",
+    "Learning enemy seasonal patterns and vulnerabilities",
+    "Discovering enemy fear of specific regiment capabilities",
+    "Finding the location of enemy strategic reserves",
+    "Learning enemy has captured and studied regiment weapons",
+
+    # Dangerous Truths
+    "Discovering the enemy may not be entirely wrong",
+    "Learning allies have been deceiving the regiment",
+    "Finding evidence native culture had valid reasons for practices",
+    "Discovering regiment actions had unintended consequences",
+    "Learning the way home may exist but at terrible cost",
+    "Finding evidence that victory may not be possible",
+    "Discovering internal enemies within regiment ranks",
+    "Learning the truth about the crossing would break morale",
+    "Finding that progress the regiment brings has dark costs",
+    "Discovering this world has rejected advancement before"
+]

@@ -1,0 +1,78 @@
+# Stargate SG-1 Neutral Complications
+# Unexpected developments that could go either way
+
+[equipment_issues]
+description = "Technology and gear complications"
+complications = [
+    { name = "GDO Malfunction", description = "The device that tells SGC to open the iris isn't transmitting correctly. Communication through the gate is possible, but verification is complicated." },
+    { name = "Radio Interference", description = "Something in the environment disrupts communications. Team members can't coordinate effectively. Line of sight becomes essential." },
+    { name = "Power Cell Depletion", description = "Essential equipment is running low. Rationing use extends function but limits capability. Recharging requires resources not readily available." },
+    { name = "Zat Gun Discharge", description = "Accidental activation, whether harmful or not. The sound attracts attention. Explaining the incident takes time and credibility." },
+    { name = "Medical Supplies Running Low", description = "The field kit is depleted from prior use. Injuries beyond basic first aid can't be properly treated until resupply." },
+    { name = "Translation Device Failure", description = "The equipment that enables communication stops working. Falling back on manual translation is slower and less reliable." },
+    { name = "Vehicle Breakdown", description = "Transport is disabled - mechanical failure, damage, or unknown cause. Repair requires parts or skills not immediately available." },
+    { name = "Recording Equipment Captured Everything", description = "A device was still recording during a sensitive moment. The footage exists. What happens to it becomes a question." },
+]
+
+[environmental_shifts]
+description = "Changing conditions and natural events"
+complications = [
+    { name = "Weather Pattern Change", description = "Conditions shift dramatically - storm, temperature, or visibility. Plans made for different weather need adjustment." },
+    { name = "Day/Night Transition", description = "The planet's rotation brings darkness or light. The change affects local patterns - activity, wildlife, dangers." },
+    { name = "Seasonal Event", description = "A local season or celestial event begins. Cultural significance may be high. Natural effects may be significant." },
+    { name = "Geological Activity", description = "The ground shakes or terrain shifts. Paths change, structures are affected. The planet is reminding visitors of their insignificance." },
+    { name = "Wildlife Migration", description = "Animals are moving through the area in large numbers. They may be harmless, valuable, or dangerous depending on species and numbers." },
+    { name = "Resource Discovery", description = "Something valuable is found unexpectedly. Its presence creates opportunities and complications. Others may have claims." },
+    { name = "Gate Area Becomes Hazardous", description = "The immediate vicinity of the stargate is no longer safe. Environmental, structural, or presence of others makes it problematic." },
+    { name = "Tide or Water Level Change", description = "Water rises or falls, affecting access to areas. Timing becomes important. What was accessible may not remain so." },
+]
+
+[social_complications]
+description = "Interpersonal and cultural developments"
+complications = [
+    { name = "Local Authority Arrives", description = "Someone with power in this place takes notice. Their disposition is uncertain. Their influence is significant." },
+    { name = "Witness to Events", description = "Someone observed something they weren't meant to see. What they do with that knowledge depends on factors unclear yet." },
+    { name = "Request for Assistance", description = "Locals ask for help with something unrelated to the mission. Refusing affects relations. Accepting costs time and possibly resources." },
+    { name = "Cultural Celebration Begins", description = "An important local event starts. Participation may be expected. The timing affects other plans significantly." },
+    { name = "Past Contact Remembered", description = "These people have encountered others from Earth before. That experience - good or bad - shapes their response to this visit." },
+    { name = "Competing Interest Group", description = "Another faction has stakes in the same situation. Their goals may align, conflict, or be completely orthogonal." },
+    { name = "Obligation Invoked", description = "A prior promise or debt is called in. Timing is inconvenient. The claim may or may not be legitimate." },
+    { name = "Misunderstanding Spreads", description = "An incorrect interpretation of events propagates among locals. The error may work for or against the team." },
+]
+
+[intelligence_developments]
+description = "New information and revelations"
+complications = [
+    { name = "Intel Was Outdated", description = "The situation has changed since the briefing. Personnel, disposition, or circumstances are different than expected." },
+    { name = "Additional Objective Discovered", description = "Something valuable or important exists here that wasn't known. Pursuing it affects the original mission parameters." },
+    { name = "Unexpected Connection", description = "This place or situation links to something else significant. The implications extend beyond immediate concerns." },
+    { name = "Local Knowledge Available", description = "Someone here knows things that would help. Accessing that knowledge requires earning trust or making deals." },
+    { name = "Cover Story Tested", description = "Someone questions the team's stated purpose. The deception may hold, require adjustment, or collapse entirely." },
+    { name = "Pattern Recognition", description = "Events here echo something from records or experience. The parallel may be meaningful or coincidental." },
+    { name = "Conflicting Reports", description = "Different sources provide contradictory information. Both could be right in different ways. Determining truth requires investigation." },
+    { name = "Classified Information Relevant", description = "Something the team knows but can't share becomes important. Using the knowledge without revealing its source is challenging." },
+]
+
+[temporal_complications]
+description = "Time-related issues and delays"
+complications = [
+    { name = "Mission Timeline Compressed", description = "Less time available than planned. Extraction window, external events, or other factors demand faster completion." },
+    { name = "Unexpected Delay", description = "Something prevents progress as planned. The cause may be resolvable or may require waiting it out." },
+    { name = "Scheduling Conflict", description = "Two important events or opportunities occur simultaneously. Pursuing one means missing the other." },
+    { name = "Communication Lag", description = "Messages take time to reach their destination. Coordination becomes challenging when information is always slightly outdated." },
+    { name = "Window of Opportunity", description = "A chance exists but won't last. Acting now has risks. Waiting means the opportunity passes." },
+    { name = "Diurnal Cycle Mismatch", description = "Local time doesn't align with team readiness. Fatigue or timing requirements create challenges." },
+    { name = "Gate Schedule Conflict", description = "The stargate is needed by multiple parties. Scheduling becomes diplomatic as well as logistical." },
+]
+
+[resource_situations]
+description = "Supply and material developments"
+complications = [
+    { name = "Trade Possibility", description = "Something the team has is valuable here. Something local would be useful to obtain. The question is fair exchange." },
+    { name = "Supply Cache Located", description = "Previous expedition or other source left materials. The supplies may be useful. Their ownership may be contested." },
+    { name = "Local Assistance Available", description = "Resources exist locally that could help. Accessing them requires negotiation, payment, or other accommodation." },
+    { name = "Unexpected Cost", description = "Something requires more resources than anticipated. Proceeding means depleting reserves. Stopping means abandoning progress." },
+    { name = "Salvage Opportunity", description = "Wreckage or abandoned materials could be recovered. The effort required may or may not be worthwhile." },
+    { name = "Resupply Possible", description = "A way to replenish depleted resources exists. The method may involve delay, risk, or obligation." },
+    { name = "Competition for Resources", description = "Others need the same materials. Cooperation or conflict determines distribution. Neither may satisfy everyone." },
+]

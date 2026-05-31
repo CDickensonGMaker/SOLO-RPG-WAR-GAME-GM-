@@ -1,0 +1,82 @@
+# Federation Military Installations
+# Where the Mobile Infantry lives, trains, and dies
+
+[forward_operating_bases]
+description = "Combat positions on or near bug-held territory"
+entries = [
+  { text = "Firebase Razorback - A ring of prefab bunkers on a volcanic ridgeline, constant ash falling, bug tunnels honeycombing the rock below, three-day average survival for defenders", weight = 2 },
+  { text = "Camp Steadfast - Built on the ruins of a failed colony, the colonists' personal effects still visible in the rubble, now a staging point for deep-strike missions", weight = 2 },
+  { text = "Outpost Omega-Seven - The furthest human position in the sector, communications unreliable, resupply sporadic, morale held together by a legendary sergeant", weight = 2 },
+  { text = "Firebase Crucible - A crater-rim installation, 360-degree fields of fire, but bugs have learned to attack during the monthly dust storms", weight = 1 },
+  { text = "Camp Perdition - Named by its first commander who didn't survive the first week, bugs attack from three tunnel complexes, withdrawal is not authorized", weight = 1 },
+  { text = "Listening Post Cerberus - Three-trooper installation monitoring bug communications, mental breakdown rate among stationed psychics exceeds 80%", weight = 1 },
+  { text = "Firebase Alamo - Named with dark humor, every trooper knows the reference, defenders have been 'last stand' three times this year", weight = 2 },
+  { text = "Forward Base Harbinger - Built around a crashed Federation ship, using its hull as the bunker core, bugs seem drawn to it", weight = 1 },
+  { text = "Camp Redemption - Penal battalion station, where troublemakers get sent to 'volunteer' for suicide missions", weight = 1 },
+  { text = "Outpost Vigil - Perimeter warning station, crews rotate monthly because longer exposure causes bug-related paranoia", weight = 1 },
+]
+
+[orbital_stations]
+description = "Space-based Federation installations"
+entries = [
+  { text = "Fleet Station Ticonderoga - Massive orbital dock, always crowded with damaged ships and traumatized crews, the smell of plasma burns permeates everything", weight = 2 },
+  { text = "Battle Station Thermopylae - Defense platform, bristling with weapons, crew hasn't touched ground in three years, developed their own dialect", weight = 1 },
+  { text = "Relay Station Echo - Communication hub, picks up bug psionic chatter, technicians report nightmares that share themes", weight = 1 },
+  { text = "Medical Station Mercy - Hospital ship that doesn't move, so damaged they made it a station, specializes in acid burn treatment", weight = 2 },
+  { text = "Orbital Dock Gamma-Nine - Where drop ships get rebuilt, hangar crews work around the clock, accidents common", weight = 1 },
+  { text = "Station Bastion - Fortress station, designed to hold a system even if every planet falls, never been tested, pray it never is", weight = 1 },
+  { text = "Fleet Station Roosevelt - Named for an ancient warrior leader, serves as sector command, thick with intelligence officers", weight = 2 },
+  { text = "Quarantine Station Iota - Where returning ships get checked for bug contamination, sometimes ships never leave", weight = 1 },
+  { text = "Refueling Station Delta-Four - Skeleton crew, located in a backwater system, smugglers and deserters pass through", weight = 1 },
+  { text = "Observatory Platform Watcher - Scans for bug fleet movements, crew has a betting pool on which system gets hit next", weight = 1 },
+]
+
+[training_camps]
+description = "Where civilians become Mobile Infantry"
+entries = [
+  { text = "Camp Currie - The original, legendary MI training facility, where boots get broken down and rebuilt as soldiers, dropout rate is a point of pride", weight = 2 },
+  { text = "Camp San Martin - South American training facility, emphasizes jungle and tunnel fighting, lost an entire class to a bug incursion in '42", weight = 2 },
+  { text = "Camp Zhukov - Cold-weather training in neo-Siberia, where troopers learn that bugs can survive anywhere and so must they", weight = 1 },
+  { text = "Camp Gibraltar - European training center, built in old military bunkers, historical weight of warfare presses down", weight = 1 },
+  { text = "Camp Shaka - African Federation training site, brutal heat prepares troopers for volcanic worlds, mortality rate classified", weight = 1 },
+  { text = "Camp Yamamoto - Pacific training facility, specializes in amphibious and ship-board combat training", weight = 1 },
+  { text = "OCS Fort Benning - Officer Candidate School, where butter-bars learn that commanding means dying first", weight = 1 },
+  { text = "Psychic Training Center Theta - Location classified, where latent telepaths become military weapons, voluntary commitment is a formality", weight = 1 },
+  { text = "Advanced Combat School Camp Valor - Where veterans learn new ways to kill bugs, graduation requires a confirmed kill on a live exercise", weight = 1 },
+  { text = "Power Suit Training Facility Camp Armstrong - Where troopers bond with their armor, catastrophic suit failures happen weekly", weight = 1 },
+]
+
+[refugee_camps]
+description = "Where displaced civilians wait out the war"
+entries = [
+  { text = "Camp New Geneva - Massive refugee processing center, civilians from three lost colonies packed in, disease spreading faster than bugs", weight = 2 },
+  { text = "Settlement Hope - Ironic name for a tent city on an asteroid, evacuees from bug advance waiting for a home that may never exist", weight = 2 },
+  { text = "Camp Phoenix - Built on the site of a destroyed colony, refugees live among the ruins of what might have been their future", weight = 1 },
+  { text = "Processing Center Baker - Way station for colonists being moved to 'safer' worlds, 'safer' is relative in bug war", weight = 1 },
+  { text = "Emergency Shelter Covenant - A converted cargo ship serving as a refugee barge, three generations born on board", weight = 1 },
+  { text = "Camp Remembrance - Where survivors of destroyed worlds catalog what was lost, grief counselors outnumbered thousand to one", weight = 1 },
+  { text = "Holding Facility Sigma - Where civilians from contested zones wait while Intelligence determines if they're bug-compromised", weight = 1 },
+  { text = "Settlement Last Chance - Edge of Federation space, frontier conditions, refugees prefer bug threat to returning to the core worlds", weight = 1 },
+]
+
+[command_installations]
+description = "Where the decisions get made"
+entries = [
+  { text = "SICON Headquarters Geneva - The nerve center of the Bug War, Sky Marshals plot campaigns in climate-controlled rooms while troopers die", weight = 2 },
+  { text = "Sector Command Tau Ceti - Regional headquarters, where officers push holographic bugs across tables", weight = 1 },
+  { text = "Fleet Command Orbital - Where admirals direct battles they'll never see, surrounded by staff officers and aides", weight = 1 },
+  { text = "Strategic Intelligence Center - Location black-classified, where analysts try to predict bug behavior using incomplete data", weight = 1 },
+  { text = "Psychic Operations Command - Where the most powerful telepaths are kept, shielded from bug interference, and the world", weight = 1 },
+  { text = "War College Armstrong - Where officers study past campaigns and future strategies, reality intrudes rarely", weight = 1 },
+]
+
+[special_installations]
+description = "Unique Federation facilities"
+entries = [
+  { text = "Arachnid Research Center - Location classified, where captured bugs are studied and occasionally escape", weight = 1 },
+  { text = "Veterans Hospital New Terra - Where broken troopers are sent to heal or be hidden, prosthetics ward stretches for kilometers", weight = 2 },
+  { text = "Federation News Network Studio - Where the war is packaged for civilian consumption, reality optional", weight = 1 },
+  { text = "Munitions Depot Alpha Prime - Mountain hollowed out for weapon storage, enough ordinance to sterilize a planet", weight = 1 },
+  { text = "Penal Mining Colony Acheron - Where military prisoners serve out sentences, survival is the only path to redemption", weight = 1 },
+  { text = "Citizenship Processing Center - Where service records become civilian rights, bureaucracy as ritual", weight = 1 },
+]

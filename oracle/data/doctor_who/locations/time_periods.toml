@@ -1,0 +1,229 @@
+# Doctor Who Time Periods
+# Historical eras for adventures across Earth's timeline
+
+[ancient_history]
+description = "The deep past of human civilization"
+
+[[ancient_history.entries]]
+name = "Prehistoric Earth (65 Million BC)"
+description = "The age of dinosaurs. The Silurians and Sea Devils rule the planet. Humanity is just a possibility in some mammal's DNA. The sky is different. So is everything."
+
+[[ancient_history.entries]]
+name = "Ancient Sumeria (3000 BC)"
+description = "The cradle of civilization. Ziggurats pierce the sky and gods walk among mortals - or are they Osirans? The first writing records things that perhaps shouldn't be remembered."
+
+[[ancient_history.entries]]
+name = "Old Kingdom Egypt (2500 BC)"
+description = "Pyramids rising from the desert, each stone placed by human hands - and perhaps something more. Osiran technology sleeps beneath the sand. The Pharaoh is divine."
+
+[[ancient_history.entries]]
+name = "Ancient Greece (500 BC)"
+description = "Democracy, philosophy, and gods on Mount Olympus. The Oracle at Delphi speaks true - but who whispers the prophecies to her?"
+
+[[ancient_history.entries]]
+name = "Cleopatra's Alexandria (48 BC)"
+description = "The greatest library in the world burns while Rome and Egypt clash. Cleopatra schemes and dreams. The Doctor has met her. Several times."
+
+[[ancient_history.entries]]
+name = "Roman Britain (120 AD)"
+description = "Legions march across Britannia. Celts resist. The wall rises in the north. Roman efficiency meets druidic mystery."
+
+[[ancient_history.entries]]
+name = "Pompeii (79 AD)"
+description = "The last day approaches. Vesuvius rumbles. The Pyroviles stir in the mountain. This is a fixed point. Everyone dies."
+
+[[ancient_history.entries]]
+name = "Viking Age Scandinavia (800 AD)"
+description = "Longships cut through cold waters. Warriors seek Valhalla. The gods are real - or at least, something called itself Odin."
+
+[medieval_period]
+description = "The age of faith and feudalism"
+
+[[medieval_period.entries]]
+name = "Norman England (1100 AD)"
+description = "Castles dominate the land. The Crusades call noble warriors east. Peasants work fields while lords feast in towers. Robin Hood may or may not exist."
+
+[[medieval_period.entries]]
+name = "Magna Carta Era (1215 AD)"
+description = "King John faces his barons. Liberty is born in confrontation. The Doctor ensures history proceeds - probably."
+
+[[medieval_period.entries]]
+name = "Black Death Europe (1348 AD)"
+description = "Plague sweeps the continent. One in three will die. Flagellants march. Jews are blamed. The Terileptils introduced the disease. Or did they?"
+
+[[medieval_period.entries]]
+name = "Wars of the Roses (1455 AD)"
+description = "York and Lancaster tear England apart. Princes vanish in towers. Crowns change heads frequently. The Game of Thrones is real."
+
+[[medieval_period.entries]]
+name = "Spanish Inquisition (1478 AD)"
+description = "No one expects - actually, everyone expects it. Faith enforced through torture. But some of their targets weren't human."
+
+[renaissance_reformation]
+description = "Rebirth and religious upheaval"
+
+[[renaissance_reformation.entries]]
+name = "Florence Renaissance (1490 AD)"
+description = "Leonardo sketches impossible machines. Michelangelo carves divine forms. The Medicis scheme. Art and poison flow equally."
+
+[[renaissance_reformation.entries]]
+name = "Tudor England (1533 AD)"
+description = "Henry VIII reshapes religion for love - or power. Monasteries burn. Wives lose heads. The English church is born in blood."
+
+[[renaissance_reformation.entries]]
+name = "Elizabethan London (1599 AD)"
+description = "Shakespeare writes at the Globe. Spies hunt Catholics. Elizabeth reigns, unmarried and eternal. The Doctor loves this era."
+
+[[renaissance_reformation.entries]]
+name = "Galileo's Italy (1610 AD)"
+description = "The telescope reveals truths the Church cannot accept. Earth moves. The heavens are not perfect. Science and faith collide."
+
+[[renaissance_reformation.entries]]
+name = "Salem Witch Trials (1692 AD)"
+description = "Hysteria grips Massachusetts. Innocent people hang. But the Carrionites were real. Were the trials entirely unjustified?"
+
+[georgian_regency]
+description = "Enlightenment and elegance"
+
+[[georgian_regency.entries]]
+name = "Queen Anne's London (1705 AD)"
+description = "Coffee houses debate politics. Science advances. The last Stuart monarch rules while parties scheme. Relatively civilized. Relatively."
+
+[[georgian_regency.entries]]
+name = "French Revolution (1789 AD)"
+description = "Liberty, equality, fraternity - and the guillotine. Aristocrats flee. The Terror begins. History's greatest upheaval reshapes Europe."
+
+[[georgian_regency.entries]]
+name = "Regency England (1815 AD)"
+description = "Jane Austen's world. Balls and manners, romance and propriety. Beneath the elegance, something lurks in the countryside."
+
+[[georgian_regency.entries]]
+name = "Napoleon's Empire (1805 AD)"
+description = "The Emperor reshapes Europe. Armies march. Empires fall. Waterloo approaches. Or has it already happened?"
+
+[victorian_era]
+description = "The favorite playground of time travelers"
+
+[[victorian_era.entries]]
+name = "Early Victorian London (1840 AD)"
+description = "Victoria young on her throne. The workhouses full. Industry darkens the sky. The Great Stink hasn't happened yet. Give it time."
+
+[[victorian_era.entries]]
+name = "Victorian Christmas (1860 AD)"
+description = "Dickens at his height. Snow on cobblestones. Ghosts of Christmas past, present, future - and perhaps something less metaphorical."
+
+[[victorian_era.entries]]
+name = "Jack the Ripper's Whitechapel (1888 AD)"
+description = "Fog shrouds the streets. Women die in the darkness. The police are helpless. The true killer's identity remains disputed. Was it even human?"
+
+[[victorian_era.entries]]
+name = "Torchwood's Origin (1879 AD)"
+description = "Queen Victoria survives the werewolf. The Torchwood Institute is founded. The Doctor is exiled from Britain. Well, technically."
+
+[[victorian_era.entries]]
+name = "The Great Exhibition (1851 AD)"
+description = "Crystal Palace displays the wonders of the world. Progress incarnate. But some exhibits came from further than the colonies."
+
+[[victorian_era.entries]]
+name = "Victorian Scotland (1885 AD)"
+description = "Highland mists and ancient castles. Things move in the lochs. The old ways persist despite Queen and Empire."
+
+[world_wars]
+description = "The conflicts that shaped the modern world"
+
+[[world_wars.entries]]
+name = "World War I Trenches (1917 AD)"
+description = "Mud, blood, and barbed wire. A generation dying by the mile. Gas creeps across No Man's Land. The silence between bombardments is worse."
+
+[[world_wars.entries]]
+name = "1920s London (1926 AD)"
+description = "Jazz, flappers, and Agatha Christie's disappearance. The war is over but the trauma lingers. The Bright Young Things dance on graves."
+
+[[world_wars.entries]]
+name = "The Blitz (1941 AD)"
+description = "Bombs fall on London. Children evacuate. 'Are you my mummy?' echoes in the darkness. The Doctor loves this era. The darkness loves it too."
+
+[[world_wars.entries]]
+name = "D-Day (1944 AD)"
+description = "The invasion begins. The beaches run red. History's hinge moment. Fixed point. The outcome cannot change. The cost cannot be reduced."
+
+[[world_wars.entries]]
+name = "Post-War Britain (1953 AD)"
+description = "Rationing continues. The coronation approaches. The Wire is hungry. Television becomes universal. So does something else."
+
+[cold_war_era]
+description = "The world on the edge of destruction"
+
+[[cold_war_era.entries]]
+name = "1963 London"
+description = "The beginning. Or an ending. Shoreditch schools hide dark secrets. Coal Hill Academy harbors strange students. It all starts here."
+
+[[cold_war_era.entries]]
+name = "Cuban Missile Crisis (1962 AD)"
+description = "The world holds its breath. Nuclear war is minutes away. The ice caps hide something ancient. Cold War meets Ice Warrior."
+
+[[cold_war_era.entries]]
+name = "Moon Landing (1969 AD)"
+description = "One small step - and the Silence were there to see it. Armstrong and Aldrin aren't alone. The footage shows everything. No one remembers."
+
+[[cold_war_era.entries]]
+name = "1970s UNIT Era"
+description = "The golden age of alien invasion. Autons, Silurians, Sea Devils, Daleks. UNIT headquarters works overtime. The Brigadier is very tired."
+
+[[cold_war_era.entries]]
+name = "1980s Britain"
+description = "Thatcher's Britain. Miners strike. The Falklands War. Cybermen in the sewers. The Master in disguise. Coal Hill School continues."
+
+[modern_era]
+description = "The contemporary setting"
+
+[[modern_era.entries]]
+name = "The Powell Estate (2005 AD)"
+description = "Council flats in South London. Rose Tyler works at Henrik's. The Nestene Consciousness stirs. Everything is about to change."
+
+[[modern_era.entries]]
+name = "Christmas Invasions"
+description = "London at Christmas. Guaranteed alien attack. Sycorax, Racnoss, Titanic crashing. The Queen's speech will be interrupted."
+
+[[modern_era.entries]]
+name = "Saxon's Britain (2008 AD)"
+description = "Harold Saxon wins the election. Vote Saxon. Everyone loves him. No one remembers why. The Master has returned."
+
+[[modern_era.entries]]
+name = "Year of the Slow Invasion (2012 AD)"
+description = "Black cubes appear everywhere. Harmless. Fascinating. Deadly. The Shakri count down humanity's extinction."
+
+[[modern_era.entries]]
+name = "Contemporary Sheffield"
+description = "Industrial city, working class pride. Ryan, Yaz, and Graham's home ground. The Stenza have been here. More will come."
+
+[[modern_era.entries]]
+name = "Present Day Cardiff"
+description = "The Rift pulses beneath the city. Torchwood watches. Things fall through from other times, other worlds. Welcome to Wales."
+
+[far_future]
+description = "Earth's distant tomorrows"
+
+[[far_future.entries]]
+name = "New Earth (5 Billion AD)"
+description = "Earth is gone, burnt by the expanding sun. Humanity survives on a new world. Cat people, New New York, and the Face of Boe with his secret."
+
+[[far_future.entries]]
+name = "Platform One (5 Billion AD)"
+description = "The uber-rich watch Earth die. A party among the stars. Murder among the guests. Everything has a price."
+
+[[far_future.entries]]
+name = "Satellite Five (200,000 AD)"
+description = "The Fourth Great and Bountiful Human Empire. News controls everything. The Jagrafess manipulates. Game shows have lethal stakes."
+
+[[far_future.entries]]
+name = "The Year 100 Trillion"
+description = "The end of everything. The last humans huddle at the edge of existence. Utopia calls. The Master waits."
+
+[[far_future.entries]]
+name = "The Library (51st Century)"
+description = "Every book ever written. Shadows move between the shelves. Count the shadows. The Vashta Nerada are hungry."
+
+[[far_future.entries]]
+name = "Starship UK (29th Century)"
+description = "Britain in space. Solar flares drove humanity to the stars. The ship hides a terrible secret in its depths. The beast below."

@@ -1,0 +1,79 @@
+# Neutral Complications
+# Unexpected developments that could go either way
+
+[tactical_complications]
+description = "Battlefield situations that change everything"
+entries = [
+    "Weather grounds air support when you need it most",
+    "Radio dead, no way to call for reinforcement or fire",
+    "Map is wrong, terrain nothing like intelligence said",
+    "Ammunition resupply captured by enemy",
+    "Bridge supposed to be blown is still standing",
+    "Enemy strength much greater than reported",
+    "Flanking route blocked by terrain nobody mentioned",
+    "Night falls before objective secured",
+    "Friendly unit withdraws without warning, flank exposed",
+    "Artillery lands short, friendly fire danger",
+    "Fuel runs out kilometers from objective",
+    "Communications cipher compromised, enemy reading traffic"
+]
+
+[intelligence_fog]
+description = "Information that changes the picture"
+entries = [
+    "Prisoner reveals plans have changed, mission obsolete",
+    "Intercepted message warns of ambush on planned route",
+    "Contact might be turned, information could be false",
+    "Order of battle wrong, unknown enemy unit in area",
+    "Allied deception plan requires sacrificing this operation",
+    "Source gone silent, captured or just equipment failure?",
+    "New intelligence contradicts mission orders, both could be wrong",
+    "Recognition signal changed, can't confirm if friendlies",
+    "Target moved, new location unknown",
+    "Cover story blown, identity compromised"
+]
+
+[civilian_factors]
+description = "Non-combatants complicating military necessity"
+entries = [
+    "Refugees clogging escape route, can't get through",
+    "Civilian sheltering enemy wounded, legal protection unclear",
+    "Children playing near military target",
+    "Factory staffed by slave labor, bombing means killing victims",
+    "Hospital used as enemy shield, legitimate target or not?",
+    "Informant's family held hostage, reliability in question",
+    "Civilian authorities demanding impossible compromise",
+    "Local population openly hostile despite liberation",
+    "Vital supplies claimed by starving civilians",
+    "Cultural treasure in way of military necessity"
+]
+
+[mechanical_failure]
+description = "Equipment that fails at the worst time"
+entries = [
+    "Vehicle breaks down in enemy territory",
+    "Weapons jam during critical moment",
+    "Radio battery dead, no spare available",
+    "Parachute malfunctions during drop",
+    "Landing craft disabled short of beach",
+    "Tank throws track in open ground",
+    "Aircraft engine fails over enemy territory",
+    "Medical supplies contaminated, useless",
+    "Explosive timer mechanism unreliable",
+    "Navigation equipment failure, position uncertain"
+]
+
+[command_friction]
+description = "Orders, politics, and military reality"
+entries = [
+    "Orders from HQ contradict situation on ground",
+    "Allied coordination breakdown, French and British not talking",
+    "Political pressure demanding premature action",
+    "Newspaper correspondent wants ride-along on secret mission",
+    "Higher headquarters changes plan mid-execution",
+    "Two officers of equal rank, conflicting orders",
+    "Promised air support diverted to 'priority' mission",
+    "Intelligence classified too high to share with those who need it",
+    "Reinforcements go to politically favored unit instead",
+    "War correspondent filed story revealing operational security"
+]

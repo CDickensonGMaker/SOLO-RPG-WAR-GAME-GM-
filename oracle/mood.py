@@ -24,6 +24,16 @@ class Setting(Enum):
     CYBERPUNK = ("cyberpunk", "Cyberpunk")
     HISTORICAL = ("historical", "Historical")
     WEIRD_WAR = ("weird_war", "Weird War")
+    # New settings
+    STARSHIP_TROOPERS = ("starship_troopers", "Starship Troopers")
+    STARGATE = ("stargate", "Stargate SG-1")
+    DOCTOR_WHO = ("doctor_who", "Doctor Who")
+    # Historical era settings
+    WWI = ("wwi", "World War I")
+    WWII = ("wwii", "World War II")
+    VIETNAM = ("vietnam", "Vietnam War")
+    ALT_HISTORY = ("alt_history", "Alternate History")
+    LOST_REGIMENT = ("lost_regiment", "Lost Regiment")
 
     def __init__(self, folder: str, display: str):
         self.folder = folder
@@ -126,6 +136,56 @@ SETTING_DEFAULTS: dict[Setting, dict] = {
     },
     Setting.WEIRD_WAR: {
         "tone": Tone.GRIMDARK,
+        "stakes": Stakes.LETHAL,
+        "weirdness": Weirdness.HIGH_STRANGENESS,
+        "pace": Pace.TENSE,
+    },
+    # New settings
+    Setting.STARSHIP_TROOPERS: {
+        "tone": Tone.GRITTY,
+        "stakes": Stakes.LETHAL,
+        "weirdness": Weirdness.GROUNDED,
+        "pace": Pace.ACTION_HEAVY,
+    },
+    Setting.STARGATE: {
+        "tone": Tone.HOPEFUL,
+        "stakes": Stakes.DANGEROUS,
+        "weirdness": Weirdness.HIGH_STRANGENESS,
+        "pace": Pace.BALANCED,
+    },
+    Setting.DOCTOR_WHO: {
+        "tone": Tone.HOPEFUL,
+        "stakes": Stakes.BALANCED,
+        "weirdness": Weirdness.GONZO,
+        "pace": Pace.ACTION_HEAVY,
+    },
+    # Historical era settings
+    Setting.WWI: {
+        "tone": Tone.GRIMDARK,
+        "stakes": Stakes.LETHAL,
+        "weirdness": Weirdness.GROUNDED,
+        "pace": Pace.SLOW_BURN,
+    },
+    Setting.WWII: {
+        "tone": Tone.GRITTY,
+        "stakes": Stakes.DANGEROUS,
+        "weirdness": Weirdness.GROUNDED,
+        "pace": Pace.ACTION_HEAVY,
+    },
+    Setting.VIETNAM: {
+        "tone": Tone.GRITTY,
+        "stakes": Stakes.LETHAL,
+        "weirdness": Weirdness.GROUNDED,
+        "pace": Pace.TENSE,
+    },
+    Setting.ALT_HISTORY: {
+        "tone": Tone.NEUTRAL,
+        "stakes": Stakes.DANGEROUS,
+        "weirdness": Weirdness.HIGH_STRANGENESS,
+        "pace": Pace.BALANCED,
+    },
+    Setting.LOST_REGIMENT: {
+        "tone": Tone.GRITTY,
         "stakes": Stakes.LETHAL,
         "weirdness": Weirdness.HIGH_STRANGENESS,
         "pace": Pace.TENSE,

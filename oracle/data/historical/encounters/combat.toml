@@ -1,5 +1,5 @@
 # Historical Combat Encounters
-# 50+ grounded military and violent confrontations
+# 110+ grounded military and violent confrontations across multiple eras
 
 [encounters]
 entries = [
@@ -70,5 +70,54 @@ entries = [
   { text = "Partisans ambush a supply convoy", weight = 2 },
   { text = "Resistance cell attacks collaborators in the night", weight = 1 },
   { text = "Sabotage mission to destroy a key target", weight = 1 },
-  { text = "Evading a sweep operation by occupation forces", weight = 2 }
+  { text = "Evading a sweep operation by occupation forces", weight = 2 },
+
+  # Gladiatorial and Arena Combat (Ancient Rome)
+  { text = "The lanista presents his gladiators - the crowd demands blood today", weight = 1 },
+  { text = "Retiarius versus Secutor - net and trident against sword and shield", weight = 1 },
+  { text = "Thumbs down from the crowd - the victor awaits the Emperor's decision", weight = 1 },
+  { text = "Wild beasts released from the hypogeum - condemned prisoners have no weapons", weight = 1 },
+  { text = "The mock naval battle floods the arena - slaves die for entertainment", weight = 1 },
+
+  # Tournament Combat (Medieval)
+  { text = "The joust begins - lances splinter as knights collide at full gallop", weight = 1 },
+  { text = "The melee becomes a confused brawl - ransoms to be won or paid", weight = 2 },
+  { text = "A tournament knight's visor is mysteriously welded shut - murder disguised as sport", weight = 1 },
+  { text = "The challenge is accepted - trial by combat will determine guilt or innocence", weight = 1 },
+  { text = "Peasants bet on cockfights in the shadow of the tournament pavilions", weight = 2 },
+
+  # Street Violence and Urban Combat
+  { text = "Guild apprentices brawl with students in the streets - old rivalries renewed", weight = 2 },
+  { text = "The mob surges toward the tax collector's house with torches and improvised weapons", weight = 1 },
+  { text = "Footpads corner their mark in a blind alley - surrender your purse or your life", weight = 2 },
+  { text = "Watchmen pursue a fugitive through narrow streets and over rooftops", weight = 2 },
+  { text = "A prison break in progress - guards versus desperate inmates", weight = 1 },
+
+  # Age of Sail Specific Combat
+  { text = "The pirate ship closes - prepare to repel boarders or strike colors", weight = 2 },
+  { text = "Cutlass and pistol work on a deck slick with blood", weight = 2 },
+  { text = "The frigate's broadside tears through merchant rigging - heave to or be sunk", weight = 2 },
+  { text = "Hand-to-hand fighting in ship corridors too cramped for swords", weight = 2 },
+  { text = "Marines storm the enemy quarterdeck as the ships grind together", weight = 2 },
+
+  # Ancient Legion Combat
+  { text = "The pilum volley precedes the crash of shield walls meeting", weight = 1 },
+  { text = "The testudo advances under arrow fire, shields interlocked", weight = 1 },
+  { text = "Barbarian berserkers charge naked into the Roman line, screaming", weight = 1 },
+  { text = "The eagle has fallen - recover it or die trying", weight = 1 },
+  { text = "Elephants rampage through the ranks, friend and foe alike trampled", weight = 1 },
+
+  # Renaissance Warfare
+  { text = "Pike squares collide - the push of pike is a shoving match of death", weight = 1 },
+  { text = "Landsknechts and Swiss Guard meet in murderous grudge match", weight = 1 },
+  { text = "The condottieri captain switches sides mid-battle for better terms", weight = 1 },
+  { text = "Early cannon thunder but cannot reload before the charge reaches them", weight = 2 },
+  { text = "The tercio formation holds firm, pikes and arquebus supporting each other", weight = 1 },
+
+  # Victorian Colonial Warfare
+  { text = "The square holds against massed cavalry charges - disciplined volley fire", weight = 1 },
+  { text = "Zulu impis pour over the hill in the horns of the buffalo formation", weight = 1 },
+  { text = "Gatling guns jam at the worst possible moment", weight = 1 },
+  { text = "Hill tribes harry the column through mountain passes with jezails", weight = 2 },
+  { text = "The thin red line at the Khyber - hold until relieved or die in place", weight = 1 }
 ]

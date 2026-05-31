@@ -1,0 +1,80 @@
+# Vietnam War Jungle Locations
+# The bush, the boonies, Indian country
+
+[locations]
+
+# Triple Canopy and Forest
+jungle_forest = [
+    { id = "triple_canopy", name = "Triple Canopy Jungle", desc = "Three layers of green blocking all light. Vegetation so thick you can't see ten feet. Every step is machete work. Charlie knows this terrain. You don't." },
+    { id = "bamboo_thicket", name = "Bamboo Thicket", desc = "Walls of bamboo taller than men. Impenetrable barrier or perfect ambush site. The sound of stalks clacking could be wind or movement." },
+    { id = "elephant_grass", name = "Elephant Grass", desc = "Twelve feet tall, razor-sharp edges. Cut to ribbons just walking through. Can't see incoming, can't see outgoing. The grass bleeds you." },
+    { id = "jungle_stream", name = "Jungle Stream Crossing", desc = "Brown water, unknown depth, leeches guaranteed. Cross fast or don't cross at all. Perfect place for an ambush on the far bank." },
+    { id = "waterfall", name = "Jungle Waterfall", desc = "Beautiful in a world without war. Now it's terrain feature, concealment, or trap. The roar covers movement - yours and theirs." },
+    { id = "bomb_crater", name = "B-52 Crater", desc = "Arc Light aftermath - the earth simply removed. Craters deep as houses, jungle shattered. Nothing survived. The moonscape in the green." },
+    { id = "defoliated_zone", name = "Defoliated Zone", desc = "Agent Orange did its work. Skeletal trees, dead vegetation, exposed earth. No cover, no concealment, just chemical ruin." },
+    { id = "trail_junction", name = "Trail Junction", desc = "Where paths cross in the bush. Rest point or ambush site. Signs of passage - which direction, how many, how recent?" },
+]
+
+# Tunnels and Underground
+tunnels = [
+    { id = "tunnel_entrance", name = "Tunnel Complex Entrance", desc = "Hidden under cooking fire ashes, beneath rice bins, anywhere. Three inches wide, three hundred miles long. The underground war." },
+    { id = "tunnel_interior", name = "Tunnel Interior", desc = "Darkness absolute. Walls pressing in. Could be hospital, armory, or barracks down here. Could be punji trap. Only one way to find out." },
+    { id = "tunnel_junction", name = "Tunnel Junction Chamber", desc = "Where tunnels meet - trap doors, false walls, escape routes in every direction. Charlie's underground highway system." },
+    { id = "tunnel_hospital", name = "Underground Hospital", desc = "Operating tables carved from earth. Supplies cached, wounded hidden. They treat their casualties where bombs can't reach." },
+    { id = "tunnel_armory", name = "Hidden Armory", desc = "Weapons wrapped in oilcloth, ammunition stacked to the ceiling. Enough to supply a regiment. All of it underground." },
+    { id = "spider_hole", name = "Spider Hole", desc = "One-man fighting position, lid flush with ground. Pop up, shoot, disappear. The jungle has eyes and trigger fingers." },
+]
+
+# Combat Positions
+combat_positions = [
+    { id = "firebase", name = "Firebase Perimeter", desc = "Artillery position cut from jungle. Sandbags, wire, claymores facing out. Home for a few days until they move the guns." },
+    { id = "lz", name = "LZ Under Fire", desc = "Clearing hacked or bombed for helicopters. Hot the moment birds descend. Get off, get down, get moving. Slicks don't wait." },
+    { id = "ambush_site", name = "Perfect Ambush Site", desc = "Natural funnel, limited escape routes, excellent cover. Someone will use this. The question is who sees it first." },
+    { id = "jungle_nlf", name = "NLF Position", desc = "Camouflaged fighting holes, supply caches, communication trenches. Looks like nothing until they open fire." },
+    { id = "observation_post", name = "Jungle Observation Post", desc = "High ground or tall tree. Eyes on the trail. Radio the movement, call the strike, stay invisible. Lonely work." },
+    { id = "night_position", name = "Night Defensive Position", desc = "Claymores out, watch set, no lights, no sounds. The jungle changes after dark. Everything that moves is death." },
+]
+
+# Rivers and Water
+water = [
+    { id = "mekong_tributary", name = "Mekong Delta Tributary", desc = "Brown water, sampan traffic, mangrove banks. VC own the night here. Patrol boats own the day. Maybe." },
+    { id = "rice_paddy", name = "Rice Paddy", desc = "Ankle-deep water, knee-deep mud. No cover, clear fields of fire. Crossing is gambling with your life." },
+    { id = "paddy_dike", name = "Paddy Dike", desc = "The only solid ground between fields. Walk single file, silhouette perfect. Shooting gallery or lifeline." },
+    { id = "mangrove_swamp", name = "Mangrove Swamp", desc = "Roots like prison bars, water black, smell rotting. SEALs work here. Everyone else avoids it." },
+    { id = "river_crossing", name = "River Crossing Point", desc = "Where the river narrows enough to ford. Intel says watch this spot. Enemy knows that too." },
+]
+
+# Villages
+villages = [
+    { id = "hamlet", name = "Vietnamese Hamlet", desc = "A dozen hooches, a well, suspicious faces. VC by night, farmers by day? Can't tell. They won't tell." },
+    { id = "montagnard_village", name = "Montagnard Village", desc = "Highland tribe - Jarai, Rhade, Bahnar. Longhouses, crossbows, generations of distrust for Vietnamese. Americans sometimes welcome." },
+    { id = "deserted_village", name = "Deserted Village", desc = "Empty but not abandoned. Cooking fires cold, animals gone, silence wrong. They knew you were coming. How?" },
+    { id = "burned_village", name = "Burned Village", desc = "Zippo raid aftermath. Ash, bones, the smell. Someone's home, someone's family. Strategic hamlet policy in action." },
+    { id = "contested_village", name = "Contested Village", desc = "Government by day, VC by night. Population caught between. They just want to farm. Neither side lets them." },
+]
+
+# Plantations and Agriculture
+agriculture = [
+    { id = "rubber_plantation", name = "Rubber Plantation", desc = "French legacy, rows of trees, cathedral spacing. Perfect lanes for ambush. The sap bleeds white like milk." },
+    { id = "banana_grove", name = "Banana Grove", desc = "Broad leaves, limited visibility. The smell of overripe fruit and something else. Movement in the green." },
+    { id = "pineapple_field", name = "Pineapple Field", desc = "Low crops, spider holes possible. Booby traps between the rows. Even food is weaponized." },
+    { id = "abandoned_plantation", name = "Abandoned Plantation House", desc = "French colonial ruin, jungle reclaiming. Cover or trap? Both. Memories of another war here." },
+]
+
+# Trails and Movement
+trails = [
+    { id = "ho_chi_minh_trail", name = "Ho Chi Minh Trail Segment", desc = "The highway of war. Bicycles carrying artillery shells, porters carrying rice. Bomb it nightly, it's open by morning." },
+    { id = "jungle_trail", name = "Jungle Trail", desc = "Human path through impossible terrain. Follow it for ambush. Avoid it for survival. Someone made this road." },
+    { id = "game_trail", name = "Animal Trail", desc = "Might be game, might be soldiers. The distinction matters. Fresh tracks, recent use. Whose?" },
+    { id = "booby_trapped_trail", name = "Booby-Trapped Trail", desc = "Punji stakes in covered pits, trip wires to grenades, toe poppers in the mud. Every step is a question." },
+    { id = "trail_watch", name = "Trail Watch Point", desc = "LRRP position, eyes on the route. Count them, report them, don't engage. Information is the mission." },
+]
+
+# Terrain Features
+terrain = [
+    { id = "hilltop", name = "Contested Hilltop", desc = "High ground that both sides need. Hamburger Hill waiting to happen. The tactical importance measured in bodies." },
+    { id = "valley", name = "Jungle Valley", desc = "Natural movement corridor. Both sides know it. Ambush alley running for miles." },
+    { id = "ia_drang", name = "Ia Drang Valley", desc = "Where it all started going wrong. 1965. First major battle. The jungle remembers the dead." },
+    { id = "a_shau", name = "A Shau Valley", desc = "NVA highway, American nightmare. They own this valley. We just visit and bleed." },
+    { id = "highlands", name = "Central Highlands", desc = "Mountains, tribes, infiltration routes. The war's spine where borders don't mean anything." },
+]

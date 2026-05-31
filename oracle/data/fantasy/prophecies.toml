@@ -1,0 +1,123 @@
+# Fantasy Prophecies
+# Cryptic predictions, doom-sayings, and plot hooks from seers and oracles
+
+[prophecies]
+entries = [
+  # Chosen One Prophecies
+  { text = "When the three moons align and the dead king speaks, the child of two bloods will either doom or save us all", weight = 1 },
+  { text = "The one who bears the mark of the fallen star will break the chains of heaven or forge new ones stronger", weight = 1 },
+  { text = "Not the firstborn but the seventh shall inherit the blade that drinks the dark", weight = 1 },
+  { text = "A stranger with no name will come from the east bearing a weapon forged from what should not exist", weight = 1 },
+  { text = "The true heir sleeps in a false grave while the false heir sits on a true throne", weight = 1 },
+  { text = "Born of fire and buried in ice, the awakener will speak the word that ends the long silence", weight = 1 },
+
+  # Doom Prophecies
+  { text = "When the last tree of the elder grove falls, the sleeper beneath will open its eye", weight = 1 },
+  { text = "The wall holds until seven seals break - four have broken, and the fifth cracks", weight = 1 },
+  { text = "In the year the river runs backward, the dead will march and the living will envy them", weight = 1 },
+  { text = "The king who sits the throne at the black eclipse will be the last king to sit it", weight = 1 },
+  { text = "When brother slays brother at the foot of the white tower, the tower falls and will not rise again", weight = 1 },
+  { text = "The library must never burn - if it burns, what is written in smoke will become true", weight = 1 },
+  { text = "They sealed the gate but forgot the window - through the window, the end comes crawling", weight = 1 },
+
+  # War Prophecies
+  { text = "Two kingdoms will become one only when the joining makes three graves", weight = 1 },
+  { text = "The banner that flies over the final battlefield bears a symbol not yet created", weight = 1 },
+  { text = "The last battle will be fought by heroes who have not yet been born, against an enemy who has not yet risen", weight = 1 },
+  { text = "Peace will come when wolves lie with lambs, but only because the wolf is too wounded to eat", weight = 1 },
+  { text = "The siege ends when three things are brought together that have never touched - stone, starlight, and a mother's last breath", weight = 1 },
+
+  # Quest Prophecies
+  { text = "The sword lies where the king fell, but the king has fallen twice and only one fall is remembered", weight = 1 },
+  { text = "Seek not the treasure where X marks, but where the shadow of X falls at the hour the mapmaker died", weight = 1 },
+  { text = "The cure exists in three parts, held by three who hate each other more than they fear death", weight = 1 },
+  { text = "The door opens for one who carries nothing, knows nothing, and expects nothing", weight = 1 },
+  { text = "The path to the mountain goes through the sky, but the sky must be walked at midnight", weight = 1 },
+
+  # Transformation Prophecies
+  { text = "The dragon that dies will be reborn as a man, and the man who dies will be reborn as a god", weight = 1 },
+  { text = "What sleeps in stone will wake in flesh when mortal hands return what immortal hands stole", weight = 1 },
+  { text = "The mirror shows what will be, not what is - the reflection has already won", weight = 1 },
+  { text = "When the servant becomes the master and the master the servant, the wheel turns and cannot turn back", weight = 1 },
+  { text = "The child will become the destroyer and the destroyer will become the child, and neither will remember", weight = 1 },
+
+  # Betrayal Prophecies
+  { text = "Trusted hands will hold the knife, beloved lips will speak the lie, faithful hearts will deal the death", weight = 1 },
+  { text = "The one who is most needed will be the one who betrays when need is greatest", weight = 1 },
+  { text = "Look not to enemies for danger but to the friend who smiles broadest", weight = 1 },
+  { text = "Three will set forth, two will return, one will wish they hadn't", weight = 1 },
+  { text = "The gift given freely bears the heaviest price when the giver collects", weight = 1 },
+]
+
+[prophecy_fragments]
+entries = [
+  # Opening Lines
+  { text = "When the moon bleeds and stars fall upward...", weight = 1 },
+  { text = "In the hour before the hour that never comes...", weight = 1 },
+  { text = "Where the shadow walks thrice before noon...", weight = 1 },
+  { text = "At the crossroads where three gallows stand...", weight = 1 },
+  { text = "When the dead speak true and the living lie...", weight = 1 },
+  { text = "In the year of the broken crown and the weeping saint...", weight = 1 },
+  { text = "Before the river forgets the way to the sea...", weight = 1 },
+  { text = "After the last prayer is spoken to the deaf god...", weight = 1 },
+
+  # Middle Sections
+  { text = "...the key that was made to be lost will be found in the hand of one who cannot hold it...", weight = 1 },
+  { text = "...and the sword will drink until it drowns, and in drowning, dream...", weight = 1 },
+  { text = "...seven must become one, and the one must become nothing...", weight = 1 },
+  { text = "...the price paid in tears will be repaid in blood...", weight = 1 },
+  { text = "...where the heart beats, the grave opens; where the grave opens, the heart stops...", weight = 1 },
+  { text = "...the child of winter must marry the flame...", weight = 1 },
+  { text = "...through the door that opens inward only, by the hand that holds no key...", weight = 1 },
+
+  # Closing Lines
+  { text = "...and what is broken will be whole, though none will recognize its shape", weight = 1 },
+  { text = "...the sun will set on the old world and rise on something stranger", weight = 1 },
+  { text = "...and the debt will be paid, though the payment will destroy the payer", weight = 1 },
+  { text = "...either all will be saved or none will be left to need saving", weight = 1 },
+  { text = "...the story ends where it began, but the characters will not know they are the same", weight = 1 },
+  { text = "...and the gods will remember why they feared us", weight = 1 },
+]
+
+[omens]
+entries = [
+  # Natural Omens
+  { text = "a two-headed calf born in the lord's own stable", weight = 1 },
+  { text = "crows flying widdershins around the temple spire", weight = 1 },
+  { text = "fish leaping from the river, dead before they land", weight = 1 },
+  { text = "the sacred tree bleeding red sap for the first time in memory", weight = 1 },
+  { text = "wolves howling in harmony with the church bells", weight = 1 },
+  { text = "a white stag seen in the king's hunting grounds, with a crown of brambles", weight = 1 },
+  { text = "flowers blooming in the graveyard in the dead of winter", weight = 1 },
+  { text = "the sun appearing to set in the east for three evenings", weight = 1 },
+
+  # Celestial Omens
+  { text = "a new star appearing where the old charts show nothing", weight = 1 },
+  { text = "the moon showing a face not seen in generations", weight = 1 },
+  { text = "an eclipse that lasts too long, the sun struggling to emerge", weight = 1 },
+  { text = "the aurora appearing in lands that have never known it", weight = 1 },
+  { text = "a comet whose tail points toward the capital", weight = 1 },
+  { text = "shooting stars falling in a pattern that matches the royal crest", weight = 1 },
+
+  # Human Omens
+  { text = "children born this month have eyes of two different colors", weight = 1 },
+  { text = "the oracle spoke clearly for the first time in decades, and wept", weight = 1 },
+  { text = "every dreamer in the city shared the same nightmare", weight = 1 },
+  { text = "the statues of saints weeping tears of blood", weight = 1 },
+  { text = "a beggar at the crossroads who speaks the names of the dead", weight = 1 },
+  { text = "mirrors reflecting scenes that haven't happened yet", weight = 1 },
+]
+
+[seer_behaviors]
+entries = [
+  { text = "the seer's eyes roll back white as they speak in a voice not their own", weight = 1 },
+  { text = "they write the prophecy backwards, in a language they don't know while awake", weight = 1 },
+  { text = "the seer bleeds from nose and eyes while prophesying, unconcerned", weight = 1 },
+  { text = "they speak the same words in seven languages simultaneously", weight = 1 },
+  { text = "the oracle laughs and cries at once, saying the future is hilarious and tragic", weight = 1 },
+  { text = "they grab your arm with impossible strength, eyes locked on something behind you", weight = 1 },
+  { text = "the seer ages visibly while speaking, decades passing in moments", weight = 1 },
+  { text = "they whisper so quietly you must lean close, and what they say freezes your blood", weight = 1 },
+  { text = "the prophecy comes out as song, the melody as important as the words", weight = 1 },
+  { text = "they carve the prophecy into their own flesh, healing as the last word completes", weight = 1 },
+]

@@ -1,0 +1,72 @@
+# Historical Political Intrigue - Court Drama and Schemes
+# 55+ entries for machinations, plots, and power games
+
+[court_intrigue]
+entries = [
+  { text = "The queen's handmaiden passes notes to a foreign ambassador - treason or love?", weight = 2 },
+  { text = "A secret marriage threatens the succession - proof must be found or destroyed", weight = 1 },
+  { text = "The king's mistress bears more influence than his council - petitions go through her", weight = 2 },
+  { text = "Rival factions plant spies in each other's households disguised as servants", weight = 2 },
+  { text = "A forged letter could start a war - the question is who benefits", weight = 1 },
+  { text = "The heir apparent surrounds himself with dangerous men his father cannot touch", weight = 2 },
+  { text = "Whisper campaigns destroy reputations - truth is irrelevant to rumor", weight = 2 },
+  { text = "The queen regent rules in her son's name but her grip weakens as he ages", weight = 1 },
+  { text = "A bastard child emerges with claims to legitimacy - and powerful backers", weight = 1 },
+  { text = "Court favorites rise and fall on the monarch's whims - today's confidant is tomorrow's exile", weight = 2 },
+  { text = "Marriage alliances are negotiated like business contracts - love is not a factor", weight = 2 },
+  { text = "The food taster collapsed - now the poisoner must be found before they strike again", weight = 1 },
+  { text = "Royal physicians hold dangerous knowledge - they know the king's true condition", weight = 2 },
+  { text = "A courtier's gambling debts make them vulnerable to those who pay them off", weight = 2 },
+  { text = "The court jester hears everything and reports to someone - but whom?", weight = 2 },
+]
+
+[political_schemes]
+entries = [
+  { text = "A cabal of nobles plots to limit royal power through a charter of rights", weight = 1 },
+  { text = "Tax collectors skim fortunes while the treasury claims poverty", weight = 2 },
+  { text = "Provincial governors build personal power bases that rival the crown", weight = 2 },
+  { text = "Military command goes to well-connected incompetents while veterans wait", weight = 2 },
+  { text = "Trade monopolies are awarded to favorites - others must pay bribes or starve", weight = 2 },
+  { text = "Church appointments are sold to the highest bidder regardless of piety", weight = 2 },
+  { text = "Parliamentary factions form and dissolve around patronage and profit", weight = 2 },
+  { text = "A constitutional crisis looms - the old laws cannot resolve the new dispute", weight = 1 },
+  { text = "Border territories change hands through dynastic marriages, not warfare", weight = 2 },
+  { text = "Secret treaties contradict public alliances - which promises will be kept?", weight = 1 },
+  { text = "A regency council fractures into competing interests, each claiming legitimacy", weight = 1 },
+  { text = "Electoral bribery is expected - the question is whose purse runs deepest", weight = 2 },
+  { text = "Colonial policy is set by merchants who profit, not administrators who govern", weight = 2 },
+  { text = "Legal technicalities are exploited to seize estates from political enemies", weight = 2 },
+  { text = "Ambassadors negotiate in public while spies determine the true positions", weight = 2 },
+]
+
+[assassination_plots]
+entries = [
+  { text = "The conspiracy numbers a dozen nobles - one is secretly a loyalist informer", weight = 1 },
+  { text = "A hunting 'accident' is planned - the king rides tomorrow at dawn", weight = 1 },
+  { text = "Slow poison administered over months - by the time symptoms appear, it's too late", weight = 1 },
+  { text = "The bodyguard can be bought - the question is whether he stays bought", weight = 1 },
+  { text = "A fanatic claims divine mission - their martyrdom will inspire others", weight = 1 },
+  { text = "The heir grows impatient - his father's long life is an inconvenience", weight = 1 },
+  { text = "Foreign powers fund domestic assassins to destabilize their rivals", weight = 1 },
+  { text = "A spurned lover knows the target's habits, vulnerabilities, and secrets", weight = 2 },
+  { text = "The executioner's axe may swing early if certain parties arrange matters", weight = 1 },
+  { text = "Imprisoned rivals are convenient - they might die of 'fever' any day now", weight = 1 },
+  { text = "A duel of honor is arranged where the outcome is predetermined", weight = 2 },
+  { text = "The false flag assassination will be blamed on a rival faction", weight = 1 },
+]
+
+[blackmail_leverage]
+entries = [
+  { text = "Love letters that would ruin a marriage and a political alliance", weight = 2 },
+  { text = "Financial records proving embezzlement from crown funds", weight = 1 },
+  { text = "Witnesses to a crime the powerful thought buried with the victims", weight = 1 },
+  { text = "Proof of illegitimate birth that would invalidate inheritance claims", weight = 1 },
+  { text = "Heretical writings in the target's own hand - the Inquisition pays for such tips", weight = 1 },
+  { text = "Evidence of collaboration with enemies during the last war", weight = 1 },
+  { text = "A portrait miniature of a forbidden lover kept too carelessly", weight = 2 },
+  { text = "Medical records revealing a condition that would disqualify from succession", weight = 1 },
+  { text = "Gambling debts that would destroy carefully cultivated reputation for virtue", weight = 2 },
+  { text = "Secret conversion to a banned religion - apostasy carries death", weight = 1 },
+  { text = "Correspondence proving knowledge of a plot they failed to report", weight = 1 },
+  { text = "The testimony of servants who see everything and say nothing - until now", weight = 2 },
+]

@@ -61,5 +61,75 @@ entries = [
   { text = "Intelligence asset's extraction will expose civilian informants", weight = 1 },
   { text = "Superior officer's breakdown must be concealed from command", weight = 1 },
   { text = "Evidence suggests friendly fire caused recent casualties", weight = 1 },
-  { text = "Soldier wants to desert to find missing family, requests help", weight = 1 }
+  { text = "Soldier wants to desert to find missing family, requests help", weight = 1 },
+
+  # Court Martial Scenarios
+  { text = "Soldier being charged with cowardice, unit knows the truth is complicated", weight = 2 },
+  { text = "Officer on trial for friendly fire, everyone knows the real fault lies higher", weight = 1 },
+  { text = "Theft charges against soldier who was redistributing to those in need", weight = 1 },
+  { text = "Insubordination charge for refusing unlawful order, legality debatable", weight = 1 },
+  { text = "Desertion case where soldier went to save family, returned to face judgment", weight = 1 },
+  { text = "Fraternization charges against popular NCO, morale implications if punished", weight = 1 },
+  { text = "War crimes tribunal forming, unit members may be called as witnesses", weight = 2 },
+  { text = "Political officer demanding death sentence for minor infraction as example", weight = 1 },
+
+  # Fragging Situations
+  { text = "Unpopular officer pushing unit into suicidal missions, discussions in barracks", weight = 2 },
+  { text = "Someone left grenade in officer's bunk, investigation underway", weight = 1 },
+  { text = "NCO died in combat, no witnesses, rumors of the real cause", weight = 1 },
+  { text = "Soldier openly threatening officer, chain of command ignoring it", weight = 1 },
+  { text = "Equipment failures following officer's orders, sabotage or coincidence", weight = 1 },
+  { text = "Officer found dead after unit returned from patrol, all alibis match", weight = 1 },
+  { text = "Anonymous note warning officer of consequences if they don't change", weight = 1 },
+  { text = "Previous commander died in suspicious circumstances, new one just arrived", weight = 1 },
+
+  # Medals and Recognition
+  { text = "Medal ceremony for soldier who died buying time for retreat", weight = 1 },
+  { text = "Unit citation for victory that cost half the unit's strength", weight = 1 },
+  { text = "Soldier refusing medal, knows the official story isn't what happened", weight = 1 },
+  { text = "Medal going to wrong person, true hero dead or unwilling to claim credit", weight = 1 },
+  { text = "Posthumous decoration for soldier whose body was never recovered", weight = 1 },
+  { text = "Bravery award creating resentment, others did same without recognition", weight = 1 },
+  { text = "Officer taking credit for enlisted soldier's actions in official report", weight = 1 },
+  { text = "Medal pinned on by leader everyone knows is incompetent, bitter ceremony", weight = 1 },
+
+  # R and R Encounters
+  { text = "Leave canceled at last minute, unit returning to combat immediately", weight = 1 },
+  { text = "Bar fight between units with old rivalry, escalating dangerously", weight = 1 },
+  { text = "Soldier meeting family after long deployment, recognizes how much they've changed", weight = 1 },
+  { text = "Recreational facility bombed, brief peace shattered", weight = 2 },
+  { text = "Romance with local complicated by impending departure", weight = 1 },
+  { text = "Black market contact offering luxuries at prices suggesting stolen goods", weight = 1 },
+  { text = "Soldier can't relax, hypervigilance making leave more stressful than combat", weight = 1 },
+  { text = "News from home changes everything, soldier requests emergency leave", weight = 1 },
+
+  # Letters and Communications
+  { text = "Writing letter to family of fallen soldier, finding the words", weight = 2 },
+  { text = "Receiving news of birth/death/marriage from home, processing while deployed", weight = 1 },
+  { text = "Dear John letter, soldier's spouse leaving them for someone at home", weight = 1 },
+  { text = "Letter from home censored heavily, wondering what was cut", weight = 1 },
+  { text = "Final message from soldier before death, found in their effects", weight = 1 },
+  { text = "Communication from believed-dead family member, they're alive somewhere", weight = 1 },
+  { text = "Soldier asked to falsify letter home about another's death, make it sound heroic", weight = 1 },
+  { text = "Recording message for family in case of death, what to say", weight = 1 },
+
+  # Unit Morale Issues
+  { text = "Suicide attempt, soldier couldn't take it anymore", weight = 2 },
+  { text = "Combat refusal spreading through unit, breaking point reached", weight = 2 },
+  { text = "Grief overwhelming unit after beloved member falls", weight = 1 },
+  { text = "Soldier's lucky charm lost/destroyed, psychological unraveling", weight = 1 },
+  { text = "Survivors guilt affecting combat effectiveness", weight = 1 },
+  { text = "Dark humor pushing boundaries, new soldier thinks unit is broken", weight = 1 },
+  { text = "Memorial service interrupted by incoming fire, can't even mourn properly", weight = 1 },
+  { text = "Unit mascot died, absurd grief over animal reveals deeper trauma", weight = 1 },
+
+  # Chain of Command Drama
+  { text = "Beloved sergeant demoted for protecting soldiers from bad orders", weight = 1 },
+  { text = "New officer arrives to command unit that doesn't want them", weight = 1 },
+  { text = "Promotion comes with transfer away from unit, leaving brothers behind", weight = 1 },
+  { text = "Officer breakdown witnessed by troops, pretending they didn't see", weight = 1 },
+  { text = "Command insisting on medal ceremony while enemy shells position", weight = 1 },
+  { text = "Soldiers respect NCO, despise officer, both give conflicting orders", weight = 1 },
+  { text = "Officer orders unit into danger while staying behind in safety", weight = 2 },
+  { text = "Command blaming unit for failure caused by bad intelligence or orders", weight = 1 }
 ]

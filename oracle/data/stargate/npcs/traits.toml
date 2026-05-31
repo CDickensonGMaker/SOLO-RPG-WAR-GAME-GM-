@@ -1,0 +1,103 @@
+# Stargate SG-1 Character Traits
+# Personality traits and characteristics fitting the Stargate universe
+
+[military_traits]
+description = "Traits common among SGC military personnel"
+traits = [
+    { name = "Tactically Brilliant", description = "Thinks three steps ahead in any firefight. Has a contingency for the contingency." },
+    { name = "By-the-Book", description = "Follows protocol religiously. Believes procedures exist for good reasons, even when they're inconvenient." },
+    { name = "Battle-Hardened", description = "Has seen enough combat that nothing surprises them anymore. Calm under fire, decisive under pressure." },
+    { name = "Protective of Their Team", description = "Would walk into a ha'tak alone to save a teammate. Loyalty that borders on recklessness." },
+    { name = "Gallows Humor", description = "Cracks jokes in the face of certain doom. Laughter as a coping mechanism for the impossible." },
+    { name = "Classified Everything", description = "Can't discuss anything about their work. Relationships suffer for secrets they'll carry to the grave." },
+    { name = "Mission-Focused", description = "Completes objectives regardless of personal cost. The job comes first, always." },
+    { name = "Insubordinate Streak", description = "Questions orders that don't make sense. Has been right enough times to get away with it." },
+    { name = "Veteran's Instincts", description = "Gut feelings that have kept them alive through dozens of gate missions. Trusts their intuition." },
+    { name = "Compartmentalized Trauma", description = "Has seen horrors but functions anyway. The nightmares come later, in private." },
+]
+
+[scientific_traits]
+description = "Traits common among SGC scientists"
+traits = [
+    { name = "Insatiable Curiosity", description = "Can't resist investigating unknown technology. Has nearly been killed by pressing buttons more than once." },
+    { name = "Brilliant Under Pressure", description = "Solves impossible physics problems while Jaffa storm the lab. Thrives on adrenaline and equations." },
+    { name = "Obsessive Researcher", description = "Forgets to eat when deep in analysis. The answer is always just one more test away." },
+    { name = "Skeptical of the Supernatural", description = "Believes every phenomenon has a scientific explanation. Usually right, occasionally dangerously wrong." },
+    { name = "Academic Rivalry", description = "Competitive with colleagues, sometimes to the detriment of cooperation. Publications still matter, even classified ones." },
+    { name = "Explains Everything", description = "Cannot resist lecturing about how alien technology works. Teammates' eyes glaze over regularly." },
+    { name = "Ethically Conflicted", description = "Struggles with the military applications of their discoveries. Knowledge should be shared, not weaponized." },
+    { name = "Practical Improviser", description = "Can make a scanner from spare parts and good intentions. MacGyver with a PhD." },
+    { name = "Theory Over Practice", description = "Brilliant theoretician, terrible in the field. Trips over things while contemplating wormhole physics." },
+    { name = "Ancient Technology Affinity", description = "Has an intuitive understanding of Ancient devices. May carry traces of genetic memory." },
+]
+
+[jaffa_traits]
+description = "Traits common among Jaffa warriors"
+traits = [
+    { name = "Unshakeable Honor", description = "Lives by a strict warrior code. Would rather die than compromise their principles." },
+    { name = "Questioning Faith", description = "Beginning to doubt the divinity of the Goa'uld. A dangerous awakening that could mean freedom or death." },
+    { name = "Stoic Demeanor", description = "Rarely shows emotion. Trained from birth to be a weapon, not a person." },
+    { name = "Fierce Loyalty", description = "Once earned, their loyalty is absolute. Will follow a worthy leader into certain death." },
+    { name = "Battle Meditation", description = "Finds peace in the focus of combat. Kelno'reem has taught them discipline that transcends pain." },
+    { name = "Struggling with Freedom", description = "After lifetimes of servitude, independence is terrifying. What is purpose without a master?" },
+    { name = "Old Grudges", description = "Remembers every wrong done to them or their family. Patience of centuries for revenge." },
+    { name = "Former Believer", description = "Once truly believed their Goa'uld was a god. The betrayal of discovering the truth still wounds." },
+    { name = "Symbiote Dependent", description = "Knows they will die without their larval Goa'uld. It is both prison and life support." },
+    { name = "Cultural Pride", description = "Proud of Jaffa heritage despite its origins in slavery. Seeking to define what it means to be Jaffa when free." },
+]
+
+[goauld_traits]
+description = "Traits common among Goa'uld"
+traits = [
+    { name = "Absolute Megalomania", description = "Truly believes in their own divinity. All others exist to serve or be destroyed." },
+    { name = "Genetic Memory Burden", description = "Carries the memories of countless hosts and ancestors. Madness lurks in the weight of ages." },
+    { name = "Paranoid of Rivals", description = "Trusts no one, especially other Goa'uld. Every ally is a potential assassin." },
+    { name = "Sadistic Pleasure", description = "Enjoys the suffering of lesser beings. Cruelty is entertainment, not just tool." },
+    { name = "Collector of Hosts", description = "Seeks the most beautiful, most powerful hosts to possess. Vanity made flesh." },
+    { name = "Theatrical Grandeur", description = "Everything must be dramatic and impressive. Entrances require fanfare and thunder." },
+    { name = "Ancient Grudges", description = "Remembers slights from millennia past. Revenge is a dish best served over centuries." },
+    { name = "Technology Hoarding", description = "Guards technological secrets jealously. Power comes from what others cannot have." },
+    { name = "Contempt for Hosts", description = "Views the host body as mere vessel. The personality trapped within is ignored or tormented." },
+    { name = "Fear of True Gods", description = "Knows the Ancients were real and far superior. Secretly terrified of being exposed as false." },
+]
+
+[tokra_traits]
+description = "Traits common among Tok'ra"
+traits = [
+    { name = "Perfect Symbiosis", description = "Host and symbiote work as true partners. Conversations happen internally, decisions shared." },
+    { name = "Deep Cover Strain", description = "Has lived as someone else for so long, identity blurs. Which personality is real anymore?" },
+    { name = "Patient Strategist", description = "Plans operations over decades. The long view that only beings who share host memories can achieve." },
+    { name = "Distrustful of Humans", description = "Sees Earth as reckless newcomers. Their impatience endangers carefully laid plans." },
+    { name = "Mourning Lost Hosts", description = "Carries grief for hosts who died in service to the cause. Each loss diminishes them." },
+    { name = "Idealistic Revolutionary", description = "Believes absolutely in the cause of freeing the galaxy from the Goa'uld. Will sacrifice anything for victory." },
+    { name = "Secretive by Nature", description = "Shares information reluctantly, even with allies. Old habits from lifetimes of espionage." },
+    { name = "Host Conflict", description = "Host and symbiote don't always agree. Internal arguments manifest as hesitation." },
+]
+
+[exploration_traits]
+description = "Traits related to gate exploration"
+traits = [
+    { name = "Gate Addiction", description = "Can't stay Earthside for long. The call of unexplored worlds is irresistible." },
+    { name = "First Contact Specialist", description = "Skilled at making alien cultures comfortable. Finds common ground where others see only difference." },
+    { name = "Artifact Obsession", description = "Drawn to Ancient technology like a moth to flame. Has touched things they shouldn't have." },
+    { name = "Temporal Displacement Survivor", description = "Has experienced time travel or stasis. Sometimes forgets what year they're supposed to be in." },
+    { name = "Culture Shock Resilient", description = "Nothing surprises them anymore. Has seen too many impossible things to be fazed." },
+    { name = "MALP Anxiety", description = "Never fully trusts probe readings. The other side of the gate always holds surprises." },
+    { name = "Wormhole Nausea", description = "Gate travel makes them physically ill. Does the job anyway." },
+    { name = "Lost Something Through the Gate", description = "Left something precious on another world. A piece of themselves scattered across the galaxy." },
+    { name = "Ascension Curious", description = "Fascinated by the possibility of transcending physical form. Studies the path obsessively." },
+    { name = "Carries Ancient Gene", description = "Can activate Ancient technology by touch. A gift and a burden they never asked for." },
+]
+
+[psychological_traits]
+description = "Psychological characteristics"
+traits = [
+    { name = "PTSD from Goa'uld Torture", description = "Still hears the pain stick in dreams. Flinches at certain sounds." },
+    { name = "Survivor's Guilt", description = "Walked away when others didn't. Carries the weight of teammates lost." },
+    { name = "Possession Trauma", description = "Was once host to a Goa'uld or touched by an entity. The violation never fully heals." },
+    { name = "Clone Identity Crisis", description = "May or may not be the original. Memories could be implanted. Existence is uncertain." },
+    { name = "Sarcophagus Addiction Recovery", description = "Was brought back too many times. The golden light still calls in weak moments." },
+    { name = "Downloaded Memories", description = "Carries knowledge placed directly in their mind. Not all of it is welcome." },
+    { name = "Replicator Contamination Fear", description = "Was exposed to nanites. Obsessively checks for signs of mechanical intrusion." },
+    { name = "Prior Conversion Survivor", description = "Was transformed and freed. Still feels the certainty of Origin sometimes." },
+]

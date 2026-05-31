@@ -1,0 +1,78 @@
+# Stargate SG-1 Bases and Facilities
+# Fixed locations and installations in the Stargate universe
+
+[sgc_facility]
+description = "Locations within Stargate Command, Cheyenne Mountain"
+bases = [
+    { name = "Gate Room (Level 28)", description = "The heart of the SGC. The Stargate dominates the space, iris closed until cleared. Every mission begins and ends here. The ramp has seen triumph and tragedy." },
+    { name = "Control Room", description = "Banks of monitors overlook the gate room. Technicians manage the dialing computer. The iris control sits within arm's reach - life or death at the press of a button." },
+    { name = "Briefing Room", description = "Conference table surrounded by screens. Mission plans are made here, debriefs conducted. The windows overlook the gate, a constant reminder of what's at stake." },
+    { name = "Base Commander's Office", description = "Where the hardest decisions are made. Personal effects balanced against security requirements. A direct line to the President. The weight of command made physical." },
+    { name = "Infirmary", description = "Medical facilities equipped for wounds no civilian hospital could treat. Staff weapon burns, alien parasites, exotic diseases. The nurses have seen everything." },
+    { name = "Isolation Room", description = "Negative pressure containment for quarantine cases. Glass walls and airlocks. When something unknown comes through the gate, it comes here first." },
+    { name = "Science Labs", description = "Research spaces filled with alien artifacts and human determination. Breakthroughs happen between crises. The whiteboard equations could save or doom worlds." },
+    { name = "Armory (Level 21)", description = "P90s, zats, and weapons from across the galaxy. The quartermaster knows every piece. Check-out procedures exist for good reason." },
+    { name = "Cafeteria", description = "Where personnel decompress between impossible missions. Blue Jello is a tradition. The food is military standard, but the company is extraordinary." },
+    { name = "Detention Cells", description = "When hostile entities need holding. Energy barriers supplement steel. Some prisoners are human, some are not, some are uncertain." },
+    { name = "Secure Storage", description = "Vaults containing the most dangerous recovered technology. Multiple authentication required. Some items have never been fully catalogued - too risky to study." },
+    { name = "Personnel Quarters", description = "Spartan rooms deep in the mountain. No windows, artificial light, recycled air. Home for those who can't risk living outside." },
+    { name = "Self-Destruct Control", description = "The last resort. Two keys, simultaneous turn, irreversible countdown. If Earth's gate falls to enemy hands, this is the answer." },
+]
+
+[offworld_bases]
+description = "SGC and allied installations on other worlds"
+bases = [
+    { name = "Alpha Site", description = "Earth's primary backup installation. Location classified, address memorized by key personnel. If the SGC falls, operations continue from here." },
+    { name = "Beta Site", description = "Secondary backup, different planet, separate gate address. Redundancy against catastrophic failure. The personnel rotate to prevent location compromise." },
+    { name = "Gamma Site (Destroyed)", description = "Former research outpost lost to insectoid outbreak. The ruins remain, a memorial and a warning. Some worlds fight back against occupation." },
+    { name = "Icarus Base", description = "Facility built on a naquadria-rich planet. Power requirements for Destiny's address finally met. The cost of that connection was terrible." },
+    { name = "P3X-403 Outpost", description = "Naquadah mining operation and forward base. Jaffa workers and Earth supervisors in uneasy cooperation. Strategic value outweighs political complications." },
+    { name = "Research Station Theta", description = "Remote installation for dangerous experiments. Distance from Earth is intentional. What happens here stays here, one way or another." },
+    { name = "Tok'ra Outpost", description = "Underground crystal tunnels hosting resistance operations. Location changes regularly. The tunnels grow or collapse as needed." },
+    { name = "Free Jaffa Council Hall", description = "Meeting place for the new Jaffa nation. Former Goa'uld temple repurposed. The architecture reminds them of what they overcame." },
+]
+
+[ancient_outposts]
+description = "Ancient/Lantean facilities and installations"
+bases = [
+    { name = "Antarctic Outpost", description = "Ancient installation beneath the ice. Drone weapons defended Earth against Anubis. The chair awaits someone with the gene to use it." },
+    { name = "Atlantis - Gate Room", description = "The heart of the Ancient city. The Stargate stands tall and elegant. Ten thousand years of silence ended when Earth's expedition arrived." },
+    { name = "Atlantis - Control Tower", description = "Command center of the city-ship. Ancient consoles respond to thought and gene. DHD-style control of the gate and city systems alike." },
+    { name = "Atlantis - Chair Room", description = "Neural interface for controlling the city's most powerful systems. Drone weapons, shields, flight itself. The power to reshape battles from a sitting position." },
+    { name = "Atlantis - Labs", description = "Ancient research facilities, many never fully explored. Projects abandoned mid-experiment. Some should stay that way." },
+    { name = "Atlantis - Armory", description = "Weapons storage from the war with the Wraith. Some functional, some mysteries. Ancient personal defense technology surpasses anything Earth makes." },
+    { name = "Atlantis - Jumper Bay", description = "Hangar for Puddle Jumpers and larger craft. The ships respond to those with the gene. Taking off is intuitive; landing takes practice." },
+    { name = "Ancient Satellite Platform", description = "Orbital weapons station above a strategic world. Power reserves are low but not empty. One shot could turn a battle." },
+    { name = "Repository Chamber", description = "Hidden vault containing an Ancient knowledge repository. The headpiece interface is both gift and threat. Those who use it are changed." },
+    { name = "Dakara Superweapon", description = "Device capable of seeding or eliminating life across the galaxy. Now in Jaffa hands. The temptation to use it never entirely fades." },
+]
+
+[goauld_facilities]
+description = "Goa'uld installations and territories"
+bases = [
+    { name = "Goa'uld Palace Complex", description = "Ostentatious residence of a System Lord. Gold and luxury mask surveillance and traps. The throne room is designed to intimidate supplicants." },
+    { name = "Ha'tak Construction Facility", description = "Orbital shipyard building Goa'uld vessels. Jaffa labor under harsh conditions. Sabotage here could cripple a fleet." },
+    { name = "Jaffa Training Grounds", description = "Where warriors are forged through brutal discipline. Live-fire exercises and ritual combat. The weak are culled early." },
+    { name = "Goa'uld Temple", description = "Religious center where Jaffa worship their false gods. Implantation ceremonies occur in sacred chambers. The priests maintain the lie." },
+    { name = "Sarcophagus Chamber", description = "Room housing the golden resurrection device. Access is tightly controlled - only the god and favored servants may use it. Addiction spreads from here." },
+    { name = "Peltak (Ship Bridge)", description = "Command center of a Ha'tak vessel. The throne dominates; the Goa'uld must always be elevated. Controls are voice-activated, responding to divine command." },
+    { name = "Kull Warrior Laboratory", description = "Anubis-designed facility for creating super soldiers. The process is horrific, the results devastating. Finding and destroying these sites is a priority." },
+    { name = "Naquadah Mines", description = "Forced labor extraction of the precious mineral. Jaffa oversee human slaves in dangerous conditions. Rebellion simmers constantly beneath the surface." },
+    { name = "Goa'uld Research Facility", description = "Scientific installation developing weapons or studying conquered technology. Ethics are foreign concepts here. The experiments continue regardless of cost." },
+    { name = "Queen's Spawning Pool", description = "Where larval Goa'uld are bred. Carefully controlled environment, heavily guarded. The future of Goa'uld power swims in these waters." },
+]
+
+[other_facilities]
+description = "Installations from other civilizations and factions"
+bases = [
+    { name = "NID Black Site", description = "Unofficial installation where questionable operations occur. Officially doesn't exist. The work done here would never survive public scrutiny." },
+    { name = "Area 51 - Alien Technology Division", description = "Reverse engineering facility in the Nevada desert. Recovered technology becomes human innovation. Progress is slow, breakthroughs are revolutionary." },
+    { name = "Ori Beachhead", description = "Supergate construction zone in contested space. Armies and fleets gather for the invasion. The forces of Origin mass for their holy war." },
+    { name = "Prior Shrine", description = "Temple where Ori worship has taken hold. Priors perform miracles to attract followers. Conversion is encouraged, then required." },
+    { name = "Lucian Alliance Stronghold", description = "Criminal headquarters hidden in abandoned Goa'uld space. Drug production, weapons trade, slave markets. A new power filling the vacuum of fallen gods." },
+    { name = "Replicator-Held World", description = "Planet completely overrun by the mechanical plague. All resources converted to more Replicators. Approaching it is suicide." },
+    { name = "Wraith Hive Structure", description = "Ground installation supporting Wraith operations. Organic architecture pulses with alien life. Human prisoners are stored for feeding." },
+    { name = "Genii Bunker Complex", description = "Hidden military installation beneath a pretend-primitive world. Nuclear weapons in development. Allies of convenience, enemies of opportunity." },
+    { name = "Traveler Camp", description = "Temporary settlement of the nomadic Travelers. Ships are home; planets are rest stops. They'll move on when circumstances demand." },
+    { name = "Nox Sanctuary", description = "Rarely revealed settlement of the pacifist Nox. Technology beyond understanding, used only for healing and hiding. Violence literally cannot occur here." },
+]
