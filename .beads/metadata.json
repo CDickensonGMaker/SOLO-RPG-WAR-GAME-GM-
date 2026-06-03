@@ -1,0 +1,7 @@
+{
+  "database": "dolt",
+  "backend": "dolt",
+  "dolt_mode": "embedded",
+  "dolt_database": "oracle",
+  "project_id": "754af2c5-4500-42c2-85fc-b50a728396cd"
+}
