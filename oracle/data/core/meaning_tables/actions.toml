@@ -1,0 +1,670 @@
+# ============================================================================
+# MEANING TABLE: ACTIONS
+# ============================================================================
+# 100 action verbs for oracle interpretation. Combine with a Subject to
+# create surprising, specific complications and elaborations.
+#
+# Usage: Roll or pick an Action + Subject pair, then interpret in context.
+# Example: "Reveals + The Secret" -> "The merchant reveals your father's journal"
+#
+# Categories help weight rolls toward relevant actions.
+# ============================================================================
+
+[meta]
+title = "Action Meaning Table"
+description = "Verbs for oracle interpretation - what is happening?"
+version = "1.0.0"
+
+# ============================================================================
+# CORE ACTIONS (Universal - work in any context)
+# ============================================================================
+
+[[actions]]
+word = "Reveals"
+category = ["core", "social", "exploration"]
+weight = 2
+synonyms = ["Exposes", "Uncovers", "Discloses"]
+
+[[actions]]
+word = "Conceals"
+category = ["core", "social"]
+weight = 2
+synonyms = ["Hides", "Buries", "Obscures"]
+
+[[actions]]
+word = "Betrays"
+category = ["core", "social"]
+weight = 1
+synonyms = ["Turns on", "Sells out", "Abandons"]
+
+[[actions]]
+word = "Protects"
+category = ["core", "combat", "social"]
+weight = 2
+synonyms = ["Guards", "Shields", "Defends"]
+
+[[actions]]
+word = "Destroys"
+category = ["core", "combat"]
+weight = 1
+synonyms = ["Ruins", "Annihilates", "Shatters"]
+
+[[actions]]
+word = "Creates"
+category = ["core"]
+weight = 2
+synonyms = ["Builds", "Forms", "Generates"]
+
+[[actions]]
+word = "Transforms"
+category = ["core"]
+weight = 1
+synonyms = ["Changes", "Alters", "Converts"]
+
+[[actions]]
+word = "Connects"
+category = ["core", "social"]
+weight = 2
+synonyms = ["Links", "Joins", "Unites"]
+
+[[actions]]
+word = "Separates"
+category = ["core", "social"]
+weight = 2
+synonyms = ["Divides", "Splits", "Isolates"]
+
+[[actions]]
+word = "Returns"
+category = ["core"]
+weight = 2
+synonyms = ["Comes back", "Resurfaces", "Reappears"]
+
+# ============================================================================
+# SOCIAL/POLITICAL ACTIONS
+# ============================================================================
+
+[[actions]]
+word = "Manipulates"
+category = ["social"]
+weight = 2
+synonyms = ["Controls", "Influences", "Schemes"]
+
+[[actions]]
+word = "Negotiates"
+category = ["social"]
+weight = 2
+synonyms = ["Bargains", "Deals", "Trades"]
+
+[[actions]]
+word = "Deceives"
+category = ["social"]
+weight = 2
+synonyms = ["Lies", "Misleads", "Tricks"]
+
+[[actions]]
+word = "Trusts"
+category = ["social"]
+weight = 2
+synonyms = ["Believes", "Relies on", "Confides in"]
+
+[[actions]]
+word = "Suspects"
+category = ["social"]
+weight = 2
+synonyms = ["Doubts", "Questions", "Distrusts"]
+
+[[actions]]
+word = "Accuses"
+category = ["social"]
+weight = 1
+synonyms = ["Blames", "Charges", "Indicts"]
+
+[[actions]]
+word = "Forgives"
+category = ["social"]
+weight = 1
+synonyms = ["Pardons", "Absolves", "Excuses"]
+
+[[actions]]
+word = "Demands"
+category = ["social"]
+weight = 2
+synonyms = ["Insists", "Requires", "Commands"]
+
+[[actions]]
+word = "Offers"
+category = ["social"]
+weight = 2
+synonyms = ["Proposes", "Presents", "Extends"]
+
+[[actions]]
+word = "Refuses"
+category = ["social"]
+weight = 2
+synonyms = ["Rejects", "Denies", "Declines"]
+
+[[actions]]
+word = "Confesses"
+category = ["social"]
+weight = 1
+synonyms = ["Admits", "Acknowledges", "Owns up"]
+
+[[actions]]
+word = "Warns"
+category = ["social", "combat"]
+weight = 2
+synonyms = ["Alerts", "Cautions", "Advises"]
+
+[[actions]]
+word = "Threatens"
+category = ["social", "combat"]
+weight = 2
+synonyms = ["Menaces", "Intimidates", "Pressures"]
+
+[[actions]]
+word = "Promises"
+category = ["social"]
+weight = 2
+synonyms = ["Vows", "Pledges", "Swears"]
+
+[[actions]]
+word = "Breaks"
+category = ["social", "core"]
+weight = 2
+synonyms = ["Violates", "Shatters", "Reneges"]
+
+[[actions]]
+word = "Honors"
+category = ["social"]
+weight = 2
+synonyms = ["Respects", "Upholds", "Fulfills"]
+
+[[actions]]
+word = "Insults"
+category = ["social"]
+weight = 1
+synonyms = ["Offends", "Mocks", "Demeans"]
+
+[[actions]]
+word = "Flatters"
+category = ["social"]
+weight = 1
+synonyms = ["Praises", "Compliments", "Charms"]
+
+[[actions]]
+word = "Recruits"
+category = ["social"]
+weight = 1
+synonyms = ["Enlists", "Persuades", "Converts"]
+
+[[actions]]
+word = "Abandons"
+category = ["social"]
+weight = 1
+synonyms = ["Deserts", "Leaves", "Forsakes"]
+
+# ============================================================================
+# COMBAT/CONFLICT ACTIONS
+# ============================================================================
+
+[[actions]]
+word = "Attacks"
+category = ["combat"]
+weight = 3
+synonyms = ["Strikes", "Assaults", "Charges"]
+
+[[actions]]
+word = "Defends"
+category = ["combat"]
+weight = 3
+synonyms = ["Guards", "Blocks", "Shields"]
+
+[[actions]]
+word = "Retreats"
+category = ["combat"]
+weight = 2
+synonyms = ["Withdraws", "Falls back", "Flees"]
+
+[[actions]]
+word = "Flanks"
+category = ["combat"]
+weight = 2
+synonyms = ["Outmaneuvers", "Surrounds", "Encircles"]
+
+[[actions]]
+word = "Ambushes"
+category = ["combat"]
+weight = 1
+synonyms = ["Surprises", "Traps", "Catches"]
+
+[[actions]]
+word = "Surrenders"
+category = ["combat"]
+weight = 1
+synonyms = ["Yields", "Submits", "Capitulates"]
+
+[[actions]]
+word = "Reinforces"
+category = ["combat"]
+weight = 2
+synonyms = ["Strengthens", "Supports", "Bolsters"]
+
+[[actions]]
+word = "Overwhelms"
+category = ["combat"]
+weight = 1
+synonyms = ["Overruns", "Crushes", "Dominates"]
+
+[[actions]]
+word = "Feints"
+category = ["combat"]
+weight = 1
+synonyms = ["Distracts", "Misleads", "Baits"]
+
+[[actions]]
+word = "Pursues"
+category = ["combat", "exploration"]
+weight = 2
+synonyms = ["Chases", "Hunts", "Follows"]
+
+[[actions]]
+word = "Escapes"
+category = ["combat", "exploration"]
+weight = 2
+synonyms = ["Flees", "Evades", "Breaks free"]
+
+[[actions]]
+word = "Captures"
+category = ["combat"]
+weight = 1
+synonyms = ["Seizes", "Takes", "Imprisons"]
+
+[[actions]]
+word = "Releases"
+category = ["combat", "social"]
+weight = 1
+synonyms = ["Frees", "Liberates", "Lets go"]
+
+[[actions]]
+word = "Wounds"
+category = ["combat"]
+weight = 2
+synonyms = ["Injures", "Hurts", "Damages"]
+
+[[actions]]
+word = "Heals"
+category = ["combat", "core"]
+weight = 2
+synonyms = ["Mends", "Restores", "Cures"]
+
+# ============================================================================
+# EXPLORATION/DISCOVERY ACTIONS
+# ============================================================================
+
+[[actions]]
+word = "Discovers"
+category = ["exploration"]
+weight = 3
+synonyms = ["Finds", "Uncovers", "Locates"]
+
+[[actions]]
+word = "Loses"
+category = ["exploration", "core"]
+weight = 2
+synonyms = ["Misplaces", "Forfeits", "Drops"]
+
+[[actions]]
+word = "Opens"
+category = ["exploration"]
+weight = 2
+synonyms = ["Unlocks", "Reveals", "Accesses"]
+
+[[actions]]
+word = "Closes"
+category = ["exploration"]
+weight = 2
+synonyms = ["Seals", "Locks", "Shuts"]
+
+[[actions]]
+word = "Enters"
+category = ["exploration"]
+weight = 2
+synonyms = ["Arrives at", "Penetrates", "Breaches"]
+
+[[actions]]
+word = "Exits"
+category = ["exploration"]
+weight = 2
+synonyms = ["Leaves", "Departs", "Escapes"]
+
+[[actions]]
+word = "Triggers"
+category = ["exploration"]
+weight = 2
+synonyms = ["Activates", "Sets off", "Initiates"]
+
+[[actions]]
+word = "Disarms"
+category = ["exploration", "combat"]
+weight = 1
+synonyms = ["Deactivates", "Neutralizes", "Defuses"]
+
+[[actions]]
+word = "Explores"
+category = ["exploration"]
+weight = 2
+synonyms = ["Investigates", "Searches", "Examines"]
+
+[[actions]]
+word = "Maps"
+category = ["exploration"]
+weight = 1
+synonyms = ["Charts", "Documents", "Records"]
+
+[[actions]]
+word = "Navigates"
+category = ["exploration"]
+weight = 2
+synonyms = ["Guides", "Leads", "Directs"]
+
+[[actions]]
+word = "Blocks"
+category = ["exploration", "combat"]
+weight = 2
+synonyms = ["Obstructs", "Bars", "Impedes"]
+
+[[actions]]
+word = "Clears"
+category = ["exploration"]
+weight = 2
+synonyms = ["Removes", "Opens", "Frees"]
+
+# ============================================================================
+# KNOWLEDGE/INFORMATION ACTIONS
+# ============================================================================
+
+[[actions]]
+word = "Learns"
+category = ["core", "social"]
+weight = 2
+synonyms = ["Discovers", "Realizes", "Understands"]
+
+[[actions]]
+word = "Teaches"
+category = ["social"]
+weight = 1
+synonyms = ["Instructs", "Shows", "Explains"]
+
+[[actions]]
+word = "Remembers"
+category = ["core"]
+weight = 2
+synonyms = ["Recalls", "Recognizes", "Recollects"]
+
+[[actions]]
+word = "Forgets"
+category = ["core"]
+weight = 1
+synonyms = ["Loses", "Overlooks", "Misses"]
+
+[[actions]]
+word = "Investigates"
+category = ["exploration", "social"]
+weight = 2
+synonyms = ["Researches", "Probes", "Examines"]
+
+[[actions]]
+word = "Misinterprets"
+category = ["core"]
+weight = 1
+synonyms = ["Misunderstands", "Confuses", "Distorts"]
+
+[[actions]]
+word = "Confirms"
+category = ["core", "social"]
+weight = 2
+synonyms = ["Verifies", "Validates", "Proves"]
+
+[[actions]]
+word = "Denies"
+category = ["social"]
+weight = 2
+synonyms = ["Refutes", "Contradicts", "Disputes"]
+
+# ============================================================================
+# RESOURCE/POSSESSION ACTIONS
+# ============================================================================
+
+[[actions]]
+word = "Acquires"
+category = ["core"]
+weight = 2
+synonyms = ["Obtains", "Gains", "Secures"]
+
+[[actions]]
+word = "Sacrifices"
+category = ["core"]
+weight = 1
+synonyms = ["Gives up", "Surrenders", "Loses"]
+
+[[actions]]
+word = "Steals"
+category = ["social", "exploration"]
+weight = 1
+synonyms = ["Takes", "Pilfers", "Robs"]
+
+[[actions]]
+word = "Hoards"
+category = ["social"]
+weight = 1
+synonyms = ["Stockpiles", "Collects", "Amasses"]
+
+[[actions]]
+word = "Shares"
+category = ["social"]
+weight = 2
+synonyms = ["Distributes", "Gives", "Divides"]
+
+[[actions]]
+word = "Exhausts"
+category = ["core", "combat"]
+weight = 2
+synonyms = ["Depletes", "Drains", "Uses up"]
+
+[[actions]]
+word = "Restores"
+category = ["core"]
+weight = 2
+synonyms = ["Replenishes", "Renews", "Recovers"]
+
+[[actions]]
+word = "Corrupts"
+category = ["core"]
+weight = 1
+synonyms = ["Taints", "Poisons", "Perverts"]
+
+[[actions]]
+word = "Purifies"
+category = ["core"]
+weight = 1
+synonyms = ["Cleanses", "Sanctifies", "Restores"]
+
+# ============================================================================
+# TIME/FATE ACTIONS
+# ============================================================================
+
+[[actions]]
+word = "Delays"
+category = ["core"]
+weight = 2
+synonyms = ["Postpones", "Slows", "Stalls"]
+
+[[actions]]
+word = "Accelerates"
+category = ["core"]
+weight = 1
+synonyms = ["Speeds up", "Hastens", "Rushes"]
+
+[[actions]]
+word = "Interrupts"
+category = ["core"]
+weight = 2
+synonyms = ["Disrupts", "Breaks", "Halts"]
+
+[[actions]]
+word = "Continues"
+category = ["core"]
+weight = 2
+synonyms = ["Persists", "Endures", "Proceeds"]
+
+[[actions]]
+word = "Begins"
+category = ["core"]
+weight = 2
+synonyms = ["Starts", "Initiates", "Commences"]
+
+[[actions]]
+word = "Ends"
+category = ["core"]
+weight = 2
+synonyms = ["Finishes", "Concludes", "Terminates"]
+
+[[actions]]
+word = "Repeats"
+category = ["core"]
+weight = 1
+synonyms = ["Recurs", "Cycles", "Returns"]
+
+[[actions]]
+word = "Reverses"
+category = ["core"]
+weight = 1
+synonyms = ["Undoes", "Inverts", "Counteracts"]
+
+# ============================================================================
+# EMOTIONAL/PSYCHOLOGICAL ACTIONS
+# ============================================================================
+
+[[actions]]
+word = "Fears"
+category = ["social", "combat"]
+weight = 2
+synonyms = ["Dreads", "Worries about", "Avoids"]
+
+[[actions]]
+word = "Desires"
+category = ["social"]
+weight = 2
+synonyms = ["Wants", "Craves", "Seeks"]
+
+[[actions]]
+word = "Hates"
+category = ["social"]
+weight = 1
+synonyms = ["Despises", "Loathes", "Detests"]
+
+[[actions]]
+word = "Loves"
+category = ["social"]
+weight = 1
+synonyms = ["Adores", "Cherishes", "Treasures"]
+
+[[actions]]
+word = "Envies"
+category = ["social"]
+weight = 1
+synonyms = ["Covets", "Resents", "Jealously eyes"]
+
+[[actions]]
+word = "Pities"
+category = ["social"]
+weight = 1
+synonyms = ["Sympathizes with", "Feels for", "Mourns"]
+
+[[actions]]
+word = "Inspires"
+category = ["social"]
+weight = 2
+synonyms = ["Motivates", "Encourages", "Empowers"]
+
+[[actions]]
+word = "Demoralizes"
+category = ["social", "combat"]
+weight = 1
+synonyms = ["Discourages", "Disheartens", "Breaks"]
+
+[[actions]]
+word = "Comforts"
+category = ["social"]
+weight = 1
+synonyms = ["Soothes", "Reassures", "Calms"]
+
+[[actions]]
+word = "Torments"
+category = ["social", "combat"]
+weight = 1
+synonyms = ["Tortures", "Haunts", "Plagues"]
+
+# ============================================================================
+# POWER/AUTHORITY ACTIONS
+# ============================================================================
+
+[[actions]]
+word = "Commands"
+category = ["social", "combat"]
+weight = 2
+synonyms = ["Orders", "Directs", "Rules"]
+
+[[actions]]
+word = "Obeys"
+category = ["social"]
+weight = 2
+synonyms = ["Follows", "Complies", "Submits"]
+
+[[actions]]
+word = "Rebels"
+category = ["social", "combat"]
+weight = 1
+synonyms = ["Defies", "Resists", "Revolts"]
+
+[[actions]]
+word = "Usurps"
+category = ["social"]
+weight = 1
+synonyms = ["Seizes", "Overthrows", "Takes over"]
+
+[[actions]]
+word = "Abdicates"
+category = ["social"]
+weight = 1
+synonyms = ["Resigns", "Steps down", "Abandons"]
+
+[[actions]]
+word = "Crowns"
+category = ["social"]
+weight = 1
+synonyms = ["Elevates", "Appoints", "Installs"]
+
+[[actions]]
+word = "Exiles"
+category = ["social"]
+weight = 1
+synonyms = ["Banishes", "Expels", "Casts out"]
+
+[[actions]]
+word = "Pardons"
+category = ["social"]
+weight = 1
+synonyms = ["Forgives", "Releases", "Absolves"]
+
+[[actions]]
+word = "Judges"
+category = ["social"]
+weight = 1
+synonyms = ["Evaluates", "Sentences", "Rules on"]
+
+[[actions]]
+word = "Witnesses"
+category = ["core", "social"]
+weight = 2
+synonyms = ["Observes", "Sees", "Notices"]

@@ -10,7 +10,7 @@ The memory system maintains:
 """
 
 from dataclasses import dataclass, field
-from typing import List, Dict, Any, Optional
+from typing import List, Dict, Any, Optional, Set
 from datetime import datetime
 from collections import deque
 import json
@@ -53,6 +53,12 @@ class TrackedEntity:
     disposition: int = 0  # -100 to 100 for NPCs
     notes: List[str] = field(default_factory=list)
     last_mentioned: str = ""
+    # World Model extensions
+    attributes: Dict[str, Any] = field(default_factory=dict)
+    discovered: bool = False
+    revealed_attributes: Set[str] = field(default_factory=set)
+    source: str = "procedural"  # "procedural", "authored", "player"
+    lore_id: Optional[str] = None
 
     def to_dict(self) -> dict:
         return {
@@ -63,7 +69,12 @@ class TrackedEntity:
             "status": self.status,
             "disposition": self.disposition,
             "notes": self.notes,
-            "last_mentioned": self.last_mentioned
+            "last_mentioned": self.last_mentioned,
+            "attributes": self.attributes,
+            "discovered": self.discovered,
+            "revealed_attributes": list(self.revealed_attributes),  # Set -> List for JSON
+            "source": self.source,
+            "lore_id": self.lore_id
         }
 
 
@@ -127,6 +138,21 @@ class SessionMemory:
         # Chaos and mood tracking
         self.chaos_factor: int = 5
         self.tension_level: int = 5
+
+        # Create player entity for tracking player state
+        self.entities["player"] = TrackedEntity(
+            name="Player",
+            entity_type="player",
+            description="The protagonist",
+            discovered=True,
+            source="player",
+            attributes={
+                "active_effects": [],  # Curses, conditions, buffs
+                "wounds": [],          # Physical damage
+                "inventory": [],       # Notable items
+                "reputation": {},      # Faction standings
+            }
+        )
 
     def add_message(self, content: str, msg_type: str = "user",
                     metadata: Dict[str, Any] = None):
@@ -308,6 +334,12 @@ class SessionMemory:
 
         # Restore entities
         for entity_id, entity_data in data.get("entities", {}).items():
+            # Handle "type" -> "entity_type" key mapping
+            if "type" in entity_data and "entity_type" not in entity_data:
+                entity_data["entity_type"] = entity_data.pop("type")
+            # Convert revealed_attributes List -> Set
+            if "revealed_attributes" in entity_data:
+                entity_data["revealed_attributes"] = set(entity_data["revealed_attributes"])
             memory.entities[entity_id] = TrackedEntity(**entity_data)
 
         # Restore threads

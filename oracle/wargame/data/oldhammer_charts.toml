@@ -1,0 +1,386 @@
+# Oldhammer 2E (Warhammer 40,000 2nd Edition) Charts
+# All the classic tables that made 2nd Edition so crunchy
+
+[metadata]
+name = "Warhammer 40,000 2nd Edition"
+edition = "2nd"
+year = 1993
+notes = "The classic edition with detailed armor modifiers and sustained fire"
+
+# =============================================================================
+# BALLISTIC SKILL TO-HIT CHART (Shooting)
+# =============================================================================
+# BS value -> target number needed on d6
+[bs_chart]
+1 = 6   # BS1: needs 6 to hit
+2 = 5   # BS2: needs 5+
+3 = 4   # BS3: needs 4+ (standard trooper)
+4 = 3   # BS4: needs 3+ (veteran)
+5 = 2   # BS5: needs 2+ (expert)
+6 = 2   # BS6: needs 2+ with reroll misses
+7 = 2   # BS7: needs 2+ with reroll misses (superhuman)
+8 = 2   # BS8: needs 2+ with reroll misses (legendary)
+
+# BS6+ special: if BS > 5, reroll misses on (BS - 5)+
+# e.g., BS6 rerolls all misses, BS7 rerolls on 2+, BS8 rerolls on 3+
+
+# =============================================================================
+# WEAPON SKILL VS WEAPON SKILL CHART (Melee)
+# =============================================================================
+# Format: "attacker_ws.defender_ws" -> target number
+# Reading: attacker WS vs defender WS = what attacker needs to hit
+[ws_chart]
+"1.1" = 4
+"1.2" = 4
+"1.3" = 5
+"1.4" = 5
+"1.5" = 5
+"1.6" = 5
+"1.7" = 5
+"1.8" = 5
+"1.9" = 5
+"1.10" = 5
+
+"2.1" = 3
+"2.2" = 4
+"2.3" = 4
+"2.4" = 4
+"2.5" = 5
+"2.6" = 5
+"2.7" = 5
+"2.8" = 5
+"2.9" = 5
+"2.10" = 5
+
+"3.1" = 3
+"3.2" = 3
+"3.3" = 4
+"3.4" = 4
+"3.5" = 4
+"3.6" = 4
+"3.7" = 5
+"3.8" = 5
+"3.9" = 5
+"3.10" = 5
+
+"4.1" = 3
+"4.2" = 3
+"4.3" = 3
+"4.4" = 4
+"4.5" = 4
+"4.6" = 4
+"4.7" = 4
+"4.8" = 4
+"4.9" = 5
+"4.10" = 5
+
+"5.1" = 3
+"5.2" = 3
+"5.3" = 3
+"5.4" = 3
+"5.5" = 4
+"5.6" = 4
+"5.7" = 4
+"5.8" = 4
+"5.9" = 4
+"5.10" = 4
+
+"6.1" = 3
+"6.2" = 3
+"6.3" = 3
+"6.4" = 3
+"6.5" = 3
+"6.6" = 4
+"6.7" = 4
+"6.8" = 4
+"6.9" = 4
+"6.10" = 4
+
+"7.1" = 3
+"7.2" = 3
+"7.3" = 3
+"7.4" = 3
+"7.5" = 3
+"7.6" = 3
+"7.7" = 4
+"7.8" = 4
+"7.9" = 4
+"7.10" = 4
+
+"8.1" = 3
+"8.2" = 3
+"8.3" = 3
+"8.4" = 3
+"8.5" = 3
+"8.6" = 3
+"8.7" = 3
+"8.8" = 4
+"8.9" = 4
+"8.10" = 4
+
+"9.1" = 3
+"9.2" = 3
+"9.3" = 3
+"9.4" = 3
+"9.5" = 3
+"9.6" = 3
+"9.7" = 3
+"9.8" = 3
+"9.9" = 4
+"9.10" = 4
+
+"10.1" = 3
+"10.2" = 3
+"10.3" = 3
+"10.4" = 3
+"10.5" = 3
+"10.6" = 3
+"10.7" = 3
+"10.8" = 3
+"10.9" = 3
+"10.10" = 4
+
+# =============================================================================
+# STRENGTH VS TOUGHNESS WOUND CHART
+# =============================================================================
+# Format: strength - toughness difference -> target number
+# Positive = strength higher, negative = toughness higher
+[wound_chart]
+# S much greater than T
+"4" = 2   # S >= T+4: 2+ to wound
+"3" = 2   # S = T+3: 2+ to wound
+"2" = 2   # S = T+2: 2+ to wound (cap at 2+)
+"1" = 3   # S = T+1: 3+ to wound
+"0" = 4   # S = T: 4+ to wound
+"-1" = 5  # S = T-1: 5+ to wound
+"-2" = 6  # S = T-2: 6+ to wound
+"-3" = 6  # S = T-3: 6+ to wound (cap at 6)
+"-4" = 6  # S <= T-4: 6+ to wound
+
+# Special: if S < T/2, cannot wound at all (return 0)
+# This is handled in code, not in chart
+
+# =============================================================================
+# ARMOR SAVE MODIFIERS BY STRENGTH
+# =============================================================================
+# Strength of attack -> armor save modifier
+# In 2nd Ed, higher strength makes armor saves harder
+[armor_modifiers]
+1 = 0   # S1: no modifier
+2 = 0   # S2: no modifier
+3 = 0   # S3: no modifier (bolter strength, lasgun)
+4 = -1  # S4: -1 to armor save (bolt pistol, chainsword)
+5 = -2  # S5: -2 save mod (plasma gun)
+6 = -3  # S6: -3 save mod (lascannon, power fist)
+7 = -4  # S7: -4 save mod (multi-melta)
+8 = -5  # S8: -5 save mod (tank weapons)
+9 = -6  # S9: -6 save mod (destroyer weapons)
+10 = -6 # S10: -6 save mod (titan weapons)
+
+# Additional AP from special rules (cumulative with strength)
+# e.g., power weapons add -2
+
+# =============================================================================
+# SUSTAINED FIRE RULES
+# =============================================================================
+[sustained_fire]
+enabled = true
+description = "Roll extra dice. On doubles, weapon jams. Each die over 1 = extra shots."
+
+# Sustained fire dice results
+# 1 = jam check (if any other die also shows 1, jam!)
+# 2-6 = that many extra shots
+
+[sustained_fire.dice_colors]
+jam = "red"      # Jam dice (first die)
+bonus = "white"  # Bonus shot dice
+
+[sustained_fire.jam_rules]
+doubles = "If any two sustained fire dice show the same number, the weapon jams"
+jam_effect = "No shots fired this turn. Roll on the Ammo table."
+heavy_weapons = "Heavy weapons may use sustained fire while stationary"
+
+# =============================================================================
+# GETS HOT! RULES (Plasma Weapons)
+# =============================================================================
+[gets_hot]
+trigger = 1  # Roll of 1 to hit triggers Gets Hot
+effect = "automatic_wound"
+save_allowed = true  # Armor save allowed against Gets Hot wound
+description = "On a roll of 1 to hit with a plasma weapon, the firer suffers an automatic wound"
+
+[gets_hot.weapons]
+plasma_pistol = true
+plasma_gun = true
+plasma_cannon = true
+
+# =============================================================================
+# RAPID FIRE RULES
+# =============================================================================
+[rapid_fire]
+description = "Fire twice at half range"
+triggers_at = "half_range"  # e.g., 12" for a 24" weapon
+
+# =============================================================================
+# LEADERSHIP AND MORALE
+# =============================================================================
+[morale]
+# Break test: roll 2d6 <= Leadership to pass
+# Modifiers for break tests
+[morale.break_modifiers]
+lost_combat = -1          # Per wound margin lost in combat
+outnumbered_2_to_1 = -1   # If outnumbered 2:1
+outnumbered_3_to_1 = -2   # If outnumbered 3:1
+in_cover = 1              # If in cover
+near_banner = 1           # Within 12" of army banner
+near_hero = 1             # Within 12" of hero (Ld 8+)
+
+[morale.rout]
+description = "Failed break test: unit falls back 2d6 inches toward board edge"
+rally_test = "Roll 2d6 <= Leadership at start of turn to rally"
+destroyed_if = "Falls back off board edge or fails rally at board edge"
+
+# =============================================================================
+# VEHICLE DAMAGE CHARTS
+# =============================================================================
+[vehicle_damage]
+description = "Roll d6 + weapon strength - armor value"
+
+# Location hit chart (d6)
+[vehicle_damage.location]
+1 = "hull_front"
+2 = "hull_front"
+3 = "hull_side"
+4 = "hull_side"
+5 = "turret"
+6 = "turret"
+
+# Glancing hit effects (penetration = armor value)
+[vehicle_damage.glancing]
+1 = "crew_shaken"
+2 = "crew_shaken"
+3 = "crew_stunned"
+4 = "weapon_destroyed"
+5 = "immobilized"
+6 = "immobilized"
+
+# Penetrating hit effects (penetration > armor value)
+[vehicle_damage.penetrating]
+1 = "crew_shaken"
+2 = "crew_stunned"
+3 = "weapon_destroyed"
+4 = "immobilized"
+5 = "explodes"
+6 = "explodes"
+
+# Effect descriptions
+[vehicle_damage.effects]
+crew_shaken = "May not shoot or move next turn"
+crew_stunned = "May not shoot or move for d3 turns"
+weapon_destroyed = "One weapon (random) is destroyed"
+immobilized = "May not move for rest of game"
+explodes = "Vehicle destroyed. Crew killed on 4+. d6\" explosion radius."
+
+# Armor values (typical)
+[vehicle_damage.typical_armor]
+rhino_front = 11
+rhino_side = 11
+rhino_rear = 10
+land_raider_front = 14
+land_raider_side = 14
+land_raider_rear = 14
+leman_russ_front = 14
+leman_russ_side = 12
+leman_russ_rear = 10
+
+# =============================================================================
+# PSYCHIC POWERS
+# =============================================================================
+[psychic]
+manifest_roll = "2d6"
+base_difficulty = 7  # Standard power difficulty
+perils_trigger = [2, 12]  # Double 1s or double 6s = Perils
+
+[psychic.perils]
+description = "Psyker loses d3 wounds, no save"
+daemon_check = "Roll d6: on 1, psyker is possessed by daemon"
+
+# =============================================================================
+# SPECIAL WEAPON RULES
+# =============================================================================
+[special_rules]
+
+[special_rules.power_weapon]
+description = "Ignores armor saves"
+save_modifier = "none"  # No armor save allowed
+
+[special_rules.force_weapon]
+description = "Power weapon that can instant-kill if psychic test passed"
+instant_kill = true
+requires_psychic_test = true
+
+[special_rules.chainfist]
+description = "Power fist that rolls 2d6 for armor penetration vs vehicles"
+vehicle_penetration = "2d6"
+
+[special_rules.melta]
+description = "Roll 2d6 for armor penetration at half range"
+half_range_bonus = "2d6"
+
+[special_rules.rending]
+description = "On a to-wound roll of 6, ignore armor saves"
+trigger = 6
+effect = "ignore_armor"
+
+[special_rules.poisoned]
+description = "Always wound on fixed number, ignoring toughness"
+wound_on = 4  # Default poison wounds on 4+
+
+[special_rules.template]
+description = "Hits all models under template, no roll to hit"
+auto_hit = true
+types = ["flamer", "heavy_flamer", "inferno_cannon"]
+
+[special_rules.blast]
+description = "Scatter d6 inches, hits models under template"
+scatter = "d6"
+small_blast = "3\""
+large_blast = "5\""
+ordnance = "7\""
+
+# =============================================================================
+# TURN SEQUENCE
+# =============================================================================
+[turn_sequence]
+phases = [
+    "movement",
+    "shooting",
+    "hand_to_hand",
+    "psychic",
+    "rally"
+]
+
+[turn_sequence.movement]
+standard = "6\""
+difficult_terrain = "d6\""
+charge = "double_move"
+fall_back = "2d6\""
+
+[turn_sequence.shooting]
+order = "simultaneous"
+heavy_weapons = "Cannot move and shoot (unless relentless)"
+rapid_fire = "Double shots at half range, or single shot and assault"
+
+[turn_sequence.hand_to_hand]
+order = "initiative"
+pile_in = "2\""
+consolidate = "d6\""
+sweeping_advance = true
+
+[turn_sequence.psychic]
+timing = "After hand-to-hand"
+force_weapon_check = "After successful wound"
+
+[turn_sequence.rally]
+requirement = "2d6 <= Leadership"
+restrictions = "Cannot rally if below 25% strength"

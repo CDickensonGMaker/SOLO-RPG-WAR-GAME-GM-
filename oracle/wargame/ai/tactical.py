@@ -1,4 +1,14 @@
-"""Tactical AI system for wargame mode."""
+"""
+Tactical AI system for wargame mode.
+
+Provides threat assessment, tactical decision-making, and option generation
+based on doctrine and aggression settings. This is the "advisor" AI that
+analyzes situations - for an AI that actually plays, see opponent.py.
+
+Moved from oracle/wargame.py as part of the wargame package restructure.
+"""
+
+from __future__ import annotations
 
 import random
 from dataclasses import dataclass, field
@@ -8,6 +18,7 @@ from typing import Optional
 
 class Aggression(Enum):
     """AI aggression levels affecting tactical decisions."""
+
     PASSIVE = ("Passive", -2)
     CAUTIOUS = ("Cautious", -1)
     BALANCED = ("Balanced", 0)
@@ -21,6 +32,7 @@ class Aggression(Enum):
 
 class Doctrine(Enum):
     """Combat doctrine affecting unit behavior."""
+
     HORDE = ("Horde", "Overwhelm with numbers")
     ELITE = ("Elite", "Quality over quantity")
     DEFENSIVE = ("Defensive", "Hold and fortify")
@@ -34,6 +46,7 @@ class Doctrine(Enum):
 
 class ThreatLevel(Enum):
     """Threat assessment levels."""
+
     HIGH = "HIGH"
     MEDIUM = "MEDIUM"
     LOW = "LOW"
@@ -42,6 +55,7 @@ class ThreatLevel(Enum):
 @dataclass
 class ThreatAssessment:
     """Assessment of a potential threat."""
+
     target: str
     level: ThreatLevel
     reason: str
@@ -53,6 +67,7 @@ class ThreatAssessment:
 @dataclass
 class TacticalOption:
     """A possible tactical action."""
+
     description: str
     weight: float
     modified_weight: float = 0.0
@@ -69,6 +84,7 @@ class TacticalOption:
 @dataclass
 class TacticalDecision:
     """Result of tactical analysis and decision making."""
+
     threats: list[ThreatAssessment]
     options: list[TacticalOption]
     selected: TacticalOption
@@ -106,7 +122,6 @@ THREAT_KEYWORDS: dict[str, tuple[ThreatLevel, str]] = {
     "machine gun": (ThreatLevel.HIGH, "Suppression capability"),
     "flamer": (ThreatLevel.HIGH, "Area denial weapon"),
     "mech": (ThreatLevel.HIGH, "Heavy assault unit"),
-
     # Medium threats
     "squad": (ThreatLevel.MEDIUM, "Infantry formation"),
     "fireteam": (ThreatLevel.MEDIUM, "Small unit"),
@@ -116,7 +131,6 @@ THREAT_KEYWORDS: dict[str, tuple[ThreatLevel, str]] = {
     "elite": (ThreatLevel.MEDIUM, "Quality opposition"),
     "officer": (ThreatLevel.MEDIUM, "Leadership present"),
     "flanking": (ThreatLevel.MEDIUM, "Tactical maneuver"),
-
     # Low threats
     "open": (ThreatLevel.LOW, "Exposed position"),
     "scattered": (ThreatLevel.LOW, "Disorganized"),
@@ -209,17 +223,9 @@ class WargameAI:
 
         for keyword, (level, reason) in THREAT_KEYWORDS.items():
             if keyword in situation_lower:
-                # Find the context around the keyword for target description
-                idx = situation_lower.find(keyword)
-                start = max(0, idx - 20)
-                end = min(len(situation), idx + len(keyword) + 20)
-                context = situation[start:end].strip()
-
-                threats.append(ThreatAssessment(
-                    target=keyword.title(),
-                    level=level,
-                    reason=reason
-                ))
+                threats.append(
+                    ThreatAssessment(target=keyword.title(), level=level, reason=reason)
+                )
 
         # Sort by threat level (HIGH first)
         level_order = {ThreatLevel.HIGH: 0, ThreatLevel.MEDIUM: 1, ThreatLevel.LOW: 2}
@@ -227,15 +233,19 @@ class WargameAI:
 
         # If no threats detected, add a generic assessment
         if not threats:
-            threats.append(ThreatAssessment(
-                target="Unknown",
-                level=ThreatLevel.MEDIUM,
-                reason="Situation unclear - maintain vigilance"
-            ))
+            threats.append(
+                ThreatAssessment(
+                    target="Unknown",
+                    level=ThreatLevel.MEDIUM,
+                    reason="Situation unclear - maintain vigilance",
+                )
+            )
 
         return threats
 
-    def generate_options(self, threats: list[ThreatAssessment]) -> list[TacticalOption]:
+    def generate_options(
+        self, threats: list[ThreatAssessment]
+    ) -> list[TacticalOption]:
         """
         Generate tactical options based on threat assessment.
 
@@ -249,11 +259,9 @@ class WargameAI:
 
         # Start with base options
         for desc, weight, action_type in BASE_OPTIONS:
-            options.append(TacticalOption(
-                description=desc,
-                weight=weight,
-                action_type=action_type
-            ))
+            options.append(
+                TacticalOption(description=desc, weight=weight, action_type=action_type)
+            )
 
         # Modify weights based on threat levels present
         high_threat_count = sum(1 for t in threats if t.level == ThreatLevel.HIGH)
@@ -276,7 +284,9 @@ class WargameAI:
 
         return options
 
-    def apply_modifiers(self, options: list[TacticalOption]) -> list[TacticalOption]:
+    def apply_modifiers(
+        self, options: list[TacticalOption]
+    ) -> list[TacticalOption]:
         """
         Apply doctrine and aggression modifiers to tactical options.
 
@@ -363,7 +373,7 @@ class WargameAI:
             options=options,
             selected=selected,
             doctrine=self.doctrine,
-            aggression=self.aggression
+            aggression=self.aggression,
         )
 
     def _weighted_select(self, options: list[TacticalOption]) -> TacticalOption:
@@ -452,11 +462,11 @@ class WargameAI:
 
         # Doctrine modifiers
         doctrine_mods = {
-            Doctrine.HORDE: -10,      # More likely to break
-            Doctrine.ELITE: 15,       # Less likely to break
-            Doctrine.DEFENSIVE: 10,   # Stubborn
+            Doctrine.HORDE: -10,  # More likely to break
+            Doctrine.ELITE: 15,  # Less likely to break
+            Doctrine.DEFENSIVE: 10,  # Stubborn
             Doctrine.ALPHA_STRIKE: -5,  # Committed but fragile
-            Doctrine.GUERRILLA: 5,    # Know when to run
+            Doctrine.GUERRILLA: 5,  # Know when to run
         }
 
         threshold = base_threshold + doctrine_mods.get(self.doctrine, 0)
@@ -526,12 +536,14 @@ class WargameAI:
             icon = {"HIGH": "!!!", "MEDIUM": " ! ", "LOW": "   "}[threat.level.value]
             lines.append(f"  [{icon}] {threat.target}: {threat.reason}")
 
-        lines.extend([
-            "",
-            "-" * 50,
-            "OPTIONS EVALUATED",
-            "-" * 50,
-        ])
+        lines.extend(
+            [
+                "",
+                "-" * 50,
+                "OPTIONS EVALUATED",
+                "-" * 50,
+            ]
+        )
 
         for i, opt in enumerate(decision.options[:5], 1):
             bar_len = int(opt.modified_weight * 3)
@@ -539,12 +551,14 @@ class WargameAI:
             lines.append(f"  {i}. {opt.description}")
             lines.append(f"     Weight: {opt.modified_weight:.1f} [{bar}]")
 
-        lines.extend([
-            "",
-            "=" * 50,
-            f">>> DECISION: {decision.selected.description.upper()}",
-            "=" * 50,
-        ])
+        lines.extend(
+            [
+                "",
+                "=" * 50,
+                f">>> DECISION: {decision.selected.description.upper()}",
+                "=" * 50,
+            ]
+        )
 
         return "\n".join(lines)
 
@@ -593,66 +607,3 @@ def set_aggression(aggression: Aggression) -> Aggression:
 def render(decision: TacticalDecision) -> str:
     """Render a decision using the default AI."""
     return _ai.render_decision(decision)
-
-
-if __name__ == "__main__":
-    import sys
-    args = sys.argv[1:]
-
-    if not args:
-        print("Oracle Wargame Tactical AI")
-        print()
-        print("Usage: python -m oracle.wargame [options] <situation>")
-        print()
-        print("Options:")
-        print("  --doctrine <type>    Set doctrine (horde/elite/defensive/alpha/guerrilla)")
-        print("  --aggression <level> Set aggression (passive/cautious/balanced/aggressive/reckless)")
-        print("  --event              Roll a random battle event")
-        print("  --morale <percent>   Check morale at given casualty percentage")
-        print()
-        print("Examples:")
-        print("  python -m oracle.wargame Enemy has infantry in cover and tank in open")
-        print("  python -m oracle.wargame --doctrine horde --aggression aggressive Facing elite troops")
-        print("  python -m oracle.wargame --event")
-        print("  python -m oracle.wargame --morale 40")
-    else:
-        doctrine = Doctrine.DEFENSIVE  # Default doctrine
-        aggression = Aggression.BALANCED
-
-        i = 0
-        situation_parts = []
-        while i < len(args):
-            arg = args[i]
-            if arg == "--doctrine" and i + 1 < len(args):
-                try:
-                    doctrine = Doctrine[args[i + 1].upper()]
-                except KeyError:
-                    pass
-                i += 2
-            elif arg == "--aggression" and i + 1 < len(args):
-                try:
-                    aggression = Aggression[args[i + 1].upper()]
-                except KeyError:
-                    pass
-                i += 2
-            elif arg == "--event":
-                print(roll_event())
-                sys.exit(0)
-            elif arg == "--morale" and i + 1 < len(args):
-                try:
-                    pct = float(args[i + 1])
-                    result = check_morale(pct)
-                    print(f"Morale check at {pct}% casualties: {result}")
-                except ValueError:
-                    print("Invalid casualty percentage")
-                sys.exit(0)
-            else:
-                situation_parts.append(arg)
-                i += 1
-
-        if situation_parts:
-            set_doctrine(doctrine)
-            set_aggression(aggression)
-            situation = " ".join(situation_parts)
-            decision = decide(situation)
-            print(decision)

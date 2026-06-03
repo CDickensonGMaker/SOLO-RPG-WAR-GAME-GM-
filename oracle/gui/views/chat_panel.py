@@ -175,8 +175,8 @@ class ChatPanel:
         user_msg = ChatMessage(text.strip(), "user")
         self._add_message(user_msg)
 
-        # Get GM response
-        response = self.gm.process_input(text.strip())
+        # Get GM response using Smart GM (natural language processing)
+        response = self.gm.process_smart(text.strip())
 
         # Add GM response
         gm_msg = ChatMessage(response, "gm")

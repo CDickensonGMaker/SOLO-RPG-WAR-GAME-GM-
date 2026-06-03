@@ -687,6 +687,22 @@ class OracleApp:
         # Generate quest hook with setting context
         self.current_quest = self.quest_gen.generate(complexity=2)
 
+        # Store location data in WorldModel for persistent recall
+        location_entity = self.gm.world_model.get_or_create_entity(
+            self.current_location.name, "location"
+        )
+        location_entity.description = self.current_location.description
+        location_entity.discovered = True
+        location_entity.source = "procedural"
+
+        # Store features and hazards from the generator
+        if hasattr(self.current_location, 'features') and self.current_location.features:
+            location_entity.attributes["features"] = self.current_location.features
+        if hasattr(self.current_location, 'hazards') and self.current_location.hazards:
+            location_entity.attributes["hazards"] = self.current_location.hazards
+        if hasattr(self.current_location, 'secrets') and self.current_location.secrets:
+            location_entity.attributes["secrets"] = self.current_location.secrets
+
         # Set scene in GM memory
         self.gm.memory.set_scene(
             location=self.current_location.name,
@@ -1062,8 +1078,8 @@ class OracleApp:
         # Add user message
         self._add_message("user", text)
 
-        # Get GM response
-        response = self.gm.process_input(text)
+        # Get GM response using smart NLP processing with WorldModel
+        response = self.gm.process_smart(text)
 
         # Maybe generate additional content based on chaos
         # Higher chaos = more random events (~5% at chaos 1, ~50% at chaos 9)
@@ -1339,10 +1355,19 @@ class OracleApp:
             event_parts.append(f"\n*Environment: {encounter.environment}*\n")
 
             if encounter.complications:
-                event_parts.append(f"\n**Complication:** {encounter.complications[0]}")
+                complication = encounter.complications[0]
+                event_parts.append(f"\n**Complication:** {complication}")
+
+                # Store on player entity for query_state queries
+                player = self.gm.memory.entities.get("player")
+                if player:
+                    if "active_effects" not in player.attributes:
+                        player.attributes["active_effects"] = []
+                    player.attributes["active_effects"].append(complication)
+
                 self.gm.memory.add_thread(
-                    f"Deal with: {encounter.complications[0][:30]}",
-                    encounter.complications[0],
+                    f"Deal with: {complication[:30]}",
+                    complication,
                     importance=5
                 )
 
@@ -1398,6 +1423,20 @@ class OracleApp:
 
             event_parts.append("**NEW COMPLICATION**\n")
             event_parts.append(f"{complication}\n")
+
+            # Store on player entity for query_state queries
+            player = self.gm.memory.entities.get("player")
+            if player:
+                if "active_effects" not in player.attributes:
+                    player.attributes["active_effects"] = []
+                player.attributes["active_effects"].append(complication)
+
+            # Also store on scene
+            if "complications" not in self.gm.memory.current_scene:
+                self.gm.memory.current_scene["complications"] = []
+            self.gm.memory.current_scene["complications"].append(complication)
+
+            # Keep existing thread storage
             self.gm.memory.add_thread(complication[:40], complication, importance=6)
 
         elif event_type == "npc_arrival":
@@ -1955,6 +1994,22 @@ class OracleApp:
 
         self.current_location = location
         self.current_scene = scene
+
+        # Store location data in WorldModel for persistent recall
+        location_entity = self.gm.world_model.get_or_create_entity(
+            location.name, "location"
+        )
+        location_entity.description = location.description
+        location_entity.discovered = True
+        location_entity.source = "procedural"
+
+        # Store features and hazards from the generator
+        if hasattr(location, 'features') and location.features:
+            location_entity.attributes["features"] = location.features
+        if hasattr(location, 'hazards') and location.hazards:
+            location_entity.attributes["hazards"] = location.hazards
+        if hasattr(location, 'secrets') and location.secrets:
+            location_entity.attributes["secrets"] = location.secrets
 
         # Update GM memory
         self.gm.memory.set_scene(

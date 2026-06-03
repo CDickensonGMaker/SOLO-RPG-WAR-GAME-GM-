@@ -13,6 +13,8 @@ dependencies = [
 [project.optional-dependencies]
 dev = ["pytest", "black", "ruff"]
 gui = ["dearpygui>=1.9"]
+nlp = ["spacy>=3.5.0"]
+smart = ["spacy>=3.5.0"]  # Alias for nlp - "pip install oracle[smart]"
 
 [project.scripts]
 oracle = "oracle.main:main"

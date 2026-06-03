@@ -1,0 +1,1010 @@
+# Phase Guides for Learning Wargames
+# Detailed step-by-step guidance for each game phase
+
+# =============================================================================
+# OLDHAMMER 2ND EDITION - FULL PHASE BREAKDOWN
+# =============================================================================
+
+[oldhammer_2e]
+name = "Warhammer 40,000 2nd Edition"
+turn_structure = "IGOUGO"  # I-Go-You-Go alternating turns
+description = """
+2nd Edition is a detailed, crunchy game with lots of charts and special rules.
+Each turn has 5 phases. The active player completes all phases before the opponent goes.
+"""
+
+# -----------------------------------------------------------------------------
+# MOVEMENT PHASE
+# -----------------------------------------------------------------------------
+[[oldhammer_2e.phases]]
+name = "Movement"
+order = 1
+color = "green"
+icon = "arrow"
+
+[oldhammer_2e.phases.summary]
+text = "Move your units across the battlefield"
+key_rules = [
+    "Standard infantry move 6\"",
+    "Must declare charges at the START of movement",
+    "Cannot move through enemy models",
+    "Difficult terrain requires d6\" roll"
+]
+
+[[oldhammer_2e.phases.steps]]
+step = 1
+name = "Declare Charges"
+description = """
+BEFORE moving any models, declare which units will charge.
+- Charging units move double distance toward target
+- Target can choose to Stand & Shoot OR Flee
+- If Stand & Shoot: target fires at -1 to hit
+- If Flee: target moves 2d6\" away, charger pursues
+"""
+tips = [
+    "Declare all charges first before moving anything",
+    "Consider whether enemy will flee or shoot",
+    "Failed charges (out of range) still prevent shooting this turn"
+]
+
+[[oldhammer_2e.phases.steps]]
+step = 2
+name = "Move Chargers"
+description = """
+Move charging units first, directly toward their targets.
+- Measure from unit to target
+- Move up to double movement (usually 12\")
+- Must end in base contact if possible
+- If can't reach, stop at maximum distance (charge failed)
+"""
+tips = [
+    "Chargers that fail to reach cannot shoot this turn",
+    "Multiple units can charge the same target"
+]
+
+[[oldhammer_2e.phases.steps]]
+step = 3
+name = "Compulsory Moves"
+description = """
+Move units that MUST move (not by choice).
+- Fleeing units move 2d6\" toward board edge
+- Units forced back by psychology
+- Units under compulsion (psychic powers, etc.)
+"""
+tips = [
+    "Fleeing units that leave the table are destroyed",
+    "Keep track of which units fled last turn for rally"
+]
+
+[[oldhammer_2e.phases.steps]]
+step = 4
+name = "Move Remaining Units"
+description = """
+Move all other units as desired.
+- Standard move: 6\" for infantry
+- Cavalry/bikes: typically 12\"
+- Vehicles: varies by type (see vehicle rules)
+- Difficult terrain: roll d6 for distance
+- Cannot move within 1\" of enemy unless charging
+"""
+tips = [
+    "Keep heavy weapons stationary if you want to shoot",
+    "Position for good firing lanes",
+    "Use cover to block enemy line of sight"
+]
+
+[oldhammer_2e.phases.common_mistakes]
+mistakes = [
+    "Forgetting to declare charges before moving",
+    "Moving heavy weapons then expecting to shoot",
+    "Forgetting difficult terrain reduces movement"
+]
+
+# -----------------------------------------------------------------------------
+# SHOOTING PHASE
+# -----------------------------------------------------------------------------
+[[oldhammer_2e.phases]]
+name = "Shooting"
+order = 2
+color = "red"
+icon = "crosshairs"
+
+[oldhammer_2e.phases.summary]
+text = "Fire ranged weapons at enemy units"
+key_rules = [
+    "Roll to hit using BS chart",
+    "Roll to wound using S vs T chart",
+    "Armor saves modified by weapon strength",
+    "Gets Hot! for plasma weapons on roll of 1"
+]
+
+[[oldhammer_2e.phases.steps]]
+step = 1
+name = "Select Shooting Unit"
+description = """
+Choose a unit to shoot with.
+- Unit must have line of sight to target
+- Heavy weapons cannot shoot if unit moved
+- Must be within weapon range
+"""
+tips = [
+    "Shoot with expendable units first to reveal damage",
+    "Save devastating weapons for high-value targets"
+]
+
+[[oldhammer_2e.phases.steps]]
+step = 2
+name = "Check Range and Line of Sight"
+description = """
+Measure range from shooter to target.
+- All models in the unit may fire if in range
+- Need true line of sight (can you see them?)
+- Partial cover gives +1 to armor save
+"""
+tips = [
+    "Range is measured model-to-model",
+    "Long range typically gives -1 to hit"
+]
+
+[[oldhammer_2e.phases.steps]]
+step = 3
+name = "Roll to Hit"
+description = """
+Roll d6 for each shot, needing your BS number or higher.
+- BS3 needs 4+ to hit
+- BS4 needs 3+ to hit
+- BS5+ needs 2+ (with reroll misses)
+
+Modifiers:
+- Long range: -1
+- Target in cover: -1
+- Moving and shooting: -1 (some weapons)
+- Rapid Fire at half range: double shots
+"""
+tips = [
+    "Natural 1 always misses",
+    "Gets Hot! triggers on natural 1 with plasma"
+]
+
+[[oldhammer_2e.phases.steps]]
+step = 4
+name = "Roll to Wound"
+description = """
+Compare weapon Strength to target Toughness.
+- S = T: 4+ to wound
+- S = T+1: 3+ to wound
+- S = T+2 or more: 2+ to wound
+- S = T-1: 5+ to wound
+- S = T-2 or less: 6+ to wound
+- S less than half T: cannot wound!
+"""
+tips = [
+    "Always check if you CAN wound first",
+    "S3 vs T6 cannot wound (3 < 6/2 = 3)"
+]
+
+[[oldhammer_2e.phases.steps]]
+step = 5
+name = "Armor Saves"
+description = """
+Target rolls armor save, MODIFIED by weapon strength.
+- S4: -1 to save
+- S5: -2 to save
+- S6: -3 to save
+- S7: -4 to save
+- S8+: -5 or more to save
+
+Example: Marine (3+ save) hit by S6 weapon needs 6+ to save.
+"""
+tips = [
+    "Power weapons ignore armor entirely",
+    "Cover saves are NOT modified by strength"
+]
+
+[[oldhammer_2e.phases.steps]]
+step = 6
+name = "Remove Casualties"
+description = """
+Remove models that failed saves.
+- Multi-wound models track wounds
+- Owner chooses which models to remove
+- Morale may be required if 25%+ casualties
+"""
+tips = [
+    "Remove models from back to keep leader alive",
+    "Check morale thresholds carefully"
+]
+
+[oldhammer_2e.phases.special_rules]
+rules = [
+    {name = "Sustained Fire", desc = "Roll AFTER hitting. Dice show: 1,1,2,2,jam,3. Doubles = jam. Otherwise total = extra hits."},
+    {name = "Gets Hot!", desc = "Roll of 1 to hit = shooter takes automatic wound (can save at -1)."},
+    {name = "Rapid Fire", desc = "Double shots at half range, OR single shot and charge."},
+    {name = "Template", desc = "Flamers auto-hit all models under template."},
+    {name = "Blast", desc = "Place marker, scatter d6\", hit models under template."}
+]
+
+[oldhammer_2e.phases.common_mistakes]
+mistakes = [
+    "Forgetting armor save modifiers for strength",
+    "Not checking if S < T/2 (cannot wound)",
+    "Moving heavy weapons then trying to shoot"
+]
+
+# -----------------------------------------------------------------------------
+# HAND-TO-HAND (MELEE) PHASE
+# -----------------------------------------------------------------------------
+[[oldhammer_2e.phases]]
+name = "Hand-to-Hand"
+order = 3
+color = "orange"
+icon = "sword"
+
+[oldhammer_2e.phases.summary]
+text = "Resolve close combat between engaged units"
+key_rules = [
+    "Each fighter: WS + D6 + modifiers = Combat Score",
+    "Higher score wins, difference = number of hits",
+    "Roll to wound using S vs T chart",
+    "Armor saves modified by strength"
+]
+
+[[oldhammer_2e.phases.steps]]
+step = 1
+name = "Pile In"
+description = """
+Models within 2\" of combat can pile in.
+- Move up to 2\" to get into base contact
+- Must move toward nearest enemy
+- Cannot pile in if fleeing
+"""
+tips = [
+    "Pile in before rolling any dice",
+    "Get as many models fighting as possible"
+]
+
+[[oldhammer_2e.phases.steps]]
+step = 2
+name = "Determine Fight Order"
+description = """
+Models fight in Initiative order (highest first).
+- I5 fights before I4
+- Charging models get +1 to Initiative
+- Power fists and similar: always strike last (I1)
+"""
+tips = [
+    "High-I models may kill enemies before they strike",
+    "Power fists are devastating but slow"
+]
+
+[[oldhammer_2e.phases.steps]]
+step = 3
+name = "Calculate Combat Scores"
+description = """
+Each fighter calculates their Combat Score:
+- Combat Score = WS + highest D6 + modifiers
+- Roll dice equal to your Attacks characteristic
+- Use your HIGHEST single die result
+
+COMPARE SCORES:
+- Higher score WINS the combat
+- Difference between scores = number of HITS on the loser
+- Ties: compare Initiative (higher wins). Same I = 1 hit each.
+
+FUMBLES: If you roll any 1s, opponent adds that 1 to THEIR score!
+PARRY: Some weapons let you force opponent to reroll one die.
+"""
+tips = [
+    "Models can only attack enemies in base contact",
+    "Rolling multiple 1s really hurts - opponent gains them all",
+    "Parry weapons are very valuable for defense"
+]
+
+[[oldhammer_2e.phases.steps]]
+step = 4
+name = "Roll to Wound"
+description = """
+Same as shooting - compare weapon S to target T.
+- Most close combat uses user's Strength
+- Power fists double Strength
+- Some weapons have fixed Strength
+"""
+tips = [
+    "Chainswords and similar don't modify strength",
+    "Power fists: S4 becomes S8!"
+]
+
+[[oldhammer_2e.phases.steps]]
+step = 5
+name = "Armor Saves"
+description = """
+Same as shooting - strength modifies save.
+- Power weapons: NO SAVE ALLOWED
+- Force weapons: power weapon + can instant kill
+- Thunder hammers: concuss + S8
+"""
+tips = [
+    "Invulnerable saves are NOT modified",
+    "Cover does NOT help in close combat"
+]
+
+[[oldhammer_2e.phases.steps]]
+step = 6
+name = "Determine Combat Result"
+description = """
+Count total wounds caused by each side.
+- Add bonuses: +1 for charging, +1 for banner, etc.
+- Loser is the side with fewer wounds
+- Loser tests morale
+"""
+tips = [
+    "Tied combat continues next turn",
+    "Devastating losses can force tests on both sides"
+]
+
+[[oldhammer_2e.phases.steps]]
+step = 7
+name = "Morale and Pursuit"
+description = """
+Loser rolls 2d6 <= Leadership to stay in combat.
+- If failed: unit falls back 2d6\"
+- Winner can pursue: roll 2d6\"
+- If pursuit >= fallback: unit destroyed!
+"""
+tips = [
+    "Sweeping advance can wipe out entire units",
+    "Re-roll failed morale if near hero"
+]
+
+[oldhammer_2e.phases.common_mistakes]
+mistakes = [
+    "Forgetting pile-in before combat",
+    "Using 3rd Ed WS chart instead of WS+D6 combat scores",
+    "Forgetting fumbles (1s) add to opponent's score",
+    "Forgetting power weapons ignore armor entirely"
+]
+
+# -----------------------------------------------------------------------------
+# PSYCHIC PHASE
+# -----------------------------------------------------------------------------
+[[oldhammer_2e.phases]]
+name = "Psychic"
+order = 4
+color = "purple"
+icon = "brain"
+
+[oldhammer_2e.phases.summary]
+text = "Psykers attempt to manifest powers"
+key_rules = [
+    "Roll 2d6 vs power difficulty (usually 7+)",
+    "Perils of the Warp on double 1s or 6s",
+    "Enemy psykers can attempt to nullify"
+]
+
+[[oldhammer_2e.phases.steps]]
+step = 1
+name = "Select Psyker and Power"
+description = """
+Choose a psyker and the power to manifest.
+- Each psyker can typically use 1 power per turn
+- Some powers have restrictions (range, LOS)
+- Declare target before rolling
+"""
+tips = [
+    "Consider using powers that don't need LOS first",
+    "Buff powers often affect friendly units"
+]
+
+[[oldhammer_2e.phases.steps]]
+step = 2
+name = "Roll Psychic Test"
+description = """
+Roll 2d6, need to equal or beat the power's difficulty.
+- Standard powers: 7+
+- Powerful abilities: 8+ or 9+
+- Add psychic mastery bonus if applicable
+"""
+tips = [
+    "Force weapons require passing this test to instant-kill"
+]
+
+[[oldhammer_2e.phases.steps]]
+step = 3
+name = "Check for Perils"
+description = """
+On double 1s or double 6s: PERILS OF THE WARP!
+- Psyker suffers d3 wounds, no save
+- Roll d6: on 1, psyker is possessed by daemon
+- Power fails regardless of total
+"""
+tips = [
+    "Perils can kill your own psyker",
+    "Some wargear protects against Perils"
+]
+
+[[oldhammer_2e.phases.steps]]
+step = 4
+name = "Enemy Nullification"
+description = """
+Enemy psykers within 24\" can attempt to nullify.
+- Roll 2d6 >= your roll to nullify
+- Uses their psychic action for the turn
+"""
+tips = [
+    "Keep nullifiers spread out to cover threats"
+]
+
+[[oldhammer_2e.phases.steps]]
+step = 5
+name = "Resolve Power Effect"
+description = """
+If successful, apply the power's effect.
+- Damage powers: roll to wound as normal
+- Buff powers: effect lasts until next psychic phase
+- Movement powers: resolve immediately
+"""
+tips = [
+    "Force weapons: if wound caused, instant death!"
+]
+
+[oldhammer_2e.phases.common_mistakes]
+mistakes = [
+    "Forgetting Perils on doubles",
+    "Not declaring Force weapon activation"
+]
+
+# -----------------------------------------------------------------------------
+# RALLY PHASE
+# -----------------------------------------------------------------------------
+[[oldhammer_2e.phases]]
+name = "Rally"
+order = 5
+color = "blue"
+icon = "flag"
+
+[oldhammer_2e.phases.summary]
+text = "Attempt to rally fleeing units"
+key_rules = [
+    "Roll 2d6 <= Leadership to rally",
+    "Cannot rally if below 25% starting strength",
+    "Rallied units cannot move or shoot this turn"
+]
+
+[[oldhammer_2e.phases.steps]]
+step = 1
+name = "Identify Fleeing Units"
+description = """
+Check which of your units are currently fleeing.
+- Fleeing units have been routed in previous turns
+- Units that fled off the table are destroyed
+"""
+tips = [
+    "Fleeing units cannot shoot or fight"
+]
+
+[[oldhammer_2e.phases.steps]]
+step = 2
+name = "Check Rally Eligibility"
+description = """
+Units cannot rally if:
+- Below 25% starting models
+- Enemy within 6\"
+- Still in difficult terrain (sometimes)
+"""
+tips = [
+    "A unit of 10 at 2 models = 20%, cannot rally"
+]
+
+[[oldhammer_2e.phases.steps]]
+step = 3
+name = "Roll Rally Test"
+description = """
+Roll 2d6, need equal to or less than Leadership.
+- Standard Leadership 7: 58% chance to rally
+- Leadership 10: 97% chance to rally
+
+Modifiers:
+- Near hero (+1 to Leadership)
+- Near army banner (+1 to Leadership)
+"""
+tips = [
+    "Keep heroes near valuable units for rally support"
+]
+
+[[oldhammer_2e.phases.steps]]
+step = 4
+name = "Failed Rally"
+description = """
+If rally failed, unit continues to flee.
+- Move 2d6\" toward board edge next movement
+- Will flee off board if reaches edge
+- Can attempt rally again next turn
+"""
+tips = [
+    "Position units to prevent enemy from blocking rally"
+]
+
+[oldhammer_2e.phases.common_mistakes]
+mistakes = [
+    "Forgetting 25% threshold",
+    "Not checking enemy proximity"
+]
+
+# =============================================================================
+# OPR GRIMDARK FUTURE - SIMPLIFIED PHASES
+# =============================================================================
+
+[opr_grimdark]
+name = "OPR Grimdark Future"
+turn_structure = "Alternating Activation"
+description = """
+OPR uses alternating activations - players take turns activating one unit each.
+Much simpler than 2nd Edition but still tactical.
+"""
+
+[[opr_grimdark.phases]]
+name = "Activation"
+order = 1
+color = "blue"
+icon = "lightning"
+
+[opr_grimdark.phases.summary]
+text = "Activate one unit to move and/or shoot"
+key_rules = [
+    "Roll Quality to hit (roll >= Quality stat)",
+    "Target rolls Defense to save (roll >= Defense)",
+    "AP reduces Defense stat",
+    "Alternating - you activate one, opponent activates one"
+]
+
+[[opr_grimdark.phases.steps]]
+step = 1
+name = "Choose Unit to Activate"
+description = """
+Select one unit that hasn't activated this round.
+- Each unit activates once per round
+- Alternate between players
+"""
+tips = [
+    "Activate threatening units early to put pressure on opponent"
+]
+
+[[opr_grimdark.phases.steps]]
+step = 2
+name = "Move (Optional)"
+description = """
+Move up to unit's movement value.
+- Standard move: 6\"
+- Cannot move through enemies
+- Difficult terrain halves movement
+"""
+tips = [
+    "Charging adds extra movement toward target"
+]
+
+[[opr_grimdark.phases.steps]]
+step = 3
+name = "Shoot (Optional)"
+description = """
+Roll Quality tests for each weapon attack.
+- Quality 4+: roll d6, 4+ hits
+- Quality 3+: roll d6, 3+ hits
+
+For each hit, target rolls Defense:
+- Defense 4+: 4+ saves
+- Defense reduced by AP (AP2 means -2 Defense)
+"""
+tips = [
+    "Rending: 6s to hit auto-wound (no save)",
+    "Blast(X): X automatic hits, no roll needed"
+]
+
+[[opr_grimdark.phases.steps]]
+step = 4
+name = "Charge & Fight (Optional)"
+description = """
+If within 12\", may charge into melee.
+- Roll Quality to hit in melee
+- Both sides fight (defender strikes back)
+- Loser tests morale
+"""
+tips = [
+    "Furious: +1 attack when charging"
+]
+
+[opr_grimdark.phases.common_mistakes]
+mistakes = [
+    "Forgetting AP modifies Defense, not to-hit",
+    "Missing Rending auto-wounds on 6s"
+]
+
+# =============================================================================
+# OLD WORLD - FANTASY PHASE STRUCTURE
+# =============================================================================
+
+[old_world]
+name = "Warhammer: The Old World"
+turn_structure = "IGOUGO"
+description = """
+Rank-and-file fantasy battles with regiments.
+Combat resolution includes ranks, standards, and flank bonuses.
+"""
+
+[[old_world.phases]]
+name = "Movement"
+order = 1
+color = "green"
+icon = "arrow"
+
+[old_world.phases.summary]
+text = "Maneuver regiments across the battlefield"
+key_rules = [
+    "Infantry march 8\" (double normal move)",
+    "Cavalry march 16\"",
+    "No marching within 8\" of enemy",
+    "Charge moves: double or more"
+]
+
+[[old_world.phases]]
+name = "Magic"
+order = 2
+color = "purple"
+icon = "magic"
+
+[old_world.phases.summary]
+text = "Cast spells from the Winds of Magic"
+key_rules = [
+    "Generate power dice based on wizards",
+    "Cast spells by spending power dice",
+    "Opponent can dispel with dispel dice",
+    "Miscasts on double 1s"
+]
+
+[[old_world.phases]]
+name = "Shooting"
+order = 3
+color = "red"
+icon = "crosshairs"
+
+[old_world.phases.summary]
+text = "Fire ranged weapons at enemy regiments"
+key_rules = [
+    "Roll to hit using BS",
+    "Roll to wound using S vs T",
+    "Armor saves apply",
+    "Skirmishers harder to hit (-1)"
+]
+
+[[old_world.phases]]
+name = "Combat"
+order = 4
+color = "orange"
+icon = "sword"
+
+[old_world.phases.summary]
+text = "Resolve close combat between engaged units"
+key_rules = [
+    "Roll to hit using WS vs WS",
+    "Roll to wound using S vs T",
+    "Combat Resolution: wounds + ranks + flanks + standards",
+    "Loser takes break test, may flee"
+]
+
+[[old_world.phases.steps]]
+step = 1
+name = "Calculate Combat Resolution"
+description = """
+Add up bonuses for each side:
+- +1 per wound caused
+- +1 per rank after the first (max +3)
+- +1 for standard bearer
+- +1 for battle standard
+- +1 for flank attack
+- +2 for rear attack
+- +1 for higher ground
+"""
+tips = [
+    "Deep formations win through ranks, not kills",
+    "Flank/rear charges are devastating"
+]
+
+# =============================================================================
+# TRENCH CRUSADE - WWI HORROR SKIRMISH
+# =============================================================================
+
+[trench_crusade]
+name = "Trench Crusade"
+turn_structure = "Alternating Activation"
+description = """
+A dark skirmish game set in an alternate WWI where Hell has invaded Earth.
+Uses 2D6 dice system with ±Dice modifiers. Target is always 7+.
+Roll 2d6, add results: 2-6 = Fail, 7-11 = Success, 12 = Critical.
++Dice: Roll extra d6s, keep the 2 highest.
+-Dice: Roll extra d6s, keep the 2 lowest.
+Alternating activations - each player activates one model at a time.
+"""
+
+# -----------------------------------------------------------------------------
+# INITIATIVE PHASE
+# -----------------------------------------------------------------------------
+[[trench_crusade.phases]]
+name = "Initiative"
+order = 1
+color = "yellow"
+icon = "dice"
+
+[trench_crusade.phases.summary]
+text = "Determine who activates first this round"
+key_rules = [
+    "Both players roll 2d6 (add results)",
+    "Higher total chooses to go first or second",
+    "Ties: roll again",
+    "Some abilities grant ±Dice to initiative"
+]
+
+[[trench_crusade.phases.steps]]
+step = 1
+name = "Roll Initiative"
+description = """
+Both players roll 2d6 and add the results.
+- Higher total CHOOSES to go first or second
+- Going second can be advantageous (react to enemy)
+- Some models grant ±Dice to this roll
+"""
+tips = [
+    "Going second lets you react to enemy positioning",
+    "Going first lets you strike before they're ready",
+    "Consider board state when choosing"
+]
+
+[[trench_crusade.phases.steps]]
+step = 2
+name = "Apply Initiative Modifiers"
+description = """
+Some units and abilities modify initiative:
+- Commanders may add bonuses
+- Certain equipment grants rerolls
+- Being ambushed may impose penalties
+"""
+tips = [
+    "Check your warband's special rules"
+]
+
+[trench_crusade.phases.common_mistakes]
+mistakes = [
+    "Forgetting to apply initiative modifiers",
+    "Not considering the strategic value of going second"
+]
+
+# -----------------------------------------------------------------------------
+# ACTIVATION PHASE
+# -----------------------------------------------------------------------------
+[[trench_crusade.phases]]
+name = "Activation"
+order = 2
+color = "blue"
+icon = "lightning"
+
+[trench_crusade.phases.summary]
+text = "Alternate activating models using Action Points"
+key_rules = [
+    "Each model has Action Points (usually 2)",
+    "Move costs 1 AP, Shoot costs 1 AP, Charge costs 2 AP",
+    "Roll 2d6 ±Dice vs 7 (2-6 Fail, 7-11 Success, 12 Critical)",
+    "±Dice: roll extra dice, keep 2 highest (+) or lowest (-)"
+]
+
+[[trench_crusade.phases.steps]]
+step = 1
+name = "Select Model to Activate"
+description = """
+Choose one of your models that hasn't activated this round.
+- Each model activates once per round
+- Alternate with your opponent (you activate one, they activate one)
+- Continue until all models have activated
+"""
+tips = [
+    "Activate key models when the timing is right",
+    "Sometimes it's better to wait and react"
+]
+
+[[trench_crusade.phases.steps]]
+step = 2
+name = "Spend Action Points"
+description = """
+Each model typically has 2 Action Points (AP). Spend them on:
+
+MOVEMENT ACTIONS (1 AP each):
+- Move: Move up to your Movement value
+- Sprint: Move double (but cannot shoot/fight after)
+- Go to Ground: Gain cover bonus
+
+COMBAT ACTIONS:
+- Shoot (1 AP): Fire a ranged weapon
+- Aim + Shoot (2 AP): +1 to hit on the shot
+- Charge (2 AP): Move into melee and attack
+- Fight (1 AP): Attack in melee if already engaged
+
+OTHER ACTIONS:
+- Use Equipment (varies)
+- Special Abilities (varies)
+"""
+tips = [
+    "Aiming before shooting gives +1 to hit",
+    "You can split AP across turns with some abilities",
+    "Going to Ground helps survivability"
+]
+
+[[trench_crusade.phases.steps]]
+step = 3
+name = "Roll Actions (2d6)"
+description = """
+When you need to roll, use 2d6:
+- Roll 2d6 (two dice), add the results
+- Target is ALWAYS 7
+- 2-6 = FAILURE (activation may end)
+- 7-11 = SUCCESS
+- 12 = CRITICAL SUCCESS (bonus effect!)
+- 2 (Snake Eyes) = FUMBLE (disaster!)
+
+±DICE SYSTEM:
+- +Dice from skills/gear: roll extra d6s, keep 2 HIGHEST
+- -Dice from penalties: roll extra d6s, keep 2 LOWEST
+- +/- cancel each other out
+
+Example: +2 Dice means roll 4d6, keep highest 2.
+Example: -1 Dice means roll 3d6, keep lowest 2.
+"""
+tips = [
+    "Rolling 12 triggers critical effects (extra damage, special bonus)",
+    "Rolling 2 (snake eyes) is a fumble - bad things happen",
+    "+Dice dramatically improve your odds, -Dice hurt badly",
+    "A model with +2 Dice has ~75% success rate vs ~42% base"
+]
+
+[[trench_crusade.phases.steps]]
+step = 4
+name = "Resolve Damage (Injury Table)"
+description = """
+When you hit a target, roll on the INJURY TABLE (2d6 ±Dice):
+
+INJURY TABLE RESULTS:
+- 2-6: BLOOD MARKER - Model is wounded but fighting
+- 7-8: DOWNED - Model is incapacitated (may recover)
+- 9-12: OUT OF ACTION - Model removed from play!
+
+MODIFYING INJURY ROLLS:
+- Weapon damage stat grants +Dice to injury roll
+- Target's Armour grants -Dice to injury roll
+- AP (Armour Piercing) reduces target's Armour dice
+- Critical hits grant +1 additional Dice
+
+Example: Weapon (Damage +2) vs Armour 1 = +1 net Dice to injury.
+"""
+tips = [
+    "Blood markers accumulate - can be spent by opponent for -Dice",
+    "Downed models may recover in End Phase or be finished off",
+    "High armour makes injuries less severe, not less likely",
+    "AP is crucial against armoured targets"
+]
+
+[[trench_crusade.phases.steps]]
+step = 5
+name = "Morale Checks"
+description = """
+Models may need to test Morale when:
+- Taking Blood markers
+- Friendly model incapacitated nearby
+- Facing Terrifying enemies
+
+Roll 2d6 ±Dice vs 7:
+- 7+: PASS - Model continues normally
+- 2-6: FAIL - Model is Shaken (-Dice to actions)
+- 2: BROKEN! Model flees in terror
+- 12: RESOLUTE! Model gains bonus
+
+Morale stat grants +Dice to this roll.
+Terrifying enemies inflict -Dice.
+"""
+tips = [
+    "Keep models near leaders for morale support",
+    "Terrifying enemies impose -2 to morale tests",
+    "Broken models may rally later"
+]
+
+[trench_crusade.phases.special_rules]
+rules = [
+    {name = "Risky Actions", desc = "Some actions are 'Risky' - Rolling 2 (fumble) has worse consequences."},
+    {name = "Blood Markers", desc = "Opponents can spend your Blood markers for -Dice against you or +Dice on injury."},
+    {name = "Glory", desc = "Earned by heroic deeds. Spent for rerolls or special abilities."},
+    {name = "Damnation", desc = "Heretical units may gain Damnation. Too much = bad things happen."},
+    {name = "Horror", desc = "When facing demons, roll 2d6 Horror check. Horror level adds -Dice."},
+    {name = "Faith", desc = "Faithful units invoke prayers. Roll 2d6 + Faith Dice vs 7."}
+]
+
+[trench_crusade.phases.common_mistakes]
+mistakes = [
+    "Forgetting Blood markers can be spent by opponent for -Dice",
+    "Not using the Injury Table (2d6) after hitting",
+    "Missing Critical (12) or Fumble (2) special effects",
+    "Forgetting ±Dice cancel out before rolling",
+    "Not applying Armour as -Dice to injury rolls"
+]
+
+# -----------------------------------------------------------------------------
+# END PHASE
+# -----------------------------------------------------------------------------
+[[trench_crusade.phases]]
+name = "End Phase"
+order = 3
+color = "gray"
+icon = "flag"
+
+[trench_crusade.phases.summary]
+text = "Resolve end-of-round effects and check victory"
+key_rules = [
+    "Remove temporary effects",
+    "Rally broken models (2d6 ±Dice vs 7)",
+    "Downed models may recover or be finished off",
+    "Check scenario victory conditions"
+]
+
+[[trench_crusade.phases.steps]]
+step = 1
+name = "Remove Temporary Effects"
+description = """
+Clear any effects that last 'until end of round':
+- Aimed bonuses
+- Go to Ground bonuses
+- Some ability effects
+"""
+tips = [
+    "Mark temporary effects clearly during play"
+]
+
+[[trench_crusade.phases.steps]]
+step = 2
+name = "Rally Broken Models"
+description = """
+Models that Broke may attempt to rally:
+- Roll 2d6 ±Dice vs 7 (Morale grants +Dice)
+- 7+: Model rallies, can act normally next round
+- 2-6: Model continues fleeing
+- Models that flee off the board are removed
+"""
+tips = [
+    "Nearby leaders may help rally tests"
+]
+
+[[trench_crusade.phases.steps]]
+step = 3
+name = "Check Victory Conditions"
+description = """
+Check if either player has achieved victory:
+- Scenario objectives
+- Warband broken (50%+ incapacitated)
+- Special mission conditions
+"""
+tips = [
+    "Some scenarios have turn limits",
+    "Broken warbands may need to test to stay in fight"
+]
+
+[[trench_crusade.phases.steps]]
+step = 4
+name = "Start New Round"
+description = """
+If game continues:
+- Reset all activation markers
+- Return to Initiative Phase
+- Round number increases
+"""
+tips = [
+    "Track round number for time-limited scenarios"
+]
+
+[trench_crusade.phases.common_mistakes]
+mistakes = [
+    "Forgetting to attempt rally for broken models",
+    "Missing end-of-round ability triggers"
+]

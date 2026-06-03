@@ -137,6 +137,115 @@ entries = [
   { text = "Logic and reason must guide the way", weight = 2 },
 ]
 
+# ============================================================================
+# SCENE BANGS - Dramatic opening hooks
+# ============================================================================
+# "Frame past the entrance" - skip boring setup, start at the interesting part
+
+[scene_bangs]
+arrival = [
+    "You're not the first to arrive",
+    "The place is not as you expected",
+    "Something has changed since you were last here",
+    "The door stands open. It shouldn't be.",
+    "Fresh tracks lead away from here",
+    "The silence is wrong",
+    "Someone was here moments ago",
+    "The welcome you expected is absent",
+]
+
+combat = [
+    "Weapons are already drawn when you arrive",
+    "The first blow lands before you can react",
+    "You walk into an ambush in progress",
+    "The bodies aren't cold yet",
+    "Steel rings against steel somewhere close",
+    "They were expecting you",
+    "The trap springs before you see it",
+    "Blood is already on the ground",
+]
+
+social = [
+    "An argument is already underway",
+    "Someone important is leaving as you enter",
+    "The room falls silent when they see you",
+    "They've been talking about you",
+    "A deal is being struck without you",
+    "Tears are being shed",
+    "The gathering has a funeral atmosphere",
+    "Laughter stops abruptly at your arrival",
+]
+
+exploration = [
+    "Something is wrong here - you sense it immediately",
+    "Evidence of recent violence greets you",
+    "The path has been deliberately blocked",
+    "Warning signs are everywhere, but too late",
+    "Someone else has been here recently",
+    "The map was wrong about this",
+    "Nature has reclaimed this place violently",
+    "The air tastes wrong",
+]
+
+chase = [
+    "They've already spotted you",
+    "The pursuit is already underway",
+    "You hear them closing in",
+    "The only exit is blocked",
+    "You're being herded somewhere",
+    "No time to plan - only run",
+]
+
+mystery = [
+    "The clue is obvious now that you see it",
+    "Someone left this for you to find",
+    "The answer raises more questions",
+    "Two pieces finally connect",
+    "The pattern becomes clear",
+    "What you see doesn't match what you were told",
+]
+
+# ============================================================================
+# TRANSITIONS - Scene shift phrases
+# ============================================================================
+
+[transitions]
+escalate = [
+    "Things are about to get worse",
+    "The situation intensifies",
+    "No turning back now",
+    "And then it gets complicated",
+    "But that's not the worst of it",
+    "And then—",
+]
+
+de_escalate = [
+    "The immediate danger passes",
+    "A moment to catch your breath",
+    "The pressure eases, for now",
+    "Silence returns",
+    "The crisis point passes",
+    "For now, you're safe",
+]
+
+reveal = [
+    "And then you see it",
+    "The truth becomes clear",
+    "Everything changes with this revelation",
+    "Understanding dawns",
+    "The pieces fall into place",
+    "Now you understand",
+]
+
+interrupt = [
+    "But before you can act—",
+    "Suddenly—",
+    "Without warning—",
+    "That's when everything changes",
+    "But fate has other plans",
+    "And then the unexpected—",
+]
+
 [complications]
 # Narrative complications to add depth
 entries = [

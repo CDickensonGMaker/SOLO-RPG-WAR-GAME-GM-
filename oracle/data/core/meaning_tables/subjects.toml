@@ -1,0 +1,644 @@
+# ============================================================================
+# MEANING TABLE: SUBJECTS
+# ============================================================================
+# 100 subject nouns for oracle interpretation. Combine with an Action to
+# create surprising, specific complications and elaborations.
+#
+# Usage: Roll or pick an Action + Subject pair, then interpret in context.
+# Example: "Reveals + The Secret" -> "The merchant reveals your father's journal"
+#
+# Categories help weight rolls toward relevant subjects.
+# ============================================================================
+
+[meta]
+title = "Subject Meaning Table"
+description = "Nouns for oracle interpretation - what is affected?"
+version = "1.0.0"
+
+# ============================================================================
+# PEOPLE/RELATIONSHIPS
+# ============================================================================
+
+[[subjects]]
+word = "The Ally"
+category = ["social", "core"]
+weight = 2
+examples = ["A friend, companion, or supporter"]
+
+[[subjects]]
+word = "The Enemy"
+category = ["social", "combat", "core"]
+weight = 2
+examples = ["An adversary, rival, or nemesis"]
+
+[[subjects]]
+word = "The Stranger"
+category = ["social", "exploration"]
+weight = 2
+examples = ["An unknown person, mysterious figure"]
+
+[[subjects]]
+word = "The Authority"
+category = ["social"]
+weight = 2
+examples = ["A ruler, official, commander, or power"]
+
+[[subjects]]
+word = "The Innocent"
+category = ["social"]
+weight = 1
+examples = ["A child, victim, bystander, or civilian"]
+
+[[subjects]]
+word = "The Betrayer"
+category = ["social"]
+weight = 1
+examples = ["A traitor, turncoat, or false friend"]
+
+[[subjects]]
+word = "The Mentor"
+category = ["social"]
+weight = 1
+examples = ["A teacher, guide, or wise figure"]
+
+[[subjects]]
+word = "The Rival"
+category = ["social", "combat"]
+weight = 2
+examples = ["A competitor, challenger, or nemesis"]
+
+[[subjects]]
+word = "The Lover"
+category = ["social"]
+weight = 1
+examples = ["A romantic interest, spouse, or paramour"]
+
+[[subjects]]
+word = "The Family"
+category = ["social"]
+weight = 2
+examples = ["Blood relations, clan, or household"]
+
+[[subjects]]
+word = "The Servant"
+category = ["social"]
+weight = 1
+examples = ["An aide, follower, or subordinate"]
+
+[[subjects]]
+word = "The Master"
+category = ["social"]
+weight = 1
+examples = ["A lord, employer, or controller"]
+
+[[subjects]]
+word = "The Messenger"
+category = ["social", "exploration"]
+weight = 2
+examples = ["A courier, herald, or bearer of news"]
+
+[[subjects]]
+word = "The Witness"
+category = ["social", "exploration"]
+weight = 1
+examples = ["Someone who saw, an observer"]
+
+[[subjects]]
+word = "The Victim"
+category = ["social", "combat"]
+weight = 2
+examples = ["Someone harmed, wronged, or suffering"]
+
+[[subjects]]
+word = "The Criminal"
+category = ["social"]
+weight = 1
+examples = ["A thief, murderer, or lawbreaker"]
+
+[[subjects]]
+word = "The Priest"
+category = ["social"]
+weight = 1
+examples = ["A religious figure, holy person, or temple servant"]
+
+[[subjects]]
+word = "The Merchant"
+category = ["social"]
+weight = 2
+examples = ["A trader, shopkeeper, or guild member"]
+
+[[subjects]]
+word = "The Soldier"
+category = ["combat", "social"]
+weight = 2
+examples = ["A warrior, guard, or military figure"]
+
+[[subjects]]
+word = "The Crowd"
+category = ["social"]
+weight = 1
+examples = ["The masses, public, or population"]
+
+# ============================================================================
+# ABSTRACT CONCEPTS
+# ============================================================================
+
+[[subjects]]
+word = "The Secret"
+category = ["core", "social"]
+weight = 3
+examples = ["Hidden knowledge, a mystery, concealed truth"]
+
+[[subjects]]
+word = "The Truth"
+category = ["core", "social"]
+weight = 2
+examples = ["Reality, facts, what actually happened"]
+
+[[subjects]]
+word = "The Lie"
+category = ["social"]
+weight = 2
+examples = ["A deception, falsehood, or cover story"]
+
+[[subjects]]
+word = "The Promise"
+category = ["social"]
+weight = 2
+examples = ["An oath, vow, or commitment"]
+
+[[subjects]]
+word = "The Debt"
+category = ["social"]
+weight = 2
+examples = ["Something owed - money, favor, or obligation"]
+
+[[subjects]]
+word = "The Memory"
+category = ["core"]
+weight = 2
+examples = ["A recollection, the past, history"]
+
+[[subjects]]
+word = "The Hope"
+category = ["core"]
+weight = 2
+examples = ["Optimism, a chance, possibility of success"]
+
+[[subjects]]
+word = "The Fear"
+category = ["core", "social"]
+weight = 2
+examples = ["A dread, phobia, or anxiety"]
+
+[[subjects]]
+word = "The Dream"
+category = ["core"]
+weight = 1
+examples = ["An aspiration, vision, or prophecy"]
+
+[[subjects]]
+word = "The Nightmare"
+category = ["core"]
+weight = 1
+examples = ["A terror, worst fear, or dark vision"]
+
+[[subjects]]
+word = "The Plan"
+category = ["core", "combat"]
+weight = 2
+examples = ["A scheme, strategy, or intention"]
+
+[[subjects]]
+word = "The Mistake"
+category = ["core"]
+weight = 2
+examples = ["An error, blunder, or miscalculation"]
+
+[[subjects]]
+word = "The Opportunity"
+category = ["core"]
+weight = 2
+examples = ["A chance, opening, or moment to act"]
+
+[[subjects]]
+word = "The Threat"
+category = ["core", "combat"]
+weight = 2
+examples = ["A danger, warning, or looming problem"]
+
+[[subjects]]
+word = "The Bargain"
+category = ["social"]
+weight = 1
+examples = ["A deal, agreement, or arrangement"]
+
+[[subjects]]
+word = "The Legacy"
+category = ["social"]
+weight = 1
+examples = ["An inheritance, tradition, or lasting impact"]
+
+[[subjects]]
+word = "The Reputation"
+category = ["social"]
+weight = 2
+examples = ["Standing, honor, how one is perceived"]
+
+[[subjects]]
+word = "The Faith"
+category = ["social"]
+weight = 1
+examples = ["Belief, religion, trust, or conviction"]
+
+[[subjects]]
+word = "The Law"
+category = ["social"]
+weight = 2
+examples = ["Rules, justice, legal authority"]
+
+[[subjects]]
+word = "The War"
+category = ["combat"]
+weight = 2
+examples = ["A conflict, campaign, or struggle"]
+
+# ============================================================================
+# PHYSICAL OBJECTS
+# ============================================================================
+
+[[subjects]]
+word = "The Weapon"
+category = ["combat", "exploration"]
+weight = 2
+examples = ["A sword, gun, tool of violence"]
+
+[[subjects]]
+word = "The Armor"
+category = ["combat"]
+weight = 1
+examples = ["Protection, defense, shielding"]
+
+[[subjects]]
+word = "The Key"
+category = ["exploration"]
+weight = 2
+examples = ["Access, solution, means of entry"]
+
+[[subjects]]
+word = "The Door"
+category = ["exploration"]
+weight = 2
+examples = ["An entrance, barrier, passage"]
+
+[[subjects]]
+word = "The Treasure"
+category = ["exploration"]
+weight = 2
+examples = ["Wealth, valuables, prize"]
+
+[[subjects]]
+word = "The Map"
+category = ["exploration"]
+weight = 1
+examples = ["Directions, guide, layout"]
+
+[[subjects]]
+word = "The Book"
+category = ["exploration", "social"]
+weight = 1
+examples = ["Knowledge, records, scripture"]
+
+[[subjects]]
+word = "The Letter"
+category = ["social"]
+weight = 2
+examples = ["A message, correspondence, evidence"]
+
+[[subjects]]
+word = "The Token"
+category = ["social", "exploration"]
+weight = 1
+examples = ["A symbol, proof, keepsake"]
+
+[[subjects]]
+word = "The Poison"
+category = ["combat", "social"]
+weight = 1
+examples = ["Toxin, corruption, harmful substance"]
+
+[[subjects]]
+word = "The Medicine"
+category = ["core"]
+weight = 1
+examples = ["Cure, remedy, healing"]
+
+[[subjects]]
+word = "The Artifact"
+category = ["exploration"]
+weight = 1
+examples = ["Magical item, relic, ancient object"]
+
+[[subjects]]
+word = "The Evidence"
+category = ["social", "exploration"]
+weight = 2
+examples = ["Proof, clues, incriminating material"]
+
+[[subjects]]
+word = "The Food"
+category = ["core", "exploration"]
+weight = 1
+examples = ["Sustenance, supplies, nourishment"]
+
+[[subjects]]
+word = "The Gold"
+category = ["social"]
+weight = 2
+examples = ["Money, wealth, resources"]
+
+# ============================================================================
+# PLACES/LOCATIONS
+# ============================================================================
+
+[[subjects]]
+word = "The Home"
+category = ["core", "social"]
+weight = 2
+examples = ["Base, sanctuary, place of safety"]
+
+[[subjects]]
+word = "The Prison"
+category = ["social", "exploration"]
+weight = 1
+examples = ["Jail, captivity, confinement"]
+
+[[subjects]]
+word = "The Sanctuary"
+category = ["exploration", "social"]
+weight = 1
+examples = ["Safe haven, temple, refuge"]
+
+[[subjects]]
+word = "The Battlefield"
+category = ["combat"]
+weight = 2
+examples = ["Site of conflict, contested ground"]
+
+[[subjects]]
+word = "The Border"
+category = ["exploration"]
+weight = 1
+examples = ["Boundary, edge, frontier"]
+
+[[subjects]]
+word = "The Path"
+category = ["exploration"]
+weight = 2
+examples = ["Route, way forward, direction"]
+
+[[subjects]]
+word = "The Stronghold"
+category = ["combat", "exploration"]
+weight = 1
+examples = ["Fortress, defensive position"]
+
+[[subjects]]
+word = "The Market"
+category = ["social"]
+weight = 1
+examples = ["Trade center, commerce, economy"]
+
+[[subjects]]
+word = "The Shadow"
+category = ["exploration"]
+weight = 1
+examples = ["Darkness, hidden place, concealment"]
+
+[[subjects]]
+word = "The Throne"
+category = ["social"]
+weight = 1
+examples = ["Power, rulership, authority seat"]
+
+# ============================================================================
+# EVENTS/SITUATIONS
+# ============================================================================
+
+[[subjects]]
+word = "The Battle"
+category = ["combat"]
+weight = 2
+examples = ["A fight, engagement, clash"]
+
+[[subjects]]
+word = "The Meeting"
+category = ["social"]
+weight = 2
+examples = ["An encounter, gathering, assembly"]
+
+[[subjects]]
+word = "The Betrayal"
+category = ["social"]
+weight = 1
+examples = ["Treachery, backstabbing, broken trust"]
+
+[[subjects]]
+word = "The Alliance"
+category = ["social", "combat"]
+weight = 2
+examples = ["Partnership, treaty, cooperation"]
+
+[[subjects]]
+word = "The Escape"
+category = ["combat", "exploration"]
+weight = 1
+examples = ["Flight, getaway, evasion"]
+
+[[subjects]]
+word = "The Ambush"
+category = ["combat"]
+weight = 1
+examples = ["Trap, surprise attack, snare"]
+
+[[subjects]]
+word = "The Celebration"
+category = ["social"]
+weight = 1
+examples = ["Festival, victory, joy"]
+
+[[subjects]]
+word = "The Funeral"
+category = ["social"]
+weight = 1
+examples = ["Death, mourning, ending"]
+
+[[subjects]]
+word = "The Trial"
+category = ["social"]
+weight = 1
+examples = ["Judgment, test, court"]
+
+[[subjects]]
+word = "The Wedding"
+category = ["social"]
+weight = 1
+examples = ["Marriage, union, alliance"]
+
+[[subjects]]
+word = "The Birth"
+category = ["core"]
+weight = 1
+examples = ["Beginning, new life, creation"]
+
+[[subjects]]
+word = "The Death"
+category = ["core"]
+weight = 1
+examples = ["Ending, mortality, loss"]
+
+[[subjects]]
+word = "The Storm"
+category = ["exploration"]
+weight = 1
+examples = ["Crisis, chaos, upheaval"]
+
+[[subjects]]
+word = "The Plague"
+category = ["core"]
+weight = 1
+examples = ["Disease, corruption, spreading harm"]
+
+[[subjects]]
+word = "The Journey"
+category = ["exploration"]
+weight = 2
+examples = ["Travel, quest, progression"]
+
+# ============================================================================
+# GROUPS/ORGANIZATIONS
+# ============================================================================
+
+[[subjects]]
+word = "The Army"
+category = ["combat"]
+weight = 2
+examples = ["Military force, soldiers, warband"]
+
+[[subjects]]
+word = "The Guild"
+category = ["social"]
+weight = 1
+examples = ["Trade organization, professional group"]
+
+[[subjects]]
+word = "The Temple"
+category = ["social"]
+weight = 1
+examples = ["Religious institution, holy place"]
+
+[[subjects]]
+word = "The Court"
+category = ["social"]
+weight = 1
+examples = ["Royal/noble gathering, politics"]
+
+[[subjects]]
+word = "The Faction"
+category = ["social", "combat"]
+weight = 2
+examples = ["Political group, party, movement"]
+
+[[subjects]]
+word = "The Cult"
+category = ["social"]
+weight = 1
+examples = ["Secret society, religious fringe, conspiracy"]
+
+[[subjects]]
+word = "The Rebellion"
+category = ["combat", "social"]
+weight = 1
+examples = ["Uprising, revolution, resistance"]
+
+[[subjects]]
+word = "The Government"
+category = ["social"]
+weight = 1
+examples = ["State, administration, rulers"]
+
+[[subjects]]
+word = "The Caravan"
+category = ["exploration"]
+weight = 1
+examples = ["Travelers, traders, expedition"]
+
+[[subjects]]
+word = "The Order"
+category = ["social"]
+weight = 1
+examples = ["Knights, monks, organized group"]
+
+# ============================================================================
+# NATURE/ENVIRONMENT
+# ============================================================================
+
+[[subjects]]
+word = "The Beast"
+category = ["combat", "exploration"]
+weight = 2
+examples = ["Monster, creature, animal threat"]
+
+[[subjects]]
+word = "The Land"
+category = ["exploration"]
+weight = 1
+examples = ["Territory, terrain, countryside"]
+
+[[subjects]]
+word = "The Sea"
+category = ["exploration"]
+weight = 1
+examples = ["Ocean, waters, maritime"]
+
+[[subjects]]
+word = "The Sky"
+category = ["exploration"]
+weight = 1
+examples = ["Heavens, weather, what's above"]
+
+[[subjects]]
+word = "The Fire"
+category = ["combat", "exploration"]
+weight = 1
+examples = ["Flames, destruction, passion"]
+
+[[subjects]]
+word = "The Darkness"
+category = ["exploration"]
+weight = 2
+examples = ["Night, shadow, unknown"]
+
+[[subjects]]
+word = "The Light"
+category = ["exploration"]
+weight = 1
+examples = ["Illumination, hope, revelation"]
+
+[[subjects]]
+word = "The Forest"
+category = ["exploration"]
+weight = 1
+examples = ["Wilderness, nature, hidden place"]
+
+[[subjects]]
+word = "The Mountain"
+category = ["exploration"]
+weight = 1
+examples = ["Obstacle, height, challenge"]
+
+[[subjects]]
+word = "The River"
+category = ["exploration"]
+weight = 1
+examples = ["Barrier, flow, boundary"]

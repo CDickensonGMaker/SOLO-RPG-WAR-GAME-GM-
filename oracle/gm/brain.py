@@ -13,6 +13,9 @@ import re
 from oracle.gm.personality import GMPersonality, GMTone, GMStyle, PERSONALITIES
 from oracle.gm.memory import SessionMemory, TrackedEntity, PlotThread
 from oracle.gm.responder import NarrativeResponder
+from oracle.gm.enhanced_responder import EnhancedResponder
+from oracle.gm.world_model import WorldModel
+from oracle.gm.nlp.content_router import ContentRouter
 
 
 @dataclass
@@ -48,13 +51,28 @@ class GameMasterBrain:
     - Generate appropriate NPCs, scenes, and events
     - Adapt tone and style to the game mood
     - Manage plot threads and story progression
+
+    The brain supports two processing modes:
+    - process_input(): Traditional substring-based command detection
+    - process_smart(): NLP-powered intent recognition via orchestrator
+
+    Use process_smart() for natural language interaction, or
+    process_input() for backwards compatibility.
     """
 
     def __init__(self, personality: GMPersonality = None,
                  memory: SessionMemory = None):
         self.personality = personality or PERSONALITIES["classic"]
         self.memory = memory or SessionMemory()
-        self.responder = NarrativeResponder(self.personality)
+
+        # Use EnhancedResponder for fiction-aware responses when memory available
+        self.responder = EnhancedResponder(self.memory, self.personality)
+
+        # Initialize content router for TOML content access
+        self.content_router = self._init_content_router()
+
+        # World model for persistent entity management (with content router)
+        self.world_model = WorldModel(self.memory, self.content_router)
 
         # Mode-specific handlers
         self._mode_handlers: Dict[str, Callable] = {}
@@ -70,6 +88,31 @@ class GameMasterBrain:
             "chaos_change": [],
             "thread_update": [],
         }
+
+        # Lazy-loaded orchestrator for smart NLP processing
+        self._orchestrator = None
+
+    def _init_content_router(self) -> Optional[ContentRouter]:
+        """Initialize the content router for TOML content access."""
+        from pathlib import Path
+
+        # Try to find the oracle data directory
+        # Method 1: Relative to this file
+        here = Path(__file__).parent
+        data_root = here.parent / "data"
+        if data_root.exists():
+            return ContentRouter(data_root)
+
+        # Method 2: Common install locations
+        for path in [
+            Path.home() / "oracle" / "oracle" / "data",
+            Path.cwd() / "oracle" / "data",
+            Path.cwd() / "data",
+        ]:
+            if path.exists():
+                return ContentRouter(path)
+
+        return None
 
     # =========================================================================
     # Core Oracle System
@@ -144,8 +187,12 @@ class GameMasterBrain:
 
             random_event_text = self.responder.random_event(event_type, self.memory)
 
-        # Generate interpretation
-        interpretation = self.responder.interpret_oracle(answer, question, self.memory)
+        # Generate interpretation - use enhanced method for fiction-aware complications
+        if isinstance(self.responder, EnhancedResponder):
+            context = "combat" if any(w in question.lower() for w in ["attack", "fight", "hit"]) else ""
+            interpretation = self.responder.interpret_oracle_enhanced(answer, question, context)
+        else:
+            interpretation = self.responder.interpret_oracle(answer, question, self.memory)
 
         # Update chaos based on answer extremity
         if answer in ["yes_and", "no_and"]:
@@ -256,13 +303,17 @@ class GameMasterBrain:
         Set the current scene.
 
         Returns a narrative description of the scene.
+        Creates or retrieves the location entity via WorldModel for persistence.
         """
-        self.memory.set_scene(
-            location=location,
-            description=description,
-            mood=mood,
-            npcs=npcs or []
+        # Create or get location entity via WorldModel
+        context = {"mood": mood}
+        location_entity = self.world_model.get_or_create_entity(
+            location, "location", context
         )
+
+        # Mark as discovered since we're entering it
+        location_entity.discovered = True
+        location_entity.revealed_attributes.add("description")
 
         # Update personality tone based on mood
         mood_to_tone = {
@@ -274,8 +325,50 @@ class GameMasterBrain:
         }
         self.personality.current_tone = mood_to_tone.get(mood, GMTone.NEUTRAL)
 
-        # Generate scene description
-        response = self.responder.describe_scene(location, mood, "arrival")
+        # Generate scene description - use enhanced for dramatic scene bangs
+        if isinstance(self.responder, EnhancedResponder):
+            response = self.responder.describe_scene_enhanced(location, mood, "arrival")
+        else:
+            response = self.responder.describe_scene(location, mood, "arrival")
+
+        # IMPORTANT: Capture the generated description and store it in the entity
+        # so it can be recalled later with full context
+        if response and (not location_entity.description or
+                         location_entity.source == "procedural"):
+            # Parse out features from the generated description
+            lines = response.split('\n')
+            for line in lines:
+                line = line.strip()
+                if not line:
+                    continue
+                # Look for feature-like descriptions
+                if any(kw in line.lower() for kw in ['position', 'passage', 'entrance',
+                       'exit', 'cover', 'shadow', 'light', 'path', 'door', 'wall']):
+                    if "features" not in location_entity.attributes:
+                        location_entity.attributes["features"] = []
+                    if line not in location_entity.attributes["features"]:
+                        location_entity.attributes["features"].append(line)
+                # Look for hazard/warning descriptions
+                elif any(kw in line.lower() for kw in ['warning', 'danger', 'hazard',
+                        'radiation', 'corruption', 'predator', 'trap']):
+                    if "hazards" not in location_entity.attributes:
+                        location_entity.attributes["hazards"] = []
+                    if line not in location_entity.attributes["hazards"]:
+                        location_entity.attributes["hazards"].append(line)
+
+            # Store the full generated description
+            if not description:
+                location_entity.description = response.split('\n')[0] if response else location_entity.description
+
+        # Use provided description if given
+        effective_description = description or location_entity.description
+
+        self.memory.set_scene(
+            location=location,
+            description=effective_description,
+            mood=mood,
+            npcs=npcs or []
+        )
 
         self.memory.add_gm_response(response, {"type": "scene_change"})
         self._emit("scene_change", self.memory.current_scene)
@@ -317,8 +410,11 @@ class GameMasterBrain:
             current_npcs.append(name)
             self.memory.current_scene["present_npcs"] = current_npcs
 
-        # Generate introduction
-        response = self.responder.npc_interaction(name, disposition, "greeting")
+        # Generate introduction - use enhanced for relationship-aware greetings
+        if isinstance(self.responder, EnhancedResponder):
+            response = self.responder.npc_interaction_enhanced(name, "greeting")
+        else:
+            response = self.responder.npc_interaction(name, disposition, "greeting")
 
         self.memory.add_gm_response(response, {"type": "npc_intro", "npc": name})
         self._emit("npc_interaction", entity)
@@ -392,6 +488,44 @@ class GameMasterBrain:
         self._adjust_chaos(-1)
 
         return response
+
+    # =========================================================================
+    # Enhanced GM Features (Pacing, NPC Memory)
+    # =========================================================================
+
+    def get_pacing_status(self) -> str:
+        """Get current pacing status and suggestions."""
+        if isinstance(self.responder, EnhancedResponder):
+            return self.responder.get_pacing_suggestion()
+        return "Pacing tracking not available"
+
+    def log_npc_promise(self, npc_name: str, promise: str) -> str:
+        """Log a promise made to an NPC."""
+        if isinstance(self.responder, EnhancedResponder):
+            self.responder.log_npc_promise(npc_name, promise)
+            return f"Logged promise to {npc_name}: {promise}"
+        return "NPC memory not available"
+
+    def log_npc_lie(self, npc_name: str, lie: str, truth: str = "") -> str:
+        """Log a lie told to an NPC (for potential future discovery)."""
+        if isinstance(self.responder, EnhancedResponder):
+            self.responder.log_npc_lie(npc_name, lie, truth)
+            return f"Logged deception to {npc_name}: {lie}"
+        return "NPC memory not available"
+
+    def log_npc_conversation(self, npc_name: str, topic: str,
+                             summary: str = "", disposition_change: int = 0) -> str:
+        """Log a conversation with an NPC."""
+        if isinstance(self.responder, EnhancedResponder):
+            self.responder.log_npc_conversation(npc_name, topic, summary, disposition_change)
+            return f"Logged conversation with {npc_name} about {topic}"
+        return "NPC memory not available"
+
+    def get_npc_relationship(self, npc_name: str) -> Dict[str, Any]:
+        """Get relationship context for an NPC."""
+        if isinstance(self.responder, EnhancedResponder):
+            return self.responder.npc_tracker.get_relationship_context(npc_name)
+        return {"known": False, "first_meeting": True}
 
     # =========================================================================
     # Conversation Interface
@@ -469,6 +603,50 @@ class GameMasterBrain:
         return "\n".join(parts)
 
     # =========================================================================
+    # Smart NLP Processing (Orchestrator)
+    # =========================================================================
+
+    @property
+    def orchestrator(self):
+        """
+        Lazy-load the GM orchestrator for smart NLP processing.
+
+        The orchestrator provides intent-based natural language understanding
+        and routes to appropriate handlers (oracle, NPC interaction, etc.)
+
+        Returns:
+            GMOrchestrator instance
+        """
+        if self._orchestrator is None:
+            from oracle.gm.orchestrator import GMOrchestrator
+            self._orchestrator = GMOrchestrator(self)
+        return self._orchestrator
+
+    def process_smart(self, user_input: str) -> str:
+        """
+        Process input using smart NLP orchestration.
+
+        This method provides enhanced natural language understanding:
+        - Pattern-based intent recognition ("ask the guard about X")
+        - Entity resolution (links "the guard" to tracked NPC)
+        - Context-aware oracle checks
+        - Coherent narrative responses
+
+        Falls back to traditional process_input() for unrecognized patterns.
+
+        Args:
+            user_input: Natural language input from the user
+
+        Returns:
+            Narrative response string
+
+        Example:
+            >>> brain.process_smart("ask the merchant about the artifact")
+            "YES, BUT...\n\nGrimjaw eyes you warily..."
+        """
+        return self.orchestrator.process(user_input)
+
+    # =========================================================================
     # Greeting and Session Management
     # =========================================================================
 
@@ -494,7 +672,8 @@ class GameMasterBrain:
         else:
             self.personality = PERSONALITIES.get("classic", self.personality)
 
-        self.responder = NarrativeResponder(self.personality)
+        # Recreate enhanced responder with new personality
+        self.responder = EnhancedResponder(self.memory, self.personality)
 
     def set_setting(self, setting: str):
         """Set the game setting."""
@@ -528,7 +707,13 @@ class GameMasterBrain:
     def load_session(self, path: str):
         """Load a saved session."""
         self.memory = SessionMemory.load(path)
-        self.responder = NarrativeResponder(self.personality)
+        # Recreate enhanced responder with loaded memory
+        self.responder = EnhancedResponder(self.memory, self.personality)
+        # Reinitialize content router and world model with loaded memory
+        self.content_router = self._init_content_router()
+        self.world_model = WorldModel(self.memory, self.content_router)
+        # Reset orchestrator to pick up new memory
+        self._orchestrator = None
 
     def get_history(self, count: int = 20) -> List[Dict[str, Any]]:
         """Get recent conversation history."""

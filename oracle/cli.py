@@ -11,6 +11,9 @@ from typing import Optional
 from prompt_toolkit import PromptSession
 from prompt_toolkit.completion import WordCompleter
 from prompt_toolkit.history import FileHistory
+from prompt_toolkit.output import create_output
+import sys
+import os
 from rich.console import Console
 from rich.panel import Panel
 from rich.table import Table
@@ -167,10 +170,31 @@ class OracleCLI:
 
         # Set up history file in user's home
         history_path = Path.home() / ".oracle_history"
-        self.session: PromptSession = PromptSession(
-            history=FileHistory(str(history_path)),
-            completer=WordCompleter(self.COMMANDS, ignore_case=True),
-        )
+
+        # Handle terminal compatibility issues (Windows + non-native terminals)
+        try:
+            self.session: PromptSession = PromptSession(
+                history=FileHistory(str(history_path)),
+                completer=WordCompleter(self.COMMANDS, ignore_case=True),
+            )
+        except Exception as e:
+            # Fallback: force TERM to be Windows-compatible
+            if "NoConsoleScreenBufferError" in str(type(e).__name__) or "xterm" in str(e):
+                # Remove TERM that confuses prompt_toolkit on Windows
+                old_term = os.environ.get("TERM")
+                if old_term:
+                    del os.environ["TERM"]
+                try:
+                    self.session = PromptSession(
+                        history=FileHistory(str(history_path)),
+                        completer=WordCompleter(self.COMMANDS, ignore_case=True),
+                    )
+                finally:
+                    # Restore TERM if it was set
+                    if old_term:
+                        os.environ["TERM"] = old_term
+            else:
+                raise
 
     def run(self):
         """Main entry point - run the CLI."""
