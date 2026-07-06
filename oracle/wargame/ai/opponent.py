@@ -181,7 +181,7 @@ class OpponentAI:
         for unit in enemy_roster.active_units:
             score, reasons = self._calculate_threat_score(unit)
             priority = unit.get_stat("priority_target", False) or \
-                       "character" in str(unit.keywords).lower()
+                       "character" in str(getattr(unit, 'abilities', [])).lower()
 
             assessments.append(
                 ThreatAssessment(
@@ -611,7 +611,7 @@ class OpponentAI:
             # Aggressive - activate heavy hitters first
             units.sort(
                 key=lambda u: (
-                    1 if "character" in str(u.keywords).lower() else 2,
+                    1 if "character" in str(getattr(u, 'abilities', [])).lower() else 2,
                     -(u.points_cost or 0),
                 ),
             )
@@ -619,7 +619,7 @@ class OpponentAI:
             # Defensive - activate screening units first
             units.sort(
                 key=lambda u: (
-                    2 if "character" in str(u.keywords).lower() else 1,
+                    2 if "character" in str(getattr(u, 'abilities', [])).lower() else 1,
                     u.points_cost or 0,
                 ),
             )

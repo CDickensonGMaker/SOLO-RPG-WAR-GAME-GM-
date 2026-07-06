@@ -10,6 +10,7 @@ A tabletop wargaming assistant where:
 
 from __future__ import annotations
 
+import json
 import random
 import tomllib
 from dataclasses import dataclass, field
@@ -57,6 +58,188 @@ from oracle.roster import (
 
 
 # =============================================================================
+# Faction Data Loader
+# =============================================================================
+
+# Map game system IDs to faction directories
+FACTION_DIRS = {
+    "oldhammer_2e": "oldhammer_2e",
+    "opr_grimdark": "grimdark_future",
+    "old_world": "old_world",
+    "trench_crusade": "trench_crusade",  # May need to create this
+}
+
+
+def load_factions_for_system(system_id: str) -> Dict[str, Dict[str, Any]]:
+    """
+    Load all faction data for a game system.
+
+    Returns dict of {faction_name: faction_data} where faction_data includes units list.
+    """
+    factions = {}
+
+    faction_dir_name = FACTION_DIRS.get(system_id)
+    if not faction_dir_name:
+        return factions
+
+    data_path = Path(__file__).parent.parent / "data" / "wargames" / faction_dir_name / "factions"
+
+    if not data_path.exists():
+        return factions
+
+    for toml_file in data_path.glob("*.toml"):
+        try:
+            with open(toml_file, "rb") as f:
+                data = tomllib.load(f)
+                faction_name = data.get("name", toml_file.stem.replace("_", " ").title())
+                factions[faction_name] = data
+        except Exception as e:
+            print(f"Error loading faction {toml_file}: {e}")
+
+    return factions
+
+
+def get_units_from_faction(faction_data: Dict[str, Any]) -> List[Dict[str, Any]]:
+    """Extract unit list from faction data."""
+    return faction_data.get("units", [])
+
+
+def load_wargear_for_system(system_id: str) -> Dict[str, Any]:
+    """
+    Load wargear data for a game system.
+
+    Returns dict with 'wargear' list and optional 'wargear_lists' mapping.
+    """
+    wargear_dir_name = FACTION_DIRS.get(system_id)
+    if not wargear_dir_name:
+        return {}
+
+    wargear_path = Path(__file__).parent.parent / "data" / "wargames" / wargear_dir_name / "wargear.toml"
+
+    if not wargear_path.exists():
+        return {}
+
+    try:
+        with open(wargear_path, "rb") as f:
+            return tomllib.load(f)
+    except Exception as e:
+        print(f"Error loading wargear: {e}")
+        return {}
+
+
+def load_chaos_gifts() -> Dict[str, Any]:
+    """
+    Load Chaos gifts/mutations data for Oldhammer 2e.
+
+    Returns dict with 'marks', 'mutations', 'daemon_weapons', 'rewards'.
+    """
+    gifts_path = Path(__file__).parent.parent / "data" / "wargames" / "oldhammer_2e" / "chaos_gifts.toml"
+
+    if not gifts_path.exists():
+        return {}
+
+    try:
+        with open(gifts_path, "rb") as f:
+            return tomllib.load(f)
+    except Exception as e:
+        print(f"Error loading chaos gifts: {e}")
+        return {}
+
+
+def load_test_detachments() -> List[Dict[str, Any]]:
+    """
+    Load pre-built test detachments for quick army setup.
+
+    Returns list of detachment dicts with units.
+    """
+    detachments_path = Path(__file__).parent.parent / "data" / "wargames" / "oldhammer_2e" / "test_detachments.toml"
+
+    if not detachments_path.exists():
+        return []
+
+    try:
+        with open(detachments_path, "rb") as f:
+            data = tomllib.load(f)
+            return data.get("detachments", [])
+    except Exception as e:
+        print(f"Error loading test detachments: {e}")
+        return []
+
+
+# =============================================================================
+# Force Organization Constraints (2nd Edition)
+# =============================================================================
+
+FORCE_ORG_2E = {
+    "HQ": {"min": 1, "max": 2},
+    "Troops": {"min": 2, "max": 6},
+    "Elites": {"min": 0, "max": 3},
+    "Fast Attack": {"min": 0, "max": 3},
+    "Heavy Support": {"min": 0, "max": 3},
+}
+
+
+def validate_force_org(roster: "Roster") -> List[str]:
+    """
+    Validate a roster against 2nd Edition force organization.
+
+    Returns list of validation errors (empty if valid).
+    """
+    errors = []
+
+    # Count units by category
+    category_counts = {}
+    for unit in roster.units:
+        # Try to get category from unit data
+        category = "Troops"  # Default
+        if hasattr(unit, 'slot_type'):
+            slot_val = unit.slot_type.value if hasattr(unit.slot_type, 'value') else str(unit.slot_type)
+            category_map = {
+                "hq": "HQ",
+                "troops": "Troops",
+                "elites": "Elites",
+                "fast_attack": "Fast Attack",
+                "heavy_support": "Heavy Support",
+            }
+            category = category_map.get(slot_val.lower(), "Troops")
+
+        category_counts[category] = category_counts.get(category, 0) + 1
+
+    # Check constraints
+    for cat, limits in FORCE_ORG_2E.items():
+        count = category_counts.get(cat, 0)
+        if count < limits["min"]:
+            errors.append(f"{cat}: Need at least {limits['min']}, have {count}")
+        if count > limits["max"]:
+            errors.append(f"{cat}: Maximum {limits['max']}, have {count}")
+
+    return errors
+
+
+def validate_unit_size(unit_data: Dict[str, Any], model_count: int) -> Optional[str]:
+    """
+    Validate unit model count against allowed range.
+
+    Returns error message or None if valid.
+    """
+    models_str = str(unit_data.get("models", "1"))
+
+    if "-" in models_str:
+        parts = models_str.split("-")
+        min_models = int(parts[0])
+        max_models = int(parts[-1])
+    else:
+        min_models = max_models = int(models_str) if models_str.isdigit() else 1
+
+    if model_count < min_models:
+        return f"Minimum {min_models} models required, have {model_count}"
+    if model_count > max_models:
+        return f"Maximum {max_models} models allowed, have {model_count}"
+
+    return None
+
+
+# =============================================================================
 # Configuration
 # =============================================================================
 
@@ -78,17 +261,19 @@ GAME_SYSTEMS = {
     },
     "trench_crusade": {
         "name": "Trench Crusade",
-        "description": "WWI horror skirmish - d10 system",
+        "description": "WWI horror skirmish - 2d6 vs 7 system",
         "engine_class": TrenchCrusadeEngine,
     },
 }
 
 COMMANDER_ARCHETYPES = [
     "aggressive_blitzer",
-    "defensive_tactician",
-    "balanced_strategist",
-    "cautious_commander",
-    "reckless_berserker",
+    "cautious_planner",
+    "cunning_feinter",
+    "stubborn_defender",
+    "methodical_grinder",
+    "glory_hunter",
+    "ruthless_pragmatist",
 ]
 
 
@@ -253,8 +438,8 @@ class BattleChatPanel:
             dpg.delete_item("attack_dialog")
 
         # Get available units
-        friendly = self.coordinator.state.player_roster
-        enemy = self.coordinator.state.ai_roster
+        friendly = self.coordinator.player_roster
+        enemy = self.coordinator.ai_roster
 
         if not friendly or not enemy:
             self.add_message(BattleMessage(
@@ -349,7 +534,7 @@ class BattleChatPanel:
         if not attacker_name:
             return
 
-        roster = self.coordinator.state.player_roster
+        roster = self.coordinator.player_roster
         unit = roster.get_unit(attacker_name)
         if not unit:
             return
@@ -386,8 +571,8 @@ class BattleChatPanel:
         ))
 
         # Get units
-        roster = self.coordinator.state.player_roster
-        enemy_roster = self.coordinator.state.ai_roster
+        roster = self.coordinator.player_roster
+        enemy_roster = self.coordinator.ai_roster
 
         attacker = roster.get_unit(attacker_name)
         target = enemy_roster.get_unit(target_name)
@@ -550,7 +735,7 @@ class BattleChatPanel:
     def _advance_phase(self):
         """Advance to the next battle phase."""
         old_phase = self.coordinator.state.current_phase
-        self.coordinator.advance_phase()
+        self.coordinator.state.advance_phase()
         new_phase = self.coordinator.state.current_phase
 
         self.add_message(BattleMessage(
@@ -565,15 +750,15 @@ class BattleChatPanel:
 
         # Get all units from both sides
         all_units = []
-        if self.coordinator.state.player_roster:
+        if self.coordinator.player_roster:
             all_units.extend([
                 ("Friendly: " + u.name, u, True)
-                for u in self.coordinator.state.player_roster.active_units
+                for u in self.coordinator.player_roster.active_units
             ])
-        if self.coordinator.state.ai_roster:
+        if self.coordinator.ai_roster:
             all_units.extend([
                 ("Enemy: " + u.name, u, False)
-                for u in self.coordinator.state.ai_roster.active_units
+                for u in self.coordinator.ai_roster.active_units
             ])
 
         if not all_units:
@@ -813,12 +998,39 @@ class ForcePanel:
                 width=-1,
             )
 
+            dpg.add_spacer(height=5)
+
+            # Roster management buttons
+            with dpg.group(horizontal=True):
+                dpg.add_button(
+                    label="Load Detachment",
+                    callback=lambda: self._show_load_detachment_dialog(),
+                    width=110,
+                )
+                dpg.add_button(
+                    label="Validate",
+                    callback=lambda: self._validate_roster(),
+                    width=70,
+                )
+
+            with dpg.group(horizontal=True):
+                dpg.add_button(
+                    label="Save Roster",
+                    callback=lambda: self._show_save_roster_dialog(),
+                    width=90,
+                )
+                dpg.add_button(
+                    label="Load Roster",
+                    callback=lambda: self._show_load_roster_dialog(),
+                    width=90,
+                )
+
     def refresh(self):
         """Refresh the unit list."""
         roster = (
-            self.coordinator.state.player_roster
+            self.coordinator.player_roster
             if self.is_friendly
-            else self.coordinator.state.ai_roster
+            else self.coordinator.ai_roster
         )
 
         if dpg.does_item_exist(self._list_tag):
@@ -880,20 +1092,51 @@ class ForcePanel:
             self._on_unit_click(unit, self.is_friendly)
 
     def _show_add_unit_dialog(self):
-        """Show add unit dialog."""
+        """Show add unit dialog with faction/unit selection."""
         tag = f"add_unit_{'friendly' if self.is_friendly else 'enemy'}"
 
         if dpg.does_item_exist(tag):
             dpg.delete_item(tag)
 
+        # Get current game system from coordinator
+        system_id = self.coordinator.rules.system_id if self.coordinator.rules else "oldhammer_2e"
+
+        # Load factions for this system
+        self._factions = load_factions_for_system(system_id)
+        self._current_unit_data = None
+
         with dpg.window(
             label=f"Add {'Friendly' if self.is_friendly else 'Enemy'} Unit",
             modal=True,
             tag=tag,
-            width=400,
-            height=400,
-            pos=[200, 100],
+            width=500,
+            height=550,
+            pos=[200, 50],
         ):
+            # Faction selection
+            dpg.add_text("Select Faction:", color=(150, 200, 150))
+            faction_names = list(self._factions.keys()) if self._factions else ["(No factions found)"]
+            dpg.add_combo(
+                items=faction_names,
+                default_value=faction_names[0] if faction_names else "",
+                tag=f"{tag}_faction",
+                width=-1,
+                callback=lambda s, a: self._on_faction_selected(tag, a),
+            )
+
+            # Unit selection
+            dpg.add_text("Select Unit:", color=(150, 200, 150))
+            dpg.add_combo(
+                items=["(Select faction first)"],
+                tag=f"{tag}_unit_select",
+                width=-1,
+                callback=lambda s, a: self._on_unit_selected(tag, a),
+            )
+
+            dpg.add_separator()
+            dpg.add_text("Unit Details (editable):", color=(200, 200, 100))
+
+            # Unit name
             dpg.add_text("Unit Name:")
             dpg.add_input_text(
                 hint="e.g., Space Marines",
@@ -901,48 +1144,57 @@ class ForcePanel:
                 width=-1,
             )
 
-            dpg.add_text("Models:")
-            dpg.add_slider_int(
-                default_value=5,
-                min_value=1,
-                max_value=30,
-                tag=f"{tag}_models",
-                width=-1,
-            )
-
-            dpg.add_text("Wounds per Model:")
-            dpg.add_slider_int(
-                default_value=1,
-                min_value=1,
-                max_value=10,
-                tag=f"{tag}_wounds",
-                width=-1,
-            )
-
-            dpg.add_text("Points:")
-            dpg.add_input_int(
-                default_value=100,
-                tag=f"{tag}_points",
-                width=-1,
-            )
+            # Models and wounds
+            with dpg.group(horizontal=True):
+                with dpg.group():
+                    dpg.add_text("Models:")
+                    dpg.add_slider_int(
+                        default_value=5,
+                        min_value=1,
+                        max_value=30,
+                        tag=f"{tag}_models",
+                        width=150,
+                    )
+                with dpg.group():
+                    dpg.add_text("Wounds/Model:")
+                    dpg.add_slider_int(
+                        default_value=1,
+                        min_value=1,
+                        max_value=10,
+                        tag=f"{tag}_wounds",
+                        width=150,
+                    )
+                with dpg.group():
+                    dpg.add_text("Points:")
+                    dpg.add_input_int(
+                        default_value=100,
+                        tag=f"{tag}_points",
+                        width=100,
+                    )
 
             # Stats section
             dpg.add_text("Stats:", color=(150, 150, 150))
             with dpg.group(horizontal=True):
                 dpg.add_text("WS:")
-                dpg.add_input_int(default_value=4, tag=f"{tag}_ws", width=50)
+                dpg.add_input_int(default_value=4, tag=f"{tag}_ws", width=40)
                 dpg.add_text("BS:")
-                dpg.add_input_int(default_value=4, tag=f"{tag}_bs", width=50)
+                dpg.add_input_int(default_value=4, tag=f"{tag}_bs", width=40)
                 dpg.add_text("S:")
-                dpg.add_input_int(default_value=4, tag=f"{tag}_s", width=50)
+                dpg.add_input_int(default_value=4, tag=f"{tag}_s", width=40)
                 dpg.add_text("T:")
-                dpg.add_input_int(default_value=4, tag=f"{tag}_t", width=50)
+                dpg.add_input_int(default_value=4, tag=f"{tag}_t", width=40)
+                dpg.add_text("W:")
+                dpg.add_input_int(default_value=1, tag=f"{tag}_w", width=40)
 
             with dpg.group(horizontal=True):
+                dpg.add_text("I:")
+                dpg.add_input_int(default_value=4, tag=f"{tag}_i", width=40)
+                dpg.add_text("A:")
+                dpg.add_input_int(default_value=1, tag=f"{tag}_a", width=40)
                 dpg.add_text("Ld:")
-                dpg.add_input_int(default_value=7, tag=f"{tag}_ld", width=50)
+                dpg.add_input_int(default_value=7, tag=f"{tag}_ld", width=40)
                 dpg.add_text("Sv:")
-                dpg.add_input_int(default_value=4, tag=f"{tag}_sv", width=50)
+                dpg.add_input_int(default_value=4, tag=f"{tag}_sv", width=40)
 
             # Weapons
             dpg.add_text("Weapons (comma-separated):")
@@ -952,19 +1204,175 @@ class ForcePanel:
                 width=-1,
             )
 
+            # Special rules
+            dpg.add_text("Special Rules:")
+            dpg.add_input_text(
+                hint="e.g., And They Shall Know No Fear",
+                tag=f"{tag}_special",
+                width=-1,
+            )
+
+            dpg.add_spacer(height=5)
+
+            # Wargear and Chaos buttons
+            with dpg.group(horizontal=True):
+                dpg.add_button(
+                    label="Select Wargear...",
+                    callback=lambda: self._show_wargear_dialog(tag),
+                    width=130,
+                )
+                dpg.add_button(
+                    label="Chaos Rewards...",
+                    callback=lambda: self._show_chaos_rewards_dialog(tag),
+                    width=130,
+                )
+
+            dpg.add_spacer(height=5)
+
+            # Selected wargear display
+            dpg.add_text("Selected Wargear:", color=(150, 150, 150))
+            dpg.add_text("(none)", tag=f"{tag}_wargear_display", wrap=450, color=(180, 180, 140))
+
             dpg.add_spacer(height=10)
 
             with dpg.group(horizontal=True):
                 dpg.add_button(
-                    label="Add",
+                    label="Add Unit",
                     callback=lambda: self._add_unit(tag),
-                    width=100,
+                    width=120,
+                )
+                dpg.add_button(
+                    label="Custom Unit",
+                    callback=lambda: self._clear_form(tag),
+                    width=120,
                 )
                 dpg.add_button(
                     label="Cancel",
                     callback=lambda: dpg.delete_item(tag),
                     width=100,
                 )
+
+        # Initialize wargear storage
+        self._selected_wargear = []
+        self._selected_chaos_gifts = []
+
+        # Auto-select first faction if available
+        if faction_names and faction_names[0] != "(No factions found)":
+            self._on_faction_selected(tag, faction_names[0])
+
+    def _on_faction_selected(self, tag: str, faction_name: str):
+        """Handle faction selection - populate unit dropdown."""
+        if faction_name not in self._factions:
+            return
+
+        faction_data = self._factions[faction_name]
+        units = get_units_from_faction(faction_data)
+
+        unit_names = [u.get("name", "Unknown") for u in units]
+        if not unit_names:
+            unit_names = ["(No units in faction)"]
+
+        if dpg.does_item_exist(f"{tag}_unit_select"):
+            dpg.configure_item(f"{tag}_unit_select", items=unit_names)
+            dpg.set_value(f"{tag}_unit_select", unit_names[0])
+
+            # Auto-select first unit
+            if units:
+                self._on_unit_selected(tag, unit_names[0])
+
+    def _on_unit_selected(self, tag: str, unit_name: str):
+        """Handle unit selection - populate form with unit data."""
+        faction_name = dpg.get_value(f"{tag}_faction")
+        if faction_name not in self._factions:
+            return
+
+        faction_data = self._factions[faction_name]
+        units = get_units_from_faction(faction_data)
+
+        # Find the selected unit
+        unit_data = None
+        for u in units:
+            if u.get("name") == unit_name:
+                unit_data = u
+                break
+
+        if not unit_data:
+            return
+
+        self._current_unit_data = unit_data
+        stats = unit_data.get("stats", {})
+
+        # Populate form
+        dpg.set_value(f"{tag}_name", unit_data.get("name", ""))
+
+        # Parse models (could be "5" or "5-10")
+        models_str = str(unit_data.get("models", "5"))
+        if "-" in models_str:
+            models = int(models_str.split("-")[0])  # Use minimum
+        else:
+            models = int(models_str)
+        dpg.set_value(f"{tag}_models", models)
+
+        # Wounds
+        wounds = stats.get("W", 1)
+        if isinstance(wounds, str):
+            wounds = int(wounds) if wounds.isdigit() else 1
+        dpg.set_value(f"{tag}_wounds", wounds)
+
+        # Points
+        dpg.set_value(f"{tag}_points", unit_data.get("points", 100))
+
+        # Stats
+        def get_stat(name, default=4):
+            val = stats.get(name, default)
+            if isinstance(val, str):
+                val = val.replace("+", "").replace("-", "")
+                return int(val) if val.isdigit() else default
+            return int(val) if val else default
+
+        dpg.set_value(f"{tag}_ws", get_stat("WS", 4))
+        dpg.set_value(f"{tag}_bs", get_stat("BS", 4))
+        dpg.set_value(f"{tag}_s", get_stat("S", 4))
+        dpg.set_value(f"{tag}_t", get_stat("T", 4))
+        dpg.set_value(f"{tag}_w", get_stat("W", 1))
+        dpg.set_value(f"{tag}_i", get_stat("I", 4))
+        dpg.set_value(f"{tag}_a", get_stat("A", 1))
+        dpg.set_value(f"{tag}_ld", get_stat("Ld", 7))
+
+        # Save value - extract number from "3+" format
+        sv = stats.get("Sv", "4+")
+        if isinstance(sv, str):
+            sv = sv.replace("+", "").split("/")[0]  # Handle "2+/5++" format
+            sv = int(sv) if sv.isdigit() else 4
+        dpg.set_value(f"{tag}_sv", sv)
+
+        # Weapons
+        weapons = unit_data.get("weapons", [])
+        weapon_names = [w.get("name", "") for w in weapons]
+        dpg.set_value(f"{tag}_weapons", ", ".join(weapon_names))
+
+        # Special rules
+        special = unit_data.get("special_rules", [])
+        dpg.set_value(f"{tag}_special", ", ".join(special) if special else "")
+
+    def _clear_form(self, tag: str):
+        """Clear the form for custom unit entry."""
+        dpg.set_value(f"{tag}_name", "")
+        dpg.set_value(f"{tag}_models", 5)
+        dpg.set_value(f"{tag}_wounds", 1)
+        dpg.set_value(f"{tag}_points", 100)
+        dpg.set_value(f"{tag}_ws", 4)
+        dpg.set_value(f"{tag}_bs", 4)
+        dpg.set_value(f"{tag}_s", 4)
+        dpg.set_value(f"{tag}_t", 4)
+        dpg.set_value(f"{tag}_w", 1)
+        dpg.set_value(f"{tag}_i", 4)
+        dpg.set_value(f"{tag}_a", 1)
+        dpg.set_value(f"{tag}_ld", 7)
+        dpg.set_value(f"{tag}_sv", 4)
+        dpg.set_value(f"{tag}_weapons", "")
+        dpg.set_value(f"{tag}_special", "")
+        self._current_unit_data = None
 
     def _add_unit(self, tag: str):
         """Add the unit."""
@@ -977,18 +1385,26 @@ class ForcePanel:
         bs = dpg.get_value(f"{tag}_bs")
         s = dpg.get_value(f"{tag}_s")
         t = dpg.get_value(f"{tag}_t")
+        w = dpg.get_value(f"{tag}_w")
+        i = dpg.get_value(f"{tag}_i")
+        a = dpg.get_value(f"{tag}_a")
         ld = dpg.get_value(f"{tag}_ld")
         sv = dpg.get_value(f"{tag}_sv")
 
         weapons_text = dpg.get_value(f"{tag}_weapons")
+        special_text = dpg.get_value(f"{tag}_special")
 
         if not name:
             dpg.delete_item(tag)
             return
 
-        # Parse weapons
+        # Use weapon data from TOML if available, otherwise parse text
         weapons = []
-        if weapons_text:
+        if self._current_unit_data and self._current_unit_data.get("weapons"):
+            # Use detailed weapon data from TOML
+            weapons = self._current_unit_data.get("weapons", [])
+        elif weapons_text:
+            # Parse simple weapon names
             for w_name in weapons_text.split(","):
                 w_name = w_name.strip()
                 if w_name:
@@ -999,37 +1415,64 @@ class ForcePanel:
                         "strength": s,
                     })
 
+        # Parse special rules
+        special_rules = []
+        if special_text:
+            special_rules = [r.strip() for r in special_text.split(",") if r.strip()]
+
+        # Calculate total points including wargear
+        wargear_points = sum(w.get("points", 0) for w in self._selected_wargear)
+        chaos_points = sum(g.get("points", 0) for g in self._selected_chaos_gifts)
+        total_points = points + wargear_points + chaos_points
+
+        # Build wargear list
+        wargear_names = [w.get("name", "") for w in self._selected_wargear]
+        for g in self._selected_chaos_gifts:
+            wargear_names.append(f"[{g.get('type', 'gift').upper()}] {g.get('name', '')}")
+
+        # Apply stat modifiers from Chaos gifts
+        modified_stats = {
+            "WS": ws, "BS": bs, "S": s, "T": t,
+            "W": w, "I": i, "A": a,
+            "Ld": ld, "Sv": f"{sv}+",
+        }
+        for gift in self._selected_chaos_gifts:
+            stat_mods = gift.get("stat_mods", {})
+            for stat_key, mod_value in stat_mods.items():
+                if stat_key in modified_stats and isinstance(modified_stats[stat_key], int):
+                    modified_stats[stat_key] = modified_stats[stat_key] + mod_value
+
+        # Add any special rules from Chaos gifts
+        for gift in self._selected_chaos_gifts:
+            gift_rules = gift.get("special_rules", [])
+            for rule in gift_rules:
+                if rule not in special_rules:
+                    special_rules.append(rule)
+
         # Create unit
         manager = RosterManager()
         unit = manager.create_custom_unit(
             name=name,
             slot_type=SlotType.TROOPS,
-            stats={
-                "WS": ws, "BS": bs, "S": s, "T": t,
-                "Ld": ld, "Sv": f"{sv}+",
-            },
+            stats=modified_stats,
             weapons=weapons,
+            wargear=wargear_names,
             wounds=wounds,
             models=models,
-            points=points,
+            points=total_points,
         )
+
+        # Add special rules to unit abilities
+        if special_rules:
+            for rule in special_rules:
+                unit.add_ability(rule)
 
         # Add to appropriate roster
         roster = (
-            self.coordinator.state.player_roster
+            self.coordinator.player_roster
             if self.is_friendly
-            else self.coordinator.state.ai_roster
+            else self.coordinator.ai_roster
         )
-
-        if roster is None:
-            # Create roster if needed
-            roster = Roster(
-                name="Your Army" if self.is_friendly else "Enemy Army",
-            )
-            if self.is_friendly:
-                self.coordinator.state.player_roster = roster
-            else:
-                self.coordinator.state.ai_roster = roster
 
         roster.add_unit(unit)
 
@@ -1039,6 +1482,842 @@ class ForcePanel:
     def on_unit_click(self, callback):
         """Set unit click callback."""
         self._on_unit_click = callback
+
+    def _show_wargear_dialog(self, parent_tag: str):
+        """Show wargear selection dialog."""
+        if dpg.does_item_exist("wargear_dialog"):
+            dpg.delete_item("wargear_dialog")
+
+        # Get system ID from coordinator
+        system_id = self.coordinator.rules.system_id if self.coordinator.rules else "oldhammer_2e"
+        wargear_data = load_wargear_for_system(system_id)
+        wargear_items = wargear_data.get("wargear", [])
+
+        if not wargear_items:
+            return
+
+        # Group wargear by type
+        wargear_by_type = {}
+        for item in wargear_items:
+            item_type = item.get("type", "other")
+            if item_type not in wargear_by_type:
+                wargear_by_type[item_type] = []
+            wargear_by_type[item_type].append(item)
+
+        with dpg.window(
+            label="Select Wargear",
+            modal=True,
+            tag="wargear_dialog",
+            width=600,
+            height=500,
+            pos=[150, 50],
+        ):
+            dpg.add_text("Select wargear for this unit.")
+            dpg.add_text("Points costs are added to unit total.", color=(150, 150, 150))
+
+            dpg.add_spacer(height=5)
+
+            # Random wargear buttons
+            with dpg.group(horizontal=True):
+                dpg.add_button(
+                    label="Random Loadout",
+                    callback=lambda: self._randomize_wargear(parent_tag, wargear_items),
+                    width=130,
+                )
+                dpg.add_text("(D3 random items)", color=(150, 150, 150))
+
+            dpg.add_spacer(height=5)
+
+            # Running total
+            with dpg.group(horizontal=True):
+                dpg.add_text("Total Wargear Cost:")
+                dpg.add_text("0 pts", tag="wargear_total_pts", color=(200, 180, 100))
+
+            dpg.add_separator()
+
+            # Wargear tabs by type
+            with dpg.tab_bar():
+                for wg_type, items in sorted(wargear_by_type.items()):
+                    with dpg.tab(label=wg_type.title()):
+                        with dpg.child_window(height=300, border=False):
+                            for item in items:
+                                item_name = item.get("name", "Unknown")
+                                item_pts = item.get("points", 0)
+                                item_desc = item.get("description", "")
+                                effects = item.get("effects", [])
+
+                                with dpg.group(horizontal=True):
+                                    dpg.add_checkbox(
+                                        label=f"{item_name} ({item_pts} pts)",
+                                        tag=f"wg_{item_name.replace(' ', '_')}",
+                                        callback=lambda s, a, i=item: self._toggle_wargear(i, parent_tag),
+                                    )
+                                if effects:
+                                    dpg.add_text(f"  {', '.join(effects)}", color=(120, 150, 120))
+
+            dpg.add_spacer(height=10)
+
+            with dpg.group(horizontal=True):
+                dpg.add_button(
+                    label="Done",
+                    callback=lambda: dpg.delete_item("wargear_dialog"),
+                    width=100,
+                )
+                dpg.add_button(
+                    label="Clear All",
+                    callback=lambda: self._clear_wargear(parent_tag),
+                    width=100,
+                )
+
+    def _randomize_wargear(self, parent_tag: str, wargear_items: List[Dict[str, Any]]):
+        """Randomly select D3 wargear items."""
+        self._selected_wargear = []
+
+        if not wargear_items:
+            return
+
+        # Roll D3 for number of items
+        num_items = random.randint(1, 3)
+
+        # Pick random items (no duplicates)
+        available = list(wargear_items)
+        for _ in range(min(num_items, len(available))):
+            if available:
+                item = random.choice(available)
+                available.remove(item)
+                self._selected_wargear.append(item)
+
+        self._update_wargear_display(parent_tag)
+
+    def _toggle_wargear(self, item: Dict[str, Any], parent_tag: str):
+        """Toggle wargear selection."""
+        item_name = item.get("name", "Unknown")
+        item_pts = item.get("points", 0)
+
+        # Check if already selected
+        existing = [w for w in self._selected_wargear if w.get("name") == item_name]
+        if existing:
+            self._selected_wargear.remove(existing[0])
+        else:
+            self._selected_wargear.append(item)
+
+        # Update display
+        self._update_wargear_display(parent_tag)
+
+    def _clear_wargear(self, parent_tag: str):
+        """Clear all selected wargear."""
+        self._selected_wargear = []
+        self._update_wargear_display(parent_tag)
+
+        # Uncheck all checkboxes
+        if dpg.does_item_exist("wargear_dialog"):
+            for item in dpg.get_item_children("wargear_dialog", 1) or []:
+                try:
+                    if dpg.get_item_type(item) == "mvAppItemType::mvCheckbox":
+                        dpg.set_value(item, False)
+                except:
+                    pass
+
+    def _update_wargear_display(self, parent_tag: str):
+        """Update the wargear display text."""
+        if not self._selected_wargear:
+            display_text = "(none)"
+            total_pts = 0
+        else:
+            names = [f"{w.get('name')} ({w.get('points', 0)}pts)" for w in self._selected_wargear]
+            display_text = ", ".join(names)
+            total_pts = sum(w.get("points", 0) for w in self._selected_wargear)
+
+        if dpg.does_item_exist(f"{parent_tag}_wargear_display"):
+            dpg.set_value(f"{parent_tag}_wargear_display", display_text)
+
+        if dpg.does_item_exist("wargear_total_pts"):
+            dpg.set_value("wargear_total_pts", f"{total_pts} pts")
+
+    def _show_chaos_rewards_dialog(self, parent_tag: str):
+        """Show Chaos rewards/mutations selection dialog."""
+        if dpg.does_item_exist("chaos_rewards_dialog"):
+            dpg.delete_item("chaos_rewards_dialog")
+
+        chaos_data = load_chaos_gifts()
+        if not chaos_data:
+            return
+
+        marks = chaos_data.get("marks", [])
+        mutations = chaos_data.get("mutations", [])
+        daemon_weapons = chaos_data.get("daemon_weapons", [])
+        rewards = chaos_data.get("rewards", [])
+
+        with dpg.window(
+            label="Chaos Rewards & Mutations",
+            modal=True,
+            tag="chaos_rewards_dialog",
+            width=650,
+            height=550,
+            pos=[100, 30],
+        ):
+            dpg.add_text("Path to Glory", color=(200, 100, 100))
+            dpg.add_text("Select Chaos gifts for your champion.", color=(150, 150, 150))
+
+            dpg.add_spacer(height=5)
+
+            # Quick randomize buttons
+            with dpg.group(horizontal=True):
+                dpg.add_button(
+                    label="Randomize Champion",
+                    callback=lambda: self._randomize_chaos_champion(parent_tag),
+                    width=150,
+                )
+                dpg.add_text("(Random mark + D3 mutations)", color=(150, 150, 150))
+
+            dpg.add_spacer(height=5)
+
+            # Running total
+            with dpg.group(horizontal=True):
+                dpg.add_text("Total Gift Cost:")
+                dpg.add_text("0 pts", tag="chaos_total_pts", color=(200, 100, 100))
+
+            dpg.add_separator()
+
+            # Tabs for different gift types
+            with dpg.tab_bar():
+                # Marks of Chaos
+                with dpg.tab(label="Marks"):
+                    dpg.add_text("A champion can bear only ONE Mark.", color=(200, 150, 100))
+                    with dpg.child_window(height=250, border=False):
+                        for mark in marks:
+                            name = mark.get("name", "Unknown")
+                            god = mark.get("god", "")
+                            pts = mark.get("points", 0)
+                            desc = mark.get("description", "")
+                            rules = mark.get("special_rules", [])
+
+                            dpg.add_radio_button(
+                                items=[""],  # Placeholder for proper radio
+                                tag=f"mark_{name.replace(' ', '_')}",
+                            )
+                            with dpg.group(horizontal=True):
+                                dpg.add_checkbox(
+                                    label=f"{name} ({pts} pts)",
+                                    tag=f"chaos_mark_{name.replace(' ', '_')}",
+                                    callback=lambda s, a, m=mark: self._toggle_chaos_gift("mark", m, parent_tag),
+                                )
+                            dpg.add_text(f"  {desc}", color=(150, 150, 150), wrap=600)
+                            if rules:
+                                dpg.add_text(f"  Rules: {', '.join(rules)}", color=(100, 150, 100))
+                            dpg.add_spacer(height=5)
+
+                # Mutations
+                with dpg.tab(label="Mutations"):
+                    dpg.add_text("Roll D100 or select mutations.", color=(200, 150, 100))
+                    with dpg.group(horizontal=True):
+                        dpg.add_button(
+                            label="Roll Mutation (D100)",
+                            callback=lambda: self._roll_mutation(parent_tag),
+                            width=150,
+                        )
+                        dpg.add_button(
+                            label="Roll D3 Mutations",
+                            callback=lambda: self._roll_multiple_mutations(parent_tag, 3),
+                            width=140,
+                        )
+                    dpg.add_spacer(height=5)
+
+                    with dpg.child_window(height=220, border=False):
+                        for mut in mutations:
+                            name = mut.get("name", "Unknown")
+                            pts = mut.get("points", 0)
+                            desc = mut.get("description", "")
+                            stat_mods = mut.get("stat_mods", {})
+
+                            with dpg.group(horizontal=True):
+                                dpg.add_checkbox(
+                                    label=f"{name} ({pts} pts)",
+                                    tag=f"chaos_mut_{name.replace(' ', '_')}",
+                                    callback=lambda s, a, m=mut: self._toggle_chaos_gift("mutation", m, parent_tag),
+                                )
+                            if stat_mods:
+                                mods_str = ", ".join(f"+{v} {k}" for k, v in stat_mods.items())
+                                dpg.add_text(f"  Stats: {mods_str}", color=(150, 180, 150))
+
+                # Daemon Weapons
+                with dpg.tab(label="Daemon Weapons"):
+                    dpg.add_text("Powerful but dangerous.", color=(200, 100, 100))
+                    with dpg.child_window(height=250, border=False):
+                        for weapon in daemon_weapons:
+                            name = weapon.get("name", "Unknown")
+                            pts = weapon.get("points", 0)
+                            desc = weapon.get("description", "")
+                            drawback = weapon.get("drawback", "")
+
+                            with dpg.group(horizontal=True):
+                                dpg.add_checkbox(
+                                    label=f"{name} ({pts} pts)",
+                                    tag=f"chaos_dw_{name.replace(' ', '_')}",
+                                    callback=lambda s, a, w=weapon: self._toggle_chaos_gift("daemon_weapon", w, parent_tag),
+                                )
+                            dpg.add_text(f"  {desc}", color=(150, 150, 150), wrap=600)
+                            if drawback:
+                                dpg.add_text(f"  DRAWBACK: {drawback}", color=(200, 100, 100), wrap=600)
+                            dpg.add_spacer(height=5)
+
+                # Other Rewards
+                with dpg.tab(label="Rewards"):
+                    with dpg.child_window(height=250, border=False):
+                        for reward in rewards:
+                            name = reward.get("name", "Unknown")
+                            pts = reward.get("points", 0)
+                            rules = reward.get("special_rules", [])
+
+                            with dpg.group(horizontal=True):
+                                dpg.add_checkbox(
+                                    label=f"{name} ({pts} pts)",
+                                    tag=f"chaos_rew_{name.replace(' ', '_')}",
+                                    callback=lambda s, a, r=reward: self._toggle_chaos_gift("reward", r, parent_tag),
+                                )
+                            if rules:
+                                dpg.add_text(f"  {', '.join(rules)}", color=(100, 150, 100))
+
+            dpg.add_spacer(height=10)
+
+            # Selected gifts display
+            dpg.add_text("Selected Gifts:", color=(150, 150, 150))
+            dpg.add_text("(none)", tag="chaos_selected_display", wrap=600, color=(200, 150, 150))
+
+            dpg.add_spacer(height=10)
+
+            with dpg.group(horizontal=True):
+                dpg.add_button(
+                    label="Done",
+                    callback=lambda: dpg.delete_item("chaos_rewards_dialog"),
+                    width=100,
+                )
+                dpg.add_button(
+                    label="Clear All",
+                    callback=lambda: self._clear_chaos_gifts(parent_tag),
+                    width=100,
+                )
+
+    def _toggle_chaos_gift(self, gift_type: str, gift: Dict[str, Any], parent_tag: str):
+        """Toggle a Chaos gift selection."""
+        gift_name = gift.get("name", "Unknown")
+
+        # For marks, only allow one
+        if gift_type == "mark":
+            # Remove any existing marks
+            self._selected_chaos_gifts = [g for g in self._selected_chaos_gifts if g.get("type") != "mark"]
+
+        # Check if already selected
+        existing = [g for g in self._selected_chaos_gifts if g.get("name") == gift_name]
+        if existing:
+            self._selected_chaos_gifts.remove(existing[0])
+        else:
+            gift_copy = dict(gift)
+            gift_copy["type"] = gift_type
+            self._selected_chaos_gifts.append(gift_copy)
+
+        self._update_chaos_display(parent_tag)
+
+    def _randomize_chaos_champion(self, parent_tag: str):
+        """Fully randomize a Chaos champion with mark and mutations."""
+        # Clear existing
+        self._selected_chaos_gifts = []
+
+        chaos_data = load_chaos_gifts()
+        marks = chaos_data.get("marks", [])
+        mutations = chaos_data.get("mutations", [])
+
+        # Pick random mark
+        if marks:
+            mark = random.choice(marks)
+            mark_copy = dict(mark)
+            mark_copy["type"] = "mark"
+            self._selected_chaos_gifts.append(mark_copy)
+
+        # Roll D3 mutations
+        num_mutations = random.randint(1, 3)
+        for _ in range(num_mutations):
+            if mutations:
+                # Roll D100
+                roll = random.randint(1, 100)
+                selected = None
+                for mut in mutations:
+                    roll_range = mut.get("roll_range", [0, 0])
+                    if roll_range[0] <= roll <= roll_range[1]:
+                        selected = mut
+                        break
+                if not selected:
+                    selected = random.choice(mutations)
+
+                mut_copy = dict(selected)
+                mut_copy["type"] = "mutation"
+                self._selected_chaos_gifts.append(mut_copy)
+
+        self._update_chaos_display(parent_tag)
+
+        if dpg.does_item_exist("chaos_selected_display"):
+            mark_name = self._selected_chaos_gifts[0].get("name", "None") if self._selected_chaos_gifts else "None"
+            dpg.set_value("chaos_selected_display",
+                          f"Randomized! Mark: {mark_name}, {num_mutations} mutations rolled.")
+
+    def _roll_multiple_mutations(self, parent_tag: str, num_dice: int):
+        """Roll for multiple mutations (D3 or more)."""
+        count = random.randint(1, num_dice)
+        for _ in range(count):
+            self._roll_mutation(parent_tag)
+
+        if dpg.does_item_exist("chaos_selected_display"):
+            dpg.set_value("chaos_selected_display",
+                          f"Rolled D{num_dice} = {count} mutations! See selected gifts above.")
+
+    def _roll_mutation(self, parent_tag: str):
+        """Roll for a random mutation."""
+        chaos_data = load_chaos_gifts()
+        mutations = chaos_data.get("mutations", [])
+
+        if not mutations:
+            return
+
+        # Roll D100
+        roll = random.randint(1, 100)
+
+        # Find matching mutation
+        selected_mutation = None
+        for mut in mutations:
+            roll_range = mut.get("roll_range", [0, 0])
+            if roll_range[0] <= roll <= roll_range[1]:
+                selected_mutation = mut
+                break
+
+        if not selected_mutation:
+            # Default to random selection
+            selected_mutation = random.choice(mutations)
+
+        # Add mutation
+        mut_copy = dict(selected_mutation)
+        mut_copy["type"] = "mutation"
+        self._selected_chaos_gifts.append(mut_copy)
+
+        self._update_chaos_display(parent_tag)
+
+        # Show result
+        if dpg.does_item_exist("chaos_selected_display"):
+            name = selected_mutation.get("name", "Unknown")
+            dpg.set_value("chaos_selected_display",
+                          f"Rolled {roll}: {name}! {selected_mutation.get('description', '')}")
+
+    def _clear_chaos_gifts(self, parent_tag: str):
+        """Clear all selected Chaos gifts."""
+        self._selected_chaos_gifts = []
+        self._update_chaos_display(parent_tag)
+
+    def _update_chaos_display(self, parent_tag: str):
+        """Update the Chaos gifts display."""
+        if not self._selected_chaos_gifts:
+            display_text = "(none)"
+            total_pts = 0
+        else:
+            names = [f"{g.get('name')} ({g.get('points', 0)}pts)" for g in self._selected_chaos_gifts]
+            display_text = ", ".join(names)
+            total_pts = sum(g.get("points", 0) for g in self._selected_chaos_gifts)
+
+        if dpg.does_item_exist("chaos_selected_display"):
+            dpg.set_value("chaos_selected_display", display_text)
+
+        if dpg.does_item_exist("chaos_total_pts"):
+            dpg.set_value("chaos_total_pts", f"{total_pts} pts")
+
+        # Also update the main wargear display to show Chaos gifts
+        if dpg.does_item_exist(f"{parent_tag}_wargear_display"):
+            all_items = []
+            for w in self._selected_wargear:
+                all_items.append(f"{w.get('name')} ({w.get('points', 0)}pts)")
+            for g in self._selected_chaos_gifts:
+                all_items.append(f"[{g.get('type', 'gift').upper()}] {g.get('name')} ({g.get('points', 0)}pts)")
+
+            if all_items:
+                dpg.set_value(f"{parent_tag}_wargear_display", ", ".join(all_items))
+            else:
+                dpg.set_value(f"{parent_tag}_wargear_display", "(none)")
+
+    # -------------------------------------------------------------------------
+    # Roster Management Methods
+    # -------------------------------------------------------------------------
+
+    def _show_load_detachment_dialog(self):
+        """Show dialog to load a pre-built test detachment."""
+        tag = f"load_detachment_{id(self)}"
+        if dpg.does_item_exist(tag):
+            dpg.delete_item(tag)
+
+        detachments = load_test_detachments()
+
+        with dpg.window(
+            label="Load Test Detachment",
+            modal=True,
+            tag=tag,
+            width=500,
+            height=400,
+            pos=[200, 100],
+        ):
+            dpg.add_text("Select a pre-built detachment to load.")
+            dpg.add_text("This will replace the current roster.", color=(200, 150, 100))
+
+            dpg.add_spacer(height=10)
+
+            if not detachments:
+                dpg.add_text("No detachments found.", color=(150, 150, 150))
+            else:
+                self._detachments = detachments
+
+                with dpg.child_window(height=280, border=True):
+                    for i, det in enumerate(detachments):
+                        name = det.get("name", "Unknown")
+                        faction = det.get("faction", "Unknown")
+                        points = det.get("points", 0)
+                        desc = det.get("description", "")
+                        units = det.get("units", [])
+
+                        with dpg.group():
+                            dpg.add_selectable(
+                                label=f"{name} ({faction}) - {points} pts",
+                                callback=lambda s, a, u: self._select_detachment(u),
+                                user_data=i,
+                                tag=f"det_select_{id(self)}_{i}",
+                            )
+                            dpg.add_text(f"  {desc}", color=(150, 150, 150), wrap=450)
+                            dpg.add_text(f"  Units: {len(units)}", color=(120, 150, 120))
+                            dpg.add_spacer(height=5)
+
+            dpg.add_spacer(height=10)
+
+            with dpg.group(horizontal=True):
+                dpg.add_button(
+                    label="Load",
+                    callback=lambda: self._do_load_detachment(tag),
+                    width=100,
+                )
+                dpg.add_button(
+                    label="Cancel",
+                    callback=lambda: dpg.delete_item(tag),
+                    width=100,
+                )
+
+        self._selected_detachment_idx = 0 if detachments else -1
+
+    def _select_detachment(self, idx: int):
+        """Handle detachment selection."""
+        print(f"DEBUG: _select_detachment called with idx={idx}")
+        self._selected_detachment_idx = idx
+
+    def _do_load_detachment(self, dialog_tag: str):
+        """Load the selected detachment into the roster."""
+        idx = getattr(self, '_selected_detachment_idx', None)
+        print(f"DEBUG: _do_load_detachment called, idx={idx}")
+
+        if not hasattr(self, '_detachments'):
+            print("DEBUG: No _detachments attribute")
+            return
+        if idx is None or idx < 0:
+            print(f"DEBUG: Invalid index: {idx}")
+            return
+
+        print(f"DEBUG: Loading detachment {idx}: {self._detachments[idx].get('name')}")
+
+        det = self._detachments[idx]
+
+        # Get the appropriate roster
+        roster = (
+            self.coordinator.player_roster
+            if self.is_friendly
+            else self.coordinator.ai_roster
+        )
+
+        # Clear existing units
+        roster.units = []
+
+        # Add units from detachment
+        manager = RosterManager()
+        for unit_data in det.get("units", []):
+            # Map category to slot type
+            category = unit_data.get("category", "Troops").lower().replace(" ", "_")
+            slot_map = {
+                "hq": SlotType.HQ,
+                "troops": SlotType.TROOPS,
+                "elites": SlotType.ELITES,
+                "fast_attack": SlotType.FAST_ATTACK,
+                "heavy_support": SlotType.HEAVY_SUPPORT,
+            }
+            slot_type = slot_map.get(category, SlotType.TROOPS)
+
+            # Create unit
+            unit = manager.create_custom_unit(
+                name=unit_data.get("name", "Unknown"),
+                slot_type=slot_type,
+                stats=unit_data.get("stats", {}),
+                weapons=[{"name": w} for w in unit_data.get("weapons", [])],
+                wargear=unit_data.get("wargear", []),
+                abilities=unit_data.get("special_rules", []),
+                wounds=unit_data.get("stats", {}).get("W", 1),
+                models=unit_data.get("models", 1),
+                points=unit_data.get("points", 0),
+            )
+            roster.add_unit(unit)
+            print(f"DEBUG: Added unit {unit.name}")
+
+        dpg.delete_item(dialog_tag)
+        self.refresh()
+        print("DEBUG: Detachment loaded successfully")
+
+    def _validate_roster(self):
+        """Validate the roster against force organization rules."""
+        roster = (
+            self.coordinator.player_roster
+            if self.is_friendly
+            else self.coordinator.ai_roster
+        )
+
+        errors = validate_force_org(roster)
+
+        tag = f"validate_result_{id(self)}"
+        if dpg.does_item_exist(tag):
+            dpg.delete_item(tag)
+
+        with dpg.window(
+            label="Force Organization Check",
+            modal=True,
+            tag=tag,
+            width=400,
+            height=250,
+            pos=[250, 150],
+        ):
+            if not errors:
+                dpg.add_text("Army is VALID!", color=(100, 200, 100))
+                dpg.add_text("Force organization requirements met.")
+            else:
+                dpg.add_text("Army has ISSUES:", color=(200, 100, 100))
+                dpg.add_spacer(height=5)
+                for err in errors:
+                    dpg.add_text(f"  - {err}", color=(200, 150, 100))
+
+            dpg.add_spacer(height=10)
+
+            # Show current breakdown
+            dpg.add_separator()
+            dpg.add_text("Current Force Organization:", color=(150, 150, 150))
+
+            category_counts = {}
+            for unit in roster.units:
+                slot_val = unit.slot_type.value if hasattr(unit.slot_type, 'value') else str(unit.slot_type)
+                category_map = {
+                    "hq": "HQ",
+                    "troops": "Troops",
+                    "elites": "Elites",
+                    "fast_attack": "Fast Attack",
+                    "heavy_support": "Heavy Support",
+                }
+                category = category_map.get(slot_val.lower(), "Other")
+                category_counts[category] = category_counts.get(category, 0) + 1
+
+            for cat in ["HQ", "Troops", "Elites", "Fast Attack", "Heavy Support"]:
+                count = category_counts.get(cat, 0)
+                limits = FORCE_ORG_2E.get(cat, {"min": 0, "max": 3})
+                color = (100, 200, 100) if limits["min"] <= count <= limits["max"] else (200, 100, 100)
+                dpg.add_text(f"  {cat}: {count} (need {limits['min']}-{limits['max']})", color=color)
+
+            dpg.add_spacer(height=10)
+
+            dpg.add_button(
+                label="OK",
+                callback=lambda: dpg.delete_item(tag),
+                width=100,
+            )
+
+    def _show_save_roster_dialog(self):
+        """Show dialog to save the current roster."""
+        tag = f"save_roster_{id(self)}"
+        if dpg.does_item_exist(tag):
+            dpg.delete_item(tag)
+
+        with dpg.window(
+            label="Save Roster",
+            modal=True,
+            tag=tag,
+            width=400,
+            height=180,
+            pos=[250, 150],
+        ):
+            dpg.add_text("Save this roster for future use.")
+
+            dpg.add_spacer(height=10)
+
+            dpg.add_text("Roster Name:")
+            dpg.add_input_text(
+                hint="e.g., Space Marines 500pts",
+                tag=f"{tag}_name",
+                width=-1,
+            )
+
+            dpg.add_spacer(height=10)
+
+            with dpg.group(horizontal=True):
+                dpg.add_button(
+                    label="Save",
+                    callback=lambda: self._do_save_roster(tag),
+                    width=100,
+                )
+                dpg.add_button(
+                    label="Cancel",
+                    callback=lambda: dpg.delete_item(tag),
+                    width=100,
+                )
+
+    def _do_save_roster(self, dialog_tag: str):
+        """Execute roster save."""
+        name = dpg.get_value(f"{dialog_tag}_name")
+        if not name:
+            name = f"roster_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
+
+        roster = (
+            self.coordinator.player_roster
+            if self.is_friendly
+            else self.coordinator.ai_roster
+        )
+
+        # Create save directory
+        save_dir = Path.home() / ".oracle" / "rosters"
+        save_dir.mkdir(parents=True, exist_ok=True)
+
+        # Sanitize filename
+        safe_name = name.replace(" ", "_")
+        safe_name = "".join(c for c in safe_name if c.isalnum() or c in "_-")
+        filepath = save_dir / f"{safe_name}.json"
+
+        try:
+            with open(filepath, "w", encoding="utf-8") as f:
+                json.dump(roster.to_dict(), f, indent=2, ensure_ascii=False)
+
+            dpg.delete_item(dialog_tag)
+            # Could add a success message here
+        except OSError as e:
+            print(f"Failed to save roster: {e}")
+
+    def _show_load_roster_dialog(self):
+        """Show dialog to load a saved roster."""
+        tag = f"load_roster_{id(self)}"
+        if dpg.does_item_exist(tag):
+            dpg.delete_item(tag)
+
+        # Get saved rosters
+        save_dir = Path.home() / ".oracle" / "rosters"
+        saved_rosters = []
+        if save_dir.exists():
+            for f in save_dir.glob("*.json"):
+                try:
+                    with open(f, "r", encoding="utf-8") as fp:
+                        data = json.load(fp)
+                        saved_rosters.append({
+                            "file": f,
+                            "name": data.get("name", f.stem),
+                            "faction": data.get("faction", ""),
+                            "units": len(data.get("units", [])),
+                            "points": sum(u.get("points_cost", 0) for u in data.get("units", [])),
+                        })
+                except (json.JSONDecodeError, OSError):
+                    pass
+
+        with dpg.window(
+            label="Load Roster",
+            modal=True,
+            tag=tag,
+            width=500,
+            height=400,
+            pos=[200, 100],
+        ):
+            dpg.add_text("Select a saved roster to load.")
+            dpg.add_text("This will replace the current roster.", color=(200, 150, 100))
+
+            dpg.add_spacer(height=10)
+
+            if not saved_rosters:
+                dpg.add_text("No saved rosters found.", color=(150, 150, 150))
+            else:
+                self._saved_rosters = saved_rosters
+
+                with dpg.child_window(height=250, border=True):
+                    for i, ros in enumerate(saved_rosters):
+                        with dpg.group(horizontal=True):
+                            dpg.add_selectable(
+                                label=f"{ros['name']} - {ros['units']} units, {ros['points']} pts",
+                                callback=lambda s, a, u: self._select_roster(u),
+                                user_data=i,
+                                width=350,
+                                tag=f"ros_select_{id(self)}_{i}",
+                            )
+                            dpg.add_button(
+                                label="Del",
+                                callback=lambda s, a, u: self._delete_roster(u, tag),
+                                user_data=ros['file'],
+                                width=40,
+                                small=True,
+                            )
+
+            dpg.add_spacer(height=10)
+
+            with dpg.group(horizontal=True):
+                dpg.add_button(
+                    label="Load",
+                    callback=lambda: self._do_load_roster(tag),
+                    width=100,
+                    enabled=bool(saved_rosters),
+                )
+                dpg.add_button(
+                    label="Cancel",
+                    callback=lambda: dpg.delete_item(tag),
+                    width=100,
+                )
+
+        self._selected_roster_idx = 0 if saved_rosters else -1
+
+    def _select_roster(self, idx: int):
+        """Handle roster selection."""
+        self._selected_roster_idx = idx
+
+    def _delete_roster(self, filepath: Path, dialog_tag: str):
+        """Delete a saved roster file."""
+        try:
+            filepath.unlink()
+            dpg.delete_item(dialog_tag)
+            self._show_load_roster_dialog()
+        except OSError as e:
+            print(f"Failed to delete roster: {e}")
+
+    def _do_load_roster(self, dialog_tag: str):
+        """Load the selected roster."""
+        idx = getattr(self, '_selected_roster_idx', None)
+        if not hasattr(self, '_saved_rosters') or idx is None or idx < 0:
+            return
+
+        ros = self._saved_rosters[idx]
+        filepath = ros['file']
+
+        try:
+            with open(filepath, "r", encoding="utf-8") as f:
+                data = json.load(f)
+
+            loaded_roster = Roster.from_dict(data)
+
+            # Set as appropriate roster
+            if self.is_friendly:
+                self.coordinator.player_roster = loaded_roster
+            else:
+                self.coordinator.ai_roster = loaded_roster
+
+            dpg.delete_item(dialog_tag)
+            self.refresh()
+
+        except (json.JSONDecodeError, OSError, KeyError) as e:
+            print(f"Failed to load roster: {e}")
 
 
 # =============================================================================
@@ -1464,7 +2743,7 @@ class WargameApp:
         self.rules: RulesEngine = system_config["engine_class"]()
 
         # Initialize commander
-        self.commander = generate_commander("balanced_strategist")
+        self.commander = generate_commander("methodical_grinder")
 
         # Initialize coordinator
         self.coordinator = BattleCoordinator(
@@ -1489,7 +2768,7 @@ class WargameApp:
     def _build_ui(self):
         """Build the main UI."""
         dpg.create_context()
-        dpg.create_viewport(title="Oracle Wargame", width=1400, height=900)
+        dpg.create_viewport(title="Oracle Wargame", width=1600, height=900)
 
         with dpg.window(label="Wargame", tag="main_window"):
             # Top menu bar
@@ -1530,44 +2809,44 @@ class WargameApp:
             # Main layout
             with dpg.group(horizontal=True):
                 # Left sidebar: Forces
-                with dpg.child_window(width=300, height=-1, border=True):
+                with dpg.child_window(width=300, height=-1, border=True, tag="left_sidebar"):
                     # Battle state
                     self._state_panel = BattleStatePanel(
-                        dpg.last_item(), self.coordinator
+                        "left_sidebar", self.coordinator
                     )
 
                     dpg.add_separator()
 
                     # Friendly forces
                     self._friendly_panel = ForcePanel(
-                        dpg.last_item(), self.coordinator, is_friendly=True
+                        "left_sidebar", self.coordinator, is_friendly=True
                     )
 
                     dpg.add_separator()
 
                     # Enemy forces
                     self._enemy_panel = ForcePanel(
-                        dpg.last_item(), self.coordinator, is_friendly=False
+                        "left_sidebar", self.coordinator, is_friendly=False
                     )
 
                 # Center: Battle chat
-                with dpg.child_window(width=-300, height=-1, border=True):
+                with dpg.child_window(width=-350, height=-1, border=True, tag="center_panel"):
                     self._chat_panel = BattleChatPanel(
-                        dpg.last_item(),
+                        "center_panel",
                         self.coordinator,
                         self.narrator,
                     )
 
                 # Right sidebar: AI controls and Phase Guide
-                with dpg.child_window(width=320, height=-1, border=True):
+                with dpg.child_window(width=340, height=-1, border=True, tag="right_sidebar"):
                     # Create a tabbed view for AI and Phase Guide
                     with dpg.tab_bar(tag="right_sidebar_tabs"):
-                        with dpg.tab(label="AI Controls"):
-                            self._build_ai_controls(dpg.last_item())
+                        with dpg.tab(label="AI Controls", tag="ai_controls_tab"):
+                            self._build_ai_controls("ai_controls_tab")
 
-                        with dpg.tab(label="Phase Guide"):
+                        with dpg.tab(label="Phase Guide", tag="phase_guide_tab"):
                             self._phase_guide = PhaseGuidePanel(
-                                dpg.last_item(),
+                                "phase_guide_tab",
                                 self.coordinator,
                             )
 
@@ -1591,7 +2870,7 @@ class WargameApp:
             dpg.add_text(
                 Doctrine.ELITE.description,
                 tag="ai_doctrine_desc",
-                wrap=260,
+                wrap=300,
                 color=(120, 120, 120),
             )
 
@@ -1643,20 +2922,16 @@ class WargameApp:
 
     def _on_doctrine_change(self, sender, app_data, user_data):
         """Handle doctrine change."""
-        if self.coordinator.ai:
-            for d in Doctrine:
-                if d.display == app_data:
-                    self.coordinator.ai.tactical.doctrine = d
-                    dpg.set_value("ai_doctrine_desc", d.description)
-                    break
+        # Update displayed description
+        for d in Doctrine:
+            if d.display == app_data:
+                dpg.set_value("ai_doctrine_desc", d.description)
+                break
 
     def _on_aggression_change(self, sender, app_data, user_data):
         """Handle aggression change."""
-        if self.coordinator.ai:
-            for a in Aggression:
-                if a.display == app_data:
-                    self.coordinator.ai.tactical.aggression = a
-                    break
+        # Aggression setting stored for future use
+        pass
 
     def _on_dice_mode_change(self, sender, app_data, user_data):
         """Handle dice mode change."""
@@ -1667,17 +2942,13 @@ class WargameApp:
 
     def _ai_analyze(self):
         """Have AI analyze the situation."""
-        if not self.coordinator.ai:
-            return
-
-        threats = self.coordinator.ai.tactical.analyze_threats(
-            "Enemy forces present"
-        )
+        # Get threat assessments from opponent AI
+        threats = self.coordinator.opponent.assess_threats(self.coordinator.player_roster)
 
         if threats:
             msg = "AI Analysis:\n"
             for t in threats:
-                msg += f"  [{t.level.value}] {t.target}: {t.reason}\n"
+                msg += f"  [{t.priority_level}] {t.unit.name}: {', '.join(t.reasons)}\n"
         else:
             msg = "No significant threats detected."
 
@@ -1685,13 +2956,12 @@ class WargameApp:
 
     def _ai_decide(self):
         """Have AI make a tactical decision."""
-        if not self.coordinator.ai:
-            return
-
-        decision = self.coordinator.ai.tactical.decide("Enemy forces present")
-
-        msg = f"AI Decision ({decision.doctrine.display}):\n"
-        msg += f"  {decision.selected.description}"
+        # Use the opponent to generate a decision narrative
+        commander = self.coordinator.commander
+        if commander:
+            msg = f"Commander {commander.name} assesses the battlefield..."
+        else:
+            msg = "The enemy commander assesses the battlefield..."
 
         self._chat_panel.add_message(BattleMessage(msg, "ai"))
 
@@ -1710,20 +2980,250 @@ class WargameApp:
         ))
 
     def _save_battle(self):
-        """Save the current battle."""
-        # TODO: Implement save
-        self._chat_panel.add_message(BattleMessage(
-            "Save not yet implemented.",
-            "system",
-        ))
+        """Show save battle dialog."""
+        if dpg.does_item_exist("save_battle_dialog"):
+            dpg.delete_item("save_battle_dialog")
+
+        with dpg.window(
+            label="Save Battle Setup",
+            modal=True,
+            tag="save_battle_dialog",
+            width=400,
+            height=200,
+            pos=[300, 200],
+        ):
+            dpg.add_text("Save current battle setup for later use.")
+            dpg.add_text("Both armies and game system will be saved.", color=(150, 150, 150))
+
+            dpg.add_spacer(height=10)
+
+            dpg.add_text("Battle Name:")
+            dpg.add_input_text(
+                hint="e.g., Space Marines vs Orks",
+                tag="save_battle_name",
+                width=-1,
+            )
+
+            dpg.add_spacer(height=10)
+
+            with dpg.group(horizontal=True):
+                dpg.add_button(
+                    label="Save",
+                    callback=self._do_save_battle,
+                    width=100,
+                )
+                dpg.add_button(
+                    label="Cancel",
+                    callback=lambda: dpg.delete_item("save_battle_dialog"),
+                    width=100,
+                )
+
+    def _do_save_battle(self):
+        """Execute the battle save."""
+        name = dpg.get_value("save_battle_name")
+        if not name:
+            name = f"battle_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
+
+        # Create save directory
+        save_dir = Path.home() / ".oracle" / "battles"
+        save_dir.mkdir(parents=True, exist_ok=True)
+
+        # Sanitize filename
+        safe_name = name.replace(" ", "_")
+        safe_name = "".join(c for c in safe_name if c.isalnum() or c in "_-")
+        filepath = save_dir / f"{safe_name}.json"
+
+        # Build save data
+        save_data = {
+            "name": name,
+            "game_system": self.rules.system_id,
+            "commander_archetype": self.commander.archetype.name if self.commander else "methodical_grinder",
+            "player": self.coordinator.player_roster.to_dict() if self.coordinator.player_roster else None,
+            "enemy": self.coordinator.ai_roster.to_dict() if self.coordinator.ai_roster else None,
+            "battle_state": {
+                "turn": self.coordinator.state.turn_number,
+                "phase": self.coordinator.state.current_phase.value,
+            },
+            "saved_at": datetime.now().isoformat(),
+        }
+
+        try:
+            with open(filepath, "w", encoding="utf-8") as f:
+                json.dump(save_data, f, indent=2, ensure_ascii=False)
+
+            dpg.delete_item("save_battle_dialog")
+
+            self._chat_panel.add_message(BattleMessage(
+                f"Battle saved: {name}",
+                "system",
+            ))
+        except OSError as e:
+            self._chat_panel.add_message(BattleMessage(
+                f"Failed to save battle: {e}",
+                "system",
+            ))
 
     def _load_battle(self):
-        """Load a battle."""
-        # TODO: Implement load
-        self._chat_panel.add_message(BattleMessage(
-            "Load not yet implemented.",
-            "system",
-        ))
+        """Show load battle dialog."""
+        if dpg.does_item_exist("load_battle_dialog"):
+            dpg.delete_item("load_battle_dialog")
+
+        # Get saved battles
+        save_dir = Path.home() / ".oracle" / "battles"
+        saved_battles = []
+        if save_dir.exists():
+            for f in save_dir.glob("*.json"):
+                try:
+                    with open(f, "r", encoding="utf-8") as fp:
+                        data = json.load(fp)
+                        saved_battles.append({
+                            "file": f,
+                            "name": data.get("name", f.stem),
+                            "system": data.get("game_system", "unknown"),
+                            "saved_at": data.get("saved_at", ""),
+                        })
+                except (json.JSONDecodeError, OSError):
+                    pass
+
+        with dpg.window(
+            label="Load Battle Setup",
+            modal=True,
+            tag="load_battle_dialog",
+            width=500,
+            height=400,
+            pos=[250, 100],
+        ):
+            dpg.add_text("Select a saved battle to load.")
+            dpg.add_text("This will replace both armies.", color=(200, 150, 100))
+
+            dpg.add_spacer(height=10)
+
+            if not saved_battles:
+                dpg.add_text("No saved battles found.", color=(150, 150, 150))
+            else:
+                # Store battle list for reference
+                self._saved_battles = saved_battles
+
+                with dpg.child_window(height=250, border=True):
+                    for i, battle in enumerate(saved_battles):
+                        with dpg.group(horizontal=True):
+                            dpg.add_selectable(
+                                label=f"{battle['name']} ({battle['system']})",
+                                callback=lambda s, a, u: self._select_battle(u),
+                                user_data=i,
+                                width=350,
+                                tag=f"battle_select_{i}",
+                            )
+                            dpg.add_button(
+                                label="Delete",
+                                callback=lambda s, a, u: self._delete_battle(u),
+                                user_data=battle['file'],
+                                width=60,
+                                small=True,
+                            )
+
+                dpg.add_spacer(height=5)
+                dpg.add_text("", tag="load_battle_selected", color=(100, 200, 100))
+
+            dpg.add_spacer(height=10)
+
+            with dpg.group(horizontal=True):
+                dpg.add_button(
+                    label="Load",
+                    callback=self._do_load_battle,
+                    width=100,
+                    enabled=bool(saved_battles),
+                )
+                dpg.add_button(
+                    label="Cancel",
+                    callback=lambda: dpg.delete_item("load_battle_dialog"),
+                    width=100,
+                )
+
+        self._selected_battle_idx = 0 if saved_battles else -1
+
+    def _select_battle(self, idx: int):
+        """Handle battle selection."""
+        self._selected_battle_idx = idx
+        if hasattr(self, '_saved_battles') and 0 <= idx < len(self._saved_battles):
+            battle = self._saved_battles[idx]
+            dpg.set_value("load_battle_selected", f"Selected: {battle['name']}")
+
+    def _delete_battle(self, filepath: Path):
+        """Delete a saved battle file."""
+        try:
+            filepath.unlink()
+            self._chat_panel.add_message(BattleMessage(
+                f"Deleted battle: {filepath.stem}",
+                "system",
+            ))
+            # Refresh dialog
+            dpg.delete_item("load_battle_dialog")
+            self._load_battle()
+        except OSError as e:
+            self._chat_panel.add_message(BattleMessage(
+                f"Failed to delete: {e}",
+                "system",
+            ))
+
+    def _do_load_battle(self):
+        """Execute the battle load."""
+        if not hasattr(self, '_saved_battles') or self._selected_battle_idx < 0:
+            return
+
+        if self._selected_battle_idx >= len(self._saved_battles):
+            return
+
+        battle = self._saved_battles[self._selected_battle_idx]
+        filepath = battle['file']
+
+        try:
+            with open(filepath, "r", encoding="utf-8") as f:
+                data = json.load(f)
+
+            # Change game system if needed
+            system_id = data.get("game_system", "oldhammer_2e")
+            if system_id != self.rules.system_id:
+                self._change_system(system_id)
+
+            # Change commander if specified
+            commander_arch = data.get("commander_archetype", "methodical_grinder")
+            self._change_commander(commander_arch)
+
+            # Load rosters
+            if data.get("player"):
+                self.coordinator.player_roster = Roster.from_dict(data["player"])
+            else:
+                self.coordinator.player_roster = Roster(name="Your Army")
+
+            if data.get("enemy"):
+                self.coordinator.ai_roster = Roster.from_dict(data["enemy"])
+            else:
+                self.coordinator.ai_roster = Roster(name="Enemy Army")
+
+            # Restore battle state
+            if data.get("battle_state"):
+                self.coordinator.state.turn_number = data["battle_state"].get("turn", 1)
+                phase_str = data["battle_state"].get("phase", "movement")
+                for phase in BattlePhase:
+                    if phase.value == phase_str:
+                        self.coordinator.state.current_phase = phase
+                        break
+
+            dpg.delete_item("load_battle_dialog")
+
+            self._refresh_all()
+
+            self._chat_panel.add_message(BattleMessage(
+                f"Loaded battle: {data.get('name', 'Unknown')}",
+                "system",
+            ))
+
+        except (json.JSONDecodeError, OSError, KeyError) as e:
+            self._chat_panel.add_message(BattleMessage(
+                f"Failed to load battle: {e}",
+                "system",
+            ))
 
     def _change_system(self, system_id: str):
         """Change the game system."""

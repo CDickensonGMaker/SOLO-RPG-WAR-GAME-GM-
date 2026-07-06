@@ -1,0 +1,30 @@
+# Fantasy Setting - Authored NPC Lore
+# Entries here take precedence over procedural generation
+# Structure: [npcs.<entity_id>]
+
+[npcs.captain_varn]
+name = "Captain Varn"
+description = "A grizzled veteran who commands the garrison at Iron Gate. His scarred face tells stories of countless battles."
+traits = ["experienced", "loyal", "weary"]
+disposition = 10
+motivations = ["Protect the gate", "Honor the fallen", "Find a worthy successor"]
+secrets = ["He knows who truly killed the old commander"]
+weaknesses = ["His right knee was shattered years ago - he hides the limp"]
+
+[npcs.elira_the_trader]
+name = "Elira the Trader"
+description = "A sharp-eyed merchant who deals in information as readily as goods. Her caravan routes take her everywhere."
+traits = ["shrewd", "well-connected", "careful"]
+disposition = 0
+motivations = ["Profit", "Knowledge", "Building a network"]
+secrets = ["She reports to the crown's spymaster"]
+knowledge_topics = ["trade routes", "political intrigue", "useful contacts", "recent events"]
+
+[npcs.old_marta]
+name = "Old Marta"
+description = "The innkeeper at the Crossroads Inn. She's seen everything and remembers more than she lets on."
+traits = ["observant", "patient", "protective"]
+disposition = 20
+motivations = ["Keep the peace", "Protect her guests", "Preserve her family's legacy"]
+secrets = ["She was a soldier before becoming an innkeeper"]
+knowledge_topics = ["local rumors", "travelers who've passed through", "local customs"]

@@ -1,0 +1,61 @@
+# Fantasy Setting - Authored Location Lore
+# Entries here take precedence over procedural generation
+# Structure: [locations.<entity_id>]
+
+[locations.iron_gate]
+name = "Iron Gate"
+description = "A fortified waystation where travelers find temporary respite from the dangers of the road. The gate's massive iron doors have stood for centuries, scarred by countless battles."
+traits = ["fortified", "ancient", "strategic"]
+features = [
+    "Multiple entry points create tactical options",
+    "Elevated positions on the walls offer advantages",
+    "The central courtyard provides a defensible rally point"
+]
+hazards = ["Predators hunt in the surrounding wilderness"]
+history = "Built during the Second War to guard the northern pass. Many soldiers made their last stand here, and their spirits are said to linger."
+disposition = 0
+
+[locations.broken_tower]
+name = "The Broken Tower"
+description = "Once a wizard's sanctum, now a crumbling ruin that draws treasure hunters and dark things alike."
+traits = ["ruined", "magical", "dangerous"]
+features = [
+    "Collapsed sections reveal hidden chambers",
+    "Magical wards still flicker in some areas",
+    "The basement descends deeper than expected"
+]
+hazards = [
+    "Unstable stonework threatens collapse",
+    "Residual magical energies cause unpredictable effects",
+    "Something lurks in the lower levels"
+]
+history = "The wizard Mordecai experimented here until his final ritual went wrong. The explosion was seen for miles."
+
+[locations.crossroads_inn]
+name = "The Crossroads Inn"
+description = "A sprawling traveler's rest at the junction of three major roads. Known for good ale, warm beds, and the occasional knife fight."
+traits = ["welcoming", "busy", "neutral ground"]
+features = [
+    "The common room hosts traders from all directions",
+    "Private meeting rooms for discrete business",
+    "A stable large enough for a small caravan"
+]
+hazards = ["Information flows freely - including about you"]
+history = "Four generations of the Thorne family have run this inn. They pride themselves on asking no questions."
+disposition = 10
+
+[locations.shadow_wood]
+name = "The Shadow Wood"
+description = "A dense forest where the canopy blocks most sunlight. Travelers who stray from the path often don't return."
+traits = ["dark", "ancient", "hostile"]
+features = [
+    "The old road winds through but is often obscured",
+    "Ancient standing stones mark safe camping spots",
+    "A hidden stream provides clean water"
+]
+hazards = [
+    "The trees themselves seem to move when unwatched",
+    "Predators hunt in packs here",
+    "Getting lost is dangerously easy"
+]
+history = "The elves once called this forest home, before something drove them out. They won't speak of what happened."

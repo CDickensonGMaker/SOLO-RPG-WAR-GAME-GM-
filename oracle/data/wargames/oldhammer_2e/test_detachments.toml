@@ -1,0 +1,451 @@
+# Warhammer 40,000 2nd Edition - Test Detachments
+# Small starter forces for quick testing (~500 points each)
+
+[info]
+description = "Pre-built small detachments for testing the Wargame AI"
+points_target = 500
+
+# =============================================================================
+# SPACE MARINES - Strike Force Primus
+# =============================================================================
+
+[[detachments]]
+name = "Strike Force Primus"
+faction = "Space Marines"
+points = 495
+description = "A balanced Space Marine strike force with tactical flexibility"
+
+[[detachments.units]]
+name = "Space Marine Captain"
+category = "HQ"
+points = 75
+models = 1
+stats = { M = 4, WS = 6, BS = 5, S = 4, T = 4, W = 3, I = 5, A = 3, Ld = 10, Sv = "3+" }
+weapons = ["Bolt Pistol", "Power Sword"]
+wargear = ["Frag Grenades", "Krak Grenades"]
+special_rules = ["And They Shall Know No Fear", "Independent Character"]
+
+[[detachments.units]]
+name = "Tactical Squad Alpha"
+category = "Troops"
+points = 170
+models = 10
+stats = { M = 4, WS = 4, BS = 4, S = 4, T = 4, W = 1, I = 4, A = 1, Ld = 8, Sv = "3+" }
+weapons = ["Boltgun", "Bolt Pistol", "Missile Launcher", "Flamer"]
+wargear = ["Frag Grenades", "Krak Grenades"]
+special_rules = ["And They Shall Know No Fear"]
+
+[[detachments.units]]
+name = "Assault Squad"
+category = "Fast Attack"
+points = 125
+models = 5
+stats = { M = 12, WS = 4, BS = 4, S = 4, T = 4, W = 1, I = 4, A = 1, Ld = 8, Sv = "3+" }
+weapons = ["Bolt Pistol", "Chainsword"]
+wargear = ["Jump Pack", "Frag Grenades", "Krak Grenades"]
+special_rules = ["And They Shall Know No Fear", "Jump Packs"]
+
+[[detachments.units]]
+name = "Devastator Squad"
+category = "Heavy Support"
+points = 125
+models = 5
+stats = { M = 4, WS = 4, BS = 4, S = 4, T = 4, W = 1, I = 4, A = 1, Ld = 8, Sv = "3+" }
+weapons = ["Boltgun", "Lascannon x2", "Heavy Bolter x2"]
+special_rules = ["And They Shall Know No Fear", "Signum"]
+
+# =============================================================================
+# CHAOS SPACE MARINES - Warband of the Damned
+# =============================================================================
+
+[[detachments]]
+name = "Warband of the Damned"
+faction = "Chaos Space Marines"
+points = 489
+description = "A Khorne-devoted warband hungry for skulls"
+
+[[detachments.units]]
+name = "Chaos Lord"
+category = "HQ"
+points = 85
+models = 1
+stats = { M = 4, WS = 7, BS = 5, S = 4, T = 4, W = 3, I = 5, A = 4, Ld = 10, Sv = "3+" }
+weapons = ["Bolt Pistol", "Daemon Sword"]
+wargear = ["Mark of Khorne"]
+special_rules = ["Independent Character", "Fearless", "Furious Charge"]
+
+[[detachments.units]]
+name = "Khorne Berzerkers"
+category = "Elites"
+points = 189
+models = 9
+stats = { M = 4, WS = 5, BS = 4, S = 4, T = 4, W = 1, I = 4, A = 2, Ld = 8, Sv = "3+" }
+weapons = ["Chainaxe", "Bolt Pistol"]
+wargear = ["Mark of Khorne"]
+special_rules = ["Fearless", "Furious Charge"]
+
+[[detachments.units]]
+name = "Chaos Space Marines"
+category = "Troops"
+points = 150
+models = 10
+stats = { M = 4, WS = 4, BS = 4, S = 4, T = 4, W = 1, I = 4, A = 1, Ld = 8, Sv = "3+" }
+weapons = ["Boltgun", "Bolt Pistol", "Plasma Gun", "Autocannon"]
+special_rules = ["Veterans of the Long War"]
+
+[[detachments.units]]
+name = "Chaos Bikers"
+category = "Fast Attack"
+points = 65
+models = 3
+stats = { M = 12, WS = 4, BS = 4, S = 4, T = 5, W = 1, I = 4, A = 1, Ld = 8, Sv = "3+" }
+weapons = ["Twin-linked Boltgun", "Bolt Pistol"]
+special_rules = ["Turbo-boost"]
+
+# =============================================================================
+# ORKS - Da Waaagh! Boyz
+# =============================================================================
+
+[[detachments]]
+name = "Da Waaagh! Boyz"
+faction = "Orks"
+points = 502
+description = "A proppa Orky warband led by a mean Warboss"
+
+[[detachments.units]]
+name = "Warboss Gorbad"
+category = "HQ"
+points = 75
+models = 1
+stats = { M = 4, WS = 6, BS = 3, S = 5, T = 5, W = 3, I = 4, A = 4, Ld = 9, Sv = "4+" }
+weapons = ["Power Klaw", "Slugga"]
+wargear = ["Eavy Armour", "Bosspole"]
+special_rules = ["Waaagh!", "Fearless", "Independent Character"]
+
+[[detachments.units]]
+name = "Boyz Mob"
+category = "Troops"
+points = 140
+models = 20
+stats = { M = 4, WS = 4, BS = 2, S = 3, T = 4, W = 1, I = 2, A = 1, Ld = 7, Sv = "6+" }
+weapons = ["Slugga", "Choppa"]
+special_rules = ["Mob Rule", "Waaagh!"]
+
+[[detachments.units]]
+name = "Shoota Boyz"
+category = "Troops"
+points = 120
+models = 20
+stats = { M = 4, WS = 4, BS = 2, S = 3, T = 4, W = 1, I = 2, A = 1, Ld = 7, Sv = "6+" }
+weapons = ["Shoota", "Big Shoota x2"]
+special_rules = ["Mob Rule"]
+
+[[detachments.units]]
+name = "Warbikers"
+category = "Fast Attack"
+points = 75
+models = 3
+stats = { M = 12, WS = 4, BS = 2, S = 4, T = 5, W = 1, I = 2, A = 1, Ld = 7, Sv = "4+" }
+weapons = ["Twin-linked Dakkagun"]
+special_rules = ["Exhaust Cloud", "Turbo-boost"]
+
+[[detachments.units]]
+name = "Killa Kans"
+category = "Heavy Support"
+points = 92
+models = 2
+stats = { M = 6, WS = 2, BS = 3, S = 5, T = 5, W = 2, I = 2, A = 2, Ld = 7, Sv = "3+" }
+weapons = ["Big Shoota", "Kan Klaw"]
+special_rules = ["Walker"]
+
+# =============================================================================
+# ELDAR - Craftworld Warhost
+# =============================================================================
+
+[[detachments]]
+name = "Ulthwe Strikeforce"
+faction = "Eldar"
+points = 510
+description = "Swift Eldar warriors striking from the webway"
+
+[[detachments.units]]
+name = "Farseer"
+category = "HQ"
+points = 100
+models = 1
+stats = { M = 5, WS = 5, BS = 5, S = 3, T = 3, W = 3, I = 6, A = 2, Ld = 10, Sv = "4++" }
+weapons = ["Shuriken Pistol", "Witchblade"]
+wargear = ["Rune Armour", "Spirit Stones"]
+special_rules = ["Psyker (Level 3)", "Fleet", "Ancient Doom"]
+
+[[detachments.units]]
+name = "Guardian Defenders"
+category = "Troops"
+points = 100
+models = 10
+stats = { M = 5, WS = 3, BS = 3, S = 3, T = 3, W = 1, I = 4, A = 1, Ld = 8, Sv = "5+" }
+weapons = ["Shuriken Catapult", "Shuriken Cannon (Platform)"]
+special_rules = ["Fleet", "Battle Focus"]
+
+[[detachments.units]]
+name = "Dire Avengers"
+category = "Elites"
+points = 130
+models = 10
+stats = { M = 5, WS = 4, BS = 4, S = 3, T = 3, W = 1, I = 5, A = 1, Ld = 9, Sv = "4+" }
+weapons = ["Avenger Shuriken Catapult"]
+special_rules = ["Fleet", "Battle Focus", "Counter-Attack"]
+
+[[detachments.units]]
+name = "Swooping Hawks"
+category = "Fast Attack"
+points = 100
+models = 5
+stats = { M = 18, WS = 4, BS = 4, S = 3, T = 3, W = 1, I = 5, A = 1, Ld = 9, Sv = "4+" }
+weapons = ["Lasblaster", "Haywire Grenades"]
+special_rules = ["Deep Strike", "Skyleap", "Herald of Victory"]
+
+[[detachments.units]]
+name = "War Walker"
+category = "Heavy Support"
+points = 80
+models = 1
+stats = { M = 6, WS = 4, BS = 4, S = 5, T = 5, W = 2, I = 4, A = 2, Ld = 8, Sv = "5+" }
+weapons = ["Scatter Laser x2"]
+special_rules = ["Walker", "Scout", "Fleet"]
+
+# =============================================================================
+# IMPERIAL GUARD - Cadian Battlegroup
+# =============================================================================
+
+[[detachments]]
+name = "Cadian 8th Battlegroup"
+faction = "Imperial Guard"
+points = 495
+description = "The stalwart defenders of Cadia, holding the line"
+
+[[detachments.units]]
+name = "Company Commander"
+category = "HQ"
+points = 50
+models = 1
+stats = { M = 4, WS = 4, BS = 4, S = 3, T = 3, W = 3, I = 3, A = 3, Ld = 9, Sv = "5+" }
+weapons = ["Bolt Pistol", "Power Sword"]
+wargear = ["Refractor Field"]
+special_rules = ["Voice of Command", "Senior Officer"]
+
+[[detachments.units]]
+name = "Infantry Squad Alpha"
+category = "Troops"
+points = 60
+models = 10
+stats = { M = 4, WS = 3, BS = 3, S = 3, T = 3, W = 1, I = 3, A = 1, Ld = 7, Sv = "5+" }
+weapons = ["Lasgun", "Laspistol (Sgt)", "Missile Launcher", "Grenade Launcher"]
+special_rules = ["Orders"]
+
+[[detachments.units]]
+name = "Infantry Squad Beta"
+category = "Troops"
+points = 55
+models = 10
+stats = { M = 4, WS = 3, BS = 3, S = 3, T = 3, W = 1, I = 3, A = 1, Ld = 7, Sv = "5+" }
+weapons = ["Lasgun", "Laspistol (Sgt)", "Heavy Bolter", "Flamer"]
+special_rules = ["Orders"]
+
+[[detachments.units]]
+name = "Heavy Weapons Team"
+category = "Heavy Support"
+points = 80
+models = 3
+stats = { M = 4, WS = 3, BS = 3, S = 3, T = 3, W = 2, I = 3, A = 1, Ld = 7, Sv = "5+" }
+weapons = ["Lascannon x3"]
+special_rules = ["Artillery Crew"]
+
+[[detachments.units]]
+name = "Leman Russ Battle Tank"
+category = "Heavy Support"
+points = 150
+models = 1
+stats = { M = 8, WS = "-", BS = 3, S = "-", T = "-", W = "-", I = "-", A = "-", Ld = "-", Sv = "-" }
+armor = { front = 14, side = 12, rear = 10 }
+weapons = ["Battle Cannon", "Heavy Bolter (hull)", "Heavy Bolter Sponsons"]
+special_rules = ["Tank", "Lumbering Behemoth"]
+
+[[detachments.units]]
+name = "Sentinels"
+category = "Fast Attack"
+points = 100
+models = 2
+stats = { M = 10, WS = 3, BS = 3, S = 5, T = 5, W = 1, I = 3, A = 1, Ld = 7, Sv = "4+" }
+weapons = ["Multi-laser"]
+special_rules = ["Walker", "Scout"]
+
+# =============================================================================
+# TYRANIDS - Hive Fleet Tendril
+# =============================================================================
+
+[[detachments]]
+name = "Hive Fleet Kraken Tendril"
+faction = "Tyranids"
+points = 500
+description = "A swift tendril of the Hive Mind, overwhelming prey"
+
+[[detachments.units]]
+name = "Hive Tyrant"
+category = "HQ"
+points = 140
+models = 1
+stats = { M = 8, WS = 8, BS = 4, S = 6, T = 6, W = 4, I = 6, A = 4, Ld = 10, Sv = "3+" }
+weapons = ["Bonesword", "Lashwhip", "Twin-linked Devourers"]
+special_rules = ["Synapse Creature", "Psyker (Level 2)", "Shadow in the Warp"]
+
+[[detachments.units]]
+name = "Termagants"
+category = "Troops"
+points = 60
+models = 20
+stats = { M = 6, WS = 3, BS = 3, S = 3, T = 3, W = 1, I = 4, A = 1, Ld = 5, Sv = "6+" }
+weapons = ["Fleshborer"]
+special_rules = ["Instinctive Behaviour", "Move Through Cover"]
+
+[[detachments.units]]
+name = "Genestealers"
+category = "Troops"
+points = 140
+models = 10
+stats = { M = 6, WS = 6, BS = 0, S = 4, T = 4, W = 1, I = 6, A = 2, Ld = 10, Sv = "5+" }
+weapons = ["Rending Claws"]
+special_rules = ["Fleet", "Infiltrate", "Move Through Cover", "Rending"]
+
+[[detachments.units]]
+name = "Warriors"
+category = "Elites"
+points = 90
+models = 3
+stats = { M = 6, WS = 5, BS = 4, S = 4, T = 4, W = 3, I = 5, A = 3, Ld = 10, Sv = "4+" }
+weapons = ["Deathspitter", "Scything Talons"]
+special_rules = ["Synapse Creature", "Shadow in the Warp"]
+
+[[detachments.units]]
+name = "Carnifex"
+category = "Heavy Support"
+points = 70
+models = 1
+stats = { M = 6, WS = 3, BS = 3, S = 9, T = 6, W = 4, I = 1, A = 4, Ld = 7, Sv = "3+" }
+weapons = ["Crushing Claws", "Scything Talons"]
+special_rules = ["Monstrous Creature", "Living Battering Ram"]
+
+# =============================================================================
+# SISTERS OF BATTLE - Order of the Bloody Rose
+# =============================================================================
+
+[[detachments]]
+name = "Bloody Rose Commandery"
+faction = "Sisters of Battle"
+points = 505
+description = "Faith-fueled warriors purging the unclean"
+
+[[detachments.units]]
+name = "Canoness"
+category = "HQ"
+points = 85
+models = 1
+stats = { M = 4, WS = 5, BS = 5, S = 3, T = 3, W = 3, I = 4, A = 3, Ld = 10, Sv = "3+" }
+weapons = ["Bolt Pistol", "Power Sword"]
+wargear = ["Rosarius", "Frag Grenades", "Krak Grenades"]
+special_rules = ["Acts of Faith", "Shield of Faith", "Zealot"]
+
+[[detachments.units]]
+name = "Battle Sisters Squad"
+category = "Troops"
+points = 110
+models = 10
+stats = { M = 4, WS = 4, BS = 4, S = 3, T = 3, W = 1, I = 3, A = 1, Ld = 8, Sv = "3+" }
+weapons = ["Boltgun", "Bolt Pistol", "Storm Bolter", "Meltagun"]
+wargear = ["Frag Grenades", "Krak Grenades"]
+special_rules = ["Acts of Faith", "Shield of Faith"]
+
+[[detachments.units]]
+name = "Seraphim Squad"
+category = "Fast Attack"
+points = 100
+models = 5
+stats = { M = 12, WS = 4, BS = 4, S = 3, T = 3, W = 1, I = 4, A = 1, Ld = 8, Sv = "3+" }
+weapons = ["Bolt Pistol x2", "Inferno Pistols x2"]
+wargear = ["Jump Pack", "Frag Grenades", "Krak Grenades"]
+special_rules = ["Acts of Faith", "Shield of Faith", "Hit & Run"]
+
+[[detachments.units]]
+name = "Retributor Squad"
+category = "Heavy Support"
+points = 110
+models = 5
+stats = { M = 4, WS = 4, BS = 4, S = 3, T = 3, W = 1, I = 3, A = 1, Ld = 8, Sv = "3+" }
+weapons = ["Heavy Bolter x4"]
+special_rules = ["Acts of Faith", "Shield of Faith"]
+
+[[detachments.units]]
+name = "Penitent Engine"
+category = "Heavy Support"
+points = 100
+models = 1
+stats = { M = 6, WS = 5, BS = 3, S = 8, T = 6, W = 3, I = 3, A = 4, Ld = 8, Sv = "4+" }
+weapons = ["Heavy Flamer x2", "Penitent Buzz-Saws"]
+special_rules = ["Walker", "Rage", "Feel No Pain (5+)"]
+
+# =============================================================================
+# SQUATS - Ancestor Lord's Guard
+# =============================================================================
+
+[[detachments]]
+name = "Ancestor Lord's Guard"
+faction = "Squats"
+points = 495
+description = "Stubborn warriors from the galactic core"
+
+[[detachments.units]]
+name = "Warlord"
+category = "HQ"
+points = 80
+models = 1
+stats = { M = 3, WS = 5, BS = 5, S = 4, T = 5, W = 3, I = 3, A = 3, Ld = 10, Sv = "3+" }
+weapons = ["Bolt Pistol", "Power Axe"]
+wargear = ["Exo-Armour"]
+special_rules = ["Stubborn", "Independent Character", "Ancestor Wisdom"]
+
+[[detachments.units]]
+name = "Warriors"
+category = "Troops"
+points = 100
+models = 10
+stats = { M = 3, WS = 4, BS = 4, S = 3, T = 4, W = 1, I = 2, A = 1, Ld = 9, Sv = "4+" }
+weapons = ["Bolter", "Heavy Bolter"]
+special_rules = ["Stubborn"]
+
+[[detachments.units]]
+name = "Hearthguard"
+category = "Elites"
+points = 150
+models = 5
+stats = { M = 3, WS = 5, BS = 4, S = 4, T = 5, W = 1, I = 2, A = 2, Ld = 10, Sv = "2+" }
+weapons = ["Bolter", "Power Axe"]
+wargear = ["Exo-Armour"]
+special_rules = ["Stubborn", "Bodyguard"]
+
+[[detachments.units]]
+name = "Bikers"
+category = "Fast Attack"
+points = 75
+models = 3
+stats = { M = 12, WS = 4, BS = 4, S = 3, T = 5, W = 1, I = 2, A = 1, Ld = 9, Sv = "4+" }
+weapons = ["Twin-linked Boltgun", "Bolt Pistol"]
+special_rules = ["Stubborn", "Turbo-boost"]
+
+[[detachments.units]]
+name = "Thudd Gun Battery"
+category = "Heavy Support"
+points = 90
+models = 1
+stats = { M = 0, WS = "-", BS = 4, S = "-", T = 7, W = 2, I = "-", A = "-", Ld = 9, Sv = "3+" }
+weapons = ["Quad Launcher"]
+special_rules = ["Artillery", "Stubborn", "Barrage"]

@@ -1,0 +1,433 @@
+# Warhammer 40,000 2nd Edition - Chaos Gifts & Mutations
+# Path to Glory rules for Chaos Champions
+# Based on Realm of Chaos: Slaves to Darkness & The Lost and the Damned
+
+[chaos_gifts_info]
+description = "Chaos Champions can receive gifts from their patron gods, including mutations, daemon weapons, and marks of allegiance"
+source = "Realm of Chaos: Slaves to Darkness (1988), Realm of Chaos: The Lost and the Damned (1990)"
+
+# =============================================================================
+# MARKS OF CHAOS
+# =============================================================================
+# A champion can only bear one Mark
+
+[[marks]]
+name = "Mark of Khorne"
+god = "Khorne"
+description = "The Blood God grants fury and martial prowess"
+stat_mods = { WS = 1, A = 1 }
+special_rules = ["Furious Charge", "Fearless", "Cannot use psychic powers"]
+points = 20
+incompatible = ["Psyker"]
+
+[[marks]]
+name = "Mark of Nurgle"
+god = "Nurgle"
+description = "Father Nurgle blesses with resilience and disease"
+stat_mods = { T = 1 }
+special_rules = ["Feel No Pain (5+)", "Disgustingly Resilient"]
+points = 15
+
+[[marks]]
+name = "Mark of Tzeentch"
+god = "Tzeentch"
+description = "The Changer of Ways grants sorcerous power"
+stat_mods = { Inv = 1 }  # Improves invulnerable save by 1
+special_rules = ["Psyker (Level 1)", "Fate Point (re-roll one die per game)"]
+points = 25
+
+[[marks]]
+name = "Mark of Slaanesh"
+god = "Slaanesh"
+description = "The Prince of Pleasure grants speed and sensation"
+stat_mods = { I = 1 }
+special_rules = ["Always Strikes First", "Immune to Fear"]
+points = 15
+
+[[marks]]
+name = "Mark of Chaos Undivided"
+god = "Undivided"
+description = "Favored by all four gods equally"
+stat_mods = { Ld = 1 }
+special_rules = ["Fearless", "Re-roll failed Morale"]
+points = 10
+
+# =============================================================================
+# CHAOS MUTATIONS
+# =============================================================================
+# Roll on the mutation table or select as a reward
+
+[[mutations]]
+name = "Horns"
+category = "physical"
+description = "Massive horns sprout from the champion's skull"
+stat_mods = { A = 1 }
+special_rules = ["+1 Strength on charge"]
+points = 10
+roll_range = [1, 5]
+
+[[mutations]]
+name = "Cloven Hooves"
+category = "physical"
+description = "The champion's feet twist into bestial hooves"
+stat_mods = { M = 1 }
+special_rules = ["Move Through Cover"]
+points = 5
+roll_range = [6, 10]
+
+[[mutations]]
+name = "Extra Arm"
+category = "physical"
+description = "A third arm sprouts from the champion's torso"
+stat_mods = { A = 1 }
+special_rules = ["Can wield additional weapon"]
+points = 15
+roll_range = [11, 15]
+
+[[mutations]]
+name = "Bestial Face"
+category = "physical"
+description = "The champion's face twists into something inhuman"
+special_rules = ["Fear", "+1 to Intimidation"]
+points = 5
+roll_range = [16, 20]
+
+[[mutations]]
+name = "Iron Flesh"
+category = "physical"
+description = "The champion's skin hardens to living metal"
+stat_mods = { T = 1, Sv = -1 }  # Sv improves by 1
+special_rules = ["Cannot Run"]
+points = 20
+roll_range = [21, 25]
+
+[[mutations]]
+name = "Scaled Skin"
+category = "physical"
+description = "Reptilian scales cover the champion's body"
+stat_mods = { Sv = -1 }  # Sv improves by 1
+points = 10
+roll_range = [26, 30]
+
+[[mutations]]
+name = "Wings"
+category = "physical"
+description = "Bat-like or feathered wings erupt from the back"
+special_rules = ["Jump Pack", "Can fly over terrain"]
+points = 25
+roll_range = [31, 35]
+
+[[mutations]]
+name = "Tail"
+category = "physical"
+description = "A muscular tail grants balance and an extra attack"
+stat_mods = { A = 1 }
+special_rules = ["Poison (6+)"]
+points = 10
+roll_range = [36, 40]
+
+[[mutations]]
+name = "Long Legs"
+category = "physical"
+description = "Elongated limbs grant unnatural speed"
+stat_mods = { M = 2 }
+points = 10
+roll_range = [41, 45]
+
+[[mutations]]
+name = "Hulking Form"
+category = "physical"
+description = "The champion grows to massive size"
+stat_mods = { S = 1, T = 1 }
+special_rules = ["Cannot use transports", "-1 to hit in melee (large target)"]
+points = 25
+roll_range = [46, 50]
+
+[[mutations]]
+name = "Tentacle Arm"
+category = "physical"
+description = "An arm transforms into writhing tentacles"
+special_rules = ["Re-roll failed To Hit in melee", "Cannot use ranged weapons with this arm"]
+points = 10
+roll_range = [51, 55]
+
+[[mutations]]
+name = "Burning Body"
+category = "daemonic"
+description = "Unholy flames wreath the champion"
+special_rules = ["D6 S4 hits on units in base contact at start of combat", "Immune to fire"]
+points = 20
+roll_range = [56, 60]
+
+[[mutations]]
+name = "Acid Blood"
+category = "daemonic"
+description = "The champion's blood corrodes on contact"
+special_rules = ["Units wounding champion in melee take S3 hit", "Immune to acid"]
+points = 15
+roll_range = [61, 65]
+
+[[mutations]]
+name = "Warp Sight"
+category = "psychic"
+description = "Eyes can see through walls and darkness"
+special_rules = ["Ignore Cover", "Night Vision"]
+points = 15
+roll_range = [66, 70]
+
+[[mutations]]
+name = "Regeneration"
+category = "daemonic"
+description = "Wounds close with unnatural speed"
+special_rules = ["Regenerate (4+) - roll to recover 1 wound at start of turn"]
+points = 25
+roll_range = [71, 75]
+
+[[mutations]]
+name = "Corpulent Form"
+category = "nurgle"
+description = "Bloated with disease and impossible to slay"
+stat_mods = { W = 1, I = -1 }
+special_rules = ["Feel No Pain (6+)"]
+points = 20
+roll_range = [76, 80]
+
+[[mutations]]
+name = "Eye of the Gods"
+category = "daemonic"
+description = "A third eye opens, seeing the future"
+stat_mods = { Inv = 1 }
+special_rules = ["Re-roll one To Hit per turn"]
+points = 20
+roll_range = [81, 85]
+
+[[mutations]]
+name = "Spawndom"
+category = "curse"
+description = "The champion degenerates into a Chaos Spawn"
+special_rules = ["Remove champion from army", "Replace with Chaos Spawn"]
+points = 0
+roll_range = [86, 90]
+
+[[mutations]]
+name = "Daemonic Aura"
+category = "daemonic"
+description = "An aura of terror surrounds the champion"
+special_rules = ["Fear", "Enemy units within 6\" -1 Ld"]
+points = 15
+roll_range = [91, 95]
+
+[[mutations]]
+name = "Apotheosis"
+category = "blessing"
+description = "The champion ascends to Daemonhood!"
+special_rules = ["Replace with Daemon Prince"]
+points = 0
+roll_range = [96, 100]
+
+# =============================================================================
+# DAEMON WEAPONS
+# =============================================================================
+# Rare and powerful weapons containing bound daemons
+
+[[daemon_weapons]]
+name = "Daemon Sword"
+category = "melee"
+description = "A blade containing a bound daemon spirit"
+stat_mods = { WS = 1, S = 1, A = 1 }
+weapon_type = "melee"
+special_rules = ["Ignores Armor Saves", "Soul Thirst (heal 1 wound per model killed)"]
+drawback = "Roll D6 at start of combat: on 1, daemon fights champion (lose D3 wounds)"
+points = 35
+
+[[daemon_weapons]]
+name = "Plague Flail"
+category = "melee"
+god = "Nurgle"
+description = "A disease-ridden weapon blessed by Father Nurgle"
+stat_mods = { S = 1 }
+weapon_type = "melee"
+special_rules = ["Ignores Armor Saves", "Poison (4+)", "Two-handed"]
+drawback = "Always strikes at Initiative 1"
+points = 30
+
+[[daemon_weapons]]
+name = "Bloodfeeder"
+category = "melee"
+god = "Khorne"
+description = "An axe that drinks the blood of the slain"
+stat_mods = { S = 2, A = 1 }
+weapon_type = "melee"
+special_rules = ["Ignores Armor Saves", "+1 Attack for each unsaved wound dealt (max +3)"]
+drawback = "Must charge nearest enemy if able"
+points = 40
+
+[[daemon_weapons]]
+name = "Staff of Change"
+category = "melee"
+god = "Tzeentch"
+description = "A staff crackling with warp energy"
+stat_mods = { A = 1 }
+weapon_type = "force_weapon"
+special_rules = ["Force Weapon", "+1 to psychic tests", "Can cast additional power per turn"]
+drawback = "Perils of the Warp on doubles"
+points = 35
+
+[[daemon_weapons]]
+name = "Lash of Torment"
+category = "melee"
+god = "Slaanesh"
+description = "A living whip that brings exquisite agony"
+stat_mods = { A = 2 }
+weapon_type = "melee"
+special_rules = ["Ignores Armor Saves", "Enemy must pass Ld test or -1 WS for remainder of combat", "Reach (2\" range)"]
+drawback = "Champion takes 1 wound at end of game on 6+"
+points = 30
+
+[[daemon_weapons]]
+name = "Kai Gun"
+category = "ranged"
+description = "A daemon-possessed ranged weapon of terrible power"
+weapon_stats = { range = "18\"", strength = "8", ap = "1", type = "Assault 2" }
+special_rules = ["Soul Blaze", "Gets Hot!"]
+drawback = "On Gets Hot!, suffer D3 wounds instead of 1"
+points = 40
+
+[[daemon_weapons]]
+name = "The Black Blade"
+category = "melee"
+description = "An ancient daemon weapon of incredible power"
+stat_mods = { WS = 2, S = 2, I = 1, A = 2 }
+weapon_type = "melee"
+special_rules = ["Ignores Armor Saves", "Instant Death"]
+drawback = "Roll D6 each turn: on 1-2, daemon controls champion (enemy controls)"
+points = 75
+is_relic = true
+
+# =============================================================================
+# CHAOS REWARDS
+# =============================================================================
+# Non-mutation rewards from the Dark Gods
+
+[[rewards]]
+name = "Collar of Khorne"
+god = "Khorne"
+description = "A brass collar that nullifies psychic powers"
+special_rules = ["Immune to psychic powers", "Deny the Witch (2+)"]
+points = 25
+
+[[rewards]]
+name = "Palanquin of Nurgle"
+god = "Nurgle"
+description = "Carried aloft by Nurglings, granting resilience"
+stat_mods = { W = 2 }
+special_rules = ["+1 Attack from Nurglings", "Slow and Purposeful"]
+points = 40
+
+[[rewards]]
+name = "Disc of Tzeentch"
+god = "Tzeentch"
+description = "A flying disc daemon mount"
+special_rules = ["Fly", "+1 to psychic tests"]
+stat_mods = { M = 12 }
+points = 30
+
+[[rewards]]
+name = "Steed of Slaanesh"
+god = "Slaanesh"
+description = "A swift daemonic mount"
+stat_mods = { M = 10, A = 1 }
+special_rules = ["Outflank", "Acute Senses"]
+points = 25
+
+[[rewards]]
+name = "Boon of Chaos"
+description = "A generic favor from the Dark Gods"
+special_rules = ["Roll D3: 1=+1W, 2=+1A, 3=4++ Invulnerable"]
+points = 15
+
+[[rewards]]
+name = "Chaos Familiar"
+description = "A minor daemon bound to serve the champion"
+special_rules = ["+1 to psychic tests", "Re-roll one failed save per game"]
+points = 10
+
+[[rewards]]
+name = "Icon of Chaos"
+description = "A banner of dark power"
+special_rules = ["All friendly Chaos units within 6\" re-roll Morale", "Fear"]
+points = 20
+
+[[rewards]]
+name = "Combat Drugs"
+god = "Slaanesh"
+description = "Stimulants that enhance combat prowess"
+special_rules = ["Roll D6 at start of game: 1-2=+1A, 3-4=+1I, 5-6=+1S"]
+points = 5
+
+[[rewards]]
+name = "Sigil of Corruption"
+description = "A protective ward against harm"
+special_rules = ["4+ Invulnerable Save"]
+points = 25
+
+[[rewards]]
+name = "Veterans of the Long War"
+description = "Hatred born of ten thousand years of war"
+special_rules = ["Hatred (Imperium)", "Preferred Enemy (Space Marines)"]
+points = 5
+
+# =============================================================================
+# PATH TO GLORY - REWARD TABLES
+# =============================================================================
+
+[reward_tables]
+description = "Roll to determine champion rewards after battle"
+
+[reward_tables.khorne]
+name = "Rewards of Khorne"
+dice = "D6"
+results = [
+    { roll = 1, reward = "Collar of Khorne" },
+    { roll = 2, reward = "Bloodfeeder" },
+    { roll = 3, reward = "+1 WS" },
+    { roll = 4, reward = "+1 Attack" },
+    { roll = 5, reward = "Mutation (roll on mutation table)" },
+    { roll = 6, reward = "Champion's choice" }
+]
+
+[reward_tables.nurgle]
+name = "Rewards of Nurgle"
+dice = "D6"
+results = [
+    { roll = 1, reward = "Plague Flail" },
+    { roll = 2, reward = "Palanquin of Nurgle" },
+    { roll = 3, reward = "+1 Toughness" },
+    { roll = 4, reward = "+1 Wound" },
+    { roll = 5, reward = "Mutation (roll on mutation table)" },
+    { roll = 6, reward = "Champion's choice" }
+]
+
+[reward_tables.tzeentch]
+name = "Rewards of Tzeentch"
+dice = "D6"
+results = [
+    { roll = 1, reward = "Staff of Change" },
+    { roll = 2, reward = "Disc of Tzeentch" },
+    { roll = 3, reward = "+1 Psychic Level" },
+    { roll = 4, reward = "Improved Invulnerable Save" },
+    { roll = 5, reward = "Mutation (roll on mutation table)" },
+    { roll = 6, reward = "Champion's choice" }
+]
+
+[reward_tables.slaanesh]
+name = "Rewards of Slaanesh"
+dice = "D6"
+results = [
+    { roll = 1, reward = "Lash of Torment" },
+    { roll = 2, reward = "Steed of Slaanesh" },
+    { roll = 3, reward = "+1 Initiative" },
+    { roll = 4, reward = "Combat Drugs" },
+    { roll = 5, reward = "Mutation (roll on mutation table)" },
+    { roll = 6, reward = "Champion's choice" }
+]

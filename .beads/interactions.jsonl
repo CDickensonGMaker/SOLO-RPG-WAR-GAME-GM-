@@ -1,0 +1,3 @@
+{"id":"int-fddc4e7d","kind":"field_change","created_at":"2026-06-03T01:59:35.8896448Z","actor":"CDickensonGMaker","issue_id":"oracle-tet","extra":{"field":"status","new_value":"closed","old_value":"in_progress"}}
+{"id":"int-e63027ad","kind":"field_change","created_at":"2026-06-03T01:59:36.5998169Z","actor":"CDickensonGMaker","issue_id":"oracle-7s9","extra":{"field":"status","new_value":"closed","old_value":"in_progress"}}
+{"id":"int-7b966349","kind":"field_change","created_at":"2026-06-03T01:59:37.0875357Z","actor":"CDickensonGMaker","issue_id":"oracle-8ev","extra":{"field":"status","new_value":"closed","old_value":"open"}}
