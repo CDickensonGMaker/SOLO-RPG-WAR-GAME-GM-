@@ -8,7 +8,7 @@ to make decisions and resolve actions. Unlike the tactical advisor
 
 from __future__ import annotations
 
-import secrets
+import random
 from dataclasses import dataclass, field
 from enum import Enum, auto
 from typing import TYPE_CHECKING, Any, Protocol
@@ -119,6 +119,7 @@ class OpponentAI:
         rules_engine: RulesEngine,
         ai_roster: Roster,
         commander: CommanderTraits | None = None,
+        rng: random.Random | None = None,
     ):
         """
         Initialize the opponent AI.
@@ -127,11 +128,12 @@ class OpponentAI:
             rules_engine: The rules engine for this game system
             ai_roster: The AI's army roster
             commander: Optional commander personality
+            rng: Injectable RNG; defaults to a fresh random.Random()
         """
         self.rules = rules_engine
         self.roster = ai_roster
         self.commander = commander
-        self._rng = secrets.SystemRandom()
+        self._rng = rng if rng is not None else random.Random()
 
         # Default personality if none provided
         self._default_risk = 0.5

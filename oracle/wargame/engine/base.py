@@ -2,12 +2,13 @@
 Base classes and abstractions for wargame rules engines.
 
 This module provides the foundation for implementing game-specific
-rules engines. Uses cryptographically secure RNG for fair dice rolls.
+rules engines. Dice use an injectable RNG so game logic is testable
+with a fixed seed.
 """
 
 from __future__ import annotations
 
-import secrets
+import random
 from abc import ABC, abstractmethod
 from collections import deque
 from dataclasses import dataclass, field
@@ -250,19 +251,21 @@ class DiceRoller:
     """
     High-quality dice roller with multiple modes.
 
-    Uses secrets.SystemRandom() for cryptographically secure randomness.
     Supports automatic rolling, manual entry, or hybrid mode.
+    Pass a seeded random.Random for deterministic tests.
     """
 
-    def __init__(self, mode: RollingMode = RollingMode.AUTO):
+    def __init__(self, mode: RollingMode = RollingMode.AUTO,
+                 rng: random.Random | None = None):
         """
         Initialize the dice roller.
 
         Args:
             mode: Rolling mode (AUTO, MANUAL, or HYBRID)
+            rng: Injectable RNG; defaults to a fresh random.Random()
         """
         self.mode = mode
-        self._rng = secrets.SystemRandom()
+        self._rng = rng if rng is not None else random.Random()
         self._roll_history: deque[int] = deque(maxlen=100)
         self._manual_input_callback: callable | None = None
 
