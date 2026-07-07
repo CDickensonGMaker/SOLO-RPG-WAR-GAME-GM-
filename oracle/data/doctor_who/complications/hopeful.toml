@@ -79,107 +79,107 @@ description = "Past kindness pays dividends. Someone you helped before returns t
 name = "Strax Moment"
 description = "The warrior discovers something besides war has value. Healing. Friendship. Making breakfast. Growth is possible."
 
-[timey-wimey salvation]
+[timey_wimey_salvation]
 description = "When time travel enables hope"
 
-[[timey-wimey salvation.entries]]
+[[timey_wimey_salvation.entries]]
 name = "Bootstrap Rescue"
 description = "Help arrives from the future. From yourself. A note, a tool, a warning - you will find a way to send it back."
 
-[[timey-wimey salvation.entries]]
+[[timey_wimey_salvation.entries]]
 name = "Fixed Point Grace"
 description = "What seemed fixed point turns out to be flexible. The death is symbolic. The disaster has a loophole. Hope finds a way."
 
-[[timey-wimey salvation.entries]]
+[[timey_wimey_salvation.entries]]
 name = "Saved to Somewhere"
 description = "They didn't die. They were displaced. Moved through time and space. Finding them is possible. Reunion awaits."
 
-[[timey-wimey salvation.entries]]
+[[timey_wimey_salvation.entries]]
 name = "Message Through Time"
 description = "Communication across centuries. Warning sent to the past. Knowledge preserved for the future. Time as ally, not enemy."
 
-[[timey-wimey salvation.entries]]
+[[timey_wimey_salvation.entries]]
 name = "Parallel Reunion"
 description = "Someone lost can be found in another dimension. Another timeline. Not the same, but close. Second chances."
 
-[[timey-wimey salvation.entries]]
+[[timey_wimey_salvation.entries]]
 name = "Temporal Witness"
 description = "You can show them the future their sacrifice makes possible. The world they save. The lives they touch. It matters."
 
-[[timey-wimey salvation.entries]]
+[[timey_wimey_salvation.entries]]
 name = "History Remembers"
 description = "The hero's story is preserved. Passed down through generations. Their name means something across centuries."
 
-[[timey-wimey salvation.entries]]
+[[timey_wimey_salvation.entries]]
 name = "The Long Game Won"
 description = "A plan spanning centuries comes together. Patient work across eras pays off. The Doctor plays long games."
 
-[unexpected help]
+[unexpected_help]
 description = "Aid from surprising sources"
 
-[[unexpected help.entries]]
+[[unexpected_help.entries]]
 name = "TARDIS Intervention"
 description = "The old girl takes action. Lands where needed. Provides what's required. She understands more than she says."
 
-[[unexpected help.entries]]
+[[unexpected_help.entries]]
 name = "Alien Allies Arrive"
 description = "Species previously met return in the moment of crisis. Help from across the stars. Relationships have consequences."
 
-[[unexpected help.entries]]
+[[unexpected_help.entries]]
 name = "Historical Figure Recognition"
 description = "The person from history remembers the Doctor. Or you. Help flows from past adventure. Time circles back."
 
-[[unexpected help.entries]]
+[[unexpected_help.entries]]
 name = "Enemy of Enemy"
 description = "A hostile faction has a more hostile enemy. Temporary alliance forms. The enemy of your enemy is... useful."
 
-[[unexpected help.entries]]
+[[unexpected_help.entries]]
 name = "Technology Saves"
 description = "Alien tech or future science provides the solution. The right device at the right moment. Progress has benefits."
 
-[[unexpected help.entries]]
+[[unexpected_help.entries]]
 name = "The Network Activates"
 description = "UNIT. Torchwood. Friends of the Doctor. A distress call activates a web of support across the world."
 
-[[unexpected help.entries]]
+[[unexpected_help.entries]]
 name = "Nature Fights Back"
 description = "The planet, the ecosystem, the universe itself resists the threat. Life finds a way. Balance restores."
 
-[[unexpected help.entries]]
+[[unexpected_help.entries]]
 name = "Companion Courage"
 description = "The companion does what the Doctor can't. Human perspective, human heart, human action. They matter."
 
-[beauty amid darkness]
+[beauty_amid_darkness]
 description = "Finding wonder in terrible times"
 
-[[beauty amid darkness.entries]]
+[[beauty_amid_darkness.entries]]
 name = "Universe Wonder"
 description = "Despite everything, the cosmos is beautiful. Stars born. Nebulae painted. Time's majesty on display. Awe survives."
 
-[[beauty amid darkness.entries]]
+[[beauty_amid_darkness.entries]]
 name = "Small Joy"
 description = "Tea in a crisis. Laughter during fear. Human moments persist. The little things matter more when everything's at stake."
 
-[[beauty amid darkness.entries]]
+[[beauty_amid_darkness.entries]]
 name = "Connection Formed"
 description = "New friendship born in adversity. Understanding between unlikely allies. Something good emerges from chaos."
 
-[[beauty amid darkness.entries]]
+[[beauty_amid_darkness.entries]]
 name = "Kindness Chain"
 description = "Help you gave is passed forward. Goodness multiplies. The original act ripples outward, touching lives you'll never meet."
 
-[[beauty amid darkness.entries]]
+[[beauty_amid_darkness.entries]]
 name = "Understanding Achieved"
 description = "Mysteries resolve. Questions answer. Knowledge replaces fear. The universe makes more sense than before."
 
-[[beauty amid darkness.entries]]
+[[beauty_amid_darkness.entries]]
 name = "Growth Through Trial"
 description = "The challenge has strengthened everyone. Skills developed. Character revealed. They're better than they were."
 
-[[beauty amid darkness.entries]]
+[[beauty_amid_darkness.entries]]
 name = "Hope Restored"
 description = "Someone who'd lost faith finds it again. The cynical believe. The despairing try. Possibility returns."
 
-[[beauty amid darkness.entries]]
+[[beauty_amid_darkness.entries]]
 name = "Everybody Lives"
 description = "Just this once. Just this time. Everybody lives. The Doctor's delight when death is cheated. Precious moments."

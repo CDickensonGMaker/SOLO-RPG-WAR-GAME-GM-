@@ -186,7 +186,7 @@ class TableLoader:
             with open(path, "rb") as f:
                 data = tomllib.load(f)
         except (OSError, tomllib.TOMLDecodeError) as e:
-            # Could log error here
+            print(f"WARNING: skipping table file {path}: {e}", file=sys.stderr)
             return None
 
         # Parse table metadata

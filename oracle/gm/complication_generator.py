@@ -142,7 +142,7 @@ class ComplicationGenerator:
             weights[ComplicationType.NPC_INTERFERENCE] += min(npc_count, 3)
 
             # More active threads = more likely thread escalation
-            thread_count = len([t for t in self.memory.plot_threads.values()
+            thread_count = len([t for t in self.memory.threads.values()
                               if t.status == "active"])
             weights[ComplicationType.THREAD_ESCALATION] += min(thread_count, 3)
 
@@ -243,7 +243,7 @@ class ComplicationGenerator:
         rng: random.Random
     ) -> Complication:
         """Generate complication from an active plot thread."""
-        threads = [t for t in self.memory.plot_threads.values() if t.status == "active"]
+        threads = [t for t in self.memory.threads.values() if t.status == "active"]
 
         if not threads:
             return self._gen_generic_complication(is_positive, context, rng)
@@ -351,7 +351,7 @@ class ComplicationGenerator:
         involved_threads = []
 
         npcs = list(self.memory.entities.values())
-        threads = list(self.memory.plot_threads.values())
+        threads = list(self.memory.threads.values())
 
         if is_positive:
             templates = [

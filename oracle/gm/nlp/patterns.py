@@ -422,7 +422,7 @@ class PatternMatcher:
             ("craft", re.compile(
                 r"(?:craft|create|make|build|construct|forge|brew|cook|"
                 r"assemble|fabricate|repair|fix|mend)\s+"
-                r"(?:a\s+|an\s+|the\s+|some\s+|my\s+)?(.+)",
+                r"(?:a\s+|an\s+|the\s+|some\s+|my\s+)?(?!camp\b)(.+)",
                 re.IGNORECASE
             ), ["target"]),
 

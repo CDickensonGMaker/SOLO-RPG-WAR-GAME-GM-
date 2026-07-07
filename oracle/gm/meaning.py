@@ -191,7 +191,7 @@ class MeaningTableReader:
                 context_elements.append(f"NPCs present: {', '.join(present_npcs[:3])}")
 
             # Get active plot threads
-            active_threads = [t.name for t in memory.plot_threads.values()
+            active_threads = [t.name for t in memory.threads.values()
                             if t.status == "active"]
             if active_threads:
                 context_elements.append(f"Active threads: {', '.join(active_threads[:2])}")
@@ -307,7 +307,7 @@ class MeaningTableReader:
                 elements["suggested_npcs"].append(entity.name)
 
         # Find relevant plot threads
-        for thread in memory.plot_threads.values():
+        for thread in memory.threads.values():
             if thread.status != "active":
                 continue
 
