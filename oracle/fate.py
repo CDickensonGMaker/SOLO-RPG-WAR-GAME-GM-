@@ -6,6 +6,18 @@ from enum import Enum
 from typing import Optional
 
 
+# A plain player action may trigger a random event. The chance scales with
+# chaos (chaos / ACTION_EVENT_DIVISOR) but is capped so high-chaos sessions
+# don't drown the fiction in event spam (uncapped, chaos 9 would be 50%).
+ACTION_EVENT_DIVISOR = 18
+ACTION_EVENT_CHANCE_CAP = 0.25
+
+
+def action_event_chance(chaos: int) -> float:
+    """Probability (0.0-1.0) that a plain player action triggers a random event."""
+    return min(ACTION_EVENT_CHANCE_CAP, chaos / ACTION_EVENT_DIVISOR)
+
+
 class Likelihood(Enum):
     """Likelihood levels for oracle questions."""
     IMPOSSIBLE = ("Impossible", 10)
@@ -76,6 +88,14 @@ class Oracle:
         """Decrease chaos factor."""
         self.chaos -= 1
         return self.chaos
+
+    def end_scene(self, in_control: bool) -> int:
+        """Mythic end-of-scene adjustment.
+
+        Chaos falls when the player stayed in control of the scene,
+        and rises when events ran away from them. Returns new chaos.
+        """
+        return self.chaos_down() if in_control else self.chaos_up()
 
     def ask(
         self,

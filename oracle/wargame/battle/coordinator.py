@@ -144,6 +144,10 @@ class BattleState:
         ai_roster: Roster,
     ) -> None:
         """Check if either side has won."""
+        # A battle that was never set up (no units on either side) can't be won.
+        if not player_roster.units and not ai_roster.units:
+            return
+
         player_active = len(list(player_roster.active_units))
         ai_active = len(list(ai_roster.active_units))
 
@@ -270,6 +274,9 @@ class BattleCoordinator:
                 ai_roster=self.ai_roster,
                 commander=self.commander,
             )
+        elif self._opponent.ai_roster is not self.ai_roster:
+            # Roster was swapped (e.g. a saved roster was loaded) - stay in sync.
+            self._opponent.ai_roster = self.ai_roster
         return self._opponent
 
     @property
@@ -327,7 +334,7 @@ class BattleCoordinator:
         self.state.check_victory(self.player_roster, self.ai_roster)
 
         if self.state.outcome != BattleOutcome.ONGOING:
-            return self._narrate_battle_end()
+            return self.narrate_battle_end()
 
         self.state.current_turn += 1
         self.state.current_phase = BattlePhase.PLAYER_MOVEMENT
@@ -335,14 +342,36 @@ class BattleCoordinator:
 
         return f"Turn {self.state.current_turn} begins."
 
-    def _narrate_battle_end(self) -> str:
-        """Narrate the end of battle."""
+    def narrate_battle_end(self) -> str:
+        """Narrate the end of battle from the AI commander's perspective."""
         if self.state.outcome == BattleOutcome.PLAYER_VICTORY:
-            return self.narrator.commander.get_voice_line("defeat") or "Victory is yours."
+            # The AI commander was beaten.
+            return self.narrator.narrate_defeat()
         elif self.state.outcome == BattleOutcome.AI_VICTORY:
-            return self.narrator.commander.get_voice_line("victory") or "The enemy claims victory."
+            # The AI commander gloats.
+            return self.narrator.narrate_victory()
         else:
-            return "The battle ends in a draw."
+            return "The battle ends in a draw. Both forces withdraw from the field."
+
+    def reset_battle(self, player_roster: Roster, ai_roster: Roster) -> str:
+        """
+        Replace both rosters, reset state/log, and start a fresh battle.
+
+        Returns:
+            Opening narrative from start_battle()
+        """
+        self.player_roster = player_roster
+        self.ai_roster = ai_roster
+        self.state = BattleState()
+        self.log = BattleLog()
+        self._opponent = None  # rebuilt lazily against the new roster
+        return self.start_battle()
+
+    def set_commander(self, commander: CommanderPersonality) -> None:
+        """Swap the AI commander, invalidating cached AI and narrator."""
+        self.commander = commander
+        self._narrator = None
+        self._opponent = None
 
     # =========================================================================
     # PLAYER ACTIONS

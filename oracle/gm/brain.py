@@ -18,6 +18,24 @@ from oracle.gm.world_model import WorldModel
 from oracle.gm.nlp.content_router import ContentRouter
 
 
+# First words that mark a question as yes/no-shaped (oracle-suitable).
+# Open questions ("what/who/where/how...") should go to the narrative
+# response path instead of getting a nonsense YES/NO.
+YES_NO_STARTERS = [
+    "is", "are", "do", "does", "did", "will", "would",
+    "could", "can", "should", "has", "have", "was", "were",
+]
+
+
+def is_yes_no_question(text: str) -> bool:
+    """True if the text is shaped like a yes/no question the oracle can answer."""
+    stripped = text.strip().lower()
+    if not stripped.endswith("?"):
+        return False
+    words = stripped.split()
+    return bool(words) and words[0] in YES_NO_STARTERS
+
+
 @dataclass
 class OracleResult:
     """Result from an oracle query."""
@@ -545,12 +563,8 @@ class GameMasterBrain:
         # Check for specific commands/intents
         # Oracle questions (questions ending with ?)
         if input_lower.endswith("?") and not input_lower.startswith("/"):
-            # Determine if it's a yes/no question
-            yes_no_starters = ["is", "are", "do", "does", "did", "will", "would",
-                               "could", "can", "should", "has", "have", "was", "were"]
-            first_word = input_lower.split()[0] if input_lower.split() else ""
-
-            if first_word in yes_no_starters:
+            # Only yes/no-shaped questions go to the oracle
+            if is_yes_no_question(input_lower):
                 result = self.ask_oracle(user_input.rstrip("?"))
                 return f"**{result.answer_text}**\n\n{result.interpretation}"
 

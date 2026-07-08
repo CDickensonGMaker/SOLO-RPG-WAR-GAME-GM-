@@ -16,9 +16,11 @@ import tomllib
 from dataclasses import dataclass, field
 from datetime import datetime
 from pathlib import Path
-from typing import Optional, List, Dict, Any
+from typing import Optional, List, Dict, Any, Callable
 
 import dearpygui.dearpygui as dpg
+
+from oracle.gui import style
 
 # Wargame engine imports
 from oracle.wargame import (
@@ -45,6 +47,7 @@ from oracle.wargame import (
     # Battle
     BattleCoordinator,
     BattlePhase,
+    BattleOutcome,
     BattleState,
     BattleLog,
 )
@@ -277,6 +280,11 @@ COMMANDER_ARCHETYPES = [
 ]
 
 
+def phase_display(phase: BattlePhase) -> str:
+    """Human-readable name for a battle phase, e.g. PLAYER_SHOOTING -> 'Player Shooting'."""
+    return phase.name.replace("_", " ").title()
+
+
 # =============================================================================
 # Battle Message Types
 # =============================================================================
@@ -303,6 +311,9 @@ class BattleChatPanel:
     and commander narration.
     """
 
+    # Keep at most this many messages alive in the log (oldest are deleted).
+    MAX_LOG_MESSAGES = 500
+
     def __init__(
         self,
         parent: str,
@@ -313,6 +324,9 @@ class BattleChatPanel:
         self.coordinator = coordinator
         self.narrator = narrator
         self.messages: List[BattleMessage] = []
+
+        # Set by WargameApp so battle actions can refresh the status panels.
+        self.on_state_change: Optional[Callable[[], None]] = None
 
         # UI tags
         self._tag = f"battle_chat_{id(self)}"
@@ -383,9 +397,25 @@ class BattleChatPanel:
                 )
 
     def add_message(self, msg: BattleMessage):
-        """Add a message to the log."""
+        """Add a message to the log, trim old entries, and scroll to the newest."""
         self.messages.append(msg)
         self._render_message(msg)
+
+        # Cap the log: drop oldest messages/items beyond MAX_LOG_MESSAGES.
+        if len(self.messages) > self.MAX_LOG_MESSAGES:
+            self.messages = self.messages[-self.MAX_LOG_MESSAGES:]
+        if dpg.does_item_exist(self._log_tag):
+            children = dpg.get_item_children(self._log_tag, 1) or []
+            for old_child in children[: max(0, len(children) - self.MAX_LOG_MESSAGES)]:
+                dpg.delete_item(old_child)
+
+            # Auto-scroll to the newest message (-1.0 = scroll to end).
+            dpg.set_y_scroll(self._log_tag, -1.0)
+
+    def _notify_state_change(self):
+        """Tell the app that battle state changed so panels can refresh."""
+        if self.on_state_change:
+            self.on_state_change()
 
     def _render_message(self, msg: BattleMessage):
         """Render a single message."""
@@ -464,7 +494,7 @@ class BattleChatPanel:
             tag="attack_dialog",
             width=450,
             height=400,
-            pos=[200, 100],
+            pos=style.centered_pos(450, 400),
         ):
             dpg.add_text("Select Attacker:")
             dpg.add_combo(
@@ -601,6 +631,10 @@ class BattleChatPanel:
         # Format result
         self._display_attack_result(result, narrative)
 
+        # Casualties may have ended the battle; panels need fresh numbers.
+        self._check_battle_end()
+        self._notify_state_change()
+
     def _display_attack_result(self, result: AttackResult | MeleeResult, narrative: str):
         """Display attack result with dice breakdown."""
         if isinstance(result, MeleeResult):
@@ -732,16 +766,59 @@ class BattleChatPanel:
         if narrative:
             self.add_message(BattleMessage(narrative, "ai", "narrative"))
 
-    def _advance_phase(self):
-        """Advance to the next battle phase."""
-        old_phase = self.coordinator.state.current_phase
-        self.coordinator.state.advance_phase()
-        new_phase = self.coordinator.state.current_phase
+        # Casualties may have ended the battle; panels need fresh numbers.
+        self._check_battle_end()
+        self._notify_state_change()
 
-        self.add_message(BattleMessage(
-            f"Phase: {old_phase.value} -> {new_phase.value}",
-            "system",
-        ))
+    def _advance_phase(self):
+        """Advance to the next battle phase (or end the turn / the battle)."""
+        state = self.coordinator.state
+
+        if state.outcome != BattleOutcome.ONGOING:
+            self.add_message(BattleMessage(
+                "The battle is over. Start a New Battle from the Battle menu.",
+                "system",
+            ))
+            return
+
+        old_phase = state.current_phase
+        if old_phase == BattlePhase.END_TURN:
+            # Turn is complete: the coordinator checks victory and either
+            # starts the next turn or ends the battle.
+            summary = self.coordinator.end_turn()
+            if state.outcome != BattleOutcome.ONGOING:
+                self._announce_battle_end(summary)
+            else:
+                self.add_message(BattleMessage(summary, "system"))
+        else:
+            state.advance_phase()
+            self.add_message(BattleMessage(
+                f"Phase: {phase_display(old_phase)} -> {phase_display(state.current_phase)}",
+                "system",
+            ))
+
+        self._notify_state_change()
+
+    def _check_battle_end(self):
+        """After combat, check whether either army is wiped out and narrate the ending."""
+        state = self.coordinator.state
+        if state.outcome != BattleOutcome.ONGOING:
+            return
+        state.check_victory(self.coordinator.player_roster, self.coordinator.ai_roster)
+        if state.outcome != BattleOutcome.ONGOING:
+            self._announce_battle_end(self.coordinator.narrate_battle_end())
+
+    def _announce_battle_end(self, narrative: str):
+        """Display the battle-end banner and the commander's closing narration."""
+        outcome_labels = {
+            BattleOutcome.PLAYER_VICTORY: "VICTORY! The enemy army is broken.",
+            BattleOutcome.AI_VICTORY: "DEFEAT. Your army is broken.",
+            BattleOutcome.DRAW: "DRAW. Both armies withdraw from the field.",
+        }
+        label = outcome_labels.get(self.coordinator.state.outcome, "The battle is over.")
+        self.add_message(BattleMessage(f"BATTLE OVER - {label}", "system", "event"))
+        if narrative:
+            self.add_message(BattleMessage(narrative, "ai", "narrative"))
 
     def _show_morale_dialog(self):
         """Show morale check dialog."""
@@ -774,7 +851,7 @@ class BattleChatPanel:
             tag="morale_dialog",
             width=400,
             height=250,
-            pos=[200, 150],
+            pos=style.centered_pos(400, 250),
         ):
             dpg.add_text("Select Unit:")
             unit_names = [u[0] for u in all_units]
@@ -860,7 +937,7 @@ class BattleChatPanel:
             tag="dice_dialog",
             width=300,
             height=200,
-            pos=[250, 150],
+            pos=style.centered_pos(300, 200),
         ):
             dpg.add_text("Number of Dice:")
             dpg.add_slider_int(
@@ -1111,7 +1188,7 @@ class ForcePanel:
             tag=tag,
             width=500,
             height=550,
-            pos=[200, 50],
+            pos=style.centered_pos(500, 550),
         ):
             # Faction selection
             dpg.add_text("Select Faction:", color=(150, 200, 150))
@@ -1496,6 +1573,13 @@ class ForcePanel:
         if not wargear_items:
             return
 
+        # Safety: dialog may be opened before any selection exists.
+        if not hasattr(self, "_selected_wargear"):
+            self._selected_wargear = []
+
+        # Map item name -> checkbox tag so Clear All / Randomize can sync the UI.
+        self._wargear_checkbox_tags: Dict[str, str] = {}
+
         # Group wargear by type
         wargear_by_type = {}
         for item in wargear_items:
@@ -1510,7 +1594,7 @@ class ForcePanel:
             tag="wargear_dialog",
             width=600,
             height=500,
-            pos=[150, 50],
+            pos=style.centered_pos(600, 500),
         ):
             dpg.add_text("Select wargear for this unit.")
             dpg.add_text("Points costs are added to unit total.", color=(150, 150, 150))
@@ -1536,6 +1620,7 @@ class ForcePanel:
             dpg.add_separator()
 
             # Wargear tabs by type
+            selected_names = {w.get("name") for w in self._selected_wargear}
             with dpg.tab_bar():
                 for wg_type, items in sorted(wargear_by_type.items()):
                     with dpg.tab(label=wg_type.title()):
@@ -1546,11 +1631,15 @@ class ForcePanel:
                                 item_desc = item.get("description", "")
                                 effects = item.get("effects", [])
 
+                                checkbox_tag = f"wg_{item_name.replace(' ', '_')}"
+                                self._wargear_checkbox_tags[item_name] = checkbox_tag
                                 with dpg.group(horizontal=True):
                                     dpg.add_checkbox(
                                         label=f"{item_name} ({item_pts} pts)",
-                                        tag=f"wg_{item_name.replace(' ', '_')}",
-                                        callback=lambda s, a, i=item: self._toggle_wargear(i, parent_tag),
+                                        tag=checkbox_tag,
+                                        default_value=item_name in selected_names,
+                                        callback=self._on_wargear_checkbox,
+                                        user_data=(item, parent_tag),
                                     )
                                 if effects:
                                     dpg.add_text(f"  {', '.join(effects)}", color=(120, 150, 120))
@@ -1568,6 +1657,16 @@ class ForcePanel:
                     callback=lambda: self._clear_wargear(parent_tag),
                     width=100,
                 )
+
+        # Sync the running total with any already-selected wargear.
+        self._update_wargear_display(parent_tag)
+
+    def _sync_wargear_checkboxes(self):
+        """Set every wargear checkbox to match the backing selection list."""
+        selected_names = {w.get("name") for w in self._selected_wargear}
+        for item_name, checkbox_tag in getattr(self, "_wargear_checkbox_tags", {}).items():
+            if dpg.does_item_exist(checkbox_tag):
+                dpg.set_value(checkbox_tag, item_name in selected_names)
 
     def _randomize_wargear(self, parent_tag: str, wargear_items: List[Dict[str, Any]]):
         """Randomly select D3 wargear items."""
@@ -1587,36 +1686,28 @@ class ForcePanel:
                 available.remove(item)
                 self._selected_wargear.append(item)
 
+        self._sync_wargear_checkboxes()
         self._update_wargear_display(parent_tag)
 
-    def _toggle_wargear(self, item: Dict[str, Any], parent_tag: str):
-        """Toggle wargear selection."""
+    def _on_wargear_checkbox(self, sender, app_data, user_data):
+        """Checkbox callback: app_data is the new checked state."""
+        item, parent_tag = user_data
         item_name = item.get("name", "Unknown")
-        item_pts = item.get("points", 0)
 
-        # Check if already selected
-        existing = [w for w in self._selected_wargear if w.get("name") == item_name]
-        if existing:
-            self._selected_wargear.remove(existing[0])
-        else:
+        # Drive the selection from the checkbox state so they can't desync.
+        self._selected_wargear = [
+            w for w in self._selected_wargear if w.get("name") != item_name
+        ]
+        if app_data:
             self._selected_wargear.append(item)
 
-        # Update display
         self._update_wargear_display(parent_tag)
 
     def _clear_wargear(self, parent_tag: str):
         """Clear all selected wargear."""
         self._selected_wargear = []
+        self._sync_wargear_checkboxes()
         self._update_wargear_display(parent_tag)
-
-        # Uncheck all checkboxes
-        if dpg.does_item_exist("wargear_dialog"):
-            for item in dpg.get_item_children("wargear_dialog", 1) or []:
-                try:
-                    if dpg.get_item_type(item) == "mvAppItemType::mvCheckbox":
-                        dpg.set_value(item, False)
-                except:
-                    pass
 
     def _update_wargear_display(self, parent_tag: str):
         """Update the wargear display text."""
@@ -1648,13 +1739,21 @@ class ForcePanel:
         daemon_weapons = chaos_data.get("daemon_weapons", [])
         rewards = chaos_data.get("rewards", [])
 
+        # Safety: dialog may be opened before any selection exists.
+        if not hasattr(self, "_selected_chaos_gifts"):
+            self._selected_chaos_gifts = []
+
+        # Map gift name -> checkbox tag so Clear All / Randomize can sync the UI.
+        self._chaos_checkbox_tags: Dict[str, str] = {}
+        selected_gift_names = {g.get("name") for g in self._selected_chaos_gifts}
+
         with dpg.window(
             label="Chaos Rewards & Mutations",
             modal=True,
             tag="chaos_rewards_dialog",
             width=650,
             height=550,
-            pos=[100, 30],
+            pos=style.centered_pos(650, 550),
         ):
             dpg.add_text("Path to Glory", color=(200, 100, 100))
             dpg.add_text("Select Chaos gifts for your champion.", color=(150, 150, 150))
@@ -1692,15 +1791,15 @@ class ForcePanel:
                             desc = mark.get("description", "")
                             rules = mark.get("special_rules", [])
 
-                            dpg.add_radio_button(
-                                items=[""],  # Placeholder for proper radio
-                                tag=f"mark_{name.replace(' ', '_')}",
-                            )
+                            mark_tag = f"chaos_mark_{name.replace(' ', '_')}"
+                            self._chaos_checkbox_tags[name] = mark_tag
                             with dpg.group(horizontal=True):
                                 dpg.add_checkbox(
                                     label=f"{name} ({pts} pts)",
-                                    tag=f"chaos_mark_{name.replace(' ', '_')}",
-                                    callback=lambda s, a, m=mark: self._toggle_chaos_gift("mark", m, parent_tag),
+                                    tag=mark_tag,
+                                    default_value=name in selected_gift_names,
+                                    callback=self._on_chaos_checkbox,
+                                    user_data=("mark", mark, parent_tag),
                                 )
                             dpg.add_text(f"  {desc}", color=(150, 150, 150), wrap=600)
                             if rules:
@@ -1730,11 +1829,15 @@ class ForcePanel:
                             desc = mut.get("description", "")
                             stat_mods = mut.get("stat_mods", {})
 
+                            mut_tag = f"chaos_mut_{name.replace(' ', '_')}"
+                            self._chaos_checkbox_tags[name] = mut_tag
                             with dpg.group(horizontal=True):
                                 dpg.add_checkbox(
                                     label=f"{name} ({pts} pts)",
-                                    tag=f"chaos_mut_{name.replace(' ', '_')}",
-                                    callback=lambda s, a, m=mut: self._toggle_chaos_gift("mutation", m, parent_tag),
+                                    tag=mut_tag,
+                                    default_value=name in selected_gift_names,
+                                    callback=self._on_chaos_checkbox,
+                                    user_data=("mutation", mut, parent_tag),
                                 )
                             if stat_mods:
                                 mods_str = ", ".join(f"+{v} {k}" for k, v in stat_mods.items())
@@ -1750,11 +1853,15 @@ class ForcePanel:
                             desc = weapon.get("description", "")
                             drawback = weapon.get("drawback", "")
 
+                            dw_tag = f"chaos_dw_{name.replace(' ', '_')}"
+                            self._chaos_checkbox_tags[name] = dw_tag
                             with dpg.group(horizontal=True):
                                 dpg.add_checkbox(
                                     label=f"{name} ({pts} pts)",
-                                    tag=f"chaos_dw_{name.replace(' ', '_')}",
-                                    callback=lambda s, a, w=weapon: self._toggle_chaos_gift("daemon_weapon", w, parent_tag),
+                                    tag=dw_tag,
+                                    default_value=name in selected_gift_names,
+                                    callback=self._on_chaos_checkbox,
+                                    user_data=("daemon_weapon", weapon, parent_tag),
                                 )
                             dpg.add_text(f"  {desc}", color=(150, 150, 150), wrap=600)
                             if drawback:
@@ -1769,11 +1876,15 @@ class ForcePanel:
                             pts = reward.get("points", 0)
                             rules = reward.get("special_rules", [])
 
+                            rew_tag = f"chaos_rew_{name.replace(' ', '_')}"
+                            self._chaos_checkbox_tags[name] = rew_tag
                             with dpg.group(horizontal=True):
                                 dpg.add_checkbox(
                                     label=f"{name} ({pts} pts)",
-                                    tag=f"chaos_rew_{name.replace(' ', '_')}",
-                                    callback=lambda s, a, r=reward: self._toggle_chaos_gift("reward", r, parent_tag),
+                                    tag=rew_tag,
+                                    default_value=name in selected_gift_names,
+                                    callback=self._on_chaos_checkbox,
+                                    user_data=("reward", reward, parent_tag),
                                 )
                             if rules:
                                 dpg.add_text(f"  {', '.join(rules)}", color=(100, 150, 100))
@@ -1798,25 +1909,38 @@ class ForcePanel:
                     width=100,
                 )
 
-    def _toggle_chaos_gift(self, gift_type: str, gift: Dict[str, Any], parent_tag: str):
-        """Toggle a Chaos gift selection."""
+        # Sync the running total with any already-selected gifts.
+        self._update_chaos_display(parent_tag)
+
+    def _on_chaos_checkbox(self, sender, app_data, user_data):
+        """Checkbox callback: app_data is the new checked state."""
+        gift_type, gift, parent_tag = user_data
         gift_name = gift.get("name", "Unknown")
 
-        # For marks, only allow one
-        if gift_type == "mark":
-            # Remove any existing marks
-            self._selected_chaos_gifts = [g for g in self._selected_chaos_gifts if g.get("type") != "mark"]
+        # Drive the selection from the checkbox state so they can't desync.
+        self._selected_chaos_gifts = [
+            g for g in self._selected_chaos_gifts if g.get("name") != gift_name
+        ]
 
-        # Check if already selected
-        existing = [g for g in self._selected_chaos_gifts if g.get("name") == gift_name]
-        if existing:
-            self._selected_chaos_gifts.remove(existing[0])
-        else:
+        if app_data:
+            # A champion can bear only ONE Mark - unselect any other marks.
+            if gift_type == "mark":
+                self._selected_chaos_gifts = [
+                    g for g in self._selected_chaos_gifts if g.get("type") != "mark"
+                ]
             gift_copy = dict(gift)
             gift_copy["type"] = gift_type
             self._selected_chaos_gifts.append(gift_copy)
 
+        self._sync_chaos_checkboxes()
         self._update_chaos_display(parent_tag)
+
+    def _sync_chaos_checkboxes(self):
+        """Set every Chaos gift checkbox to match the backing selection list."""
+        selected_names = {g.get("name") for g in self._selected_chaos_gifts}
+        for gift_name, checkbox_tag in getattr(self, "_chaos_checkbox_tags", {}).items():
+            if dpg.does_item_exist(checkbox_tag):
+                dpg.set_value(checkbox_tag, gift_name in selected_names)
 
     def _randomize_chaos_champion(self, parent_tag: str):
         """Fully randomize a Chaos champion with mark and mutations."""
@@ -1853,6 +1977,7 @@ class ForcePanel:
                 mut_copy["type"] = "mutation"
                 self._selected_chaos_gifts.append(mut_copy)
 
+        self._sync_chaos_checkboxes()
         self._update_chaos_display(parent_tag)
 
         if dpg.does_item_exist("chaos_selected_display"):
@@ -1898,6 +2023,7 @@ class ForcePanel:
         mut_copy["type"] = "mutation"
         self._selected_chaos_gifts.append(mut_copy)
 
+        self._sync_chaos_checkboxes()
         self._update_chaos_display(parent_tag)
 
         # Show result
@@ -1909,6 +2035,7 @@ class ForcePanel:
     def _clear_chaos_gifts(self, parent_tag: str):
         """Clear all selected Chaos gifts."""
         self._selected_chaos_gifts = []
+        self._sync_chaos_checkboxes()
         self._update_chaos_display(parent_tag)
 
     def _update_chaos_display(self, parent_tag: str):
@@ -1958,7 +2085,7 @@ class ForcePanel:
             tag=tag,
             width=500,
             height=400,
-            pos=[200, 100],
+            pos=style.centered_pos(500, 400),
         ):
             dpg.add_text("Select a pre-built detachment to load.")
             dpg.add_text("This will replace the current roster.", color=(200, 150, 100))
@@ -2007,22 +2134,16 @@ class ForcePanel:
 
     def _select_detachment(self, idx: int):
         """Handle detachment selection."""
-        print(f"DEBUG: _select_detachment called with idx={idx}")
         self._selected_detachment_idx = idx
 
     def _do_load_detachment(self, dialog_tag: str):
         """Load the selected detachment into the roster."""
         idx = getattr(self, '_selected_detachment_idx', None)
-        print(f"DEBUG: _do_load_detachment called, idx={idx}")
 
         if not hasattr(self, '_detachments'):
-            print("DEBUG: No _detachments attribute")
             return
         if idx is None or idx < 0:
-            print(f"DEBUG: Invalid index: {idx}")
             return
-
-        print(f"DEBUG: Loading detachment {idx}: {self._detachments[idx].get('name')}")
 
         det = self._detachments[idx]
 
@@ -2063,11 +2184,9 @@ class ForcePanel:
                 points=unit_data.get("points", 0),
             )
             roster.add_unit(unit)
-            print(f"DEBUG: Added unit {unit.name}")
 
         dpg.delete_item(dialog_tag)
         self.refresh()
-        print("DEBUG: Detachment loaded successfully")
 
     def _validate_roster(self):
         """Validate the roster against force organization rules."""
@@ -2089,7 +2208,7 @@ class ForcePanel:
             tag=tag,
             width=400,
             height=250,
-            pos=[250, 150],
+            pos=style.centered_pos(400, 250),
         ):
             if not errors:
                 dpg.add_text("Army is VALID!", color=(100, 200, 100))
@@ -2145,7 +2264,7 @@ class ForcePanel:
             tag=tag,
             width=400,
             height=180,
-            pos=[250, 150],
+            pos=style.centered_pos(400, 180),
         ):
             dpg.add_text("Save this roster for future use.")
 
@@ -2232,7 +2351,7 @@ class ForcePanel:
             tag=tag,
             width=500,
             height=400,
-            pos=[200, 100],
+            pos=style.centered_pos(500, 400),
         ):
             dpg.add_text("Select a saved roster to load.")
             dpg.add_text("This will replace the current roster.", color=(200, 150, 100))
@@ -2371,8 +2490,11 @@ class BattleStatePanel:
         """Refresh the display."""
         state = self.coordinator.state
 
-        dpg.set_value(f"{self._tag}_turn", str(state.turn_number))
-        dpg.set_value(f"{self._tag}_phase", state.current_phase.value.title())
+        dpg.set_value(f"{self._tag}_turn", str(state.current_turn))
+        dpg.set_value(f"{self._tag}_phase", phase_display(state.current_phase))
+
+        if dpg.does_item_exist(f"{self._tag}_system"):
+            dpg.set_value(f"{self._tag}_system", self.coordinator.rules.system_name)
 
         if self.coordinator.commander:
             dpg.set_value(
@@ -2636,7 +2758,7 @@ class PhaseGuidePanel:
             tag="step_detail_popup",
             width=500,
             height=400,
-            pos=[200, 100],
+            pos=style.centered_pos(500, 400),
         ):
             dpg.add_text("Description:", color=(150, 150, 150))
             dpg.add_text(description, wrap=480)
@@ -2677,7 +2799,7 @@ class PhaseGuidePanel:
             tag="tips_popup",
             width=500,
             height=450,
-            pos=[200, 80],
+            pos=style.centered_pos(500, 450),
         ):
             for step in steps:
                 step_name = step.get("name", "")
@@ -2706,17 +2828,31 @@ class PhaseGuidePanel:
                 width=100,
             )
 
+    # Battle phases -> guide phase names they may appear under in the TOML.
+    _PHASE_SYNONYMS = {
+        "movement": ("movement", "activation"),
+        "shooting": ("shooting", "activation"),
+        "melee": ("melee", "hand-to-hand", "combat", "activation"),
+        "morale": ("morale", "rally", "morale phase"),
+    }
+
     def refresh(self):
         """Refresh to match current game state."""
-        # Update to current phase from coordinator
-        current_phase = self.coordinator.state.current_phase.value.lower()
+        # Derive a guide phase name from the battle phase, e.g.
+        # PLAYER_SHOOTING / AI_SHOOTING -> "shooting".
+        phase_key = self.coordinator.state.current_phase.name.lower()
+        for prefix in ("player_", "ai_"):
+            if phase_key.startswith(prefix):
+                phase_key = phase_key[len(prefix):]
+
+        candidates = self._PHASE_SYNONYMS.get(phase_key, (phase_key,))
 
         system_key = self._get_system_key()
         system_data = self._guides.get(system_key, {})
         phases = system_data.get("phases", [])
 
         for i, phase in enumerate(phases):
-            if phase.get("name", "").lower() == current_phase:
+            if phase.get("name", "").lower() in candidates:
                 self._current_phase_index = i
                 break
 
@@ -2768,7 +2904,8 @@ class WargameApp:
     def _build_ui(self):
         """Build the main UI."""
         dpg.create_context()
-        dpg.create_viewport(title="Oracle Wargame", width=1600, height=900)
+        style.apply_style()
+        dpg.create_viewport(title="Oracle — Wargame", width=1600, height=900)
 
         with dpg.window(label="Wargame", tag="main_window"):
             # Top menu bar
@@ -2849,6 +2986,9 @@ class WargameApp:
                                 "phase_guide_tab",
                                 self.coordinator,
                             )
+
+        # Battle actions (attacks, AI turns, phase changes) refresh all panels.
+        self._chat_panel.on_state_change = self._refresh_all
 
         dpg.set_primary_window("main_window", True)
 
@@ -2967,17 +3107,19 @@ class WargameApp:
 
     def _new_battle(self):
         """Start a new battle."""
-        self.coordinator.state = BattleState(
-            player_roster=Roster(name="Your Army"),
-            ai_roster=Roster(name="Enemy Army"),
+        intro = self.coordinator.reset_battle(
+            Roster(name="Your Army"),
+            Roster(name="Enemy Army"),
         )
-        self.coordinator.start_battle()
         self._refresh_all()
 
         self._chat_panel.add_message(BattleMessage(
             "New battle started. Add units to begin.",
             "system",
         ))
+        # The commander's opening address.
+        if intro:
+            self._chat_panel.add_message(BattleMessage(intro, "ai", "narrative"))
 
     def _save_battle(self):
         """Show save battle dialog."""
@@ -2990,7 +3132,7 @@ class WargameApp:
             tag="save_battle_dialog",
             width=400,
             height=200,
-            pos=[300, 200],
+            pos=style.centered_pos(400, 200),
         ):
             dpg.add_text("Save current battle setup for later use.")
             dpg.add_text("Both armies and game system will be saved.", color=(150, 150, 150))
@@ -3041,8 +3183,8 @@ class WargameApp:
             "player": self.coordinator.player_roster.to_dict() if self.coordinator.player_roster else None,
             "enemy": self.coordinator.ai_roster.to_dict() if self.coordinator.ai_roster else None,
             "battle_state": {
-                "turn": self.coordinator.state.turn_number,
-                "phase": self.coordinator.state.current_phase.value,
+                "turn": self.coordinator.state.current_turn,
+                "phase": self.coordinator.state.current_phase.name,
             },
             "saved_at": datetime.now().isoformat(),
         }
@@ -3091,7 +3233,7 @@ class WargameApp:
             tag="load_battle_dialog",
             width=500,
             height=400,
-            pos=[250, 100],
+            pos=style.centered_pos(500, 400),
         ):
             dpg.add_text("Select a saved battle to load.")
             dpg.add_text("This will replace both armies.", color=(200, 150, 100))
@@ -3203,12 +3345,15 @@ class WargameApp:
 
             # Restore battle state
             if data.get("battle_state"):
-                self.coordinator.state.turn_number = data["battle_state"].get("turn", 1)
-                phase_str = data["battle_state"].get("phase", "movement")
+                self.coordinator.state.current_turn = data["battle_state"].get("turn", 1)
+                phase_str = data["battle_state"].get("phase", "PLAYER_MOVEMENT")
+                restored = BattlePhase.PLAYER_MOVEMENT
                 for phase in BattlePhase:
-                    if phase.value == phase_str:
-                        self.coordinator.state.current_phase = phase
+                    # Match by name (new saves) or raw value (older saves).
+                    if phase.name == phase_str or phase.value == phase_str:
+                        restored = phase
                         break
+                self.coordinator.state.current_phase = restored
 
             dpg.delete_item("load_battle_dialog")
 
@@ -3248,7 +3393,7 @@ class WargameApp:
     def _change_commander(self, archetype: str):
         """Change the AI commander."""
         self.commander = generate_commander(archetype)
-        self.coordinator.commander = self.commander
+        self.coordinator.set_commander(self.commander)
         self.narrator = EnhancedNarrator(self.commander)
         self._chat_panel.narrator = self.narrator
 

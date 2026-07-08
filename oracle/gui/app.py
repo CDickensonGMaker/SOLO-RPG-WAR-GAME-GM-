@@ -8,7 +8,8 @@ controllers, and game state for the Birthright campaign system.
 from typing import Optional
 import dearpygui.dearpygui as dpg
 
-from oracle.gui.config import config, ConfigManager
+from oracle.gui import style
+from oracle.gui.config import config, ConfigManager, SAVES_PATH
 from oracle.gui.models.game_state import GameState
 from oracle.gui.models.campaign import CampaignState, DomainEvent, EventChoice
 from oracle.gui.controllers.domain_turn import DomainTurnController
@@ -64,7 +65,7 @@ class BirthrightApp:
         self._setup_callbacks()
 
         dpg.create_viewport(
-            title=config.window.title,
+            title="Oracle — Birthright",
             width=config.window.width,
             height=config.window.height
         )
@@ -79,36 +80,8 @@ class BirthrightApp:
         dpg.destroy_context()
 
     def _setup_theme(self):
-        """Set up the visual theme."""
-        with dpg.theme() as global_theme:
-            with dpg.theme_component(dpg.mvAll):
-                # Colors
-                dpg.add_theme_color(dpg.mvThemeCol_WindowBg, (25, 25, 30, 255))
-                dpg.add_theme_color(dpg.mvThemeCol_ChildBg, (35, 35, 42, 255))
-                dpg.add_theme_color(dpg.mvThemeCol_Border, (60, 60, 70, 255))
-                dpg.add_theme_color(dpg.mvThemeCol_FrameBg, (45, 45, 55, 255))
-                dpg.add_theme_color(dpg.mvThemeCol_FrameBgHovered, (55, 55, 65, 255))
-                dpg.add_theme_color(dpg.mvThemeCol_FrameBgActive, (65, 65, 75, 255))
-                dpg.add_theme_color(dpg.mvThemeCol_Button, (70, 60, 50, 255))
-                dpg.add_theme_color(dpg.mvThemeCol_ButtonHovered, (90, 75, 60, 255))
-                dpg.add_theme_color(dpg.mvThemeCol_ButtonActive, (110, 90, 70, 255))
-                dpg.add_theme_color(dpg.mvThemeCol_Header, (60, 55, 50, 255))
-                dpg.add_theme_color(dpg.mvThemeCol_HeaderHovered, (75, 68, 60, 255))
-                dpg.add_theme_color(dpg.mvThemeCol_HeaderActive, (90, 80, 70, 255))
-                dpg.add_theme_color(dpg.mvThemeCol_Tab, (55, 50, 45, 255))
-                dpg.add_theme_color(dpg.mvThemeCol_TabHovered, (75, 68, 60, 255))
-                dpg.add_theme_color(dpg.mvThemeCol_TabActive, (90, 80, 70, 255))
-                dpg.add_theme_color(dpg.mvThemeCol_TitleBg, (35, 35, 40, 255))
-                dpg.add_theme_color(dpg.mvThemeCol_TitleBgActive, (50, 45, 40, 255))
-                dpg.add_theme_color(dpg.mvThemeCol_Separator, (80, 70, 60, 255))
-
-                # Styling
-                dpg.add_theme_style(dpg.mvStyleVar_FrameRounding, 3)
-                dpg.add_theme_style(dpg.mvStyleVar_WindowRounding, 5)
-                dpg.add_theme_style(dpg.mvStyleVar_FramePadding, 6, 4)
-                dpg.add_theme_style(dpg.mvStyleVar_ItemSpacing, 8, 6)
-
-        dpg.bind_theme(global_theme)
+        """Apply the shared Oracle style (theme + 17px font)."""
+        style.apply_style()
 
     def _build_ui(self):
         """Build the main UI layout."""
@@ -203,6 +176,51 @@ class BirthrightApp:
 
         # Action dialog callbacks
         self.action_dialog.on_action_executed(self._on_action_executed)
+
+        # Keyboard shortcuts (advertised in Help > Quick Reference)
+        with dpg.handler_registry():
+            dpg.add_key_press_handler(dpg.mvKey_S, callback=self._on_save_shortcut)
+
+    def _on_save_shortcut(self):
+        """Ctrl+S saves the campaign."""
+        if dpg.is_key_down(dpg.mvKey_ModCtrl):
+            self._save_game()
+
+    def _notify(self, title: str, message: str, error: bool = False):
+        """Show a small centered modal notification.
+
+        Success notices auto-dismiss after a few seconds; errors stay
+        until the user closes them.
+        """
+        tag = "notify_dialog"
+        if dpg.does_item_exist(tag):
+            dpg.delete_item(tag)
+
+        width, height = 420, 170
+        with dpg.window(
+            label=title,
+            modal=True,
+            tag=tag,
+            width=width,
+            height=height,
+            no_resize=True,
+            pos=style.centered_pos(width, height),
+            on_close=lambda: dpg.delete_item(tag)
+        ):
+            color = (235, 120, 120) if error else (200, 180, 140)
+            dpg.add_text(message, wrap=width - 30, color=color)
+            dpg.add_spacer(height=8)
+            dpg.add_button(
+                label="OK",
+                callback=lambda: dpg.delete_item(tag),
+                width=-1
+            )
+
+        if not error:
+            def _auto_dismiss():
+                if dpg.does_item_exist(tag):
+                    dpg.delete_item(tag)
+            dpg.set_frame_callback(dpg.get_frame_count() + 180, _auto_dismiss)
 
     def _on_startup(self):
         """Called after startup to show initial dialog."""
@@ -299,13 +317,24 @@ class BirthrightApp:
     def _on_advance_turn(self):
         """Handle advance turn button."""
         if not self.turn_controller:
+            self._notify(
+                "Advance Turn",
+                "No active campaign. Start or load one first.",
+                error=True
+            )
             return
 
         # Check if there are pending events
         if self.game_state.active_campaign:
             pending = self.game_state.active_campaign.get_available_events()
             if pending:
-                # Can't advance with unresolved events
+                # Can't advance with unresolved events — say why
+                plural = "s" if len(pending) != 1 else ""
+                self._notify(
+                    "Advance Turn Blocked",
+                    f"Resolve {len(pending)} pending event{plural} first.",
+                    error=True
+                )
                 return
 
         # Advance turn
@@ -371,7 +400,7 @@ class BirthrightApp:
             tag="oracle_dialog",
             width=400,
             height=250,
-            pos=[config.window.width // 2 - 200, config.window.height // 2 - 125]
+            pos=style.centered_pos(400, 250)
         ):
             dpg.add_text("Enter your question:")
             question_input = dpg.add_input_text(
@@ -408,11 +437,17 @@ class BirthrightApp:
         question = dpg.get_value("oracle_question_input")
         likelihood = dpg.get_value("oracle_likelihood").lower()
 
+        dpg.delete_item("oracle_dialog")
+
         if self.event_handler:
             result = self.event_handler.roll_oracle(question, likelihood)
             self.event_log.show_oracle_result(result)
-
-        dpg.delete_item("oracle_dialog")
+        else:
+            self._notify(
+                "Oracle",
+                "No active campaign. Start or load one first.",
+                error=True
+            )
 
     def _show_chaos_dialog(self):
         """Show chaos adjustment dialog."""
@@ -430,7 +465,7 @@ class BirthrightApp:
             tag="chaos_dialog",
             width=300,
             height=150,
-            pos=[config.window.width // 2 - 150, config.window.height // 2 - 75]
+            pos=style.centered_pos(300, 150)
         ):
             dpg.add_text(f"Current Chaos: {current}")
             dpg.add_slider_int(
@@ -462,10 +497,17 @@ class BirthrightApp:
         dpg.delete_item("chaos_dialog")
 
     def _save_game(self):
-        """Save current game state."""
+        """Save current game state with visible confirmation."""
+        save_path = SAVES_PATH / "autosave"
         if self.game_state.save_all("autosave"):
-            # Show brief notification
-            pass
+            self._notify("Campaign Saved", f"Saved to:\n{save_path}")
+        else:
+            reason = self.game_state.last_error or "unknown error"
+            self._notify(
+                "Save Failed",
+                f"Could not save to:\n{save_path}\n\n{reason}",
+                error=True
+            )
 
     def _show_help(self):
         """Show help window."""
@@ -500,8 +542,6 @@ Random events may trigger on extreme rolls.
             dpg.add_text("Keyboard Shortcuts:", color=(200, 180, 140))
             dpg.add_text("""
 Ctrl+S - Save game
-Ctrl+N - New campaign
-R - Toggle relationship graph
             """, wrap=480)
 
     def _show_about(self):
@@ -515,7 +555,7 @@ R - Toggle relationship graph
             tag="about_dialog",
             width=400,
             height=200,
-            pos=[config.window.width // 2 - 200, config.window.height // 2 - 100]
+            pos=style.centered_pos(400, 200)
         ):
             dpg.add_text("Birthright Campaign Manager", color=(200, 180, 140))
             dpg.add_text("Version 1.0.0")
@@ -531,7 +571,8 @@ R - Toggle relationship graph
 
     def _exit(self):
         """Exit the application."""
-        self._save_game()
+        # Save directly — a confirmation modal would never be seen on exit.
+        self.game_state.save_all("autosave")
         dpg.stop_dearpygui()
 
 

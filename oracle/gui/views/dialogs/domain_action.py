@@ -5,14 +5,13 @@ Features:
 - Action selection grid
 - Target pickers
 - Cost/requirement display
-- Oracle roll integration
 """
 
 from typing import Optional, Callable, List, Dict, Any
 import dearpygui.dearpygui as dpg
 
+from oracle.gui import style
 from oracle.gui.models.campaign import CampaignState
-from oracle.gui.config import config
 
 
 class DomainActionDialog:
@@ -185,7 +184,6 @@ class DomainActionDialog:
             width=650,
             height=450,
             tag="domain_action_dialog",
-            pos=[config.window.width // 2 - 325, config.window.height // 2 - 225],
             on_close=self.hide
         ):
             self._window_tag = dpg.last_item()
@@ -223,11 +221,6 @@ class DomainActionDialog:
                     label="Execute Action",
                     callback=self._on_execute_clicked,
                     width=150
-                )
-                dpg.add_button(
-                    label="Ask Oracle",
-                    callback=self._on_oracle_clicked,
-                    width=100
                 )
                 dpg.add_spacer(width=20)
                 dpg.add_button(
@@ -401,26 +394,13 @@ class DomainActionDialog:
         for callback in self._on_action_executed:
             callback(result)
 
-    def _on_oracle_clicked(self):
-        """Handle oracle button for action resolution."""
-        if not self._selected_action:
-            return
-
-        action = self._actions[self._selected_action]
-        dc = action.get("dc", 15)
-
-        prompt = f"Does the {action['name']} action succeed? (DC {dc})"
-
-        # Would integrate with Oracle system
-        # For now, just show the prompt
-        pass
-
     def set_campaign(self, campaign: CampaignState):
         """Set the active campaign."""
         self.campaign = campaign
 
     def show(self):
-        """Show the dialog."""
+        """Show the dialog, centered on the current viewport."""
+        dpg.configure_item(self._window_tag, pos=style.centered_pos(650, 450))
         dpg.show_item(self._window_tag)
 
     def hide(self):

@@ -8,7 +8,7 @@ REM Check if dependencies are installed
 python -c "import dearpygui" 2>nul
 if errorlevel 1 (
     echo Installing GUI dependencies...
-    pip install dearpygui>=1.9
+    pip install "dearpygui>=1.9"
 )
 
 REM Launch the application

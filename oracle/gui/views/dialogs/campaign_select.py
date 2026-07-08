@@ -5,14 +5,13 @@ Features:
 - New campaign creation
 - Load existing campaigns
 - Campaign preview info
-- Delete/backup options
 """
 
 from typing import Optional, Callable, List, Dict, Any
 import dearpygui.dearpygui as dpg
 
+from oracle.gui import style
 from oracle.gui.models.game_state import GameState, CampaignInfo
-from oracle.gui.config import config, SAVES_PATH
 
 
 class CampaignSelectDialog:
@@ -53,7 +52,6 @@ class CampaignSelectDialog:
             width=700,
             height=500,
             tag="campaign_select_dialog",
-            pos=[config.window.width // 2 - 350, config.window.height // 2 - 250],
             on_close=self.hide
         ):
             self._window_tag = dpg.last_item()
@@ -130,11 +128,6 @@ class CampaignSelectDialog:
             dpg.add_button(
                 label="Load",
                 callback=self._on_load_clicked,
-                width=100
-            )
-            dpg.add_button(
-                label="Delete",
-                callback=self._on_delete_clicked,
                 width=100
             )
             dpg.add_spacer(width=20)
@@ -327,19 +320,11 @@ class CampaignSelectDialog:
             for callback in self._on_campaign_loaded:
                 callback(self.game_state.active_campaign)
 
-    def _on_delete_clicked(self):
-        """Handle delete button click."""
-        if not self._selected_save:
-            return
-
-        # Show confirmation dialog
-        # For now, just don't implement delete to be safe
-        pass
-
     def show(self):
-        """Show the dialog."""
+        """Show the dialog, centered on the current viewport."""
         self._refresh_campaign_list()
         self._refresh_save_list()
+        dpg.configure_item(self._window_tag, pos=style.centered_pos(700, 500))
         dpg.show_item(self._window_tag)
 
     def hide(self):

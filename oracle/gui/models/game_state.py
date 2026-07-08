@@ -166,6 +166,7 @@ class GameState:
         self.active_campaign: Optional[CampaignState] = None
         self.available_campaigns: Dict[str, CampaignInfo] = {}
         self.npc_persistent_state: Dict[str, Dict[str, Any]] = {}
+        self.last_error: Optional[str] = None  # readable reason for last failed save/load
 
         # Load campaign definitions
         self._load_campaign_definitions()
@@ -396,9 +397,11 @@ class GameState:
                     "completed_campaigns": self.player_legacy.completed_campaigns
                 }, f, indent=2)
 
+            self.last_error = None
             return True
 
-        except IOError as e:
+        except OSError as e:
+            self.last_error = str(e)
             print(f"Save failed: {e}")
             return False
 
@@ -432,9 +435,11 @@ class GameState:
             if campaign_path.exists():
                 self.active_campaign = CampaignState.load(campaign_path)
 
+            self.last_error = None
             return True
 
-        except (IOError, json.JSONDecodeError) as e:
+        except (OSError, json.JSONDecodeError) as e:
+            self.last_error = str(e)
             print(f"Load failed: {e}")
             return False
 

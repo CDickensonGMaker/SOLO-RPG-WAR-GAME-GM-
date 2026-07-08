@@ -13,9 +13,10 @@ from datetime import datetime
 
 import dearpygui.dearpygui as dpg
 
-from oracle.gm.brain import GameMasterBrain
+from oracle.gm.brain import GameMasterBrain, is_yes_no_question
 from oracle.gm.personality import PERSONALITIES, GMPersonality
 from oracle.gm.memory import SessionMemory
+from oracle.gm.meaning import MeaningTableReader
 from oracle.generators import (
     QuestGenerator,
     SceneGenerator,
@@ -27,12 +28,13 @@ from oracle.generators import (
     GeneratedLocation,
     Difficulty,
 )
-from oracle.fate import Oracle, Likelihood, OracleResult
+from oracle.fate import Oracle, Likelihood, OracleResult, action_event_chance
 from oracle.dice import DiceRoller
 from oracle.wargame import WargameAI, Doctrine, Aggression
 from oracle.tables import TableLoader
 from oracle.mood import MoodManager, Setting, Tone, Mode
 from oracle.gui.models.wargame_data import get_wargame_data
+from oracle.gui import style
 
 
 # =============================================================================
@@ -53,6 +55,9 @@ GAME_SYSTEMS = [
     "Age of Fantasy",
 ]
 DOCTRINES = ["horde", "elite", "defensive", "alpha_strike", "guerrilla"]
+
+# Maximum rendered entries kept in the chat log (oldest pruned beyond this).
+MAX_LOG_ENTRIES = 500
 
 # Color scheme
 COLORS = {
@@ -123,6 +128,7 @@ class OracleApp:
         self.gm: Optional[GameMasterBrain] = None
         self.oracle = Oracle()
         self.dice = DiceRoller()
+        self.meaning_reader = MeaningTableReader()
         self.wargame_ai: Optional[WargameAI] = None
 
         # Table loading and mood management
@@ -156,12 +162,15 @@ class OracleApp:
         """Run the application."""
         dpg.create_context()
 
+        # Shared Oracle look (font + theme)
+        style.apply_style()
+
         # Register fonts (if available)
         self._setup_fonts()
 
         # Create viewport
         dpg.create_viewport(
-            title="Oracle - Solo Game Master",
+            title="Oracle — Solo RPG",
             width=1200,
             height=800,
             min_width=800,
@@ -516,7 +525,7 @@ class OracleApp:
         with dpg.group():
             dpg.add_input_text(
                 tag="chat_input",
-                hint="What do you do? (Questions ending in ? auto-trigger Oracle, /roll for dice)",
+                hint="What do you do? (yes/no questions ending in ? ask the Oracle, /help for commands)",
                 width=-1,
                 on_enter=True,
                 callback=self._on_send,
@@ -525,6 +534,7 @@ class OracleApp:
                 dpg.add_button(label="Send", callback=self._on_send, width=80)
                 dpg.add_button(label="Oracle", callback=self._show_oracle_dialog, width=80)
                 dpg.add_button(label="Dice", callback=self._show_dice_dialog, width=80)
+                dpg.add_button(label="Meaning", callback=self._roll_meaning_inspiration, width=80)
                 dpg.add_spacer()
                 dpg.add_button(label="Menu", callback=self._show_menu, width=80)
 
@@ -578,11 +588,68 @@ class OracleApp:
 
         dpg.add_separator()
 
+        # Scene controls
+        dpg.add_button(label="End Scene", callback=self._show_end_scene_dialog, width=-1)
+        dpg.add_spacer(height=6)
+
         # Session controls
         with dpg.group(horizontal=True):
             dpg.add_button(label="Save", callback=self._save_session, width=60)
             dpg.add_button(label="Load", callback=self._load_session, width=60)
             dpg.add_button(label="History", callback=self._show_history, width=70)
+
+    def _show_end_scene_dialog(self):
+        """Ask whether the player was in control of the scene that just ended."""
+        if dpg.does_item_exist("end_scene_dialog"):
+            dpg.delete_item("end_scene_dialog")
+
+        dialog_w, dialog_h = 360, 150
+        with dpg.window(
+            label="End Scene",
+            tag="end_scene_dialog",
+            modal=True,
+            width=dialog_w,
+            height=dialog_h,
+            pos=style.centered_pos(dialog_w, dialog_h),
+            no_resize=True,
+        ):
+            dpg.add_text("The scene ends. Were you in control?", color=COLORS["subheader"])
+            dpg.add_spacer(height=10)
+            with dpg.group(horizontal=True):
+                dpg.add_button(
+                    label="In control",
+                    callback=self._on_end_scene,
+                    user_data=True,
+                    width=160,
+                )
+                dpg.add_button(
+                    label="Out of control",
+                    callback=self._on_end_scene,
+                    user_data=False,
+                    width=160,
+                )
+
+    def _on_end_scene(self, sender, app_data, user_data):
+        """Apply the Mythic end-of-scene chaos adjustment (rule lives in fate.Oracle)."""
+        if dpg.does_item_exist("end_scene_dialog"):
+            dpg.delete_item("end_scene_dialog")
+
+        in_control = bool(user_data)
+        old_chaos = self.oracle.chaos
+        new_chaos = self.oracle.end_scene(in_control)
+        self.config.chaos = new_chaos
+        if self.gm:
+            self.gm.memory.chaos_factor = new_chaos
+
+        if new_chaos < old_chaos:
+            change = f"Chaos falls to {new_chaos}."
+        elif new_chaos > old_chaos:
+            change = f"Chaos rises to {new_chaos}."
+        else:
+            change = f"Chaos holds at {new_chaos}."
+        outcome = "You kept control." if in_control else "Events ran away from you."
+        self._add_message("system", f"--- Scene ends. {outcome} {change} ---")
+        self._refresh_sidebar()
 
     def _build_wargame_sidebar(self):
         """Build wargame-specific sidebar with battle status."""
@@ -897,6 +964,10 @@ class OracleApp:
         # Process the input
         self._process_input(text)
 
+        # Keep the keyboard in the input box so the player can keep typing
+        if dpg.does_item_exist("chat_input"):
+            dpg.focus_item("chat_input")
+
     def _process_input(self, text: str):
         """Process user input and route appropriately."""
         text_lower = text.lower().strip()
@@ -927,13 +998,54 @@ class OracleApp:
                 self._handle_casualties_command(text)
                 return
 
-        # Check for oracle question (ends with ?)
+        # Help and unknown slash commands (never send commands to the GM as speech)
+        if text_lower.startswith("/"):
+            if text_lower == "/help" or text_lower.startswith("/help "):
+                self._show_help()
+            else:
+                command = text.split()[0]
+                self._add_message(
+                    "system",
+                    f"Unknown command: {command} — type /help for available commands."
+                )
+            return
+
+        # Oracle question: only yes/no-shaped questions go to the oracle.
+        # Open questions ("what/who/where/how...") go to the GM brain instead.
         if text.endswith("?"):
-            self._handle_oracle_question(text)
+            if is_yes_no_question(text):
+                self._handle_oracle_question(text)
+            else:
+                self._handle_action(text)
             return
 
         # Otherwise, treat as action/statement
         self._handle_action(text)
+
+    def _show_help(self):
+        """List all slash commands with one-line descriptions."""
+        lines = [
+            "**COMMANDS**",
+            "/help — show this list",
+            "/roll <dice> (or /r) — roll dice, e.g. /roll 2d6+3",
+        ]
+        if self.config.game_type == "wargame":
+            lines += [
+                "",
+                "**WARGAME COMMANDS**",
+                "/situation <description> (or /sit) — AI analyzes the battlefield and decides",
+                "/target <a>, <b>, ... — AI picks the priority target from a list",
+                "/morale <percent> — check morale at that casualty percentage",
+                "/event — roll a random battle event",
+                "/phase — advance to the next phase (new turn after the last phase)",
+                "/casualties <player|enemy> <+/-amount> (or /cas) — adjust the casualty tally",
+            ]
+        lines += [
+            "",
+            "*End a yes/no question with ? to consult the oracle.*",
+            "*Open questions (what/who/where/how...) go to the GM.*",
+        ]
+        self._add_message("system", "\n".join(lines))
 
     def _handle_dice_command(self, text: str):
         """Handle a dice rolling command."""
@@ -1073,6 +1185,16 @@ class OracleApp:
 
         return Likelihood.EVEN
 
+    def _roll_meaning_inspiration(self):
+        """Roll a meaning-table pair and print it as a GM inspiration line."""
+        meaning = self.meaning_reader.roll_meaning()
+        parts = [f"**Meaning:** {meaning.raw_combination}"]
+        if meaning.action.synonyms:
+            parts.append(f"*(also: {random.choice(meaning.action.synonyms)})*")
+        parts.append("")
+        parts.append("*Interpret this as inspiration for the current scene.*")
+        self._add_message("gm", "\n".join(parts), "oracle")
+
     def _handle_action(self, text: str):
         """Handle a player action or statement."""
         # Add user message
@@ -1081,9 +1203,10 @@ class OracleApp:
         # Get GM response using smart NLP processing with WorldModel
         response = self.gm.process_smart(text)
 
-        # Maybe generate additional content based on chaos
-        # Higher chaos = more random events (~5% at chaos 1, ~50% at chaos 9)
-        event_chance = self.gm.memory.chaos_factor / 18
+        # Maybe generate additional content based on chaos.
+        # Chance scales with chaos but is capped in the model (oracle.fate)
+        # so high-chaos sessions don't spiral into event spam.
+        event_chance = action_event_chance(self.gm.memory.chaos_factor)
         if random.random() < event_chance:
             response += self._generate_random_event()
 
@@ -1556,6 +1679,36 @@ class OracleApp:
         msg = ChatMessage(text=text, sender=sender, msg_type=msg_type)
         self.messages.append(msg)
         self._render_message(msg)
+        self._prune_chat_log()
+        self._scroll_chat_to_bottom()
+
+    def _prune_chat_log(self):
+        """Delete the oldest rendered entries beyond MAX_LOG_ENTRIES."""
+        if not dpg.does_item_exist("chat_log"):
+            return
+        children = dpg.get_item_children("chat_log", 1) or []
+        excess = len(children) - MAX_LOG_ENTRIES
+        if excess <= 0:
+            return
+        for child in children[:excess]:
+            dpg.delete_item(child)
+
+    def _scroll_chat_to_bottom(self):
+        """Scroll the chat log to the newest message."""
+        if not dpg.does_item_exist("chat_log"):
+            return
+        dpg.set_y_scroll("chat_log", -1.0)
+        # A newly added item isn't measured until a frame renders, so the
+        # scroll max is stale; repeat the scroll on the next frame.
+        try:
+            dpg.set_frame_callback(dpg.get_frame_count() + 1, self._scroll_chat_next_frame)
+        except SystemError:
+            pass  # Frame callbacks unavailable (e.g. context tearing down)
+
+    def _scroll_chat_next_frame(self):
+        """Frame callback: finish scrolling once the new item is measured."""
+        if dpg.does_item_exist("chat_log"):
+            dpg.set_y_scroll("chat_log", -1.0)
 
     def _render_message(self, msg: ChatMessage):
         """Render a message in the chat log."""
@@ -1790,7 +1943,7 @@ class OracleApp:
             modal=True,
             width=400,
             height=250,
-            pos=[400, 200],
+            pos=style.centered_pos(400, 250),
         ):
             dpg.add_text("Ask a yes/no question:", color=COLORS["subheader"])
             dpg.add_input_text(
@@ -1881,7 +2034,7 @@ class OracleApp:
             modal=True,
             width=350,
             height=200,
-            pos=[400, 200],
+            pos=style.centered_pos(350, 200),
         ):
             dpg.add_text("Enter dice notation:", color=COLORS["subheader"])
             dpg.add_input_text(
@@ -1930,7 +2083,7 @@ class OracleApp:
             modal=True,
             width=300,
             height=250,
-            pos=[450, 200],
+            pos=style.centered_pos(300, 250),
         ):
             dpg.add_text("Session Options", color=COLORS["header"])
             dpg.add_separator()
@@ -2153,7 +2306,7 @@ class OracleApp:
             tag="history_dialog",
             width=500,
             height=400,
-            pos=[350, 150],
+            pos=style.centered_pos(500, 400),
         ):
             dpg.add_text("Recent Session Events", color=COLORS["header"])
             dpg.add_separator()

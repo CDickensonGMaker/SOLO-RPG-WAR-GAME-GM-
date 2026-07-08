@@ -5,12 +5,12 @@ Displays:
 - Current pending event with choice buttons
 - Scrolling event history
 - Event severity icons
-- Category filtering
 """
 
 from typing import Optional, Callable, List, Dict, Any
 import dearpygui.dearpygui as dpg
 
+from oracle.gui import style
 from oracle.gui.models.campaign import (
     CampaignState, DomainEvent, EventChoice, EventSeverity
 )
@@ -72,29 +72,6 @@ class EventLogPanel:
             # Event History Section
             dpg.add_text("EVENT HISTORY", color=(200, 180, 140))
             dpg.add_separator()
-
-            # Filter buttons
-            with dpg.group(horizontal=True):
-                dpg.add_button(
-                    label="All",
-                    callback=lambda: self._filter_history("all"),
-                    small=True
-                )
-                dpg.add_button(
-                    label="Story",
-                    callback=lambda: self._filter_history("story"),
-                    small=True
-                )
-                dpg.add_button(
-                    label="Random",
-                    callback=lambda: self._filter_history("random"),
-                    small=True
-                )
-                dpg.add_button(
-                    label="Choices",
-                    callback=lambda: self._filter_history("choices"),
-                    small=True
-                )
 
             dpg.add_spacer(height=5)
 
@@ -300,11 +277,6 @@ class EventLogPanel:
             for callback in self._on_oracle_request:
                 callback(self._current_event)
 
-    def _filter_history(self, filter_type: str):
-        """Filter history display."""
-        # Would implement actual filtering
-        self._refresh_history()
-
     def on_choice_selected(self, callback: Callable):
         """Register callback for choice selection."""
         self._on_choice.append(callback)
@@ -335,10 +307,7 @@ class EventLogPanel:
             tag="oracle_result_popup",
             width=400,
             height=200,
-            pos=[
-                config.window.width // 2 - 200,
-                config.window.height // 2 - 100
-            ]
+            pos=style.centered_pos(400, 200)
         ):
             dpg.add_text(f"Question: {result.get('prompt', '')}")
             dpg.add_spacer(height=10)
