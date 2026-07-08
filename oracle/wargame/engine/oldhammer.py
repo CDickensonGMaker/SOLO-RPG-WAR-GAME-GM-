@@ -18,10 +18,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import TYPE_CHECKING, Any
 
-if sys.version_info >= (3, 11):
-    import tomllib
-else:
-    import tomli as tomllib
+from oracle.tomlio import load_toml
 
 from .base import (
     AttackResult,
@@ -73,12 +70,9 @@ class OldhammerRulesEngine(RulesEngine):
         """Load charts from TOML data file."""
         data_path = Path(__file__).parent.parent / "data" / "oldhammer_charts.toml"
 
-        if data_path.exists():
-            with open(data_path, "rb") as f:
-                self._charts = tomllib.load(f)
-        else:
-            # Fallback to hardcoded charts if file not found
-            self._charts = self._default_charts()
+        charts = load_toml(data_path) if data_path.exists() else None
+        # Fall back to hardcoded charts if the file is missing or unreadable
+        self._charts = charts if charts is not None else self._default_charts()
 
     def _default_charts(self) -> dict:
         """Fallback charts if TOML not available."""
